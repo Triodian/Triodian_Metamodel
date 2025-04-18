@@ -1,0 +1,162 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Organization Domain Schema",
+  "description": "Schema for the structured entity within which activities and value delivery occur to achieve strategic objectives",
+  "type": "object",
+  "properties": {
+    "organization": {
+      "type": "object",
+      "description": "Represents the structured entity that enables the flow of value to customers, stakeholders, or outcomes",
+      "properties": {
+        "orgTitle": {
+          "type": "string",
+          "description": "The name or title of the Organization"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Organization entails"
+        },
+        "structure": {
+          "type": "string",
+          "description": "The Organization structure of the company"
+        },
+        "roles": {
+          "type": "string",
+          "description": "The roles within the Organization"
+        },
+        "missionStatement": {
+          "type": "string",
+          "description": "The mission of the Organization"
+        },
+        "visionStatement": {
+          "type": "string",
+          "description": "The vision of the Organization"
+        },
+        "values": {
+          "type": "string",
+          "description": "The core values guiding the Organization"
+        },
+        "strategicGoals": {
+          "type": "string",
+          "description": "Long-term goals that align with the mission and vision"
+        },
+        "stakeholders": {
+          "type": "string",
+          "description": "Key Stakeholders of the Organization"
+        },
+        "governance": {
+          "type": "string",
+          "description": "The governance framework and policies"
+        },
+        "legalStructure": {
+          "type": "string",
+          "description": "The legal structure of the Organization"
+        },
+        "geographicPresence": {
+          "type": "string",
+          "description": "Locations and geographic reach of the Organization"
+        },
+        "size": {
+          "type": "string",
+          "description": "The size of the Organization in terms of employees, revenue etc"
+        },
+        "culture": {
+          "type": "string",
+          "description": "The culture within the Organization"
+        },
+        "history": {
+          "type": "string",
+          "description": "The history and milestones of the Organization"
+        },
+        "strategicInitiatives": {
+          "type": "string",
+          "description": "Key Initiatives to drive strategic goals"
+        }
+      }
+    },
+    "organizationUnits": {
+      "type": "object",
+      "description": "A sub-division or entity within an organization that focuses on specific functions, processes, or objectives",
+      "properties": {
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The name or title of the Organization unit"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Organization unit entails"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the Organization unit within the Organization"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Organization unit"
+        },
+        "higherOrganizationUnit": {
+          "type": "string",
+          "description": "The Organization or Organization unit above in the Organization hierarchy"
+        },
+        "subOrganizationUnits": {
+          "type": "string",
+          "description": "Sub-Organization units directly below this Organization unit in the Organization hierarchy"
+        },
+        "roles": {
+          "type": "string",
+          "description": "Specific roles within the Organization unit"
+        },
+        "processes": {
+          "type": "string",
+          "description": "Key processes carried out by the Organization unit"
+        },
+        "performanceIndicators": {
+          "type": "string",
+          "description": "Metrics used to measure effectiveness and efficiency"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Other units, processes or systems that the unit depends on"
+        },
+        "relatedUnits": {
+          "type": "string",
+          "description": "Organization units that are related or linked"
+        },
+        "risks": {
+          "type": "string",
+          "description": "Potential risks associated with operations"
+        },
+        "improvementOpportunities": {
+          "type": "string",
+          "description": "Areas for enhancement or improvement"
+        },
+        "strategicAlignment": {
+          "type": "string",
+          "description": "Alignment with strategic goals and objectives"
+        }
+      }
+    },
+    "domainRelationships": {
+      "type": "object",
+      "description": "Relationships between organization units and different business architecture domain entities",
+      "properties": {
+        "domainEntityName": {
+          "type": "string",
+          "description": "Name of the domain entity involved in the relationship"
+        },
+        "domainEntityType": {
+          "type": "string",
+          "description": "Type of domain entity (Capability, Service, Information, etc.)"
+        },
+        "relationshipRole": {
+          "type": "string",
+          "description": "Role in the relationship (Owning unit, Providing unit, Consuming unit, etc.)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Details about the nature of the relationship"
+        }
+      }
+    }
+  }
+}
