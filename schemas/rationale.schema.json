@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rationale Schema",
+  "description": "Schema for a Rationale object used in the Strategic Response Model to explain the reasoning behind strategic responses",
+  "type": "object",
+  "properties": {
+    "rationaleTitle": {
+      "type": "string",
+      "description": "Title or summary of the rationale"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of the rationale supporting a strategic response"
+    },
+    "trigger": {
+      "$ref": "Orthogramic Subscription Plans ",
+      "description": "Trigger object that prompted this rationale, defined according to the Trigger schema"
+    },
+    "linkedDomains": {
+      "type": "array",
+      "description": "List of business architecture domains influenced or justified by this rationale",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Strategy",
+          "Capabilities",
+          "Initiatives",
+          "Policy",
+          "Information",
+          "Performance",
+          "Products",
+          "Services",
+          "Stakeholder",
+          "Value Stream"
+        ]
+      }
+    },
+    "classification": {
+      "type": "string",
+      "description": "Optional category for the rationale (e.g. risk mitigation, compliance, opportunity, mandate)",
+      "enum": [
+        "Risk",
+        "Compliance",
+        "Opportunity",
+        "Mandate",
+        "Performance Insight",
+        "Stakeholder Need",
+        "Other"
+      ]
+    },
+    "dateCreated": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the rationale was first recorded"
+    },
+    "author": {
+      "type": "string",
+      "description": "The person or team who documented the rationale"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organisational unit that owns or authored the rationale"
+    }
+  },
+  "required": [
+    "rationaleTitle",
+    "description",
+    "trigger"
+  ]
+}
