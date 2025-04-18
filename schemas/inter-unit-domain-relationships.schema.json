@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InterUnitDomainRelationship",
+  "description": "Defines a relationship between organisation units in relation to a specific domain entity.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the inter-unit domain relationship."
+    },
+    "domainEntityType": {
+      "type": "string",
+      "enum": [
+        "Capability",
+        "Information",
+        "Service",
+        "ValueStream",
+        "Initiative",
+        "Product"
+      ],
+      "description": "The type of domain entity the relationship applies to."
+    },
+    "domainEntityId": {
+      "type": "string",
+      "description": "Identifier of the domain entity (e.g., capability ID, information asset ID)."
+    },
+    "relationshipType": {
+      "type": "string",
+      "enum": [
+        "Owning",
+        "Utilising",
+        "Providing",
+        "Consuming",
+        "Custodian",
+        "Dependent",
+        "Supported",
+        "Governing"
+      ],
+      "description": "The type of relationship the unit has to the domain entity."
+    },
+    "organisationUnitId": {
+      "type": "string",
+      "description": "Identifier of the organisation unit participating in the relationship."
+    },
+    "relationshipStrength": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Numeric representation (1–5) of the strength of the relationship between the organisation unit and the domain entity."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional free-text field for explanatory comments."
+    }
+  },
+  "required": [
+    "id",
+    "domainEntityType",
+    "domainEntityId",
+    "relationshipType",
+    "organisationUnitId"
+  ]
+}
