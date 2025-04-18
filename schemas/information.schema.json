@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Information Domain Schema",
+  "description": "Schema for the Information domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the information management element"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the information management element entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the information management element within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the information management element"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the information management element is linked"
+    },
+    "inputs": {
+      "type": "string",
+      "description": "The resources information or materials required for the information management element"
+    },
+    "outputs": {
+      "type": "string",
+      "description": "The deliverables or results produced by the information management element"
+    },
+    "processes": {
+      "type": "string",
+      "description": "The set of processes that define how the information management element operates"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the effectiveness and efficiency of the information management element"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other elements processes or systems that the information management element depends on"
+    },
+    "relatedInformationElements": {
+      "type": "string",
+      "description": "Information elements that are related or linked to this element"
+    },
+    "maturityLevel": {
+      "type": "string",
+      "description": "The current maturity level of the information management element"
+    },
+    "toolsAndTechnologies": {
+      "type": "string",
+      "description": "Tools and technologies used to support or enable the information management element"
+    },
+    "complianceAndStandards": {
+      "type": "string",
+      "description": "Regulatory requirements and standards the information management element must adhere to"
+    },
+    "cost": {
+      "type": "string",
+      "description": "The financial cost associated with implementing and maintaining the information management element"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the information management element and its operations"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the information management element can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the information management element aligns with the Organizations strategic goals and objectives"
+    },
+    "informationComponent": {
+      "type": "array",
+      "description": "Components or pieces of information",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the information component"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of the information component"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended use or function of the information component"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for managing the information"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) using the information component"
+          },
+          "dataSources": {
+            "type": "string",
+            "description": "The sources from which the information is collected"
+          },
+          "dataQuality": {
+            "type": "string",
+            "description": "The quality measures and standards for the information component"
+          },
+          "security": {
+            "type": "string",
+            "description": "The security measures applied to protect the information"
+          }
+        }
+      }
+    }
+  }
+}
