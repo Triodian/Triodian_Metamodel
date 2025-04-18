@@ -1,0 +1,129 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Service Domain Schema",
+  "description": "Schema for the Service domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the Service"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Service entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the Service within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the Service"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the Service is linked"
+    },
+    "serviceLevelAgreements": {
+      "type": "string",
+      "description": "Methods for gathering and implementing Service improvements"
+    },
+    "channels": {
+      "type": "string",
+      "description": "Required resources for consistent Service delivery"
+    },
+    "customerFeedback": {
+      "type": "string",
+      "description": "Identified risks to Service delivery and mitigation strategies"
+    },
+    "processFlow": {
+      "type": "string",
+      "description": "How the Service supports Organization objectives and outcomes"
+    },
+    "customerJourney": {
+      "type": "string",
+      "description": "Standards and procedures for ensuring Service quality"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Mapping of how value flows through the Service delivery process"
+    },
+    "stakeholderNetwork": {
+      "type": "string",
+      "description": "Regulatory and Policy requirements affecting Service delivery"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "The name or title of the Service element"
+    },
+    "continuousImprovement": {
+      "type": "string",
+      "description": "A detailed explanation of what the Service element entails"
+    },
+    "resourceManagement": {
+      "type": "string",
+      "description": "The intended purpose or benefit of the Service element"
+    },
+    "riskManagement": {
+      "type": "string",
+      "description": "The individual or team responsible for the Service element"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "The Organization unit(s) involved in the Service element"
+    },
+    "qualityFramework": {
+      "type": "string",
+      "description": "The SLAs associated with the Service element"
+    },
+    "valueStream": {
+      "type": "string",
+      "description": "The channels through which the Service is provided"
+    },
+    "complianceRequirements": {
+      "type": "string",
+      "description": "The methods for collecting and analyzing customer feedback"
+    },
+    "serviceFeature": {
+      "type": "array",
+      "description": "Features or components of the Service",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The sequence of activities and interactions that comprise the Service delivery"
+          },
+          "description": {
+            "type": "string",
+            "description": "The touchpoints and experiences throughout Service delivery"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "Other Services systems or resources required for Service delivery"
+          },
+          "owner": {
+            "type": "string",
+            "description": "Services that are connected to or support this Service element"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "Metrics used to measure Service effectiveness and value delivery"
+          },
+          "serviceLevelAgreements": {
+            "type": "string",
+            "description": "Methods for ensuring Service quality and consistency"
+          },
+          "channels": {
+            "type": "string",
+            "description": "Resources needed to deliver the Service element"
+          },
+          "customerFeedback": {
+            "type": "string",
+            "description": "The name or title of the performance metric"
+          }
+        }
+      }
+    }
+  }
+}
