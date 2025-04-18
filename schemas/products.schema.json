@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Products Domain Schema",
+  "description": "Schema for the Products domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the Product"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Product entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the Product within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the Product"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the Product is linked"
+    },
+    "lifecycleManagement": {
+      "type": "string",
+      "description": "Strategies for managing the Product from inception to retirement"
+    },
+    "marketCompetitiveness": {
+      "type": "string",
+      "description": "Analysis of how the Product compares with competitors"
+    },
+    "customerFeedback": {
+      "type": "string",
+      "description": "Data on customer satisfaction and Product performance"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other Products, processes, or systems that the Product depends on"
+    },
+    "relatedProducts": {
+      "type": "string",
+      "description": "Products that are related or linked to this Product"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the success and performance of the Product"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the Product and its lifecycle"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the Product can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the Product aligns with the Organizations strategic goals and objectives"
+    },
+    "productFeature": {
+      "type": "array",
+      "description": "Features or components of the Product",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the Product feature"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of what the Product feature entails"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended purpose or benefit of the Product feature"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for the Product feature"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) involved in the Product feature"
+          },
+          "userStories": {
+            "type": "string",
+            "description": "The user stories or use cases related to the Product feature"
+          },
+          "technicalSpecifications": {
+            "type": "string",
+            "description": "The technical details and requirements of the Product feature"
+          },
+          "releasePlan": {
+            "type": "string",
+            "description": "The plan for releasing the Product feature"
+          }
+        }
+      }
+    }
+  }
+}
