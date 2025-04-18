@@ -1,0 +1,230 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Initiatives Domain Schema",
+  "description": "Schema for high-level efforts aimed at achieving specific business outcomes, often involving multiple programs and projects",
+  "type": "object",
+  "properties": {
+    "initiative": {
+      "type": "object",
+      "description": "Represents the overarching goal or strategic effort that typically spans across several programs",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Initiative"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Initiative entails"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the Initiative within the Organization"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Initiative"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) to which the Initiative is linked"
+        },
+        "driverType": {
+          "type": "string",
+       "description": "Primary driver for this initiative, based on the SRM trigger catalogue."
+        },
+        "rationale": {
+         "type": "string",
+         "description": "Narrative explanation referencing this driver and the rationale for the initiative."
+        }, 
+        "goals": {
+          "type": "string",
+          "description": "Specific objectives of the Initiative"
+        },
+        "progressTracking": {
+          "type": "string",
+          "description": "Tools and methods to monitor progress towards Initiative goals"
+        },
+        "resourceAllocation": {
+          "type": "string",
+          "description": "Distribution and management of resources for Initiatives"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Other Initiatives, processes or systems that the Initiative depends on"
+        },
+        "relatedInitiatives": {
+          "type": "string",
+          "description": "Initiatives that are related or linked to this Initiative"
+        },
+        "performanceIndicators": {
+          "type": "string",
+          "description": "Metrics used to measure the success and progress of the Initiative"
+        },
+        "risks": {
+          "type": "string",
+          "description": "Potential risks associated with the Initiative and its implementation"
+        },
+        "improvementOpportunities": {
+          "type": "string",
+          "description": "Areas where the Initiative can be enhanced or improved"
+        },
+        "strategicAlignment": {
+          "type": "string",
+          "description": "How the Initiative aligns with the Organization's strategic goals and objectives"
+        },
+        "justification": {   
+        "type": "string",   
+        "description": "Explanation of why the initiative is required, referencing business drivers, strategic goals, capability gaps, stakeholder needs, or regulatory obligations." 
+        }, 
+        "relatedStrategies": {
+          "type": "string",
+          "description": "Strategies that are connected or aligned with the primary Strategy"
+        },
+        "childProgram": {
+          "type": "string",
+          "description": "A specific Program that is part of a larger Initiative"
+        }
+      }
+    },
+    "program": {
+      "type": "object",
+      "description": "Programs sit beneath initiatives and are collections of related projects",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Program"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Program entails"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the Program within the Organization"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Program"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) to which the Program is linked"
+        },
+        "goals": {
+          "type": "string",
+          "description": "Specific objectives of the Program"
+        },
+        "resources": {
+          "type": "string",
+          "description": "Resources allocated for the Program implementation"
+        },
+        "timeline": {
+          "type": "string",
+          "description": "The timeline for achieving the Program goals"
+        },
+        "performanceIndicators": {
+          "type": "string",
+          "description": "Metrics used to measure the success of the Program"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Other Programs, Initiatives or processes that the Program depends on"
+        },
+        "relatedPrograms": {
+          "type": "string",
+          "description": "Programs that are related or linked to this Program"
+        },
+        "risks": {
+          "type": "string",
+          "description": "Potential risks associated with the Program and its implementation"
+        },
+        "improvementOpportunities": {
+          "type": "string",
+          "description": "Areas where the Program can be enhanced or improved"
+        },
+        "strategicAlignment": {
+          "type": "string",
+          "description": "How the Program aligns with the Organization's strategic goals and objectives"
+        },
+        "parentInitiative": {
+          "type": "string",
+          "description": "The parent Initiative to which this Program belongs"
+        },
+        "childProjects": {
+          "type": "string",
+          "description": "Projects that are part of this Program"
+        }
+      }
+    },
+    "project": {
+      "type": "object",
+      "description": "Projects are specific tasks or efforts at the base of the hierarchy",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Project"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Project entails"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the Project within the Program"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Project"
+        },
+        "organizationUnit": {
+          "type": "string",
+          "description": "The Organization unit(s) to which the Project is linked"
+        },
+        "goals": {
+          "type": "string",
+          "description": "Specific objectives of the Project"
+        },
+        "resources": {
+          "type": "string",
+          "description": "Resources allocated for the Project implementation"
+        },
+        "timeline": {
+          "type": "string",
+          "description": "The timeline for completing the Project"
+        },
+        "performanceIndicators": {
+          "type": "string",
+          "description": "Metrics used to measure the success of the Project"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Other Projects, Initiatives or processes that the Project depends on"
+        },
+        "relatedProjects": {
+          "type": "string",
+          "description": "Projects that are related or linked to this Project"
+        },
+        "risks": {
+          "type": "string",
+          "description": "Potential risks associated with the Project and its implementation"
+        },
+        "improvementOpportunities": {
+          "type": "string",
+          "description": "Areas where the Project can be enhanced or improved"
+        },
+        "strategicAlignment": {
+          "type": "string",
+          "description": "How the Project aligns with the Organization's strategic goals and objectives"
+        },
+        "parentProgram": {
+          "type": "string",
+          "description": "The parent Program to which this Project belongs"
+        },
+        "childProjects": {
+          "type": "string",
+          "description": "Projects that are part of this Project"
+        }
+      }
+    }
+  }
+}
