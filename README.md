@@ -1,61 +1,64 @@
 # Orthogramic Metamodel
 
-![License](https://img.shields.io/badge/license-CC%20BY--SA%204.0-blue)
+The **Orthogramic Metamodel** is an open-source, schema-first framework for business architecture. It provides a structured and extensible foundation to describe how an organisation operates, delivers value, and responds to change. Designed for clarity, integration, and automation, it supports strategic alignment, governance, and continuous improvement at scale.
 
-The **Orthogramic Metamodel** is an open-source business architecture metamodel designed to provide a structured framework for aligning business strategy, capabilities, value streams, policies, stakeholders, information, and performance. This metamodel enables organizations to dynamically map their business structures and operations, supporting real-time strategic alignment.
+## What’s included
 
-## 📖 About
+The metamodel is composed of structured JSON Schemas for all core business architecture domains:
 
-The Orthogramic Metamodel has been developed as part of the Orthogramic platform and is now publicly available under the **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)** license. This allows for free use, modification, and distribution as long as appropriate credit is given and derivative works are shared under the same terms.
+- **Strategy** – Goals, drivers, and strategic direction  
+- **Capabilities** – What the organisation is able to do  
+- **Value Streams** – How value is delivered across stages  
+- **Organisation** – Units, roles, structure, and ownership  
+- **Stakeholders** – People and groups with influence or interest  
+- **Information** – Business-critical data and governance  
+- **Performance** – Measurable indicators of success (KPIs)  
+- **Initiatives** – Projects and programs driving change  
+- **Policy** – Rules, compliance, and governance  
+- **Products** – Tangible or intangible deliverables  
+- **Services** – Activities that create value through interaction  
+- **Inter-unit Domain Relationships** – Links between units and domain artefacts  
+- **Strategic Response Model (SRM)** – How the organisation responds to triggers and rationales
 
-🔗 **Metamodel Wiki**: [Orthogramic Metamodel Wiki](https://orthogramic.atlassian.net/wiki/spaces/OM/overview?homepageId=245137410)
+All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
 
-🔗 **Open Source Information**: [Open Source Documentation](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/244777019/Open+Source)
+## Why Orthogramic?
 
-## 🚀 Features
-- **Holistic Business Architecture Framework** – Covers Strategy, Capabilities, Value Streams, Policy, Organization, Information, Initiatives, Stakeholders, and Performance.
-- **Alignment-Focused** – Helps organizations maintain strategic alignment across business domains.
-- **Extensible & Customizable** – Adapt the metamodel to fit specific enterprise architecture needs.
-- **Open & Collaborative** – Contributions from the community are encouraged.
+Orthogramic differs from traditional frameworks like BIZBOK in key ways:
 
-## 📌 Getting Started
+- **Open-source and transparent** – Freely licensed under Creative Commons  
+- **Schema-first and digital** – Designed for automation, integration, and validation  
+- **Inclusive and scalable** – Usable by strategists, analysts, and business teams, not just architects  
+- **Real-time and actionable** – Supports dynamic alignment and structured decision-making  
+- **Integrated** – Performance and policy domains are built in, not bolted on  
 
-1. **Clone the Repository**
-   ```sh
-   git clone https://github.com/your-org/orthogramic-metamodel.git
-   cd orthogramic-metamodel
-   ```
+For a comparison with BIZBOK, see:  
+[Comparing the Orthogramic Metamodel with BIZBOK](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/245137981)
 
-2. **Review the Metamodel Documentation**
-   - Visit the [Orthogramic Metamodel Wiki](https://orthogramic.atlassian.net/wiki/spaces/OM/overview?homepageId=245137410) to understand its structure and use cases.
+## Getting started
 
-3. **Contribute**
-   - See the [Open Source Contribution Guidelines](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/244777019/Open+Source) for details on how to contribute.
+Visit the documentation to begin:
 
-## 🎯 Use Cases
-- Business architecture modeling
-- Strategic planning and capability mapping
-- Enterprise architecture framework development
-- Digital transformation and governance alignment
+- [Model overview](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/290914392)  
+- [Getting started guide](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/290914392)  
+- [New to Business Architecture](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/288948263)  
+- [Familiar with BIZBOK](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/288948285)  
+- [Getting started by problem](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291274855)
 
-## 📝 License
+Each schema includes examples and structured fields to help your team model capabilities, initiatives, and performance in a consistent and transparent way.
 
-This project is licensed under the **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)** license. See the full license details [here](https://creativecommons.org/licenses/by-sa/4.0/).
+## Contributing
 
-## 🤝 Contributing
+We welcome your input! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to propose improvements, submit pull requests, or engage with the community.
 
-We welcome contributions! If you’d like to contribute:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a pull request with a detailed description of changes
+Contribution guidelines and project manifesto are also available at:  
+[Contribution Guidelines](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291799095)  
+[Open Source Manifesto](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291799095)
 
-For detailed guidelines, refer to our [Open Source Contribution Guide](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/244777019/Open+Source).
+## Licence
 
-## 📬 Contact
+This repository and its contents are licensed under the  
+**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**  
+[View licence](https://creativecommons.org/licenses/by-sa/4.0/)
 
-For inquiries, discussions, or collaboration opportunities, please reach out via:
-- 📧 Email: [contact@orthogramic.com](mailto:contact@orthogramic.com)
-- 🏢 Website: [Orthogramic](https://orthogramic.com)
-
----
-We look forward to your contributions and feedback!
+You are free to use, adapt, and redistribute this work with attribution and under the same licence.
