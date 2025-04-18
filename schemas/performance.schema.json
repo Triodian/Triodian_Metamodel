@@ -1,0 +1,152 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Performance Domain Schema",
+  "description": "Schema for the Performance domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the performance metric"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the performance metric entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the performance metric within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the performance metric"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the performance metric is linked"
+    },
+    "rationales": {
+      "type": "array",
+      "items": {
+      "type": "string"
+    },
+      "description": "References to rationale IDs explaining the strategic motivation for each KPI or performance goal."
+    },
+    "inputs": {
+      "type": "string",
+      "description": "The resources information or materials required for the performance metric"
+    },
+    "outputs": {
+      "type": "string",
+      "description": "The deliverables or results produced by the performance metric"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the effectiveness and efficiency of the performance metric"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other metrics processes or systems that the performance metric depends on"
+    },
+    "relatedPerformanceMetrics": {
+      "type": "string",
+      "description": "Performance metrics that are related or linked to this metric"
+    },
+    "maturityLevel": {
+      "type": "string",
+      "description": "The current maturity level of the performance metric"
+    },
+    "toolsAndTechnologies": {
+      "type": "string",
+      "description": "Tools and technologies used to support or enable the performance metric"
+    },
+    "complianceAndStandards": {
+      "type": "string",
+      "description": "Regulatory requirements and standards the performance metric must adhere to"
+    },
+    "cost": {
+      "type": "string",
+      "description": "The financial cost associated with implementing and maintaining the performance metric"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the performance metric and its operations"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the performance metric can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the performance metric aligns with the Organizations strategic goals and objectives"
+    },
+    "kpi": {
+      "type": "array",
+      "description": "Key Performance Indicators",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the Performance KPI"
+          },
+          "parent": {
+            "type": "string",
+            "description": "The Performance outcome the Performance KPI is related to"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of what the Performance KPI entails"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended purpose or function of the Performance KPI within the performance measurement framework"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for the Performance KPI"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) responsible for tracking the KPI"
+          },
+          "measurementMethod": {
+            "type": "string",
+            "description": "How the Performance KPI is measured"
+          },
+          "targets": {
+            "type": "string",
+            "description": "Specific targets or benchmarks for the Performance KPI"
+          },
+          "frequency": {
+            "type": "string",
+            "description": "How often the Performance KPI is measured and reported"
+          },
+          "dataSource": {
+            "type": "string",
+            "description": "The source of data for the Performance KPI measurement"
+          },
+          "relatedKPIs": {
+            "type": "string",
+            "description": "KPIs that are related or linked to this Performance KPI"
+          },
+          "dependencies": {
+            "type": "string",
+            "description": "Other Performance KPIs processes or systems that the Performance KPI depends on"
+          },
+          "risks": {
+            "type": "string",
+            "description": "Potential risks associated with the Performance KPI measurement and its interpretation"
+          },
+          "improvementOpportunities": {
+            "type": "string",
+            "description": "Areas where the Performance KPI measurement can be enhanced or improved"
+          },
+          "strategicAlignment": {
+            "type": "string",
+            "description": "How the Performance KPI aligns with the Organizations strategic goals and objectives"
+          }
+        }
+      }
+    }
+  }
+}
