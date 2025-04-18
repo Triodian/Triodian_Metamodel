@@ -1,0 +1,121 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Strategy Domain Schema",
+  "description": "Schema for the Strategy domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the Strategy"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Strategy entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the Strategy within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the Strategy"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the Strategy is most closely linked"
+    },
+    "objectives": {
+      "type": "string",
+      "description": "Specific measurable targets to achieve strategic goals"
+    },
+    "keyActivities": {
+      "type": "string",
+      "description": "Critical actions necessary to implement the Strategy"
+    },
+    "resources": {
+      "type": "string",
+      "description": "Resources allocated for the Strategy implementation"
+    },
+    "timeline": {
+      "type": "string",
+      "description": "The timeline for achieving the Strategy"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the success of the Strategy"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other strategies, initiatives, or processes that the Strategy depends on"
+    },
+    "relatedStrategies": {
+      "type": "string",
+      "description": "Strategies that are related or linked to this Strategy"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the Strategy and its implementation"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the Strategy can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the Strategy aligns with the Organizations strategic goals and objectives"
+    },
+    "businessObjective": {
+      "type": "string",
+      "description": "A specific measurable goal that a company aims to achieve to support its overall Strategy"
+    },
+    "parent": {
+      "type": "string",
+      "description": "A high-level Strategy that provides overarching principles or rules guiding business operations"
+    },
+    "child": {
+      "type": "string",
+      "description": "A specific Strategy that falls under a broader parent Policy"
+    },
+    "strategicObjective": {
+      "type": "array",
+      "description": "Strategic objectives that are part of this Strategy",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the strategic objective"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of what the strategic objective entails"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended purpose or function of the strategic objective"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for the strategic objective"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) to which the strategic objective is aligned"
+          },
+          "metrics": {
+            "type": "string",
+            "description": "The measurable indicators used to assess the success of the objective"
+          },
+          "timeline": {
+            "type": "string",
+            "description": "The timeframe within which the strategic objective should be achieved"
+          },
+          "stakeholders": {
+            "type": "string",
+            "description": "The Stakeholders involved or affected by the strategic objective"
+          }
+        }
+      }
+    }
+  }
+}
