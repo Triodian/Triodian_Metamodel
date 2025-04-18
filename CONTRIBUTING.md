@@ -24,6 +24,6 @@ All contributions will be made under the repository’s [Creative Commons Attrib
 
 ## Resources
 
-- [Getting started guide](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/290914392)
+- [Getting started guide](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/288948243/Getting+started+guide)
 - [Open source manifesto](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291799095)
 - [Contribution guidelines (wiki)](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/247136257/Contribution+Guidelines)
