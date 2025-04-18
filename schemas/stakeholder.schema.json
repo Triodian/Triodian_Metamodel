@@ -1,0 +1,112 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stakeholders Domain Schema",
+  "description": "Schema for individuals, groups, or entities that influence or are influenced by the value delivered within an organization",
+  "type": "object",
+  "properties": {
+    "stakeholders": {
+      "type": "object",
+      "description": "Individuals, groups, or entities that influence or are influenced by the organization's activities",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Stakeholder"
+        },
+        "type": {
+          "type": "string",
+          "description": "The Stakeholder's position in relation to the Organization"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of the Stakeholder group"
+        },
+        "role": {
+          "type": "string",
+          "description": "Defined responsibilities and interests of the Stakeholder"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) to which the Stakeholder is most closely linked"
+        },
+        "engagementStrategies": {
+          "type": "string",
+          "description": "Plans to communicate and interact with this Stakeholder"
+        },
+        "interestLevels": {
+          "type": "string",
+          "description": "Degree of influence and interest each Stakeholder has in Organization activities"
+        },
+        "inputs": {
+          "type": "string",
+          "description": "Resources or information Stakeholders provide to the Organization"
+        },
+        "outputs": {
+          "type": "string",
+          "description": "Benefits or outcomes Stakeholders receive from the Organization"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Other Stakeholders, processes or systems that the Stakeholder depends on"
+        },
+        "relatedStakeholders": {
+          "type": "string",
+          "description": "Stakeholders that are related or linked to this Stakeholder"
+        },
+        "performanceIndicators": {
+          "type": "string",
+          "description": "Metrics used to measure the effectiveness of Stakeholder engagement"
+        },
+        "risks": {
+          "type": "string",
+          "description": "Potential risks associated with Stakeholder engagement"
+        },
+        "improvementOpportunities": {
+          "type": "string",
+          "description": "Areas where Stakeholder engagement can be enhanced or improved"
+        },
+        "strategicAlignment": {
+          "type": "string",
+          "description": "How the Stakeholder aligns with the Organization's strategic goals and objectives"
+        }
+      }
+    },
+    "stakeholderRequirements": {
+      "type": "object",
+      "description": "Specific needs or expectations from stakeholders that the organization must address",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Stakeholder requirement"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of the Stakeholder requirement"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or benefit of the Stakeholder requirement"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for fulfilling the requirement"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) impacted by the requirement"
+        },
+        "acceptanceCriteria": {
+          "type": "string",
+          "description": "The criteria for accepting the Stakeholder requirement"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "The dependencies related to the Stakeholder requirement"
+        },
+        "regulatoryCompliance": {
+          "type": "string",
+          "description": "The regulatory requirements associated with the Stakeholder requirement"
+        }
+      }
+    }
+  }
+}
