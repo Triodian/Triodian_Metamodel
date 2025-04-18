@@ -48,7 +48,6 @@ Strategy: Develop initiatives to support remote work infrastructure.
 To stay competitive and meet the evolving needs of the workforce.
 
 **JSON representation:**
-```json
 {
   "trigger": {
     "type": "MarketTrend",
@@ -60,6 +59,7 @@ To stay competitive and meet the evolving needs of the workforce.
     "description": "Adapt strategy to accommodate remote work and attract talent"
   }
 }
+
 
 ## Example 3: Internal performance issue leading to capability enhancement
 **Trigger:**
