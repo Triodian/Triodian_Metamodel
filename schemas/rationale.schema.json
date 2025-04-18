@@ -13,7 +13,7 @@
       "description": "A detailed explanation of the rationale supporting a strategic response"
     },
     "trigger": {
-      "$ref": "Orthogramic Subscription Plans ",
+      "$ref": "schemas/trigger.schema.json",
       "description": "Trigger object that prompted this rationale, defined according to the Trigger schema"
     },
     "linkedDomains": {
