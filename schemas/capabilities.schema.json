@@ -1,1 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Capabilities Domain Schema",
+  "description": "Schema for the Capabilities domain in the Orthogramic Metamodel",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The name or title of the Capability"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Capability entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the Capability within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the Capability"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the Capability is linked"
+    },
+    "inputs": {
+      "type": "string",
+      "description": "The resources, information, or materials required for the Capability to function"
+    },
+    "outputs": {
+      "type": "string",
+      "description": "The deliverables or results produced by the Capability"
+    },
+    "processes": {
+      "type": "string",
+      "description": "The set of processes that define how the Capability operates"
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the effectiveness and efficiency of the Capability"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other capabilities, processes, or systems that the Capability depends on"
+    },
+    "relatedCapabilities": {
+      "type": "string",
+      "description": "Capabilities that are related or linked to this Capability"
+    },
+    "maturityLevel": {
+      "type": "string",
+      "description": "The current maturity level of the Capability"
+    },
+    "toolsAndTechnologies": {
+      "type": "string",
+      "description": "Tools and technologies used to support or enable the Capability"
+    },
+    "complianceAndStandards": {
+      "type": "string",
+      "description": "Regulatory requirements and standards the Capability must adhere to"
+    },
+    "cost": {
+      "type": "string",
+      "description": "The financial cost associated with implementing and maintaining the Capability"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the Capability and its operations"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the Capability can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the Capability aligns with the Organizations strategic goals and objectives"
+    },
+    "parent": {
+      "type": "string",
+      "description": "A high-level Capability that encompasses multiple sub-capabilities or child capabilities"
+    },
+    "child": {
+      "type": "string",
+      "description": "A specific Capability that falls under a broader parent Capability"
+    },
+    "childProcess": {
+      "type": "string",
+      "description": "A detailed process that supports a child Capability"
+    },
+    "capabilityFunction": {
+      "type": "object",
+      "description": "The function of the Capability",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the function"
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the function involves"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the activity"
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the function"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) where the function resides"
+        },
+        "inputs": {
+          "type": "string",
+          "description": "The inputs required to perform the function"
+        },
+        "outputs": {
+          "type": "string",
+          "description": "The outputs or deliverables produced by the function"
+        },
+        "processes": {
+          "type": "string",
+          "description": "The processes involved in the function"
+        }
+      }
+    },
+    "capabilityComponent": {
+      "type": "array",
+      "description": "The components that make up the Capability",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the Capability component"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of what the Capability component involves"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended purpose or benefit of the Capability component"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for the Capability component"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) utilizing the Capability component"
+          },
+          "technologies": {
+            "type": "string",
+            "description": "The technologies and tools used for the Capability component"
+          },
+          "processes": {
+            "type": "string",
+            "description": "The processes involved in the Capability component"
+          },
+          "skills": {
+            "type": "string",
+            "description": "The skills and competencies required for the Capability component"
+          }
+        }
+      }
+    },
+    "capabilityProcess": {
+      "type": "array",
+      "description": "The processes within the Capability",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The name or title of the Process"
+          },
+          "description": {
+            "type": "string",
+            "description": "A detailed explanation of what the Process entails"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "The intended purpose or function of the Process"
+          },
+          "owner": {
+            "type": "string",
+            "description": "The individual or team responsible for the Process"
+          },
+          "orgUnitTitle": {
+            "type": "string",
+            "description": "The Organization unit(s) where the Process resides"
+          },
+          "parentCapability": {
+            "type": "string",
+            "description": "The Capability this Process supports"
+          },
+          "inputs": {
+            "type": "string",
+            "description": "The inputs required to perform the Process"
+          },
+          "outputs": {
+            "type": "string",
+            "description": "The outputs or deliverables produced by the Process"
+          },
+          "steps": {
+            "type": "string",
+            "description": "Detailed steps involved in the Process"
+          },
+          "performanceMetrics": {
+            "type": "string",
+            "description": "Metrics used to measure Process effectiveness"
+          },
+          "complianceRequirements": {
+            "type": "string",
+            "description": "Regulatory requirements governing the Process"
+          },
+          "toolsRequired": {
+            "type": "string",
+            "description": "Tools and equipment needed for the Process"
+          }
+        }
+      }
+    }
+  }
+}
 
