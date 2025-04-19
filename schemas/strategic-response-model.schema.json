@@ -54,7 +54,7 @@
       "items": {
         "type": "string"
       },
-      "description": "List of KPI or metric identifiers"
+      "description": "List of linked performance indicator objects"
     },
     "responsibleOrgUnits": {
       "type": "array",
