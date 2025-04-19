@@ -1,117 +1,92 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Strategic Response Model Schema",
-  "description": "Schema for representing strategic responses to triggers that affect business architecture domains.",
+  "title": "Strategic Response Model",
+  "description": "Schema for defining a strategic response to triggers, supported by rationale.",
   "type": "object",
   "properties": {
+    "responseID": {
+      "type": "string",
+      "description": "A unique identifier for the strategic response"
+    },
     "responseTitle": {
       "type": "string",
-      "description": "The name or title of the Strategic Response"
+      "description": "A short title summarising the response"
     },
-    "description": {
+    "responseType": {
       "type": "string",
-      "description": "A detailed explanation of the Strategic Response and its intent"
+      "description": "The classification of the response, e.g., Policy Change, Initiative, etc."
     },
-    "triggerId": {
+    "responseDescription": {
       "type": "string",
-      "description": "Reference ID linking to the triggering event or driver"
+      "description": "Detailed description of the strategic response"
     },
-    "triggerType": {
-      "type": "string",
-      "description": "The category of trigger",
-      "enum": ["Regulatory", "Market", "Risk", "Performance Insight", "Stakeholder Demand", "Technology Shift", "Other"]
+    "triggerReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of trigger IDs linked to this response"
+    },
+    "trigger": {
+      "$ref": "trigger.schema.json",
+      "description": "Detailed trigger object that initiated this response"
+    },
+    "rationaleReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of rationale IDs linked to this response"
     },
     "rationale": {
-      "type": "object",
-      "description": "Structured rationale that justifies the Strategic Response",
-      "properties": {
-        "rationaleTitle": {
-          "type": "string",
-          "description": "A short name for the rationale"
-        },
-        "description": {
-          "type": "string",
-          "description": "A detailed explanation of the reasoning behind the response"
-        },
-        "driverType": {
-          "type": "string",
-          "description": "Category of driver for the rationale",
-          "enum": ["Regulatory", "Risk", "Market", "Insight", "Stakeholder", "Technology", "Compliance", "Other"]
-        },
-        "sourceDocument": {
-          "type": "string",
-          "description": "Document or source that prompted this rationale"
-        },
-        "relatedKPIs": {
-          "type": "array",
-          "description": "List of KPIs that this response intends to influence",
-          "items": {
-            "type": "string"
-          }
-        },
-        "priorityLevel": {
-          "type": "string",
-          "description": "Urgency or criticality of the rationale",
-          "enum": ["High", "Medium", "Low"]
-        }
-      },
-      "required": ["rationaleTitle", "description", "driverType"]
+      "$ref": "rationale.schema.json",
+      "description": "Detailed rationale object supporting this response"
     },
     "affectedDomains": {
       "type": "array",
-      "description": "Business architecture domains impacted by the response",
-      "items": {
-        "type": "string",
-        "enum": ["Strategy", "Capabilities", "Initiatives", "Policy", "Performance", "Services", "Information", "Value Stream"]
-      }
-    },
-    "impactedUnits": {
-      "type": "array",
-      "description": "Organisation units impacted by the response",
-      "items": {
-        "type": "object",
-        "properties": {
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "Name of the impacted organisation unit"
-          },
-          "relationshipRole": {
-            "type": "string",
-            "description": "Role played by the unit in relation to this response",
-            "enum": [
-              "Owning",
-              "Providing",
-              "Utilising",
-              "Consuming",
-              "Dependent",
-              "Custodian",
-              "Governed by",
-              "Supported by"
-            ]
-          },
-          "impactDescription": {
-            "type": "string",
-            "description": "Narrative of how the unit is affected"
-          }
-        },
-        "required": ["orgUnitTitle", "relationshipRole"]
-      }
-    },
-    "responseActions": {
-      "type": "array",
-      "description": "Actions taken or planned as part of the Strategic Response",
       "items": {
         "type": "string"
-      }
+      },
+      "description": "List of affected business architecture domains"
+    },
+    "implementationPlan": {
+      "type": "string",
+      "description": "Reference or summary of the implementation plan"
     },
     "expectedOutcomes": {
       "type": "string",
-      "description": "Expected benefits or changes resulting from this response"
+      "description": "Anticipated results from implementing the response"
     },
-    "performanceImplications": {
+    "performanceIndicators": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of KPI or metric identifiers"
+    },
+    "responsibleOrgUnits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Organisation units responsible for execution"
+    },
+    "startDate": {
       "type": "string",
-      "description": "How the response affects KPIs or performance tracking"
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Planned", "In Progress", "Completed"]
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date"
     }
   },
-  "required": ["responseTitle", "description", "triggerId", "triggerType", "rationale", "affectedDomains"]
+  "required": ["responseID", "responseTitle", "responseType"]
 }
