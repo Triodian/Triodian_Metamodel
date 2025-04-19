@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Federated Governance Model Schema",
+  "description": "Schema for modeling how multiple organizations co-own or co-steward resources",
+  "type": "object",
+  "required": ["governanceID", "name", "domainType"],
+  "properties": {
+    "governanceID": {
+      "type": "string",
+      "description": "Unique identifier for the governance model"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name of the governance arrangement"
+    },
+    "domainType": {
+      "type": "string",
+      "enum": ["Policy", "Information", "Service", "Standard", "Capability"],
+      "description": "Type of domain being governed"
+    },
+    "domainReference": {
+      "type": "string",
+      "description": "Reference to the specific domain entity being governed"
+    },
+    "participatingOrganizations": {
+      "type": "array",
+      "description": "Organizations involved in this governance model",
+      "items": {
+        "type": "object",
+        "properties": {
+          "orgID": {
+            "type": "string"
+          },
+          "orgType": {
+            "type": "string",
+            "enum": ["Internal", "External"]
+          },
+          "governanceRole": {
+            "type": "string",
+            "enum": ["Lead", "Participant", "Advisor", "Approver", "Auditor"]
+          },
+          "votingWeight": {
+            "type": "number",
+            "description": "Relative weight in decisions, if applicable"
+          }
+        }
+      },
+      "minItems": 2
+    },
+    "decisionProcess": {
+      "type": "string",
+      "description": "How decisions are made (consensus, majority, etc.)"
+    },
+    "meetingCadence": {
+      "type": "string",
+      "description": "Frequency of governance meetings"
+    },
+    "escalationPath": {
+      "type": "string",
+      "description": "Process for escalating unresolved issues"
+    },
+    "documentationLink": {
+      "type": "string",
+      "description": "Link to governance documentation"
+    }
+  }
+}
