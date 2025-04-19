@@ -4,7 +4,7 @@
   "description": "Schema for a measurable KPI or performance metric used across the Orthogramic Metamodel.",
   "type": "object",
   "properties": {
-    "indicatorID": {
+    "performanceIndicatorID": {
       "type": "string",
       "description": "Unique identifier for the performance indicator"
     },
