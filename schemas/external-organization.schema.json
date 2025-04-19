@@ -1,1 +1,55 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "External Organization Schema",
+  "description": "Schema for representing third-party entities such as partners, regulators, and customers",
+  "type": "object",
+  "required": ["externalOrgID", "name", "type"],
+  "properties": {
+    "externalOrgID": {
+      "type": "string",
+      "description": "Unique identifier for the external organization"
+    },
+    "name": {
+      "type": "string",
+      "description": "The full name of the external organization"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["Partner", "Regulator", "Customer", "Supplier", "Peer"],
+      "description": "Classification of the external organization"
+    },
+    "description": {
+      "type": "string",
+      "description": "Brief description of the external organization"
+    },
+    "domain": {
+      "type": "string",
+      "description": "Industry or government domain the organization belongs to"
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Legal jurisdiction the organization operates under"
+    },
+    "contactInfo": {
+      "type": "object",
+      "description": "Contact information for the external organization",
+      "properties": {
+        "primaryContact": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string",
+          "format": "email"
+        },
+        "phone": {
+          "type": "string"
+        }
+      }
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    }
+  }
+}
 
