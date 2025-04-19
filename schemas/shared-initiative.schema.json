@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Shared Initiative Schema",
+  "description": "Schema for initiatives with multiple owning organizations",
+  "type": "object",
+  "required": ["initiativeID", "title", "description", "owningOrganizations"],
+  "properties": {
+    "initiativeID": {
+      "type": "string",
+      "description": "Unique identifier for the initiative"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the initiative"
+    },
+    "description": {
+      "type": "string",
+      "description": "Description of the initiative"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Purpose of the initiative"
+    },
+    "startDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "endDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["Proposed", "Approved", "In Progress", "Completed", "Cancelled", "On Hold"]
+    },
+    "budget": {
+      "type": "number"
+    },
+    "goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owningOrganizations": {
+      "type": "array",
+      "description": "Multiple organizations involved in the initiative",
+      "items": {
+        "type": "object",
+        "required": ["orgID", "orgType", "role"],
+        "properties": {
+          "orgID": {
+            "type": "string",
+            "description": "Reference to internal or external organization"
+          },
+          "orgType": {
+            "type": "string",
+            "enum": ["Internal", "External"],
+            "description": "Whether this is an internal or external organization"
+          },
+          "role": {
+            "type": "string",
+            "enum": ["Lead", "Sponsor", "Funding partner", "Implementation partner", "Stakeholder", "Oversight"],
+            "description": "Role of the organization in this initiative"
+          },
+          "responsibilities": {
+            "type": "string",
+            "description": "Specific responsibilities of this organization"
+          },
+          "resourceContribution": {
+            "type": "string",
+            "description": "Resources contributed by this organization"
+          }
+        }
+      },
+      "minItems": 1
+    },
+    "governanceModel": {
+      "type": "string",
+      "description": "Description of how decisions are made across organizations"
+    },
+    "crossOrgDependencies": {
+      "type": "array",
+      "description": "Dependencies involving multiple organizations",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dependencyType": {
+            "type": "string",
+            "enum": ["Information", "Capability", "Resource", "Decision", "Approval"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "sourceOrgID": {
+            "type": "string"
+          },
+          "targetOrgID": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
