@@ -34,7 +34,7 @@
       },
       "description": "List of rationale IDs linked to this response"
     },
-    "performanceIndicatorsReferences": {
+    "performanceIndicatorReferences": {
       "type": "array",
       "items": {
         "type": "string"
