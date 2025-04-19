@@ -27,20 +27,12 @@
       },
       "description": "List of trigger IDs linked to this response"
     },
-    "trigger": {
-      "$ref": "trigger.schema.json",
-      "description": "Detailed trigger object that initiated this response"
-    },
     "rationaleReferences": {
       "type": "array",
       "items": {
         "type": "string"
       },
       "description": "List of rationale IDs linked to this response"
-    },
-    "rationale": {
-      "$ref": "rationale.schema.json",
-      "description": "Detailed rationale object supporting this response"
     },
     "affectedDomains": {
       "type": "array",
