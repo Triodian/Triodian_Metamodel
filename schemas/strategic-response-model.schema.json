@@ -34,6 +34,13 @@
       },
       "description": "List of rationale IDs linked to this response"
     },
+    "performanceIndicatorsReferences": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of linked performance indicator objects"
+    },
     "affectedDomains": {
       "type": "array",
       "items": {
@@ -48,13 +55,6 @@
     "expectedOutcomes": {
       "type": "string",
       "description": "Anticipated results from implementing the response"
-    },
-    "performanceIndicators": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "List of linked performance indicator objects"
     },
     "responsibleOrgUnits": {
       "type": "array",
