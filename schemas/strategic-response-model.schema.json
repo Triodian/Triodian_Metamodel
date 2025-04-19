@@ -39,7 +39,7 @@
       "items": {
         "type": "string"
       },
-      "description": "List of linked performance indicator objects"
+      "description": "List of linked performance indicator IDs linked to this response"
     },
     "affectedDomains": {
       "type": "array",
