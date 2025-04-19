@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "External-Enterprise Composite Schema",
+  "description": "Composite schema linking all external organization related schemas",
+  "type": "object",
+  "properties": {
+    "externalOrganizations": {
+      "type": "array",
+      "items": {
+        "$ref": "externalOrganization.schema.json"
+      }
+    },
+    "interOrganizationalRelationships": {
+      "type": "array",
+      "items": {
+        "$ref": "interOrganizationalRelationship.schema.json"
+      }
+    },
+    "sharedInitiatives": {
+      "type": "array",
+      "items": {
+        "$ref": "sharedInitiative.schema.json"
+      }
+    },
+    "federatedGovernanceModels": {
+      "type": "array",
+      "items": {
+        "$ref": "federatedGovernanceModel.schema.json"
+      }
+    }
+  }
+}
