@@ -1,63 +1,100 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Performance Indicator",
-  "description": "Schema for a measurable KPI or performance metric used across the Orthogramic Metamodel.",
+  "title": "Performance Indicator Schema",
+  "description": "Schema for the Performance Indicator domain in the Orthogramic Metamodel",
   "type": "object",
   "properties": {
-    "performanceIndicatorID": {
-      "type": "string",
-      "description": "Unique identifier for the performance indicator"
-    },
     "title": {
       "type": "string",
-      "description": "Short name or label for the indicator"
-    },
-    "description": {
-      "type": "string",
-      "description": "Detailed description of what the indicator measures"
-    },
-    "unitOfMeasure": {
-      "type": "string",
-      "description": "Unit used for measurement (e.g., %, incidents/year)"
-    },
-    "baselineValue": {
-      "type": ["number", "string"],
-      "description": "The value before intervention or change"
-    },
-    "currentValue": {
-      "type": ["number", "string"],
-      "description": "Most recent known or calculated value"
+      "description": "The name of the performance indicator"
     },
     "targetValue": {
-      "type": ["number", "string"],
-      "description": "Value to be achieved for success"
+      "type": "number",
+      "description": "The target performance value"
     },
-    "thresholdType": {
-      "type": "string",
-      "enum": ["maximum", "minimum", "exact"],
-      "description": "Type of threshold comparison"
+    "actualValue": {
+      "type": "number",
+      "description": "The current measured performance value"
     },
-    "targetDate": {
+    "baselineValue": {
+      "type": "number",
+      "description": "The initial reference value for comparison"
+    },
+    "variance": {
+      "type": "number",
+      "description": "The difference between actual and target values"
+    },
+    "variancePercentage": {
+      "type": "number",
+      "description": "The variance as a percentage of the target"
+    },
+    "validFrom": {
       "type": "string",
       "format": "date",
-      "description": "Date by which the target value should be achieved"
+      "description": "Start date of the performance measurement period"
     },
-    "assessmentFrequency": {
+    "validTo": {
       "type": "string",
-      "description": "How often the performance indicator is evaluated (e.g., monthly, quarterly)"
+      "format": "date",
+      "description": "End date of the performance measurement period"
     },
-    "dataSource": {
+    "aggregationPeriod": {
       "type": "string",
-      "description": "Where the measurement data originates from"
+      "enum": ["daily", "weekly", "monthly", "quarterly", "yearly"],
+      "description": "The time period over which performance is aggregated"
     },
-    "owner": {
-      "type": "string",
-      "description": "Owner or accountable person/team for the indicator"
+    "thresholds": {
+      "type": "array",
+      "description": "A list of alert thresholds",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string",
+            "description": "Severity level of the threshold"
+          },
+          "value": {
+            "type": "number",
+            "description": "Threshold trigger value"
+          },
+          "comparisonOperator": {
+            "type": "string",
+            "enum": [">", "<", ">=", "<=", "==", "!="],
+            "description": "Comparison operator used to evaluate the threshold"
+          },
+          "alertMessage": {
+            "type": "string",
+            "description": "Custom message when threshold is breached"
+          },
+          "notificationRecipients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of roles or individuals to notify"
+          }
+        },
+        "required": ["level", "value", "comparisonOperator"]
+      }
     },
-    "orgUnitTitle": {
-      "type": "string",
-      "description": "Name of the organisational unit responsible"
+    "evaluativeModel": {
+      "type": "object",
+      "description": "Model used to evaluate performance trends",
+      "properties": {
+        "modelType": {
+          "type": "string",
+          "description": "Type of evaluative model (e.g., movingAverage, linearRegression)"
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Parameters for the evaluative model"
+        },
+        "description": {
+          "type": "string",
+          "description": "Explanation of the evaluative model"
+        }
+      }
     }
   },
-  "required": ["indicatorID", "title", "unitOfMeasure", "targetValue"]
+  "required": ["title", "targetValue"]
 }
