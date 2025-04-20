@@ -1,0 +1,34 @@
+{
+  "title": "Customer Satisfaction Index",
+  "targetValue": 85,
+  "actualValue": 78,
+  "baselineValue": 70,
+  "variance": -7,
+  "variancePercentage": -8.24,
+  "validFrom": "2025-01-01",
+  "validTo": "2025-03-31",
+  "aggregationPeriod": "quarterly",
+  "thresholds": [
+    {
+      "level": "warning",
+      "value": 80,
+      "comparisonOperator": "<",
+      "alertMessage": "Satisfaction below warning threshold",
+      "notificationRecipients": ["Customer Service Lead"]
+    },
+    {
+      "level": "critical",
+      "value": 75,
+      "comparisonOperator": "<",
+      "alertMessage": "Satisfaction critically low",
+      "notificationRecipients": ["Head of Customer Experience"]
+    }
+  ],
+  "evaluativeModel": {
+    "modelType": "movingAverage",
+    "parameters": {
+      "windowSize": 3
+    },
+    "description": "Trailing 3-month average used to smooth short-term fluctuations."
+  }
+}
