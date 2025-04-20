@@ -4,6 +4,11 @@
   "description": "Schema for a Rationale object used in the Strategic Response Model to explain the reasoning behind strategic responses",
   "type": "object",
   "properties": {
+    "rationaleID": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for the rationale"
+    },
     "rationaleTitle": {
       "type": "string",
       "description": "Title or summary of the rationale"
@@ -12,9 +17,10 @@
       "type": "string",
       "description": "A detailed explanation of the rationale supporting a strategic response"
     },
-    "trigger": {
-      "$ref": "schemas/trigger.schema.json",
-      "description": "Trigger object that prompted this rationale, defined according to the Trigger schema"
+    "triggerReference": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Reference to the trigger that prompted this rationale"
     },
     "linkedDomains": {
       "type": "array",
@@ -31,21 +37,76 @@
           "Products",
           "Services",
           "Stakeholder",
-          "Value Stream"
+          "Value_Stream"
         ]
       }
     },
-    "classification": {
+    "primaryDriver": {
       "type": "string",
-      "description": "Optional category for the rationale (e.g. risk mitigation, compliance, opportunity, mandate)",
+      "description": "Primary category for the rationale",
       "enum": [
-        "Risk",
-        "Compliance",
-        "Opportunity",
-        "Mandate",
-        "Performance Insight",
-        "Stakeholder Need",
+        "Risk_Mitigation",
+        "Compliance_Requirement",
+        "Market_Opportunity",
+        "Executive_Mandate",
+        "Performance_Insight",
+        "Stakeholder_Need",
+        "Cost_Optimization",
+        "Innovation",
+        "Quality_Improvement",
         "Other"
+      ]
+    },
+    "reasoningPattern": {
+      "type": "string",
+      "description": "The logical structure of the rationale",
+      "enum": [
+        "Causal",
+        "Comparative",
+        "Normative",
+        "Predictive",
+        "Analogical",
+        "Deductive",
+        "Inductive"
+      ]
+    },
+    "evidenceBase": {
+      "type": "string",
+      "description": "The foundation for the rationale",
+      "enum": [
+        "Data_Driven",
+        "Expert_Judgment",
+        "Regulatory_Requirement",
+        "Industry_Best_Practice",
+        "Customer_Feedback",
+        "Internal_Analysis",
+        "External_Research",
+        "Competitive_Analysis"
+      ]
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the rationale connects to organizational strategy",
+      "enum": [
+        "Direct_Support",
+        "Indirect_Enablement",
+        "Risk_Mitigation",
+        "Compliance_Fulfillment",
+        "Capability_Enhancement",
+        "Strategic_Pivot"
+      ]
+    },
+    "businessValueType": {
+      "type": "string",
+      "description": "The nature of value creation or preservation",
+      "enum": [
+        "Cost_Reduction",
+        "Revenue_Growth",
+        "Risk_Reduction",
+        "Customer_Experience",
+        "Operational_Efficiency",
+        "Competitive_Advantage",
+        "Regulatory_Compliance"
       ]
     },
     "dateCreated": {
@@ -59,12 +120,22 @@
     },
     "orgUnitTitle": {
       "type": "string",
-      "description": "The organisational unit that owns or authored the rationale"
+      "description": "The organizational unit that owns or authored the rationale"
+    },
+    "relatedRationales": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "description": "References to other related rationales"
     }
   },
   "required": [
+    "rationaleID",
     "rationaleTitle",
     "description",
-    "trigger"
+    "triggerReference",
+    "primaryDriver"
   ]
 }
