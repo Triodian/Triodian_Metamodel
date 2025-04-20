@@ -1,13 +1,14 @@
 {
+  "performanceIndicatorID": "PI-0012",
   "title": "Customer Satisfaction Index",
-  "targetValue": 85,
-  "actualValue": 78,
+  "description": "Measures overall satisfaction based on quarterly customer feedback survey.",
+  "unitOfMeasure": "%",
   "baselineValue": 70,
+  "currentValue": 78,
+  "targetValue": 85,
   "variance": -7,
   "variancePercentage": -8.24,
-  "validFrom": "2025-01-01",
-  "validTo": "2025-03-31",
-  "aggregationPeriod": "quarterly",
+  "thresholdType": "higher-is-better",
   "thresholds": [
     {
       "level": "warning",
@@ -24,11 +25,19 @@
       "notificationRecipients": ["Head of Customer Experience"]
     }
   ],
+  "targetDate": "2025-03-31",
+  "validFrom": "2025-01-01",
+  "validTo": "2025-03-31",
+  "aggregationPeriod": "quarterly",
+  "assessmentFrequency": "monthly",
   "evaluativeModel": {
     "modelType": "movingAverage",
     "parameters": {
       "windowSize": 3
     },
-    "description": "Trailing 3-month average used to smooth short-term fluctuations."
-  }
+    "description": "Applies a 3-month rolling average to smooth performance fluctuations."
+  },
+  "dataSource": "Customer Survey Platform",
+  "owner": "Customer Insights Manager",
+  "orgUnitTitle": "Customer Experience Division"
 }
