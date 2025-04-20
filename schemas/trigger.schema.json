@@ -34,7 +34,7 @@
       ],
       "description": "Primary classification of trigger context"
     },
-    "subcategory": {
+    "subCategory": {
       "type": "string",
       "description": "More specific classification within the primary category"
     },
