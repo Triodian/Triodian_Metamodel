@@ -128,4 +128,316 @@
       "type": "string",
       "description": "The person or role responsible for this indicator"
     },
-    "orgUnitTitle
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organizational unit to which this indicator belongs"
+    },
+
+    "leadingIndicators": {
+      "type": "array",
+      "description": "Metrics that show early progress before outcomes materialize",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicatorName": {
+            "type": "string",
+            "description": "Name of the leading indicator"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of how this indicator signals future performance"
+          },
+          "triggerThreshold": {
+            "type": "number",
+            "description": "Value at which action should be taken"
+          },
+          "leadTime": {
+            "type": "string",
+            "description": "Typical time between indicator change and outcome impact"
+          },
+          "confidenceLevel": {
+            "type": "number",
+            "description": "Estimated confidence (0-100%) that this indicator predicts the outcome"
+          },
+          "currentValue": {
+            "type": "number",
+            "description": "Current measurement for this leading indicator"
+          }
+        },
+        "required": ["indicatorName", "description"]
+      }
+    },
+    
+    "potentialMetrics": {
+      "type": "array",
+      "description": "New measurement categories for innovative initiatives",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of the potential new metric"
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of what this metric would measure"
+          },
+          "valueProposition": {
+            "type": "string",
+            "description": "How this metric would add value to performance measurement"
+          },
+          "implementationChallenges": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Potential challenges in implementing this metric"
+          },
+          "dataRequirements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Data needed to calculate this metric"
+          },
+          "estimatedImplementationTime": {
+            "type": "string",
+            "description": "Estimated time required to implement this metric"
+          }
+        },
+        "required": ["metricName", "description"]
+      }
+    },
+    
+    "outcomeTimeframes": {
+      "type": "object",
+      "description": "When different results are expected to manifest",
+      "properties": {
+        "immediateOutcomes": {
+          "type": "array",
+          "description": "Outcomes expected within 0-3 months",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcome": {
+                "type": "string", 
+                "description": "Description of the immediate outcome"
+              },
+              "expectedValue": {
+                "type": "number",
+                "description": "Expected value to be achieved"
+              },
+              "confidenceLevel": {
+                "type": "number",
+                "description": "Confidence level for this outcome (0-100%)"
+              }
+            }
+          }
+        },
+        "intermediateOutcomes": {
+          "type": "array",
+          "description": "Outcomes expected within 3-12 months",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcome": {
+                "type": "string", 
+                "description": "Description of the intermediate outcome"
+              },
+              "expectedValue": {
+                "type": "number",
+                "description": "Expected value to be achieved"
+              },
+              "confidenceLevel": {
+                "type": "number",
+                "description": "Confidence level for this outcome (0-100%)"
+              }
+            }
+          }
+        },
+        "longTermOutcomes": {
+          "type": "array",
+          "description": "Outcomes expected after 12+ months",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcome": {
+                "type": "string", 
+                "description": "Description of the long-term outcome"
+              },
+              "expectedValue": {
+                "type": "number",
+                "description": "Expected value to be achieved"
+              },
+              "confidenceLevel": {
+                "type": "number",
+                "description": "Confidence level for this outcome (0-100%)"
+              }
+            }
+          }
+        },
+        "catalyticEvents": {
+          "type": "array",
+          "description": "Key events that may accelerate or modify outcomes",
+          "items": {
+            "type": "object",
+            "properties": {
+              "event": {
+                "type": "string",
+                "description": "Description of the catalytic event"
+              },
+              "probability": {
+                "type": "number",
+                "description": "Probability of this event occurring (0-100%)"
+              },
+              "impactDescription": {
+                "type": "string",
+                "description": "Description of how this event would impact outcomes"
+              },
+              "estimatedDate": {
+                "type": "string",
+                "format": "date",
+                "description": "Estimated date when this event might occur"
+              }
+            }
+          }
+        }
+      }
+    },
+    
+    "measurement": {
+      "type": "object",
+      "description": "Specify objective, subjective, or proxy measurement approaches",
+      "properties": {
+        "approachType": {
+          "type": "string",
+          "enum": ["objective", "subjective", "proxy", "hybrid"],
+          "description": "The primary approach to measurement"
+        },
+        "objectiveComponents": {
+          "type": "array",
+          "description": "Direct, quantifiable measurement components",
+          "items": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Name of the objective measurement component"
+              },
+              "method": {
+                "type": "string",
+                "description": "Method used for collecting this data"
+              },
+              "formula": {
+                "type": "string",
+                "description": "Formula or calculation used (if applicable)"
+              },
+              "weight": {
+                "type": "number",
+                "description": "Weight of this component in the overall metric (0-100%)"
+              },
+              "validationProcess": {
+                "type": "string",
+                "description": "Process used to validate this measurement"
+              }
+            },
+            "required": ["component", "method"]
+          }
+        },
+        "subjectiveComponents": {
+          "type": "array",
+          "description": "Judgment or perception-based measurement components",
+          "items": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Name of the subjective measurement component"
+              },
+              "assessmentMethod": {
+                "type": "string",
+                "description": "Method used for subjective assessment (e.g., survey, expert review)"
+              },
+              "assessors": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Roles or individuals conducting the assessment"
+              },
+              "weight": {
+                "type": "number",
+                "description": "Weight of this component in the overall metric (0-100%)"
+              },
+              "biasControlMeasures": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Measures to control bias in subjective assessment"
+              }
+            },
+            "required": ["component", "assessmentMethod"]
+          }
+        },
+        "proxyComponents": {
+          "type": "array",
+          "description": "Indirect measurement components used when direct measurement isn't possible",
+          "items": {
+            "type": "object",
+            "properties": {
+              "component": {
+                "type": "string",
+                "description": "Name of the proxy measurement component"
+              },
+              "targetMeasure": {
+                "type": "string",
+                "description": "What this proxy is intended to represent"
+              },
+              "correlationStrength": {
+                "type": "number",
+                "description": "Estimated correlation between proxy and target (0-1)"
+              },
+              "validationMethod": {
+                "type": "string",
+                "description": "Method used to validate the proxy's correlation"
+              },
+              "limitations": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Known limitations of this proxy measure"
+              },
+              "weight": {
+                "type": "number",
+                "description": "Weight of this component in the overall metric (0-100%)"
+              }
+            },
+            "required": ["component", "targetMeasure"]
+          }
+        },
+        "dataNormalization": {
+          "type": "object",
+          "description": "Methods for normalizing or standardizing different measurement components",
+          "properties": {
+            "method": {
+              "type": "string",
+              "description": "Normalization method used (e.g., min-max, z-score)"
+            },
+            "description": {
+              "type": "string",
+              "description": "Explanation of how normalization is applied"
+            },
+            "parameters": {
+              "type": "object",
+              "description": "Parameters used in the normalization process"
+            }
+          }
+        }
+      },
+      "required": ["approachType"]
+    }
+  },
+  "required": ["performanceIndicatorID", "title", "description"]
+}
