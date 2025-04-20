@@ -4,29 +4,84 @@
   "description": "Schema for the Performance Indicator domain in the Orthogramic Metamodel",
   "type": "object",
   "properties": {
+    "performanceIndicatorID": {
+      "type": "string",
+      "description": "A unique identifier for the performance indicator"
+    },
     "title": {
       "type": "string",
-      "description": "The name of the performance indicator"
+      "description": "The name or label of the performance indicator"
     },
-    "targetValue": {
-      "type": "number",
-      "description": "The target performance value"
+    "description": {
+      "type": "string",
+      "description": "A brief explanation of what the indicator measures"
     },
-    "actualValue": {
-      "type": "number",
-      "description": "The current measured performance value"
+    "unitOfMeasure": {
+      "type": "string",
+      "description": "The unit in which performance is measured (e.g. %, $AUD)"
     },
     "baselineValue": {
       "type": "number",
-      "description": "The initial reference value for comparison"
+      "description": "The starting reference point for performance"
+    },
+    "currentValue": {
+      "type": "number",
+      "description": "The current measured value (actual performance)"
+    },
+    "targetValue": {
+      "type": "number",
+      "description": "The target or goal value to be achieved"
     },
     "variance": {
       "type": "number",
-      "description": "The difference between actual and target values"
+      "description": "The calculated difference between currentValue and targetValue"
     },
     "variancePercentage": {
       "type": "number",
-      "description": "The variance as a percentage of the target"
+      "description": "The percentage difference from the target value"
+    },
+    "thresholdType": {
+      "type": "string",
+      "description": "General threshold logic, e.g. higher-is-better or lower-is-better"
+    },
+    "thresholds": {
+      "type": "array",
+      "description": "Detailed list of threshold rules",
+      "items": {
+        "type": "object",
+        "properties": {
+          "level": {
+            "type": "string",
+            "description": "Label for the threshold level (e.g. warning, critical)"
+          },
+          "value": {
+            "type": "number",
+            "description": "Numeric threshold value"
+          },
+          "comparisonOperator": {
+            "type": "string",
+            "enum": [">", "<", ">=", "<=", "==", "!="],
+            "description": "Logical operator for threshold evaluation"
+          },
+          "alertMessage": {
+            "type": "string",
+            "description": "Message to display or send when threshold is breached"
+          },
+          "notificationRecipients": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of roles or individuals to be notified"
+          }
+        },
+        "required": ["level", "value", "comparisonOperator"]
+      }
+    },
+    "targetDate": {
+      "type": "string",
+      "format": "date",
+      "description": "The date by which the target should be achieved"
     },
     "validFrom": {
       "type": "string",
@@ -41,60 +96,36 @@
     "aggregationPeriod": {
       "type": "string",
       "enum": ["daily", "weekly", "monthly", "quarterly", "yearly"],
-      "description": "The time period over which performance is aggregated"
+      "description": "The timeframe used to aggregate performance data"
     },
-    "thresholds": {
-      "type": "array",
-      "description": "A list of alert thresholds",
-      "items": {
-        "type": "object",
-        "properties": {
-          "level": {
-            "type": "string",
-            "description": "Severity level of the threshold"
-          },
-          "value": {
-            "type": "number",
-            "description": "Threshold trigger value"
-          },
-          "comparisonOperator": {
-            "type": "string",
-            "enum": [">", "<", ">=", "<=", "==", "!="],
-            "description": "Comparison operator used to evaluate the threshold"
-          },
-          "alertMessage": {
-            "type": "string",
-            "description": "Custom message when threshold is breached"
-          },
-          "notificationRecipients": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of roles or individuals to notify"
-          }
-        },
-        "required": ["level", "value", "comparisonOperator"]
-      }
+    "assessmentFrequency": {
+      "type": "string",
+      "description": "How often the performance is assessed (e.g. weekly, monthly)"
     },
     "evaluativeModel": {
       "type": "object",
-      "description": "Model used to evaluate performance trends",
+      "description": "Describes a model used to analyse or interpret performance trends",
       "properties": {
         "modelType": {
           "type": "string",
-          "description": "Type of evaluative model (e.g., movingAverage, linearRegression)"
+          "description": "The name of the model (e.g. movingAverage, trendLine)"
         },
         "parameters": {
           "type": "object",
-          "description": "Parameters for the evaluative model"
+          "description": "Model parameters as key-value pairs"
         },
         "description": {
           "type": "string",
-          "description": "Explanation of the evaluative model"
+          "description": "Explanation of the model's role or calculation logic"
         }
       }
-    }
-  },
-  "required": ["title", "targetValue"]
-}
+    },
+    "dataSource": {
+      "type": "string",
+      "description": "Source system or method used to collect performance data"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The person or role responsible for this indicator"
+    },
+    "orgUnitTitle
