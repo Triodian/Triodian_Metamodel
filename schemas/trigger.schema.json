@@ -41,7 +41,7 @@
     "origin": {
       "type": "string",
       "enum": ["Internal", "External", "Hybrid"],
-      "description": "Whether the trigger originates from inside or outside the organization"
+      "description": "Whether the trigger originates from inside or outside the organisation"
     },
     "timeHorizon": {
       "type": "string",
@@ -53,10 +53,20 @@
       "enum": ["Low", "Medium", "High", "Critical"],
       "description": "The potential significance of the trigger"
     },
+    "status": {
+      "type": "string",
+      "enum": ["Emerging", "Ongoing", "Declining", "Resolved"],
+      "description": "The current status in the lifecycle of the trigger"
+    },
     "detectionDate": {
       "type": "string",
       "format": "date",
       "description": "Date when the trigger was identified"
+    },
+    "validUntil": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the trigger is no longer expected to be relevant"
     },
     "sourceReference": {
       "type": "string",
