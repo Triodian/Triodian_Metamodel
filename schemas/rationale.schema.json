@@ -1,8 +1,9 @@
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Rationale Schema",
-  "description": "Schema for a Rationale object used in the Strategic Response Model to explain the reasoning behind strategic responses",
+  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orthogramic.org/schema/rationale.json",
+  "title": "rationale",
   "type": "object",
+  "required": ["rationaleID", "rationaleTitle", "description", "triggerReference", "rationaleType"],
   "properties": {
     "rationaleID": {
       "type": "string",
@@ -15,16 +16,23 @@
     },
     "description": {
       "type": "string",
-      "description": "A detailed explanation of the rationale supporting a strategic response"
+      "description": "Detailed explanation supporting a strategic response"
     },
     "triggerReference": {
       "type": "string",
       "format": "uuid",
-      "description": "Reference to the trigger that prompted this rationale"
+      "description": "Primary trigger this rationale responds to"
+    },
+    "triggerReferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "description": "Optional multiple triggers this rationale addresses"
     },
     "linkedDomains": {
       "type": "array",
-      "description": "List of business architecture domains influenced or justified by this rationale",
       "items": {
         "type": "string",
         "enum": [
@@ -39,24 +47,24 @@
           "Stakeholder",
           "Value_Stream"
         ]
-      }
+      },
+      "description": "Domains supported by this rationale"
     },
     "rationaleType": {
       "type": "string",
-      "description": "The justification type for this response rationale",
       "enum": [
         "Preventative",
-        "Remedial", 
+        "Remedial",
         "Opportunistic",
         "Proactive",
         "Reactive",
         "Compliance_Fulfillment",
         "Strategic_Advancement"
-      ]
+      ],
+      "description": "Type of rationale"
     },
     "reasoningPattern": {
       "type": "string",
-      "description": "The logical structure of the rationale",
       "enum": [
         "Causal",
         "Comparative",
@@ -65,11 +73,11 @@
         "Analogical",
         "Deductive",
         "Inductive"
-      ]
+      ],
+      "description": "Reasoning structure"
     },
     "evidenceBase": {
       "type": "string",
-      "description": "The foundation for the rationale",
       "enum": [
         "Data_Driven",
         "Expert_Judgment",
@@ -78,16 +86,16 @@
         "Internal_Analysis",
         "External_Research",
         "Competitive_Analysis"
-      ]
+      ],
+      "description": "Evidence base used"
     },
     "strategicObjectiveReference": {
       "type": "string",
       "format": "uuid",
-      "description": "Reference to the strategic objective this rationale supports"
+      "description": "Strategic objective this rationale supports"
     },
     "businessValueType": {
       "type": "string",
-      "description": "The nature of value creation or preservation",
       "enum": [
         "Cost_Reduction",
         "Revenue_Growth",
@@ -97,20 +105,32 @@
         "Competitive_Advantage",
         "Brand_Perception",
         "Stakeholder_Trust"
-      ]
+      ],
+      "description": "Value outcome intended"
     },
     "dateCreated": {
       "type": "string",
       "format": "date",
-      "description": "The date the rationale was first recorded"
+      "description": "Date this rationale was recorded"
+    },
+    "lastReviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Most recent date of rationale review"
+    },
+    "effectivenessRating": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5,
+      "description": "Optional evaluation score for rationale effectiveness"
     },
     "author": {
       "type": "string",
-      "description": "The person or team who documented the rationale"
+      "description": "Person or team who created the rationale"
     },
     "orgUnitTitle": {
       "type": "string",
-      "description": "The organizational unit that owns or authored the rationale"
+      "description": "Unit responsible for or benefiting from this rationale"
     },
     "relatedRationales": {
       "type": "array",
@@ -118,14 +138,15 @@
         "type": "string",
         "format": "uuid"
       },
-      "description": "References to other related rationales"
+      "description": "Related rationale references"
+    },
+    "relationshipTypes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["supports", "contradicts", "expands", "duplicates", "supersedes"]
+      },
+      "description": "Types of relationships to related rationales"
     }
-  },
-  "required": [
-    "rationaleID",
-    "rationaleTitle",
-    "description",
-    "triggerReference",
-    "rationaleType"
-  ]
+  }
 }
