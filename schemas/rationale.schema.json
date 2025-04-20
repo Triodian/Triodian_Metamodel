@@ -3,7 +3,7 @@
   "$id": "https://orthogramic.org/schema/rationale.json",
   "title": "rationale",
   "type": "object",
-  "required": ["rationaleID", "rationaleTitle", "description", "triggerReference", "rationaleType"],
+  "required": ["rationaleID", "rationaleTitle", "description", "triggerReference", "rationaleType", "rationaleOrientation"],
   "properties": {
     "rationaleID": {
       "type": "string",
@@ -63,6 +63,44 @@
       ],
       "description": "Type of rationale"
     },
+    "rationaleOrientation": {
+      "type": "string",
+      "enum": [
+        "Reactive",
+        "Proactive"
+      ],
+      "description": "Whether the rationale is responding to an existing condition or anticipating future conditions"
+    },
+    "anticipatedOutcomes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "For proactive rationales, the expected benefits or outcomes"
+    },
+    "alternativeConsidered": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternativeID": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Identifier for this alternative"
+          },
+          "alternativeDescription": {
+            "type": "string",
+            "description": "Description of the alternative strategic option"
+          },
+          "reasonForRejection": {
+            "type": "string",
+            "description": "Reasoning behind why this alternative was not selected"
+          }
+        },
+        "required": ["alternativeDescription"]
+      },
+      "description": "Other strategic options that were evaluated but not selected"
+    },
     "reasoningPattern": {
       "type": "string",
       "enum": [
@@ -104,9 +142,44 @@
         "Operational_Efficiency",
         "Competitive_Advantage",
         "Brand_Perception",
-        "Stakeholder_Trust"
+        "Stakeholder_Trust",
+        "Market_Creation",
+        "First_Mover_Advantage",
+        "Market_Disruption",
+        "Innovation_Leadership",
+        "Ecosystem_Development",
+        "Strategic_Positioning"
       ],
       "description": "Value outcome intended"
+    },
+    "competitivePositioning": {
+      "type": "object",
+      "properties": {
+        "positioningType": {
+          "type": "string",
+          "enum": [
+            "Differentiation",
+            "Cost_Leadership",
+            "Focus_Strategy",
+            "Blue_Ocean",
+            "Industry_Leadership",
+            "Fast_Follower",
+            "Niche_Dominance",
+            "Strategic_Alliance"
+          ],
+          "description": "Type of competitive positioning strategy"
+        },
+        "positioningDescription": {
+          "type": "string",
+          "description": "Detailed description of how this advances competitive stance"
+        },
+        "competitiveTarget": {
+          "type": "string",
+          "description": "Specific market segment, competitor, or industry position targeted"
+        }
+      },
+      "required": ["positioningDescription"],
+      "description": "How this rationale advances competitive positioning"
     },
     "dateCreated": {
       "type": "string",
