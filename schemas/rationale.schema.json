@@ -41,20 +41,17 @@
         ]
       }
     },
-    "primaryDriver": {
+    "rationaleType": {
       "type": "string",
-      "description": "Primary category for the rationale",
+      "description": "The justification type for this response rationale",
       "enum": [
-        "Risk_Mitigation",
-        "Compliance_Requirement",
-        "Market_Opportunity",
-        "Executive_Mandate",
-        "Performance_Insight",
-        "Stakeholder_Need",
-        "Cost_Optimization",
-        "Innovation",
-        "Quality_Improvement",
-        "Other"
+        "Preventative",
+        "Remedial", 
+        "Opportunistic",
+        "Proactive",
+        "Reactive",
+        "Compliance_Fulfillment",
+        "Strategic_Advancement"
       ]
     },
     "reasoningPattern": {
@@ -76,7 +73,6 @@
       "enum": [
         "Data_Driven",
         "Expert_Judgment",
-        "Regulatory_Requirement",
         "Industry_Best_Practice",
         "Customer_Feedback",
         "Internal_Analysis",
@@ -84,17 +80,10 @@
         "Competitive_Analysis"
       ]
     },
-    "strategicAlignment": {
+    "strategicObjectiveReference": {
       "type": "string",
-      "description": "How the rationale connects to organizational strategy",
-      "enum": [
-        "Direct_Support",
-        "Indirect_Enablement",
-        "Risk_Mitigation",
-        "Compliance_Fulfillment",
-        "Capability_Enhancement",
-        "Strategic_Pivot"
-      ]
+      "format": "uuid",
+      "description": "Reference to the strategic objective this rationale supports"
     },
     "businessValueType": {
       "type": "string",
@@ -106,7 +95,8 @@
         "Customer_Experience",
         "Operational_Efficiency",
         "Competitive_Advantage",
-        "Regulatory_Compliance"
+        "Brand_Perception",
+        "Stakeholder_Trust"
       ]
     },
     "dateCreated": {
@@ -136,6 +126,6 @@
     "rationaleTitle",
     "description",
     "triggerReference",
-    "primaryDriver"
+    "rationaleType"
   ]
 }
