@@ -18,36 +18,44 @@
       "type": "string",
       "description": "Expanded explanation of the trigger's relevance"
     },
-    "primaryCategory": {
-      "type": "string",
-      "enum": [
-        "Regulatory_Compliance",
-        "Technological_Change",
-        "Environmental_Safety",
-        "Operational_Transformation",
-        "Strategic_Realignment",
-        "Customer_Stakeholder",
-        "Workforce_Skills",
-        "Performance_Response",
-        "Political_Social",
-        "Innovation_Opportunity"
-      ],
-      "description": "Primary classification of trigger context"
-    },
-    "subCategory": {
-      "type": "string",
-      "description": "More specific classification within the primary category"
-    },
-    "origin": {
-      "type": "string",
-      "enum": ["Internal", "External", "Hybrid"],
-      "description": "Whether the trigger originates from inside or outside the organisation"
-    },
-    "timeHorizon": {
-      "type": "string",
-      "enum": ["Immediate", "Short_Term", "Medium_Term", "Long_Term"],
-      "description": "The temporal nature of the trigger"
-    },
+"primaryCategory": {
+  "type": "string",
+  "enum": [
+    "Regulatory_Compliance",
+    "Technological_Change",
+    "Environmental_Safety",
+    "Operational_Transformation",
+    "Strategic_Realignment",
+    "Customer_Stakeholder",
+    "Workforce_Skills",
+    "Performance_Response",
+    "Political_Social",
+    "Innovation_Opportunity",
+    "Strategic_Opportunity"
+  ],
+  "description": "Primary classification of trigger context"
+},
+"subCategory": {
+  "type": "string",
+  "enum": [
+    "Market Expansion",
+    "Innovation Initiative",
+    "Capability Enhancement",
+    "Strategic Repositioning",
+    "Competitive Differentiation"
+  ],
+  "description": "More specific classification within the primary category"
+},
+"origin": {
+  "type": "string",
+  "enum": ["Internal", "External", "Hybrid", "Strategic_Planning"],
+  "description": "Whether the trigger originates from inside or outside the organisation"
+},
+"timeHorizon": {
+  "type": "string",
+  "enum": ["Immediate", "Short_Term", "Medium_Term", "Long_Term", "Anticipatory"],
+  "description": "The temporal nature of the trigger"
+}
     "impactLevel": {
       "type": "string",
       "enum": ["Low", "Medium", "High", "Critical"],
