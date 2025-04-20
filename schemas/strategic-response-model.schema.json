@@ -72,6 +72,39 @@
           },
           "description": "Organisation units responsible for execution"
         },
+        "strategicThemes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Array of strategic priorities this initiative supports"
+        },
+        "alignmentStrength": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5,
+          "description": "Numeric rating (1-5) of alignment with strategy"
+        },
+        "adjacentInitiatives": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Related initiatives that complement this one"
+        },
+        "strategicLevers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["Scale", "Scope", "Differentiation", "Innovation", "Efficiency", "Resilience", "Other"]
+          },
+          "description": "Business mechanisms being utilized (e.g., scale, scope, differentiation)"
+        },
+        "strategicHorizon": {
+          "type": "string",
+          "enum": ["Horizon 1", "Horizon 2", "Horizon 3"],
+          "description": "Which strategic timeframe this addresses (Horizon 1/2/3)"
+        },
         "startDate": {
           "type": "string",
           "format": "date"
