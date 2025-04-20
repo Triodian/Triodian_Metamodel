@@ -3,7 +3,7 @@
   "$id": "https://orthogramic.org/schema/trigger.json",
   "title": "trigger",
   "type": "object",
-  "required": ["triggerID", "label", "category"],
+  "required": ["triggerID", "label", "primaryCategory", "origin"],
   "properties": {
     "triggerID": {
       "type": "string",
@@ -14,33 +14,69 @@
       "type": "string",
       "description": "Short, human-readable name of the trigger"
     },
-    "category": {
-      "type": "string",
-      "enum": [
-        "Regulatory or compliance",
-        "Technological change",
-        "Environmental & safety",
-        "Operational transformation",
-        "Strategic re-alignment",
-        "Customer & stakeholder",
-        "Workforce & skills",
-        "Performance response",
-        "Political or social",
-        "Innovation-led opportunity"
-      ],
-      "description": "Classification of trigger context"
-    },
     "description": {
       "type": "string",
-      "description": "Expanded explanation of the trigger’s relevance"
+      "description": "Expanded explanation of the trigger's relevance"
     },
-    "examplestrategicResponseModels": {
+    "primaryCategory": {
+      "type": "string",
+      "enum": [
+        "Regulatory_Compliance",
+        "Technological_Change",
+        "Environmental_Safety",
+        "Operational_Transformation",
+        "Strategic_Realignment",
+        "Customer_Stakeholder",
+        "Workforce_Skills",
+        "Performance_Response",
+        "Political_Social",
+        "Innovation_Opportunity"
+      ],
+      "description": "Primary classification of trigger context"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "More specific classification within the primary category"
+    },
+    "origin": {
+      "type": "string",
+      "enum": ["Internal", "External", "Hybrid"],
+      "description": "Whether the trigger originates from inside or outside the organization"
+    },
+    "timeHorizon": {
+      "type": "string",
+      "enum": ["Immediate", "Short_Term", "Medium_Term", "Long_Term"],
+      "description": "The temporal nature of the trigger"
+    },
+    "impactLevel": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High", "Critical"],
+      "description": "The potential significance of the trigger"
+    },
+    "detectionDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the trigger was identified"
+    },
+    "sourceReference": {
+      "type": "string",
+      "description": "Reference to source document, report, or authority identifying the trigger"
+    },
+    "relatedTriggers": {
       "type": "array",
       "items": {
         "type": "string",
         "format": "uuid"
       },
-      "description": "Optional references to related strategicResponseModel artefacts"
+      "description": "References to other related triggers"
+    },
+    "strategicResponseReferences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uuid"
+      },
+      "description": "References to related strategicResponseModel artefacts"
     }
   }
 }
