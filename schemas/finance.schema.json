@@ -1,0 +1,1800 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Finance Domain Schema",
+  "description": "Schema for the Finance domain in the Orthogramic Metamodel",
+  "type": "object",
+  "required": ["financeID", "title", "description", "orgUnitTitle"],
+  "properties": {
+    "financeID": {
+      "type": "string",
+      "description": "Unique identifier for the finance element"
+    },
+    "title": {
+      "type": "string",
+      "description": "The name or title of the financial structure or element"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of the financial element"
+    },
+    "financeDefinition": {
+      "type": "string",
+      "description": "Definition of financial boundaries and characteristics"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit(s) responsible for financial management"
+    },
+    "orgUnitRoles": {
+      "type": "array",
+      "description": "Specific roles within the organization unit that manage financial elements",
+      "items": {
+        "type": "string"
+      }
+    },
+    "totalValue": {
+      "type": "object",
+      "description": "Current and projected financial dimensions",
+      "properties": {
+        "currentValue": {
+          "type": "string",
+          "description": "Current financial value"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "fiscalYear": {
+          "type": "string",
+          "description": "Year of measurement"
+        },
+        "projectedValue": {
+          "type": "string",
+          "description": "Projected financial value"
+        },
+        "projectionYear": {
+          "type": "string",
+          "description": "Year of projection"
+        },
+        "valuationMethod": {
+          "type": "string",
+          "description": "Method used to calculate financial value"
+        }
+      }
+    },
+    "accountingTreatment": {
+      "type": "string",
+      "description": "How the financial element is treated in accounting systems",
+      "enum": ["operating", "capital", "asset", "liability", "equity", "revenue", "expense", "other"]
+    },
+    "fiscalPeriod": {
+      "type": "object",
+      "description": "Time period for financial management",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Start date of fiscal period"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "End date of fiscal period"
+        },
+        "periodType": {
+          "type": "string",
+          "description": "Type of fiscal period",
+          "enum": ["annual", "quarterly", "monthly", "multi-year", "project-based", "other"]
+        }
+      }
+    },
+    "governanceModel": {
+      "type": "string",
+      "description": "Approach to financial governance and oversight"
+    },
+    "complianceRequirements": {
+      "type": "array",
+      "description": "Regulatory and reporting requirements for financial management",
+      "items": {
+        "type": "string"
+      }
+    },
+    "approvalAuthority": {
+      "type": "array",
+      "description": "Roles or bodies with approval authority for financial decisions",
+      "items": {
+        "type": "string"
+      }
+    },
+    "marketInfluences": {
+      "type": "array",
+      "description": "Market factors affecting the financial element",
+      "items": {
+        "type": "string"
+      }
+    },
+    "regulatoryFactors": {
+      "type": "array",
+      "description": "Regulatory influences on financial management",
+      "items": {
+        "type": "string"
+      }
+    },
+    "economicConditions": {
+      "type": "array",
+      "description": "Economic factors affecting financial element",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strategicPriority": {
+      "type": "object",
+      "description": "Level of strategic importance",
+      "properties": {
+        "priorityLevel": {
+          "type": "string",
+          "description": "Priority level",
+          "enum": ["low", "medium", "high", "critical"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of strategic relevance"
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "description": "Risk characteristics of the financial element",
+      "properties": {
+        "riskLevel": {
+          "type": "string",
+          "description": "Overall risk level",
+          "enum": ["very low", "low", "moderate", "high", "very high"]
+        },
+        "description": {
+          "type": "string",
+          "description": "Description of risk factors"
+        },
+        "mitigationStrategies": {
+          "type": "array",
+          "description": "Approaches to managing identified risks",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "performanceIndicators": {
+      "type": "array",
+      "description": "Metrics used to measure financial performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of the performance metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Description of what the metric measures"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current performance value"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target performance value"
+          },
+          "unit": {
+            "type": "string",
+            "description": "Unit of measurement"
+          }
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Other domains, processes, or systems supporting financial management",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dependencyType": {
+            "type": "string",
+            "description": "Type of dependency"
+          },
+          "domainType": {
+            "type": "string",
+            "description": "Type of domain this depends on",
+            "enum": ["Capability", "Service", "Product", "Information", "Value Stream", "Strategy", "Organization", "Technology", "Initiative", "Customer", "Market", "Other"]
+          },
+          "entityID": {
+            "type": "string",
+            "description": "ID of the entity being depended upon"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the dependency"
+          }
+        }
+      }
+    },
+    "relatedFinancialElements": {
+      "type": "array",
+      "description": "Other financial elements with relationships to this one",
+      "items": {
+        "type": "object",
+        "properties": {
+          "elementID": {
+            "type": "string",
+            "description": "ID of the related financial element"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship",
+            "enum": ["funds", "enables", "constraints", "depends on", "influences", "measures", "allocates to", "derives from", "other"]
+          },
+          "relationshipStrength": {
+            "type": "integer",
+            "description": "Strength of the relationship (1-5)",
+            "minimum": 1,
+            "maximum": 5
+          }
+        }
+      }
+    },
+    "improvementOpportunities": {
+      "type": "array",
+      "description": "Areas where financial management can be enhanced",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Financial Resource Schema",
+  "description": "Schema for Financial Resource element in the Finance domain",
+  "type": "object",
+  "required": ["resourceID", "resourceName", "description", "orgUnitTitle"],
+  "properties": {
+    "resourceID": {
+      "type": "string",
+      "description": "Unique identifier for the financial resource"
+    },
+    "resourceName": {
+      "type": "string",
+      "description": "Name of the specific financial resource"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the financial resource"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for managing this resource"
+    },
+    "financeID": {
+      "type": "string",
+      "description": "ID of the finance domain this resource belongs to"
+    },
+    "resourceType": {
+      "type": "string",
+      "description": "Classification of financial resource",
+      "enum": ["cash", "investment", "credit-facility", "accounts-receivable", "fixed-asset", "intangible-asset", "equity", "debt", "grant", "other"]
+    },
+    "resourceValue": {
+      "type": "object",
+      "description": "Current value and valuation details",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Numerical value"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "valuationDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of valuation"
+        },
+        "valuationMethod": {
+          "type": "string",
+          "description": "Method used for valuation"
+        }
+      }
+    },
+    "accountingClassification": {
+      "type": "string",
+      "description": "How the resource is classified in accounting systems",
+      "enum": ["current-asset", "non-current-asset", "current-liability", "non-current-liability", "equity", "revenue", "expense", "other"]
+    },
+    "resourceLifecycle": {
+      "type": "object",
+      "description": "Lifecycle information for the resource",
+      "properties": {
+        "acquisitionDate": {
+          "type": "string",
+          "format": "date",
+          "description": "When the resource was acquired"
+        },
+        "maturityDate": {
+          "type": "string",
+          "format": "date",
+          "description": "When the resource matures or expires"
+        },
+        "lifecycleStage": {
+          "type": "string",
+          "description": "Current stage in the resource lifecycle",
+          "enum": ["planning", "acquisition", "active", "declining", "disposal", "retired"]
+        },
+        "refreshCycle": {
+          "type": "string",
+          "description": "Frequency of resource renewal or review"
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "description": "Risk characteristics of the resource",
+      "properties": {
+        "riskLevel": {
+          "type": "string",
+          "description": "Overall risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "riskFactors": {
+          "type": "array",
+          "description": "Specific risk elements",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mitigationStrategies": {
+          "type": "array",
+          "description": "Approaches to manage risks",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "performanceBenchmarks": {
+      "type": "array",
+      "description": "Key metrics for evaluating resource performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of benchmark metric"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current performance"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target performance"
+          },
+          "benchmark": {
+            "type": "string",
+            "description": "Industry or internal benchmark"
+          }
+        }
+      }
+    },
+    "strategicPurpose": {
+      "type": "string",
+      "description": "How this resource supports strategic objectives"
+    },
+    "governanceControls": {
+      "type": "array",
+      "description": "Controls and governance applied to the resource",
+      "items": {
+        "type": "object",
+        "properties": {
+          "controlName": {
+            "type": "string",
+            "description": "Name of control"
+          },
+          "controlDescription": {
+            "type": "string",
+            "description": "Description of control purpose"
+          },
+          "complianceStatus": {
+            "type": "string",
+            "description": "Current compliance status",
+            "enum": ["compliant", "non-compliant", "remediation", "waiver", "not-applicable"]
+          }
+        }
+      }
+    },
+    "linkedCapabilities": {
+      "type": "array",
+      "description": "Business capabilities supported by this resource",
+      "items": {
+        "type": "object",
+        "properties": {
+          "capabilityID": {
+            "type": "string",
+            "description": "ID of related capability"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Nature of relationship",
+            "enum": ["enables", "constrains", "funded by", "measured by", "other"]
+          },
+          "importanceLevel": {
+            "type": "integer",
+            "description": "Importance to capability (1-5)",
+            "minimum": 1,
+            "maximum": 5
+          }
+        }
+      }
+    },
+    "monitoringFrequency": {
+      "type": "string",
+      "description": "How often this resource is formally assessed",
+      "enum": ["real-time", "daily", "weekly", "monthly", "quarterly", "annually", "event-based"]
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last resource assessment"
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Budget Schema",
+  "description": "Schema for Budget element in the Finance domain",
+  "type": "object",
+  "required": ["budgetID", "budgetName", "description", "orgUnitTitle"],
+  "properties": {
+    "budgetID": {
+      "type": "string",
+      "description": "Unique identifier for the budget"
+    },
+    "budgetName": {
+      "type": "string",
+      "description": "Name of the specific budget"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the budget's purpose and scope"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this budget"
+    },
+    "financeID": {
+      "type": "string",
+      "description": "ID of the finance domain this budget belongs to"
+    },
+    "budgetType": {
+      "type": "string",
+      "description": "Classification of budget",
+      "enum": ["operating", "capital", "project", "program", "department", "enterprise", "other"]
+    },
+    "budgetPeriod": {
+      "type": "object",
+      "description": "Time period covered by the budget",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Starting date of budget period"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Ending date of budget period"
+        },
+        "fiscalYear": {
+          "type": "string",
+          "description": "Fiscal year designation"
+        },
+        "periodType": {
+          "type": "string",
+          "description": "Type of budgeting period",
+          "enum": ["annual", "quarterly", "monthly", "multi-year", "project-lifecycle", "rolling", "other"]
+        }
+      }
+    },
+    "totalAmount": {
+      "type": "object",
+      "description": "Total budget amount",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Numerical value"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "amountType": {
+          "type": "string",
+          "description": "Whether amount is planned, approved, or actual",
+          "enum": ["planned", "approved", "revised", "forecasted", "actual"]
+        }
+      }
+    },
+    "budgetCategories": {
+      "type": "array",
+      "description": "Major categories within the budget",
+      "items": {
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "type": "string",
+            "description": "Name of budget category"
+          },
+          "categoryDescription": {
+            "type": "string",
+            "description": "Description of what the category includes"
+          },
+          "allocation": {
+            "type": "number",
+            "description": "Amount allocated to this category"
+          },
+          "allocationPercentage": {
+            "type": "number",
+            "description": "Percentage of total budget"
+          }
+        }
+      }
+    },
+    "allocationMethodology": {
+      "type": "string",
+      "description": "Approach used to allocate funds across categories",
+      "enum": ["zero-based", "incremental", "activity-based", "value-based", "priority-based", "other"]
+    },
+    "approvalStatus": {
+      "type": "string",
+      "description": "Current approval status of the budget",
+      "enum": ["draft", "submitted", "under-review", "approved", "rejected", "revised"]
+    },
+    "approvalAuthority": {
+      "type": "string",
+      "description": "Individual or group with budget approval authority"
+    },
+    "performanceTracking": {
+      "type": "array",
+      "description": "Metrics for tracking budget performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of performance metric"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current value"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target or benchmark value"
+          },
+          "variance": {
+            "type": "string",
+            "description": "Difference between actual and planned"
+          },
+          "varianceExplanation": {
+            "type": "string",
+            "description": "Explanation for significant variances"
+          }
+        }
+      }
+    },
+    "strategicAlignment": {
+      "type": "array",
+      "description": "How the budget aligns with strategic objectives",
+      "items": {
+        "type": "object",
+        "properties": {
+          "objectiveID": {
+            "type": "string",
+            "description": "ID of related strategic objective"
+          },
+          "alignmentDescription": {
+            "type": "string",
+            "description": "How budget supports this objective"
+          },
+          "allocationPercentage": {
+            "type": "number",
+            "description": "Percentage of budget supporting this objective"
+          }
+        }
+      }
+    },
+    "assumptions": {
+      "type": "array",
+      "description": "Key assumptions underlying budget",
+      "items": {
+        "type": "object",
+        "properties": {
+          "assumption": {
+            "type": "string",
+            "description": "Description of assumption"
+          },
+          "impact": {
+            "type": "string",
+            "description": "Potential impact on budget"
+          },
+          "confidenceLevel": {
+            "type": "string",
+            "description": "Confidence in assumption",
+            "enum": ["very-low", "low", "moderate", "high", "very-high"]
+          }
+        }
+      }
+    },
+    "revisionHistory": {
+      "type": "array",
+      "description": "History of budget revisions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "revisionDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date of revision"
+          },
+          "revisionDescription": {
+            "type": "string",
+            "description": "Description of changes made"
+          },
+          "previousAmount": {
+            "type": "number",
+            "description": "Amount before revision"
+          },
+          "revisedAmount": {
+            "type": "number",
+            "description": "Amount after revision"
+          },
+          "approvedBy": {
+            "type": "string",
+            "description": "Person who approved revision"
+          }
+        }
+      }
+    },
+    "linkedInitiatives": {
+      "type": "array",
+      "description": "Initiatives funded by this budget",
+      "items": {
+        "type": "object",
+        "properties": {
+          "initiativeID": {
+            "type": "string",
+            "description": "ID of linked initiative"
+          },
+          "allocation": {
+            "type": "number",
+            "description": "Amount allocated to initiative"
+          },
+          "allocationPercentage": {
+            "type": "number",
+            "description": "Percentage of total budget"
+          }
+        }
+      }
+    },
+    "governanceControls": {
+      "type": "array",
+      "description": "Controls governing budget management",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last budget update"
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Investment Schema",
+  "description": "Schema for Investment element in the Finance domain",
+  "type": "object",
+  "required": ["investmentID", "investmentName", "description", "orgUnitTitle"],
+  "properties": {
+    "investmentID": {
+      "type": "string",
+      "description": "Unique identifier for the investment"
+    },
+    "investmentName": {
+      "type": "string",
+      "description": "Name of the specific investment"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the investment"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this investment"
+    },
+    "financeID": {
+      "type": "string",
+      "description": "ID of the finance domain this investment belongs to"
+    },
+    "investmentType": {
+      "type": "string",
+      "description": "Classification of investment",
+      "enum": ["capital", "research-development", "acquisition", "infrastructure", "capability", "workforce", "digital", "market-expansion", "other"]
+    },
+    "investmentAmount": {
+      "type": "object",
+      "description": "Financial dimensions of the investment",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Numerical value"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Period over which investment occurs"
+        }
+      }
+    },
+    "investmentTimeline": {
+      "type": "object",
+      "description": "Temporal aspects of the investment",
+      "properties": {
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "When investment begins"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "When investment completes"
+        },
+        "keyMilestones": {
+          "type": "array",
+          "description": "Critical points in investment timeline",
+          "items": {
+            "type": "object",
+            "properties": {
+              "milestoneName": {
+                "type": "string",
+                "description": "Name of milestone"
+              },
+              "milestoneDate": {
+                "type": "string",
+                "format": "date",
+                "description": "Expected date"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of milestone"
+              }
+            }
+          }
+        }
+      }
+    },
+    "expectedReturns": {
+      "type": "object",
+      "description": "Anticipated benefits from investment",
+      "properties": {
+        "financialReturns": {
+          "type": "object",
+          "description": "Monetary returns expected",
+          "properties": {
+            "roi": {
+              "type": "number",
+              "description": "Return on investment percentage"
+            },
+            "paybackPeriod": {
+              "type": "string",
+              "description": "Time to recoup investment"
+            },
+            "npv": {
+              "type": "number",
+              "description": "Net present value"
+            },
+            "irr": {
+              "type": "number",
+              "description": "Internal rate of return"
+            }
+          }
+        },
+        "nonFinancialReturns": {
+          "type": "array",
+          "description": "Non-monetary benefits expected",
+          "items": {
+            "type": "string"
+          }
+        },
+        "timeHorizon": {
+          "type": "string",
+          "description": "When returns are expected to materialize",
+          "enum": ["immediate", "short-term", "medium-term", "long-term"]
+        }
+      }
+    },
+    "riskAssessment": {
+      "type": "object",
+      "description": "Evaluation of investment risks",
+      "properties": {
+        "overallRisk": {
+          "type": "string",
+          "description": "Aggregate risk level",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "riskFactors": {
+          "type": "array",
+          "description": "Specific risk components",
+          "items": {
+            "type": "object",
+            "properties": {
+              "factor": {
+                "type": "string",
+                "description": "Risk factor description"
+              },
+              "probability": {
+                "type": "string",
+                "description": "Likelihood of occurrence",
+                "enum": ["very-low", "low", "moderate", "high", "very-high"]
+              },
+              "impact": {
+                "type": "string",
+                "description": "Potential impact severity",
+                "enum": ["minimal", "minor", "moderate", "significant", "severe"]
+              },
+              "mitigationStrategy": {
+                "type": "string",
+                "description": "Approach to managing this risk"
+              }
+            }
+          }
+        }
+      }
+    },
+    "strategicAlignment": {
+      "type": "object",
+      "description": "How investment supports strategy",
+      "properties": {
+        "alignmentLevel": {
+          "type": "string",
+          "description": "Degree of strategic alignment",
+          "enum": ["minimal", "partial", "moderate", "strong", "critical"]
+        },
+        "strategicObjectives": {
+          "type": "array",
+          "description": "Strategic objectives supported",
+          "items": {
+            "type": "object",
+            "properties": {
+              "objectiveID": {
+                "type": "string",
+                "description": "ID of strategic objective"
+              },
+              "contributionDescription": {
+                "type": "string",
+                "description": "How investment contributes"
+              }
+            }
+          }
+        }
+      }
+    },
+    "governanceModel": {
+      "type": "object",
+      "description": "How investment is governed",
+      "properties": {
+        "approvalAuthority": {
+          "type": "string",
+          "description": "Who approves the investment"
+        },
+        "reviewProcess": {
+          "type": "string",
+          "description": "Process for reviewing performance"
+        },
+        "escallationPath": {
+          "type": "string",
+          "description": "Path for addressing issues"
+        }
+      }
+    },
+    "performanceMetrics": {
+      "type": "array",
+      "description": "Metrics for measuring investment success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "What the metric measures"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Goal to achieve"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Present measurement"
+          },
+          "measurementFrequency": {
+            "type": "string",
+            "description": "How often measured"
+          }
+        }
+      }
+    },
+    "fundingSources": {
+      "type": "array",
+      "description": "Sources of investment funding",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sourceName": {
+            "type": "string",
+            "description": "Name of funding source"
+          },
+          "amount": {
+            "type": "number",
+            "description": "Amount from this source"
+          },
+          "percentage": {
+            "type": "number",
+            "description": "Percentage of total funding"
+          }
+        }
+      }
+    },
+    "alternativesConsidered": {
+      "type": "array",
+      "description": "Alternative investment options evaluated",
+      "items": {
+        "type": "object",
+        "properties": {
+          "alternativeName": {
+            "type": "string",
+            "description": "Name of alternative"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of alternative"
+          },
+          "reason": {
+            "type": "string",
+            "description": "Why not selected"
+          }
+        }
+      }
+    },
+    "lastReviewed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last investment review"
+    },
+    "status": {
+      "type": "string",
+      "description": "Current status of the investment",
+      "enum": ["proposed", "approved", "active", "completed", "cancelled", "on-hold"]
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Revenue Stream Schema",
+  "description": "Schema for Revenue Stream element in the Finance domain",
+  "type": "object",
+  "required": ["streamID", "streamName", "description", "orgUnitTitle"],
+  "properties": {
+    "streamID": {
+      "type": "string",
+      "description": "Unique identifier for the revenue stream"
+    },
+    "streamName": {
+      "type": "string",
+      "description": "Name of the specific revenue stream"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the revenue stream"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this revenue stream"
+    },
+    "financeID": {
+      "type": "string",
+      "description": "ID of the finance domain this revenue stream belongs to"
+    },
+    "revenueType": {
+      "type": "string",
+      "description": "Classification of revenue",
+      "enum": ["product-sales", "service-fees", "subscription", "licensing", "advertising", "interest", "royalties", "grants", "donation", "other"]
+    },
+    "revenueModel": {
+      "type": "string",
+      "description": "Business model for generating revenue",
+      "enum": ["one-time", "recurring", "consumption-based", "freemium", "tiered", "bundled", "value-based", "outcome-based", "other"]
+    },
+    "sourceOfRevenue": {
+      "type": "object",
+      "description": "Origin of the revenue stream",
+      "properties": {
+        "sourceType": {
+          "type": "string",
+          "description": "Type of revenue source",
+          "enum": ["customer-segment", "product-line", "service-offering", "geographic-market", "channel", "other"]
+        },
+        "sourceID": {
+          "type": "string",
+          "description": "ID of related source entity"
+        },
+        "sourceName": {
+          "type": "string",
+          "description": "Name of related source entity"
+        },
+        "contribution": {
+          "type": "string",
+          "description": "How source contributes to revenue"
+        }
+      }
+    },
+    "financialPerformance": {
+      "type": "object",
+      "description": "Financial metrics for the revenue stream",
+      "properties": {
+        "currentRevenue": {
+          "type": "number",
+          "description": "Current revenue amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Period covered by current figure"
+        },
+        "revenueGrowth": {
+          "type": "number",
+          "description": "Growth rate percentage"
+        },
+        "projectedRevenue": {
+          "type": "number",
+          "description": "Projected future revenue"
+        },
+        "projectionTimeframe": {
+          "type": "string",
+          "description": "Period for projection"
+        }
+      }
+    },
+    "profitabilityMetrics": {
+      "type": "object",
+      "description": "Metrics related to profitability",
+      "properties": {
+        "grossMargin": {
+          "type": "number",
+          "description": "Gross margin percentage"
+        },
+        "netMargin": {
+          "type": "number",
+          "description": "Net margin percentage"
+        },
+        "contributionMargin": {
+          "type": "number",
+          "description": "Contribution margin percentage"
+        },
+        "unitEconomics": {
+          "type": "string",
+          "description": "Economics at individual unit level"
+        }
+      }
+    },
+    "marketDynamics": {
+      "type": "object",
+      "description": "Market context for revenue stream",
+      "properties": {
+        "marketSize": {
+          "type": "string",
+          "description": "Total addressable market"
+        },
+        "marketShare": {
+          "type": "number",
+          "description": "Current market share percentage"
+        },
+        "competitiveIntensity": {
+          "type": "string",
+          "description": "Level of competition",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "marketTrends": {
+          "type": "array",
+          "description": "Trends affecting this revenue stream",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "pricingStrategy": {
+      "type": "object",
+      "description": "Approach to pricing and monetization",
+      "properties": {
+        "pricingModel": {
+          "type": "string",
+          "description": "Method for determining price",
+          "enum": ["cost-plus", "value-based", "competitive", "penetration", "skimming", "dynamic", "tiered", "other"]
+        },
+        "pricePoints": {
+          "type": "array",
+          "description": "Key price points",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Name of price point"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Price amount"
+              },
+              "unit": {
+                "type": "string",
+                "description": "Unit of pricing"
+              }
+            }
+          }
+        },
+        "discountStrategy": {
+          "type": "string",
+          "description": "Approach to discounting"
+        }
+      }
+    },
+    "customerAnalysis": {
+      "type": "object",
+      "description": "Customer aspects of revenue stream",
+      "properties": {
+        "customerLifetimeValue": {
+          "type": "number",
+          "description": "Average customer lifetime value"
+        },
+        "acquisitionCost": {
+          "type": "number",
+          "description": "Customer acquisition cost"
+        },
+        "churnRate": {
+          "type": "number",
+          "description": "Customer churn percentage"
+        },
+        "customerConcentration": {
+          "type": "number",
+          "description": "Percentage from top customers"
+        }
+      }
+    },
+    "seasonality": {
+      "type": "object",
+      "description": "Seasonal patterns in revenue",
+      "properties": {
+        "hasSeasonality": {
+          "type": "boolean",
+          "description": "Whether seasonality exists"
+        },
+        "seasonalPattern": {
+          "type": "string",
+          "description": "Description of seasonal patterns"
+        },
+        "peakPeriods": {
+          "type": "array",
+          "description": "Times of highest revenue",
+          "items": {
+            "type": "string"
+          }
+        },
+        "lowPeriods": {
+          "type": "array",
+          "description": "Times of lowest revenue",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "growthStrategies": {
+      "type": "array",
+      "description": "Approaches to growing this revenue stream",
+      "items": {
+        "type": "object",
+        "properties": {
+          "strategyName": {
+            "type": "string",
+            "description": "Name of growth strategy"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of strategy"
+          },
+          "expectedImpact": {
+            "type": "string",
+            "description": "Anticipated result"
+          },
+          "timeframe": {
+            "type": "string",
+            "description": "When results expected"
+          }
+        }
+      }
+    },
+    "riskFactors": {
+      "type": "array",
+      "description": "Risks affecting this revenue stream",
+      "items": {
+        "type": "object",
+        "properties": {
+          "riskName": {
+            "type": "string",
+            "description": "Name of risk factor"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of risk"
+          },
+          "likelihood": {
+            "type": "string",
+            "description": "Probability of occurrence",
+            "enum": ["very-low", "low", "moderate", "high", "very-high"]
+          },
+          "impact": {
+            "type": "string",
+            "description": "Potential impact severity",
+            "enum": ["minimal", "minor", "moderate", "significant", "severe"]
+          },
+          "mitigationStrategy": {
+            "type": "string",
+            "description": "Approach to managing risk"
+          }
+        }
+      }
+    },
+    "linkedProducts": {
+      "type": "array",
+      "description": "Products generating this revenue stream",
+      "items": {
+        "type": "object",
+        "properties": {
+          "productID": {
+            "type": "string",
+            "description": "ID of the linked product"
+          },
+          "revenueContribution": {
+            "type": "number",
+            "description": "Percentage of stream revenue"
+          },
+          "relationship": {
+            "type": "string",
+            "description": "How product relates to stream"
+          }
+        }
+      }
+    },
+    "strategicImportance": {
+      "type": "object",
+      "description": "Strategic significance of this revenue stream",
+      "properties": {
+        "importanceLevel": {
+          "type": "string",
+          "description": "Level of strategic importance",
+          "enum": ["minor", "moderate", "important", "critical", "core"]
+        },
+        "strategicRole": {
+          "type": "string",
+          "description": "Function in overall strategy",
+          "enum": ["core-business", "growth-driver", "emerging-opportunity", "legacy", "cash-generator", "market-entry", "complementary", "other"]
+        },
+        "futureOutlook": {
+          "type": "string",
+          "description": "Long-term perspective on stream"
+        }
+      }
+    },
+    "performanceIndicators": {
+      "type": "array",
+      "description": "KPIs for measuring stream performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicatorName": {
+            "type": "string",
+            "description": "Name of KPI"
+          },
+          "indicatorDescription": {
+            "type": "string",
+            "description": "What KPI measures"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current measurement"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Goal to achieve"
+          },
+          "trend": {
+            "type": "string",
+            "description": "Direction of movement",
+            "enum": ["improving", "stable", "declining", "mixed", "unknown"]
+          }
+        }
+      }
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last analysis update"
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Cost Structure Schema",
+  "description": "Schema for Cost Structure element in the Finance domain",
+  "type": "object",
+  "required": ["costStructureID", "structureName", "description", "orgUnitTitle"],
+  "properties": {
+    "costStructureID": {
+      "type": "string",
+      "description": "Unique identifier for the cost structure"
+    },
+    "structureName": {
+      "type": "string",
+      "description": "Name of the specific cost structure"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the cost structure"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit associated with this cost structure"
+    },
+    "financeID": {
+      "type": "string",
+      "description": "ID of the finance domain this cost structure belongs to"
+    },
+    "costClassification": {
+      "type": "string",
+      "description": "Primary classification of the cost structure",
+      "enum": ["product", "service", "department", "project", "program", "customer-segment", "enterprise", "other"]
+    },
+    "totalCost": {
+      "type": "object",
+      "description": "Overall cost dimensions",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total cost amount"
+        },
+        "currency": {
+          "type": "string",
+          "description": "Currency code"
+        },
+        "timeframe": {
+          "type": "string",
+          "description": "Period covered"
+        }
+      }
+    },
+    "fixedCosts": {
+      "type": "object",
+      "description": "Costs that remain constant regardless of activity level",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total fixed costs"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Percentage of total costs"
+        },
+        "components": {
+          "type": "array",
+          "description": "Major fixed cost categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "componentName": {
+                "type": "string",
+                "description": "Name of cost component"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Component amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of fixed costs"
+              }
+            }
+          }
+        }
+      }
+    },
+    "variableCosts": {
+      "type": "object",
+      "description": "Costs that change with activity level",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total variable costs"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Percentage of total costs"
+        },
+        "components": {
+          "type": "array",
+          "description": "Major variable cost categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "componentName": {
+                "type": "string",
+                "description": "Name of cost component"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Component amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of variable costs"
+              },
+              "driver": {
+                "type": "string",
+                "description": "What drives this cost"
+              }
+            }
+          }
+        }
+      }
+    },
+    "directCosts": {
+      "type": "object",
+      "description": "Costs directly attributable to specific outputs",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total direct costs"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Percentage of total costs"
+        },
+        "categories": {
+          "type": "array",
+          "description": "Major direct cost categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of cost category"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Category amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of direct costs"
+              }
+            }
+          }
+        }
+      }
+    },
+    "indirectCosts": {
+      "type": "object",
+      "description": "Costs not directly attributable to specific outputs",
+      "properties": {
+        "amount": {
+          "type": "number",
+          "description": "Total indirect costs"
+        },
+        "percentage": {
+          "type": "number",
+          "description": "Percentage of total costs"
+        },
+        "categories": {
+          "type": "array",
+          "description": "Major indirect cost categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of cost category"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Category amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of indirect costs"
+              },
+              "allocationMethod": {
+                "type": "string",
+                "description": "How cost is allocated"
+              }
+            }
+          }
+        }
+      }
+    },
+    "costDrivers": {
+      "type": "array",
+      "description": "Factors that influence cost levels",
+      "items": {
+        "type": "object",
+        "properties": {
+          "driverName": {
+            "type": "string",
+            "description": "Name of cost driver"
+          },
+          "description": {
+            "type": "string",
+            "description": "How driver affects costs"
+          },
+          "impactLevel": {
+            "type": "string",
+            "description": "Degree of influence",
+            "enum": ["minor", "moderate", "significant", "critical"]
+          },
+          "affected Components": {
+            "type": "array",
+            "description": "Cost components affected",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "costTrends": {
+      "type": "object",
+      "description": "Cost movement patterns over time",
+      "properties": {
+        "overallTrend": {
+          "type": "string",
+          "description": "Direction of overall costs",
+          "enum": ["decreasing", "stable", "increasing", "volatile"]
+        },
+        "annualGrowthRate": {
+          "type": "number",
+          "description": "Year-over-year percentage change"
+        },
+        "significantTrends": {
+          "type": "array",
+          "description": "Notable cost trend patterns",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trendDescription": {
+                "type": "string",
+                "description": "Description of trend"
+              },
+              "affectedComponents": {
+                "type": "array",
+                "description": "Components affected",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "impact": {
+                "type": "string",
+                "description": "Impact on overall costs"
+              }
+            }
+          }
+        }
+      }
+    },
+    "costAllocationModel": {
+      "type": "object",
+      "description": "How costs are distributed across the organization",
+      "properties": {
+        "allocationApproach": {
+          "type": "string",
+          "description": "Overall methodology",
+          "enum": ["activity-based", "direct", "proportional", "consumption-based", "equal-division", "tiered", "other"]
+        },
+        "allocationBasis": {
+          "type": "string",
+          "description": "Primary metric for allocation"
+        },
+        "costPools": {
+          "type": "array",
+          "description": "Groupings for allocation purposes",
+          "items": {
+            "type": "object",
+            "properties": {
+              "poolName": {
+                "type": "string",
+                "description": "Name of cost pool"
+              },
+              "amount": {
+                "type": "number",
+                "description": "Total amount in pool"
+              },
+              "allocationMethod": {
+                "type": "string",
+                "description": "How pool is allocated"
+              }
+            }
+          }
+        }
+      }
+    },
+    "costEfficiencyMetrics": {
+      "type": "array",
+      "description": "Measures of cost performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of efficiency metric"
+          },
+          "description": {
+            "type": "string",
+            "description": "What the metric measures"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current measurement"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Goal to achieve"
+          },
+          "benchmark": {
+            "type": "string",
+            "description": "Industry or internal benchmark"
+          }
+        }
+      }
+    },
+    "costOptimizationStrategies": {
+      "type": "array",
+      "description": "Approaches to improving cost efficiency",
+      "items": {
+        "type": "object",
+        "properties": {
+          "strategyName": {
+            "type": "string",
+            "description": "Name of optimization strategy"
+          },
+          "description": {
+            "type": "string",
+            "description": "Strategy description"
+          },
+          "targetComponents": {
+            "type": "array",
+            "description": "Cost components targeted",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expectedSavings": {
+            "type": "number",
+            "description": "Anticipated cost reduction"
+          },
+          "implementationStatus": {
+            "type": "string",
+            "description": "Current state of implementation",
+            "enum": ["planned", "in-progress", "completed", "cancelled"]
+          }
+        }
+      }
+    },
+    "costCompetitivePosition": {
+      "type": "object",
+      "description": "Cost structure relative to competitors",
+      "properties": {
+        "overallPosition": {
+          "type": "string",
+          "description": "Cost position in market",
+          "enum": ["advantaged", "at-parity", "disadvantaged", "mixed", "unknown"]
+        },
+        "keyAdvantages": {
+          "type": "array",
+          "description": "Areas of cost advantage",
+          "items": {
+            "type": "string"
+          }
+        },
+        "keyDisadvantages": {
+          "type": "array",
+          "description": "Areas of cost disadvantage",
+          "items": {
+            "type": "string"
+          }
+        },
+        "strategicImplications": {
+          "type": "string",
+          "description": "Impact on competitive strategy"
+        }
+      }
+    },
+    "financialImpact": {
+      "type": "object",
+      "description": "How cost structure affects financial performance",
+      "properties": {
+        "marginImpact": {
+          "type": "string",
+          "description": "Effect on profit margins"
+        },
+        "cashFlowImpact": {
+          "type": "string",
+          "description": "Effect on cash flow"
+        },
+        "breakEvenAnalysis": {
+          "type": "string",
+          "description": "Break-even findings"
+        }
+      }
+    },
+    "linkedValueStreams": {
+      "type": "array",
+      "description": "Value streams associated with these costs",
+      "items": {
+        "type": "object",
+        "properties": {
+          "valueStreamID": {
+            "type": "string",
+            "description": "ID of value stream"
+          },
+          "costAllocation": {
+            "type": "number",
+            "description": "Amount allocated to stream"
+          },
+          "allocationPercentage": {
+            "type": "number",
+            "description": "Percentage of total cost"
+          }
+        }
+      }
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of last cost analysis update"
+    }
+  }
+}
