@@ -1,0 +1,2958 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Supply Chain Domain Schema",
+  "description": "Schema for the Supply Chain domain in the Orthogramic Metamodel",
+  "type": "object",
+  "required": ["supplyChainID", "title", "description", "supplyChainCategory", "orgUnitTitle"],
+  "properties": {
+    "supplyChainID": {
+      "type": "string",
+      "description": "Unique identifier for the supply chain element"
+    },
+    "title": {
+      "type": "string",
+      "description": "The name or title of the supply chain element"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of the supply chain element"
+    },
+    "supplyChainCategory": {
+      "type": "string",
+      "description": "Classification within supply network",
+      "enum": ["manufacturing", "distribution", "retail", "service", "digital", "project", "spare-parts", "aftermarket", "reverse", "other"]
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit(s) responsible for this supply chain element"
+    },
+    "orgUnitRoles": {
+      "type": "array",
+      "description": "Specific roles within the organization unit that manage this supply chain element",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supplyChainScope": {
+      "type": "string",
+      "description": "Organizational scope covered by this supply chain element",
+      "enum": ["enterprise", "business-unit", "product-line", "facility", "regional", "global", "project", "other"]
+    },
+    "geographicCoverage": {
+      "type": "object",
+      "description": "Geographic span of the supply chain element",
+      "properties": {
+        "regions": {
+          "type": "array",
+          "description": "Geographic regions covered",
+          "items": {
+            "type": "string"
+          }
+        },
+        "countries": {
+          "type": "array",
+          "description": "Countries specifically involved",
+          "items": {
+            "type": "string"
+          }
+        },
+        "coverageType": {
+          "type": "string",
+          "description": "Nature of geographic coverage",
+          "enum": ["global", "regional", "national", "local", "multi-regional", "other"]
+        },
+        "expansionPlans": {
+          "type": "string",
+          "description": "Plans for geographic expansion"
+        }
+      }
+    },
+    "locationStrategy": {
+      "type": "object",
+      "description": "Approach to geographic positioning",
+      "properties": {
+        "strategyType": {
+          "type": "string",
+          "description": "Type of location strategy",
+          "enum": ["proximity-to-market", "proximity-to-supply", "cost-optimization", "tax-optimization", "talent-access", "risk-diversification", "other"]
+        },
+        "strategyDescription": {
+          "type": "string",
+          "description": "Detailed explanation of location strategy"
+        },
+        "evaluationCriteria": {
+          "type": "array",
+          "description": "Criteria for location decisions",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "leadTime": {
+      "type": "object",
+      "description": "Time required for fulfillment",
+      "properties": {
+        "endToEndLeadTime": {
+          "type": "string",
+          "description": "Total time from order to delivery"
+        },
+        "componentLeadTimes": {
+          "type": "array",
+          "description": "Breakdown of lead time components",
+          "items": {
+            "type": "object",
+            "properties": {
+              "componentName": {
+                "type": "string",
+                "description": "Name of lead time component"
+              },
+              "duration": {
+                "type": "string",
+                "description": "Time required for this component"
+              },
+              "variability": {
+                "type": "string",
+                "description": "Variability of this component"
+              }
+            }
+          }
+        },
+        "leadTimeReliability": {
+          "type": "string",
+          "description": "Consistency of lead time performance"
+        },
+        "improvementTargets": {
+          "type": "string",
+          "description": "Targets for lead time reduction"
+        }
+      }
+    },
+    "volumeCapacity": {
+      "type": "object",
+      "description": "Throughput capability",
+      "properties": {
+        "normalCapacity": {
+          "type": "string",
+          "description": "Standard operating capacity"
+        },
+        "peakCapacity": {
+          "type": "string",
+          "description": "Maximum sustainable capacity"
+        },
+        "unitOfMeasure": {
+          "type": "string",
+          "description": "Unit used for capacity measurement"
+        },
+        "utilizationRate": {
+          "type": "string",
+          "description": "Current utilization percentage"
+        },
+        "capacityConstraints": {
+          "type": "array",
+          "description": "Factors limiting capacity",
+          "items": {
+            "type": "string"
+          }
+        },
+        "expansionPlans": {
+          "type": "string",
+          "description": "Plans for capacity expansion"
+        }
+      }
+    },
+    "costStructure": {
+      "type": "object",
+      "description": "Supply chain cost breakdown",
+      "properties": {
+        "totalCost": {
+          "type": "string",
+          "description": "Total supply chain cost"
+        },
+        "costComponents": {
+          "type": "array",
+          "description": "Major cost categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "componentName": {
+                "type": "string",
+                "description": "Name of cost component"
+              },
+              "amount": {
+                "type": "string",
+                "description": "Cost amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total cost"
+              }
+            }
+          }
+        },
+        "costTrends": {
+          "type": "string",
+          "description": "Trends in cost performance"
+        },
+        "costReductionTargets": {
+          "type": "string",
+          "description": "Targets for cost reduction"
+        }
+      }
+    },
+    "flexibilityRating": {
+      "type": "object",
+      "description": "Adaptability to change",
+      "properties": {
+        "overallRating": {
+          "type": "string",
+          "description": "Overall flexibility assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "volumeFlexibility": {
+          "type": "string",
+          "description": "Ability to adjust volumes",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "mixFlexibility": {
+          "type": "string",
+          "description": "Ability to adjust product mix",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "newProductFlexibility": {
+          "type": "string",
+          "description": "Ability to introduce new products",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "improvementFocus": {
+          "type": "string",
+          "description": "Priority areas for flexibility improvement"
+        }
+      }
+    },
+    "resilienceRating": {
+      "type": "object",
+      "description": "Ability to withstand disruption",
+      "properties": {
+        "overallRating": {
+          "type": "string",
+          "description": "Overall resilience assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "redundancyLevel": {
+          "type": "string",
+          "description": "Level of built-in redundancy",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "diversificationLevel": {
+          "type": "string",
+          "description": "Level of supplier/location diversification",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "visibilityLevel": {
+          "type": "string",
+          "description": "Level of supply chain visibility",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "recoveryCapability": {
+          "type": "string",
+          "description": "Ability to recover from disruption",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "resilienceInvestments": {
+          "type": "array",
+          "description": "Investments to improve resilience",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "description": "Supply chain risk characteristics",
+      "properties": {
+        "overallRiskLevel": {
+          "type": "string",
+          "description": "Aggregate risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "keyRiskFactors": {
+          "type": "array",
+          "description": "Major risk factors",
+          "items": {
+            "type": "object",
+            "properties": {
+              "factorName": {
+                "type": "string",
+                "description": "Name of risk factor"
+              },
+              "riskLevel": {
+                "type": "string",
+                "description": "Level of this risk",
+                "enum": ["very-low", "low", "moderate", "high", "very-high"]
+              },
+              "mitigationApproach": {
+                "type": "string",
+                "description": "Approach to mitigating this risk"
+              }
+            }
+          }
+        },
+        "riskMonitoringApproach": {
+          "type": "string",
+          "description": "How risks are monitored"
+        }
+      }
+    },
+    "sustainabilityRating": {
+      "type": "object",
+      "description": "Environmental and social performance",
+      "properties": {
+        "overallRating": {
+          "type": "string",
+          "description": "Overall sustainability assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "carbonFootprint": {
+          "type": "string",
+          "description": "Carbon emissions measurement"
+        },
+        "wasteReduction": {
+          "type": "string",
+          "description": "Waste reduction performance"
+        },
+        "socialResponsibility": {
+          "type": "string",
+          "description": "Social impact assessment"
+        },
+        "sustainabilityInitiatives": {
+          "type": "array",
+          "description": "Major sustainability programs",
+          "items": {
+            "type": "string"
+          }
+        },
+        "sustainabilityReporting": {
+          "type": "string",
+          "description": "How sustainability is reported"
+        }
+      }
+    },
+    "environmentalImpact": {
+      "type": "object",
+      "description": "Environmental effects of supply chain operations",
+      "properties": {
+        "carbonEmissions": {
+          "type": "string",
+          "description": "Carbon emissions measurement"
+        },
+        "waterUsage": {
+          "type": "string",
+          "description": "Water consumption measurement"
+        },
+        "wasteGeneration": {
+          "type": "string",
+          "description": "Waste production measurement"
+        },
+        "resourceConsumption": {
+          "type": "string",
+          "description": "Resource usage measurement"
+        },
+        "environmentalCompliance": {
+          "type": "string",
+          "description": "Compliance with environmental regulations"
+        },
+        "reductionTargets": {
+          "type": "array",
+          "description": "Targets for impact reduction",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "qualityMetrics": {
+      "type": "array",
+      "description": "Quality performance measures",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of quality metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Description of what is measured"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current performance"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Performance target"
+          },
+          "trend": {
+            "type": "string",
+            "description": "Performance trend",
+            "enum": ["improving", "stable", "declining", "fluctuating"]
+          }
+        }
+      }
+    },
+    "technologyEnablers": {
+      "type": "array",
+      "description": "Supporting technologies",
+      "items": {
+        "type": "object",
+        "properties": {
+          "technologyName": {
+            "type": "string",
+            "description": "Name of technology"
+          },
+          "technologyPurpose": {
+            "type": "string",
+            "description": "Purpose in supply chain"
+          },
+          "implementationStatus": {
+            "type": "string",
+            "description": "Status of implementation",
+            "enum": ["planned", "implementing", "operational", "upgrading", "retiring"]
+          },
+          "businessImpact": {
+            "type": "string",
+            "description": "Impact on supply chain performance"
+          }
+        }
+      }
+    },
+    "digitalMaturity": {
+      "type": "object",
+      "description": "Level of digital technology adoption",
+      "properties": {
+        "overallMaturity": {
+          "type": "string",
+          "description": "Overall digital maturity",
+          "enum": ["initial", "developing", "defined", "advanced", "leading"]
+        },
+        "dataVisibility": {
+          "type": "string",
+          "description": "Data visibility maturity",
+          "enum": ["initial", "developing", "defined", "advanced", "leading"]
+        },
+        "processAutomation": {
+          "type": "string",
+          "description": "Process automation maturity",
+          "enum": ["initial", "developing", "defined", "advanced", "leading"]
+        },
+        "advancedAnalytics": {
+          "type": "string",
+          "description": "Analytics capabilities maturity",
+          "enum": ["initial", "developing", "defined", "advanced", "leading"]
+        },
+        "digitalRoadmap": {
+          "type": "string",
+          "description": "Plans for digital advancement"
+        }
+      }
+    },
+    "maturityLevel": {
+      "type": "object",
+      "description": "Current development stage",
+      "properties": {
+        "overallMaturity": {
+          "type": "string",
+          "description": "Overall supply chain maturity",
+          "enum": ["initial", "developing", "defined", "managed", "optimizing"]
+        },
+        "processMaturity": {
+          "type": "string",
+          "description": "Process management maturity",
+          "enum": ["initial", "developing", "defined", "managed", "optimizing"]
+        },
+        "performanceManagement": {
+          "type": "string",
+          "description": "Performance management maturity",
+          "enum": ["initial", "developing", "defined", "managed", "optimizing"]
+        },
+        "maturityAssessmentDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of last maturity assessment"
+        }
+      }
+    },
+    "improvementOpportunities": {
+      "type": "array",
+      "description": "Areas for enhancement",
+      "items": {
+        "type": "object",
+        "properties": {
+          "opportunityName": {
+            "type": "string",
+            "description": "Name of improvement opportunity"
+          },
+          "opportunityDescription": {
+            "type": "string",
+            "description": "Description of opportunity"
+          },
+          "potentialImpact": {
+            "type": "string",
+            "description": "Potential business impact",
+            "enum": ["low", "medium", "high", "transformative"]
+          },
+          "implementationComplexity": {
+            "type": "string",
+            "description": "Complexity of implementation",
+            "enum": ["low", "medium", "high", "very-high"]
+          },
+          "status": {
+            "type": "string",
+            "description": "Current status",
+            "enum": ["identified", "evaluating", "planning", "implementing", "completed"]
+          }
+        }
+      }
+    },
+    "strategicImportance": {
+      "type": "object",
+      "description": "Significance to business strategy",
+      "properties": {
+        "importanceLevel": {
+          "type": "string",
+          "description": "Level of strategic importance",
+          "enum": ["low", "medium", "high", "critical"]
+        },
+        "strategicContribution": {
+          "type": "string",
+          "description": "How supply chain contributes to strategy"
+        },
+        "alignmentWithObjectives": {
+          "type": "array",
+          "description": "Alignment with strategic objectives",
+          "items": {
+            "type": "object",
+            "properties": {
+              "objectiveID": {
+                "type": "string",
+                "description": "ID of strategic objective"
+              },
+              "alignmentDescription": {
+                "type": "string",
+                "description": "How supply chain aligns with objective"
+              }
+            }
+          }
+        }
+      }
+    },
+    "competitiveAdvantage": {
+      "type": "object",
+      "description": "How supply chain creates competitive advantage",
+      "properties": {
+        "advantageLevel": {
+          "type": "string",
+          "description": "Level of competitive advantage",
+          "enum": ["disadvantage", "parity", "advantage", "significant-advantage"]
+        },
+        "advantageSources": {
+          "type": "array",
+          "description": "Sources of competitive advantage",
+          "items": {
+            "type": "string"
+          }
+        },
+        "competitiveBenchmarking": {
+          "type": "string",
+          "description": "Comparison to competitors"
+        },
+        "sustainabilityOfAdvantage": {
+          "type": "string",
+          "description": "Long-term viability of advantage"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Other domains, processes, or systems supporting this supply chain element",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dependencyType": {
+            "type": "string",
+            "description": "Type of dependency"
+          },
+          "domainType": {
+            "type": "string",
+            "description": "Type of domain this depends on",
+            "enum": ["Capability", "Service", "Product", "Information", "Value Stream", "Strategy", "Organization", "Technology", "Initiative", "Customer", "Market", "Finance", "Risk", "Other"]
+          },
+          "entityID": {
+            "type": "string",
+            "description": "ID of the entity being depended upon"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the dependency"
+          }
+        }
+      }
+    },
+    "relatedSupplyChainElements": {
+      "type": "array",
+      "description": "Other supply chain elements with relationships to this one",
+      "items": {
+        "type": "object",
+        "properties": {
+          "elementID": {
+            "type": "string",
+            "description": "ID of the related supply chain element"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship",
+            "enum": ["upstream", "downstream", "parallel", "complementary", "integrated", "supporting", "enables", "constrains", "other"]
+          },
+          "relationshipStrength": {
+            "type": "integer",
+            "description": "Strength of the relationship (1-5)",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the relationship"
+          }
+        }
+      }
+    },
+    "governanceModel": {
+      "type": "object",
+      "description": "How the supply chain is governed",
+      "properties": {
+        "governanceStructure": {
+          "type": "string",
+          "description": "Structure for governance"
+        },
+        "decisionRights": {
+          "type": "string",
+          "description": "How decisions are made"
+        },
+        "performanceReviewProcess": {
+          "type": "string",
+          "description": "How performance is reviewed"
+        },
+        "continuousImprovement": {
+          "type": "string",
+          "description": "Approach to ongoing improvement"
+        }
+      }
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Supplier Network Schema",
+  "description": "Schema for Supplier Network element in the Supply Chain domain",
+  "type": "object",
+  "required": ["networkID", "networkTitle", "description", "orgUnitTitle"],
+  "properties": {
+    "networkID": {
+      "type": "string",
+      "description": "Unique identifier for the supplier network"
+    },
+    "networkTitle": {
+      "type": "string",
+      "description": "Name of the supplier network"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the supplier network"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this supplier network"
+    },
+    "supplyChainID": {
+      "type": "string",
+      "description": "ID of the supply chain domain this network belongs to"
+    },
+    "supplierCategories": {
+      "type": "array",
+      "description": "Types of suppliers in the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "categoryName": {
+            "type": "string",
+            "description": "Name of supplier category"
+          },
+          "categoryDescription": {
+            "type": "string",
+            "description": "Description of category"
+          },
+          "supplierCount": {
+            "type": "integer",
+            "description": "Number of suppliers in category"
+          },
+          "spendPercentage": {
+            "type": "number",
+            "description": "Percentage of total spend"
+          },
+          "categoryStrategy": {
+            "type": "string",
+            "description": "Strategic approach for this category"
+          }
+        }
+      }
+    },
+    "supplierTiers": {
+      "type": "array",
+      "description": "Hierarchical arrangement of suppliers",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tierLevel": {
+            "type": "string",
+            "description": "Tier designation",
+            "enum": ["tier-1", "tier-2", "tier-3", "tier-n", "direct", "indirect", "other"]
+          },
+          "tierDescription": {
+            "type": "string",
+            "description": "Description of this tier"
+          },
+          "supplierCount": {
+            "type": "integer",
+            "description": "Number of suppliers in tier"
+          },
+          "visibilityLevel": {
+            "type": "string",
+            "description": "Level of visibility into this tier",
+            "enum": ["full", "partial", "limited", "none"]
+          },
+          "managementApproach": {
+            "type": "string",
+            "description": "How this tier is managed"
+          }
+        }
+      }
+    },
+    "geographicDistribution": {
+      "type": "object",
+      "description": "Geographic distribution of suppliers",
+      "properties": {
+        "regions": {
+          "type": "array",
+          "description": "Supplier distribution by region",
+          "items": {
+            "type": "object",
+            "properties": {
+              "regionName": {
+                "type": "string",
+                "description": "Name of region"
+              },
+              "supplierCount": {
+                "type": "integer",
+                "description": "Number of suppliers in region"
+              },
+              "spendPercentage": {
+                "type": "number",
+                "description": "Percentage of spend in region"
+              },
+              "regionalRisks": {
+                "type": "array",
+                "description": "Region-specific risks",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "concentrationRisk": {
+          "type": "string",
+          "description": "Assessment of geographic concentration risk"
+        },
+        "diversificationStrategy": {
+          "type": "string",
+          "description": "Approach to geographic diversification"
+        }
+      }
+    },
+    "singleSourceComponents": {
+      "type": "array",
+      "description": "Items with single source of supply",
+      "items": {
+        "type": "object",
+        "properties": {
+          "itemName": {
+            "type": "string",
+            "description": "Name of single-sourced item"
+          },
+          "supplierName": {
+            "type": "string",
+            "description": "Name of supplier"
+          },
+          "criticality": {
+            "type": "string",
+            "description": "Importance to operations",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Reason for single sourcing"
+          },
+          "mitigationStrategy": {
+            "type": "string",
+            "description": "Risk mitigation approach"
+          }
+        }
+      }
+    },
+    "criticalSuppliers": {
+      "type": "array",
+      "description": "Strategically important suppliers",
+      "items": {
+        "type": "object",
+        "properties": {
+          "supplierName": {
+            "type": "string",
+            "description": "Name of critical supplier"
+          },
+          "criticality": {
+            "type": "string",
+            "description": "Level of criticality",
+            "enum": ["high", "very-high", "critical"]
+          },
+          "criticalityRationale": {
+            "type": "string",
+            "description": "Reason for critical designation"
+          },
+          "relationshipStrategy": {
+            "type": "string",
+            "description": "Strategy for managing relationship"
+          },
+          "businessContinuityPlan": {
+            "type": "string",
+            "description": "Plan for supplier disruption"
+          }
+        }
+      }
+    },
+    "supplierSelectionCriteria": {
+      "type": "array",
+      "description": "Criteria for supplier selection",
+      "items": {
+        "type": "object",
+        "properties": {
+          "criterionName": {
+            "type": "string",
+            "description": "Name of selection criterion"
+          },
+          "criterionDescription": {
+            "type": "string",
+            "description": "Description of criterion"
+          },
+          "weightingFactor": {
+            "type": "number",
+            "description": "Relative importance (0-100%)"
+          },
+          "evaluationMethod": {
+            "type": "string",
+            "description": "How criterion is evaluated"
+          }
+        }
+      }
+    },
+    "supplierPerformanceMetrics": {
+      "type": "array",
+      "description": "Metrics for measuring supplier performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of performance metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Description of what is measured"
+          },
+          "measurementMethod": {
+            "type": "string",
+            "description": "How metric is measured"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Performance expectation"
+          },
+          "averagePerformance": {
+            "type": "string",
+            "description": "Network average performance"
+          }
+        }
+      }
+    },
+    "supplierRelationshipTypes": {
+      "type": "array",
+      "description": "Types of supplier relationships",
+      "items": {
+        "type": "object",
+        "properties": {
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship",
+            "enum": ["transactional", "preferred", "strategic", "partnership", "alliance", "joint-venture", "other"]
+          },
+          "relationshipDescription": {
+            "type": "string",
+            "description": "Description of relationship type"
+          },
+          "supplierCount": {
+            "type": "integer",
+            "description": "Number of suppliers with this relationship"
+          },
+          "managementApproach": {
+            "type": "string",
+            "description": "How relationship is managed"
+          }
+        }
+      }
+    },
+    "governanceModel": {
+      "type": "object",
+      "description": "How the supplier network is governed",
+      "properties": {
+        "governanceStructure": {
+          "type": "string",
+          "description": "Structure for supplier governance"
+        },
+        "performanceReviewProcess": {
+          "type": "string",
+          "description": "Process for reviewing supplier performance"
+        },
+        "escalationPathways": {
+          "type": "string",
+          "description": "Process for handling supplier issues"
+        },
+        "communicationProtocols": {
+          "type": "string",
+          "description": "Protocols for supplier communication"
+        },
+        "developmentPrograms": {
+          "type": "string",
+          "description": "Programs for supplier development"
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "description": "Risk characteristics of supplier network",
+      "properties": {
+        "overallRiskLevel": {
+          "type": "string",
+          "description": "Overall risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "riskCategories": {
+          "type": "array",
+          "description": "Categories of supplier risk",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of risk category"
+              },
+              "riskLevel": {
+                "type": "string",
+                "description": "Level of risk in this category",
+                "enum": ["very-low", "low", "moderate", "high", "very-high"]
+              },
+              "mitigationApproach": {
+                "type": "string",
+                "description": "Approach to managing this risk"
+              }
+            }
+          }
+        },
+        "monitoringApproach": {
+          "type": "string",
+          "description": "How supplier risks are monitored"
+        },
+        "contingencyPlans": {
+          "type": "string",
+          "description": "Plans for supplier disruptions"
+        }
+      }
+    },
+    "sustainabilityRequirements": {
+      "type": "object",
+      "description": "Sustainability expectations for suppliers",
+      "properties": {
+        "environmentalRequirements": {
+          "type": "array",
+          "description": "Environmental sustainability requirements",
+          "items": {
+            "type": "string"
+          }
+        },
+        "socialRequirements": {
+          "type": "array",
+          "description": "Social responsibility requirements",
+          "items": {
+            "type": "string"
+          }
+        },
+        "governanceRequirements": {
+          "type": "array",
+          "description": "Governance requirements",
+          "items": {
+            "type": "string"
+          }
+        },
+        "monitoringApproach": {
+          "type": "string",
+          "description": "How sustainability is monitored"
+        },
+        "certificationRequirements": {
+          "type": "array",
+          "description": "Required sustainability certifications",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "technologyIntegration": {
+      "type": "object",
+      "description": "Technology integration with suppliers",
+      "properties": {
+        "integrationLevel": {
+          "type": "string",
+          "description": "Overall level of integration",
+          "enum": ["minimal", "basic", "moderate", "advanced", "seamless"]
+        },
+        "integrationPlatforms": {
+          "type": "array",
+          "description": "Platforms used for integration",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataExchangeStandards": {
+          "type": "array",
+          "description": "Standards for data exchange",
+          "items": {
+            "type": "string"
+          }
+        },
+        "integrationChallenges": {
+          "type": "array",
+          "description": "Challenges in supplier integration",
+          "items": {
+            "type": "string"
+          }
+        },
+        "roadmap": {
+          "type": "string",
+          "description": "Future integration plans"
+        }
+      }
+    },
+    "collaborationModel": {
+      "type": "object",
+      "description": "How collaboration with suppliers is structured",
+      "properties": {
+        "collaborationAreas": {
+          "type": "array",
+          "description": "Areas of supplier collaboration",
+          "items": {
+            "type": "string"
+          }
+        },
+        "collaborationProcesses": {
+          "type": "string",
+          "description": "Processes supporting collaboration"
+        },
+        "collaborationMechanisms": {
+          "type": "array",
+          "description": "Mechanisms for collaboration",
+          "items": {
+            "type": "string"
+          }
+        },
+        "intellectualPropertyApproach": {
+          "type": "string",
+          "description": "How IP is managed in collaboration"
+        }
+      }
+    },
+    "spendAnalysis": {
+      "type": "object",
+      "description": "Analysis of supplier spending",
+      "properties": {
+        "totalAnnualSpend": {
+          "type": "string",
+          "description": "Total annual spend with suppliers"
+        },
+        "spendConcentration": {
+          "type": "string",
+          "description": "Concentration of spend across suppliers"
+        },
+        "spendTrends": {
+          "type": "string",
+          "description": "Trends in supplier spending"
+        },
+        "savingsOpportunities": {
+          "type": "array",
+          "description": "Opportunities for cost reduction",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "contractManagement": {
+      "type": "object",
+      "description": "Management of supplier contracts",
+      "properties": {
+        "contractTypes": {
+          "type": "array",
+          "description": "Types of supplier contracts",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contractManagementProcess": {
+          "type": "string",
+          "description": "Process for managing contracts"
+        },
+        "performanceIncentives": {
+          "type": "string",
+          "description": "Contract incentives for performance"
+        },
+        "complianceMonitoring": {
+          "type": "string",
+          "description": "How contract compliance is monitored"
+        }
+      }
+    },
+    "improvementInitiatives": {
+      "type": "array",
+      "description": "Initiatives to improve supplier network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "initiativeName": {
+            "type": "string",
+            "description": "Name of improvement initiative"
+          },
+          "initiativeDescription": {
+            "type": "string",
+            "description": "Description of initiative"
+          },
+          "expectedBenefits": {
+            "type": "string",
+            "description": "Benefits of initiative"
+          },
+          "status": {
+            "type": "string",
+            "description": "Current status",
+            "enum": ["planned", "in-progress", "completed", "ongoing"]
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Supply Chain Process Schema",
+  "description": "Schema for Supply Chain Process element in the Supply Chain domain",
+  "type": "object",
+  "required": ["processID", "processTitle", "description", "orgUnitTitle"],
+  "properties": {
+    "processID": {
+      "type": "string",
+      "description": "Unique identifier for the supply chain process"
+    },
+    "processTitle": {
+      "type": "string",
+      "description": "Name of the supply chain process"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the supply chain process"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this process"
+    },
+    "supplyChainID": {
+      "type": "string",
+      "description": "ID of the supply chain domain this process belongs to"
+    },
+    "processType": {
+      "type": "string",
+      "description": "Category of process",
+      "enum": ["planning", "sourcing", "making", "delivering", "returning", "enabling", "other"]
+    },
+    "processOwner": {
+      "type": "string",
+      "description": "Individual or role responsible for the process"
+    },
+    "processScope": {
+      "type": "object",
+      "description": "Boundaries of the process",
+      "properties": {
+        "startPoint": {
+          "type": "string",
+          "description": "Where process begins"
+        },
+        "endPoint": {
+          "type": "string",
+          "description": "Where process ends"
+        },
+        "includedActivities": {
+          "type": "array",
+          "description": "Activities within scope",
+          "items": {
+            "type": "string"
+          }
+        },
+        "excludedActivities": {
+          "type": "array",
+          "description": "Activities outside scope",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "processSteps": {
+      "type": "array",
+      "description": "Key activities involved in the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stepID": {
+            "type": "string",
+            "description": "Identifier for this step"
+          },
+          "stepName": {
+            "type": "string",
+            "description": "Name of process step"
+          },
+          "stepDescription": {
+            "type": "string",
+            "description": "Description of this step"
+          },
+          "sequenceNumber": {
+            "type": "integer",
+            "description": "Order in the process"
+          },
+          "responsibility": {
+            "type": "string",
+            "description": "Role responsible for this step"
+          },
+          "expectedDuration": {
+            "type": "string",
+            "description": "Typical time required"
+          },
+          "decisionPoints": {
+            "type": "array",
+            "description": "Decision points in this step",
+            "items": {
+              "type": "object",
+              "properties": {
+                "decisionName": {
+                  "type": "string",
+                  "description": "Name of decision point"
+                },
+                "decisionDescription": {
+                  "type": "string",
+                  "description": "What is decided"
+                },
+                "decisionCriteria": {
+                  "type": "string",
+                  "description": "Criteria for decision"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "processInputs": {
+      "type": "array",
+      "description": "Required inputs to the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "inputName": {
+            "type": "string",
+            "description": "Name of input"
+          },
+          "inputDescription": {
+            "type": "string",
+            "description": "Description of input"
+          },
+          "inputSource": {
+            "type": "string",
+            "description": "Source of this input"
+          },
+          "inputQualityRequirements": {
+            "type": "string",
+            "description": "Quality requirements for input"
+          }
+        }
+      }
+    },
+    "processOutputs": {
+      "type": "array",
+      "description": "Resulting outputs from the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "outputName": {
+            "type": "string",
+            "description": "Name of output"
+          },
+          "outputDescription": {
+            "type": "string",
+            "description": "Description of output"
+          },
+          "outputDestination": {
+            "type": "string",
+            "description": "Destination for this output"
+          },
+          "outputQualityRequirements": {
+            "type": "string",
+            "description": "Quality requirements for output"
+          }
+        }
+      }
+    },
+    "processControls": {
+      "type": "array",
+      "description": "Control mechanisms for the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "controlName": {
+            "type": "string",
+            "description": "Name of control"
+          },
+          "controlDescription": {
+            "type": "string",
+            "description": "Description of control"
+          },
+          "controlType": {
+            "type": "string",
+            "description": "Type of control",
+            "enum": ["preventive", "detective", "corrective", "directive"]
+          },
+          "controlOwner": {
+            "type": "string",
+            "description": "Role responsible for this control"
+          },
+          "controlEffectiveness": {
+            "type": "string",
+            "description": "Assessment of effectiveness",
+            "enum": ["ineffective", "partially-effective", "effective", "highly-effective"]
+          }
+        }
+      }
+    },
+    "processDependencies": {
+      "type": "array",
+      "description": "Related processes or dependencies",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dependencyID": {
+            "type": "string",
+            "description": "ID of dependent process"
+          },
+          "dependencyName": {
+            "type": "string",
+            "description": "Name of dependent process"
+          },
+          "dependencyType": {
+            "type": "string",
+            "description": "Type of dependency",
+            "enum": ["predecessor", "successor", "concurrent", "supporting", "constraining"]
+          },
+          "dependencyDescription": {
+            "type": "string",
+            "description": "Description of dependency"
+          },
+          "criticality": {
+            "type": "string",
+            "description": "Importance of dependency",
+            "enum": ["low", "medium", "high", "critical"]
+          }
+        }
+      }
+    },
+    "processMetrics": {
+      "type": "array",
+      "description": "Performance measures for the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Description of what is measured"
+          },
+          "metricType": {
+            "type": "string",
+            "description": "Type of metric",
+            "enum": ["efficiency", "effectiveness", "quality", "timeliness", "cost", "other"]
+          },
+          "measurementMethod": {
+            "type": "string",
+            "description": "How metric is measured"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current performance"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target performance"
+          },
+          "dataSource": {
+            "type": "string",
+            "description": "Source of metric data"
+          }
+        }
+      }
+    },
+    "processRisks": {
+      "type": "array",
+      "description": "Specific risks related to this process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "riskName": {
+            "type": "string",
+            "description": "Name of risk"
+          },
+          "riskDescription": {
+            "type": "string",
+            "description": "Description of risk"
+          },
+          "likelihood": {
+            "type": "string",
+            "description": "Probability of occurrence",
+            "enum": ["very-low", "low", "moderate", "high", "very-high"]
+          },
+          "impact": {
+            "type": "string",
+            "description": "Potential impact",
+            "enum": ["minimal", "moderate", "significant", "severe", "critical"]
+          },
+          "mitigationStrategy": {
+            "type": "string",
+            "description": "Approach to managing risk"
+          }
+        }
+      }
+    },
+    "processOptimizationOpportunities": {
+      "type": "array",
+      "description": "Opportunities to improve the process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "opportunityName": {
+            "type": "string",
+            "description": "Name of opportunity"
+          },
+          "opportunityDescription": {
+            "type": "string",
+            "description": "Description of opportunity"
+          },
+          "potentialBenefits": {
+            "type": "string",
+            "description": "Benefits of implementation"
+          },
+          "implementationComplexity": {
+            "type": "string",
+            "description": "Complexity to implement",
+            "enum": ["low", "medium", "high", "very-high"]
+          },
+          "implementationStatus": {
+            "type": "string",
+            "description": "Current status",
+            "enum": ["identified", "evaluating", "planned", "implementing", "completed"]
+          }
+        }
+      }
+    },
+    "technologySupport": {
+      "type": "array",
+      "description": "Technologies supporting this process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "technologyName": {
+            "type": "string",
+            "description": "Name of technology"
+          },
+          "technologyDescription": {
+            "type": "string",
+            "description": "Description of technology"
+          },
+          "functionSupported": {
+            "type": "string",
+            "description": "What technology supports"
+          },
+          "implementationStatus": {
+            "type": "string",
+            "description": "Status of implementation",
+            "enum": ["planned", "implementing", "operational", "retiring"]
+          },
+          "effectivenessAssessment": {
+            "type": "string",
+            "description": "Assessment of effectiveness",
+            "enum": ["ineffective", "partially-effective", "effective", "highly-effective"]
+          }
+        }
+      }
+    },
+    "automationLevel": {
+      "type": "object",
+      "description": "Level of process automation",
+      "properties": {
+        "overallAutomation": {
+          "type": "string",
+          "description": "Overall automation assessment",
+          "enum": ["manual", "partially-automated", "mostly-automated", "fully-automated"]
+        },
+        "automationByStep": {
+          "type": "array",
+          "description": "Automation level for each step",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stepID": {
+                "type": "string",
+                "description": "Process step ID"
+              },
+              "automationLevel": {
+                "type": "string",
+                "description": "Level of automation for this step",
+                "enum": ["manual", "partially-automated", "mostly-automated", "fully-automated"]
+              },
+              "automationTechnology": {
+                "type": "string",
+                "description": "Technology enabling automation"
+              }
+            }
+          }
+        },
+        "automationRoadmap": {
+          "type": "string",
+          "description": "Future automation plans"
+        }
+      }
+    },
+    "standardization": {
+      "type": "object",
+      "description": "Level of process standardization",
+      "properties": {
+        "standardizationLevel": {
+          "type": "string",
+          "description": "Degree of standardization",
+          "enum": ["ad-hoc", "partially-standardized", "mostly-standardized", "fully-standardized"]
+        },
+        "standardDocumentation": {
+          "type": "string",
+          "description": "Documentation of standards"
+        },
+        "variationPoints": {
+          "type": "array",
+          "description": "Points of allowed variation",
+          "items": {
+            "type": "string"
+          }
+        },
+        "complianceLevel": {
+          "type": "string",
+          "description": "Adherence to standards",
+          "enum": ["low", "medium", "high", "very-high"]
+        }
+      }
+    },
+    "trainingRequirements": {
+      "type": "array",
+      "description": "Training needed for this process",
+      "items": {
+        "type": "object",
+        "properties": {
+          "roleTitle": {
+            "type": "string",
+            "description": "Role requiring training"
+          },
+          "trainingNeeds": {
+            "type": "array",
+            "description": "Specific training requirements",
+            "items": {
+              "type": "string"
+            }
+          },
+          "trainingApproach": {
+            "type": "string",
+            "description": "How training is delivered"
+          },
+          "competencyAssessment": {
+            "type": "string",
+            "description": "How competency is assessed"
+          }
+        }
+      }
+    },
+    "processMaturity": {
+      "type": "object",
+      "description": "Maturity assessment of the process",
+      "properties": {
+        "maturityLevel": {
+          "type": "string",
+          "description": "Current maturity level",
+          "enum": ["initial", "managed", "defined", "quantitatively-managed", "optimizing"]
+        },
+        "maturityAssessmentDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date of maturity assessment"
+        },
+        "maturityImprovement": {
+          "type": "string",
+          "description": "Plans for maturity improvement"
+        }
+      }
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Logistics Network Schema",
+  "description": "Schema for Logistics Network element in the Supply Chain domain",
+  "type": "object",
+  "required": ["networkID", "networkTitle", "description", "orgUnitTitle"],
+  "properties": {
+    "networkID": {
+      "type": "string",
+      "description": "Unique identifier for the logistics network"
+    },
+    "networkTitle": {
+      "type": "string",
+      "description": "Name of the logistics network"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the logistics network"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this logistics network"
+    },
+    "supplyChainID": {
+      "type": "string",
+      "description": "ID of the supply chain domain this network belongs to"
+    },
+    "networkType": {
+      "type": "string",
+      "description": "Category of logistics network",
+      "enum": ["distribution", "transportation", "warehouse", "fulfillment", "reverse", "integrated", "other"]
+    },
+    "networkNodes": {
+      "type": "array",
+      "description": "Key facilities and locations in the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nodeID": {
+            "type": "string",
+            "description": "Identifier for this node"
+          },
+          "nodeName": {
+            "type": "string",
+            "description": "Name of the facility/location"
+          },
+          "nodeType": {
+            "type": "string",
+            "description": "Type of node",
+            "enum": ["manufacturing", "distribution-center", "warehouse", "fulfillment-center", "cross-dock", "retail", "port", "terminal", "hub", "other"]
+          },
+          "location": {
+            "type": "object",
+            "description": "Geographic location",
+            "properties": {
+              "address": {
+                "type": "string",
+                "description": "Physical address"
+              },
+              "city": {
+                "type": "string",
+                "description": "City"
+              },
+              "region": {
+                "type": "string",
+                "description": "State/province/region"
+              },
+              "country": {
+                "type": "string",
+                "description": "Country"
+              },
+              "coordinates": {
+                "type": "string",
+                "description": "Geographic coordinates"
+              }
+            }
+          },
+          "capacity": {
+            "type": "string",
+            "description": "Node capacity"
+          },
+          "utilizationRate": {
+            "type": "string",
+            "description": "Current utilization percentage"
+          },
+          "operatingModel": {
+            "type": "string",
+            "description": "How node is operated",
+            "enum": ["owned", "leased", "3pl", "partner", "other"]
+          },
+          "services": {
+            "type": "array",
+            "description": "Services performed at node",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "networkConnections": {
+      "type": "array",
+      "description": "Connections between nodes in the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "connectionID": {
+            "type": "string",
+            "description": "Identifier for this connection"
+          },
+          "sourceNodeID": {
+            "type": "string",
+            "description": "Origin node ID"
+          },
+          "destinationNodeID": {
+            "type": "string",
+            "description": "Destination node ID"
+          },
+          "transportationMode": {
+            "type": "string",
+            "description": "Mode of transportation",
+            "enum": ["road", "rail", "ocean", "air", "pipeline", "intermodal", "other"]
+          },
+          "distance": {
+            "type": "string",
+            "description": "Distance between nodes"
+          },
+          "transitTime": {
+            "type": "string",
+            "description": "Typical transit time"
+          },
+          "frequency": {
+            "type": "string",
+            "description": "Frequency of shipments"
+          },
+          "carrierName": {
+            "type": "string",
+            "description": "Transportation provider"
+          },
+          "cost": {
+            "type": "string",
+            "description": "Cost of transportation"
+          }
+        }
+      }
+    },
+    "transportationModes": {
+      "type": "array",
+      "description": "Methods of transport used in the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "modeName": {
+            "type": "string",
+            "description": "Name of transportation mode"
+          },
+          "utilizationPercentage": {
+            "type": "number",
+            "description": "Percentage of total volume"
+          },
+          "costPercentage": {
+            "type": "number",
+            "description": "Percentage of total cost"
+          },
+          "carriers": {
+            "type": "array",
+            "description": "Transportation providers",
+            "items": {
+              "type": "object",
+              "properties": {
+                "carrierName": {
+                  "type": "string",
+                  "description": "Name of carrier"
+                },
+                "carrierType": {
+                  "type": "string",
+                  "description": "Type of carrier",
+                  "enum": ["asset-based", "non-asset", "broker", "freight-forwarder", "parcel", "other"]
+                },
+                "volumePercentage": {
+                  "type": "number",
+                  "description": "Percentage of mode volume"
+                },
+                "performanceRating": {
+                  "type": "string",
+                  "description": "Carrier performance rating"
+                },
+                "relationshipType": {
+                  "type": "string",
+                  "description": "Nature of relationship",
+                  "enum": ["transactional", "preferred", "strategic", "exclusive", "other"]
+                }
+              }
+            }
+          },
+          "modeStrengths": {
+            "type": "array",
+            "description": "Advantages of this mode",
+            "items": {
+              "type": "string"
+            }
+          },
+          "modeWeaknesses": {
+            "type": "array",
+            "description": "Disadvantages of this mode",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "networkCapacity": {
+      "type": "object",
+      "description": "Throughput capabilities of the network",
+      "properties": {
+        "overallCapacity": {
+          "type": "string",
+          "description": "Total network capacity"
+        },
+        "utilizationRate": {
+          "type": "string",
+          "description": "Current capacity utilization"
+        },
+        "capacityConstraints": {
+          "type": "array",
+          "description": "Limiting factors on capacity",
+          "items": {
+            "type": "object",
+            "properties": {
+              "constraintType": {
+                "type": "string",
+                "description": "Type of constraint"
+              },
+              "location": {
+                "type": "string",
+
+                "description": "Where constraint exists"
+              },
+              "description": {
+                "type": "string",
+                "description": "Description of constraint"
+              },
+              "impact": {
+                "type": "string",
+                "description": "Impact on network performance"
+              },
+              "resolutionPlan": {
+                "type": "string",
+                "description": "Plan to address constraint"
+              }
+            }
+          }
+        },
+        "peakHandlingCapability": {
+          "type": "string",
+          "description": "Capacity during peak periods"
+        },
+        "expansionPlans": {
+          "type": "string",
+          "description": "Plans for capacity expansion"
+        }
+      }
+    },
+    "serviceLevels": {
+      "type": "array",
+      "description": "Performance standards for the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "serviceName": {
+            "type": "string",
+            "description": "Name of service level"
+          },
+          "serviceDescription": {
+            "type": "string",
+            "description": "Description of service level"
+          },
+          "performanceMetrics": {
+            "type": "array",
+            "description": "Metrics for this service level",
+            "items": {
+              "type": "object",
+              "properties": {
+                "metricName": {
+                  "type": "string",
+                  "description": "Name of metric"
+                },
+                "target": {
+                  "type": "string",
+                  "description": "Target performance"
+                },
+                "actual": {
+                  "type": "string",
+                  "description": "Actual performance"
+                }
+              }
+            }
+          },
+          "customerSegments": {
+            "type": "array",
+            "description": "Customer segments using this service level",
+            "items": {
+              "type": "string"
+            }
+          },
+          "costImplications": {
+            "type": "string",
+            "description": "Cost impact of this service level"
+          }
+        }
+      }
+    },
+    "costEfficiency": {
+      "type": "object",
+      "description": "Cost performance of the logistics network",
+      "properties": {
+        "totalLogisticsCost": {
+          "type": "string",
+          "description": "Total network cost"
+        },
+        "costBreakdown": {
+          "type": "array",
+          "description": "Breakdown of logistics costs",
+          "items": {
+            "type": "object",
+            "properties": {
+              "costCategory": {
+                "type": "string",
+                "description": "Category of cost"
+              },
+              "amount": {
+                "type": "string",
+                "description": "Cost amount"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total cost"
+              }
+            }
+          }
+        },
+        "costPerUnit": {
+          "type": "string",
+          "description": "Cost per unit handled"
+        },
+        "costTrends": {
+          "type": "string",
+          "description": "Trends in logistics costs"
+        },
+        "benchmarks": {
+          "type": "array",
+          "description": "Cost performance benchmarks",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metricName": {
+                "type": "string",
+                "description": "Name of benchmark"
+              },
+              "internalValue": {
+                "type": "string",
+                "description": "Organization's performance"
+              },
+              "industryValue": {
+                "type": "string",
+                "description": "Industry average"
+              },
+              "bestInClass": {
+                "type": "string",
+                "description": "Best-in-class performance"
+              }
+            }
+          }
+        },
+        "optimizationInitiatives": {
+          "type": "array",
+          "description": "Cost reduction initiatives",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "carbonFootprint": {
+      "type": "object",
+      "description": "Environmental impact of the logistics network",
+      "properties": {
+        "totalCarbonEmissions": {
+          "type": "string",
+          "description": "Total carbon emissions"
+        },
+        "emissionsByMode": {
+          "type": "array",
+          "description": "Emissions by transportation mode",
+          "items": {
+            "type": "object",
+            "properties": {
+              "modeName": {
+                "type": "string",
+                "description": "Transportation mode"
+              },
+              "emissions": {
+                "type": "string",
+                "description": "Carbon emissions"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total emissions"
+              }
+            }
+          }
+        },
+        "emissionsByActivity": {
+          "type": "array",
+          "description": "Emissions by logistics activity",
+          "items": {
+            "type": "object",
+            "properties": {
+              "activityName": {
+                "type": "string",
+                "description": "Logistics activity"
+              },
+              "emissions": {
+                "type": "string",
+                "description": "Carbon emissions"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total emissions"
+              }
+            }
+          }
+        },
+        "reductionTargets": {
+          "type": "string",
+          "description": "Targets for emissions reduction"
+        },
+        "reductionInitiatives": {
+          "type": "array",
+          "description": "Initiatives to reduce emissions",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reportingStandards": {
+          "type": "array",
+          "description": "Emissions reporting standards used",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "networkFlexibility": {
+      "type": "object",
+      "description": "Adaptability of the logistics network to change",
+      "properties": {
+        "overallFlexibility": {
+          "type": "string",
+          "description": "Overall flexibility assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "volumeFlexibility": {
+          "type": "string",
+          "description": "Ability to handle volume changes",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "routingFlexibility": {
+          "type": "string",
+          "description": "Ability to change routing",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "modeFlexibility": {
+          "type": "string",
+          "description": "Ability to change transportation modes",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "limitingFactors": {
+          "type": "array",
+          "description": "Factors limiting flexibility",
+          "items": {
+            "type": "string"
+          }
+        },
+        "enhancementPlans": {
+          "type": "string",
+          "description": "Plans to improve flexibility"
+        }
+      }
+    },
+    "networkVisibility": {
+      "type": "object",
+      "description": "Visibility into logistics network operations",
+      "properties": {
+        "overallVisibility": {
+          "type": "string",
+          "description": "Overall visibility assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "trackingCapabilities": {
+          "type": "string",
+          "description": "Shipment tracking capabilities"
+        },
+        "visibilitySystems": {
+          "type": "array",
+          "description": "Systems providing visibility",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataLatency": {
+          "type": "string",
+          "description": "Timeliness of visibility data"
+        },
+        "visibilityGaps": {
+          "type": "array",
+          "description": "Areas with limited visibility",
+          "items": {
+            "type": "string"
+          }
+        },
+        "enhancementPlans": {
+          "type": "string",
+          "description": "Plans to improve visibility"
+        }
+      }
+    },
+    "thirdPartyLogistics": {
+      "type": "array",
+      "description": "Third-party logistics providers in the network",
+      "items": {
+        "type": "object",
+        "properties": {
+          "providerName": {
+            "type": "string",
+            "description": "Name of 3PL provider"
+          },
+          "servicesProvided": {
+            "type": "array",
+            "description": "Services provided by 3PL",
+            "items": {
+              "type": "string"
+            }
+          },
+          "geographicCoverage": {
+            "type": "array",
+            "description": "Geographic areas covered",
+            "items": {
+              "type": "string"
+            }
+          },
+          "volumePercentage": {
+            "type": "number",
+            "description": "Percentage of total logistics volume"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Nature of relationship",
+            "enum": ["transactional", "preferred", "strategic", "partnership", "other"]
+          },
+          "performanceRating": {
+            "type": "string",
+            "description": "Performance assessment",
+            "enum": ["below-expectations", "meets-expectations", "exceeds-expectations"]
+          },
+          "contractTerms": {
+            "type": "string",
+            "description": "Key terms of relationship"
+          }
+        }
+      }
+    },
+    "networkOptimizationStrategy": {
+      "type": "object",
+      "description": "Strategy for improving the logistics network",
+      "properties": {
+        "optimizationFocus": {
+          "type": "array",
+          "description": "Key areas of focus for optimization",
+          "items": {
+            "type": "string"
+          }
+        },
+        "majorInitiatives": {
+          "type": "array",
+          "description": "Major optimization initiatives",
+          "items": {
+            "type": "object",
+            "properties": {
+              "initiativeName": {
+                "type": "string",
+                "description": "Name of initiative"
+              },
+              "initiativeDescription": {
+                "type": "string",
+                "description": "Description of initiative"
+              },
+              "expectedBenefits": {
+                "type": "string",
+                "description": "Anticipated benefits"
+              },
+              "implementationStatus": {
+                "type": "string",
+                "description": "Current status",
+                "enum": ["planning", "implementing", "completed", "ongoing"]
+              }
+            }
+          }
+        },
+        "optimizationApproach": {
+          "type": "string",
+          "description": "Overall approach to optimization"
+        },
+        "technologyEnablers": {
+          "type": "array",
+          "description": "Technologies supporting optimization",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "networkResilience": {
+      "type": "object",
+      "description": "Ability of the network to withstand disruptions",
+      "properties": {
+        "resilienceRating": {
+          "type": "string",
+          "description": "Overall resilience assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "vulnerabilityPoints": {
+          "type": "array",
+          "description": "Areas of network vulnerability",
+          "items": {
+            "type": "string"
+          }
+        },
+        "redundancyMeasures": {
+          "type": "array",
+          "description": "Redundancy built into network",
+          "items": {
+            "type": "string"
+          }
+        },
+        "contingencyPlans": {
+          "type": "string",
+          "description": "Plans for handling disruptions"
+        },
+        "recoveryCapabilities": {
+          "type": "string",
+          "description": "Ability to recover from disruptions"
+        },
+        "resilienceInvestments": {
+          "type": "array",
+          "description": "Investments to improve resilience",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "complianceRequirements": {
+      "type": "array",
+      "description": "Regulatory and compliance requirements",
+      "items": {
+        "type": "object",
+        "properties": {
+          "requirementName": {
+            "type": "string",
+            "description": "Name of requirement"
+          },
+          "requirementDescription": {
+            "type": "string",
+            "description": "Description of requirement"
+          },
+          "applicableRegulations": {
+            "type": "array",
+            "description": "Relevant regulations",
+            "items": {
+              "type": "string"
+            }
+          },
+          "complianceMeasures": {
+            "type": "string",
+            "description": "Measures to ensure compliance"
+          },
+          "complianceStatus": {
+            "type": "string",
+            "description": "Current compliance status",
+            "enum": ["compliant", "partially-compliant", "non-compliant", "in-progress"]
+          }
+        }
+      }
+    }
+  }
+}
+
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Inventory Management Schema",
+  "description": "Schema for Inventory Management element in the Supply Chain domain",
+  "type": "object",
+  "required": ["inventoryID", "inventoryCategory", "description", "orgUnitTitle"],
+  "properties": {
+    "inventoryID": {
+      "type": "string",
+      "description": "Unique identifier for the inventory management element"
+    },
+    "inventoryCategory": {
+      "type": "string",
+      "description": "Type of inventory",
+      "enum": ["raw-materials", "work-in-process", "finished-goods", "spare-parts", "maintenance-supplies", "consumables", "packaging", "other"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the inventory management element"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this inventory"
+    },
+    "supplyChainID": {
+      "type": "string",
+      "description": "ID of the supply chain domain this inventory belongs to"
+    },
+    "inventoryPurpose": {
+      "type": "string",
+      "description": "Strategic purpose of the inventory",
+      "enum": ["cycle", "safety", "anticipation", "pipeline", "decoupling", "seasonal", "promotional", "other"]
+    },
+    "inventoryPolicy": {
+      "type": "object",
+      "description": "Management approach for the inventory",
+      "properties": {
+        "policyType": {
+          "type": "string",
+          "description": "Type of inventory policy",
+          "enum": ["min-max", "economic-order-quantity", "just-in-time", "vendor-managed", "consignment", "periodic-review", "continuous-review", "other"]
+        },
+        "policyDescription": {
+          "type": "string",
+          "description": "Detailed explanation of policy"
+        },
+        "reviewFrequency": {
+          "type": "string",
+          "description": "How often inventory is reviewed"
+        },
+        "orderingRules": {
+          "type": "string",
+          "description": "Rules for placing orders"
+        },
+        "exceptionHandling": {
+          "type": "string",
+          "description": "Process for handling exceptions"
+        }
+      }
+    },
+    "inventoryLevels": {
+      "type": "object",
+      "description": "Quantity parameters for the inventory",
+      "properties": {
+        "averageInventory": {
+          "type": "string",
+          "description": "Average inventory level"
+        },
+        "minimumLevel": {
+          "type": "string",
+          "description": "Minimum inventory level"
+        },
+        "maximumLevel": {
+          "type": "string",
+          "description": "Maximum inventory level"
+        },
+        "safetyStockLevel": {
+          "type": "string",
+          "description": "Safety stock quantity"
+        },
+        "reorderPoint": {
+          "type": "string",
+          "description": "Level triggering reorder"
+        },
+        "unitOfMeasure": {
+          "type": "string",
+          "description": "Unit used for measurement"
+        },
+        "measurementMethod": {
+          "type": "string",
+          "description": "How inventory is measured"
+        }
+      }
+    },
+    "inventoryTurnover": {
+      "type": "object",
+      "description": "Rate of inventory usage",
+      "properties": {
+        "turnoverRate": {
+          "type": "string",
+          "description": "Inventory turnover ratio"
+        },
+        "daysOfSupply": {
+          "type": "string",
+          "description": "Average days of inventory"
+        },
+        "turnoverByCategory": {
+          "type": "array",
+          "description": "Turnover for specific categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Category name"
+              },
+              "turnoverRate": {
+                "type": "string",
+                "description": "Category turnover ratio"
+              },
+              "daysOfSupply": {
+                "type": "string",
+                "description": "Days of supply for category"
+              }
+            }
+          }
+        },
+        "turnoverTrends": {
+          "type": "string",
+          "description": "Trends in inventory turnover"
+        },
+        "benchmarks": {
+          "type": "object",
+          "properties": {
+            "industryAverage": {
+              "type": "string",
+              "description": "Industry average turnover"
+            },
+            "bestInClass": {
+              "type": "string",
+              "description": "Best-in-class turnover"
+            }
+          }
+        }
+      }
+    },
+    "inventoryCosts": {
+      "type": "object",
+      "description": "Costs associated with inventory",
+      "properties": {
+        "totalInventoryValue": {
+          "type": "string",
+          "description": "Total value of inventory"
+        },
+        "holdingCost": {
+          "type": "string",
+          "description": "Cost of holding inventory"
+        },
+        "orderingCost": {
+          "type": "string",
+          "description": "Cost of placing orders"
+        },
+        "stockoutCost": {
+          "type": "string",
+          "description": "Cost of stockouts"
+        },
+        "obsolescenceCost": {
+          "type": "string",
+          "description": "Cost of obsolete inventory"
+        },
+        "costByCategory": {
+          "type": "array",
+          "description": "Costs for specific categories",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Category name"
+              },
+              "inventoryValue": {
+                "type": "string",
+                "description": "Value of inventory in category"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total value"
+              }
+            }
+          }
+        },
+        "costReductionTargets": {
+          "type": "string",
+          "description": "Targets for cost reduction"
+        }
+      }
+    },
+    "inventoryLocation": {
+      "type": "array",
+      "description": "Storage locations for inventory",
+      "items": {
+        "type": "object",
+        "properties": {
+          "locationName": {
+            "type": "string",
+            "description": "Name of location"
+          },
+          "locationType": {
+            "type": "string",
+            "description": "Type of location",
+            "enum": ["manufacturing", "distribution-center", "warehouse", "retail", "3pl", "vendor-managed", "other"]
+          },
+          "inventoryValue": {
+            "type": "string",
+            "description": "Value of inventory at location"
+          },
+          "inventoryPercentage": {
+            "type": "number",
+            "description": "Percentage of total inventory"
+          },
+          "capacityUtilization": {
+            "type": "string",
+            "description": "Utilization of location capacity"
+          },
+          "specialRequirements": {
+            "type": "array",
+            "description": "Special storage requirements",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "inventoryVisibility": {
+      "type": "object",
+      "description": "Tracking capabilities for inventory",
+      "properties": {
+        "visibilityLevel": {
+          "type": "string",
+          "description": "Overall visibility assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "trackingMethods": {
+          "type": "array",
+          "description": "Methods used for tracking",
+          "items": {
+            "type": "string"
+          }
+        },
+        "trackingTechnology": {
+          "type": "array",
+          "description": "Technologies supporting tracking",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataAccuracy": {
+          "type": "string",
+          "description": "Accuracy of inventory data"
+        },
+        "cycleCounting": {
+          "type": "object",
+          "properties": {
+            "countingMethod": {
+              "type": "string",
+              "description": "Method for cycle counting"
+            },
+            "countingFrequency": {
+              "type": "string",
+              "description": "Frequency of cycle counts"
+            },
+            "accuracyTarget": {
+              "type": "string",
+              "description": "Target for count accuracy"
+            }
+          }
+        },
+        "visibilityGaps": {
+          "type": "array",
+          "description": "Areas with limited visibility",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "stockoutRisk": {
+      "type": "object",
+      "description": "Risk of inventory depletion",
+      "properties": {
+        "overallRisk": {
+          "type": "string",
+          "description": "Overall stockout risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "serviceLevel": {
+          "type": "string",
+          "description": "Target service level percentage"
+        },
+        "actualServiceLevel": {
+          "type": "string",
+          "description": "Actual service level achieved"
+        },
+        "criticalItems": {
+          "type": "array",
+          "description": "Items with high stockout risk",
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemName": {
+                "type": "string",
+                "description": "Name of item"
+              },
+              "riskLevel": {
+                "type": "string",
+                "description": "Level of stockout risk",
+                "enum": ["low", "medium", "high", "very-high"]
+              },
+              "mitigationStrategy": {
+                "type": "string",
+                "description": "Approach to mitigate risk"
+              }
+            }
+          }
+        },
+        "stockoutHistory": {
+          "type": "string",
+          "description": "Historical stockout performance"
+        },
+        "stockoutImpact": {
+          "type": "string",
+          "description": "Business impact of stockouts"
+        }
+      }
+    },
+    "obsolescenceRisk": {
+      "type": "object",
+      "description": "Risk of inventory obsolescence",
+      "properties": {
+        "overallRisk": {
+          "type": "string",
+          "description": "Overall obsolescence risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "obsolescenceRate": {
+          "type": "string",
+          "description": "Historical obsolescence rate"
+        },
+        "atRiskItems": {
+          "type": "array",
+          "description": "Items at risk of obsolescence",
+          "items": {
+            "type": "object",
+            "properties": {
+              "itemName": {
+                "type": "string",
+                "description": "Name of item"
+              },
+              "riskLevel": {
+                "type": "string",
+                "description": "Level of obsolescence risk",
+                "enum": ["low", "medium", "high", "very-high"]
+              },
+              "mitigationStrategy": {
+                "type": "string",
+                "description": "Approach to mitigate risk"
+              }
+            }
+          }
+        },
+        "obsolescenceFactors": {
+          "type": "array",
+          "description": "Factors contributing to obsolescence",
+          "items": {
+            "type": "string"
+          }
+        },
+        "disposalProcess": {
+          "type": "string",
+          "description": "Process for handling obsolete inventory"
+        }
+      }
+    },
+    "inventoryOptimizationStrategy": {
+      "type": "object",
+      "description": "Approach to inventory improvement",
+      "properties": {
+        "optimizationObjectives": {
+          "type": "array",
+          "description": "Key objectives for optimization",
+          "items": {
+            "type": "string"
+          }
+        },
+        "optimizationMethods": {
+          "type": "array",
+          "description": "Methods used for optimization",
+          "items": {
+            "type": "string"
+          }
+        },
+        "majorInitiatives": {
+          "type": "array",
+          "description": "Major optimization initiatives",
+          "items": {
+            "type": "object",
+            "properties": {
+              "initiativeName": {
+                "type": "string",
+                "description": "Name of initiative"
+              },
+              "initiativeDescription": {
+                "type": "string",
+                "description": "Description of initiative"
+              },
+              "expectedBenefits": {
+                "type": "string",
+                "description": "Anticipated benefits"
+              },
+              "implementationStatus": {
+                "type": "string",
+                "description": "Current status",
+                "enum": ["planning", "implementing", "completed", "ongoing"]
+              }
+            }
+          }
+        },
+        "technologyEnablers": {
+          "type": "array",
+          "description": "Technologies supporting optimization",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "inventoryPerformanceMetrics": {
+      "type": "array",
+      "description": "Metrics for measuring inventory performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Description of what is measured"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current performance"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target performance"
+          },
+          "trend": {
+            "type": "string",
+            "description": "Performance trend",
+            "enum": ["improving", "stable", "declining", "fluctuating"]
+          },
+          "benchmarks": {
+            "type": "object",
+            "properties": {
+              "industryAverage": {
+                "type": "string",
+                "description": "Industry average performance"
+              },
+              "bestInClass": {
+                "type": "string",
+                "description": "Best-in-class performance"
+              }
+            }
+          }
+        }
+      }
+    },
+    "demandPlanning": {
+      "type": "object",
+      "description": "Approach to planning inventory based on demand",
+      "properties": {
+        "forecastingMethod": {
+          "type": "string",
+          "description": "Method used for demand forecasting"
+        },
+        "forecastAccuracy": {
+          "type": "string",
+          "description": "Historical forecast accuracy"
+        },
+        "forecastingHorizon": {
+          "type": "string",
+          "description": "Time horizon for forecasting"
+        },
+        "forecastingFrequency": {
+          "type": "string",
+          "description": "How often forecasts are updated"
+        },
+        "collaborativePlanning": {
+          "type": "string",
+          "description": "Collaborative planning approach"
+        },
+        "demandPatterns": {
+          "type": "string",
+          "description": "Observed patterns in demand"
+        }
+      }
+    },
+    "inventoryClassification": {
+      "type": "object",
+      "description": "Classification of inventory items",
+      "properties": {
+        "classificationMethod": {
+          "type": "string",
+          "description": "Method used for classification",
+          "enum": ["abc", "xyz", "abcxyz", "fsn", "ved", "other"]
+        },
+        "classificationDescription": {
+          "type": "string",
+          "description": "Description of classification method"
+        },
+        "categoryBreakdown": {
+          "type": "array",
+          "description": "Breakdown of inventory by classification",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of category"
+              },
+              "itemCount": {
+                "type": "integer",
+                "description": "Number of items in category"
+              },
+              "valuePercentage": {
+                "type": "number",
+                "description": "Percentage of total value"
+              },
+              "managementApproach": {
+                "type": "string",
+                "description": "How this category is managed"
+              }
+            }
+          }
+        }
+      }
+    },
+    "qualityManagement": {
+      "type": "object",
+      "description": "Quality management for inventory",
+      "properties": {
+        "inspectionProcess": {
+          "type": "string",
+          "description": "Process for quality inspection"
+        },
+        "defectRate": {
+          "type": "string",
+          "description": "Rate of quality defects"
+        },
+        "qualityStandards": {
+          "type": "array",
+          "description": "Standards for quality",
+          "items": {
+            "type": "string"
+          }
+        },
+        "quarantineProcess": {
+          "type": "string",
+          "description": "Process for handling non-conforming items"
+        },
+        "qualityImprovementInitiatives": {
+          "type": "array",
+          "description": "Initiatives to improve quality",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "inventoryGovernance": {
+      "type": "object",
+      "description": "Governance of inventory management",
+      "properties": {
+        "governanceStructure": {
+          "type": "string",
+          "description": "Structure for inventory governance"
+        },
+        "policyReviewProcess": {
+          "type": "string",
+          "description": "Process for reviewing policies"
+        },
+        "complianceMonitoring": {
+          "type": "string",
+          "description": "Monitoring of policy compliance"
+        },
+        "auditingApproach": {
+          "type": "string",
+          "description": "Approach to inventory auditing"
+        },
+        "decisionMakingAuthority": {
+          "type": "string",
+          "description": "Authority for inventory decisions"
+        }
+      }
+    }
+  }
+}
+
