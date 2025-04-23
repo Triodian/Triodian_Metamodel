@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Strategic Response Model",
-  "description": "Schema for defining strategic responses to triggers or intents, supported by rationale.",
+  "description": "Schema for defining strategic responses to triggers or strategic intents, supported by rationales and measured by performance indicators.",
   "definitions": {
     "strategicResponse": {
       "type": "object",
@@ -16,81 +16,152 @@
         },
         "responseType": {
           "type": "string",
-          "description": "The classification of the response, e.g., Policy Change, Initiative, etc."
+          "description": "The classification of the response",
+          "enum": [
+            "Policy_Change", "Capability_Development", "Initiative_Launch", 
+            "Process_Improvement", "Technology_Implementation", "Organizational_Change",
+            "Market_Entry", "Market_Exit", "Competitive_Response", "Product_Innovation", 
+            "Repositioning", "Market_Expansion", "Defensive_Action", "Partnership_Strategy", 
+            "Pricing_Strategy", "Channel_Strategy", "Cost_Optimization", "Investment_Strategy",
+            "Capital_Structure_Change", "Financial_Risk_Management", "Budget_Reallocation",
+            "Funding_Strategy", "Revenue_Enhancement", "Working_Capital_Management",
+            "Financial_Restructuring", "Risk_Prevention", "Risk_Mitigation", "Risk_Transfer",
+            "Risk_Acceptance", "Control_Enhancement", "Incident_Response", "Business_Continuity",
+            "Compliance_Program", "Risk_Governance", "Network_Redesign", "Supplier_Change",
+            "Inventory_Strategy", "Logistics_Optimization", "Technology_Implementation",
+            "Process_Improvement", "Risk_Mitigation", "Cost_Reduction", "Service_Enhancement",
+            "Sustainability_Initiative", "Customer_Experience_Initiative", "Customer_Retention_Program",
+            "Customer_Acquisition_Campaign", "Customer_Journey_Redesign", "Customer_Segment_Strategy",
+            "Customer_Insight_Application", "Customer_Technology_Implementation"
+          ]
         },
         "responseDescription": {
           "type": "string",
-          "description": "Detailed description of the strategic response"
+          "description": "Detailed description of the strategic response, its objectives, and scope"
         },
         "triggerReferences": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "List of trigger IDs linked to this response"
+          "description": "List of triggerIDs that initiated this strategic response"
         },
         "intentReferences": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "List of strategic intent IDs that initiated this response"
+          "description": "List of strategic intentIDs that initiated this response"
         },
         "rationaleReferences": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "List of rationale IDs linked to this response"
+          "description": "List of rationaleIDs providing justification for this response"
         },
         "performanceIndicatorReferences": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "List of linked performance indicator IDs linked to this response"
+          "description": "Metrics or KPIs that will be used to measure the success of the strategic response"
         },
         "affectedDomains": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "string",
+            "enum": [
+              "Strategy", "Capabilities", "Initiatives", "Policy", 
+              "Performance", "Information", "Value Stream", "Customer", 
+              "Market", "Finance", "Risk Management", "Supply Chain", "Organization"
+            ]
           },
-          "description": "List of affected business architecture domains"
+          "description": "Business architecture domains impacted by this response"
+        },
+        "impactedUnits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "orgUnitTitle": {
+                "type": "string",
+                "description": "Name of the organization unit"
+              },
+              "relationshipRole": {
+                "type": "string",
+                "enum": [
+                  "Owning unit", "Providing unit", "Consuming unit", 
+                  "Utilising unit", "Custodian unit", "Dependent unit", 
+                  "Supported unit", "Governing unit"
+                ],
+                "description": "Role the unit plays in relation to this response"
+              },
+              "relationshipStrength": {
+                "type": "integer",
+                "minimum": 1,
+                "maximum": 5,
+                "description": "Strength of the relationship on a scale from 1 (very weak) to 5 (very strong)"
+              }
+            },
+            "required": ["orgUnitTitle", "relationshipRole"]
+          },
+          "description": "Organization units impacted by this response and their roles"
         },
         "implementationPlan": {
           "type": "string",
-          "description": "Reference or summary of the implementation plan"
+          "description": "Reference or description of the plan outlining how the response will be executed"
         },
         "expectedOutcomes": {
           "type": "string",
-          "description": "Anticipated results from implementing the response"
+          "description": "Anticipated results or benefits from implementing the response"
         },
         "responsibleOrgUnits": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Organisation units responsible for execution"
+          "description": "Organization units accountable for executing the strategic response"
+        },
+        "startDate": {
+          "type": "string",
+          "format": "date",
+          "description": "The planned start date for implementing the strategic response"
+        },
+        "endDate": {
+          "type": "string",
+          "format": "date",
+          "description": "The planned completion date for the strategic response"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Planned", "In_Progress", "Completed", "Deferred", "Cancelled"],
+          "description": "The current status of the strategic response"
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date",
+          "description": "The date when the strategic response record was last updated"
         },
         "strategicThemes": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Array of strategic priorities this initiative supports"
+          "description": "Organizational strategic priorities this response supports"
         },
         "alignmentStrength": {
           "type": "integer",
           "minimum": 1,
           "maximum": 5,
-          "description": "Numeric rating (1-5) of alignment with strategy"
+          "description": "How closely the response aligns with organizational strategy (1-5)"
         },
         "adjacentInitiatives": {
           "type": "array",
           "items": {
             "type": "string"
           },
-          "description": "Related initiatives that complement this one"
+          "description": "Related initiatives that complement or support this response"
         },
         "strategicLevers": {
           "type": "array",
@@ -98,31 +169,407 @@
             "type": "string",
             "enum": ["Scale", "Scope", "Differentiation", "Innovation", "Efficiency", "Resilience", "Other"]
           },
-          "description": "Business mechanisms being utilized (e.g., scale, scope, differentiation)"
+          "description": "Business mechanisms being utilized to effect change"
         },
         "strategicHorizon": {
           "type": "string",
-          "enum": ["Horizon 1", "Horizon 2", "Horizon 3"],
-          "description": "Which strategic timeframe this addresses (Horizon 1/2/3)"
+          "enum": ["Horizon_1", "Horizon_2", "Horizon_3"],
+          "description": "Categorization of the strategic timeframe (H1: 0-18 months, H2: 18-36 months, H3: 36+ months)"
         },
-        "startDate": {
-          "type": "string",
-          "format": "date"
+        
+        /* Domain-specific extensions */
+        
+        "customerSegmentIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Customer segments this response targets (Customer domain)"
         },
-        "endDate": {
-          "type": "string",
-          "format": "date"
+        "customerOutcomes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcomeDescription": {
+                "type": "string",
+                "description": "Description of the customer outcome"
+              },
+              "targetValue": {
+                "type": "string",
+                "description": "Target value for this outcome"
+              }
+            },
+            "required": ["outcomeDescription"]
+          },
+          "description": "Specific customer outcomes resulting from this response (Customer domain)"
         },
-        "status": {
-          "type": "string",
-          "enum": ["Planned", "In Progress", "Completed"]
+        "customerExperienceChanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "journeyStageID": {
+                "type": "string",
+                "description": "ID of the customer journey stage affected"
+              },
+              "changeDescription": {
+                "type": "string",
+                "description": "Description of the change to the journey stage"
+              },
+              "expectedImpact": {
+                "type": "string",
+                "description": "Expected impact of the change"
+              }
+            },
+            "required": ["changeDescription"]
+          },
+          "description": "Specific changes to customer experience (Customer domain)"
         },
-        "lastUpdated": {
+        "customerFeedbackMechanism": {
           "type": "string",
-          "format": "date"
+          "description": "How customer feedback will be collected (Customer domain)"
+        },
+        
+        "marketIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Markets this response addresses (Market domain)"
+        },
+        "competitorIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Competitors this response addresses (Market domain)"
+        },
+        "competitiveAdvantage": {
+          "type": "object",
+          "properties": {
+            "advantageType": {
+              "type": "string",
+              "enum": ["cost", "differentiation", "focus", "innovation", "other"],
+              "description": "Type of competitive advantage created"
+            },
+            "description": {
+              "type": "string",
+              "description": "Description of the competitive advantage"
+            },
+            "sustainability": {
+              "type": "string",
+              "enum": ["short-term", "medium-term", "long-term"],
+              "description": "Expected duration of advantage"
+            }
+          },
+          "description": "Competitive advantage created or enhanced (Market domain)"
+        },
+        "marketPositionChanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "marketID": {
+                "type": "string",
+                "description": "ID of the market"
+              },
+              "changeDescription": {
+                "type": "string",
+                "description": "Description of market position change"
+              }
+            },
+            "required": ["changeDescription"]
+          },
+          "description": "Specific changes to market position (Market domain)"
+        },
+        "competitiveMonitoring": {
+          "type": "object",
+          "properties": {
+            "monitoringApproach": {
+              "type": "string",
+              "description": "Approach to monitoring competitive reactions"
+            },
+            "keyIndicators": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Key indicators being monitored"
+            }
+          },
+          "description": "How competitive reactions will be monitored (Market domain)"
+        },
+        
+        "financeIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Financial elements this response addresses (Finance domain)"
+        },
+        "financialOutcomes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcomeDescription": {
+                "type": "string",
+                "description": "Description of the financial outcome"
+              },
+              "targetValue": {
+                "type": "string",
+                "description": "Target value for this outcome"
+              },
+              "realizationTimeline": {
+                "type": "string",
+                "description": "Timeline for realizing this outcome"
+              }
+            },
+            "required": ["outcomeDescription"]
+          },
+          "description": "Specific financial outcomes resulting from this response (Finance domain)"
+        },
+        "financialResources": {
+          "type": "object",
+          "properties": {
+            "budgetRequired": {
+              "type": "number",
+              "description": "Budget amount required for this response"
+            },
+            "fundingSources": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sourceName": {
+                    "type": "string",
+                    "description": "Name of funding source"
+                  },
+                  "amount": {
+                    "type": "number",
+                    "description": "Amount from this source"
+                  },
+                  "status": {
+                    "type": "string",
+                    "enum": ["secured", "pending", "proposed"],
+                    "description": "Status of this funding"
+                  }
+                },
+                "required": ["sourceName"]
+              },
+              "description": "Sources of funding for this response"
+            }
+          },
+          "description": "Resources required for this response (Finance domain)"
+        },
+        "financialRiskAssessment": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "riskDescription": {
+                "type": "string",
+                "description": "Description of financial risk"
+              },
+              "potentialImpact": {
+                "type": "number",
+                "description": "Potential monetary impact"
+              },
+              "likelihood": {
+                "type": "string",
+                "description": "Likelihood of this risk"
+              },
+              "mitigationStrategy": {
+                "type": "string",
+                "description": "Strategy to mitigate this risk"
+              }
+            },
+            "required": ["riskDescription"]
+          },
+          "description": "Assessment of financial risks (Finance domain)"
+        },
+        "financialReviewMechanism": {
+          "type": "string",
+          "description": "How financial performance will be reviewed (Finance domain)"
+        },
+        
+        "riskIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Risk elements this response addresses (Risk Management domain)"
+        },
+        "implementedControls": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "controlName": {
+                "type": "string",
+                "description": "Name of the control"
+              },
+              "controlDescription": {
+                "type": "string",
+                "description": "Description of the control"
+              },
+              "controlType": {
+                "type": "string",
+                "enum": ["preventive", "detective", "corrective", "directive"],
+                "description": "Type of control"
+              },
+              "implementationStatus": {
+                "type": "string",
+                "enum": ["planned", "in-progress", "implemented", "verified"],
+                "description": "Status of control implementation"
+              }
+            },
+            "required": ["controlName", "controlDescription"]
+          },
+          "description": "Risk controls implemented by this response (Risk Management domain)"
+        },
+        "riskMonitoring": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "monitoringMethod": {
+                "type": "string",
+                "description": "Method for monitoring risk"
+              },
+              "keyIndicators": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Key indicators being monitored"
+              },
+              "frequency": {
+                "type": "string",
+                "description": "Frequency of monitoring"
+              }
+            },
+            "required": ["monitoringMethod"]
+          },
+          "description": "Ongoing risk monitoring approaches (Risk Management domain)"
+        },
+        "residualRiskAssessment": {
+          "type": "string",
+          "description": "Assessment of risk remaining after response (Risk Management domain)"
+        },
+        
+        "supplyChainIDs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supply chain elements this response addresses (Supply Chain domain)"
+        },
+        "supplyChainOutcomes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "outcomeDescription": {
+                "type": "string",
+                "description": "Description of the supply chain outcome"
+              },
+              "targetValue": {
+                "type": "string",
+                "description": "Target value for this outcome"
+              },
+              "measurementApproach": {
+                "type": "string",
+                "description": "How this outcome will be measured"
+              }
+            },
+            "required": ["outcomeDescription"]
+          },
+          "description": "Specific supply chain outcomes resulting from this response (Supply Chain domain)"
+        },
+        "supplyChainChanges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "changeType": {
+                "type": "string",
+                "enum": ["network", "process", "supplier", "inventory", "logistics", "technology"],
+                "description": "Type of supply chain change"
+              },
+              "changeDescription": {
+                "type": "string",
+                "description": "Description of the change"
+              },
+              "implementationApproach": {
+                "type": "string",
+                "description": "Approach to implementing this change"
+              }
+            },
+            "required": ["changeDescription"]
+          },
+          "description": "Specific changes to supply chain configuration (Supply Chain domain)"
+        },
+        "supplyChainRisks": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "riskDescription": {
+                "type": "string",
+                "description": "Description of supply chain risk"
+              },
+              "likelihood": {
+                "type": "string",
+                "enum": ["low", "moderate", "high", "very-high"],
+                "description": "Likelihood of this risk"
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["minor", "moderate", "significant", "severe"],
+                "description": "Impact if this risk materializes"
+              },
+              "mitigationStrategy": {
+                "type": "string",
+                "description": "Strategy to mitigate this risk"
+              }
+            },
+            "required": ["riskDescription"]
+          },
+          "description": "Risks related to the supply chain response (Supply Chain domain)"
+        },
+        "stakeholderEngagement": {
+          "type": "object",
+          "properties": {
+            "keyStakeholders": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "stakeholderName": {
+                    "type": "string",
+                    "description": "Name of stakeholder"
+                  },
+                  "stakeholderType": {
+                    "type": "string",
+                    "enum": ["supplier", "customer", "partner", "regulator", "internal"],
+                    "description": "Type of stakeholder"
+                  },
+                  "engagementApproach": {
+                    "type": "string",
+                    "description": "How this stakeholder will be engaged"
+                  }
+                },
+                "required": ["stakeholderName", "stakeholderType"]
+              },
+              "description": "Key stakeholders for this response"
+            }
+          },
+          "description": "Approach to engaging key stakeholders (Supply Chain domain)"
         }
       },
-      "required": ["responseID", "responseTitle", "responseType"]
+      "required": ["responseID", "responseTitle", "responseType", "responseDescription", "affectedDomains", "status"]
     },
     "strategicIntent": {
       "type": "object",
@@ -145,7 +592,10 @@
         },
         "opportunityType": {
           "type": "string",
-          "enum": ["Innovation", "Growth", "Efficiency", "Resilience", "Compliance", "Other"],
+          "enum": [
+            "Innovation", "Growth", "Efficiency", "Resilience", 
+            "Compliance", "Differentiation", "Sustainability", "Transformation"
+          ],
           "description": "Classification of opportunity type"
         },
         "targetTimeframe": {
@@ -154,17 +604,23 @@
         },
         "maturityLevel": {
           "type": "string",
-          "enum": ["Conceptual", "Emerging", "Established"],
+          "enum": [
+            "Conceptual", "Emerging", "Established", "Scaling", "Optimizing"
+          ],
           "description": "Assessment of organizational readiness"
         },
         "potentialValue": {
           "type": "string",
-          "enum": ["Low", "Medium", "High"],
+          "enum": [
+            "Low", "Medium", "High", "Transformative"
+          ],
           "description": "Estimated business value or impact"
         },
         "uncertaintyLevel": {
           "type": "string",
-          "enum": ["Low", "Medium", "High"],
+          "enum": [
+            "Low", "Medium", "High", "Experimental"
+          ],
           "description": "Assessment of associated risks and unknowns"
         },
         "responseReferences": {
@@ -204,7 +660,9 @@
         },
         "status": {
           "type": "string",
-          "enum": ["Proposed", "Active", "Completed", "Abandoned"],
+          "enum": [
+            "Proposed", "Active", "Completed", "Abandoned", "Transformed", "Superseded"
+          ],
           "description": "The current status of the strategic intent"
         },
         "lastUpdated": {
