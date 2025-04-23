@@ -1,0 +1,1305 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Innovation Domain Schema",
+  "description": "Schema for the Innovation Domain in the Orthogramic Metamodel, representing the structured approach to creating, developing, and implementing new ideas, products, services, processes, and business models.",
+  "type": "object",
+  "properties": {
+    "innovationID": {
+      "type": "string",
+      "description": "Unique identifier for the innovation element"
+    },
+    "title": {
+      "type": "string",
+      "description": "The name or title of the innovation"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the innovation entails"
+    },
+    "innovationType": {
+      "type": "string",
+      "description": "Classification of innovation approach",
+      "enum": [
+        "product",
+        "service",
+        "process",
+        "business-model",
+        "organizational",
+        "market",
+        "technology",
+        "customer-experience",
+        "supply-chain",
+        "financial",
+        "other"
+      ]
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The organization unit responsible for this innovation"
+    },
+    "orgUnitRoles": {
+      "type": "array",
+      "description": "Specific roles within the organization unit that manage this innovation",
+      "items": {
+        "type": "string"
+      }
+    },
+    "innovationScope": {
+      "type": "string",
+      "description": "Organizational breadth of the innovation",
+      "enum": [
+        "enterprise",
+        "business-unit",
+        "department",
+        "team",
+        "product-line",
+        "cross-functional",
+        "ecosystem"
+      ]
+    },
+    "innovationOrigin": {
+      "type": "object",
+      "description": "Source and genesis of the innovation",
+      "properties": {
+        "sources": {
+          "type": "array",
+          "description": "Sources that inspired or triggered the innovation",
+          "items": {
+            "type": "string",
+            "enum": [
+              "customer-insights",
+              "employee-idea",
+              "market-research",
+              "technology-exploration",
+              "competitive-analysis",
+              "regulatory-change",
+              "strategic-initiative",
+              "external-partnership",
+              "academic-research",
+              "supplier-collaboration",
+              "other"
+            ]
+          }
+        },
+        "primarySource": {
+          "type": "string",
+          "description": "The main source that initiated this innovation"
+        },
+        "originDetails": {
+          "type": "string",
+          "description": "Additional context about the innovation's origin"
+        }
+      },
+      "required": ["sources"]
+    },
+    "innovationStage": {
+      "type": "string",
+      "description": "Current development phase of the innovation",
+      "enum": [
+        "ideation",
+        "discovery",
+        "prototyping",
+        "validation",
+        "piloting",
+        "scaling",
+        "established",
+        "declining",
+        "discontinued"
+      ]
+    },
+    "innovationOwner": {
+      "type": "string",
+      "description": "Individual or role responsible for the innovation"
+    },
+    "strategicAlignment": {
+      "type": "object",
+      "description": "How innovation aligns with organization strategy",
+      "properties": {
+        "alignmentLevel": {
+          "type": "string",
+          "description": "Degree of alignment with strategic objectives",
+          "enum": ["low", "moderate", "high", "critical"]
+        },
+        "alignedObjectives": {
+          "type": "array",
+          "description": "Strategic objectives this innovation supports",
+          "items": {
+            "type": "object",
+            "properties": {
+              "objectiveID": {
+                "type": "string",
+                "description": "ID of the strategic objective"
+              },
+              "alignmentDescription": {
+                "type": "string",
+                "description": "How this innovation supports the objective"
+              }
+            },
+            "required": ["objectiveID"]
+          }
+        }
+      },
+      "required": ["alignmentLevel"]
+    },
+    "investmentLevel": {
+      "type": "object",
+      "description": "Resources committed to the innovation",
+      "properties": {
+        "annualBudget": {
+          "type": ["string", "number"],
+          "description": "Annual budget allocated to this innovation"
+        },
+        "resourceAllocation": {
+          "type": "array",
+          "description": "Breakdown of resource allocation",
+          "items": {
+            "type": "object",
+            "properties": {
+              "resourceType": {
+                "type": "string",
+                "description": "Type of resource allocated",
+                "enum": ["personnel", "technology", "research", "marketing", "facilities", "other"]
+              },
+              "allocation": {
+                "type": ["string", "number"],
+                "description": "Amount or description of allocation"
+              }
+            },
+            "required": ["resourceType", "allocation"]
+          }
+        },
+        "fundingSources": {
+          "type": "array",
+          "description": "Sources of funding for this innovation",
+          "items": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string",
+                "description": "Source of funding"
+              },
+              "percentage": {
+                "type": "number",
+                "description": "Percentage of total funding from this source"
+              }
+            },
+            "required": ["source"]
+          }
+        }
+      }
+    },
+    "riskProfile": {
+      "type": "object",
+      "description": "Risk characteristics of the innovation",
+      "properties": {
+        "overallRiskLevel": {
+          "type": "string",
+          "description": "Overall risk assessment",
+          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+        },
+        "keyRiskFactors": {
+          "type": "array",
+          "description": "Key risk factors",
+          "items": {
+            "type": "object",
+            "properties": {
+              "factorName": {
+                "type": "string",
+                "description": "Name of the risk factor"
+              },
+              "riskLevel": {
+                "type": "string",
+                "description": "Level of this specific risk"
+              },
+              "mitigationApproach": {
+                "type": "string",
+                "description": "Approach to mitigate this risk"
+              }
+            },
+            "required": ["factorName", "riskLevel"]
+          }
+        },
+        "riskManagementApproach": {
+          "type": "string",
+          "description": "Overall approach to managing innovation risks"
+        }
+      },
+      "required": ["overallRiskLevel"]
+    },
+    "expectedOutcomes": {
+      "type": "array",
+      "description": "Anticipated results from the innovation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "outcomeName": {
+            "type": "string",
+            "description": "Name of the outcome"
+          },
+          "outcomeMetric": {
+            "type": "string",
+            "description": "How the outcome will be measured"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target value for the outcome"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current value for the outcome"
+          }
+        },
+        "required": ["outcomeName", "outcomeMetric"]
+      }
+    },
+    "timeHorizon": {
+      "type": "object",
+      "description": "Expected timeline for innovation development",
+      "properties": {
+        "portfolioTimespan": {
+          "type": "string",
+          "description": "Overall timeframe for the innovation"
+        },
+        "keyMilestones": {
+          "type": "array",
+          "description": "Key milestones in the innovation timeline",
+          "items": {
+            "type": "object",
+            "properties": {
+              "milestone": {
+                "type": "string",
+                "description": "Description of the milestone"
+              },
+              "targetDate": {
+                "type": "string",
+                "description": "Target date for achieving the milestone"
+              }
+            },
+            "required": ["milestone"]
+          }
+        },
+        "reviewCycles": {
+          "type": "string",
+          "description": "Frequency and approach to reviewing progress"
+        }
+      }
+    },
+    "successMetrics": {
+      "type": "array",
+      "description": "Metrics used to measure innovation performance",
+      "items": {
+        "type": "object",
+        "properties": {
+          "metricName": {
+            "type": "string",
+            "description": "Name of the metric"
+          },
+          "metricDescription": {
+            "type": "string",
+            "description": "Detailed description of what the metric measures"
+          },
+          "currentValue": {
+            "type": "string",
+            "description": "Current value of the metric"
+          },
+          "targetValue": {
+            "type": "string",
+            "description": "Target value for the metric"
+          },
+          "measurementFrequency": {
+            "type": "string",
+            "description": "How often the metric is measured"
+          }
+        },
+        "required": ["metricName"]
+      }
+    },
+    "innovationBarriers": {
+      "type": "array",
+      "description": "Obstacles to innovation success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "barrierName": {
+            "type": "string",
+            "description": "Name of the barrier"
+          },
+          "barrierDescription": {
+            "type": "string",
+            "description": "Detailed description of the barrier"
+          },
+          "impactLevel": {
+            "type": "string",
+            "description": "Severity of impact on innovation",
+            "enum": ["minimal", "moderate", "significant", "severe", "critical"]
+          },
+          "mitigationApproach": {
+            "type": "string",
+            "description": "Approach to overcome this barrier"
+          }
+        },
+        "required": ["barrierName", "impactLevel"]
+      }
+    },
+    "innovationEnablers": {
+      "type": "array",
+      "description": "Factors that support innovation success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enablerName": {
+            "type": "string",
+            "description": "Name of the enabling factor"
+          },
+          "enablerDescription": {
+            "type": "string",
+            "description": "Detailed description of the enabler"
+          },
+          "contributionLevel": {
+            "type": "string",
+            "description": "Level of contribution to innovation success",
+            "enum": ["minimal", "moderate", "significant", "high", "critical"]
+          }
+        },
+        "required": ["enablerName", "contributionLevel"]
+      }
+    },
+    "governanceApproach": {
+      "type": "object",
+      "description": "How innovation is managed and governed",
+      "properties": {
+        "governanceStructure": {
+          "type": "string",
+          "description": "Organizational structure for governance"
+        },
+        "decisionRights": {
+          "type": "string",
+          "description": "How decisions about the innovation are made"
+        },
+        "reviewProcess": {
+          "type": "string",
+          "description": "Process for reviewing innovation progress"
+        },
+        "resourceAllocationProcess": {
+          "type": "string",
+          "description": "Process for allocating resources"
+        }
+      }
+    },
+    "intellectualPropertyStrategy": {
+      "type": "object",
+      "description": "Approach to managing IP from innovation",
+      "properties": {
+        "patentStrategy": {
+          "type": "string",
+          "description": "Approach to patents"
+        },
+        "tradeSecretStrategy": {
+          "type": "string",
+          "description": "Approach to trade secrets"
+        },
+        "openInnovationApproach": {
+          "type": "string",
+          "description": "Approach to open innovation"
+        },
+        "licensingStrategy": {
+          "type": "string",
+          "description": "Approach to licensing"
+        }
+      }
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Other domains, processes, or systems supporting this innovation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "dependencyType": {
+            "type": "string",
+            "description": "Type of dependency",
+            "enum": ["Critical", "Important", "Enabling", "Supportive", "Influenced"]
+          },
+          "domainType": {
+            "type": "string",
+            "description": "Type of domain",
+            "enum": ["Strategy", "Capability", "Service", "Information", "Policy", "Technology", "Organization", "Value Stream"]
+          },
+          "entityID": {
+            "type": "string",
+            "description": "ID of the entity this innovation depends on"
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the dependency"
+          }
+        },
+        "required": ["dependencyType", "domainType", "entityID"]
+      }
+    },
+    "relatedInnovations": {
+      "type": "array",
+      "description": "Other innovation elements with relationships to this one",
+      "items": {
+        "type": "object",
+        "properties": {
+          "innovationID": {
+            "type": "string",
+            "description": "ID of related innovation"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship",
+            "enum": ["enables", "depends-on", "complements", "competes-with", "accelerates", "synergistic", "supersedes", "enabling", "parallel"]
+          },
+          "relationshipStrength": {
+            "type": "integer",
+            "description": "Strength of relationship (1-5)",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the relationship"
+          }
+        },
+        "required": ["innovationID", "relationshipType"]
+      }
+    },
+    "strategicThemes": {
+      "type": "array",
+      "description": "Strategic themes this innovation supports",
+      "items": {
+        "type": "string"
+      }
+    },
+    "alignmentStrength": {
+      "type": "integer",
+      "description": "Rating (1-5) of how strongly this innovation aligns with organizational strategy",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "adjacentInitiatives": {
+      "type": "array",
+      "description": "Related initiatives that complement this innovation",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strategicLevers": {
+      "type": "array",
+      "description": "Business mechanisms being utilized",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Scale",
+          "Scope",
+          "Differentiation",
+          "Innovation",
+          "Efficiency",
+          "Resilience",
+          "Other"
+        ]
+      }
+    },
+    "strategicHorizon": {
+      "type": "string",
+      "description": "Strategic timeframe category",
+      "enum": [
+        "Horizon_1",
+        "Horizon_2",
+        "Horizon_3"
+      ]
+    }
+  },
+  "required": [
+    "innovationID",
+    "title",
+    "description",
+    "innovationType",
+    "orgUnitTitle",
+    "innovationStage",
+    "innovationOwner"
+  ],
+  "definitions": {
+    "innovationProcess": {
+      "type": "object",
+      "description": "A defined approach for innovation development",
+      "properties": {
+        "processID": {
+          "type": "string",
+          "description": "Unique identifier for the innovation process"
+        },
+        "processTitle": {
+          "type": "string",
+          "description": "Name of the specific innovation process"
+        },
+        "processDescription": {
+          "type": "string",
+          "description": "Detailed explanation of the innovation process"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit that owns this process"
+        },
+        "innovationID": {
+          "type": "string",
+          "description": "ID of the related innovation domain entity"
+        },
+        "processStages": {
+          "type": "array",
+          "description": "Sequential stages in the innovation process",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stageID": {
+                "type": "string",
+                "description": "Unique identifier for the stage"
+              },
+              "stageName": {
+                "type": "string",
+                "description": "Name of the stage"
+              },
+              "stageDescription": {
+                "type": "string",
+                "description": "Description of what happens in this stage"
+              }
+            },
+            "required": ["stageID", "stageName"]
+          }
+        },
+        "stageCriteria": {
+          "type": "array",
+          "description": "Criteria for progressing between stages",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stageID": {
+                "type": "string",
+                "description": "ID of the stage these criteria apply to"
+              },
+              "exitCriteria": {
+                "type": "string",
+                "description": "Requirements to exit this stage"
+              },
+              "evidenceRequired": {
+                "type": "string",
+                "description": "Evidence needed to demonstrate criteria met"
+              }
+            },
+            "required": ["stageID", "exitCriteria"]
+          }
+        },
+        "processOwner": {
+          "type": "string",
+          "description": "Individual or role responsible for the process"
+        },
+        "methodologies": {
+          "type": "array",
+          "description": "Innovation approaches used in the process",
+          "items": {
+            "type": "object",
+            "properties": {
+              "methodologyName": {
+                "type": "string",
+                "description": "Name of the methodology"
+              },
+              "methodologyDescription": {
+                "type": "string",
+                "description": "Description of the methodology"
+              }
+            },
+            "required": ["methodologyName"]
+          }
+        },
+        "toolsAndTechniques": {
+          "type": "array",
+          "description": "Tools that support the innovation process",
+          "items": {
+            "type": "object",
+            "properties": {
+              "toolName": {
+                "type": "string",
+                "description": "Name of the tool or technique"
+              },
+              "toolPurpose": {
+                "type": "string",
+                "description": "Purpose or function of the tool"
+              }
+            },
+            "required": ["toolName"]
+          }
+        },
+        "participantRoles": {
+          "type": "array",
+          "description": "People involved in the innovation process",
+          "items": {
+            "type": "object",
+            "properties": {
+              "roleName": {
+                "type": "string",
+                "description": "Name of the role"
+              },
+              "roleResponsibilities": {
+                "type": "string",
+                "description": "Responsibilities of this role"
+              }
+            },
+            "required": ["roleName"]
+          }
+        },
+        "timeframes": {
+          "type": "object",
+          "description": "Duration expectations for the process",
+          "properties": {
+            "endToEndDuration": {
+              "type": "string",
+              "description": "Expected total duration"
+            },
+            "stageTimeframes": {
+              "type": "array",
+              "description": "Duration of individual stages",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "stageID": {
+                    "type": "string",
+                    "description": "ID of stage"
+                  },
+                  "duration": {
+                    "type": "string",
+                    "description": "Expected duration"
+                  }
+                },
+                "required": ["stageID", "duration"]
+              }
+            }
+          }
+        },
+        "resourceRequirements": {
+          "type": "object",
+          "description": "Resources needed for the process",
+          "properties": {
+            "personnelRequirements": {
+              "type": "string",
+              "description": "Required personnel"
+            },
+            "budgetRequirements": {
+              "type": "string",
+              "description": "Required budget"
+            }
+          }
+        },
+        "successMetrics": {
+          "type": "array",
+          "description": "Measures of process effectiveness",
+          "items": {
+            "type": "object",
+            "properties": {
+              "metricName": {
+                "type": "string",
+                "description": "Name of the metric"
+              },
+              "targetValue": {
+                "type": "string",
+                "description": "Target value"
+              },
+              "currentValue": {
+                "type": "string",
+                "description": "Current value"
+              }
+            },
+            "required": ["metricName"]
+          }
+        },
+        "processFlexibility": {
+          "type": "object",
+          "description": "How adaptable the process is",
+          "properties": {
+            "flexibilityLevel": {
+              "type": "string",
+              "description": "Level of flexibility",
+              "enum": ["rigid", "low", "moderate", "high", "adaptive"]
+            },
+            "adaptationApproach": {
+              "type": "string",
+              "description": "How the process can be adapted"
+            }
+          }
+        }
+      },
+      "required": ["processID", "processTitle", "orgUnitTitle"]
+    },
+    "innovationPortfolio": {
+      "type": "object",
+      "description": "A structured collection of innovation initiatives",
+      "properties": {
+        "portfolioID": {
+          "type": "string",
+          "description": "Unique identifier for the innovation portfolio"
+        },
+        "portfolioTitle": {
+          "type": "string",
+          "description": "Name of the specific innovation portfolio"
+        },
+        "portfolioDescription": {
+          "type": "string",
+          "description": "Detailed explanation of the innovation portfolio"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit that manages this portfolio"
+        },
+        "innovationID": {
+          "type": "string",
+          "description": "ID of the related innovation domain entity"
+        },
+        "portfolioCategories": {
+          "type": "array",
+          "description": "Classification structure for innovations",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of the category"
+              },
+              "categoryDescription": {
+                "type": "string",
+                "description": "Description of this category"
+              }
+            },
+            "required": ["categoryName"]
+          }
+        },
+        "balancingCriteria": {
+          "type": "object",
+          "description": "Approach to portfolio balance",
+          "properties": {
+            "criteriaName": {
+              "type": "string",
+              "description": "Name of balancing criteria"
+            },
+            "criteriaDescription": {
+              "type": "string",
+              "description": "Description of how portfolio is balanced"
+            }
+          }
+        },
+        "investmentAllocation": {
+          "type": "array",
+          "description": "Resource distribution across portfolio",
+          "items": {
+            "type": "object",
+            "properties": {
+              "categoryName": {
+                "type": "string",
+                "description": "Name of category"
+              },
+              "allocationPercentage": {
+                "type": "number",
+                "description": "Percentage allocation"
+              },
+              "allocationAmount": {
+                "type": ["string", "number"],
+                "description": "Amount allocated"
+              }
+            },
+            "required": ["categoryName", "allocationPercentage"]
+          }
+        },
+        "riskDistribution": {
+          "type": "object",
+          "description": "Risk profile across portfolio",
+          "properties": {
+            "highRiskPercentage": {
+              "type": "number",
+              "description": "Percentage of high-risk innovations"
+            },
+            "moderateRiskPercentage": {
+              "type": "number",
+              "description": "Percentage of moderate-risk innovations"
+            },
+            "lowRiskPercentage": {
+              "type": "number",
+              "description": "Percentage of low-risk innovations"
+            }
+          }
+        },
+        "timeHorizonMix": {
+          "type": "object",
+          "description": "Timeline distribution in portfolio",
+          "properties": {
+            "shortTermPercentage": {
+              "type": "number",
+              "description": "Percentage of short-term innovations"
+            },
+            "mediumTermPercentage": {
+              "type": "number",
+              "description": "Percentage of medium-term innovations"
+            },
+            "longTermPercentage": {
+              "type": "number",
+              "description": "Percentage of long-term innovations"
+            }
+          }
+        },
+        "portfolioPerformance": {
+          "type": "object",
+          "description": "Success measures for the portfolio",
+          "properties": {
+            "overallROI": {
+              "type": "string",
+              "description": "Return on investment"
+            },
+            "successRate": {
+              "type": "string",
+              "description": "Percentage of successful innovations"
+            },
+            "timeToMarket": {
+              "type": "string",
+              "description": "Average time to market"
+            }
+          }
+        },
+        "portfolioGovernance": {
+          "type": "object",
+          "description": "Management approach for portfolio",
+          "properties": {
+            "governanceBody": {
+              "type": "string",
+              "description": "Entity governing the portfolio"
+            },
+            "meetingFrequency": {
+              "type": "string",
+              "description": "How often governance meets"
+            },
+            "decisionAuthority": {
+              "type": "string",
+              "description": "Who makes decisions"
+            }
+          }
+        },
+        "portfolioReview": {
+          "type": "object",
+          "description": "Review process for portfolio",
+          "properties": {
+            "reviewFrequency": {
+              "type": "string",
+              "description": "How often portfolio is reviewed"
+            },
+            "reviewProcess": {
+              "type": "string",
+              "description": "Process for reviewing the portfolio"
+            }
+          }
+        },
+        "portfolioAlignment": {
+          "type": "object",
+          "description": "Strategic alignment of portfolio",
+          "properties": {
+            "alignmentStrength": {
+              "type": "string",
+              "description": "Level of strategic alignment"
+            },
+            "alignmentAreas": {
+              "type": "array",
+              "description": "Strategic areas aligned with",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "portfolioSize": {
+          "type": "object",
+          "description": "Number of innovations in portfolio",
+          "properties": {
+            "totalInnovations": {
+              "type": "number",
+              "description": "Total innovations in portfolio"
+            },
+            "activeInnovations": {
+              "type": "number",
+              "description": "Number of active innovations"
+            },
+            "completedInnovations": {
+              "type": "number",
+              "description": "Number of completed innovations"
+            }
+          }
+        }
+      },
+      "required": ["portfolioID", "portfolioTitle", "orgUnitTitle"]
+    },
+    "ideaManagement": {
+      "type": "object",
+      "description": "A systematic approach for capturing and developing ideas",
+      "properties": {
+        "ideaSystemID": {
+          "type": "string",
+          "description": "Unique identifier for the idea management system"
+        },
+        "ideaSystemTitle": {
+          "type": "string",
+          "description": "Name of the specific idea management system"
+        },
+        "systemDescription": {
+          "type": "string",
+          "description": "Detailed explanation of the idea management system"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit that manages this system"
+        },
+        "innovationID": {
+          "type": "string",
+          "description": "ID of the related innovation domain entity"
+        },
+        "ideaSources": {
+          "type": "array",
+          "description": "Where ideas originate from",
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceName": {
+                "type": "string",
+                "description": "Name of idea source"
+              },
+              "sourcePercentage": {
+                "type": "number",
+                "description": "Percentage of ideas from this source"
+              }
+            },
+            "required": ["sourceName"]
+          }
+        },
+        "ideaSubmissionProcess": {
+          "type": "object",
+          "description": "How ideas enter the system",
+          "properties": {
+            "submissionChannels": {
+              "type": "array",
+              "description": "Methods for submitting ideas",
+              "items": {
+                "type": "string"
+              }
+            },
+            "submissionRequirements": {
+              "type": "string",
+              "description": "Required information for submissions"
+            }
+          }
+        },
+        "evaluationCriteria": {
+          "type": "array",
+          "description": "Assessment approach for ideas",
+          "items": {
+            "type": "object",
+            "properties": {
+              "criterionName": {
+                "type": "string",
+                "description": "Name of criterion"
+              },
+              "criterionWeight": {
+                "type": "number",
+                "description": "Importance weight"
+              }
+            },
+            "required": ["criterionName"]
+          }
+        },
+        "prioritizationMethod": {
+          "type": "object",
+          "description": "How ideas are ranked",
+          "properties": {
+            "methodName": {
+              "type": "string",
+              "description": "Name of prioritization method"
+            },
+            "methodDescription": {
+              "type": "string",
+              "description": "Description of prioritization approach"
+            }
+          }
+        },
+        "implementationPath": {
+          "type": "object",
+          "description": "Path to execution for ideas",
+          "properties": {
+            "pathDescription": {
+              "type": "string",
+              "description": "Description of implementation path"
+            },
+            "pathStages": {
+              "type": "array",
+              "description": "Stages in implementation path",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "participationMetrics": {
+          "type": "object",
+          "description": "Engagement measures for the system",
+          "properties": {
+            "participationRate": {
+              "type": "string",
+              "description": "Percentage of employees participating"
+            },
+            "submissionsPerMonth": {
+              "type": "string",
+              "description": "Average number of submissions"
+            },
+            "activeContributors": {
+              "type": "string",
+              "description": "Number of active contributors"
+            }
+          }
+        },
+        "successRateMetrics": {
+          "type": "object",
+          "description": "Performance measures for the system",
+          "properties": {
+            "ideaImplementationRate": {
+              "type": "string",
+              "description": "Percentage of ideas implemented"
+            },
+            "averageTimeToImplementation": {
+              "type": "string",
+              "description": "Average time to implement ideas"
+            },
+            "valueGenerated": {
+              "type": "string",
+              "description": "Value generated from implemented ideas"
+            }
+          }
+        },
+        "recognitionApproach": {
+          "type": "object",
+          "description": "How contributors are recognized",
+          "properties": {
+            "recognitionTypes": {
+              "type": "array",
+              "description": "Types of recognition provided",
+              "items": {
+                "type": "string"
+              }
+            },
+            "incentiveStructure": {
+              "type": "string",
+              "description": "Structure of incentives"
+            }
+          }
+        },
+        "feedbackMechanisms": {
+          "type": "object",
+          "description": "How feedback works",
+          "properties": {
+            "feedbackApproach": {
+              "type": "string",
+              "description": "Approach to providing feedback"
+            },
+            "feedbackTimeframe": {
+              "type": "string",
+              "description": "Timeline for feedback"
+            }
+          }
+        },
+        "systemOwner": {
+          "type": "string",
+          "description": "Responsible entity for the system"
+        }
+      },
+      "required": ["ideaSystemID", "ideaSystemTitle", "orgUnitTitle"]
+    },
+    "experimentationFramework": {
+      "type": "object",
+      "description": "A structured methodology for testing innovation concepts",
+      "properties": {
+        "frameworkID": {
+          "type": "string",
+          "description": "Unique identifier for the experimentation framework"
+        },
+        "frameworkTitle": {
+          "type": "string",
+          "description": "Name of the specific experimentation framework"
+        },
+        "frameworkDescription": {
+          "type": "string",
+          "description": "Detailed explanation of the experimentation framework"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit that manages this framework"
+        },
+        "innovationID": {
+          "type": "string",
+          "description": "ID of the related innovation domain entity"
+        },
+        "experimentTypes": {
+          "type": "array",
+          "description": "Categories of experiments supported",
+          "items": {
+            "type": "object",
+            "properties": {
+              "typeName": {
+                "type": "string",
+                "description": "Name of experiment type"
+              },
+              "typeDescription": {
+                "type": "string",
+                "description": "Description of experiment type"
+              }
+            },
+            "required": ["typeName"]
+          }
+        },
+        "experimentDesignApproach": {
+          "type": "object",
+          "description": "Design methodology for experiments",
+          "properties": {
+            "designMethodology": {
+              "type": "string",
+              "description": "Methodology name"
+            },
+            "standardFormat": {
+              "type": "string",
+              "description": "Standard format for experiments"
+            }
+          }
+        },
+        "experimentationRoles": {
+          "type": "array",
+          "description": "Who is involved in experimentation",
+          "items": {
+            "type": "object",
+            "properties": {
+              "roleName": {
+                "type": "string",
+                "description": "Name of role"
+              },
+              "roleResponsibilities": {
+                "type": "string",
+                "description": "Responsibilities of role"
+              }
+            },
+            "required": ["roleName"]
+          }
+        },
+        "resourceAllocation": {
+          "type": "object",
+          "description": "Resources committed to experimentation",
+          "properties": {
+            "averageExperimentBudget": {
+              "type": "string",
+              "description": "Average budget per experiment"
+            },
+            "timeAllocation": {
+              "type": "string",
+              "description": "Time allocated to experiments"
+            },
+            "resourceLimits": {
+              "type": "string",
+              "description": "Limits on resource use"
+            }
+          }
+        },
+        "riskManagementApproach": {
+          "type": "object",
+          "description": "Risk handling in experiments",
+          "properties": {
+            "riskProfile": {
+              "type": "string",
+              "description": "Overall risk approach"
+            },
+            "limitingFactors": {
+              "type": "string",
+              "description": "Factors limiting risk exposure"
+            }
+          }
+        },
+        "successCriteria": {
+          "type": "object",
+          "description": "Definition of successful experiments",
+          "properties": {
+            "successDefinition": {
+              "type": "string",
+              "description": "How success is defined"
+            },
+            "successMetrics": {
+              "type": "array",
+              "description": "Metrics for success",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "failureCriteria": {
+          "type": "object",
+          "description": "Definition of failed experiments",
+          "properties": {
+            "failureDefinition": {
+              "type": "string",
+              "description": "How failure is defined"
+            },
+            "failureMetrics": {
+              "type": "array",
+              "description": "Metrics for failure",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "learningCapture": {
+          "type": "object",
+          "description": "How insights are recorded",
+          "properties": {
+            "captureMechanism": {
+              "type": "string",
+              "description": "How learnings are captured"
+            },
+            "distributionMethod": {
+              "type": "string",
+              "description": "How learnings are shared"
+            }
+          }
+        },
+        "scalingProcess": {
+          "type": "object",
+          "description": "Path to scaling successful experiments",
+          "properties": {
+            "scalingCriteria": {
+              "type": "string",
+              "description": "Criteria for scaling"
+            },
+            "scalingStages": {
+              "type": "array",
+              "description": "Stages in scaling process",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "governanceModel": {
+          "type": "object",
+          "description": "Management approach for experiments",
+          "properties": {
+            "approvalProcess": {
+              "type": "string",
+              "description": "Process for approving experiments"
+            },
+            "reviewCycles": {
+              "type": "string",
+              "description": "Frequency of reviews"
+            }
+          }
+        }
+      },
+      "required": ["frameworkID", "frameworkTitle", "orgUnitTitle"]
+    }
+  }
+}
