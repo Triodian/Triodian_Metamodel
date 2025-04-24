@@ -1,3 +1,4 @@
+```json
 {
   "$schema": "http://json-schema.org/draft/2020-12/schema",
   "$id": "https://orthogramic.org/schema/trigger.json",
@@ -229,6 +230,180 @@
         }
       },
       "description": "Impact on risk profile"
+    },
+    
+    "/* Innovation Domain Properties */": {
+      "type": "null",
+      "description": "Comment separator for Innovation Domain properties"
+    },
+    "innovationID": {
+      "type": "string",
+      "description": "ID of the related innovation"
+    },
+    "innovationImpact": {
+      "type": "object",
+      "properties": {
+        "impactDescription": {
+          "type": "string",
+          "description": "Description of innovation impact"
+        },
+        "affectedCapabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Innovation capabilities affected"
+        },
+        "opportunityWindow": {
+          "type": "string",
+          "description": "Time window for competitive advantage"
+        },
+        "innovationPriorities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Innovation areas requiring focus"
+        }
+      },
+      "description": "Impact on innovation capabilities or projects"
+    },
+    
+    "/* Sustainability Domain Properties */": {
+      "type": "null",
+      "description": "Comment separator for Sustainability Domain properties"
+    },
+    "sustainabilityID": {
+      "type": "string",
+      "description": "ID of the related sustainability element"
+    },
+    "sustainabilityImpact": {
+      "type": "object",
+      "properties": {
+        "impactDescription": {
+          "type": "string",
+          "description": "Description of sustainability impact"
+        },
+        "affectedDimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sustainability dimensions affected"
+        },
+        "stakeholderExpectations": {
+          "type": "string",
+          "description": "Stakeholder expectations regarding sustainability"
+        },
+        "timelineImplications": {
+          "type": "string",
+          "description": "Impact on sustainability timelines"
+        }
+      },
+      "description": "Impact on sustainability efforts"
+    },
+    
+    "/* People Domain Properties */": {
+      "type": "null",
+      "description": "Comment separator for People Domain properties"
+    },
+    "peopleID": {
+      "type": "string",
+      "description": "ID of the related people element"
+    },
+    "peopleImpact": {
+      "type": "object",
+      "properties": {
+        "impactDescription": {
+          "type": "string",
+          "description": "Description of workforce impact"
+        },
+        "affectedRoles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Workforce roles affected"
+        },
+        "talentImplications": {
+          "type": "string",
+          "description": "Implications for talent management"
+        },
+        "culturalDimensions": {
+          "type": "string",
+          "description": "Impact on organizational culture"
+        }
+      },
+      "description": "Impact on workforce or culture"
+    },
+    
+    "/* Technology Domain Properties */": {
+      "type": "null",
+      "description": "Comment separator for Technology Domain properties"
+    },
+    "technologyID": {
+      "type": "string",
+      "description": "ID of the affected technology element"
+    },
+    "technologyImpact": {
+      "type": "object",
+      "properties": {
+        "impactDescription": {
+          "type": "string",
+          "description": "Description of technology impact"
+        },
+        "affectedSystems": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Systems affected"
+        },
+        "technicalDebt": {
+          "type": "string",
+          "description": "Implications for technical debt"
+        },
+        "architecturalImplications": {
+          "type": "string",
+          "description": "Impact on technical architecture"
+        }
+      },
+      "description": "Impact on technology systems"
+    },
+    
+    "/* Channel Domain Properties */": {
+      "type": "null",
+      "description": "Comment separator for Channel Domain properties"
+    },
+    "channelID": {
+      "type": "string",
+      "description": "ID of the related channel element"
+    },
+    "channelImpact": {
+      "type": "object",
+      "properties": {
+        "impactDescription": {
+          "type": "string",
+          "description": "Description of channel impact"
+        },
+        "affectedChannelTypes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Channel types affected"
+        },
+        "potentialLosses": {
+          "type": "string",
+          "description": "Potential channel capacity or revenue impact"
+        },
+        "affectedCustomerSegments": {
+          "type": "string",
+          "description": "Customer segments affected by channel impact"
+        }
+      },
+      "description": "Impact on distribution channels"
     }
   }
 }
+```
