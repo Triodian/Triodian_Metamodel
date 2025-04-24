@@ -51,7 +51,12 @@
           "Market",
           "Finance",
           "Risk_Management",
-          "Supply_Chain"
+          "Supply_Chain",
+          "Innovation",
+          "Sustainability",
+          "People",
+          "Technology",
+          "Channel"
         ]
       },
       "description": "Business architecture domains influenced or justified by this rationale"
@@ -98,7 +103,46 @@
         "Cost_Reduction",
         "Service_Improvement",
         "Capability_Development",
-        "Technology_Adoption"
+        "Technology_Adoption",
+        "Innovation_Advancement",
+        "Capability_Enhancement",
+        "Portfolio_Optimization",
+        "Experimentation_Need",
+        "Innovation_Culture",
+        "Technology_Adoption",
+        "Innovation_Process_Improvement",
+        "Sustainability_Compliance",
+        "Environmental_Stewardship",
+        "Social_Impact_Enhancement",
+        "Governance_Improvement",
+        "Climate_Risk_Mitigation",
+        "Stakeholder_Expectation_Management",
+        "Circular_Economy_Advancement",
+        "Resource_Efficiency_Improvement",
+        "Talent_Development",
+        "Culture_Enhancement",
+        "Knowledge_Management",
+        "Workforce_Optimization",
+        "Talent_Acquisition",
+        "Employee_Experience_Improvement",
+        "Leadership_Development",
+        "Organizational_Alignment",
+        "Technology_Refresh",
+        "Legacy_Modernization",
+        "Security_Enhancement",
+        "Technology_Integration",
+        "Technology_Standardization",
+        "Architecture_Transformation",
+        "Digital_Capability_Building",
+        "Technical_Debt_Reduction",
+        "Channel_Optimization",
+        "Channel_Expansion",
+        "Partner_Management",
+        "Distribution_Efficiency",
+        "Omnichannel_Integration",
+        "Channel_Conflict_Resolution",
+        "Digital_Channel_Development",
+        "Channel_Mix_Rebalancing"
       ],
       "description": "The justification type for this rationale"
     },
@@ -153,7 +197,8 @@
         "Inductive",
         "Customer_Needs_Based",
         "Journey_Friction_Based",
-        "Segment_Value_Based"
+        "Segment_Value_Based",
+        "Experience_Gap_Based"
       ],
       "description": "The logical structure of the rationale"
     },
@@ -197,7 +242,11 @@
         "Supplier_Feedback",
         "Customer_Requirements",
         "Technology_Evaluation",
-        "Compliance_Analysis"
+        "Compliance_Analysis",
+        "Sustainability_Insight",
+        "People_Insight",
+        "Experiment_Results",
+        "Prototype_Feedback"
       ],
       "description": "The foundation for the rationale"
     },
@@ -227,7 +276,23 @@
         "Customer_Acquisition_Value",
         "Customer_Growth_Value",
         "Brand_Loyalty_Value",
-        "Market_Share_Value"
+        "Market_Share_Value",
+        "Environmental_Value",
+        "Social_Value",
+        "Governance_Value",
+        "Talent_Value",
+        "Culture_Value",
+        "Knowledge_Value",
+        "Technical_Agility",
+        "System_Reliability",
+        "Security_Posture",
+        "Technical_Performance",
+        "Integration_Effectiveness",
+        "Technology_Cost_Efficiency",
+        "Digital_Experience",
+        "Channel_Reach_Value",
+        "Distribution_Efficiency_Value",
+        "Partner_Network_Value"
       ],
       "description": "The nature of value creation or preservation"
     },
@@ -567,6 +632,227 @@
         }
       },
       "description": "Assessment of supply chain implications"
+    },
+
+    /* Innovation Domain Extensions */
+    "innovationIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Innovation elements this rationale relates to"
+    },
+    "innovationInsightSource": {
+      "type": "string",
+      "enum": [
+        "Experiment_Results",
+        "Innovation_Metrics",
+        "Prototype_Feedback",
+        "Idea_Management_System",
+        "Innovation_Assessment",
+        "Technology_Scouting",
+        "Portfolio_Analysis"
+      ],
+      "description": "Source of innovation insights supporting this rationale"
+    },
+    "innovationImpactAssessment": {
+      "type": "object",
+      "properties": {
+        "impactType": {
+          "type": "string",
+          "enum": ["acceleration", "redirection", "termination", "expansion", "contraction"],
+          "description": "Type of innovation impact"
+        },
+        "affectedCapabilities": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Innovation capabilities affected"
+        },
+        "timeframeChange": {
+          "type": "string",
+          "description": "Impact on innovation timelines"
+        }
+      },
+      "description": "Assessment of innovation implications"
+    },
+
+    /* Sustainability Domain Extensions */
+    "sustainabilityIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Sustainability elements this rationale relates to"
+    },
+    "sustainabilityInsightSource": {
+      "type": "string",
+      "enum": [
+        "ESG_Assessment",
+        "Climate_Scenario_Analysis",
+        "Stakeholder_Materiality_Assessment",
+        "Sustainability_Reporting",
+        "External_ESG_Rating",
+        "Environmental_Impact_Analysis",
+        "Social_Impact_Assessment"
+      ],
+      "description": "Source of sustainability insights supporting this rationale"
+    },
+    "sustainabilityImpactAssessment": {
+      "type": "object",
+      "properties": {
+        "impactDimensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Sustainability dimensions affected"
+        },
+        "stakeholderExpectations": {
+          "type": "string",
+          "description": "Expectations from stakeholders"
+        },
+        "complianceRelevance": {
+          "type": "string",
+          "description": "Relevance to sustainability compliance requirements"
+        }
+      },
+      "description": "Assessment of sustainability implications"
+    },
+
+    /* People Domain Extensions */
+    "peopleIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "People elements this rationale relates to"
+    },
+    "peopleInsightSource": {
+      "type": "string",
+      "enum": [
+        "Engagement_Assessment",
+        "Skills_Analysis",
+        "Cultural_Assessment",
+        "Competency_Evaluation",
+        "Knowledge_Audit",
+        "Exit_Interviews",
+        "Talent_Analytics",
+        "Leadership_Assessment"
+      ],
+      "description": "Source of people insights supporting this rationale"
+    },
+    "peopleImpactAssessment": {
+      "type": "object",
+      "properties": {
+        "impactAreas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "People areas impacted"
+        },
+        "affectedRoles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Specific roles affected"
+        },
+        "timeframeForChange": {
+          "type": "string",
+          "description": "Timeframe for people changes"
+        }
+      },
+      "description": "Assessment of workforce implications"
+    },
+
+    /* Technology Domain Extensions */
+    "technologyIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Technology elements this rationale relates to"
+    },
+    "technologyInsightSource": {
+      "type": "string",
+      "enum": [
+        "Technology_Assessment",
+        "Security_Monitoring",
+        "Vendor_Notification",
+        "Technical_Debt_Analysis",
+        "Architecture_Review",
+        "Technology_Trend_Analysis",
+        "System_Performance_Monitoring"
+      ],
+      "description": "Source of technology insights supporting this rationale"
+    },
+    "technologyImpactAssessment": {
+      "type": "object",
+      "properties": {
+        "impactAreas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Technology areas impacted"
+        },
+        "technicalDebt": {
+          "type": "string",
+          "description": "Impact on technical debt"
+        },
+        "timeframeForImplementation": {
+          "type": "string",
+          "description": "Timeframe for technology implementation"
+        }
+      },
+      "description": "Assessment of technology implications"
+    },
+
+    /* Channel Domain Extensions */
+    "channelIDs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Channel elements this rationale relates to"
+    },
+    "channelInsightSource": {
+      "type": "string",
+      "enum": [
+        "Channel_Performance_Analysis",
+        "Partner_Feedback",
+        "Distribution_Network_Assessment",
+        "Customer_Channel_Preference",
+        "Competitive_Channel_Analysis",
+        "Channel_Cost_Analysis",
+        "Omnichannel_Integration_Assessment"
+      ],
+      "description": "Source of channel insights supporting this rationale"
+    },
+    "channelImpactAssessment": {
+      "type": "object",
+      "properties": {
+        "impactAreas": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Channel areas impacted"
+        },
+        "customerJourneyEffects": {
+          "type": "string",
+          "description": "Effects on customer journey"
+        },
+        "implementationComplexity": {
+          "type": "string",
+          "enum": ["Low", "Medium", "High"],
+          "description": "Complexity of implementation"
+        }
+      },
+      "description": "Assessment of channel implications"
     }
   }
 }
