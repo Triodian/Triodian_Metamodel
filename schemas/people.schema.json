@@ -1256,6 +1256,28 @@
           }
         }
       }
+    },
+    "crossDomainRelationships": {
+      "type": "array",
+      "description": "Cross-domain relationships linking market domain to other domains based on defined relationship types",
+      "items": {
+        "type": "object",
+        "required": ["domain", "relationshipType", "description"],
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "Name of the related domain (e.g., Strategy, Capability, Value Stream, etc.)"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship (e.g., informs, targets, supports, etc.)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Narrative explaining the nature of the relationship"
+          }
+        }
+      }
     }
   }
 }
