@@ -273,78 +273,28 @@
       }
     },
     "crossDomainRelationships": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["from", "to", "type"],
-        "properties": {
-          "from": {
-            "type": "string",
-            "pattern": "^(ce|rs|bud|fkpi):[a-z0-9-]+$"
-          },
-          "to": {
-            "type": "string",
-            "pattern": "^(pr|rd|cap|pd|svc|tech|platform|infra|app|as|team|role|skill|partner|unit|mkt|cs|vp|camp|ch|proc|proj|port|risk|ctrl|dec|kpi|metric|obj|strat|init|pol|ctrl|audit|assess|iss|incident|sc|threat|vuln|mon|qm|qs|qi|qd|qp):[a-z0-9-]+$"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "funds",
-              "supports",
-              "impacts",
-              "drives",
-              "enables",
-              "allocates_to",
-              "measures",
-              "validates",
-              "influences",
-              "determined_by",
-              "constrains",
-              "optimizes",
-              "informs",
-              "requires",
-              "depends_on",
-              "monitors",
-              "analyzes",
-              "reports_to",
-              "aligned_with",
-              "governed_by",
-              "controlled_by",
-              "secured_by",
-              "assessed_by",
-              "tracks",
-              "derives_from",
-              "contributes_to",
-              "relates_to",
-              "affects"
-            ]
-          },
-          "metadata": {
-            "type": "object",
-            "properties": {
-              "strength": {
-                "type": "string",
-                "enum": ["strong", "moderate", "weak"]
-              },
-              "confidence": {
-                "type": "string",
-                "enum": ["high", "medium", "low"]
-              },
-              "impact": {
-                "type": "string",
-                "enum": ["critical", "high", "medium", "low"]
-              },
-              "direction": {
-                "type": "string",
-                "enum": ["unidirectional", "bidirectional"]
-              },
-              "description": {
-                "type": "string",
-                "maxLength": 500
-              }
-            }
-          }
-        }
+  "type": "array",
+  "description": "Cross-domain relationships linking risk management to other domains based on defined relationship types",
+  "items": {
+    "type": "object",
+    "required": ["domain", "relationshipType", "description"],
+    "properties": {
+      "domain": {
+        "type": "string",
+        "description": "Name of the related domain (e.g., Strategy, Capability, Value Stream, etc.)"
+      },
+      "relationshipType": {
+        "type": "string",
+        "description": "Type of relationship (e.g., informs, mitigates, protects, governs, defines controls, uses, engages, monitors, operates within)"
+      },
+      "description": {
+        "type": "string",
+        "description": "Narrative explaining the nature of the relationship"
+      }
+    }
+  }
+}
+
       }
     }
   }
