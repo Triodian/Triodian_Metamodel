@@ -273,28 +273,49 @@
       }
     },
     "crossDomainRelationships": {
-  "type": "array",
-  "description": "Cross-domain relationships linking risk management to other domains based on defined relationship types",
-  "items": {
-    "type": "object",
-    "required": ["domain", "relationshipType", "description"],
-    "properties": {
-      "domain": {
-        "type": "string",
-        "description": "Name of the related domain (e.g., Strategy, Capability, Value Stream, etc.)"
-      },
-      "relationshipType": {
-        "type": "string",
-        "description": "Type of relationship (e.g., informs, mitigates, protects, governs, defines controls, uses, engages, monitors, operates within)"
-      },
-      "description": {
-        "type": "string",
-        "description": "Narrative explaining the nature of the relationship"
-      }
-    }
-  }
-}
-
+      "type": "array",
+      "description": "Cross-domain relationships linking finance to other domains",
+      "items": {
+        "type": "object",
+        "required": ["domain", "relationshipType", "description"],
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "Name of the related domain (e.g., Strategy, Capability, Value Stream, etc.)"
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Type of relationship",
+            "enum": [
+              "funds",
+              "budgets_for",
+              "measures_value_of",
+              "quantifies",
+              "allocates_to",
+              "tracks_spend_for",
+              "reports_on",
+              "forecasts_for",
+              "analyzes_cost_of"
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Narrative explaining the nature of the relationship"
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "priority": {
+                "type": "string",
+                "enum": ["high", "medium", "low"]
+              },
+              "impact": {
+                "type": "string",
+                "enum": ["strategic", "operational", "tactical"]
+              }
+            }
+          }
+        }
       }
     }
   }
