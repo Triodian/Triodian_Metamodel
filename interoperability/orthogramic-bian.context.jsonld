@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "@vocab": "http://orthogramic.org/ontology#",
+    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md
+",
+
+    "bian": "https://bian.org/ontology#",
+    "schema": "http://schema.org/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "dcterms": "http://purl.org/dc/terms/",
+
+    "title": "schema:name",
+    "description": "schema:description",
+    "purpose": "bian:FunctionalPurpose",
+    "owner": "schema:accountablePerson",
+    "orgUnitTitle": "schema:department",
+    
+    "capability": "bian:BusinessCapability",
+    "capabilityFunction": "bian:FunctionalComponent",
+    "capabilityComponent": "bian:CapabilityComponent",
+    "capabilityProcess": "bian:ProcessComponent",
+
+    "inputs": "bian:InputSpecification",
+    "outputs": "bian:OutputSpecification",
+    "processes": "bian:ProcessSpecification",
+    "performanceIndicators": "bian:PerformanceIndicator",
+    "dependencies": "bian:Dependency",
+    "complianceAndStandards": "bian:ComplianceGuideline",
+    "strategicAlignment": "bian:StrategicGoalAlignment",
+
+    "cost": "schema:cost",
+    "risks": "bian:Risk",
+    "toolsAndTechnologies": "bian:SupportingTool",
+    "improvementOpportunities": "bian:EnhancementOpportunity",
+
+    "stakeholder": "foaf:Agent",
+    "valueStream": "bian:ValueStream",
+    "service": "bian:ServiceDomain",
+    "policy": "bian:PolicyRule",
+    "initiative": "bian:InitiativeProgram",
+    "performance": "bian:PerformanceAssessment",
+
+    "trigger": "bian:TriggerEvent",
+    "rationale": "bian:RationaleForChange",
+    "strategicResponse": "bian:ResponseStrategy"
+  }
+}
