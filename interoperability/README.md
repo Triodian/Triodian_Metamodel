@@ -97,8 +97,3 @@ To apply a context, reference the appropriate `.context.jsonld` file in your JSO
     "sap:BusinessCapability": "Customer Relationship Management"
   }
 }
-
-
-## Attribution
-
-This ontology mapping is published under the **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)** licence. It is intended for reuse, extension, and implementation in open and enterprise environments.
