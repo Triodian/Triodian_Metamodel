@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "orth": "https://orthogramic.org/schema/",
+    "sap": "https://sap.com/enterprise-architecture/",
+
+    "Strategy": {
+      "@id": "orth:Strategy_Domain",
+      "@type": "@id",
+      "sap:StrategicObjective": "sap:StrategicGoal"
+    },
+    "Capabilities": {
+      "@id": "orth:Capabilities_Domain",
+      "@type": "@id",
+      "sap:BusinessCapability": "sap:Capability"
+    },
+    "ValueStream": {
+      "@id": "orth:ValueStream_Domain",
+      "@type": "@id",
+      "sap:ValueStream": "sap:BusinessProcessSegment"
+    },
+    "Policy": {
+      "@id": "orth:Policy_Domain",
+      "@type": "@id",
+      "sap:Policy": "sap:GovernancePrinciple"
+    },
+    "Organization": {
+      "@id": "orth:Organization_Domain",
+      "@type": "@id",
+      "sap:OrgUnit": "sap:OrganizationalUnit"
+    },
+    "Initiatives": {
+      "@id": "orth:Initiatives_Domain",
+      "@type": "@id",
+      "sap:Initiative": "sap:ChangeInitiative"
+    },
+    "Information": {
+      "@id": "orth:Information_Domain",
+      "@type": "@id",
+      "sap:DataEntity": "sap:InformationObject"
+    },
+    "Products": {
+      "@id": "orth:Products_Domain",
+      "@type": "@id",
+      "sap:Product": "sap:ServiceOrProduct"
+    },
+    "Services": {
+      "@id": "orth:Services_Domain",
+      "@type": "@id",
+      "sap:Service": "sap:BusinessService"
+    },
+    "Stakeholders": {
+      "@id": "orth:Stakeholders_Domain",
+      "@type": "@id",
+      "sap:Stakeholder": "sap:BusinessRole"
+    },
+    "Performance": {
+      "@id": "orth:Performance_Domain",
+      "@type": "@id",
+      "sap:KPI": "sap:PerformanceIndicator"
+    }
+  }
+}
