@@ -2,7 +2,7 @@
   "@context": {
     "orth": "https://orthogramic.org/schema/",
     "sap": "https://sap.com/enterprise-architecture/",
-    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md
+    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md",
 
     "Strategy": {
       "@id": "orth:Strategy_Domain",
