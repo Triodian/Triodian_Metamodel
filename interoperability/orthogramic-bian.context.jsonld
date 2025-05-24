@@ -1,8 +1,7 @@
 {
   "@context": {
     "@vocab": "http://orthogramic.org/ontology#",
-    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md
-",
+    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md",
 
     "bian": "https://bian.org/ontology#",
     "schema": "http://schema.org/",
