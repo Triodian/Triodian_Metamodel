@@ -1,55 +1,103 @@
-# Orthogramic Metamodel – JSON-LD Ontology Summary
+# Interoperability
 
-This document defines the structured, schema-based representation of business architecture domains used by **Orthogramic**, with mappings designed for semantic interoperability with external frameworks including **BIAN**, **TOGAF**, and **schema.org**.
+This directory contains semantic mapping resources to enable interoperability between the Orthogramic Metamodel and other enterprise architecture and industry-standard frameworks.
 
-## Overview
+Each mapping defines a JSON-LD `@context` file to help align terminology and structure for integration, transformation, and knowledge graph construction.
 
-* **Format**: JSON-LD
-* **Purpose**: Enable semantic APIs, business architecture alignment, and integration with banking and enterprise models
-* **Compatibility**: BIAN, schema.org, FOAF, ArchiMate
-* **Version**: 1.0.0
-* **License**: Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)
-* **Context URI**: https://orthogramic.org/context/orthogramic-bian.jsonld
+---
 
-## Domains
+## Available mappings
 
-### Capabilities
-Defines what an organisation is able to do, independent of how it is done. Serves as the bridge between strategy and operations. **Mapped to**: `bian:BusinessCapability`
+| Framework                             | Context file                                  | Description                                                                 |
+|---------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------|
+| BIAN (Banking Industry Architecture Network) | [orthogramic-bian.context.jsonld](orthogramic-bian.context.jsonld) | Maps BIAN service domains to Orthogramic domains                            |
+| SAP Enterprise Architecture Framework | [orthogramic-sap.context.jsonld](orthogramic-sap.context.jsonld)   | Maps SAP EA concepts to Orthogramic Metamodel domains                       |
 
-### Services
-Represents business or technical offerings delivered to customers, internal stakeholders, or partner systems. **Mapped to**: `bian:ServiceDomain`
+---
 
-### Stakeholders
-Describes people, groups, or institutions that influence or are influenced by the organisation. **Mapped to**: `foaf:Agent`
+## BIAN mapping
 
-### Value Streams
-Models the stages of value creation — showing how value flows from initiation to outcome. **Mapped to**: `bian:ValueStream`
+### Overview
+- **Format:** JSON-LD  
+- **Purpose:** Enable semantic APIs, business architecture alignment, and integration with banking and enterprise models  
+- **Compatibility:** BIAN, schema.org, FOAF, ArchiMate  
+- **Version:** 1.0.0  
+- **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+- **Context URI:** https://orthogramic.org/context/orthogramic-bian.jsonld  
 
-### Initiatives
-Captures programs, projects, or major efforts that enable change and implement strategy. **Mapped to**: `bian:InitiativeProgram`
+### Domains
+- `ServiceDomain` → `Capabilities`, `Services`, `Information`, `Products`
+- `FunctionalPattern` → supports structural analysis of business functions
+- `BusinessArea` → maps to Orthogramic `Organization` or `CapabilityGroup`
 
-### Policy
-Describes regulatory obligations, internal controls, and formal decision-making rules. **Mapped to**: `bian:PolicyRule`
-
-### Information
-Captures data entities, structures, and custodianship aligned with business capabilities and governance. **Mapped to**: `schema:Dataset` (complemented by BIAN data specification constructs)
-
-### Performance
-Measures outcomes and progress via KPIs and metrics linked to strategic objectives. **Mapped to**: `bian:PerformanceAssessment`, `bian:PerformanceIndicator`
+### Inter-domain and cross-domain relationships
+- Service domains reused across capability groups
+- Stakeholder-to-service and service-to-process interactions
+- Support for mapping regulatory, operational, and functional boundaries
 
 ### Strategic Response Model (SRM)
-Links **Triggers**, **Rationales**, and **Strategic Responses** across domains to support dynamic alignment and decision-making. **Mapped to**:
-* `bian:TriggerEvent`
-* `bian:RationaleForChange`
-* `bian:ResponseStrategy`
+- Aligns BIAN domains with strategic objectives and initiatives
+- Enables use of BIAN in capability uplift, risk management, and service rationalisation
+- Facilitates transformation roadmap alignment with performance indicators
 
-## Use in Semantic APIs
+### Use in Semantic APIs
+BIAN’s published RESTful APIs can be semantically annotated using this context to:
+- Auto-generate business architecture metadata
+- Link banking microservices to capabilities and value streams
+- Enable capability maturity analysis via API introspection tools
 
-This metamodel enables:
-* Federated querying of architecture data
-* Business-aligned API responses
-* Linked data representations of capability maps, governance models, and change strategies
-* Interoperability between banking systems (via BIAN) and enterprise architecture platforms
+---
+
+## SAP Enterprise Architecture Framework mapping
+
+### Overview
+- **Format:** JSON-LD  
+- **Purpose:** Enable semantic APIs, business architecture alignment, and integration with enterprise architecture platforms  
+- **Compatibility:** SAP EA Framework, schema.org, FOAF, ArchiMate  
+- **Version:** 1.0.0  
+- **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+- **Context URI:** https://orthogramic.org/context/orthogramic-sap.jsonld  
+
+### Domains
+- `StrategicGoal` → `Strategy`
+- `BusinessCapability` → `Capabilities`
+- `BusinessProcessSegment` → `ValueStream`
+- `GovernancePrinciple` → `Policy`
+- `OrganizationalUnit` → `Organization`
+- `ChangeInitiative` → `Initiatives`
+- `InformationObject` → `Information`
+- `ServiceOrProduct` → `Products`, `Services`
+- `BusinessRole` → `Stakeholders`
+- `PerformanceIndicator` → `Performance`
+
+### Inter-domain and cross-domain relationships
+- Capabilities → Value Streams → Initiatives
+- Organisational accountability linked to business units
+- Strategic goals tied to KPIs and services via policy and capability chains
+
+### Strategic Response Model (SRM)
+- Brings structure to SAP EA views of strategic execution
+- Maps initiative outcomes to performance and policy domains
+- Enables analysis of alignment gaps and prioritisation of capability uplift
+
+### Use in Semantic APIs
+_(To be populated)_  
+Semantic enrichment of SAP EA data models is possible, but API-level interoperability depends on specific SAP tools (e.g. Enterprise Architecture Designer) and their export options. Use of this context in knowledge graph construction and alignment verification is supported.
+
+---
+
+## Usage
+
+To apply a context, reference the appropriate `.context.jsonld` file in your JSON-LD document. For example:
+
+```json
+{
+  "@context": "https://raw.githubusercontent.com/Orthogramic/Orthogramic_Metamodel/main/interoperability/orthogramic-sap.context.jsonld",
+  "Capabilities": {
+    "sap:BusinessCapability": "Customer Relationship Management"
+  }
+}
+
 
 ## Attribution
 
