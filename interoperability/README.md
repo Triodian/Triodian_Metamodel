@@ -8,10 +8,11 @@ Each mapping defines a JSON-LD `@context` file to help align terminology and str
 
 ## Available mappings
 
-| Framework                             | Context file                                  | Description                                                                 |
-|---------------------------------------|-----------------------------------------------|-----------------------------------------------------------------------------|
+| Framework                             | Context file                                        | Description                                                                 |
+|---------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------|
 | BIAN (Banking Industry Architecture Network) | [orthogramic-bian.context.jsonld](orthogramic-bian.context.jsonld) | Maps BIAN service domains to Orthogramic domains                            |
 | SAP Enterprise Architecture Framework | [orthogramic-sap.context.jsonld](orthogramic-sap.context.jsonld)   | Maps SAP EA concepts to Orthogramic Metamodel domains                       |
+| FIBO (Financial Industry Business Ontology) | [orthogramic-fibo.context.jsonld](orthogramic-fibo.context.jsonld) | Aligns Orthogramic properties with formalised financial and regulatory semantics |
 
 ---
 
@@ -97,3 +98,23 @@ To apply a context, reference the appropriate `.context.jsonld` file in your JSO
     "sap:BusinessCapability": "Customer Relationship Management"
   }
 }
+
+---
+
+### FIBO (Financial Industry Business Ontology) interoperability
+
+The Orthogramic Metamodel now includes schema-level mappings to the Financial Industry Business Ontology (FIBO), enabling integration with regulatory, financial, and compliance-focused enterprise data ecosystems. These mappings align core Orthogramic business architecture properties—such as `performanceIndicators`, `orgUnitTitle`, `strategicAlignment`, and `stakeholders`—to FIBO-standard properties used in semantic financial models.
+
+#### Overview  
+**Format:** JSON-LD  
+**Purpose:** Support semantic APIs, enterprise graph alignment, and regulatory interoperability in financial services  
+**Compatibility:** FIBO, Schema.org, FOAF, ArchiMate  
+**Version:** 1.0.0  
+**License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+**Context URI:** [orthogramic-fibo.context.jsonld](https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/interoperability/orthogramic-fibo.context.jsonld)
+
+#### Use cases  
+- Integration with financial knowledge graphs and regulatory taxonomies  
+- Enhanced traceability of strategic and operational alignment to financial KPIs  
+- Cross-domain reasoning and compliance reporting using shared semantics
+
