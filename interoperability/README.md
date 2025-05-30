@@ -98,6 +98,7 @@ To apply a context, reference the appropriate `.context.jsonld` file in your JSO
     "sap:BusinessCapability": "Customer Relationship Management"
   }
 }
+```
 
 ---
 
