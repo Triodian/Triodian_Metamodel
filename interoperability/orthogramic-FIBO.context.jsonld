@@ -1,0 +1,624 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dct": "http://purl.org/dc/terms/  ",
+    "fibo-be": "https://spec.edmcouncil.org/fibo/BE/  ",
+    "fibo-fnd": "https://spec.edmcouncil.org/fibo/FND/  ",
+    "fibo-fbc": "https://spec.edmcouncil.org/fibo/FBC/  ",
+    "fibo-bp": "https://spec.edmcouncil.org/fibo/BP/  ",
+    "fibo-ind": "https://spec.edmcouncil.org/fibo/IND/  ",
+    "orth": "https://orthogramic.com/metamodel#  ",
+    "documentationURL": "https://github.com/Orthogramic/Orthogramic_Metamodel/interoperability/README.md"
+  },
+  "@graph": [
+    {
+      "@id": "orth:title",
+      "@type": "rdf:Property",
+      "rdfs:label": "title",
+      "rdfs:comment": "Preferred label or name for concept or individual",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "skos:prefLabel"
+    },
+    {
+      "@id": "orth:description",
+      "@type": "rdf:Property",
+      "rdfs:label": "description",
+      "rdfs:comment": "Description or formal definition",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "dct:description / skos:definition"
+    },
+    {
+      "@id": "orth:orgUnitTitle",
+      "@type": "rdf:Property",
+      "rdfs:label": "orgUnitTitle",
+      "rdfs:comment": "Organisational division or unit",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-be-oac-cpty:hasOrganizationalUnit"
+    },
+    {
+      "@id": "orth:owner",
+      "@type": "rdf:Property",
+      "rdfs:label": "owner",
+      "rdfs:comment": "Ownership relationship",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:isOwnedBy"
+    },
+    {
+      "@id": "orth:purpose",
+      "@type": "rdf:Property",
+      "rdfs:label": "purpose",
+      "rdfs:comment": "Goal or intended outcome",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasPurpose"
+    },
+    {
+      "@id": "orth:inputs",
+      "@type": "rdf:Property",
+      "rdfs:label": "inputs",
+      "rdfs:comment": "Required resources",
+      "orth:domain": "Value Stream, Process",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:consumes"
+    },
+    {
+      "@id": "orth:outputs",
+      "@type": "rdf:Property",
+      "rdfs:label": "outputs",
+      "rdfs:comment": "Generated deliverables or results",
+      "orth:domain": "Value Stream, Process",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:produces"
+    },
+    {
+      "@id": "orth:performanceIndicators",
+      "@type": "rdf:Property",
+      "rdfs:label": "performanceIndicators",
+      "rdfs:comment": "KPI or other performance measure",
+      "orth:domain": "Performance",
+      "orth:mappedToFIBO": "fibo-fnd-utl-alx:hasPerformanceIndicator"
+    },
+    {
+      "@id": "orth:strategicAlignment",
+      "@type": "rdf:Property",
+      "rdfs:label": "strategicAlignment",
+      "rdfs:comment": "Alignment with strategic goals",
+      "orth:domain": "Strategy",
+      "orth:mappedToFIBO": "fibo-fnd-utl-alx:isAlignedWith"
+    },
+    {
+      "@id": "orth:dependencies",
+      "@type": "rdf:Property",
+      "rdfs:label": "dependencies",
+      "rdfs:comment": "Dependency relationship",
+      "orth:domain": "Capabilities, Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:dependsOn"
+    },
+    {
+      "@id": "orth:relatedStrategies",
+      "@type": "rdf:Property",
+      "rdfs:label": "relatedStrategies",
+      "rdfs:comment": "Related strategy reference",
+      "orth:domain": "Capabilities, Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:isRelatedTo"
+    },
+    {
+      "@id": "orth:risks",
+      "@type": "rdf:Property",
+      "rdfs:label": "risks",
+      "rdfs:comment": "Associated risk",
+      "orth:domain": "Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-gao-obj:hasRisk"
+    },
+    {
+      "@id": "orth:improvementOpportunities",
+      "@type": "rdf:Property",
+      "rdfs:label": "improvementOpportunities",
+      "rdfs:comment": "Suggested as a custom or annotation property",
+      "orth:domain": "Performance",
+      "orth:mappedToFIBO": "fibo-fnd-utl-alx:hasImprovementOpportunity"
+    },
+    {
+      "@id": "orth:timeline",
+      "@type": "rdf:Property",
+      "rdfs:label": "timeline",
+      "rdfs:comment": "Project or strategy duration",
+      "orth:domain": "Initiatives, Strategy",
+      "orth:mappedToFIBO": "fibo-fnd-dt-fd:hasDatePeriod"
+    },
+    {
+      "@id": "orth:cost",
+      "@type": "rdf:Property",
+      "rdfs:label": "cost",
+      "rdfs:comment": "Financial association",
+      "orth:domain": "Finance, Initiatives",
+      "orth:mappedToFIBO": "fibo-fbc-pas-caa:hasMonetaryAmount"
+    },
+    {
+      "@id": "orth:maturityLevel",
+      "@type": "rdf:Property",
+      "rdfs:label": "maturityLevel",
+      "rdfs:comment": "Assessment of maturity or readiness",
+      "orth:domain": "Capabilities",
+      "orth:mappedToFIBO": "fibo-fnd-arr-asmt:hasAssessmentRating"
+    },
+    {
+      "@id": "orth:goals",
+      "@type": "rdf:Property",
+      "rdfs:label": "goals",
+      "rdfs:comment": "Strategic goals",
+      "orth:domain": "Strategy",
+      "orth:mappedToFIBO": "fibo-fnd-gao-obj:hasObjective"
+    },
+    {
+      "@id": "orth:relatedValueStreams",
+      "@type": "rdf:Property",
+      "rdfs:label": "relatedValueStreams",
+      "rdfs:comment": "Supporting or related processes",
+      "orth:domain": "Capabilities",
+      "orth:mappedToFIBO": "fibo-bp-evd:isLinkedToProcess"
+    },
+    {
+      "@id": "orth:stakeholders",
+      "@type": "rdf:Property",
+      "rdfs:label": "stakeholders",
+      "rdfs:comment": "Involved or impacted parties",
+      "orth:domain": "Stakeholder",
+      "orth:mappedToFIBO": "fibo-fbc-pas-fpas:hasStakeholder"
+    },
+    {
+      "@id": "orth:role",
+      "@type": "rdf:Property",
+      "rdfs:label": "role",
+      "rdfs:comment": "Organisational or stakeholder role",
+      "orth:domain": "Stakeholder",
+      "orth:mappedToFIBO": "fibo-fnd-pty-rl:hasRole"
+    },
+    {
+      "@id": "orth:channel",
+      "@type": "rdf:Property",
+      "rdfs:label": "channel",
+      "rdfs:comment": "Interaction or delivery channel",
+      "orth:domain": "Channel",
+      "orth:mappedToFIBO": "fibo-fbc-pas-caa:hasCommunicationChannel"
+    },
+    {
+      "@id": "orth:serviceLevelAgreements",
+      "@type": "rdf:Property",
+      "rdfs:label": "serviceLevelAgreements",
+      "rdfs:comment": "Delivery expectations",
+      "orth:domain": "Services",
+      "orth:mappedToFIBO": "fibo-fbc-fct-fse:hasServiceLevelAgreement"
+    },
+    {
+      "@id": "orth:processes",
+      "@type": "rdf:Property",
+      "rdfs:label": "processes",
+      "rdfs:comment": "Component steps in a process",
+      "orth:domain": "Value Stream",
+      "orth:mappedToFIBO": "fibo-bp-evd:hasProcessStep"
+    },
+    {
+      "@id": "orth:relatedPolicies",
+      "@type": "rdf:Property",
+      "rdfs:label": "relatedPolicies",
+      "rdfs:comment": "Related governance policy",
+      "orth:domain": "Policy",
+      "orth:mappedToFIBO": "fibo-fnd-law-lcap:isConstrainedBy / fibo-fnd-law-cor:hasPolicy"
+    },
+    {
+      "@id": "orth:customerSegmentType",
+      "@type": "rdf:Property",
+      "rdfs:label": "customerSegmentType",
+      "rdfs:comment": "Segmentation logic",
+      "orth:domain": "Customer",
+      "orth:mappedToFIBO": "fibo-fbc-pas-fpas:hasCustomerClassification"
+    },
+    {
+      "@id": "orth:acquisitionChannels",
+      "@type": "rdf:Property",
+      "rdfs:label": "acquisitionChannels",
+      "rdfs:comment": "Lead generation source",
+      "orth:domain": "Customer",
+      "orth:mappedToFIBO": "fibo-fbc-pas-caa:hasMarketingChannel"
+    },
+    {
+      "@id": "orth:customerLifetimeValue",
+      "@type": "rdf:Property",
+      "rdfs:label": "customerLifetimeValue",
+      "rdfs:comment": "Derived financial metric",
+      "orth:domain": "Performance, Customer",
+      "orth:mappedToFIBO": "fibo-fbc-fct-fse:hasCustomerValueMetric"
+    },
+    {
+      "@id": "orth:marketTrends",
+      "@type": "rdf:Property",
+      "rdfs:label": "marketTrends",
+      "rdfs:comment": "Trend insight",
+      "orth:domain": "Market",
+      "orth:mappedToFIBO": "fibo-ind-ei-ei:exhibitsTrend"
+    },
+    {
+      "@id": "orth:industryAnalysis",
+      "@type": "rdf:Property",
+      "rdfs:label": "industryAnalysis",
+      "rdfs:comment": "Aggregated market intelligence",
+      "orth:domain": "Market",
+      "orth:mappedToFIBO": "fibo-ind-ei-ei:hasMarketInsight"
+    },
+    {
+      "@id": "orth:uniqueId",
+      "@type": "rdf:Property",
+      "rdfs:label": "uniqueId",
+      "rdfs:comment": "General unique identifier for any entity, analogous to a tag or identifier.",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasTag"
+    },
+    {
+      "@id": "orth:effectiveDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "effectiveDate",
+      "rdfs:comment": "Date when an entity or agreement becomes effective.",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-dt-fd:hasEffectiveDate"
+    },
+    {
+      "@id": "orth:expirationDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "expirationDate",
+      "rdfs:comment": "Date when an entity or agreement ceases to be effective.",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-dt-fd:hasExpirationDate"
+    },
+    {
+      "@id": "orth:status",
+      "@type": "rdf:Property",
+      "rdfs:label": "status",
+      "rdfs:comment": "Current state or condition of an entity.",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasStatus"
+    },
+    {
+      "@id": "orth:type",
+      "@type": "rdf:Property",
+      "rdfs:label": "type",
+      "rdfs:comment": "General classification or category of an entity.",
+      "orth:domain": "All Domains",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasCategory"
+    },
+    {
+      "@id": "orth:hasSourceSystem",
+      "@type": "rdf:Property",
+      "rdfs:label": "hasSourceSystem",
+      "rdfs:comment": "System that originates or produces information.",
+      "orth:domain": "Information, Technology",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:isProducedBy"
+    },
+    {
+      "@id": "orth:legalName",
+      "@type": "rdf:Property",
+      "rdfs:label": "legalName",
+      "rdfs:comment": "Formal legal name of an organization.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-be-le-fbo:hasLegalName"
+    },
+    {
+      "@id": "orth:registeredAddress",
+      "@type": "rdf:Property",
+      "rdfs:label": "registeredAddress",
+      "rdfs:comment": "Official physical address for an organization.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-fnd-plc-loc:hasPhysicalAddress"
+    },
+    {
+      "@id": "orth:incorporationDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "incorporationDate",
+      "rdfs:comment": "Date an organization was legally formed.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-be-le-fbo:dateOfFormation"
+    },
+    {
+      "@id": "orth:jurisdictionOfEstablishment",
+      "@type": "rdf:Property",
+      "rdfs:label": "jurisdictionOfEstablishment",
+      "rdfs:comment": "Legal jurisdiction where the organization is established.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-fnd-plc-loc:hasJurisdiction"
+    },
+    {
+      "@id": "orth:hasParentOrgUnit",
+      "@type": "rdf:Property",
+      "rdfs:label": "hasParentOrgUnit",
+      "rdfs:comment": "Hierarchical relationship to a superior organizational unit.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-be-oac-cpty:hasParentUnit"
+    },
+    {
+      "@id": "orth:hasSubOrgUnit",
+      "@type": "rdf:Property",
+      "rdfs:label": "hasSubOrgUnit",
+      "rdfs:comment": "Hierarchical relationship to a subordinate organizational unit.",
+      "orth:domain": "Organization",
+      "orth:mappedToFIBO": "fibo-be-oac-cpty:hasSubUnit"
+    },
+    {
+      "@id": "orth:stakeholderRole",
+      "@type": "rdf:Property",
+      "rdfs:label": "stakeholderRole",
+      "rdfs:comment": "Role of a stakeholder within an organization or process.",
+      "orth:domain": "Stakeholder",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:hasRoleIn"
+    },
+    {
+      "@id": "orth:contactEmail",
+      "@type": "rdf:Property",
+      "rdfs:label": "contactEmail",
+      "rdfs:comment": "Email address for contact.",
+      "orth:domain": "Organization, Stakeholder",
+      "orth:mappedToFIBO": "fibo-fnd-plc-loc:hasEmailAddress"
+    },
+    {
+      "@id": "orth:contactPhone",
+      "@type": "rdf:Property",
+      "rdfs:label": "contactPhone",
+      "rdfs:comment": "Telephone number for contact.",
+      "orth:domain": "Organization, Stakeholder",
+      "orth:mappedToFIBO": "fibo-fnd-plc-loc:hasTelephoneNumber"
+    },
+    {
+      "@id": "orth:capabilityMaturityLevel",
+      "@type": "rdf:Property",
+      "rdfs:label": "capabilityMaturityLevel",
+      "rdfs:comment": "Maturity assessment of a capability (e.g., using a scale).",
+      "orth:domain": "Capabilities",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasValue"
+    },
+    {
+      "@id": "orth:requiredResource",
+      "@type": "rdf:Property",
+      "rdfs:label": "requiredResource",
+      "rdfs:comment": "Resource required for a capability.",
+      "orth:domain": "Capabilities",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:requires"
+    },
+    {
+      "@id": "orth:initiativeScope",
+      "@type": "rdf:Property",
+      "rdfs:label": "initiativeScope",
+      "rdfs:comment": "The range or extent of an initiative.",
+      "orth:domain": "Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:appliesTo"
+    },
+    {
+      "@id": "orth:expectedBenefits",
+      "@type": "rdf:Property",
+      "rdfs:label": "expectedBenefits",
+      "rdfs:comment": "Expected advantages or positive outcomes of an initiative.",
+      "orth:domain": "Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:hasBenefits"
+    },
+    {
+      "@id": "orth:progressStatus",
+      "@type": "rdf:Property",
+      "rdfs:label": "progressStatus",
+      "rdfs:comment": "Current progress state of an initiative.",
+      "orth:domain": "Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasStatus"
+    },
+    {
+      "@id": "orth:completionDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "completionDate",
+      "rdfs:comment": "Planned or actual date of completion for an initiative.",
+      "orth:domain": "Initiatives",
+      "orth:mappedToFIBO": "fibo-fnd-dt-fd:hasCompletionDate"
+    },
+    {
+      "@id": "orth:assetClass",
+      "@type": "rdf:Property",
+      "rdfs:label": "assetClass",
+      "rdfs:comment": "Classification of a financial instrument based on its nature.",
+      "orth:domain": "Finance, Products",
+      "orth:mappedToFIBO": "fibo-fbc-fity-pty:hasAssetClass"
+    },
+    {
+      "@id": "orth:currency",
+      "@type": "rdf:Property",
+      "rdfs:label": "currency",
+      "rdfs:comment": "The currency in which a financial instrument or amount is denominated.",
+      "orth:domain": "Finance, Products",
+      "orth:mappedToFIBO": "fibo-fnd-acc-cur:hasCurrency"
+    },
+    {
+      "@id": "orth:maturityDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "maturityDate",
+      "rdfs:comment": "The date on which a financial instrument matures.",
+      "orth:domain": "Finance, Products",
+      "orth:mappedToFIBO": "fibo-fbc-fity-trm:hasMaturityDate"
+    },
+    {
+      "@id": "orth:accountType",
+      "@type": "rdf:Property",
+      "rdfs:label": "accountType",
+      "rdfs:comment": "The type of financial account (e.g., checking, savings, brokerage).",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fbc-fi-fi:hasAccountType"
+    },
+    {
+      "@id": "orth:accountHolder",
+      "@type": "rdf:Property",
+      "rdfs:label": "accountHolder",
+      "rdfs:comment": "The party that owns or holds the account.",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fbc-fi-fi:hasAccountHolder"
+    },
+    {
+      "@id": "orth:balance",
+      "@type": "rdf:Property",
+      "rdfs:label": "balance",
+      "rdfs:comment": "The current balance of a financial account.",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fbc-fi-fi:hasBalance"
+    },
+    {
+      "@id": "orth:transactionType",
+      "@type": "rdf:Property",
+      "rdfs:label": "transactionType",
+      "rdfs:comment": "The nature or category of a financial transaction.",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fbc-finc-finc:hasTransactionType"
+    },
+    {
+      "@id": "orth:transactionAmount",
+      "@type": "rdf:Property",
+      "rdfs:label": "transactionAmount",
+      "rdfs:comment": "The monetary value of a financial transaction.",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fnd-acc-cur:hasMonetaryAmount"
+    },
+    {
+      "@id": "orth:transactionDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "transactionDate",
+      "rdfs:comment": "The date when a financial transaction occurred.",
+      "orth:domain": "Finance",
+      "orth:mappedToFIBO": "fibo-fnd-dt-fd:hasTransactionDate"
+    },
+    {
+      "@id": "orth:marketQuote",
+      "@type": "rdf:Property",
+      "rdfs:label": "marketQuote",
+      "rdfs:comment": "Information about the price or value of a security or commodity.",
+      "orth:domain": "Market, Finance",
+      "orth:mappedToFIBO": "fibo-fbc-mc-mkt:MarketQuote"
+    },
+    {
+      "@id": "orth:dataType",
+      "@type": "rdf:Property",
+      "rdfs:label": "dataType",
+      "rdfs:comment": "The format or type of data (e.g., text, numeric, date).",
+      "orth:domain": "Information",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:hasRepresentation"
+    },
+    {
+      "@id": "orth:confidentialityClassification",
+      "@type": "rdf:Property",
+      "rdfs:label": "confidentialityClassification",
+      "rdfs:comment": "Classification of data based on its sensitivity or confidentiality.",
+      "orth:domain": "Information",
+      "orth:mappedToFIBO": "fibo-fnd-utl-av:hasSecurityClassification"
+    },
+    {
+      "@id": "orth:dataOwner",
+      "@type": "rdf:Property",
+      "rdfs:label": "dataOwner",
+      "rdfs:comment": "The party responsible for the data.",
+      "orth:domain": "Information",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:isOwnedBy"
+    },
+    {
+      "@id": "orth:dataSteward",
+      "@type": "rdf:Property",
+      "rdfs:label": "dataSteward",
+      "rdfs:comment": "The party responsible for the quality and governance of data.",
+      "orth:domain": "Information",
+      "orth:mappedToFIBO": "fibo-fnd-rel-rel:hasSteward"
+    },
+    {
+      "@id": "orth:customerData",
+      "@type": "rdf:Property",
+      "rdfs:label": "customerData",
+      "rdfs:comment": "Information pertaining to customer accounts.",
+      "orth:domain": "Information",
+      "orth:mappedToFIBO": "fibo-fbc-dae-dbt:CustomerAccountData"
+    },
+    {
+      "@id": "orth:policyType",
+      "@type": "rdf:Property",
+      "rdfs:label": "policyType",
+      "rdfs:comment": "The category or nature of a policy.",
+      "orth:domain": "Policy",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:hasAgreementType"
+    },
+    {
+      "@id": "orth:policyScope",
+      "@type": "rdf:Property",
+      "rdfs:label": "policyScope",
+      "rdfs:comment": "The range or extent to which a policy applies.",
+      "orth:domain": "Policy",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:appliesTo"
+    },
+    {
+      "@id": "orth:enforcedBy",
+      "@type": "rdf:Property",
+      "rdfs:label": "enforcedBy",
+      "rdfs:comment": "The party responsible for enforcing the policy.",
+      "orth:domain": "Policy",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:hasPartyResponsibleForEnforcement"
+    },
+    {
+      "@id": "orth:riskType",
+      "@type": "rdf:Property",
+      "rdfs:label": "riskType",
+      "rdfs:comment": "The category or nature of a risk (e.g., operational, credit).",
+      "orth:domain": "Risk Management",
+      "orth:mappedToFIBO": "fibo-fnd-ris-ris:hasRiskType"
+    },
+    {
+      "@id": "orth:riskSeverity",
+      "@type": "rdf:Property",
+      "rdfs:label": "riskSeverity",
+      "rdfs:comment": "The level of potential harm or consequence of a risk.",
+      "orth:domain": "Risk Management",
+      "orth:mappedToFIBO": "fibo-fnd-ris-ris:hasImpact"
+    },
+    {
+      "@id": "orth:riskLikelihood",
+      "@type": "rdf:Property",
+      "rdfs:label": "riskLikelihood",
+      "rdfs:comment": "The probability or frequency of a risk occurring.",
+      "orth:domain": "Risk Management",
+      "orth:mappedToFIBO": "fibo-fnd-ris-ris:hasProbability"
+    },
+    {
+      "@id": "orth:mitigationControl",
+      "@type": "rdf:Property",
+      "rdfs:label": "mitigationControl",
+      "rdfs:comment": "A mechanism or measure to reduce or manage a risk.",
+      "orth:domain": "Risk Management",
+      "orth:mappedToFIBO": "fibo-fnd-agr-agr:hasControlMechanism"
+    },
+    {
+      "@id": "orth:productFeatures",
+      "@type": "rdf:Property",
+      "rdfs:label": "productFeatures",
+      "rdfs:comment": "Key characteristics or functionalities of a product.",
+      "orth:domain": "Products",
+      "orth:mappedToFIBO": "fibo-fbc-fep-rsvc:hasFeature"
+    },
+    {
+      "@id": "orth:serviceLevelAgreement",
+      "@type": "rdf:Property",
+      "rdfs:label": "serviceLevelAgreement",
+      "rdfs:comment": "Contractual agreement defining service performance and quality.",
+      "orth:domain": "Services",
+      "orth:mappedToFIBO": "fibo-fbc-fep-rsvc:hasServiceLevelAgreement"
+    },
+    {
+      "@id": "orth:pricingModel",
+      "@type": "rdf:Property",
+      "rdfs:label": "pricingModel",
+      "rdfs:comment": "Method or structure used to determine the price of a product or service.",
+      "orth:domain": "Products, Services",
+      "orth:mappedToFIBO": "fibo-fbc-fep-rsvc:hasPricingMechanism"
+    },
+    {
+      "@id": "orth:deliveryChannel",
+      "@type": "rdf:Property",
+      "rdfs:label": "deliveryChannel",
+      "rdfs:comment": "The channel through which a product or service is delivered.",
+      "orth:domain": "Products, Services, Channel",
+      "orth:mappedToFIBO": "fibo-fbc-fep-rsvc:isProvidedThrough"
+    }
+  ]
+}
