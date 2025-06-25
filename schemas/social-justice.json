@@ -1,0 +1,217 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orthogramic.com/schemas/socialchange.schema.json",
+  "title": "Social Change",
+  "type": "object",
+  "required": ["title", "description", "socialChangeType"],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Name/title of the social change action or campaign"
+    },
+    "description": {
+      "type": "string",
+      "description": "Short summary of the goal and focus"
+    },
+    "socialChangeType": {
+      "type": "string",
+      "enum": [
+        "Campaign",
+        "Protest",
+        "Strike",
+        "Picket",
+        "Boycott",
+        "Legal Challenge",
+        "Coalition",
+        "Research Program"
+      ],
+      "description": "Type of activity or intervention"
+    },
+    "actionForms": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Specific actions employed"
+    },
+    "coordinatingBodies": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key organisations leading or coordinating the action"
+    },
+    "rootCauseFocus": {
+      "type": "string",
+      "description": "Systemic problem or injustice being addressed"
+    },
+    "affectedGroups": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Primary groups impacted by the injustice"
+    },
+    "stakeholders": {
+      "type": "array",
+      "description": "Structured list of involved or affected actors",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "type": { "type": "string" },
+          "influenceLevel": { "type": "string" },
+          "engagementStrategy": { "type": "string" }
+        },
+        "required": ["name", "type"]
+      }
+    },
+    "policyTargets": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Legislation or policy being influenced or challenged"
+    },
+    "institutionsInvolved": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "State or corporate entities engaged or targeted"
+    },
+    "tactics": {
+      "type": "array",
+      "description": "Advocacy and action tactics used",
+      "items": {
+        "type": "object",
+        "properties": {
+          "tacticType": { "type": "string" },
+          "description": { "type": "string" },
+          "channel": { "type": "string" }
+        },
+        "required": ["tacticType"]
+      }
+    },
+    "escalationPlan": {
+      "type": "string",
+      "description": "Sequence of increasing pressure or intervention"
+    },
+    "economicImpactScope": {
+      "type": "string",
+      "description": "Scale and nature of economic disruption"
+    },
+    "legalFramework": {
+      "type": "string",
+      "description": "Jurisdictional basis for action"
+    },
+    "capabilitiesActivated": {
+      "type": "array",
+      "description": "Related capabilities leveraged",
+      "items": {
+        "type": "object",
+        "properties": {
+          "capabilityId": { "type": "string" },
+          "name": { "type": "string" },
+          "levelOfUse": { "type": "string" }
+        },
+        "required": ["capabilityId", "name"]
+      }
+    },
+    "valueStreamsImpacted": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Value flows disrupted or transformed"
+    },
+    "measurementFramework": {
+      "type": "string",
+      "description": "Method for evaluating effectiveness"
+    },
+    "risks": {
+      "type": "array",
+      "description": "Operational or reputational risks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "riskType": { "type": "string" },
+          "description": { "type": "string" }
+        },
+        "required": ["riskType"]
+      }
+    },
+    "performanceIndicators": {
+      "type": "array",
+      "description": "KPIs used to measure campaign success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "indicatorName": { "type": "string" },
+          "targetValue": { "type": "string" },
+          "measurementMethod": { "type": "string" }
+        },
+        "required": ["indicatorName"]
+      }
+    },
+    "improvementOpportunities": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Areas to enhance strategy or inclusiveness"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "Broader goals supported by this action"
+    },
+    "stages": {
+      "type": "array",
+      "description": "Progressive stages of the social change action",
+      "items": {
+        "type": "object",
+        "properties": {
+          "stageTitle": { "type": "string" },
+          "description": { "type": "string" },
+          "purpose": { "type": "string" },
+          "owner": { "type": "string" },
+          "channels": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "tacticsUsed": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tacticType": { "type": "string" },
+                "description": { "type": "string" },
+                "channel": { "type": "string" }
+              },
+              "required": ["tacticType"]
+            }
+          },
+          "inputs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "outputs": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "performanceIndicators": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "indicatorName": { "type": "string" },
+                "targetValue": { "type": "string" },
+                "measurementMethod": { "type": "string" }
+              },
+              "required": ["indicatorName"]
+            }
+          },
+          "risks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "riskType": { "type": "string" },
+                "description": { "type": "string" }
+              },
+              "required": ["riskType"]
+            }
+          }
+        },
+        "required": ["stageTitle", "description"]
+      }
+    }
+  },
+  "additionalProperties": false
+}
