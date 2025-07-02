@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoverageTemplate",
+  "type": "object",
+  "description": "A reusable pattern of coverage expectations for specific types of organisations or industries.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the coverage template."
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable name of the template (e.g. 'Public Sector – Large Agency')."
+    },
+    "description": {
+      "type": "string",
+      "description": "Explanation of the context and applicability of this template."
+    },
+    "sector": {
+      "type": "string",
+      "description": "Applicable industry or sector (e.g. Health, Government, Finance)."
+    },
+    "sizeCategory": {
+      "type": "string",
+      "enum": ["Small", "Medium", "Large", "Enterprise"],
+      "description": "Size category of organisations that this template is intended for."
+    },
+    "expectations": {
+      "type": "array",
+      "description": "List of domain-specific coverage expectations defined by the template.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "domain": {
+            "type": "string",
+            "description": "The business architecture domain."
+          },
+          "targetCoverageLevel": {
+            "type": "string",
+            "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+            "description": "Target coverage level for the domain."
+          }
+        },
+        "required": ["domain", "targetCoverageLevel"]
+      }
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "User or system that created this template."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of creation."
+    }
+  },
+  "required": ["id", "name", "sector", "sizeCategory", "expectations", "createdBy", "createdAt"]
+}
