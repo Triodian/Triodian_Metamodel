@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OrganizationGoal",
+  "type": "object",
+  "description": "Represents an organisation's business architecture goal including domain weighting, coverage aspirations, and tolerances.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the goal."
+    },
+    "organization": {
+      "type": "string",
+      "description": "The organisation this goal applies to."
+    },
+    "domain": {
+      "type": "string",
+      "description": "The business architecture domain targeted by this goal."
+    },
+    "weighting": {
+      "type": "number",
+      "description": "Relative importance of this domain, typically between 0.0 and 1.0."
+    },
+    "coverageGapTolerance": {
+      "type": "number",
+      "description": "Acceptable gap between target and actual domain coverage (e.g. 0.1 = 10% gap)."
+    },
+    "maturityTargetDate": {
+      "type": "string",
+      "format": "date",
+      "description": "Date by which the organisation aims to achieve the coverage goal.",
+      "nullable": true
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional context or commentary.",
+      "nullable": true
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "User or system that created this record."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of creation."
+    }
+  },
+  "required": ["id", "organization", "domain", "weighting", "coverageGapTolerance", "createdBy", "createdAt"]
+}
