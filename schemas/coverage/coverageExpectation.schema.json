@@ -23,6 +23,19 @@
       "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
       "description": "The desired level of coverage for the specified domain."
     },
+    "lifecycleStage": {
+      "type": "string",
+      "nullable": true,
+      "description": "Optional lifecycle stage this expectation applies to. Used to tailor expectations based on the maturity or development phase of the domain element.",
+        "enum": [
+          "Ideation",
+          "Design",
+          "Development",
+          "Operational",
+          "Optimisation",
+          "Retirement"
+          ]
+    }
     "justification": {
       "type": "string",
       "description": "Reason for the desired coverage level (e.g. compliance, risk, opportunity)."
