@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoverageStatus",
+  "type": "object",
+  "description": "Derived record comparing actual domain coverage to expectations and identifying gaps.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the coverage status record."
+    },
+    "orgUnit": {
+      "type": "string",
+      "description": "Organisation unit assessed."
+    },
+    "domain": {
+      "type": "string",
+      "description": "The business architecture domain assessed."
+    },
+    "coverageScore": {
+      "type": "number",
+      "description": "Numeric score (e.g. 0.0–1.0) based on actual coverage determined by document and data analysis."
+    },
+    "coverageLevelAchieved": {
+      "type": "string",
+      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "description": "Categorical level derived from the score."
+    },
+    "expectedCoverageLevel": {
+      "type": "string",
+      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "description": "Target level defined in CoverageExpectation."
+    },
+    "coverageGap": {
+      "type": "number",
+      "description": "Calculated gap between achieved and expected levels (may be zero)."
+    },
+    "lastEvaluatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when this coverage status was last assessed."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional comments or explanation for gap.",
+      "nullable": true
+    }
+  },
+  "required": ["id", "orgUnit", "domain", "coverageScore", "coverageLevelAchieved", "expectedCoverageLevel", "coverageGap", "lastEvaluatedAt"]
+}
