@@ -12,6 +12,11 @@
       "type": "string",
       "description": "The organisation this goal applies to."
     },
+    "orgUnit": {
+      "type": "string",
+      "nullable": true,
+      "description": "Optional organisational unit this goal is targeted at. Leave null for organisation-wide goals."
+    },
     "domain": {
       "type": "string",
       "description": "The business architecture domain targeted by this goal."
