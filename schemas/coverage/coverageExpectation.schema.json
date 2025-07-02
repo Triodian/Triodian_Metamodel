@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CoverageExpectation",
+  "type": "object",
+  "description": "Defines the desired coverage level for a specific business architecture domain within an organisation or business unit.",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the coverage expectation."
+    },
+    "domain": {
+      "type": "string",
+      "description": "The business architecture domain this expectation applies to.",
+      "examples": ["Capability", "Strategy", "Information"]
+    },
+    "orgUnit": {
+      "type": "string",
+      "description": "The organisation unit this expectation applies to. Leave null if applying to the whole organisation.",
+      "nullable": true
+    },
+    "targetCoverageLevel": {
+      "type": "string",
+      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "description": "The desired level of coverage for the specified domain."
+    },
+    "justification": {
+      "type": "string",
+      "description": "Reason for the desired coverage level (e.g. compliance, risk, opportunity)."
+    },
+    "linkedStrategy": {
+      "type": "string",
+      "description": "Link to the Strategy element supporting this expectation.",
+      "nullable": true
+    },
+    "createdBy": {
+      "type": "string",
+      "description": "User or system that created this record."
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of creation."
+    }
+  },
+  "required": ["id", "domain", "targetCoverageLevel", "justification", "createdBy", "createdAt"]
+}
