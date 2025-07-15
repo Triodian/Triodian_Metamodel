@@ -1,0 +1,204 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://orthogramic.com/schemas/intelligence.schema.json",
+  "title": "Intelligence",
+  "description": "Schema for capturing organizational intelligence activities, sources, applications, and attributes.",
+  "type": "object",
+  "properties": {
+    "intelligenceID": {
+      "type": "string",
+      "description": "Unique identifier for the intelligence record."
+    },
+    "title": {
+      "type": "string",
+      "description": "Name of the intelligence product or activity."
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the intelligence."
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Purpose of the intelligence activity."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Person or team responsible for the intelligence."
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "Organizational unit responsible or consuming the intelligence."
+    },
+    "sources": {
+      "type": "array",
+      "description": "List of sources used for intelligence gathering.",
+      "items": {
+        "$ref": "#/$defs/intelligenceSource"
+      }
+    },
+    "intelligenceType": {
+      "type": "string",
+      "description": "Type of intelligence gathered.",
+      "enum": [
+        "Business reporting",
+        "Competitive intelligence",
+        "Market intelligence",
+        "Regulatory surveillance",
+        "Security intelligence",
+        "Insider threat monitoring",
+        "Geopolitical analysis",
+        "Corporate espionage",
+        "Agency intelligence feed",
+        "Social media and OSINT",
+        "Dark web monitoring"
+      ]
+    },
+    "frequency": {
+      "type": "string",
+      "description": "Frequency of intelligence reporting or updates.",
+      "enum": [
+        "Continuous",
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Quarterly",
+        "Annually",
+        "Event-driven",
+        "Ad-hoc"
+      ]
+    },
+    "legalAndEthicalConsiderations": {
+      "type": "string",
+      "description": "Legal and ethical boundaries applicable to the intelligence activity."
+    },
+    "confidentialityLevel": {
+      "type": "string",
+      "description": "Level of confidentiality applied to the intelligence output.",
+      "enum": [
+        "Public",
+        "Internal",
+        "Confidential",
+        "Restricted",
+        "Secret",
+        "Top Secret"
+      ]
+    },
+    "performanceIndicators": {
+      "type": "array",
+      "description": "List of performance indicators linked to the intelligence function.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "risks": {
+      "type": "array",
+      "description": "Identified risks associated with intelligence collection or usage.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "improvementOpportunities": {
+      "type": "array",
+      "description": "Opportunities for improving the intelligence activity.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "Strategic objective supported by the intelligence."
+    },
+    "applications": {
+      "type": "array",
+      "description": "Applications and outcomes linked to the intelligence activity.",
+      "items": {
+        "$ref": "#/$defs/intelligenceApplication"
+      }
+    }
+  },
+  "required": ["title", "intelligenceType"],
+  "$defs": {
+    "intelligenceSource": {
+      "type": "object",
+      "properties": {
+        "sourceName": {
+          "type": "string"
+        },
+        "sourceType": {
+          "type": "string",
+          "enum": [
+            "Public data",
+            "Paid research services",
+            "Regulatory filings",
+            "Informal networks",
+            "Third-party subscription",
+            "Dark web sources",
+            "Social media",
+            "Government intelligence",
+            "Corporate whistleblowers",
+            "Surveillance systems"
+          ]
+        },
+        "reliabilityRating": {
+          "type": "string",
+          "enum": ["High", "Medium", "Low", "Unverified"]
+        },
+        "collectionMethod": {
+          "type": "string",
+          "enum": [
+            "Manual research",
+            "Automated scraping",
+            "Sensor-based collection",
+            "Third-party acquisition",
+            "Human intelligence",
+            "Signals intelligence",
+            "AI-generated summarisation"
+          ]
+        },
+        "cost": {
+          "type": "string"
+        },
+        "complianceStatus": {
+          "type": "string",
+          "enum": ["Compliant", "Not applicable", "Non-compliant", "Under review"]
+        }
+      },
+      "required": ["sourceName", "sourceType"]
+    },
+    "intelligenceApplication": {
+      "type": "object",
+      "properties": {
+        "applicationArea": {
+          "type": "string",
+          "enum": [
+            "Strategic decision-making",
+            "Tactical operations",
+            "Mergers and acquisitions",
+            "New market entry",
+            "Product development",
+            "Risk management",
+            "Competitive response",
+            "Brand reputation management",
+            "Fraud prevention"
+          ]
+        },
+        "organisationalDecisionsInfluenced": {
+          "type": "string"
+        },
+        "intelligenceConsumers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "measurableOutcomes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": ["applicationArea"]
+    }
+  }
+}
