@@ -27,14 +27,24 @@
     "relationshipType": {
       "type": "string",
       "enum": [
-        "Owning",
-        "Utilising",
-        "Providing",
-        "Consuming",
-        "Custodian",
-        "Dependent",
-        "Supported",
-        "Governing"
+        "owning",
+        "providing",
+        "consuming",
+        "contributing",
+        "benefiting",
+        "custodian",
+        "dependent",
+        "supporting",
+        "governing",
+        "monitoring",
+        "reviewing",
+        "coordinating",
+        "consulting",
+        "escalatingTo",
+        "participating",
+        "triggering",
+        "sponsoring",
+        "impactedBy"
       ],
       "description": "The type of relationship the unit has to the domain entity."
     },
