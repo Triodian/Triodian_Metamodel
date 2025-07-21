@@ -1,112 +1,421 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Stakeholders Domain Schema",
-  "description": "Schema for individuals, groups, or entities that influence or are influenced by the value delivered within an organization",
+  "$id": "https://orthogramic.com/schemas/stakeholder.schema.json",
+  "title": "Stakeholder Domain Schema",
+  "description": "Schema for the Stakeholder domain in the Orthogramic Metamodel with global enumeration support",
   "type": "object",
-  "properties": {
-    "stakeholders": {
-      "type": "object",
-      "description": "Individuals, groups, or entities that influence or are influenced by the organization's activities",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The name or title of the Stakeholder"
-        },
-        "type": {
-          "type": "string",
-          "description": "The Stakeholder's position in relation to the Organization"
-        },
-        "description": {
-          "type": "string",
-          "description": "A detailed explanation of the Stakeholder group"
-        },
-        "role": {
-          "type": "string",
-          "description": "Defined responsibilities and interests of the Stakeholder"
-        },
-        "orgUnitTitle": {
-          "type": "string",
-          "description": "The Organization unit(s) to which the Stakeholder is most closely linked"
-        },
-        "engagementStrategies": {
-          "type": "string",
-          "description": "Plans to communicate and interact with this Stakeholder"
-        },
-        "interestLevels": {
-          "type": "string",
-          "description": "Degree of influence and interest each Stakeholder has in Organization activities"
-        },
-        "inputs": {
-          "type": "string",
-          "description": "Resources or information Stakeholders provide to the Organization"
-        },
-        "outputs": {
-          "type": "string",
-          "description": "Benefits or outcomes Stakeholders receive from the Organization"
-        },
-        "dependencies": {
-          "type": "string",
-          "description": "Other Stakeholders, processes or systems that the Stakeholder depends on"
-        },
-        "relatedStakeholders": {
-          "type": "string",
-          "description": "Stakeholders that are related or linked to this Stakeholder"
-        },
-        "performanceIndicators": {
-          "type": "string",
-          "description": "Metrics used to measure the effectiveness of Stakeholder engagement"
-        },
-        "risks": {
-          "type": "string",
-          "description": "Potential risks associated with Stakeholder engagement"
-        },
-        "improvementOpportunities": {
-          "type": "string",
-          "description": "Areas where Stakeholder engagement can be enhanced or improved"
-        },
-        "strategicAlignment": {
-          "type": "string",
-          "description": "How the Stakeholder aligns with the Organization's strategic goals and objectives"
-        }
+  "attributes": {
+    "title": {
+      "type": "string",
+      "description": "Name/title of stakeholder",
+      "examples": ["Class I Railroad Operations", "Federal Railroad Administration", "Railway Technology Solutions Ltd"]
+    },
+    "tType": {
+      "type": "string",
+      "description": "Position relation to organization",
+      "enum": [
+        "Primary Customer",
+        "Secondary Customer",
+        "B2B Customer",
+        "B2C Customer",
+        "B2G Customer",
+        "Internal Customer",
+        "End User",
+        "Regulatory Body",
+        "Government Agency",
+        "Local Authority",
+        "International Body",
+        "Standards Organization",
+        "Strategic Partner",
+        "Supplier/Vendor",
+        "Distributor/Channel Partner",
+        "System Integrator",
+        "Consultant/Advisor",
+        "Financial Institution",
+        "Investor/Shareholder",
+        "Board Member",
+        "Employee/Staff",
+        "Trade Union",
+        "Industry Association",
+        "Community Representative",
+        "Environmental Group",
+        "Media/Press",
+        "Academic Institution",
+        "Competitor",
+        "Other"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation"
+    },
+    "role": {
+      "type": "string",
+      "description": "Responsibilities and interests"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "Most closely linked org unit"
+    },
+    "stakeholderCategory": {
+      "type": "string",
+      "description": "Broad stakeholder classification",
+      "enum": [
+        "Internal Stakeholder",
+        "External Stakeholder",
+        "Primary Stakeholder",
+        "Secondary Stakeholder",
+        "Key Stakeholder",
+        "Influential Stakeholder"
+      ]
+    },
+    "influenceLevel": {
+      "type": "string",
+      "description": "Degree of influence on organization",
+      "enum": [
+        "High Influence",
+        "Medium Influence",
+        "Low Influence"
+      ]
+    },
+    "interestLevel": {
+      "type": "string",
+      "description": "Level of interest in organization",
+      "enum": [
+        "High Interest",
+        "Medium Interest",
+        "Low Interest"
+      ]
+    },
+    "engagementStrategies": {
+      "type": "string",
+      "description": "Communication/interaction plans"
+    },
+    "engagementFrequency": {
+      "type": "string",
+      "description": "How often engagement occurs",
+      "enum": [
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Quarterly",
+        "Annually",
+        "Ad-hoc",
+        "Continuous"
+      ]
+    },
+    "communicationChannels": {
+      "type": "array",
+      "description": "Preferred communication methods",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Email",
+          "Phone/Call",
+          "Video Conference",
+          "In-Person Meeting",
+          "Digital Platform",
+          "Social Media",
+          "Website",
+          "Newsletter",
+          "Reports",
+          "Surveys",
+          "Workshops",
+          "Conferences",
+          "Mobile App",
+          "Traditional Mail"
+        ]
       }
     },
+    "inputs": {
+      "type": "string",
+      "description": "Resources/info provided"
+    },
+    "outputs": {
+      "type": "string",
+      "description": "Benefits/outcomes received"
+    },
+    "expectations": {
+      "type": "string",
+      "description": "What stakeholder expects from organization"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Required dependencies"
+    },
+    "relatedStakeholders": {
+      "type": "string",
+      "description": "Related/linked stakeholders"
+    },
+    "geographicScope": {
+      "type": "string",
+      "description": "Geographic scope of stakeholder",
+      "enum": [
+        "Local",
+        "Regional",
+        "National",
+        "International",
+        "Continental",
+        "Global"
+      ]
+    },
+    "industry": {
+      "type": "string",
+      "description": "Industry sector of stakeholder",
+      "enum": [
+        "Transportation",
+        "Government",
+        "Technology",
+        "Manufacturing",
+        "Financial Services",
+        "Healthcare",
+        "Energy",
+        "Retail",
+        "Education",
+        "Consulting",
+        "Construction",
+        "Agriculture",
+        "Media",
+        "Telecommunications",
+        "Non-Profit",
+        "Other"
+      ]
+    },
+    "organizationType": {
+      "type": "string",
+      "description": "Type of organization stakeholder represents",
+      "enum": [
+        "Government Agency",
+        "Private Company",
+        "Public Company",
+        "Non-Profit Organization",
+        "International Organization",
+        "Academic Institution",
+        "Industry Association",
+        "Partnership",
+        "Individual",
+        "Community Group"
+      ]
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Engagement effectiveness metrics"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Engagement risks"
+    },
+    "riskCategories": {
+      "type": "array",
+      "description": "Categories of risks",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Operational",
+          "Financial",
+          "Compliance/Regulatory",
+          "Reputational",
+          "Strategic",
+          "Communication",
+          "Relationship",
+          "External/Environmental",
+          "Technology",
+          "Legal"
+        ]
+      }
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Enhancement areas"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "Goal alignment"
+    },
     "stakeholderRequirements": {
+      "type": "array",
+      "description": "Specific requirements from stakeholder",
+      "items": {
+        "$ref": "#/elements/StakeholderRequirement"
+      }
+    }
+  },
+  "required": ["title", "tType", "description"],
+  "additionalProperties": false,
+  "elements": {
+    "StakeholderRequirement": {
       "type": "object",
-      "description": "Specific needs or expectations from stakeholders that the organization must address",
-      "properties": {
+      "description": "A specific requirement from a stakeholder",
+      "attributes": {
         "title": {
           "type": "string",
-          "description": "The name or title of the Stakeholder requirement"
+          "description": "Name/title of requirement"
         },
         "description": {
           "type": "string",
-          "description": "A detailed explanation of the Stakeholder requirement"
+          "description": "Detailed explanation"
         },
         "purpose": {
           "type": "string",
-          "description": "The intended purpose or benefit of the Stakeholder requirement"
+          "description": "Intended purpose/benefit"
         },
         "owner": {
           "type": "string",
-          "description": "The individual or team responsible for fulfilling the requirement"
+          "description": "Responsible fulfiller"
         },
         "orgUnitTitle": {
           "type": "string",
-          "description": "The Organization unit(s) impacted by the requirement"
+          "description": "Impacted organization units"
+        },
+        "priority": {
+          "type": "string",
+          "description": "Requirement priority level",
+          "enum": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "requirementType": {
+          "type": "string",
+          "description": "Type of requirement",
+          "enum": [
+            "Functional",
+            "Non-Functional",
+            "Compliance",
+            "Business",
+            "Technical",
+            "User Experience"
+          ]
         },
         "acceptanceCriteria": {
           "type": "string",
-          "description": "The criteria for accepting the Stakeholder requirement"
+          "description": "Acceptance criteria"
+        },
+        "timeline": {
+          "type": "string",
+          "description": "Expected timeline for fulfillment"
         },
         "dependencies": {
           "type": "string",
-          "description": "The dependencies related to the Stakeholder requirement"
+          "description": "Related dependencies"
+        },
+        "complianceFramework": {
+          "type": "string",
+          "description": "Regulatory requirement framework",
+          "enum": [
+            "ISO Standards",
+            "Government Regulation",
+            "Industry Standard",
+            "Internal Policy",
+            "International Treaty",
+            "Professional Standard"
+          ]
         },
         "regulatoryCompliance": {
           "type": "string",
-          "description": "The regulatory requirements associated with the Stakeholder requirement"
+          "description": "Regulatory requirements"
+        },
+        "measurementCriteria": {
+          "type": "string",
+          "description": "How requirement success is measured"
+        },
+        "riskLevel": {
+          "type": "string",
+          "description": "Risk level if not met",
+          "enum": [
+            "High Risk",
+            "Medium Risk",
+            "Low Risk"
+          ]
         }
-      }
+      },
+      "required": ["title", "description", "purpose"],
+      "additionalProperties": false
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Federal Railroad Administration",
+      "tType": "Regulatory Body",
+      "description": "Federal agency responsible for railroad safety regulation and oversight",
+      "role": "Establish and enforce railroad safety standards and regulations",
+      "orgUnitTitle": "Regulatory Compliance Division",
+      "stakeholderCategory": "External Stakeholder",
+      "influenceLevel": "High Influence",
+      "interestLevel": "High Interest",
+      "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
+      "engagementFrequency": "Monthly",
+      "communicationChannels": ["Email", "In-Person Meeting", "Reports"],
+      "expectations": "Full compliance with safety regulations, timely incident reporting",
+      "geographicScope": "National",
+      "industry": "Government",
+      "organizationType": "Government Agency",
+      "riskCategories": ["Compliance/Regulatory", "Reputational"],
+      "strategicAlignment": "Critical for maintaining operating licenses and safety compliance",
+      "stakeholderRequirements": [
+        {
+          "title": "Monthly Safety Reporting",
+          "description": "Submit comprehensive monthly safety performance reports",
+          "purpose": "Ensure regulatory oversight and compliance monitoring",
+          "owner": "Chief Safety Officer",
+          "orgUnitTitle": "Safety Compliance Division",
+          "priority": "Critical",
+          "requirementType": "Compliance",
+          "acceptanceCriteria": "Reports submitted by 5th of each month with 99.5% data accuracy",
+          "complianceFramework": "Government Regulation",
+          "regulatoryCompliance": "49 CFR Part 225 - Railroad Accidents/Incidents",
+          "riskLevel": "High Risk"
+        }
+      ]
+    },
+    {
+      "title": "Railway Technology Solutions Ltd",
+      "tType": "Strategic Partner",
+      "description": "Technology company providing AI-powered track monitoring solutions",
+      "role": "Develop and maintain predictive maintenance technology systems",
+      "stakeholderCategory": "External Stakeholder",
+      "influenceLevel": "Medium Influence",
+      "interestLevel": "High Interest",
+      "engagementStrategies": "Joint product development, regular technical reviews, innovation workshops",
+      "engagementFrequency": "Weekly",
+      "communicationChannels": ["Video Conference", "Digital Platform", "Workshops"],
+      "inputs": "Technical expertise, software development, system integration",
+      "outputs": "Licensing fees, partnership opportunities, market access",
+      "geographicScope": "International",
+      "industry": "Technology",
+      "organizationType": "Private Company",
+      "strategicAlignment": "Enables digital transformation and predictive maintenance capabilities"
+    },
+    {
+      "title": "Downtown Residents Association",
+      "tType": "Community Representative",
+      "description": "Local community group representing residents near railway operations",
+      "role": "Advocate for community safety and noise reduction concerns",
+      "stakeholderCategory": "External Stakeholder",
+      "influenceLevel": "Low Influence",
+      "interestLevel": "High Interest",
+      "engagementStrategies": "Community meetings, public consultations, safety briefings",
+      "engagementFrequency": "Quarterly",
+      "communicationChannels": ["In-Person Meeting", "Newsletter", "Website"],
+      "expectations": "Minimal noise disruption, advance notice of maintenance activities",
+      "geographicScope": "Local",
+      "industry": "Non-Profit",
+      "organizationType": "Community Group",
+      "riskCategories": ["Reputational", "Operational"],
+      "stakeholderRequirements": [
+        {
+          "title": "Noise Level Compliance",
+          "description": "Maintain railway noise levels within city ordinance limits",
+          "purpose": "Ensure community quality of life standards",
+          "priority": "Medium",
+          "requirementType": "Compliance",
+          "acceptanceCriteria": "Noise levels below 65dB during nighttime hours",
+          "complianceFramework": "Government Regulation",
+          "riskLevel": "Medium Risk"
+        }
+      ]
+    }
+  ]
 }
