@@ -1,89 +1,296 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orthogramic.com/schemas/organization.schema.json",
   "title": "Organization Domain Schema",
-  "description": "Schema for the structured entity within which activities and value delivery occur to achieve strategic objectives",
+  "description": "Schema for the Organization domain in the Orthogramic Metamodel with global enumeration support",
   "type": "object",
-  "properties": {
-    "organization": {
-      "type": "object",
-      "description": "Represents the structured entity that enables the flow of value to customers, stakeholders, or outcomes",
-      "properties": {
-        "orgTitle": {
-          "type": "string",
-          "description": "The name or title of the Organization"
-        },
-        "description": {
-          "type": "string",
-          "description": "A detailed explanation of what the Organization entails"
-        },
-        "structure": {
-          "type": "string",
-          "description": "The Organization structure of the company"
-        },
-        "roles": {
-          "type": "string",
-          "description": "The roles within the Organization"
-        },
-        "missionStatement": {
-          "type": "string",
-          "description": "The mission of the Organization"
-        },
-        "visionStatement": {
-          "type": "string",
-          "description": "The vision of the Organization"
-        },
-        "values": {
-          "type": "string",
-          "description": "The core values guiding the Organization"
-        },
-        "strategicGoals": {
-          "type": "string",
-          "description": "Long-term goals that align with the mission and vision"
-        },
-        "stakeholders": {
-          "type": "string",
-          "description": "Key Stakeholders of the Organization"
-        },
-        "governance": {
-          "type": "string",
-          "description": "The governance framework and policies"
-        },
-        "legalStructure": {
-          "type": "string",
-          "description": "The legal structure of the Organization"
-        },
-        "geographicPresence": {
-          "type": "string",
-          "description": "Locations and geographic reach of the Organization"
-        },
-        "size": {
-          "type": "string",
-          "description": "The size of the Organization in terms of employees, revenue etc"
-        },
-        "culture": {
-          "type": "string",
-          "description": "The culture within the Organization"
-        },
-        "history": {
-          "type": "string",
-          "description": "The history and milestones of the Organization"
-        },
-        "strategicInitiatives": {
-          "type": "string",
-          "description": "Key Initiatives to drive strategic goals"
-        }
+  "attributes": {
+    "orgTitle": {
+      "type": "string",
+      "description": "The name or title of the Organization",
+      "examples": ["Office of Railroad Safety", "Deutsche Bahn AG", "Singapore Railways Corporation"]
+    },
+    "orgShortName": {
+      "type": "string",
+      "description": "Shortened form of organization name",
+      "examples": ["Railroad Safety", "DB", "SRC"]
+    },
+    "orgType": {
+      "type": "string",
+      "description": "Type of organization",
+      "enum": [
+        "Government Agency",
+        "Federal/National Agency",
+        "State/Provincial Agency",
+        "Regional Authority",
+        "Local/Municipal Authority",
+        "Public Limited Company",
+        "Private Limited Company",
+        "Corporation",
+        "Limited Liability Company",
+        "Partnership",
+        "Sole Proprietorship",
+        "Cooperative",
+        "Joint Venture",
+        "Non-Profit Organization",
+        "Crown Corporation",
+        "State-Owned Enterprise",
+        "International Organization",
+        "Other"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "description": "The country where the organization is headquartered or primarily operates",
+      "examples": ["United States of America", "Germany", "Singapore", "United Kingdom", "Australia"]
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Organization entails"
+    },
+    "structure": {
+      "type": "string",
+      "description": "The Organization structure of the company",
+      "examples": ["5 Regional Offices - 8 Technical Divisions", "Matrix organization with 12 business units", "Flat structure with 6 departments"]
+    },
+    "structureType": {
+      "type": "string",
+      "description": "Type of organizational structure",
+      "enum": [
+        "Functional",
+        "Divisional", 
+        "Matrix",
+        "Hierarchical",
+        "Flat/Horizontal",
+        "Regional",
+        "Country-based",
+        "Global/Transnational",
+        "Hub-and-Spoke",
+        "Distributed/Decentralized",
+        "Network",
+        "Virtual/Remote",
+        "Hybrid",
+        "Product-based",
+        "Customer/Market-based",
+        "Service Line-based",
+        "Project-based",
+        "Team-of-Teams",
+        "Cross-functional Squads",
+        "Other"
+      ]
+    },
+    "roles": {
+      "type": "string", 
+      "description": "The roles within the Organization"
+    },
+    "missionStatement": {
+      "type": "string",
+      "description": "The mission of the Organization"
+    },
+    "visionStatement": {
+      "type": "string", 
+      "description": "The vision of the Organization"
+    },
+    "values": {
+      "type": "string",
+      "description": "The core values guiding the Organization"
+    },
+    "legalStructure": {
+      "type": "string",
+      "description": "The legal structure of the Organization",
+      "enum": [
+        "Federal/National Agency",
+        "State/Provincial Agency", 
+        "Regional Authority",
+        "Local/Municipal Authority",
+        "Autonomous Public Body",
+        "Crown Corporation",
+        "State-Owned Enterprise",
+        "Government-Linked Company",
+        "Public Limited Company",
+        "Private Limited Company", 
+        "Corporation",
+        "Limited Liability Company",
+        "Partnership",
+        "Limited Partnership",
+        "Limited Liability Partnership",
+        "Sole Proprietorship",
+        "Cooperative/Mutual Society",
+        "Joint Stock Company",
+        "Public-Private Partnership",
+        "Joint Venture",
+        "Consortium",
+        "Special Purpose Vehicle",
+        "Trust",
+        "Foundation",
+        "Non-Governmental Organization",
+        "International Organization",
+        "Supranational Entity",
+        "Other"
+      ]
+    },
+    "geographicPresence": {
+      "type": "string",
+      "description": "Locations and geographic reach of the Organization"
+    },
+    "geographicScope": {
+      "type": "string",
+      "description": "Geographic scope of operations",
+      "enum": [
+        "Local (City/Metropolitan)",
+        "Regional (State/Province)",
+        "National",
+        "Multi-national",
+        "Continental", 
+        "Global/Worldwide",
+        "Cross-border",
+        "Regional Bloc",
+        "Emerging Markets",
+        "Developed Markets",
+        "Asia-Pacific (APAC)",
+        "Europe, Middle East, Africa (EMEA)",
+        "Americas",
+        "Virtual/Digital Presence Only"
+      ]
+    },
+    "operationalModel": {
+      "type": "string",
+      "description": "Operational model for geographic presence",
+      "enum": [
+        "Centralized Operations",
+        "Decentralized Operations",
+        "Hub-and-Spoke Model",
+        "Distributed Network",
+        "Franchise Model",
+        "Licensing Model",
+        "Representative Offices",
+        "Joint Ventures",
+        "Strategic Partnerships"
+      ]
+    },
+    "size": {
+      "type": "string",
+      "description": "The size of the Organization in terms of employees, revenue etc."
+    },
+    "currency": {
+      "type": "string",
+      "description": "Primary currency for financial reporting",
+      "enum": [
+        "USD",
+        "EUR", 
+        "GBP",
+        "JPY",
+        "CNY",
+        "CHF",
+        "CAD",
+        "AUD",
+        "SGD",
+        "INR",
+        "BRL",
+        "Local Currency",
+        "Multi-currency"
+      ]
+    },
+    "culture": {
+      "type": "string",
+      "description": "The culture within the Organization"
+    },
+    "cultureType": {
+      "type": "string",
+      "description": "Type of organizational culture",
+      "enum": [
+        "High-Context Culture",
+        "Low-Context Culture", 
+        "Hierarchical Culture",
+        "Egalitarian Culture",
+        "Individual-focused",
+        "Collective-focused",
+        "Risk-Averse",
+        "Risk-Taking",
+        "Innovation-focused",
+        "Process-focused",
+        "Customer-centric",
+        "Employee-centric",
+        "Performance-driven",
+        "Collaborative"
+      ]
+    },
+    "history": {
+      "type": "string",
+      "description": "The history and milestones of the Organization"
+    },
+    "complianceFrameworks": {
+      "type": "array",
+      "description": "Regulatory and compliance frameworks applicable to the organization",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ISO 9001 (Quality Management)",
+          "ISO 14001 (Environmental Management)",
+          "ISO 27001 (Information Security)",
+          "ISO 45001 (Occupational Health & Safety)",
+          "SOX (Sarbanes-Oxley)",
+          "GDPR (General Data Protection Regulation)",
+          "HIPAA (Health Insurance Portability)",
+          "PCI DSS (Payment Card Industry)",
+          "Basel III (Banking)",
+          "Solvency II (Insurance)",
+          "MiFID II (Financial Markets)",
+          "COSO Framework",
+          "COBIT Framework",
+          "NIST Cybersecurity Framework",
+          "Local Regulatory Requirements",
+          "Industry-Specific Standards",
+          "Other"
+        ]
+      }
+    },
+    "primaryLanguages": {
+      "type": "array",
+      "description": "Primary languages used in the organization",
+      "items": {
+        "type": "string",
+        "enum": [
+          "English",
+          "Mandarin Chinese",
+          "Spanish", 
+          "Hindi",
+          "Arabic",
+          "Portuguese",
+          "Russian",
+          "Japanese",
+          "French",
+          "German",
+          "Korean",
+          "Italian",
+          "Dutch",
+          "Swedish",
+          "Local/Regional Language",
+          "Multi-lingual"
+        ]
       }
     },
     "organizationUnits": {
+      "type": "array",
+      "description": "Sub-organization units within this organization",
+      "items": {
+        "$ref": "#/elements/OrganizationUnit"
+      }
+    }
+  },
+  "required": ["orgTitle", "orgType", "country", "description", "legalStructure"],
+  "additionalProperties": false,
+  "elements": {
+    "OrganizationUnit": {
       "type": "object",
-      "description": "A sub-division or entity within an organization that focuses on specific functions, processes, or objectives",
-      "properties": {
+      "description": "A sub-division or entity within an organization",
+      "attributes": {
         "orgUnitTitle": {
           "type": "string",
           "description": "The name or title of the Organization unit"
         },
         "description": {
-          "type": "string",
+          "type": "string", 
           "description": "A detailed explanation of what the Organization unit entails"
         },
         "purpose": {
@@ -99,64 +306,96 @@
           "description": "The Organization or Organization unit above in the Organization hierarchy"
         },
         "subOrganizationUnits": {
-          "type": "string",
-          "description": "Sub-Organization units directly below this Organization unit in the Organization hierarchy"
+          "type": "array",
+          "description": "Sub-Organization units directly below this Organization unit",
+          "items": {
+            "type": "string"
+          }
         },
         "roles": {
           "type": "string",
           "description": "Specific roles within the Organization unit"
-        },
-        "processes": {
-          "type": "string",
-          "description": "Key processes carried out by the Organization unit"
-        },
-        "performanceIndicators": {
-          "type": "string",
-          "description": "Metrics used to measure effectiveness and efficiency"
-        },
-        "dependencies": {
-          "type": "string",
-          "description": "Other units, processes or systems that the unit depends on"
-        },
-        "relatedUnits": {
-          "type": "string",
-          "description": "Organization units that are related or linked"
-        },
-        "risks": {
-          "type": "string",
-          "description": "Potential risks associated with operations"
-        },
-        "improvementOpportunities": {
-          "type": "string",
-          "description": "Areas for enhancement or improvement"
-        },
-        "strategicAlignment": {
-          "type": "string",
-          "description": "Alignment with strategic goals and objectives"
         }
-      }
-    },
-    "domainRelationships": {
-      "type": "object",
-      "description": "Relationships between organization units and different business architecture domain entities",
-      "properties": {
-        "domainEntityName": {
-          "type": "string",
-          "description": "Name of the domain entity involved in the relationship"
-        },
-        "domainEntityType": {
-          "type": "string",
-          "description": "Type of domain entity (Capability, Service, Information, etc.)"
-        },
-        "relationshipRole": {
-          "type": "string",
-          "description": "Role in the relationship (Owning unit, Providing unit, Consuming unit, etc.)"
-        },
-        "description": {
-          "type": "string",
-          "description": "Details about the nature of the relationship"
-        }
-      }
+      },
+      "required": ["orgUnitTitle", "description", "purpose", "owner"],
+      "additionalProperties": false
     }
-  }
+  },
+  "examples": [
+    {
+      "orgTitle": "Office of Railroad Safety",
+      "orgShortName": "Railroad Safety",
+      "orgType": "Government Agency",
+      "country": "United States of America",
+      "description": "Regional safety oversight office responsible for inspections and enforcement of federal railroad safety regulations in the Northeast corridor",
+      "structure": "5 Regional Offices - 8 Technical Divisions",
+      "structureType": "Regional",
+      "missionStatement": "Reduce railroad-related accidents through proactive inspections and data-driven safety programs",
+      "visionStatement": "Zero train accidents and employee injuries through technology-enabled safety systems",
+      "values": "Safety First, Data-Driven Decisions, Continuous Improvement",
+      "legalStructure": "Federal/National Agency",
+      "geographicScope": "National",
+      "operationalModel": "Decentralized Operations",
+      "currency": "USD",
+      "cultureType": "Process-focused",
+      "history": "Est. 1966, implemented PTC mandate 2008, achieved 99.6% compliance 2023",
+      "complianceFrameworks": ["Local Regulatory Requirements"],
+      "primaryLanguages": ["English"],
+      "organizationUnits": [
+        {
+          "orgUnitTitle": "Track and Rail Infrastructure Division",
+          "description": "Oversees track safety standards and inspection programs across the national rail network",
+          "purpose": "Maintain Class 1-5 track safety standards compliance",
+          "owner": "Director of Track Safety",
+          "higherOrganizationUnit": "Office of Railroad Safety",
+          "subOrganizationUnits": ["Track Geometry Program", "Rail Defect Detection", "Bridge Safety Unit"],
+          "roles": "Senior Track Inspector, Rail Integrity Specialist, Bridge Safety Engineer"
+        }
+      ]
+    },
+    {
+      "orgTitle": "Deutsche Bahn AG",
+      "orgShortName": "DB",
+      "orgType": "Public Limited Company",
+      "country": "Germany",
+      "description": "National railway company providing passenger and freight transportation services across Germany and Europe",
+      "structureType": "Divisional",
+      "missionStatement": "Connect people and markets through sustainable mobility solutions",
+      "visionStatement": "Leading integrated mobility provider in Europe",
+      "values": "Customer Focus, Sustainability, Innovation, Reliability",
+      "legalStructure": "Public Limited Company",
+      "geographicScope": "Multi-national",
+      "operationalModel": "Hub-and-Spoke Model",
+      "currency": "EUR",
+      "cultureType": "Customer-centric",
+      "size": "338,000 employees, €44.4B annual revenue",
+      "complianceFrameworks": [
+        "ISO 9001 (Quality Management)",
+        "ISO 14001 (Environmental Management)",
+        "GDPR (General Data Protection Regulation)"
+      ],
+      "primaryLanguages": ["German", "English"]
+    },
+    {
+      "orgTitle": "Singapore Digital Railways Corporation",
+      "orgShortName": "SDRC",
+      "orgType": "State-Owned Enterprise",
+      "country": "Singapore",
+      "description": "Technology-focused urban rail operator providing smart transportation solutions",
+      "structureType": "Matrix",
+      "missionStatement": "Transform urban mobility through innovative digital rail solutions",
+      "visionStatement": "World's smartest rail network by 2030",
+      "values": "Innovation, Excellence, Sustainability, Customer Delight",
+      "legalStructure": "State-Owned Enterprise",
+      "geographicScope": "Local (City/Metropolitan)",
+      "operationalModel": "Centralized Operations",
+      "currency": "SGD",
+      "cultureType": "Innovation-focused",
+      "complianceFrameworks": [
+        "ISO 27001 (Information Security)",
+        "Local Regulatory Requirements"
+      ],
+      "primaryLanguages": ["English", "Mandarin Chinese"]
+    }
+  ]
 }
