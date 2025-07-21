@@ -1,12 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orthogramic.com/schemas/capabilities.schema.json",
   "title": "Capabilities Domain Schema",
-  "description": "Schema for the Capabilities domain in the Orthogramic Metamodel",
+  "description": "Schema for the Capabilities domain in the Orthogramic Metamodel with global enumeration support",
   "type": "object",
-  "properties": {
+  "attributes": {
     "title": {
       "type": "string",
-      "description": "The name or title of the Capability"
+      "description": "The name or title of the Capability",
+      "examples": ["Automated Track Inspection System", "Customer Data Analytics", "Digital Innovation Platform"]
     },
     "description": {
       "type": "string",
@@ -14,7 +16,7 @@
     },
     "purpose": {
       "type": "string",
-      "description": "The intended purpose or function of the Capability within the Organization"
+      "description": "The intended purpose or function within the Organization"
     },
     "owner": {
       "type": "string",
@@ -22,208 +24,567 @@
     },
     "orgUnitTitle": {
       "type": "string",
-      "description": "The Organization unit(s) to which the Capability is linked"
+      "description": "The organization unit(s) to which the Capability is linked"
+    },
+    "capabilityCategory": {
+      "type": "string",
+      "description": "Broad categorization of capability type",
+      "enum": [
+        "Core Business",
+        "Supporting",
+        "Enabling",
+        "Strategic",
+        "Foundational",
+        "Distinctive"
+      ]
+    },
+    "capabilityType": {
+      "type": "string",
+      "description": "Specific type of capability",
+      "enum": [
+        "Operational",
+        "Technical",
+        "Business",
+        "Governance",
+        "Innovation",
+        "Analytical",
+        "Digital",
+        "Customer"
+      ]
+    },
+    "businessDomain": {
+      "type": "string",
+      "description": "Business domain area",
+      "enum": [
+        "Operations",
+        "Finance",
+        "Technology",
+        "Human Resources",
+        "Sales & Marketing",
+        "Customer Service",
+        "Legal & Compliance",
+        "Research & Development",
+        "Quality Assurance",
+        "Strategy & Planning",
+        "Procurement",
+        "Facilities"
+      ]
     },
     "inputs": {
       "type": "string",
-      "description": "The resources, information, or materials required for the Capability to function"
+      "description": "Required resources/information/materials"
     },
     "outputs": {
       "type": "string",
-      "description": "The deliverables or results produced by the Capability"
+      "description": "Deliverables or results produced"
     },
-    "processes": {
-      "type": "string",
-      "description": "The set of processes that define how the Capability operates"
-    },
+
     "performanceIndicators": {
       "type": "string",
-      "description": "Metrics used to measure the effectiveness and efficiency of the Capability"
+      "description": "Effectiveness and efficiency metrics"
     },
     "dependencies": {
       "type": "string",
-      "description": "Other capabilities, processes, or systems that the Capability depends on"
+      "description": "Other capabilities, processes, or systems required"
     },
     "relatedCapabilities": {
       "type": "string",
-      "description": "Capabilities that are related or linked to this Capability"
+      "description": "Capabilities that are related or linked"
     },
     "maturityLevel": {
       "type": "string",
-      "description": "The current maturity level of the Capability"
+      "description": "Current maturity level of the Capability",
+      "enum": [
+        "Level 1 - Initial",
+        "Level 2 - Repeatable",
+        "Level 3 - Defined",
+        "Level 4 - Managed",
+        "Level 5 - Optimizing"
+      ]
+    },
+    "targetMaturityLevel": {
+      "type": "string",
+      "description": "Desired future maturity level",
+      "enum": [
+        "Level 1 - Initial",
+        "Level 2 - Repeatable",
+        "Level 3 - Defined",
+        "Level 4 - Managed",
+        "Level 5 - Optimizing"
+      ]
     },
     "toolsAndTechnologies": {
       "type": "string",
-      "description": "Tools and technologies used to support or enable the Capability"
-    },
-    "complianceAndStandards": {
-      "type": "string",
-      "description": "Regulatory requirements and standards the Capability must adhere to"
+      "description": "Tools and technologies used to support the Capability"
     },
     "cost": {
       "type": "string",
-      "description": "The financial cost associated with implementing and maintaining the Capability"
+      "description": "Financial cost for implementation and maintenance"
+    },
+    "investmentCategory": {
+      "type": "string",
+      "description": "Type of investment required",
+      "enum": [
+        "CAPEX",
+        "OPEX",
+        "Mixed",
+        "People",
+        "Technology",
+        "Process"
+      ]
     },
     "risks": {
       "type": "string",
-      "description": "Potential risks associated with the Capability and its operations"
+      "description": "Potential risks associated with the Capability"
+    },
+    "riskCategories": {
+      "type": "array",
+      "description": "Categories of risks",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Technical/Technology",
+          "Operational",
+          "Financial",
+          "Compliance/Regulatory",
+          "Strategic",
+          "Resource/Capacity",
+          "External/Environmental",
+          "Security/Cybersecurity",
+          "Reputational",
+          "Change Management"
+        ]
+      }
     },
     "improvementOpportunities": {
       "type": "string",
-      "description": "Areas where the Capability can be enhanced or improved"
+      "description": "Areas for enhancement or improvement"
     },
     "strategicAlignment": {
       "type": "string",
-      "description": "How the Capability aligns with the Organizations strategic goals and objectives"
+      "description": "Alignment with strategic goals and objectives"
+    },
+    "criticality": {
+      "type": "string",
+      "description": "Business criticality level",
+      "enum": [
+        "Critical",
+        "High",
+        "Medium",
+        "Low"
+      ]
+    },
+    "availability": {
+      "type": "string",
+      "description": "Availability requirement",
+      "enum": [
+        "24/7",
+        "Business Hours",
+        "On-Demand",
+        "Seasonal",
+        "Scheduled"
+      ]
+    },
+    "scalability": {
+      "type": "string",
+      "description": "Scalability characteristics",
+      "enum": [
+        "Highly Scalable",
+        "Moderately Scalable",
+        "Limited Scalability",
+        "Not Scalable"
+      ]
     },
     "parent": {
       "type": "string",
-      "description": "A high-level Capability that encompasses multiple sub-capabilities or child capabilities"
+      "description": "High-level Capability that encompasses this capability"
     },
     "child": {
       "type": "string",
-      "description": "A specific Capability that falls under a broader parent Capability"
+      "description": "Specific Capability that falls under this capability"
     },
-    "childProcess": {
-      "type": "string",
-      "description": "A detailed process that supports a child Capability"
+    "capabilityFunctions": {
+      "type": "array",
+      "description": "Functions that define capability purpose",
+      "items": {
+        "$ref": "#/elements/CapabilityFunction"
+      }
     },
-    "capabilityFunction": {
+    "capabilityComponents": {
+      "type": "array",
+      "description": "Structural elements of the capability",
+      "items": {
+        "$ref": "#/elements/CapabilityComponent"
+      }
+    },
+    "capabilityProcesses": {
+      "type": "array",
+      "description": "Processes that drive capability operation",
+      "items": {
+        "$ref": "#/elements/CapabilityProcess"
+      }
+    }
+  },
+  "required": ["title", "description", "purpose", "owner"],
+  "additionalProperties": false,
+  "elements": {
+    "CapabilityFunction": {
       "type": "object",
-      "description": "The function of the Capability",
-      "properties": {
+      "description": "A function that defines the overarching purpose of a capability",
+      "attributes": {
         "title": {
           "type": "string",
-          "description": "The name or title of the function"
+          "description": "Name/title of the function"
         },
         "description": {
           "type": "string",
-          "description": "A detailed explanation of what the function involves"
+          "description": "Detailed explanation of the function"
         },
         "purpose": {
           "type": "string",
-          "description": "The intended purpose or function of the activity"
+          "description": "Intended purpose of the function"
         },
         "owner": {
           "type": "string",
-          "description": "The individual or team responsible for the function"
+          "description": "Individual/team responsible for the function"
         },
         "orgUnitTitle": {
           "type": "string",
-          "description": "The Organization unit(s) where the function resides"
+          "description": "Organization unit(s) where function resides"
+        },
+        "functionType": {
+          "type": "string",
+          "description": "Type of function",
+          "enum": [
+            "Primary",
+            "Secondary",
+            "Supporting",
+            "Enabling"
+          ]
         },
         "inputs": {
           "type": "string",
-          "description": "The inputs required to perform the function"
+          "description": "Required inputs to perform the function"
         },
         "outputs": {
           "type": "string",
-          "description": "The outputs or deliverables produced by the function"
+          "description": "Outputs or deliverables produced"
         },
         "processes": {
           "type": "string",
-          "description": "The processes involved in the function"
+          "description": "Processes involved in the function"
+        },
+        "performanceMetrics": {
+          "type": "string",
+          "description": "Metrics for measuring function effectiveness"
+        },
+        "frequency": {
+          "type": "string",
+          "description": "How often the function is performed",
+          "enum": [
+            "Continuous",
+            "Real-time",
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Quarterly",
+            "Annually",
+            "On-Demand"
+          ]
         }
-      }
+      },
+      "required": ["title", "description", "purpose"],
+      "additionalProperties": false
     },
-    "capabilityComponent": {
-      "type": "array",
-      "description": "The components that make up the Capability",
-      "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The name or title of the Capability component"
-          },
-          "description": {
-            "type": "string",
-            "description": "A detailed explanation of what the Capability component involves"
-          },
-          "purpose": {
-            "type": "string",
-            "description": "The intended purpose or benefit of the Capability component"
-          },
-          "owner": {
-            "type": "string",
-            "description": "The individual or team responsible for the Capability component"
-          },
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "The Organization unit(s) utilizing the Capability component"
-          },
-          "technologies": {
-            "type": "string",
-            "description": "The technologies and tools used for the Capability component"
-          },
-          "processes": {
-            "type": "string",
-            "description": "The processes involved in the Capability component"
-          },
-          "skills": {
-            "type": "string",
-            "description": "The skills and competencies required for the Capability component"
-          }
+    "CapabilityComponent": {
+      "type": "object",
+      "description": "A structural element that makes up a capability",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "description": "Name/title of the component"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed explanation of the component"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Intended purpose/benefit of the component"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Individual/team responsible for the component"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit(s) utilizing the component"
+        },
+        "componentType": {
+          "type": "string",
+          "description": "Type of component",
+          "enum": [
+            "People",
+            "Process",
+            "Technology",
+            "Information",
+            "Infrastructure"
+          ]
+        },
+        "technologies": {
+          "type": "string",
+          "description": "Technologies and tools used"
+        },
+        "processes": {
+          "type": "string",
+          "description": "Processes involved in the component"
+        },
+        "skills": {
+          "type": "string",
+          "description": "Skills and competencies required"
+        },
+        "vendor": {
+          "type": "string",
+          "description": "External vendor or supplier"
+        },
+        "lifecycle": {
+          "type": "string",
+          "description": "Lifecycle stage of component",
+          "enum": [
+            "Planning",
+            "Development",
+            "Implementation",
+            "Operations",
+            "Enhancement",
+            "Retirement"
+          ]
+        },
+        "cost": {
+          "type": "string",
+          "description": "Cost associated with the component"
         }
-      }
+      },
+      "required": ["title", "description", "purpose"],
+      "additionalProperties": false
     },
-    "capabilityProcess": {
-      "type": "array",
-      "description": "The processes within the Capability",
-      "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The name or title of the Process"
-          },
-          "description": {
-            "type": "string",
-            "description": "A detailed explanation of what the Process entails"
-          },
-          "purpose": {
-            "type": "string",
-            "description": "The intended purpose or function of the Process"
-          },
-          "owner": {
-            "type": "string",
-            "description": "The individual or team responsible for the Process"
-          },
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "The Organization unit(s) where the Process resides"
-          },
-          "parentCapability": {
-            "type": "string",
-            "description": "The Capability this Process supports"
-          },
-          "inputs": {
-            "type": "string",
-            "description": "The inputs required to perform the Process"
-          },
-          "outputs": {
-            "type": "string",
-            "description": "The outputs or deliverables produced by the Process"
-          },
-          "steps": {
-            "type": "string",
-            "description": "Detailed steps involved in the Process"
-          },
-          "performanceMetrics": {
-            "type": "string",
-            "description": "Metrics used to measure Process effectiveness"
-          },
-          "complianceRequirements": {
-            "type": "string",
-            "description": "Regulatory requirements governing the Process"
-          },
-          "toolsRequired": {
-            "type": "string",
-            "description": "Tools and equipment needed for the Process"
-          }
+    "CapabilityProcess": {
+      "type": "object",
+      "description": "A process that drives the capability's operation",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "description": "Name/title of the Process"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed explanation of the Process"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Intended purpose/function of the Process"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Individual/team responsible for the Process"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Organization unit(s) where Process resides"
+        },
+        "parentCapability": {
+          "type": "string",
+          "description": "The Capability this Process supports"
+        },
+        "processType": {
+          "type": "string",
+          "description": "Type of process",
+          "enum": [
+            "Core",
+            "Support",
+            "Management",
+            "Governance"
+          ]
+        },
+        "processCategory": {
+          "type": "string",
+          "description": "Process category",
+          "enum": [
+            "Operational",
+            "Strategic",
+            "Tactical",
+            "Administrative"
+          ]
+        },
+        "inputs": {
+          "type": "string",
+          "description": "Required inputs to perform the Process"
+        },
+        "outputs": {
+          "type": "string",
+          "description": "Outputs or deliverables produced"
+        },
+        "steps": {
+          "type": "string",
+          "description": "Detailed steps involved in the Process"
+        },
+        "performanceMetrics": {
+          "type": "string",
+          "description": "Metrics used to measure Process effectiveness"
+        },
+        "complianceRequirements": {
+          "type": "string",
+          "description": "Regulatory requirements governing the Process"
+        },
+        "toolsRequired": {
+          "type": "string",
+          "description": "Tools and equipment needed for the Process"
+        },
+        "duration": {
+          "type": "string",
+          "description": "Typical time to complete the process"
+        },
+        "frequency": {
+          "type": "string",
+          "description": "How often the process is executed",
+          "enum": [
+            "Continuous",
+            "Real-time",
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Quarterly",
+            "Annually",
+            "On-Demand"
+          ]
+        },
+        "automation": {
+          "type": "string",
+          "description": "Level of automation in the process",
+          "enum": [
+            "Manual",
+            "Semi-Automated",
+            "Fully Automated",
+            "AI-Enabled"
+          ]
+        },
+        "complexity": {
+          "type": "string",
+          "description": "Process complexity level",
+          "enum": [
+            "Simple",
+            "Moderate",
+            "Complex",
+            "Highly Complex"
+          ]
         }
-      }
+      },
+      "required": ["title", "description", "purpose", "owner"],
+      "additionalProperties": false
     }
-  }
+  },
+  "examples": [
+    {
+      "title": "Automated Track Inspection System",
+      "description": "AI-enabled system for continuous track geometry measurement and defect detection using advanced sensor technology",
+      "purpose": "Enhance track inspection efficiency and accuracy while reducing manual inspection requirements",
+      "owner": "Chief of Track Inspection Technology",
+      "orgUnitTitle": "Track and Rail Infrastructure Division",
+      "capabilityCategory": "Core Business",
+      "capabilityType": "Technical",
+      "businessDomain": "Operations",
+      "inputs": "Track geometry data, rail wear measurements, historical defect data",
+      "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
+      "maturityLevel": "Level 4 - Managed",
+      "targetMaturityLevel": "Level 5 - Optimizing",
+      "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
+      "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
+      "investmentCategory": "Mixed",
+      "riskCategories": ["Technical/Technology", "Operational"],
+      "criticality": "Critical",
+      "availability": "24/7",
+      "scalability": "Highly Scalable",
+      "parent": "Track Safety Assurance System",
+      "child": "Rail Profile Measurement",
+      "capabilityFunctions": [
+        {
+          "title": "Track Geometry Measurement",
+          "description": "Automated measurement of track geometry parameters using AI-enabled sensors",
+          "purpose": "Ensure compliance with FRA track geometry standards",
+          "owner": "Track Geometry Program Manager",
+          "orgUnitTitle": "Track Inspection Division",
+          "functionType": "Primary",
+          "inputs": "Raw sensor data, track class information",
+          "outputs": "Geometry exception reports, maintenance alerts",
+          "processes": "Data collection, analysis, reporting, validation",
+          "frequency": "Continuous"
+        }
+      ],
+      "capabilityComponents": [
+        {
+          "title": "Rail Wear Detection System",
+          "description": "Automated measurement of rail head wear and profile using laser profiling technology",
+          "purpose": "Monitor rail degradation and predict maintenance needs",
+          "owner": "Rail Integrity Program Lead",
+          "orgUnitTitle": "Track Maintenance Division",
+          "componentType": "Technology",
+          "technologies": "Laser profilers, ultrasonic sensors, analysis software",
+          "processes": "Data collection, wear analysis, reporting",
+          "skills": "Rail inspection certification, data analysis expertise",
+          "lifecycle": "Operations"
+        }
+      ],
+      "capabilityProcesses": [
+        {
+          "title": "Track Inspection and Assessment Process",
+          "description": "Standardized procedure for conducting comprehensive track inspections and safety assessments",
+          "purpose": "Ensure systematic evaluation of track conditions to maintain FRA safety standards",
+          "owner": "Chief Track Inspector",
+          "orgUnitTitle": "Track Safety Division",
+          "parentCapability": "Track Safety Assurance System",
+          "processType": "Core",
+          "processCategory": "Operational",
+          "inputs": "Track class specifications, Previous inspection data, Maintenance history",
+          "outputs": "Inspection reports, Defect notifications, Maintenance recommendations",
+          "steps": "1. Pre-inspection preparation, 2. Visual examination, 3. Geometry measurement, 4. Data analysis, 5. Report generation",
+          "performanceMetrics": "Inspection completion rate: 98%, Defect identification accuracy: 96%",
+          "complianceRequirements": "49 CFR Part 213 - Track Safety Standards",
+          "toolsRequired": "Track geometry car, Gauge measurement devices, Digital inspection tablets",
+          "duration": "4-6 hours per track segment",
+          "frequency": "Daily",
+          "automation": "Semi-Automated",
+          "complexity": "Complex"
+        }
+      ]
+    },
+    {
+      "title": "Digital Innovation Platform",
+      "description": "Comprehensive platform for managing innovation initiatives, from ideation to implementation",
+      "purpose": "Accelerate digital transformation and foster culture of continuous innovation",
+      "owner": "Chief Innovation Officer",
+      "orgUnitTitle": "Digital Transformation Office",
+      "capabilityCategory": "Strategic",
+      "capabilityType": "Innovation",
+      "businessDomain": "Strategy & Planning",
+      "maturityLevel": "Level 3 - Defined",
+      "targetMaturityLevel": "Level 4 - Managed",
+      "skillsRequired": ["Innovation", "Project Management", "Digital Literacy", "Change Management"],
+      "investmentCategory": "CAPEX",
+      "criticality": "High",
+      "scalability": "Moderately Scalable"
+    },
+    {
+      "title": "Enterprise Data Analytics Platform",
+      "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
+      "purpose": "Enable data-driven decision making and provide insights for operational optimization",
+      "owner": "Chief Data Officer",
+      "capabilityCategory": "Enabling",
+      "capabilityType": "Analytical",
+      "businessDomain": "Technology",
+      "maturityLevel": "Level 4 - Managed",
+      "investmentCategory": "Technology",
+      "criticality": "High",
+      "availability": "Business Hours",
+      "scalability": "Highly Scalable"
+    }
+  ]
 }
-
