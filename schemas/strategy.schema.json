@@ -1,121 +1,442 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://orthogramic.com/schemas/strategy.schema.json",
   "title": "Strategy Domain Schema",
-  "description": "Schema for the Strategy domain in the Orthogramic Metamodel",
+  "description": "Schema for the Strategy domain in the Orthogramic Metamodel with global enumeration support",
   "type": "object",
-  "properties": {
+  "attributes": {
     "title": {
       "type": "string",
-      "description": "The name or title of the Strategy"
+      "description": "Name/title of strategy",
+      "examples": ["Predictive Track Maintenance Program", "Digital Transformation Strategy", "Customer Excellence Initiative"]
     },
     "description": {
       "type": "string",
-      "description": "A detailed explanation of what the Strategy entails"
+      "description": "Detailed explanation"
     },
     "purpose": {
       "type": "string",
-      "description": "The intended purpose or function of the Strategy within the Organization"
+      "description": "Intended function"
     },
     "owner": {
       "type": "string",
-      "description": "The individual or team responsible for the Strategy"
+      "description": "Responsible individual/team"
     },
     "orgUnitTitle": {
       "type": "string",
-      "description": "The Organization unit(s) to which the Strategy is most closely linked"
+      "description": "Most closely linked organizational units"
+    },
+    "strategyCategory": {
+      "type": "string",
+      "description": "Broad categorization of strategy type",
+      "enum": [
+        "Military",
+        "Political",
+        "Diplomatic",
+        "Economic",
+        "Intelligence",
+        "Corporate",
+        "Geopolitical",
+        "Social Movement",
+        "Technological",
+        "Resource Control",
+        "Information",
+        "Legal/Judicial"
+      ]
+    },
+    "strategyType": {
+      "type": "string",
+      "description": "Specific type of strategy",
+      "enum": [
+        "Offensive",
+        "Defensive",
+        "Containment",
+        "Deterrence",
+        "Attrition",
+        "Blitzkrieg",
+        "Asymmetric",
+        "Coalition Building",
+        "Divide and Conquer",
+        "Encirclement",
+        "Infiltration",
+        "Scorched Earth",
+        "Flanking",
+        "Preemption",
+        "Escalation",
+        "De-escalation",
+        "Provocation",
+        "Deception",
+        "Accumulation",
+        "Disruption",
+        "Withdrawal",
+        "Retrenchment",
+        "Transition",
+        "Abandonment",
+        "Appeasement",
+        "Capitulation"
+      ]
+    },
+    "strategicFocus": {
+      "type": "string",
+      "description": "Primary focus area",
+      "enum": [
+        "Power Accumulation",
+        "Power Preservation",
+        "Power Transfer",
+        "Power Reduction",
+        "Territory Control",
+        "Territory Withdrawal",
+        "Resource Dominance",
+        "Resource Denial",
+        "Information Control",
+        "Alliance Building",
+        "Alliance Dissolution",
+        "Opponent Neutralization",
+        "Conflict Avoidance",
+        "System Disruption",
+        "Status Quo Maintenance",
+        "Influence Projection",
+        "Influence Withdrawal",
+        "Survival",
+        "Hegemony",
+        "Legitimacy",
+        "Innovation Leadership",
+        "Economic Dominance",
+        "Cultural Hegemony"
+      ]
+    },
+    "timeHorizon": {
+      "type": "string",
+      "description": "Strategy time frame",
+      "enum": [
+        "Short-term (1 year)",
+        "Medium-term (2-3 years)",
+        "Long-term (4-5 years)",
+        "Extended (5+ years)"
+      ]
+    },
+    "scopeLevel": {
+      "type": "string",
+      "description": "Organizational scope",
+      "enum": [
+        "Global",
+        "Continental",
+        "Regional",
+        "National",
+        "State/Provincial",
+        "Local",
+        "Sector",
+        "Organization",
+        "Coalition",
+        "Bilateral",
+        "Multilateral",
+        "Asymmetric"
+      ]
     },
     "objectives": {
       "type": "string",
-      "description": "Specific measurable targets to achieve strategic goals"
+      "description": "Specific measurable targets"
     },
     "keyActivities": {
       "type": "string",
-      "description": "Critical actions necessary to implement the Strategy"
+      "description": "Critical implementation actions"
     },
     "resources": {
       "type": "string",
-      "description": "Resources allocated for the Strategy implementation"
+      "description": "Allocated resources"
     },
     "timeline": {
       "type": "string",
-      "description": "The timeline for achieving the Strategy"
+      "description": "Achievement timeline"
     },
-    "performanceIndicators": {
+    "keyPerformanceIndicators": {
       "type": "string",
-      "description": "Metrics used to measure the success of the Strategy"
+      "description": "Success metrics"
     },
     "dependencies": {
       "type": "string",
-      "description": "Other strategies, initiatives, or processes that the Strategy depends on"
+      "description": "Required dependencies"
     },
     "relatedStrategies": {
       "type": "string",
-      "description": "Strategies that are related or linked to this Strategy"
+      "description": "Related/linked strategies"
     },
     "risks": {
       "type": "string",
-      "description": "Potential risks associated with the Strategy and its implementation"
+      "description": "Associated risks"
+    },
+    "riskCategories": {
+      "type": "array",
+      "description": "Categories of risks",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Strategic",
+          "Operational",
+          "Financial",
+          "Technical/Technology",
+          "Market",
+          "Regulatory",
+          "Organizational",
+          "External/Environmental",
+          "Reputational",
+          "Cybersecurity"
+        ]
+      }
+    },
+    "mitigationStrategies": {
+      "type": "string",
+      "description": "Risk mitigation approaches"
     },
     "improvementOpportunities": {
       "type": "string",
-      "description": "Areas where the Strategy can be enhanced or improved"
+      "description": "Enhancement areas"
     },
     "strategicAlignment": {
       "type": "string",
-      "description": "How the Strategy aligns with the Organizations strategic goals and objectives"
+      "description": "Goal alignment"
     },
     "businessObjective": {
       "type": "string",
-      "description": "A specific measurable goal that a company aims to achieve to support its overall Strategy"
+      "description": "Supporting business goal"
+    },
+    "competitiveAdvantage": {
+      "type": "string",
+      "description": "How strategy creates competitive advantage"
+    },
+    "marketPosition": {
+      "type": "string",
+      "description": "Desired market position",
+      "enum": [
+        "Market Leader",
+        "Market Challenger",
+        "Market Follower",
+        "Niche Player",
+        "Disruptor",
+        "Emerging Player"
+      ]
+    },
+    "investmentLevel": {
+      "type": "string",
+      "description": "Required investment level",
+      "enum": [
+        "High Investment",
+        "Medium Investment",
+        "Low Investment",
+        "Minimal Investment"
+      ]
+    },
+    "successCriteria": {
+      "type": "string",
+      "description": "Criteria for measuring success"
+    },
+    "stakeholderImpact": {
+      "type": "string",
+      "description": "Impact on key stakeholders"
+    },
+    "changeManagement": {
+      "type": "string",
+      "description": "Change management approach"
     },
     "parent": {
       "type": "string",
-      "description": "A high-level Strategy that provides overarching principles or rules guiding business operations"
+      "description": "Parent strategy"
     },
     "child": {
       "type": "string",
-      "description": "A specific Strategy that falls under a broader parent Policy"
+      "description": "Child strategy"
     },
-    "strategicObjective": {
+    "strategyObjectives": {
       "type": "array",
-      "description": "Strategic objectives that are part of this Strategy",
+      "description": "Specific objectives supporting the strategy",
       "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The name or title of the strategic objective"
-          },
-          "description": {
-            "type": "string",
-            "description": "A detailed explanation of what the strategic objective entails"
-          },
-          "purpose": {
-            "type": "string",
-            "description": "The intended purpose or function of the strategic objective"
-          },
-          "owner": {
-            "type": "string",
-            "description": "The individual or team responsible for the strategic objective"
-          },
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "The Organization unit(s) to which the strategic objective is aligned"
-          },
-          "metrics": {
-            "type": "string",
-            "description": "The measurable indicators used to assess the success of the objective"
-          },
-          "timeline": {
-            "type": "string",
-            "description": "The timeframe within which the strategic objective should be achieved"
-          },
-          "stakeholders": {
-            "type": "string",
-            "description": "The Stakeholders involved or affected by the strategic objective"
-          }
-        }
+        "$ref": "#/elements/StrategyObjective"
       }
     }
-  }
+  },
+  "required": ["title", "description", "purpose", "owner"],
+  "additionalProperties": false,
+  "elements": {
+    "StrategyObjective": {
+      "type": "object",
+      "description": "A specific objective that supports a strategy",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "description": "Name/title of objective"
+        },
+        "description": {
+          "type": "string",
+          "description": "Objective explanation"
+        },
+        "purpose": {
+          "type": "string",
+          "description": "Intended purpose/function"
+        },
+        "owner": {
+          "type": "string",
+          "description": "Responsible individual/team"
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "Aligned organization units"
+        },
+        "objectiveType": {
+          "type": "string",
+          "description": "Type of objective",
+          "enum": [
+            "Power Acquisition",
+            "Power Preservation",
+            "Power Transfer",
+            "Power Reduction",
+            "Destruction",
+            "Neutralization",
+            "Control",
+            "Influence",
+            "Access",
+            "Denial",
+            "Intelligence",
+            "Disruption",
+            "Legitimacy",
+            "Survival",
+            "Growth",
+            "Efficiency",
+            "Innovation",
+            "Alliance",
+            "Withdrawal",
+            "Transition"
+          ]
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority level",
+          "enum": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "metrics": {
+          "type": "string",
+          "description": "Success assessment indicators"
+        },
+        "targetValue": {
+          "type": "string",
+          "description": "Specific target to achieve"
+        },
+        "currentValue": {
+          "type": "string",
+          "description": "Current baseline value"
+        },
+        "timeline": {
+          "type": "string",
+          "description": "Achievement timeframe"
+        },
+        "milestones": {
+          "type": "string",
+          "description": "Key milestones and checkpoints"
+        },
+        "resources": {
+          "type": "string",
+          "description": "Required resources"
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Critical dependencies"
+        },
+        "constraints": {
+          "type": "string",
+          "description": "Limitations and constraints"
+        },
+        "stakeholders": {
+          "type": "string",
+          "description": "Involved/affected stakeholders"
+        },
+        "riskFactors": {
+          "type": "string",
+          "description": "Key risks to achievement"
+        },
+        "successCriteria": {
+          "type": "string",
+          "description": "Criteria for success measurement"
+        },
+        "reportingFrequency": {
+          "type": "string",
+          "description": "How often progress is reported",
+          "enum": [
+            "Daily",
+            "Weekly",
+            "Monthly",
+            "Quarterly",
+            "Annually",
+            "Ad-hoc"
+          ]
+        },
+        "parentStrategy": {
+          "type": "string",
+          "description": "Parent strategy this objective supports"
+        }
+      },
+      "required": ["title", "description", "purpose", "owner"],
+      "additionalProperties": false
+    }
+  },
+  "examples": [
+    {
+      "title": "Eastern Border Defense Initiative",
+      "description": "Comprehensive defensive strategy to secure eastern territorial borders against potential invasion",
+      "purpose": "Maintain territorial integrity and deter aggression through layered defense",
+      "owner": "General of Eastern Command",
+      "orgUnitTitle": "Eastern Military District",
+      "strategyCategory": "Military",
+      "strategyType": "Defensive",
+      "strategicFocus": "Territory Control",
+      "timeHorizon": "Long-term (4-5 years)",
+      "scopeLevel": "Regional",
+      "objectives": "Establish 500km defensive line, deploy 50,000 troops, achieve 95% early warning coverage",
+      "keyActivities": "Fortification construction, troop deployment, sensor network installation, training exercises",
+      "resources": "$2.5B defense budget, 50,000 military personnel, advanced radar systems",
+      "timeline": "48 months: 2024-2027",
+      "keyPerformanceIndicators": "Border security coverage: 95%, Response time: <30 minutes, Deterrence effectiveness",
+      "dependencies": "Allied support, intelligence sharing, logistics infrastructure",
+      "relatedStrategies": "Northern Defense Strategy, Cyber Defense Initiative",
+      "risks": "Budget constraints, equipment delays, intelligence failures",
+      "riskCategories": ["Strategic", "Operational", "Technical/Technology"],
+      "mitigationStrategies": "Redundant systems, phased deployment, international cooperation",
+      "strategicAlignment": "National defense and territorial sovereignty",
+      "investmentLevel": "High Investment",
+      "successCriteria": "Zero border incursions, 95% deterrence effectiveness, ally confidence",
+      "stakeholderImpact": "Enhanced security for border communities, military readiness"
+    },
+    {
+      "title": "Regional Political Consolidation Campaign",
+      "description": "Multi-year campaign to consolidate political control across regional administrative districts",
+      "purpose": "Accumulate political power and establish dominant influence in regional governance",
+      "owner": "Regional Party Chairman",
+      "orgUnitTitle": "Regional Political Committee",
+      "strategyCategory": "Political",
+      "strategyType": "Accumulation",
+      "strategicFocus": "Power Accumulation",
+      "timeHorizon": "Medium-term (2-3 years)",
+      "scopeLevel": "Regional",
+      "objectives": "Control 75% of district councils, secure 60% of popular vote, place allies in key positions",
+      "keyActivities": "Coalition building, candidate recruitment, media campaigns, grassroots organizing",
+      "investmentLevel": "Medium Investment",
+      "riskCategories": ["Political", "Reputational", "Organizational"]
+    },
+    {
+      "title": "Trade Route Disruption Initiative",
+      "description": "Economic strategy to limit competitor's access to critical trade routes and markets",
+      "purpose": "Contain economic expansion and maintain strategic trade advantages",
+      "owner": "Minister of Economic Security",
+      "strategyCategory": "Economic",
+      "strategyType": "Containment",
+      "strategicFocus": "Resource Dominance",
+      "timeHorizon": "Medium-term (2-3 years)",
+      "scopeLevel": "Continental",
+      "investmentLevel": "High Investment",
+      "riskCategories": ["Economic", "Diplomatic", "Strategic"]
+    }
+  ]
 }
