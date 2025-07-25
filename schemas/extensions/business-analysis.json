@@ -1,0 +1,285 @@
+{
+  "$id": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/business-analysis.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Business Analysis",
+  "description": "Formalises BA activities, requirements and artefacts within the Orthogramic Metamodel.",
+  "type": "object",
+  "properties": {
+    "requirements": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/Requirement" }
+    },
+    "requirementArtefacts": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/RequirementArtefact" }
+    },
+    "elicitationActivities": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/ElicitationActivity" }
+    },
+    "analysisDesignDefinitions": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/AnalysisDesignDefinition" }
+    },
+    "solutionEvaluations": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/SolutionEvaluation" }
+    }
+  },
+  "definitions": {
+    "Requirement": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid", "description": "Unique identifier for the requirement." },
+        "type": {
+          "type": "string",
+          "enum": ["Business Requirement", "Stakeholder Requirement", "Solution Requirement (Functional)", "Solution Requirement (Non-Functional)", "Transition Requirement", "Regulatory Requirement"],
+          "description": "The classification of the requirement."
+        },
+        "title": { "type": "string", "description": "A concise title for the requirement." },
+        "description": { "type": "string", "description": "Detailed description of the requirement." },
+        "priority": {
+          "type": "string",
+          "enum": ["Critical", "High", "Medium", "Low"],
+          "description": "The priority level of the requirement."
+        },
+        "owner": {
+          "type": "string",
+          "format": "uri",
+          "description": "Reference to the owner (Organisation Unit or Person) of the requirement.",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/organisation.schema.json#/definitions/OrganisationUnit" }
+        },
+        "acceptanceCriteria": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Conditions that must be met for the requirement to be accepted."
+        },
+        "measurementCriteria": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Metrics to measure the success of the requirement."
+        },
+        "riskLevel": {
+          "type": "string",
+          "enum": ["High", "Medium", "Low", "Negligible"],
+          "description": "Assessed risk level associated with the requirement."
+        },
+        "relatedCapability": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to the related Capability.",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
+        },
+        "relatedValueStream": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to the related Value Stream.",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/value_stream.schema.json#/definitions/ValueStream" }
+        },
+        "relatedInitiative": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to the related Initiative.",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+        },
+        "stakeholderRequirementRef": {
+          "type": "string",
+          "format": "uri",
+          "description": "Reference to the original Stakeholder Requirement (1:1 traceability).",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/StakeholderRequirement" }
+        },
+        "mappings": { "$ref": "#/definitions/Mapping" }
+      },
+      "required": ["id", "type", "title", "description"]
+    },
+    "RequirementArtefact": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid", "description": "Unique identifier for the artefact." },
+        "type": {
+          "type": "string",
+          "enum": ["User Story", "Epic", "Use Case", "Process Model", "Data Model", "Wireframe/Prototype", "Requirements Traceability Matrix", "Solution Design Document"],
+          "description": "The type of requirement artefact."
+        },
+        "purpose": { "type": "string", "description": "The purpose of the artefact." },
+        "linkedRequirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "#/definitions/Requirement" }
+          },
+          "description": "References to requirements documented or addressed by this artefact."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Draft", "Approved", "In Review", "Obsolete"],
+          "description": "The current status of the artefact."
+        },
+        "toolReference": { "type": "string", "format": "uri", "description": "External tool link (e.g., Jira, Confluence, Miro)." },
+        "relatedInformationModel": {
+          "type": "string",
+          "format": "uri",
+          "description": "Link to related Information domain model (e.g., for Data Models).",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/information.schema.json#/definitions/InformationModel" }
+        },
+        "mappings": { "$ref": "#/definitions/Mapping" }
+      },
+      "required": ["id", "type", "purpose", "status"]
+    },
+    "ElicitationActivity": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid", "description": "Unique identifier for the activity." },
+        "type": {
+          "type": "string",
+          "enum": ["Workshop", "Interview", "Observation", "Survey", "Document Analysis", "Prototyping Session"],
+          "description": "The type of elicitation activity."
+        },
+        "date": { "type": "string", "format": "date-time", "description": "Date and time of the activity." },
+        "facilitator": {
+          "type": "string",
+          "format": "uri",
+          "description": "Reference to the facilitator (Organisation Unit or Person).",
+          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/people.schema.json#/definitions/Person" }
+        },
+        "participants": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/Stakeholder" }
+          },
+          "description": "Links to participating Stakeholders."
+        },
+        "artefactsProduced": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "#/definitions/RequirementArtefact" }
+          },
+          "description": "References to artefacts produced during this activity."
+        },
+        "mappings": { "$ref": "#/definitions/Mapping" }
+      },
+      "required": ["id", "type", "date"]
+    },
+    "AnalysisDesignDefinition": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid", "description": "Unique identifier for the analysis/design definition." },
+        "description": { "type": "string", "description": "Description of the solution option or design refinement." },
+        "feasibilityRating": {
+          "type": "string",
+          "enum": ["High", "Medium", "Low", "Not Feasible"],
+          "description": "Assessment of the feasibility of the solution option."
+        },
+        "optionComparison": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "optionName": { "type": "string" },
+              "pros": { "type": "array", "items": { "type": "string" } },
+              "cons": { "type": "array", "items": { "type": "string" } },
+              "score": { "type": "number" }
+            }
+          },
+          "description": "Structured comparison of solution options."
+        },
+        "relatedCapabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
+          },
+          "description": "Capabilities impacted or enabled by the solution."
+        },
+        "relatedInitiatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+          },
+          "description": "Initiatives related to the solution design."
+        },
+        "relatedRisks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/risk_management.schema.json#/definitions/Risk" }
+          },
+          "description": "Risks identified during analysis and design."
+        },
+        "linkedRequirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "#/definitions/Requirement" }
+          },
+          "description": "Requirements addressed by this analysis or design."
+        },
+        "mappings": { "$ref": "#/definitions/Mapping" }
+      },
+      "required": ["id", "description"]
+    },
+    "SolutionEvaluation": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "format": "uuid", "description": "Unique identifier for the evaluation." },
+        "description": { "type": "string", "description": "Description of the solution evaluation." },
+        "evaluationDate": { "type": "string", "format": "date", "description": "Date of the evaluation." },
+        "metricsObserved": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/performance.schema.json#/definitions/PerformanceIndicator" }
+          },
+          "description": "References to specific Performance Indicators (KPIs) and their observed values."
+        },
+        "recommendation": {
+          "type": "string",
+          "enum": ["Continue", "Pivot", "Retire"],
+          "description": "Recommendation based on the evaluation."
+        },
+        "relatedInitiatives": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+          },
+          "description": "Initiatives that implemented the solution being evaluated."
+        },
+        "relatedRequirements": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "format": "uri",
+            "links": { "$ref": "#/definitions/Requirement" }
+          },
+          "description": "Requirements that were fulfilled by the solution being evaluated."
+        },
+        "mappings": { "$ref": "#/definitions/Mapping" }
+      },
+      "required": ["id", "description", "evaluationDate", "recommendation"]
+    },
+    "Mapping": {
+      "type": "object",
+      "properties": {
+        "BABOK": { "type": "string" },
+        "Volere": { "type": "string" },
+        "IREB": { "type": "string" },
+        "TOGAF": { "type": "string" },
+        "Agile": { "type": "string" }
+      },
+      "description": "Mapping of the entity to concepts in various business analysis frameworks."
+    }
+  }
+}
