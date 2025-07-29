@@ -252,6 +252,67 @@
       "items": {
         "$ref": "#/elements/StrategyObjective"
       }
+    },
+    "empathyFocus": {
+      "type": "string",
+      "description": "The primary stakeholder group(s) whose emotional insights and perspectives are prioritized in strategic decision-making.",
+      "enum": [
+        "Customer",
+        "Employee",
+        "Partner",
+        "Community",
+        "Shareholder"
+      ]
+    },
+    "empathyIntegrationLevel": {
+      "type": "string",
+      "description": "Describes how deeply empathetic considerations are embedded within the organization's strategic planning and execution processes.",
+      "enum": [
+        "AdHoc",
+        "DefinedProcess",
+        "Systemic",
+        "CoreCapability"
+      ]
+    },
+    "stakeholderEmotionalInsight": {
+      "type": "boolean",
+      "description": "Indicates whether the strategy development actively seeks to understand and incorporate the emotional states and underlying motivations of key stakeholders."
+    },
+    "politicalAcuity": {
+      "type": "boolean",
+      "description": "Refers to the strategic team's ability to recognize and navigate the unspoken power dynamics and political constraints within the organization and external environment."
+    },
+    "trustBuildingMandate": {
+      "type": "boolean",
+      "description": "Specifies if the strategy includes explicit objectives or mechanisms designed to build, restore, or maintain trust with relevant stakeholders."
+    },
+    "fearNavigationCapability": {
+      "type": "boolean",
+      "description": "Represents the strategic approach to proactively identify, address, and de-escalate fear or resistance among stakeholders during periods of significant change or transformation."
+    },
+    "unspokenDynamicsAwareness": {
+      "type": "boolean",
+      "description": "The capacity within the strategic leadership to 'read the room' and understand unstated concerns, cultural nuances, or hidden agendas that could impact strategic adoption."
+    },
+    "relationshipCentricity": {
+      "type": "string",
+      "description": "How central relationships are to the overall strategic success and how they are fostered.",
+      "enum": [
+        "Transactional",
+        "Collaborative",
+        "Partnership"
+      ]
+    },
+    "empathyDrivenKPIs": {
+      "type": "array",
+      "description": "Specific measurable outcomes or metrics that assess the impact of empathetic approaches on strategic success.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "culturalContextIntegration": {
+      "type": "boolean",
+      "description": "Whether the strategy is designed with a deep understanding of organizational and external cultural nuances."
     }
   },
   "required": ["title", "description", "purpose", "owner"],
