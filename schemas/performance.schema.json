@@ -24,16 +24,71 @@
       "type": "string",
       "description": "The Organization unit(s) to which the performance metric is linked"
     },
+    "performanceCategory": {
+      "type": "string",
+      "enum": [
+        "strategicPerformance",
+        "operationalPerformance",
+        "financialPerformance",
+        "customerPerformance",
+        "processPerformance",
+        "qualityPerformance",
+        "safetyPerformance",
+        "innovationPerformance"
+      ],
+      "description": "Broad categorization of performance type"
+    },
+    "performanceType": {
+      "type": "string",
+      "enum": [
+        "kpi",
+        "metric",
+        "indicator",
+        "index",
+        "ratio",
+        "score",
+        "rate",
+        "benchmark",
+        "target",
+        "threshold"
+      ],
+      "description": "Specific type of performance metric"
+    },
+    "measurementLevel": {
+      "type": "string",
+      "enum": [
+        "enterprise",
+        "division",
+        "department",
+        "process",
+        "project",
+        "individual",
+        "system",
+        "product"
+      ],
+      "description": "Level at which performance is measured"
+    },
+    "metricClass": {
+      "type": "string",
+      "enum": [
+        "leadingIndicator",
+        "laggingIndicator",
+        "coincidentIndicator",
+        "predictiveMetric",
+        "diagnosticMetric"
+      ],
+      "description": "Classification of metric characteristics"
+    },
     "rationales": {
       "type": "array",
       "items": {
-      "type": "string"
-    },
-      "description": "References to rationale IDs explaining the strategic motivation for each KPI or performance goal."
+        "type": "string"
+      },
+      "description": "References to rationale IDs explaining the strategic motivation for each KPI or performance goal"
     },
     "inputs": {
       "type": "string",
-      "description": "The resources information or materials required for the performance metric"
+      "description": "The resources, information or materials required for the performance metric"
     },
     "outputs": {
       "type": "string",
@@ -45,7 +100,7 @@
     },
     "dependencies": {
       "type": "string",
-      "description": "Other metrics processes or systems that the performance metric depends on"
+      "description": "Other metrics, processes or systems that the performance metric depends on"
     },
     "relatedPerformanceMetrics": {
       "type": "string",
@@ -53,6 +108,13 @@
     },
     "maturityLevel": {
       "type": "string",
+      "enum": [
+        "initial",
+        "developing",
+        "defined",
+        "managed",
+        "optimizing"
+      ],
       "description": "The current maturity level of the performance metric"
     },
     "toolsAndTechnologies": {
@@ -60,7 +122,17 @@
       "description": "Tools and technologies used to support or enable the performance metric"
     },
     "complianceAndStandards": {
-      "type": "string",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "federalRegulations",
+          "industryStandards",
+          "internalStandards",
+          "qualityStandards",
+          "safetyStandards"
+        ]
+      },
       "description": "Regulatory requirements and standards the performance metric must adhere to"
     },
     "cost": {
@@ -71,13 +143,148 @@
       "type": "string",
       "description": "Potential risks associated with the performance metric and its operations"
     },
+    "riskCategories": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "dataQuality",
+          "technical",
+          "operational",
+          "compliance",
+          "resource",
+          "interpretation"
+        ]
+      },
+      "description": "Categories of risks"
+    },
     "improvementOpportunities": {
       "type": "string",
       "description": "Areas where the performance metric can be enhanced or improved"
     },
     "strategicAlignment": {
       "type": "string",
-      "description": "How the performance metric aligns with the Organizations strategic goals and objectives"
+      "description": "How the performance metric aligns with the Organization's strategic goals and objectives"
+    },
+    "measurementMethod": {
+      "type": "string",
+      "description": "How the performance metric is calculated and measured"
+    },
+    "dataSource": {
+      "type": "string",
+      "description": "Primary sources of data for the performance metric"
+    },
+    "frequency": {
+      "type": "string",
+      "enum": [
+        "realTime",
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "quarterly",
+        "annually",
+        "adHoc"
+      ],
+      "description": "How often the performance metric is measured and reported"
+    },
+    "targets": {
+      "type": "string",
+      "description": "Specific targets, benchmarks, or goals for the performance metric"
+    },
+    "thresholds": {
+      "type": "string",
+      "description": "Critical thresholds and alert levels"
+    },
+    "trending": {
+      "type": "string",
+      "description": "Historical trends and patterns"
+    },
+    "benchmarking": {
+      "type": "string",
+      "description": "External benchmarks and industry comparisons"
+    },
+    "actionTriggers": {
+      "type": "string",
+      "description": "Conditions that trigger management action"
+    },
+    "reportingStructure": {
+      "type": "string",
+      "description": "How and to whom performance results are reported"
+    },
+    "visualization": {
+      "type": "string",
+      "description": "How performance data is displayed and presented"
+    },
+    "dataQuality": {
+      "type": "string",
+      "description": "Data quality measures and validation procedures"
+    },
+    "automation": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "semiAutomated",
+        "highlyAutomated",
+        "fullyAutomated"
+      ],
+      "description": "Level of automation in data collection and processing"
+    },
+    "scalability": {
+      "type": "string",
+      "description": "Ability to scale measurement across the organization"
+    },
+    "integration": {
+      "type": "string",
+      "description": "Integration with other systems and platforms"
+    },
+    "historicalData": {
+      "type": "string",
+      "description": "Historical data availability and retention"
+    },
+    "predictiveCapability": {
+      "type": "string",
+      "description": "Predictive analytics and forecasting capabilities"
+    },
+    "businessValue": {
+      "type": "string",
+      "description": "Business value and impact of the performance metric"
+    },
+    "stakeholderImpact": {
+      "type": "string",
+      "description": "Impact on key stakeholders"
+    },
+    "competitiveAdvantage": {
+      "type": "string",
+      "description": "How this metric provides competitive differentiation"
+    },
+    "innovation": {
+      "type": "string",
+      "description": "Innovation opportunities and emerging technologies"
+    },
+    "sustainability": {
+      "type": "string",
+      "description": "Environmental and sustainability considerations"
+    },
+    "accessibility": {
+      "type": "string",
+      "description": "Accessibility features for performance information"
+    },
+    "governance": {
+      "type": "string",
+      "description": "Governance framework for the performance metric"
+    },
+    "changeManagement": {
+      "type": "string",
+      "description": "Approach to managing changes to the performance metric"
+    },
+    "training": {
+      "type": "string",
+      "description": "Training requirements for performance metric users"
+    },
+    "documentation": {
+      "type": "string",
+      "description": "Documentation and knowledge management"
     },
     "kpi": {
       "type": "array",
@@ -119,6 +326,16 @@
           },
           "frequency": {
             "type": "string",
+            "enum": [
+              "realTime",
+              "hourly",
+              "daily",
+              "weekly",
+              "monthly",
+              "quarterly",
+              "annually",
+              "adHoc"
+            ],
             "description": "How often the Performance KPI is measured and reported"
           },
           "dataSource": {
@@ -131,7 +348,7 @@
           },
           "dependencies": {
             "type": "string",
-            "description": "Other Performance KPIs processes or systems that the Performance KPI depends on"
+            "description": "Other Performance KPIs, processes or systems that the Performance KPI depends on"
           },
           "risks": {
             "type": "string",
@@ -143,10 +360,90 @@
           },
           "strategicAlignment": {
             "type": "string",
-            "description": "How the Performance KPI aligns with the Organizations strategic goals and objectives"
+            "description": "How the Performance KPI aligns with the Organization's strategic goals and objectives"
+          },
+          "kpiType": {
+            "type": "string",
+            "enum": [
+              "outcomeKPI",
+              "processKPI",
+              "inputKPI",
+              "outputKPI",
+              "leadingKPI",
+              "laggingKPI"
+            ],
+            "description": "Type of KPI"
+          },
+          "priority": {
+            "type": "string",
+            "enum": [
+              "critical",
+              "high",
+              "medium",
+              "low"
+            ],
+            "description": "Business priority of the KPI"
+          },
+          "complexity": {
+            "type": "string",
+            "enum": [
+              "simple",
+              "moderate",
+              "complex",
+              "highlyComplex"
+            ],
+            "description": "Measurement complexity level"
+          },
+          "thresholds": {
+            "type": "string",
+            "description": "Performance thresholds and alert levels"
+          },
+          "calculationFormula": {
+            "type": "string",
+            "description": "Mathematical formula for calculating the KPI"
+          },
+          "dataQuality": {
+            "type": "string",
+            "description": "Data quality requirements and validation"
+          },
+          "reporting": {
+            "type": "string",
+            "description": "Reporting format and distribution"
+          },
+          "visualization": {
+            "type": "string",
+            "description": "How the KPI is displayed"
+          },
+          "automation": {
+            "type": "string",
+            "enum": [
+              "manual",
+              "semiAutomated",
+              "highlyAutomated",
+              "fullyAutomated"
+            ],
+            "description": "Level of automation in KPI calculation"
+          },
+          "benchmarking": {
+            "type": "string",
+            "description": "External benchmarks and comparisons"
+          },
+          "actionPlans": {
+            "type": "string",
+            "description": "Predetermined actions based on KPI performance"
+          },
+          "historicalTrends": {
+            "type": "string",
+            "description": "Historical performance patterns"
+          },
+          "stakeholderNotification": {
+            "type": "string",
+            "description": "Who gets notified of KPI performance"
           }
-        }
+        },
+        "required": ["title", "description", "purpose", "owner"]
       }
     }
-  }
+  },
+  "required": ["title", "description", "purpose", "owner"]
 }
