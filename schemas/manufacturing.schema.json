@@ -1,7 +1,7 @@
 ```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://https://github.com/Orthogramic/Orthogramic_Metamodel/schemas/manufacturing.schema.json",
+  "$id": "https://orthogramic.com/schemas/manufacturing.schema.json",
   "title": "Manufacturing Domain Schema",
   "description": "Schema for the Manufacturing domain in the Orthogramic Metamodel with global enumeration support",
   "type": "object",
@@ -22,6 +22,54 @@
     "owner": {
       "type": "string",
       "description": "Responsible individual or team (e.g., Head of Operations)"
+    },
+    "manufacturingCategory": {
+      "type": "string",
+      "description": "Broad categorization of the type of manufacturing process.",
+      "enum": [
+        "Job Shop",
+        "Batch Production",
+        "Mass Production",
+        "Continuous Flow",
+        "Custom Manufacturing"
+      ]
+    },
+    "manufacturingFocus": {
+      "type": "string",
+      "description": "Primary focus area of the manufacturing strategy.",
+      "enum": [
+        "Cost Reduction",
+        "Quality Improvement",
+        "Lead Time Reduction",
+        "Flexibility",
+        "Innovation"
+      ]
+    },
+    "timeHorizon": {
+      "type": "string",
+      "description": "Strategy time frame",
+      "enum": [
+        "Short-term (1 year)",
+        "Medium-term (2-3 years)",
+        "Long-term (4-5 years)",
+        "Extended (5+ years)"
+      ]
+    },
+    "scopeLevel": {
+      "type": "string",
+      "description": "Organizational or geographical scope",
+      "enum": [
+        "Global",
+        "Continental",
+        "Regional",
+        "National",
+        "Site-level",
+        "Production-line"
+      ]
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the manufacturing plan aligns with the broader business strategy."
     },
     "productionUnits": {
       "type": "array",
@@ -50,9 +98,68 @@
       "items": {
         "$ref": "#/elements/Inventory"
       }
+    },
+    "manufacturingObjectives": {
+      "type": "array",
+      "description": "Specific objectives supporting the manufacturing strategy.",
+      "items": {
+        "$ref": "#/elements/ManufacturingObjective"
+      }
+    },
+    "keyActivities": {
+      "type": "string",
+      "description": "Critical implementation actions for the manufacturing plan."
+    },
+    "resources": {
+      "type": "string",
+      "description": "Allocated resources (e.g., budget, personnel, machinery)."
+    },
+    "keyPerformanceIndicators": {
+      "type": "array",
+      "description": "Success metrics for the manufacturing operations.",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Required dependencies (e.g., supply chain, IT systems)."
+    },
+    "risks": {
+      "type": "string",
+      "description": "Associated risks and challenges."
+    },
+    "riskCategories": {
+      "type": "array",
+      "description": "Categories of risks",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Operational",
+          "Financial",
+          "Supply Chain",
+          "Technical/Technology",
+          "Regulatory",
+          "Environmental",
+          "Labor"
+        ]
+      }
+    },
+    "mitigationStrategies": {
+      "type": "string",
+      "description": "Risk mitigation approaches."
     }
   },
-  "required": ["title", "description", "purpose", "owner"],
+  "required": [
+    "title",
+    "description",
+    "purpose",
+    "owner",
+    "manufacturingCategory",
+    "manufacturingFocus",
+    "timeHorizon",
+    "scopeLevel"
+  ],
   "additionalProperties": false,
   "elements": {
     "ProductionUnit": {
@@ -184,6 +291,47 @@
       },
       "required": ["materialReference", "quantity"],
       "additionalProperties": false
+    },
+    "ManufacturingObjective": {
+      "type": "object",
+      "description": "A specific objective that supports a manufacturing strategy.",
+      "attributes": {
+        "title": {
+          "type": "string",
+          "description": "Name/title of objective."
+        },
+        "description": {
+          "type": "string",
+          "description": "Objective explanation."
+        },
+        "owner": {
+          "type": "string",
+          "description": "Responsible individual/team."
+        },
+        "priority": {
+          "type": "string",
+          "description": "Priority level.",
+          "enum": ["Critical", "High", "Medium", "Low"]
+        },
+        "metrics": {
+          "type": "string",
+          "description": "Success assessment indicators."
+        },
+        "targetValue": {
+          "type": "string",
+          "description": "Specific target to achieve."
+        },
+        "currentValue": {
+          "type": "string",
+          "description": "Current baseline value."
+        },
+        "timeline": {
+          "type": "string",
+          "description": "Achievement timeframe."
+        }
+      },
+      "required": ["title", "description", "owner", "priority"],
+      "additionalProperties": false
     }
   },
   "examples": [
@@ -192,6 +340,11 @@
       "description": "The central repository for all manufacturing data.",
       "purpose": "To provide a canonical source of truth for manufacturing processes.",
       "owner": "Head of Operations",
+      "manufacturingCategory": "Continuous Flow",
+      "manufacturingFocus": "Cost Reduction",
+      "timeHorizon": "Medium-term (2-3 years)",
+      "scopeLevel": "Global",
+      "strategicAlignment": "Supports the corporate goal of improving profit margins by 5%.",
       "productionUnits": [
         {
           "unitName": "Engine Assembly Line 1",
@@ -228,7 +381,34 @@
           "warehouseLocation": "Warehouse 3, Shelf B",
           "lastUpdated": "2025-08-04T12:00:00Z"
         }
-      ]
+      ],
+      "manufacturingObjectives": [
+        {
+          "title": "Reduce Waste by 15%",
+          "description": "Implement new processes to reduce material waste on all production lines.",
+          "owner": "Process Improvement Team",
+          "priority": "High",
+          "metrics": "Waste reduction percentage",
+          "targetValue": "15%",
+          "currentValue": "5%",
+          "timeline": "Next 12 months"
+        }
+      ],
+      "keyActivities": "Implement Lean Six Sigma program, invest in new equipment, train staff.",
+      "resources": "$5M budget, 10 personnel, new automation technology.",
+      "keyPerformanceIndicators": [
+        "Overall Equipment Effectiveness (OEE)",
+        "First Pass Yield",
+        "Inventory Turnover Rate"
+      ],
+      "dependencies": "Stable supply chain, strong IT infrastructure for real-time monitoring.",
+      "risks": "Equipment failure, labor shortages, supply chain disruptions.",
+      "riskCategories": [
+        "Operational",
+        "Supply Chain",
+        "Labor"
+      ],
+      "mitigationStrategies": "Redundant equipment, cross-trained staff, diversify suppliers."
     }
   ]
 }
