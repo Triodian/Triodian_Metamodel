@@ -1,0 +1,235 @@
+```json
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://https://github.com/Orthogramic/Orthogramic_Metamodel/schemas/manufacturing.schema.json",
+  "title": "Manufacturing Domain Schema",
+  "description": "Schema for the Manufacturing domain in the Orthogramic Metamodel with global enumeration support",
+  "type": "object",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "description": "Name/title of the manufacturing entity",
+      "examples": ["Global Manufacturing Operations", "North American Production Hub"]
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed explanation of the manufacturing entity or process"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "Intended function or strategic goal of the manufacturing entity"
+    },
+    "owner": {
+      "type": "string",
+      "description": "Responsible individual or team (e.g., Head of Operations)"
+    },
+    "productionUnits": {
+      "type": "array",
+      "description": "A list of production units within this manufacturing entity.",
+      "items": {
+        "$ref": "#/elements/ProductionUnit"
+      }
+    },
+    "workOrders": {
+      "type": "array",
+      "description": "A list of active and completed work orders.",
+      "items": {
+        "$ref": "#/elements/WorkOrder"
+      }
+    },
+    "billsOfMaterials": {
+      "type": "array",
+      "description": "A collection of bills of materials for various products.",
+      "items": {
+        "$ref": "#/elements/BillOfMaterials"
+      }
+    },
+    "inventory": {
+      "type": "array",
+      "description": "Current inventory levels of raw materials, WIP, and finished goods.",
+      "items": {
+        "$ref": "#/elements/Inventory"
+      }
+    }
+  },
+  "required": ["title", "description", "purpose", "owner"],
+  "additionalProperties": false,
+  "elements": {
+    "ProductionUnit": {
+      "type": "object",
+      "description": "A structured entity for physical production.",
+      "attributes": {
+        "unitName": {
+          "type": "string",
+          "description": "The name or title of the production unit.",
+          "examples": ["Engine Assembly Line 1", "Plastics Molding Department"]
+        },
+        "unitType": {
+          "type": "string",
+          "description": "The type of production unit.",
+          "enum": [
+            "ASSEMBLY",
+            "FABRICATION",
+            "CHEMICAL_PROCESSING"
+          ]
+        },
+        "location": {
+          "type": "string",
+          "description": "The physical location of the production unit.",
+          "examples": ["Building 5, Plant North"]
+        },
+        "capacity": {
+          "type": "integer",
+          "description": "The maximum output capacity of the unit per time period.",
+          "examples": [500]
+        }
+      },
+      "required": ["unitName", "unitType"],
+      "additionalProperties": false
+    },
+    "WorkOrder": {
+      "type": "object",
+      "description": "An authorization to produce a specific quantity of a product.",
+      "attributes": {
+        "orderID": {
+          "type": "string",
+          "description": "A unique identifier for the work order.",
+          "examples": ["WO-2025-001"]
+        },
+        "productReference": {
+          "type": "string",
+          "description": "A link to the 'Product' domain element being manufactured.",
+          "examples": ["PROD-A123"]
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "The number of units to be produced.",
+          "examples": [1000]
+        },
+        "status": {
+          "type": "string",
+          "description": "The current state of the production order.",
+          "enum": [
+            "PLANNED",
+            "IN_PROGRESS",
+            "COMPLETED",
+            "CANCELED"
+          ]
+        }
+      },
+      "required": ["orderID", "productReference", "quantity", "status"],
+      "additionalProperties": false
+    },
+    "BillOfMaterials": {
+      "type": "object",
+      "description": "A complete list of raw materials, components, and sub-assemblies.",
+      "attributes": {
+        "bomID": {
+          "type": "string",
+          "description": "A unique identifier for the Bill of Materials.",
+          "examples": ["BOM-A123"]
+        },
+        "productReference": {
+          "type": "string",
+          "description": "A link to the 'Product' domain element this BOM is for.",
+          "examples": ["PROD-A123"]
+        },
+        "items": {
+          "type": "array",
+          "description": "A list of components and their required quantities.",
+          "items": {
+            "type": "object",
+            "attributes": {
+              "item": {
+                "type": "string"
+              },
+              "quantity": {
+                "type": "integer"
+              },
+              "unit": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "required": ["bomID", "productReference", "items"],
+      "additionalProperties": false
+    },
+    "Inventory": {
+      "type": "object",
+      "description": "The stock of raw materials, work-in-progress, and finished goods.",
+      "attributes": {
+        "materialReference": {
+          "type": "string",
+          "description": "A link to the 'Material' or 'Product' element in the metamodel.",
+          "examples": ["RAW-MTL-24"]
+        },
+        "quantity": {
+          "type": "integer",
+          "description": "The amount of the item currently in stock.",
+          "examples": [5000]
+        },
+        "warehouseLocation": {
+          "type": "string",
+          "description": "The physical location of the inventory.",
+          "examples": ["Warehouse 3, Shelf A"]
+        },
+        "lastUpdated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The timestamp of the last inventory update.",
+          "examples": ["2025-08-04T12:00:00Z"]
+        }
+      },
+      "required": ["materialReference", "quantity"],
+      "additionalProperties": false
+    }
+  },
+  "examples": [
+    {
+      "title": "Global Manufacturing Operations",
+      "description": "The central repository for all manufacturing data.",
+      "purpose": "To provide a canonical source of truth for manufacturing processes.",
+      "owner": "Head of Operations",
+      "productionUnits": [
+        {
+          "unitName": "Engine Assembly Line 1",
+          "unitType": "ASSEMBLY",
+          "location": "Building 5, Plant North",
+          "capacity": 500
+        }
+      ],
+      "workOrders": [
+        {
+          "orderID": "WO-2025-002",
+          "productReference": "PROD-B555",
+          "quantity": 1000,
+          "status": "PLANNED"
+        }
+      ],
+      "billsOfMaterials": [
+        {
+          "bomID": "BOM-A123",
+          "productReference": "PROD-A123",
+          "items": [
+            {
+              "item": "Bolt A",
+              "quantity": 50,
+              "unit": "pcs"
+            }
+          ]
+        }
+      ],
+      "inventory": [
+        {
+          "materialReference": "PROD-A123",
+          "quantity": 500,
+          "warehouseLocation": "Warehouse 3, Shelf B",
+          "lastUpdated": "2025-08-04T12:00:00Z"
+        }
+      ]
+    }
+  ]
+}
+```
