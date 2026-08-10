@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://orthogramic.com/schemas/intelligence.schema.json",
+  "$id": "https://triodian.com/schemas/intelligence.schema.json",
   "title": "Intelligence",
   "description": "Schema for capturing organizational intelligence activities, sources, applications, and attributes.",
   "type": "object",

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://orthogramic.github.io/Orthogramic_Metamodel/schemas/finance.schema.json",
-  "title": "Orthogramic Finance Domain Schema",
+  "$id": "https://triodian.github.io/Triodian_Metamodel/schemas/finance.schema.json",
+  "title": "Triodian Finance Domain Schema",
   "description": "Finance domain objects definition and relationships",
   "type": "object",
   "required": ["domainInfo", "definitions", "relationships"],

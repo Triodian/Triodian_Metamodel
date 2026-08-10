@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Technology Domain Schema",
-  "description": "Schema for the Technology domain in the Orthogramic Metamodel",
+  "description": "Schema for the Technology domain in the Triodian Metamodel",
   "type": "object",
   "required": ["technologyID", "title", "description", "orgUnitTitle"],
   "properties": {

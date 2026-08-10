@@ -1,6 +1,6 @@
 # Examples of Trigger and Rationale Links
 
-This page provides examples of how Triggers and Rationales are used within the Orthogramic Metamodel to document the drivers of change and the justification for responses across different business domains.
+This page provides examples of how Triggers and Rationales are used within the Triodian Metamodel to document the drivers of change and the justification for responses across different business domains.
 
 Each example includes:
 

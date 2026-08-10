@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://orthogramic.com/schemas/organization.schema.json",
+  "$id": "https://triodian.com/schemas/organization.schema.json",
   "title": "Organization Domain Schema",
-  "description": "Schema for the Organization domain in the Orthogramic Metamodel with global enumeration support",
+  "description": "Schema for the Organization domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "attributes": {
     "orgTitle": {

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Channel Domain Schema",
-  "description": "Schema for the Channel domain in the Orthogramic Metamodel, representing the methods, pathways, and networks through which an organization delivers its products and services to customers.",
+  "description": "Schema for the Channel domain in the Triodian Metamodel, representing the methods, pathways, and networks through which an organization delivers its products and services to customers.",
   "type": "object",
   "required": ["channelID", "title", "description", "channelType"],
   "properties": {

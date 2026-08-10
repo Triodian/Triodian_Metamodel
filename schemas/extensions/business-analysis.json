@@ -1,8 +1,8 @@
 {
-  "$id": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/business-analysis.schema.json",
+  "$id": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/business-analysis.schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Business Analysis",
-  "description": "Formalises BA activities, requirements and artefacts within the Orthogramic Metamodel.",
+  "description": "Formalises BA activities, requirements and artefacts within the Triodian Metamodel.",
   "type": "object",
   "properties": {
     "requirements": {
@@ -47,7 +47,7 @@
           "type": "string",
           "format": "uri",
           "description": "Reference to the owner (Organisation Unit or Person) of the requirement.",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/organisation.schema.json#/definitions/OrganisationUnit" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/organisation.schema.json#/definitions/OrganisationUnit" }
         },
         "acceptanceCriteria": {
           "type": "array",
@@ -68,25 +68,25 @@
           "type": "string",
           "format": "uri",
           "description": "Link to the related Capability.",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
         },
         "relatedValueStream": {
           "type": "string",
           "format": "uri",
           "description": "Link to the related Value Stream.",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/value_stream.schema.json#/definitions/ValueStream" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/value_stream.schema.json#/definitions/ValueStream" }
         },
         "relatedInitiative": {
           "type": "string",
           "format": "uri",
           "description": "Link to the related Initiative.",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
         },
         "stakeholderRequirementRef": {
           "type": "string",
           "format": "uri",
           "description": "Reference to the original Stakeholder Requirement (1:1 traceability).",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/StakeholderRequirement" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/StakeholderRequirement" }
         },
         "mappings": { "$ref": "#/definitions/Mapping" }
       },
@@ -121,7 +121,7 @@
           "type": "string",
           "format": "uri",
           "description": "Link to related Information domain model (e.g., for Data Models).",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/information.schema.json#/definitions/InformationModel" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/information.schema.json#/definitions/InformationModel" }
         },
         "mappings": { "$ref": "#/definitions/Mapping" }
       },
@@ -141,14 +141,14 @@
           "type": "string",
           "format": "uri",
           "description": "Reference to the facilitator (Organisation Unit or Person).",
-          "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/people.schema.json#/definitions/Person" }
+          "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/people.schema.json#/definitions/Person" }
         },
         "participants": {
           "type": "array",
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/Stakeholder" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/stakeholder.schema.json#/definitions/Stakeholder" }
           },
           "description": "Links to participating Stakeholders."
         },
@@ -193,7 +193,7 @@
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/capability.schema.json#/definitions/Capability" }
           },
           "description": "Capabilities impacted or enabled by the solution."
         },
@@ -202,7 +202,7 @@
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
           },
           "description": "Initiatives related to the solution design."
         },
@@ -211,7 +211,7 @@
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/risk_management.schema.json#/definitions/Risk" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/risk_management.schema.json#/definitions/Risk" }
           },
           "description": "Risks identified during analysis and design."
         },
@@ -239,7 +239,7 @@
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/performance.schema.json#/definitions/PerformanceIndicator" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/performance.schema.json#/definitions/PerformanceIndicator" }
           },
           "description": "References to specific Performance Indicators (KPIs) and their observed values."
         },
@@ -253,7 +253,7 @@
           "items": {
             "type": "string",
             "format": "uri",
-            "links": { "$ref": "https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
+            "links": { "$ref": "https://github.com/Triodian/Triodian_Metamodel/blob/main/schemas/initiative.schema.json#/definitions/Initiative" }
           },
           "description": "Initiatives that implemented the solution being evaluated."
         },

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/Orthogramic/Orthogramic_Metamodel/main/schemas/social-change.json",
+  "$id": "https://raw.githubusercontent.com/Triodian/Triodian_Metamodel/main/schemas/social-change.json",
   "title": "Social Change",
   "description": "Schema for modeling campaigns, movements, and interventions aimed at addressing systemic injustice, inequality, and exclusion, including revolutionary transformations and organizational change initiatives",
   "type": "object",
@@ -818,7 +818,7 @@
           "description": "Parent initiative or funding body"
         }
       },
-      "description": "Relationships to other domains in the Orthogramic Metamodel"
+      "description": "Relationships to other domains in the Triodian Metamodel"
     },
     "metadata": {
       "type": "object",

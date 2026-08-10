@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "People Domain Schema",
-  "description": "Comprehensive schema for the People domain in the Orthogramic Metamodel, focusing on workforce capabilities, organizational culture, leadership approaches, and knowledge management practices",
+  "description": "Comprehensive schema for the People domain in the Triodian Metamodel, focusing on workforce capabilities, organizational culture, leadership approaches, and knowledge management practices",
   "type": "object",
   "required": [
     "peopleID",

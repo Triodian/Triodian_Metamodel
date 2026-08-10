@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Products Domain Schema",
-  "description": "Schema for the Products domain in the Orthogramic Metamodel",
+  "description": "Schema for the Products domain in the Triodian Metamodel",
   "type": "object",
   "properties": {
     "title": {
