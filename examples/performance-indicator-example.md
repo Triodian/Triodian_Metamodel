@@ -1,6 +1,6 @@
 # Performance Indicator Examples
 
-This document provides examples of Performance Indicators within the Orthogramic Metamodel. These examples illustrate how the Performance Indicator schema can be implemented across different business contexts to measure, track, and optimize performance metrics.
+This document provides examples of Performance Indicators within the Triodian Metamodel. These examples illustrate how the Performance Indicator schema can be implemented across different business contexts to measure, track, and optimize performance metrics.
 
 Each example includes:
 
@@ -912,7 +912,7 @@ A performance indicator measuring the organization's environmental sustainabilit
 
 ## Implementation Considerations
 
-When implementing these Performance Indicators within the Orthogramic Metamodel, organizations should consider:
+When implementing these Performance Indicators within the Triodian Metamodel, organizations should consider:
 
 1. **Integration with Strategic Response Model**:
    - Link performance indicators to specific strategic responses to triggers
@@ -934,4 +934,4 @@ When implementing these Performance Indicators within the Orthogramic Metamodel,
    - Update thresholds and targets based on organizational learning
    - Refine measurement approaches as capabilities mature
 
-These examples demonstrate how the Performance Indicator schema enables sophisticated performance management practices that align with the Orthogramic Metamodel's approach to business architecture.
+These examples demonstrate how the Performance Indicator schema enables sophisticated performance management practices that align with the Triodian Metamodel's approach to business architecture.

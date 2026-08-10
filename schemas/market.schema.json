@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://orthogramic.github.io/Orthogramic_Metamodel/schemas/market.schema.json",
-  "title": "Orthogramic Market Domain Schema",
+  "$id": "https://triodian.github.io/Triodian_Metamodel/schemas/market.schema.json",
+  "title": "Triodian Market Domain Schema",
   "description": "Market domain objects definition and relationships",
   "type": "object",
   "required": ["domainInfo", "definitions", "relationships", "crossDomainRelationships"],

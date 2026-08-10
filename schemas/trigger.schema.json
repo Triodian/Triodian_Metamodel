@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft/2020-12/schema",
-  "$id": "https://orthogramic.org/schema/trigger.json",
+  "$id": "https://triodian.com/schemas/trigger.schema.json",
   "title": "trigger",
   "type": "object",
   "required": ["triggerID", "label", "primaryCategory", "origin"],

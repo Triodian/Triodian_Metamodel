@@ -1,6 +1,6 @@
-# Orthogramic Metamodel
+# Triodian Metamodel
 
-The **Orthogramic Metamodel** is an open-source, schema-first framework for business architecture. It provides a structured and extensible foundation to describe how an organisation operates, delivers value, and responds to change. Designed for clarity, integration, and automation, it supports strategic alignment, governance, and continuous improvement at scale.
+The **Triodian Metamodel** is an open-source, schema-first framework for business architecture. It provides a structured and extensible foundation to describe how an organisation operates, delivers value, and responds to change. Designed for clarity, integration, and automation, it supports strategic alignment, governance, and continuous improvement at scale.
 
 ## What’s included
 
@@ -22,9 +22,9 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 
 All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
 
-## Why Orthogramic?
+## Why Triodian?
 
-Orthogramic differs from traditional frameworks like BIZBOK in key ways:
+Triodian differs from traditional frameworks like BIZBOK in key ways:
 
 - **Open-source and transparent** – Freely licensed under Creative Commons  
 - **Schema-first and digital** – Designed for automation, integration, and validation  
@@ -33,17 +33,17 @@ Orthogramic differs from traditional frameworks like BIZBOK in key ways:
 - **Integrated** – Performance and policy domains are built in, not bolted on  
 
 For a comparison with BIZBOK, see:  
-[Comparing the Orthogramic Metamodel with BIZBOK](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/245137981)
+[Comparing the Triodian Metamodel with BIZBOK](https://triodian.atlassian.net/wiki/spaces/OM/pages/245137981)
 
 ## Getting started
 
 Visit the documentation to begin:
 
-- [Model overview](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/290914392)  
-- [Getting started guide](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/290914392)  
-- [New to Business Architecture](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/288948263)  
-- [Familiar with BIZBOK](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/288948285)  
-- [Getting started by problem](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291274855)
+- [Model overview](https://triodian.atlassian.net/wiki/spaces/OM/pages/290914392)  
+- [Getting started guide](https://triodian.atlassian.net/wiki/spaces/OM/pages/290914392)  
+- [New to Business Architecture](https://triodian.atlassian.net/wiki/spaces/OM/pages/288948263)  
+- [Familiar with BIZBOK](https://triodian.atlassian.net/wiki/spaces/OM/pages/288948285)  
+- [Getting started by problem](https://triodian.atlassian.net/wiki/spaces/OM/pages/291274855)
 
 Each schema includes examples and structured fields to help your team model capabilities, initiatives, and performance in a consistent and transparent way.
 
@@ -52,8 +52,8 @@ Each schema includes examples and structured fields to help your team model capa
 We welcome your input! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to propose improvements, submit pull requests, or engage with the community.
 
 Contribution guidelines and project manifesto are also available at:  
-[Contribution Guidelines](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291799095)  
-[Open Source Manifesto](https://orthogramic.atlassian.net/wiki/spaces/OM/pages/291799095)
+[Contribution Guidelines](https://triodian.atlassian.net/wiki/spaces/OM/pages/291799095)  
+[Open Source Manifesto](https://triodian.atlassian.net/wiki/spaces/OM/pages/291799095)
 
 ## Licence
 

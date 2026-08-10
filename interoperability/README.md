@@ -1,6 +1,6 @@
 # Interoperability
 
-This directory contains semantic mapping resources to enable interoperability between the Orthogramic Metamodel and other enterprise architecture and industry-standard frameworks.
+This directory contains semantic mapping resources to enable interoperability between the Triodian Metamodel and other enterprise architecture and industry-standard frameworks.
 
 Each mapping defines a JSON-LD `@context` file to help align terminology and structure for integration, transformation, and knowledge graph construction.
 
@@ -10,9 +10,9 @@ Each mapping defines a JSON-LD `@context` file to help align terminology and str
 
 | Framework                             | Context file                                        | Description                                                                 |
 |---------------------------------------|-----------------------------------------------------|-----------------------------------------------------------------------------|
-| BIAN (Banking Industry Architecture Network) | [orthogramic-bian.context.jsonld](orthogramic-bian.context.jsonld) | Maps BIAN service domains to Orthogramic domains                            |
-| SAP Enterprise Architecture Framework | [orthogramic-sap.context.jsonld](orthogramic-sap.context.jsonld)   | Maps SAP EA concepts to Orthogramic Metamodel domains                       |
-| FIBO (Financial Industry Business Ontology) | [orthogramic-fibo.context.jsonld](orthogramic-fibo.context.jsonld) | Aligns Orthogramic properties with formalised financial and regulatory semantics |
+| BIAN (Banking Industry Architecture Network) | [triodian-bian.context.jsonld](triodian-bian.context.jsonld) | Maps BIAN service domains to Triodian domains                            |
+| SAP Enterprise Architecture Framework | [triodian-sap.context.jsonld](triodian-sap.context.jsonld)   | Maps SAP EA concepts to Triodian Metamodel domains                       |
+| FIBO (Financial Industry Business Ontology) | [triodian-FIBO.context.jsonld](triodian-FIBO.context.jsonld) | Aligns Triodian properties with formalised financial and regulatory semantics |
 
 ---
 
@@ -24,12 +24,12 @@ Each mapping defines a JSON-LD `@context` file to help align terminology and str
 - **Compatibility:** BIAN, schema.org, FOAF, ArchiMate  
 - **Version:** 1.0.0  
 - **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
-- **Context URI:** https://orthogramic.org/context/orthogramic-bian.jsonld  
+- **Context URI:** https://triodian.com/context/triodian-bian.jsonld  
 
 ### Domains
 - `ServiceDomain` → `Capabilities`, `Services`, `Information`, `Products`
 - `FunctionalPattern` → supports structural analysis of business functions
-- `BusinessArea` → maps to Orthogramic `Organization` or `CapabilityGroup`
+- `BusinessArea` → maps to Triodian `Organization` or `CapabilityGroup`
 
 ### Inter-domain and cross-domain relationships
 - Service domains reused across capability groups
@@ -57,7 +57,7 @@ BIAN’s published RESTful APIs can be semantically annotated using this context
 - **Compatibility:** SAP EA Framework, schema.org, FOAF, ArchiMate  
 - **Version:** 1.0.0  
 - **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
-- **Context URI:** https://orthogramic.org/context/orthogramic-sap.jsonld  
+- **Context URI:** https://triodian.com/context/triodian-sap.jsonld  
 
 ### Domains
 - `StrategicGoal` → `Strategy`
@@ -93,7 +93,7 @@ To apply a context, reference the appropriate `.context.jsonld` file in your JSO
 
 ```json
 {
-  "@context": "https://raw.githubusercontent.com/Orthogramic/Orthogramic_Metamodel/main/interoperability/orthogramic-sap.context.jsonld",
+  "@context": "https://raw.githubusercontent.com/Triodian/Triodian_Metamodel/main/interoperability/triodian-sap.context.jsonld",
   "Capabilities": {
     "sap:BusinessCapability": "Customer Relationship Management"
   }
@@ -104,7 +104,7 @@ To apply a context, reference the appropriate `.context.jsonld` file in your JSO
 
 ### FIBO (Financial Industry Business Ontology) interoperability
 
-The Orthogramic Metamodel now includes schema-level mappings to the Financial Industry Business Ontology (FIBO), enabling integration with regulatory, financial, and compliance-focused enterprise data ecosystems. These mappings align core Orthogramic business architecture properties—such as `performanceIndicators`, `orgUnitTitle`, `strategicAlignment`, and `stakeholders`—to FIBO-standard properties used in semantic financial models.
+The Triodian Metamodel now includes schema-level mappings to the Financial Industry Business Ontology (FIBO), enabling integration with regulatory, financial, and compliance-focused enterprise data ecosystems. These mappings align core Triodian business architecture properties—such as `performanceIndicators`, `orgUnitTitle`, `strategicAlignment`, and `stakeholders`—to FIBO-standard properties used in semantic financial models.
 
 #### Overview  
 **Format:** JSON-LD  
@@ -112,7 +112,7 @@ The Orthogramic Metamodel now includes schema-level mappings to the Financial In
 **Compatibility:** FIBO, Schema.org, FOAF, ArchiMate  
 **Version:** 1.0.0  
 **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
-**Context URI:** [orthogramic-fibo.context.jsonld](https://github.com/Orthogramic/Orthogramic_Metamodel/blob/main/interoperability/orthogramic-fibo.context.jsonld)
+**Context URI:** [triodian-FIBO.context.jsonld](https://github.com/Triodian/Triodian_Metamodel/blob/main/interoperability/triodian-FIBO.context.jsonld)
 
 #### Use cases  
 - Integration with financial knowledge graphs and regulatory taxonomies  

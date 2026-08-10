@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Customer Domain Schema",
-  "description": "Schema for the Customer domain in the Orthogramic Metamodel",
+  "description": "Schema for the Customer domain in the Triodian Metamodel",
   "type": "object",
   "required": ["customerID", "title", "description", "orgUnitTitle"],
   "properties": {

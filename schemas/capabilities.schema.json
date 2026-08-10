@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://orthogramic.com/schemas/capabilities.schema.json",
+  "$id": "https://triodian.com/schemas/capabilities.schema.json",
   "title": "Capabilities Domain Schema",
-  "description": "Schema for the Capabilities domain in the Orthogramic Metamodel with global enumeration support",
+  "description": "Schema for the Capabilities domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "attributes": {
     "title": {
