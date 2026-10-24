@@ -1,0 +1,24 @@
+{
+  "orgTitle": "Singapore Digital Railways Corporation",
+  "orgShortName": "SDRC",
+  "orgType": "State-Owned Enterprise",
+  "country": "Singapore",
+  "description": "Technology-focused urban rail operator providing smart transportation solutions",
+  "structureType": "Matrix",
+  "missionStatement": "Transform urban mobility through innovative digital rail solutions",
+  "visionStatement": "World's smartest rail network by 2030",
+  "values": "Innovation, Excellence, Sustainability, Customer Delight",
+  "legalStructure": "State-Owned Enterprise",
+  "geographicScope": "Local (City/Metropolitan)",
+  "operationalModel": "Centralized Operations",
+  "currency": "SGD",
+  "cultureType": "Innovation-focused",
+  "complianceFrameworks": [
+    "ISO 27001 (Information Security)",
+    "Local Regulatory Requirements"
+  ],
+  "primaryLanguages": [
+    "English",
+    "Mandarin Chinese"
+  ]
+}

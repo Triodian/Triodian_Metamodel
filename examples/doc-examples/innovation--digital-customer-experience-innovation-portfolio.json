@@ -1,0 +1,227 @@
+{
+  "innovationID": "INN-DIGITAL-001",
+  "title": "Digital Customer Experience Innovation Portfolio",
+  "description": "Portfolio of innovations focused on transforming customer experiences through digital technologies, data analytics, and emerging platforms.",
+  "innovationType": "business-model",
+  "orgUnitTitle": "Digital Innovation Center",
+  "orgUnitRoles": [
+    "Chief Innovation Officer",
+    "Digital Experience Lead",
+    "Innovation Portfolio Manager"
+  ],
+  "innovationScope": "enterprise",
+  "innovationOrigin": {
+    "sources": [
+      "customer-insights",
+      "technology-exploration",
+      "competitive-analysis"
+    ],
+    "primarySource": "customer-insights",
+    "originDetails": "Customer journey mapping revealed significant friction points in digital interactions"
+  },
+  "innovationStage": "scaling",
+  "innovationOwner": "VP of Digital Transformation",
+  "strategicAlignment": {
+    "alignmentLevel": "high",
+    "alignedObjectives": [
+      {
+        "objectiveID": "SO-2025-02",
+        "alignmentDescription": "Directly supports the strategic objective of creating industry-leading digital experiences"
+      },
+      {
+        "objectiveID": "SO-2025-04",
+        "alignmentDescription": "Contributes to data monetization strategy through enhanced digital touchpoints"
+      }
+    ]
+  },
+  "investmentLevel": {
+    "annualBudget": "$12.5M",
+    "resourceAllocation": [
+      {
+        "resourceType": "personnel",
+        "allocation": "42 FTEs"
+      },
+      {
+        "resourceType": "technology",
+        "allocation": "$5.3M"
+      },
+      {
+        "resourceType": "research",
+        "allocation": "$1.8M"
+      }
+    ],
+    "fundingSources": [
+      {
+        "source": "Digital Transformation Budget",
+        "percentage": 65
+      },
+      {
+        "source": "Business Unit Contributions",
+        "percentage": 25
+      },
+      {
+        "source": "Innovation Fund",
+        "percentage": 10
+      }
+    ]
+  },
+  "riskProfile": {
+    "overallRiskLevel": "moderate",
+    "keyRiskFactors": [
+      {
+        "factorName": "Technology adoption barriers",
+        "riskLevel": "high",
+        "mitigationApproach": "Phased implementation with extensive user testing"
+      },
+      {
+        "factorName": "Legacy system integration",
+        "riskLevel": "high",
+        "mitigationApproach": "API-first approach with compatibility layer"
+      },
+      {
+        "factorName": "Customer privacy concerns",
+        "riskLevel": "moderate",
+        "mitigationApproach": "Privacy by design principles, transparent data usage"
+      }
+    ],
+    "riskManagementApproach": "Monthly risk review with quarterly simulation and mitigation updates"
+  },
+  "expectedOutcomes": [
+    {
+      "outcomeName": "Enhanced digital engagement",
+      "outcomeMetric": "Digital interaction frequency",
+      "targetValue": "3.8 interactions per month",
+      "currentValue": "2.2 interactions per month"
+    },
+    {
+      "outcomeName": "Improved conversion rates",
+      "outcomeMetric": "Digital conversion percentage",
+      "targetValue": "4.2%",
+      "currentValue": "2.7%"
+    },
+    {
+      "outcomeName": "Increased customer satisfaction",
+      "outcomeMetric": "Digital experience NPS",
+      "targetValue": "42",
+      "currentValue": "28"
+    }
+  ],
+  "timeHorizon": {
+    "portfolioTimespan": "2024-2027",
+    "keyMilestones": [
+      {
+        "milestone": "Mobile experience redesign",
+        "targetDate": "Q3 2025"
+      },
+      {
+        "milestone": "AI-powered personalization",
+        "targetDate": "Q1 2026"
+      },
+      {
+        "milestone": "Cross-channel integration",
+        "targetDate": "Q4 2026"
+      }
+    ],
+    "reviewCycles": "Quarterly portfolio review with annual strategic realignment"
+  },
+  "successMetrics": [
+    {
+      "metricName": "Innovation Adoption Rate",
+      "metricDescription": "Percentage of customers using new digital features",
+      "currentValue": "32%",
+      "targetValue": "65%",
+      "measurementFrequency": "Monthly"
+    },
+    {
+      "metricName": "Innovation ROI",
+      "metricDescription": "Return on innovation investment",
+      "currentValue": "1.8x",
+      "targetValue": "3.5x",
+      "measurementFrequency": "Quarterly"
+    },
+    {
+      "metricName": "Time to Market",
+      "metricDescription": "Average time from concept to deployment",
+      "currentValue": "9 months",
+      "targetValue": "5 months",
+      "measurementFrequency": "Per innovation"
+    }
+  ],
+  "innovationBarriers": [
+    {
+      "barrierName": "Organizational silos",
+      "barrierDescription": "Functional silos impeding cross-functional collaboration",
+      "impactLevel": "significant",
+      "mitigationApproach": "Cross-functional innovation teams with executive sponsorship"
+    },
+    {
+      "barrierName": "Technology debt",
+      "barrierDescription": "Legacy systems limiting integration capabilities",
+      "impactLevel": "high",
+      "mitigationApproach": "Parallel modernization initiative with targeted API development"
+    },
+    {
+      "barrierName": "Risk aversion",
+      "barrierDescription": "Cultural resistance to experimental approaches",
+      "impactLevel": "moderate",
+      "mitigationApproach": "Innovation sandboxes with limited risk exposure"
+    }
+  ],
+  "innovationEnablers": [
+    {
+      "enablerName": "Executive sponsorship",
+      "enablerDescription": "Strong C-suite commitment to digital transformation",
+      "contributionLevel": "critical"
+    },
+    {
+      "enablerName": "Innovation incentives",
+      "enablerDescription": "Rewards and recognition for contribution to innovation",
+      "contributionLevel": "significant"
+    },
+    {
+      "enablerName": "Technical talent",
+      "enablerDescription": "Specialized skills in emerging technologies",
+      "contributionLevel": "high"
+    }
+  ],
+  "governanceApproach": {
+    "governanceStructure": "Innovation Council with business unit representation",
+    "decisionRights": "Portfolio decisions centralized, implementation decisions distributed",
+    "reviewProcess": "Monthly innovation reviews, quarterly portfolio reassessment",
+    "resourceAllocationProcess": "Annual base funding with quarterly adjustment opportunities"
+  },
+  "intellectualPropertyStrategy": {
+    "patentStrategy": "Selective patenting of core technologies and methods",
+    "tradeSecretStrategy": "Protection of proprietary algorithms and models",
+    "openInnovationApproach": "Selective open source contributions to build ecosystem",
+    "licensingStrategy": "Strategic licensing of non-core innovations"
+  },
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-DIGITAL-003",
+      "description": "Digital experience design capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Information",
+      "entityID": "INFO-DATA-004",
+      "description": "Customer behavior analytics"
+    }
+  ],
+  "relatedInnovations": [
+    {
+      "innovationID": "INN-DATA-002",
+      "relationshipType": "enabling",
+      "relationshipStrength": 4,
+      "description": "Data platform modernization enables enhanced digital experiences"
+    },
+    {
+      "innovationID": "INN-AI-003",
+      "relationshipType": "synergistic",
+      "relationshipStrength": 5,
+      "description": "AI personalization capabilities enhance digital experience value"
+    }
+  ]
+}

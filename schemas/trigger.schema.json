@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://triodian.com/schemas/trigger.schema.json",
   "title": "trigger",
   "type": "object",
@@ -405,4 +405,3 @@
     }
   }
 }
-```

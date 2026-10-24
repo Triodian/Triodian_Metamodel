@@ -1,0 +1,26 @@
+{
+  "title": "RailSafe Inspector Mobile App",
+  "description": "Mobile application for field inspectors to conduct track inspections, capture data, and generate reports in real-time",
+  "purpose": "Digitize field inspection processes and improve data quality and timeliness",
+  "owner": "Mobile Development Team",
+  "productCategory": "Digital Product",
+  "productType": "Software",
+  "targetMarket": "Internal",
+  "businessModel": "Internal Tool",
+  "lifecycleStage": "Growth",
+  "customerSegments": [
+    "Field Inspectors",
+    "Maintenance Teams"
+  ],
+  "channels": [
+    "Mobile App Store",
+    "Internal Distribution"
+  ],
+  "valueProposition": "Reduce inspection time by 40% and improve data accuracy by 60%",
+  "technologyStack": "React Native, Node.js, PostgreSQL, AWS",
+  "riskCategories": [
+    "Technical",
+    "Security",
+    "Operational"
+  ]
+}

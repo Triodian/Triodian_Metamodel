@@ -1,0 +1,42 @@
+{
+  "title": "Network Monitoring Service",
+  "description": "Comprehensive 24/7 monitoring of rail network infrastructure including tracks, signals, communication systems, and environmental conditions",
+  "purpose": "Ensure optimal network performance and safety through continuous monitoring and proactive issue detection",
+  "owner": "Jennifer Lee, Director of Network Operations",
+  "orgUnitTitle": "Network Operations Center",
+  "serviceCategory": "Infrastructure Service",
+  "serviceType": "Monitoring",
+  "deliveryModel": "Continuous",
+  "serviceLevel": "Mission Critical",
+  "serviceLevelAgreements": "24/7 monitoring, 5-minute incident detection, 15-minute response time",
+  "channels": [
+    "Online Portal",
+    "Mobile App",
+    "Phone"
+  ],
+  "targetAudience": [
+    "Internal Employees"
+  ],
+  "businessModel": "Support Model",
+  "automationLevel": "Highly Automated",
+  "lifecycle": "Operations",
+  "availability": "24/7/365 monitoring and response",
+  "valueProposition": "Prevent 95% of potential incidents through early detection and proactive maintenance",
+  "performanceIndicators": "Mean time to detection, system availability, incident prevention rate, false positive rate",
+  "serviceFeatures": [
+    {
+      "title": "Automated Alert System",
+      "description": "AI-powered system that automatically detects anomalies and sends alerts to appropriate personnel",
+      "featureType": "Core Feature",
+      "priority": "Critical",
+      "complexity": "Complex"
+    },
+    {
+      "title": "Predictive Maintenance Dashboard",
+      "description": "Visual dashboard showing predicted maintenance needs based on sensor data analysis",
+      "featureType": "Enhancement",
+      "priority": "High",
+      "complexity": "Moderate"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Federal Railroad Administration",
+  "tType": "Regulatory Body",
+  "description": "Federal agency responsible for railroad safety regulation and oversight",
+  "role": "Establish and enforce railroad safety standards and regulations",
+  "orgUnitTitle": "Regulatory Compliance Division",
+  "stakeholderCategory": "External Stakeholder",
+  "influenceLevel": "High Influence",
+  "interestLevel": "High Interest",
+  "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
+  "engagementFrequency": "Monthly",
+  "communicationChannels": [
+    "Email",
+    "In-Person Meeting",
+    "Reports"
+  ],
+  "expectations": "Full compliance with safety regulations, timely incident reporting",
+  "geographicScope": "National",
+  "industry": "Government",
+  "organizationType": "Government Agency",
+  "riskCategories": [
+    "Compliance/Regulatory",
+    "Reputational"
+  ],
+  "strategicAlignment": "Critical for maintaining operating licenses and safety compliance"
+}

@@ -1,0 +1,35 @@
+{
+  "title": "Financial Compliance Archive",
+  "description": "Comprehensive archive of financial records, audit trails, and compliance documentation required for regulatory reporting and legal requirements",
+  "purpose": "Ensure regulatory compliance, support audit processes, and maintain legal documentation",
+  "owner": "Chief Compliance Officer",
+  "orgUnitTitle": "Risk and Compliance Division",
+  "informationCategory": "Content",
+  "informationType": "Archive",
+  "dataClassification": "Restricted",
+  "dataQuality": "High Quality",
+  "format": "Immutable document storage with cryptographic signatures and timestamps",
+  "volume": "100TB of financial records and audit documentation spanning 15 years",
+  "updateFrequency": "Monthly",
+  "retention": "Permanent retention with 7-year active access requirement",
+  "sources": "Financial systems, audit processes, regulatory filings, legal documentation",
+  "consumers": "Auditors, compliance team, legal department, regulatory agencies",
+  "compliance": [
+    "SOX",
+    "Industry Standards",
+    "Internal Policies"
+  ],
+  "security": "Immutable storage, digital signatures, audit trails, encrypted archives",
+  "governance": "Strict change control, compliance committee oversight, regular audits",
+  "businessValue": "Ensures regulatory compliance and prevents $5M+ in potential penalties",
+  "informationElements": [
+    {
+      "title": "Audit Trail Records",
+      "description": "Detailed records of all financial system transactions and changes",
+      "elementType": "Document",
+      "sensitivity": "Restricted",
+      "constraints": "Immutable once created, digitally signed",
+      "retention": "Permanent with 7-year active access"
+    }
+  ]
+}

@@ -13,8 +13,10 @@
       "description": "The organisation this goal applies to."
     },
     "orgUnit": {
-      "type": "string",
-      "nullable": true,
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Optional organisational unit this goal is targeted at. Leave null for organisation-wide goals."
     },
     "domain": {
@@ -30,15 +32,19 @@
       "description": "Acceptable gap between target and actual domain coverage (e.g. 0.1 = 10% gap)."
     },
     "maturityTargetDate": {
-      "type": "string",
+      "type": [
+        "string",
+        "null"
+      ],
       "format": "date",
-      "description": "Date by which the organisation aims to achieve the coverage goal.",
-      "nullable": true
+      "description": "Date by which the organisation aims to achieve the coverage goal."
     },
     "notes": {
-      "type": "string",
-      "description": "Additional context or commentary.",
-      "nullable": true
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Additional context or commentary."
     },
     "createdBy": {
       "type": "string",
@@ -50,5 +56,13 @@
       "description": "Timestamp of creation."
     }
   },
-  "required": ["id", "organization", "domain", "weighting", "coverageGapTolerance", "createdBy", "createdAt"]
+  "required": [
+    "id",
+    "organization",
+    "domain",
+    "weighting",
+    "coverageGapTolerance",
+    "createdBy",
+    "createdAt"
+  ]
 }

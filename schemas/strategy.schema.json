@@ -4,7 +4,7 @@
   "title": "Strategy Domain Schema",
   "description": "Schema for the Strategy domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
-  "attributes": {
+  "properties": {
     "title": {
       "type": "string",
       "description": "Name/title of strategy",
@@ -180,7 +180,10 @@
           "Organizational",
           "External/Environmental",
           "Reputational",
-          "Cybersecurity"
+          "Cybersecurity",
+          "Political",
+          "Diplomatic",
+          "Economic"
         ]
       }
     },
@@ -250,7 +253,7 @@
       "type": "array",
       "description": "Specific objectives supporting the strategy",
       "items": {
-        "$ref": "#/elements/StrategyObjective"
+        "$ref": "#/definitions/StrategyObjective"
       }
     },
     "empathyFocus": {
@@ -317,11 +320,11 @@
   },
   "required": ["title", "description", "purpose", "owner"],
   "additionalProperties": false,
-  "elements": {
+  "definitions": {
     "StrategyObjective": {
       "type": "object",
       "description": "A specific objective that supports a strategy",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of objective"

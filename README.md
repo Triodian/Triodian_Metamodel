@@ -47,6 +47,20 @@ Visit the documentation to begin:
 
 Each schema includes examples and structured fields to help your team model capabilities, initiatives, and performance in a consistent and transparent way.
 
+## Validating the schemas
+
+Every change is checked by `scripts/validate.py`, which runs in CI on each push and pull request:
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/validate.py                    # structural checks
+python scripts/validate.py --doc-examples     # plus the documentation's worked examples
+```
+
+The structural checks confirm that every schema is well-formed JSON, valid against its declared JSON Schema draft, free of non-standard keywords (such as `attributes`, `elements` or `nullable`), that every `$ref` resolves, and that each schema's embedded examples validate against it.
+
+The worked examples published in the metamodel documentation are kept in [`examples/doc-examples`](examples/doc-examples) and validated against their schemas, so drift between the documentation and the schemas is visible.
+
 ## Contributing
 
 We welcome your input! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for details on how to propose improvements, submit pull requests, or engage with the community.

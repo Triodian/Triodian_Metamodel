@@ -1,0 +1,58 @@
+{
+  "intelligenceID": "ORGINT-005",
+  "title": "AI-Augmented Market Pulse Daily Digest",
+  "description": "Daily summarisation of real-time market movements, key competitor product mentions, and public sentiment towards flagship products, using AI-based social media and news stream analysis.",
+  "purpose": "Enable agile tactical adjustments in marketing, pricing, and public relations based on current market signals.",
+  "owner": "Head of Tactical Market Intelligence",
+  "orgUnitTitle": "Marketing Intelligence Team",
+  "sources": [
+    {
+      "sourceName": "Social Media Listening Platform",
+      "sourceType": "Social media",
+      "reliabilityRating": "Medium",
+      "collectionMethod": "AI-generated summarisation",
+      "cost": "$9,000/year",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Real-Time Financial News Aggregator",
+      "sourceType": "Paid research services",
+      "reliabilityRating": "High",
+      "collectionMethod": "Automated scraping",
+      "cost": "$15,000/year",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Market intelligence",
+  "frequency": "Daily",
+  "legalAndEthicalConsiderations": "Only public information sources monitored, strictly avoiding personal data harvesting.",
+  "confidentialityLevel": "Internal",
+  "performanceIndicators": [
+    "Reduction in campaign adjustment lead time by 40%",
+    "Improved accuracy of market reaction predictions to promotional events by 20%"
+  ],
+  "risks": [
+    "High volume of noise in public sentiment signals",
+    "Potential bias in algorithmic content selection"
+  ],
+  "improvementOpportunities": [
+    "Expand regional language models for greater market coverage",
+    "Introduce explainable AI summaries to improve marketing trust in insights"
+  ],
+  "strategicAlignment": "Supports real-time marketing agility objective under Commercial Effectiveness Program.",
+  "applications": [
+    {
+      "applicationArea": "Tactical operations",
+      "organisationalDecisionsInfluenced": "Real-time bid adjustments, campaign pivoting, competitor counter-offers.",
+      "intelligenceConsumers": [
+        "VP Marketing",
+        "Head of Brand Strategy",
+        "Campaign Managers"
+      ],
+      "measurableOutcomes": [
+        "15% uplift in digital conversion rates",
+        "20% reduction in ineffective ad spend within six months"
+      ]
+    }
+  ]
+}

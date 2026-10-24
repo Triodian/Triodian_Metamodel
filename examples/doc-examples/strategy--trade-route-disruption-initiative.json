@@ -1,0 +1,17 @@
+{
+  "title": "Trade Route Disruption Initiative",
+  "description": "Economic strategy to limit competitor's access to critical trade routes and markets",
+  "purpose": "Contain economic expansion and maintain strategic trade advantages",
+  "owner": "Minister of Economic Security",
+  "strategyCategory": "Economic",
+  "strategyType": "Containment",
+  "strategicFocus": "Resource Dominance",
+  "timeHorizon": "Medium-term (2-3 years)",
+  "scopeLevel": "Continental",
+  "investmentLevel": "High Investment",
+  "riskCategories": [
+    "Economic",
+    "Diplomatic",
+    "Strategic"
+  ]
+}

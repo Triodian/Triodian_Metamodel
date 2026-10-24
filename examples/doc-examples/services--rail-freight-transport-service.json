@@ -1,0 +1,48 @@
+{
+  "title": "Rail Freight Transport Service",
+  "description": "End-to-end freight transportation service using the national rail network, including cargo loading, transport, tracking, and delivery to specified destinations",
+  "purpose": "To provide reliable, cost-effective, and environmentally sustainable freight transportation solutions for businesses across the country",
+  "owner": "James Wilson, Director of Freight Operations",
+  "orgUnitTitle": "Freight Operations Division",
+  "serviceCategory": "Operational Service",
+  "serviceType": "Transportation",
+  "deliveryModel": "Scheduled",
+  "serviceLevel": "Standard",
+  "serviceLevelAgreements": "98% on-time delivery, maximum delay of 2 hours for priority shipments, 24-hour customer service response time",
+  "channels": [
+    "Online Portal",
+    "Mobile App",
+    "Phone",
+    "In-Person"
+  ],
+  "targetAudience": [
+    "External Customers",
+    "Partners"
+  ],
+  "businessModel": "Fee for Service",
+  "automationLevel": "Semi-Automated",
+  "lifecycle": "Operations",
+  "valueProposition": "Reduce transportation costs by 25% while improving delivery reliability to 98%",
+  "performanceIndicators": "On-time delivery percentage, average transit time, fuel efficiency per ton-mile, customer satisfaction score",
+  "complianceRequirements": [
+    "Federal Regulations",
+    "Environmental Standards",
+    "Safety Requirements"
+  ],
+  "serviceFeatures": [
+    {
+      "title": "Real-time Cargo Tracking",
+      "description": "GPS-based tracking system providing customers with real-time location and status updates",
+      "featureType": "Core Feature",
+      "priority": "High",
+      "complexity": "Moderate"
+    },
+    {
+      "title": "Dynamic Route Optimization",
+      "description": "AI-powered system that optimizes routes based on weather, traffic, and capacity",
+      "featureType": "Premium Feature",
+      "priority": "Medium",
+      "complexity": "Complex"
+    }
+  ]
+}

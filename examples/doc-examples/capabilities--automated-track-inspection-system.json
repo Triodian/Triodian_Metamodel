@@ -1,0 +1,26 @@
+{
+  "title": "Automated Track Inspection System",
+  "description": "AI-enabled system for continuous track geometry measurement and defect detection using advanced sensor technology",
+  "purpose": "Enhance track inspection efficiency and accuracy while reducing manual inspection requirements",
+  "owner": "Chief of Track Inspection Technology",
+  "orgUnitTitle": "Track and Rail Infrastructure Division",
+  "capabilityCategory": "Core Business",
+  "capabilityType": "Technical",
+  "businessDomain": "Operations",
+  "inputs": "Track geometry data, rail wear measurements, historical defect data",
+  "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
+  "maturityLevel": "Level 4 - Managed",
+  "targetMaturityLevel": "Level 5 - Optimizing",
+  "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
+  "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
+  "investmentCategory": "Mixed",
+  "riskCategories": [
+    "Technical/Technology",
+    "Operational"
+  ],
+  "criticality": "Critical",
+  "availability": "24/7",
+  "scalability": "Highly Scalable",
+  "parent": "Track Safety Assurance System",
+  "child": "Rail Profile Measurement"
+}

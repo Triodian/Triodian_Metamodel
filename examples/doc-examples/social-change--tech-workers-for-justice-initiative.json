@@ -1,0 +1,47 @@
+{
+  "name": "Tech Workers for Justice Initiative",
+  "description": "Employee-driven campaign to eliminate biased AI algorithms and improve workplace equity",
+  "activityType": "Organizational Reform",
+  "changeScope": "Organization-wide",
+  "changeAgentType": "Worker Committee",
+  "institutionalContext": "Private Corporation",
+  "specificActions": [
+    "Worker Petition",
+    "Internal Advocacy",
+    "Ethics Review"
+  ],
+  "leadingOrganizations": [
+    "Tech Workers Coalition",
+    "AI Ethics Committee"
+  ],
+  "systemicProblem": "Algorithmic bias and workplace discrimination in tech industry",
+  "primaryAffectedGroups": [
+    "Underrepresented employees",
+    "AI system users",
+    "Affected communities"
+  ],
+  "tactics": [
+    {
+      "tacticType": "Worker Organizing",
+      "description": "Building employee coalition for ethical AI practices",
+      "channel": "Internal communications and meetings"
+    },
+    {
+      "tacticType": "Research and Documentation",
+      "description": "Documenting bias in current AI systems",
+      "channel": "Technical analysis and reporting"
+    }
+  ],
+  "resourceSource": "Volunteer Resources",
+  "timeline": "1-year implementation",
+  "successMetrics": [
+    "Policy adoption rates",
+    "Bias reduction in AI systems",
+    "Employee satisfaction scores"
+  ],
+  "resistanceFactors": [
+    "Management resistance",
+    "Technical complexity"
+  ],
+  "sustainabilityPlan": "Policy institutionalization"
+}

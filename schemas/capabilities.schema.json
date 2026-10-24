@@ -4,7 +4,7 @@
   "title": "Capabilities Domain Schema",
   "description": "Schema for the Capabilities domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
-  "attributes": {
+  "properties": {
     "title": {
       "type": "string",
       "description": "The name or title of the Capability",
@@ -207,31 +207,31 @@
       "type": "array",
       "description": "Functions that define capability purpose",
       "items": {
-        "$ref": "#/elements/CapabilityFunction"
+        "$ref": "#/definitions/CapabilityFunction"
       }
     },
     "capabilityComponents": {
       "type": "array",
       "description": "Structural elements of the capability",
       "items": {
-        "$ref": "#/elements/CapabilityComponent"
+        "$ref": "#/definitions/CapabilityComponent"
       }
     },
     "capabilityProcesses": {
       "type": "array",
       "description": "Processes that drive capability operation",
       "items": {
-        "$ref": "#/elements/CapabilityProcess"
+        "$ref": "#/definitions/CapabilityProcess"
       }
     }
   },
   "required": ["title", "description", "purpose", "owner"],
   "additionalProperties": false,
-  "elements": {
+  "definitions": {
     "CapabilityFunction": {
       "type": "object",
       "description": "A function that defines the overarching purpose of a capability",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of the function"
@@ -299,7 +299,7 @@
     "CapabilityComponent": {
       "type": "object",
       "description": "A structural element that makes up a capability",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of the component"
@@ -370,7 +370,7 @@
     "CapabilityProcess": {
       "type": "object",
       "description": "A process that drives the capability's operation",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of the Process"
@@ -567,7 +567,6 @@
       "businessDomain": "Strategy & Planning",
       "maturityLevel": "Level 3 - Defined",
       "targetMaturityLevel": "Level 4 - Managed",
-      "skillsRequired": ["Innovation", "Project Management", "Digital Literacy", "Change Management"],
       "investmentCategory": "CAPEX",
       "criticality": "High",
       "scalability": "Moderately Scalable"

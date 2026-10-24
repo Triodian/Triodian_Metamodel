@@ -22,7 +22,12 @@
     },
     "sizeCategory": {
       "type": "string",
-      "enum": ["Small", "Medium", "Large", "Enterprise"],
+      "enum": [
+        "Small",
+        "Medium",
+        "Large",
+        "Enterprise"
+      ],
       "description": "Size category of organisations that this template is intended for."
     },
     "expectations": {
@@ -37,11 +42,21 @@
           },
           "targetCoverageLevel": {
             "type": "string",
-            "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+            "enum": [
+              "None",
+              "Minimal",
+              "Documented",
+              "Analysed",
+              "Governed",
+              "Optimised"
+            ],
             "description": "Target coverage level for the domain."
           }
         },
-        "required": ["domain", "targetCoverageLevel"]
+        "required": [
+          "domain",
+          "targetCoverageLevel"
+        ]
       }
     },
     "createdBy": {
@@ -54,5 +69,13 @@
       "description": "Timestamp of creation."
     }
   },
-  "required": ["id", "name", "sector", "sizeCategory", "expectations", "createdBy", "createdAt"]
+  "required": [
+    "id",
+    "name",
+    "sector",
+    "sizeCategory",
+    "expectations",
+    "createdBy",
+    "createdAt"
+  ]
 }
