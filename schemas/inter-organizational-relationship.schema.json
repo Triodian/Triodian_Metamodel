@@ -22,8 +22,8 @@
     "sourceType": {
       "type": "string",
       "enum": [
-        "Internal",
-        "External"
+        "internal",
+        "external"
       ],
       "description": "Whether the source is an internal or external organization"
     },
@@ -34,22 +34,22 @@
     "targetType": {
       "type": "string",
       "enum": [
-        "Internal",
-        "External"
+        "internal",
+        "external"
       ],
       "description": "Whether the target is an internal or external organization"
     },
     "relationshipType": {
       "type": "string",
       "enum": [
-        "Shares data with",
-        "Provides services to",
-        "Regulates",
-        "Collaborates with",
-        "Funds",
-        "Reports to",
-        "Advises",
-        "Co-governs with"
+        "sharesDataWith",
+        "providesServicesTo",
+        "regulates",
+        "collaboratesWith",
+        "funds",
+        "reportsTo",
+        "advises",
+        "coGovernsWith"
       ],
       "description": "The nature of the relationship between organizations"
     },

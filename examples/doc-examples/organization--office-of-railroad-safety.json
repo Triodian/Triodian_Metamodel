@@ -2,25 +2,25 @@
   "organizationID": "ORG-001",
   "orgTitle": "Office of Railroad Safety",
   "orgShortName": "Railroad Safety",
-  "orgType": "Government Agency",
+  "orgType": "governmentAgency",
   "country": "United States of America",
   "description": "Regional safety oversight office responsible for inspections and enforcement of federal railroad safety regulations in the Northeast corridor",
   "structure": "5 Regional Offices - 8 Technical Divisions",
-  "structureType": "Regional",
+  "structureType": "regional",
   "missionStatement": "Reduce railroad-related accidents through proactive inspections and data-driven safety programs",
   "visionStatement": "Zero train accidents and employee injuries through technology-enabled safety systems",
   "values": "Safety First, Data-Driven Decisions, Continuous Improvement",
-  "legalStructure": "Federal/National Agency",
+  "legalStructure": "federalNationalAgency",
   "geographicScope": "national",
-  "operationalModel": "Decentralized Operations",
-  "currency": "USD",
-  "cultureType": "Process-focused",
+  "operationalModel": "decentralizedOperations",
+  "currency": "usd",
+  "cultureType": "processFocused",
   "history": "Est. 1966, implemented PTC mandate 2008, achieved 99.6% compliance 2023",
   "complianceFrameworks": [
-    "Local Regulatory Requirements"
+    "localRegulatoryRequirements"
   ],
   "primaryLanguages": [
-    "English"
+    "english"
   ],
   "organizationUnits": [
     {

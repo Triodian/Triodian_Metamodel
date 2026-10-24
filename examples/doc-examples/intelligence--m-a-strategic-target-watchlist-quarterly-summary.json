@@ -8,33 +8,33 @@
   "sources": [
     {
       "sourceName": "Company Financial Filings",
-      "sourceType": "Regulatory filings",
+      "sourceType": "regulatoryFilings",
       "reliabilityRating": "high",
-      "collectionMethod": "Manual research",
+      "collectionMethod": "manualResearch",
       "cost": "No additional cost",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Venture Capital Portfolio Tracker",
-      "sourceType": "Third-party subscription",
+      "sourceType": "thirdPartySubscription",
       "reliabilityRating": "high",
-      "collectionMethod": "Third-party acquisition",
+      "collectionMethod": "thirdPartyAcquisition",
       "cost": "$22,000/year",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Industry Insider Forums",
-      "sourceType": "Informal networks",
+      "sourceType": "informalNetworks",
       "reliabilityRating": "medium",
-      "collectionMethod": "Manual research",
+      "collectionMethod": "manualResearch",
       "cost": "Low, <$5,000/year",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Business reporting",
+  "intelligenceType": "businessReporting",
   "frequency": "quarterly",
   "legalAndEthicalConsiderations": "Complies with anti-trust pre-merger review processes and fair competition standards.",
-  "confidentialityLevel": "Restricted",
+  "confidentialityLevel": "restricted",
   "performanceIndicators": [
     "Improved pre-diligence pipeline coverage to 95% of relevant targets",
     "Reduction in acquisition timeline by two quarters"
@@ -50,7 +50,7 @@
   "strategicAlignment": "Directly supports non-organic growth objectives under Strategic Expansion Agenda 2030.",
   "applications": [
     {
-      "applicationArea": "Mergers and acquisitions",
+      "applicationArea": "mergersAndAcquisitions",
       "organisationalDecisionsInfluenced": "Prioritisation of acquisition targets, deal timing, early-stage engagement strategies.",
       "intelligenceConsumers": [
         "CEO",

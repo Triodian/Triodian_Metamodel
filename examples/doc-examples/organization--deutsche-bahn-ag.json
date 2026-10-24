@@ -2,26 +2,26 @@
   "organizationID": "ORG-002",
   "orgTitle": "Deutsche Bahn AG",
   "orgShortName": "DB",
-  "orgType": "Public Limited Company",
+  "orgType": "publicLimitedCompany",
   "country": "Germany",
   "description": "National railway company providing passenger and freight transportation services across Germany and Europe",
-  "structureType": "Divisional",
+  "structureType": "divisional",
   "missionStatement": "Connect people and markets through sustainable mobility solutions",
   "visionStatement": "Leading integrated mobility provider in Europe",
   "values": "Customer Focus, Sustainability, Innovation, Reliability",
-  "legalStructure": "Public Limited Company",
+  "legalStructure": "publicLimitedCompany",
   "geographicScope": "multinational",
-  "operationalModel": "Hub-and-Spoke Model",
-  "currency": "EUR",
-  "cultureType": "Customer-centric",
+  "operationalModel": "hubAndSpokeModel",
+  "currency": "eur",
+  "cultureType": "customerCentric",
   "size": "338,000 employees, €44.4B annual revenue",
   "complianceFrameworks": [
-    "ISO 9001 (Quality Management)",
-    "ISO 14001 (Environmental Management)",
-    "GDPR (General Data Protection Regulation)"
+    "iso9001",
+    "iso14001",
+    "gdpr"
   ],
   "primaryLanguages": [
-    "German",
-    "English"
+    "german",
+    "english"
   ]
 }

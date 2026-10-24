@@ -1,23 +1,23 @@
 {
   "stakeholderID": "STK-003",
   "title": "Downtown Residents Association",
-  "tType": "Community Representative",
+  "tType": "communityRepresentative",
   "description": "Local community group representing residents near railway operations",
   "role": "Advocate for community safety and noise reduction concerns",
-  "stakeholderCategory": "External Stakeholder",
-  "influenceLevel": "Low Influence",
-  "interestLevel": "High Interest",
+  "stakeholderCategory": "externalStakeholder",
+  "influenceLevel": "lowInfluence",
+  "interestLevel": "highInterest",
   "engagementStrategies": "Community meetings, public consultations, safety briefings",
   "engagementFrequency": "quarterly",
   "communicationChannels": [
-    "In-Person Meeting",
-    "Newsletter",
-    "Website"
+    "inPersonMeeting",
+    "newsletter",
+    "website"
   ],
   "expectations": "Minimal noise disruption, advance notice of maintenance activities",
   "geographicScope": "local",
-  "industry": "Non-Profit",
-  "organizationType": "Community Group",
+  "industry": "nonProfit",
+  "organizationType": "communityGroup",
   "riskCategories": [
     "reputational",
     "operational"
@@ -28,9 +28,9 @@
       "description": "Maintain railway noise levels within city ordinance limits",
       "purpose": "Ensure community quality of life standards",
       "priority": "medium",
-      "requirementType": "Compliance",
+      "requirementType": "compliance",
       "acceptanceCriteria": "Noise levels below 65dB during nighttime hours",
-      "complianceFramework": "Government Regulation",
+      "complianceFramework": "governmentRegulation",
       "riskLevel": "medium"
     }
   ]

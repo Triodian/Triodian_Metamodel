@@ -5,10 +5,10 @@
   "purpose": "Support real-time transaction processing and enable customer analytics and business intelligence",
   "owner": "Chief Data Officer",
   "orgUnitTitle": "Data and Analytics Division",
-  "informationCategory": "Operational Data",
-  "informationType": "Database",
-  "dataClassification": "Confidential",
-  "dataQuality": "High Quality",
+  "informationCategory": "operationalData",
+  "informationType": "database",
+  "dataClassification": "confidential",
+  "dataQuality": "highQuality",
   "format": "PostgreSQL relational database with JSON fields for flexible attributes",
   "volume": "2.5TB database with 50M transaction records, growing by 100K records daily",
   "updateFrequency": "realTime",
@@ -16,9 +16,9 @@
   "sources": "POS systems, e-commerce platform, mobile app, customer service systems",
   "consumers": "Analytics platform, fraud detection system, customer service tools, executive dashboards",
   "compliance": [
-    "GDPR",
-    "PCI DSS",
-    "Internal Policies"
+    "gdpr",
+    "pciDss",
+    "internalPolicies"
   ],
   "security": "AES-256 encryption, role-based access control, audit logging, network isolation",
   "privacy": "Data masking in non-production, anonymization for analytics, consent management",
@@ -29,10 +29,10 @@
       "title": "Transaction Amount",
       "description": "Monetary value of individual customer transactions",
       "purpose": "Record the value of each transaction for financial reporting and analytics",
-      "elementType": "Field",
+      "elementType": "field",
       "dataType": "DECIMAL(10,2)",
       "constraints": "NOT NULL, positive value only",
-      "sensitivity": "Confidential"
+      "sensitivity": "confidential"
     }
   ]
 }

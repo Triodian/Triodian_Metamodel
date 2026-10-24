@@ -15,7 +15,7 @@
     "measurementUnits": "Metric tons CO2 equivalent (tCO2e)",
     "measurementFrequency": "annual",
     "dataQuality": "high",
-    "verificationStatus": "third-party-verified"
+    "verificationStatus": "thirdPartyVerified"
   },
   "currentFootprint": {
     "reportingPeriod": "2024",
@@ -123,7 +123,7 @@
         "regulationName": "Carbon Border Adjustment Mechanism",
         "jurisdiction": "European Union",
         "expectedImpact": "medium",
-        "preparednessLevel": "planning stage"
+        "preparednessLevel": "planningStage"
       }
     ]
   },

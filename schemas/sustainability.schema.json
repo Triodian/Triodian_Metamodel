@@ -58,8 +58,8 @@
       "description": "Organizational scope covered by this sustainability element",
       "enum": [
         "enterprise",
-        "business-unit",
-        "product-line",
+        "businessUnit",
+        "productLine",
         "project",
         "location",
         "function"
@@ -295,10 +295,10 @@
           "type": "string",
           "description": "Approach to verification",
           "enum": [
-            "self-assessment",
-            "internal-audit",
-            "third-party-verification",
-            "third-party-assurance"
+            "selfAssessment",
+            "internalAudit",
+            "thirdPartyVerification",
+            "thirdPartyAssurance"
           ]
         },
         "standard": {
@@ -560,8 +560,8 @@
           "description": "Organizational scope of the impact",
           "enum": [
             "enterprise",
-            "business-unit",
-            "product-line",
+            "businessUnit",
+            "productLine",
             "project",
             "location",
             "function"
@@ -577,7 +577,7 @@
             "waste",
             "materials",
             "biodiversity",
-            "land-use",
+            "landUse",
             "other"
           ]
         },
@@ -610,8 +610,8 @@
               "description": "Status of data verification",
               "enum": [
                 "unverified",
-                "internally-verified",
-                "third-party-verified"
+                "internallyVerified",
+                "thirdPartyVerified"
               ]
             }
           },
@@ -845,9 +845,9 @@
                     "type": "string",
                     "description": "Level of preparedness",
                     "enum": [
-                      "not started",
-                      "planning stage",
-                      "preparation underway",
+                      "notStarted",
+                      "planningStage",
+                      "preparationUnderway",
                       "prepared"
                     ]
                   }
@@ -973,7 +973,7 @@
                 "limited",
                 "reasonable",
                 "moderate",
-                "not assured"
+                "notAssured"
               ]
             },
             "verificationScope": {
@@ -1149,13 +1149,13 @@
           "type": "string",
           "description": "Type of social impact",
           "enum": [
-            "diversity-and-inclusion",
-            "human-rights",
-            "labor-practices",
-            "community-development",
-            "health-and-safety",
-            "supply-chain-responsibility",
-            "product-responsibility",
+            "diversityAndInclusion",
+            "humanRights",
+            "laborPractices",
+            "communityDevelopment",
+            "healthAndSafety",
+            "supplyChainResponsibility",
+            "productResponsibility",
             "other"
           ]
         },
@@ -1477,13 +1477,13 @@
           "type": "string",
           "description": "Type of governance practice",
           "enum": [
-            "board-oversight",
-            "management-accountability",
-            "stakeholder-engagement",
-            "compliance-management",
-            "reporting-disclosure",
-            "ethics-integrity",
-            "risk-oversight",
+            "boardOversight",
+            "managementAccountability",
+            "stakeholderEngagement",
+            "complianceManagement",
+            "reportingDisclosure",
+            "ethicsIntegrity",
+            "riskOversight",
             "other"
           ]
         },
@@ -1492,8 +1492,8 @@
           "description": "Organizational reach of the practice",
           "enum": [
             "enterprise",
-            "business-unit",
-            "product-line",
+            "businessUnit",
+            "productLine",
             "project",
             "location",
             "function"
@@ -1648,9 +1648,9 @@
               "description": "Accessibility of disclosures",
               "enum": [
                 "public",
-                "investors-only",
-                "regulators-only",
-                "internal-only"
+                "investorsOnly",
+                "regulatorsOnly",
+                "internalOnly"
               ]
             }
           },
@@ -2013,7 +2013,7 @@
                 "separate",
                 "aligned",
                 "integrated",
-                "fully integrated"
+                "fullyIntegrated"
               ]
             },
             "strategicPillars": {

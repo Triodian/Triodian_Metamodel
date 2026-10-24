@@ -8,9 +8,9 @@
   "sources": [
     {
       "sourceName": "Endpoint User Activity Monitoring System",
-      "sourceType": "Surveillance systems",
+      "sourceType": "surveillanceSystems",
       "reliabilityRating": "high",
-      "collectionMethod": "Sensor-based collection",
+      "collectionMethod": "sensorBasedCollection",
       "cost": "$35,000/year licensing fee",
       "complianceStatus": "compliant"
     },
@@ -18,23 +18,23 @@
       "sourceName": "HR Access Control Logs",
       "sourceType": "Internal monitoring",
       "reliabilityRating": "high",
-      "collectionMethod": "Sensor-based collection",
+      "collectionMethod": "sensorBasedCollection",
       "cost": "Internal resource cost only",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Anonymous Whistleblower Hotline Reports",
-      "sourceType": "Corporate whistleblowers",
+      "sourceType": "corporateWhistleblowers",
       "reliabilityRating": "Variable",
       "collectionMethod": "Manual investigation",
       "cost": "Internal case management resource",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Insider threat monitoring",
+  "intelligenceType": "insiderThreatMonitoring",
   "frequency": "weekly",
   "legalAndEthicalConsiderations": "Strict alignment to employee monitoring policies, privacy by design, and regulatory employment protections.",
-  "confidentialityLevel": "Restricted",
+  "confidentialityLevel": "restricted",
   "performanceIndicators": [
     "Time-to-intervention reduced from 15 to 5 working days",
     "Incident containment effectiveness rate increased by 60%"
@@ -50,7 +50,7 @@
   "strategicAlignment": "Supports zero internal data breach objective under Corporate Security Strategy 2025.",
   "applications": [
     {
-      "applicationArea": "Fraud prevention",
+      "applicationArea": "fraudPrevention",
       "organisationalDecisionsInfluenced": "Suspicious activity investigations, internal access rights management, training and cultural interventions.",
       "intelligenceConsumers": [
         "Chief Information Security Officer",

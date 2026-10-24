@@ -79,7 +79,7 @@
             "selective",
             "intensive",
             "exclusive",
-            "multi-tiered",
+            "multiTiered",
             "global"
           ]
         },
@@ -249,10 +249,10 @@
               "agent",
               "franchise",
               "dealer",
-              "value-added reseller",
-              "system integrator",
-              "online marketplace",
-              "retail chain",
+              "valueAddedReseller",
+              "systemIntegrator",
+              "onlineMarketplace",
+              "retailChain",
               "other"
             ]
           },
@@ -1210,8 +1210,8 @@
             "enum": [
               "transactional",
               "preferred",
-              "strategic alliance",
-              "joint venture",
+              "strategicAlliance",
+              "jointVenture",
               "exclusive"
             ]
           },

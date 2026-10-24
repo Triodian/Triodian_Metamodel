@@ -8,9 +8,9 @@
   "sources": [
     {
       "sourceName": "Anonymous Product Acquisition Network",
-      "sourceType": "Informal networks",
+      "sourceType": "informalNetworks",
       "reliabilityRating": "high",
-      "collectionMethod": "Manual research",
+      "collectionMethod": "manualResearch",
       "cost": "$45,000 per quarter",
       "complianceStatus": "underReview"
     },
@@ -18,23 +18,23 @@
       "sourceName": "In-house Engineering Teardown Reports",
       "sourceType": "Internal monitoring",
       "reliabilityRating": "high",
-      "collectionMethod": "Manual research",
+      "collectionMethod": "manualResearch",
       "cost": "Internal resource cost",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Secondary Component Supply Chain Disclosures",
-      "sourceType": "Public data",
+      "sourceType": "publicData",
       "reliabilityRating": "medium",
-      "collectionMethod": "Manual research",
+      "collectionMethod": "manualResearch",
       "cost": "No additional cost",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Corporate espionage",
+  "intelligenceType": "corporateEspionage",
   "frequency": "adHoc",
   "legalAndEthicalConsiderations": "Strict legal review conducted prior to engagement; internal ethical risk logged due to aggressive market tactics.",
-  "confidentialityLevel": "Top Secret",
+  "confidentialityLevel": "topSecret",
   "performanceIndicators": [
     "6-month competitive feature advantage maintained in key product lines",
     "Reduction in cost estimation errors by 25%"
@@ -50,7 +50,7 @@
   "strategicAlignment": "Supports Product Leadership Strategy by securing proprietary product roadmap insights.",
   "applications": [
     {
-      "applicationArea": "Competitive response",
+      "applicationArea": "competitiveResponse",
       "organisationalDecisionsInfluenced": "Next-generation product timing, component supplier renegotiations, targeted IP strategy.",
       "intelligenceConsumers": [
         "Chief Product Officer",

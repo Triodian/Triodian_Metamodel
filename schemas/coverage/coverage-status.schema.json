@@ -24,24 +24,24 @@
     "coverageLevelAchieved": {
       "type": "string",
       "enum": [
-        "None",
-        "Minimal",
-        "Documented",
-        "Analysed",
-        "Governed",
-        "Optimised"
+        "none",
+        "minimal",
+        "documented",
+        "analysed",
+        "governed",
+        "optimised"
       ],
       "description": "Categorical level derived from the score."
     },
     "expectedCoverageLevel": {
       "type": "string",
       "enum": [
-        "None",
-        "Minimal",
-        "Documented",
-        "Analysed",
-        "Governed",
-        "Optimised"
+        "none",
+        "minimal",
+        "documented",
+        "analysed",
+        "governed",
+        "optimised"
       ],
       "description": "Target level defined in CoverageExpectation."
     },
