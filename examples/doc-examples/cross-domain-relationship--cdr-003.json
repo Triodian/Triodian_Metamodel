@@ -1,0 +1,13 @@
+{
+  "relationshipID": "CDR-003",
+  "sourceDomain": "finance",
+  "targetDomain": "valueStream",
+  "relationshipType": "reports",
+  "description": "Finance produces cost and profitability reports for customer value streams",
+  "metadata": {
+    "priority": "medium",
+    "impactArea": "operational",
+    "frequency": "monthly",
+    "strength": 3
+  }
+}

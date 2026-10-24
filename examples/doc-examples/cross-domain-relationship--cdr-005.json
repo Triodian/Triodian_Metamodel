@@ -1,0 +1,12 @@
+{
+  "relationshipID": "CDR-005",
+  "sourceDomain": "capability",
+  "targetDomain": "initiative",
+  "relationshipType": "innovates",
+  "description": "Capability development drives innovation initiatives",
+  "metadata": {
+    "priority": "high",
+    "impactArea": "innovation",
+    "strength": 4
+  }
+}

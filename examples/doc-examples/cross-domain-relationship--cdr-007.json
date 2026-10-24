@@ -1,0 +1,12 @@
+{
+  "relationshipID": "CDR-007",
+  "sourceDomain": "policy",
+  "targetDomain": "capability",
+  "relationshipType": "constrains",
+  "description": "Data governance policies constrain information management capabilities",
+  "metadata": {
+    "priority": "high",
+    "impactArea": "regulatory",
+    "strength": 4
+  }
+}

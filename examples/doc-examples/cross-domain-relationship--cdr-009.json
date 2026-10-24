@@ -1,0 +1,12 @@
+{
+  "relationshipID": "CDR-009",
+  "sourceDomain": "risk",
+  "targetDomain": "initiative",
+  "relationshipType": "escalates",
+  "description": "Risk management escalates high-risk initiative issues to executive committee",
+  "metadata": {
+    "priority": "critical",
+    "impactArea": "risk",
+    "strength": 5
+  }
+}
