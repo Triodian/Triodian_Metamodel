@@ -1,0 +1,9 @@
+{
+  "domainType": "Value Stream",
+  "entityName": "Customer Onboarding Value Stream",
+  "relationshipRole": "Coordinating",
+  "organizationUnit": "Process Management Office",
+  "relationshipDescription": "Orchestrates workflow between participating units",
+  "relationshipStrength": 5,
+  "relationshipRationale": "Critical coordination required for seamless customer experience"
+}

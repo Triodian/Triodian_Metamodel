@@ -1,0 +1,203 @@
+{
+  "riskID": "RISK-CYBER-001",
+  "title": "Critical Data Breach Risk",
+  "description": "The risk of unauthorized access to or exfiltration of sensitive customer and financial data through external cyberattack or internal compromise, resulting in regulatory sanctions, financial loss, and reputational damage.",
+  "riskCategory": "technology",
+  "orgUnitTitle": "Information Security Department",
+  "orgUnitRoles": [
+    "Chief Information Security Officer",
+    "Security Operations Manager",
+    "Data Protection Officer"
+  ],
+  "riskSource": "external",
+  "riskOwner": "Chief Information Security Officer",
+  "riskProbability": {
+    "level": "moderate",
+    "numericValue": 0.35,
+    "rationale": "Based on threat intelligence showing increased targeting of our industry, balanced against our enhanced security controls",
+    "timeHorizon": "12 months"
+  },
+  "riskImpact": {
+    "level": "severe",
+    "financialImpact": "$5-15 million",
+    "nonFinancialImpacts": [
+      {
+        "impactType": "reputational",
+        "description": "Severe damage to brand trust and customer confidence",
+        "severity": "high"
+      },
+      {
+        "impactType": "regulatory",
+        "description": "Substantial fines under data protection regulations",
+        "severity": "high"
+      },
+      {
+        "impactType": "operational",
+        "description": "Service disruption during incident response",
+        "severity": "medium"
+      }
+    ],
+    "rationale": "Based on analysis of recent industry breaches and our specific data exposure"
+  },
+  "riskSeverity": {
+    "level": "high",
+    "score": 16,
+    "calculationMethod": "5x5 risk matrix combining probability and impact values"
+  },
+  "riskTolerance": {
+    "toleranceLevel": "low",
+    "thresholds": [
+      {
+        "metricName": "Security incidents involving PII",
+        "thresholdValue": "0",
+        "responseRequired": "Immediate executive notification and investigation"
+      },
+      {
+        "metricName": "Failed security tests",
+        "thresholdValue": ">5%",
+        "responseRequired": "Security remediation within 48 hours"
+      }
+    ],
+    "rationale": "Given regulatory requirements and potential reputational impact"
+  },
+  "riskStatus": "mitigated",
+  "mitigationStrategy": {
+    "approachType": "reduce",
+    "description": "Comprehensive cybersecurity program including advanced threat protection, security monitoring, encryption, access controls, and security awareness training",
+    "expectedOutcome": "Reduce likelihood of successful breach while maintaining detection capabilities",
+    "implementationStatus": "implemented"
+  },
+  "residualRisk": {
+    "level": "moderate",
+    "acceptableLevel": true,
+    "description": "Remaining risk primarily related to zero-day vulnerabilities and sophisticated threat actors",
+    "additionalControls": [
+      "Investigating additional advanced endpoint protection",
+      "Enhancing threat hunting capabilities"
+    ]
+  },
+  "controlEffectiveness": {
+    "level": "effective",
+    "lastAssessment": "2025-03-15",
+    "improvementNeeds": [
+      "Strengthen third-party security assessment process",
+      "Enhance cloud security monitoring"
+    ]
+  },
+  "reviewFrequency": "quarterly",
+  "lastReviewDate": "2025-04-01",
+  "nextReviewDate": "2025-07-01",
+  "regulatoryImplications": [
+    {
+      "regulationType": "Data Protection",
+      "regulationName": "GDPR",
+      "implications": "Breach notification requirements and potential fines up to 4% of global revenue",
+      "complianceStatus": "compliant"
+    },
+    {
+      "regulationType": "Financial",
+      "regulationName": "PCI-DSS",
+      "implications": "Requirements for securing payment card data",
+      "complianceStatus": "compliant"
+    }
+  ],
+  "strategicImplications": {
+    "overallImpact": "mixed",
+    "affectedObjectives": [
+      {
+        "objectiveID": "STRAT-DIGITAL-003",
+        "impactDescription": "Risk considerations require adjustment to cloud migration timeline",
+        "impactSeverity": "moderate"
+      },
+      {
+        "objectiveID": "STRAT-CUSTOMER-002",
+        "impactDescription": "Enhanced security measures could create friction in customer experience",
+        "impactSeverity": "minor"
+      }
+    ]
+  },
+  "emergingFactors": [
+    {
+      "factorName": "AI-Enhanced Cyber Threats",
+      "description": "Increasing sophistication of attacks using AI to evade detection",
+      "potentialImpact": "Could increase probability of successful breach",
+      "timeHorizon": "medium-term",
+      "monitoringApproach": "Threat intelligence subscription and quarterly assessment"
+    },
+    {
+      "factorName": "Extended Supply Chain Exposure",
+      "description": "Increasing integration with third-party systems expanding attack surface",
+      "potentialImpact": "New vectors for data compromise",
+      "timeHorizon": "immediate",
+      "monitoringApproach": "Third-party security assessment program"
+    }
+  ],
+  "relatedRisks": [
+    {
+      "riskID": "RISK-TECH-005",
+      "relationshipType": "contributor",
+      "relationshipStrength": 4,
+      "description": "Legacy System Maintenance Risk contributes to cybersecurity vulnerabilities"
+    },
+    {
+      "riskID": "RISK-COMP-002",
+      "relationshipType": "consequence",
+      "relationshipStrength": 5,
+      "description": "Data breach would trigger Regulatory Compliance Risk"
+    }
+  ],
+  "keyRiskIndicators": [
+    {
+      "indicatorName": "Security Incidents",
+      "description": "Number of security incidents detected per month",
+      "currentValue": "12",
+      "threshold": "25",
+      "trend": "stable",
+      "monitoringFrequency": "daily"
+    },
+    {
+      "indicatorName": "Vulnerability Remediation Time",
+      "description": "Average time to remediate critical vulnerabilities",
+      "currentValue": "1.8 days",
+      "threshold": "3 days",
+      "trend": "improving",
+      "monitoringFrequency": "weekly"
+    },
+    {
+      "indicatorName": "Phishing Simulation Success Rate",
+      "description": "Percentage of employees clicking on simulated phishing emails",
+      "currentValue": "4.2%",
+      "threshold": "5%",
+      "trend": "stable",
+      "monitoringFrequency": "monthly"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-SECOPS-001",
+      "description": "Security Operations capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Information",
+      "entityID": "INFO-DATA-003",
+      "description": "Customer Data Security Classification Framework"
+    }
+  ],
+  "documentationReferences": [
+    {
+      "documentName": "Information Security Policy",
+      "documentLocation": "Policy repository (IS-POL-001)",
+      "documentType": "policy",
+      "documentDate": "2024-12-15"
+    },
+    {
+      "documentName": "Annual Cybersecurity Risk Assessment",
+      "documentLocation": "Risk repository (RISK-RPT-2025-01)",
+      "documentType": "assessment",
+      "documentDate": "2025-02-28"
+    }
+  ]
+}

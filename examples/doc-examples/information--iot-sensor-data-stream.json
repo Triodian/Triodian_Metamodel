@@ -1,0 +1,31 @@
+{
+  "title": "IoT Sensor Data Stream",
+  "description": "Real-time data stream from IoT sensors monitoring infrastructure conditions, equipment performance, and environmental factors",
+  "purpose": "Enable predictive maintenance, real-time monitoring, and operational optimization through continuous sensor data",
+  "owner": "IoT Platform Manager",
+  "orgUnitTitle": "Technology Operations Division",
+  "informationCategory": "Operational Data",
+  "informationType": "Real-time Stream",
+  "dataClassification": "Internal",
+  "dataQuality": "Good Quality",
+  "format": "JSON message streams via Apache Kafka, time-series database storage",
+  "volume": "10GB daily from 5,000 sensors generating 1M messages per hour",
+  "updateFrequency": "Real-time",
+  "retention": "Real-time for 30 days, aggregated for 2 years, archived for 7 years",
+  "sources": "Temperature sensors, vibration monitors, GPS trackers, environmental sensors",
+  "consumers": "Predictive maintenance system, real-time dashboards, alert systems, analytics platform",
+  "security": "Encrypted transmission, device authentication, network segmentation",
+  "performance": "Sub-second latency, 99.9% availability, auto-scaling processing",
+  "analytics": "Anomaly detection, predictive modeling, trend analysis, real-time alerting",
+  "businessValue": "Prevents $2M annually in equipment failures through predictive maintenance",
+  "informationElements": [
+    {
+      "title": "Temperature Readings",
+      "description": "Temperature measurements from equipment sensors",
+      "elementType": "Stream",
+      "dataType": "FLOAT with timestamp and sensor ID",
+      "constraints": "Range validation -50°C to 150°C",
+      "monitoring": "Anomaly detection for out-of-range values"
+    }
+  ]
+}

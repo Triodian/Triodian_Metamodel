@@ -1,0 +1,31 @@
+{
+  "title": "On-Time Performance Rate",
+  "description": "Percentage of trains arriving at destinations within scheduled timeframes, measuring operational efficiency and service reliability",
+  "purpose": "Track and improve operational efficiency to enhance customer service and operational excellence",
+  "owner": "Director of Operations",
+  "orgUnitTitle": "Operations Division",
+  "performanceCategory": "Operational Performance",
+  "performanceType": "Rate",
+  "measurementLevel": "Enterprise",
+  "metricClass": "Coincident Indicator",
+  "inputs": "Train scheduling data, actual arrival times, weather data, infrastructure status",
+  "outputs": "Daily operations reports, performance dashboards, delay analysis, improvement plans",
+  "frequency": "Daily",
+  "targets": "Target: 95%, Industry benchmark: 90%, Minimum acceptable: 85%",
+  "thresholds": "Green: >92%, Yellow: 85-92%, Red: <85%",
+  "dataSource": "Train control systems, GPS tracking, station reporting systems",
+  "automation": "Fully Automated",
+  "maturityLevel": "Optimizing",
+  "predictiveCapability": "Machine learning models predict delays, weather impact analysis, resource optimization",
+  "businessValue": "Improved customer satisfaction, reduced operational costs, competitive advantage",
+  "performanceKPIs": [
+    {
+      "title": "Peak Hour Performance",
+      "description": "On-time performance during peak travel hours",
+      "kpiType": "Process KPI",
+      "priority": "Critical",
+      "frequency": "Daily",
+      "targets": "Maintain >90% during peak hours"
+    }
+  ]
+}

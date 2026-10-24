@@ -1,0 +1,77 @@
+{
+  "name": "Colonial Liberation Revolution",
+  "description": "Armed resistance against colonial occupation forces",
+  "activityType": "Revolution",
+  "revolutionType": "Political Revolution",
+  "violenceClassification": "Armed Resistance",
+  "revolutionaryScope": "National Revolution",
+  "legitimacyBasis": "Colonial Liberation",
+  "targetRegime": "Colonial Administration",
+  "leadingOrganizations": [
+    "Liberation Front",
+    "Underground Network",
+    "Exile Government"
+  ],
+  "systemicProblem": "Colonial exploitation and political subjugation",
+  "primaryAffectedGroups": [
+    "Indigenous population",
+    "Colonial settlers",
+    "International community"
+  ],
+  "revolutionaryLeadership": [
+    {
+      "leadershipType": "Hierarchical",
+      "organizationType": "Liberation Army",
+      "keyFigures": [
+        "Revolutionary Command"
+      ]
+    }
+  ],
+  "tactics": [
+    {
+      "tacticType": "Armed Resistance",
+      "description": "Guerrilla warfare against occupation forces",
+      "violenceLevel": "Violent",
+      "channel": "Rural and urban operations"
+    },
+    {
+      "tacticType": "Information Warfare",
+      "description": "International propaganda campaign",
+      "violenceLevel": "Non-violent",
+      "channel": "International media and diplomacy"
+    },
+    {
+      "tacticType": "Parallel Institution Building",
+      "description": "Alternative governance in liberated areas",
+      "violenceLevel": "Non-violent",
+      "channel": "Community organizations"
+    }
+  ],
+  "escalationSequence": [
+    "Political mobilization",
+    "Underground organization",
+    "Armed resistance",
+    "Territory liberation",
+    "Independence declaration"
+  ],
+  "revolutionaryPhases": [
+    "Colonial Resistance",
+    "Armed Struggle",
+    "Territory Control",
+    "Independence"
+  ],
+  "internationalSupport": [
+    {
+      "supportType": "Military",
+      "source": "Anti-colonial nations",
+      "level": "Medium"
+    },
+    {
+      "supportType": "Diplomatic",
+      "source": "UN Decolonization Committee",
+      "level": "High"
+    }
+  ],
+  "historicalPrecedent": "Algerian War of Independence",
+  "legalBasis": "UN Charter Article 1(2) - Self-determination of peoples"
+}

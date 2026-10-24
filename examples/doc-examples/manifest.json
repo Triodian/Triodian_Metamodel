@@ -1,0 +1,401 @@
+{
+  "source": "Worked examples from the Orthogramic Metamodel documentation (03 Sep 2025), extracted verbatim",
+  "examples": [
+    {
+      "instance": "organization--office-of-railroad-safety.json",
+      "schema": "organization.schema.json",
+      "pointer": "",
+      "docLine": 1873
+    },
+    {
+      "instance": "organization--deutsche-bahn-ag.json",
+      "schema": "organization.schema.json",
+      "pointer": "",
+      "docLine": 1943
+    },
+    {
+      "instance": "organization--singapore-digital-railways-corporation.json",
+      "schema": "organization.schema.json",
+      "pointer": "",
+      "docLine": 1991
+    },
+    {
+      "instance": "stakeholder--federal-railroad-administration.json",
+      "schema": "stakeholder.schema.json",
+      "pointer": "",
+      "docLine": 3561
+    },
+    {
+      "instance": "stakeholder--railway-technology-solutions-ltd.json",
+      "schema": "stakeholder.schema.json",
+      "pointer": "",
+      "docLine": 3601
+    },
+    {
+      "instance": "stakeholder--downtown-residents-association.json",
+      "schema": "stakeholder.schema.json",
+      "pointer": "",
+      "docLine": 3644
+    },
+    {
+      "instance": "capabilities--automated-track-inspection-system.json",
+      "schema": "capabilities.schema.json",
+      "pointer": "",
+      "docLine": 5332
+    },
+    {
+      "instance": "capabilities--digital-innovation-platform.json",
+      "schema": "capabilities.schema.json",
+      "pointer": "",
+      "docLine": 5384
+    },
+    {
+      "instance": "capabilities--enterprise-data-analytics-platform.json",
+      "schema": "capabilities.schema.json",
+      "pointer": "",
+      "docLine": 5417
+    },
+    {
+      "instance": "strategy--predictive-track-maintenance-program.json",
+      "schema": "strategy.schema.json",
+      "pointer": "",
+      "docLine": 7087
+    },
+    {
+      "instance": "strategy--eastern-border-defense-initiative.json",
+      "schema": "strategy.schema.json",
+      "pointer": "",
+      "docLine": 7147
+    },
+    {
+      "instance": "strategy--regional-political-consolidation-campaign.json",
+      "schema": "strategy.schema.json",
+      "pointer": "",
+      "docLine": 7196
+    },
+    {
+      "instance": "strategy--trade-route-disruption-initiative.json",
+      "schema": "strategy.schema.json",
+      "pointer": "",
+      "docLine": 7233
+    },
+    {
+      "instance": "strategy--hong-kong-sovereignty-transition-strategy.json",
+      "schema": "strategy.schema.json",
+      "pointer": "",
+      "docLine": 7263
+    },
+    {
+      "instance": "products--track-quality-index-report.json",
+      "schema": "products.schema.json",
+      "pointer": "",
+      "docLine": 9251
+    },
+    {
+      "instance": "products--railsafe-inspector-mobile-app.json",
+      "schema": "products.schema.json",
+      "pointer": "",
+      "docLine": 9299
+    },
+    {
+      "instance": "products--rail-data-integration-platform.json",
+      "schema": "products.schema.json",
+      "pointer": "",
+      "docLine": 9333
+    },
+    {
+      "instance": "products--smarttrack-geometry-sensor.json",
+      "schema": "products.schema.json",
+      "pointer": "",
+      "docLine": 9369
+    },
+    {
+      "instance": "services--rail-freight-transport-service.json",
+      "schema": "services.schema.json",
+      "pointer": "",
+      "docLine": 11599
+    },
+    {
+      "instance": "services--customer-support-portal.json",
+      "schema": "services.schema.json",
+      "pointer": "",
+      "docLine": 11685
+    },
+    {
+      "instance": "services--infrastructure-consulting-service.json",
+      "schema": "services.schema.json",
+      "pointer": "",
+      "docLine": 11767
+    },
+    {
+      "instance": "services--rail-network-data-api.json",
+      "schema": "services.schema.json",
+      "pointer": "",
+      "docLine": 11850
+    },
+    {
+      "instance": "services--network-monitoring-service.json",
+      "schema": "services.schema.json",
+      "pointer": "",
+      "docLine": 11934
+    },
+    {
+      "instance": "information--customer-transaction-database.json",
+      "schema": "information.schema.json",
+      "pointer": "",
+      "docLine": 14063
+    },
+    {
+      "instance": "information--market-intelligence-repository.json",
+      "schema": "information.schema.json",
+      "pointer": "",
+      "docLine": 14134
+    },
+    {
+      "instance": "information--iot-sensor-data-stream.json",
+      "schema": "information.schema.json",
+      "pointer": "",
+      "docLine": 14208
+    },
+    {
+      "instance": "information--financial-compliance-archive.json",
+      "schema": "information.schema.json",
+      "pointer": "",
+      "docLine": 14279
+    },
+    {
+      "instance": "information--technical-knowledge-base.json",
+      "schema": "information.schema.json",
+      "pointer": "",
+      "docLine": 14344
+    },
+    {
+      "instance": "performance--track-related-accident-rate.json",
+      "schema": "performance.schema.json",
+      "pointer": "",
+      "docLine": 16392
+    },
+    {
+      "instance": "performance--customer-satisfaction-score.json",
+      "schema": "performance.schema.json",
+      "pointer": "",
+      "docLine": 16473
+    },
+    {
+      "instance": "performance--on-time-performance-rate.json",
+      "schema": "performance.schema.json",
+      "pointer": "",
+      "docLine": 16543
+    },
+    {
+      "instance": "performance--revenue-per-customer.json",
+      "schema": "performance.schema.json",
+      "pointer": "",
+      "docLine": 16614
+    },
+    {
+      "instance": "performance--digital-transformation-progress-index.json",
+      "schema": "performance.schema.json",
+      "pointer": "",
+      "docLine": 16678
+    },
+    {
+      "instance": "customer--affluent-professionals.json",
+      "schema": "customer.schema.json",
+      "pointer": "",
+      "docLine": 18106
+    },
+    {
+      "instance": "market--enterprise-cloud-software-market.json",
+      "schema": "market.schema.json",
+      "pointer": "",
+      "docLine": 19100
+    },
+    {
+      "instance": "finance--strategic-investment-portfolio.json",
+      "schema": "finance.schema.json",
+      "pointer": "",
+      "docLine": 20136
+    },
+    {
+      "instance": "risk-management--critical-data-breach-risk.json",
+      "schema": "risk-management.schema.json",
+      "pointer": "",
+      "docLine": 20476
+    },
+    {
+      "instance": "supply-chain--global-electronics-manufacturing-supply-chain.json",
+      "schema": "supply-chain.schema.json",
+      "pointer": "",
+      "docLine": 22336
+    },
+    {
+      "instance": "innovation--digital-customer-experience-innovation-portfolio.json",
+      "schema": "innovation.schema.json",
+      "pointer": "",
+      "docLine": 25953
+    },
+    {
+      "instance": "sustainability--corporate-carbon-footprint.json",
+      "schema": "sustainability.schema.json",
+      "pointer": "#/definitions/environmentalImpact",
+      "docLine": 27689
+    },
+    {
+      "instance": "people--product-engineering-team.json",
+      "schema": "people.schema.json",
+      "pointer": "",
+      "docLine": 29806
+    },
+    {
+      "instance": "technology--enterprise-api-management-platform.json",
+      "schema": "technology.schema.json",
+      "pointer": "",
+      "docLine": 30191
+    },
+    {
+      "instance": "channel--multi-brand-retail-distribution-network.json",
+      "schema": "channel.schema.json",
+      "pointer": "",
+      "docLine": 31364
+    },
+    {
+      "instance": "social-change--fair-wage-now-strike-series.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 34822
+    },
+    {
+      "instance": "social-change--tech-workers-for-justice-initiative.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 34911
+    },
+    {
+      "instance": "social-change--universal-basic-services-pilot-program.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 34977
+    },
+    {
+      "instance": "social-change--housing-justice-coalition.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 35042
+    },
+    {
+      "instance": "social-change--equity-and-inclusion-transformation-project.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 35104
+    },
+    {
+      "instance": "social-change--velvet-revolution-2025.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 35169
+    },
+    {
+      "instance": "social-change--colonial-liberation-revolution.json",
+      "schema": "social-change.json",
+      "pointer": "",
+      "docLine": 35326
+    },
+    {
+      "instance": "intelligence--ai-augmented-market-pulse-daily-digest.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36057
+    },
+    {
+      "instance": "intelligence--monthly-regulatory-change-digest-financial-services-sector.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36184
+    },
+    {
+      "instance": "intelligence--m-a-strategic-target-watchlist-quarterly-summary.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36326
+    },
+    {
+      "instance": "intelligence--insider-threat-behavioural-monitoring-weekly-report.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36468
+    },
+    {
+      "instance": "intelligence--covert-product-testing-and-reverse-engineering-summary.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36609
+    },
+    {
+      "instance": "intelligence--government-advisory-high-risk-cyber-threat-environment-notif.json",
+      "schema": "intelligence.schema.json",
+      "pointer": "",
+      "docLine": 36752
+    },
+    {
+      "instance": "manufacturing--workorder-37866.json",
+      "schema": "manufacturing.schema.json",
+      "pointer": "#/definitions/WorkOrder",
+      "docLine": 37866
+    },
+    {
+      "instance": "manufacturing--workorder-37892.json",
+      "schema": "manufacturing.schema.json",
+      "pointer": "#/definitions/WorkOrder",
+      "docLine": 37892
+    },
+    {
+      "instance": "manufacturing--productionunit-37892.json",
+      "schema": "manufacturing.schema.json",
+      "pointer": "#/definitions/ProductionUnit",
+      "docLine": 37892
+    },
+    {
+      "instance": "manufacturing--inventory-37919.json",
+      "schema": "manufacturing.schema.json",
+      "pointer": "#/definitions/Inventory",
+      "docLine": 37919
+    },
+    {
+      "instance": "inter-unit-domain-relationships--example-1.json",
+      "schema": "inter-unit-domain-relationships.schema.json",
+      "pointer": "",
+      "docLine": 39507
+    },
+    {
+      "instance": "inter-unit-domain-relationships--example-2.json",
+      "schema": "inter-unit-domain-relationships.schema.json",
+      "pointer": "",
+      "docLine": 39507
+    },
+    {
+      "instance": "coverageTemplate--public-sector-large-agency.json",
+      "schema": "coverage/coverageTemplate.schema.json",
+      "pointer": "",
+      "docLine": 39755
+    },
+    {
+      "instance": "organizationGoal--goal-001.json",
+      "schema": "coverage/organizationGoal.schema.json",
+      "pointer": "",
+      "docLine": 39924
+    },
+    {
+      "instance": "coverageStatus--cstat-100.json",
+      "schema": "coverage/coverageStatus.schema.json",
+      "pointer": "",
+      "docLine": 40045
+    },
+    {
+      "instance": "coverageExpectation--cexp-001.json",
+      "schema": "coverage/coverageExpectation.schema.json",
+      "pointer": "",
+      "docLine": 40197
+    }
+  ]
+}

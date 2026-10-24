@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://triodian.com/schemas/rationale.schema.json",
   "title": "Rationale",
   "description": "Schema for the logical reasoning that connects a trigger to a specific response within the Strategic Response Model",
@@ -366,9 +366,7 @@
       "description": "Types of relationships with each related rationale"
     },
     
-    /* Domain-specific extensions */
     
-    /* Customer Domain Extensions */
     "customerSegmentIDs": {
       "type": "array",
       "items": {
@@ -391,7 +389,6 @@
       "description": "Source of customer insights supporting this rationale"
     },
     
-    /* Market Domain Extensions */
     "marketIDs": {
       "type": "array",
       "items": {
@@ -467,7 +464,6 @@
       "description": "Market risks associated with this rationale"
     },
     
-    /* Finance Domain Extensions */
     "financeIDs": {
       "type": "array",
       "items": {
@@ -538,7 +534,6 @@
       "description": "Financial risks associated with this rationale"
     },
     
-    /* Risk Management Domain Extensions */
     "riskIDs": {
       "type": "array",
       "items": {
@@ -587,7 +582,6 @@
       "description": "Assessment of risk implications"
     },
     
-    /* Supply Chain Domain Extensions */
     "supplyChainIDs": {
       "type": "array",
       "items": {
@@ -634,7 +628,6 @@
       "description": "Assessment of supply chain implications"
     },
 
-    /* Innovation Domain Extensions */
     "innovationIDs": {
       "type": "array",
       "items": {
@@ -678,7 +671,6 @@
       "description": "Assessment of innovation implications"
     },
 
-    /* Sustainability Domain Extensions */
     "sustainabilityIDs": {
       "type": "array",
       "items": {
@@ -721,7 +713,6 @@
       "description": "Assessment of sustainability implications"
     },
 
-    /* People Domain Extensions */
     "peopleIDs": {
       "type": "array",
       "items": {
@@ -768,7 +759,6 @@
       "description": "Assessment of workforce implications"
     },
 
-    /* Technology Domain Extensions */
     "technologyIDs": {
       "type": "array",
       "items": {
@@ -811,7 +801,6 @@
       "description": "Assessment of technology implications"
     },
 
-    /* Channel Domain Extensions */
     "channelIDs": {
       "type": "array",
       "items": {

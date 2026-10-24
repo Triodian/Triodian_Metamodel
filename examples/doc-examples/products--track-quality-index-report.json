@@ -1,0 +1,23 @@
+{
+  "title": "Track Quality Index Report",
+  "description": "Monthly analysis of track geometry and maintenance metrics providing actionable insights for infrastructure management",
+  "purpose": "Track maintenance planning and quality assurance to optimize safety and efficiency",
+  "owner": "Track Quality Analysis Team",
+  "orgUnitTitle": "Track Maintenance Division",
+  "productCategory": "Information Product",
+  "productType": "Report",
+  "targetMarket": "Internal",
+  "businessModel": "Internal Service",
+  "lifecycleStage": "Maturity",
+  "lifecycleManagement": "Monthly updates, annual review process with stakeholder feedback",
+  "marketCompetitiveness": "Industry-leading accuracy of 98.5% with real-time processing capabilities",
+  "customerFeedback": "User satisfaction: 4.2/5.0, 95% find reports actionable",
+  "userBase": "45 maintenance managers, 12 safety inspectors, 8 operations planners",
+  "performanceIndicators": "Accuracy: 98.5%, Timeliness: 99%, User adoption: 100%",
+  "valueProposition": "Reduce maintenance costs by 30% through predictive analytics and early problem detection",
+  "riskCategories": [
+    "Technical",
+    "Operational"
+  ],
+  "strategicAlignment": "Supports track safety and efficiency goals, enables predictive maintenance strategy"
+}

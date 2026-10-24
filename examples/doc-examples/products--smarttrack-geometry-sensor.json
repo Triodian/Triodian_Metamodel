@@ -1,0 +1,26 @@
+{
+  "title": "SmartTrack Geometry Sensor",
+  "description": "Advanced IoT sensor for continuous track geometry monitoring with realtime data transmission",
+  "purpose": "Enable continuous track monitoring and predictive maintenance capabilities",
+  "owner": "Hardware Engineering Team",
+  "productCategory": "Physical Product",
+  "productType": "Hardware",
+  "targetMarket": "B2B",
+  "businessModel": "One-time Purchase",
+  "lifecycleStage": "Development",
+  "customerSegments": [
+    "Railway Operators",
+    "Infrastructure Managers"
+  ],
+  "channels": [
+    "Direct Sales",
+    "Partner Channel"
+  ],
+  "pricingStrategy": "Value Based",
+  "valueProposition": "24/7 monitoring reduces unplanned maintenance by 50%",
+  "riskCategories": [
+    "Technical",
+    "Market",
+    "Quality"
+  ]
+}

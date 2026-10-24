@@ -1,0 +1,100 @@
+{
+  "name": "Velvet Revolution 2025",
+  "description": "Non-violent overthrow of authoritarian regime through mass civil disobedience",
+  "activityType": "Revolution",
+  "revolutionType": "Political Revolution",
+  "violenceClassification": "Non-violent",
+  "revolutionaryScope": "National Revolution",
+  "legitimacyBasis": "Democratic Restoration",
+  "targetRegime": "Authoritarian Government",
+  "leadingOrganizations": [
+    "Democratic Coalition",
+    "Civil Rights Union",
+    "Student Movement"
+  ],
+  "systemicProblem": "Authoritarian repression and electoral fraud",
+  "primaryAffectedGroups": [
+    "Citizens",
+    "Political dissidents",
+    "Independent media"
+  ],
+  "revolutionaryLeadership": [
+    {
+      "leadershipType": "Decentralized",
+      "organizationType": "Popular Movement",
+      "keyFigures": [
+        "Coalition Council",
+        "Student Leaders"
+      ]
+    }
+  ],
+  "tactics": [
+    {
+      "tacticType": "Mass Demonstration",
+      "description": "Coordinated peaceful protests in major cities",
+      "violenceLevel": "Non-violent",
+      "channel": "Public squares and government buildings"
+    },
+    {
+      "tacticType": "Civil Disobedience",
+      "description": "Systematic non-compliance with authoritarian laws",
+      "violenceLevel": "Non-violent",
+      "channel": "Public and private institutions"
+    },
+    {
+      "tacticType": "General Strike",
+      "description": "Economy-wide work stoppage",
+      "violenceLevel": "Non-violent",
+      "channel": "Economic infrastructure"
+    }
+  ],
+  "escalationSequence": [
+    "Petition campaign",
+    "Mass demonstrations",
+    "General strike",
+    "Government buildings occupation",
+    "Parallel government formation"
+  ],
+  "revolutionaryPhases": [
+    "Grievance Accumulation",
+    "Mobilization",
+    "Active Revolution",
+    "Consolidation"
+  ],
+  "internationalSupport": [
+    {
+      "supportType": "Diplomatic",
+      "source": "Democratic nations",
+      "level": "High"
+    },
+    {
+      "supportType": "Economic",
+      "source": "International NGOs",
+      "level": "Medium"
+    }
+  ],
+  "historicalPrecedent": "Velvet Revolution 1989",
+  "counterRevolutionaryForces": [
+    {
+      "forceType": "State Security",
+      "strength": "Medium",
+      "tactics": [
+        "Surveillance",
+        "Intimidation",
+        "Limited arrests"
+      ]
+    }
+  ],
+  "keyPerformanceIndicators": [
+    {
+      "indicatorName": "Government resignation",
+      "targetValue": "Complete leadership change",
+      "measurementMethod": "Official announcements"
+    },
+    {
+      "indicatorName": "Democratic transition",
+      "targetValue": "Free and fair elections within 6 months",
+      "measurementMethod": "International election monitoring"
+    }
+  ]
+}

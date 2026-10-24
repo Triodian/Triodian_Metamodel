@@ -4,7 +4,7 @@
   "title": "Organization Domain Schema",
   "description": "Schema for the Organization domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
-  "attributes": {
+  "properties": {
     "orgTitle": {
       "type": "string",
       "description": "The name or title of the Organization",
@@ -274,17 +274,17 @@
       "type": "array",
       "description": "Sub-organization units within this organization",
       "items": {
-        "$ref": "#/elements/OrganizationUnit"
+        "$ref": "#/definitions/OrganizationUnit"
       }
     }
   },
   "required": ["orgTitle", "orgType", "country", "description", "legalStructure"],
   "additionalProperties": false,
-  "elements": {
+  "definitions": {
     "OrganizationUnit": {
       "type": "object",
       "description": "A sub-division or entity within an organization",
-      "attributes": {
+      "properties": {
         "orgUnitTitle": {
           "type": "string",
           "description": "The name or title of the Organization unit"

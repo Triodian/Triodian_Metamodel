@@ -1,0 +1,42 @@
+{
+  "title": "Customer Support Portal",
+  "description": "Comprehensive digital platform providing customers with self-service capabilities, knowledge base access, and integrated support ticket management",
+  "purpose": "Enable efficient customer self-service while providing seamless escalation to human support when needed",
+  "owner": "Maria Rodriguez, Head of Customer Experience",
+  "orgUnitTitle": "Customer Experience Division",
+  "serviceCategory": "Digital Service",
+  "serviceType": "Support",
+  "deliveryModel": "Self-Service",
+  "serviceLevel": "Standard",
+  "serviceLevelAgreements": "99.5% uptime, 2-second page load times, 24/7 availability",
+  "channels": [
+    "Online Portal",
+    "Mobile App",
+    "Chat"
+  ],
+  "targetAudience": [
+    "External Customers"
+  ],
+  "businessModel": "Support Model",
+  "automationLevel": "Highly Automated",
+  "lifecycle": "Enhancement",
+  "availability": "24/7 self-service, business hours live support",
+  "valueProposition": "Reduce support costs by 40% while improving customer satisfaction through instant access to solutions",
+  "performanceIndicators": "Self-service resolution rate, average handling time, customer satisfaction score, knowledge base usage",
+  "serviceFeatures": [
+    {
+      "title": "AI-Powered Chatbot",
+      "description": "Intelligent chatbot that can resolve common issues and guide users to relevant resources",
+      "featureType": "Core Feature",
+      "priority": "Critical",
+      "complexity": "Complex"
+    },
+    {
+      "title": "Video Tutorial Library",
+      "description": "Searchable library of how-to videos for common customer tasks",
+      "featureType": "Enhancement",
+      "priority": "Medium",
+      "complexity": "Simple"
+    }
+  ]
+}
