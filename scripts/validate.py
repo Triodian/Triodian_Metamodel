@@ -131,8 +131,10 @@ def check_keywords(docs: dict[Path, dict]) -> None:
                 continue
             for kw in NON_STANDARD & node.keys():
                 fail(f"{rel(f)}: /{'/'.join(map(str, path))}: non-standard keyword {kw!r}")
+            # Conditional branches (if/then/else/not) only constrain fields defined elsewhere.
+            conditional = any(p in ("if", "then", "else", "not") for p in path)
             if isinstance(node.get("properties"), dict) and "additionalProperties" not in node \
-                    and "patternProperties" not in node:
+                    and "patternProperties" not in node and not conditional:
                 fail(f"{rel(f)}: /{'/'.join(map(str, path))}: accepts undefined fields "
                      "(add \"additionalProperties\": false)")
 
@@ -176,8 +178,11 @@ def check_structure(docs: dict[Path, dict]) -> None:
             fail(f"{rel(f)}: root must be the domain's main record (an object with properties)")
             continue
         for kw in ("oneOf", "anyOf", "allOf"):
-            if kw in d:
-                fail(f"{rel(f)}: root uses {kw}; put each record type in its own schema or under definitions")
+            # Rules that only constrain the record's own fields (required, if/then) are fine;
+            # branches that define alternative records are not.
+            if any(isinstance(b, dict) and ({"$ref", "type", "properties"} & b.keys()) for b in d.get(kw, [])):
+                fail(f"{rel(f)}: root {kw} defines alternative records; put each record type in its own schema "
+                     "or under definitions")
         if all(isinstance(v, dict) and v.get("type") == "object" and "properties" in v for v in props.values()):
             fail(f"{rel(f)}: root wraps its record in {list(props)}; make the record the root")
     xdr = SCHEMA_DIR / "cross-domain-relationship.schema.json"
