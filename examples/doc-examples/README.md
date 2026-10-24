@@ -34,8 +34,4 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **Inter-unit relationships follow the repository's conventions.** Each example has a `relationshipID` (`IUR-001`, `IUR-002`). The organization unit is `orgUnitTitle` (documented as `organizationUnit`), matching every other domain. Domains and roles are camelCase (`"Value Stream"` → `"valueStream"`, `"Contributing"` → `"contributing"`).
 
-## Not included
-
-There is no schema in the repository yet for:
-
-- Model Risk Management sub-domain examples (model profile, governance, validation, monitoring, regulatory framework mapping)
+**Model Risk Management uses repository identifiers.** The five MRM examples use `…ID` rather than `…Id` (`modelId` → `modelID`, `findingId` → `findingID`), and each element example carries the `modelID` of the model it belongs to (`MODEL-ECL-IFRS9-001`). Monitoring dependencies use the shared camelCase values (`"Critical"` → `"critical"`, `"Information"` → `"information"`). Regulatory requirements use the shared compliance status (`"met"` → `"compliant"`), and `appliesTo` is camelCase (`"Model"` → `"model"`).

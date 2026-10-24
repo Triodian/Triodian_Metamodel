@@ -1,0 +1,43 @@
+{
+  "monitoringID": "MON-IFRS9-001",
+  "modelID": "MODEL-ECL-IFRS9-001",
+  "kri": [
+    {
+      "indicatorName": "ECL backtest error (MAPE)",
+      "description": "Absolute % error vs realised losses",
+      "currentValue": 0.031,
+      "threshold": 0.05,
+      "trend": "stable",
+      "monitoringFrequency": "monthly"
+    }
+  ],
+  "performanceMetrics": [
+    {
+      "name": "stabilityPSI",
+      "currentValue": 0.07,
+      "threshold": 0.1
+    }
+  ],
+  "driftAssessment": {
+    "dataDrift": "low",
+    "conceptDrift": "noneObserved",
+    "performanceDrift": "low"
+  },
+  "alerts": [
+    {
+      "when": "MAPE > 0.05 for 2 months",
+      "who": [
+        "Model Owner",
+        "Independent Validator"
+      ],
+      "actionRequired": "Root-cause analysis and corrective plan"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependencyType": "critical",
+      "domainType": "information",
+      "entityID": "INFO:Loans_History"
+    }
+  ]
+}

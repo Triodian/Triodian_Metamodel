@@ -224,6 +224,36 @@
       "docLine": 20476
     },
     {
+      "instance": "model-risk-management--model-profile.json",
+      "schema": "model-risk-management.schema.json",
+      "pointer": "",
+      "docLine": 21849
+    },
+    {
+      "instance": "model-risk-management--model-governance.json",
+      "schema": "model-risk-management.schema.json",
+      "pointer": "#/definitions/modelGovernance",
+      "docLine": 21930
+    },
+    {
+      "instance": "model-risk-management--model-validation.json",
+      "schema": "model-risk-management.schema.json",
+      "pointer": "#/definitions/modelValidation",
+      "docLine": 22039
+    },
+    {
+      "instance": "model-risk-management--model-monitoring.json",
+      "schema": "model-risk-management.schema.json",
+      "pointer": "#/definitions/modelMonitoring",
+      "docLine": 22136
+    },
+    {
+      "instance": "model-risk-management--regulatory-framework-mapping.json",
+      "schema": "model-risk-management.schema.json",
+      "pointer": "#/definitions/regulatoryFrameworkMapping",
+      "docLine": 22198
+    },
+    {
       "instance": "supply-chain--global-electronics-manufacturing-supply-chain.json",
       "schema": "supply-chain.schema.json",
       "pointer": "",
