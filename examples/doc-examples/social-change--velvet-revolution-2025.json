@@ -1,4 +1,5 @@
 {
+  "socialChangeID": "SC-007",
   "name": "Velvet Revolution 2025",
   "description": "Non-violent overthrow of authoritarian regime through mass civil disobedience",
   "activityType": "revolution",
@@ -57,9 +58,9 @@
   ],
   "revolutionaryPhases": [
     "grievanceAccumulation",
-    "Mobilization",
+    "revolutionaryMobilization",
     "activeRevolution",
-    "Consolidation"
+    "revolutionaryConsolidation"
   ],
   "internationalSupport": [
     {

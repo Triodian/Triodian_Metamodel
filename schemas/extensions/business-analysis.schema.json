@@ -45,7 +45,7 @@
     "requirement": {
       "type": "object",
       "properties": {
-        "id": {
+        "requirementID": {
           "type": "string",
           "format": "uuid",
           "description": "Unique identifier for the requirement."
@@ -145,7 +145,7 @@
         }
       },
       "required": [
-        "id",
+        "requirementID",
         "type",
         "title",
         "description"
@@ -155,7 +155,7 @@
     "requirementArtefact": {
       "type": "object",
       "properties": {
-        "id": {
+        "artefactID": {
           "type": "string",
           "format": "uuid",
           "description": "Unique identifier for the artefact."
@@ -215,7 +215,7 @@
         }
       },
       "required": [
-        "id",
+        "artefactID",
         "type",
         "purpose",
         "status"
@@ -225,7 +225,7 @@
     "elicitationActivity": {
       "type": "object",
       "properties": {
-        "id": {
+        "activityID": {
           "type": "string",
           "format": "uuid",
           "description": "Unique identifier for the activity."
@@ -282,7 +282,7 @@
         }
       },
       "required": [
-        "id",
+        "activityID",
         "type",
         "date"
       ],
@@ -291,7 +291,7 @@
     "analysisDesignDefinition": {
       "type": "object",
       "properties": {
-        "id": {
+        "designDefinitionID": {
           "type": "string",
           "format": "uuid",
           "description": "Unique identifier for the analysis/design definition."
@@ -396,7 +396,7 @@
         }
       },
       "required": [
-        "id",
+        "designDefinitionID",
         "description"
       ],
       "additionalProperties": false
@@ -404,7 +404,7 @@
     "solutionEvaluation": {
       "type": "object",
       "properties": {
-        "id": {
+        "evaluationID": {
           "type": "string",
           "format": "uuid",
           "description": "Unique identifier for the evaluation."
@@ -465,7 +465,7 @@
         }
       },
       "required": [
-        "id",
+        "evaluationID",
         "description",
         "evaluationDate",
         "recommendation"

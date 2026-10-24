@@ -16,7 +16,7 @@
     },
     {
       "sourceName": "HR Access Control Logs",
-      "sourceType": "Internal monitoring",
+      "sourceType": "internalMonitoring",
       "reliabilityRating": "high",
       "collectionMethod": "sensorBasedCollection",
       "cost": "Internal resource cost only",
@@ -25,8 +25,8 @@
     {
       "sourceName": "Anonymous Whistleblower Hotline Reports",
       "sourceType": "corporateWhistleblowers",
-      "reliabilityRating": "Variable",
-      "collectionMethod": "Manual investigation",
+      "reliabilityRating": "variable",
+      "collectionMethod": "manualInvestigation",
       "cost": "Internal case management resource",
       "complianceStatus": "compliant"
     }

@@ -374,12 +374,6 @@
       "docLine": 37866
     },
     {
-      "instance": "manufacturing--workorder-37892.json",
-      "schema": "manufacturing.schema.json",
-      "pointer": "#/definitions/workOrder",
-      "docLine": 37892
-    },
-    {
       "instance": "manufacturing--productionunit-37892.json",
       "schema": "manufacturing.schema.json",
       "pointer": "#/definitions/productionUnit",

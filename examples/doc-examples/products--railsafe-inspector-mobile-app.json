@@ -7,15 +7,15 @@
   "productCategory": "digitalProduct",
   "productType": "software",
   "targetMarket": "internal",
-  "businessModel": "Internal Tool",
+  "businessModel": "internalTool",
   "lifecycleStage": "growth",
   "customerSegments": [
     "Field Inspectors",
     "Maintenance Teams"
   ],
   "channels": [
-    "Mobile App Store",
-    "Internal Distribution"
+    "mobileApp",
+    "internalDistribution"
   ],
   "valueProposition": "Reduce inspection time by 40% and improve data accuracy by 60%",
   "technologyStack": "React Native, Node.js, PostgreSQL, AWS",
