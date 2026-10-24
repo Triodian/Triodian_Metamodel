@@ -13,10 +13,11 @@
   "additionalProperties": false,
   "properties": {
     "marketID": {
-      "type": "string",
       "description": "Unique identifier for the market element",
-      "examples": [
-        "MKT-ENTSW-001"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
       ]
     },
     "title": {
@@ -54,8 +55,7 @@
           ]
         },
         "currency": {
-          "type": "string",
-          "description": "ISO 4217 currency code"
+          "$ref": "common.schema.json#/definitions/currencyCode"
         },
         "year": {
           "type": "string",
@@ -146,14 +146,12 @@
       "description": "Level of competition in the market",
       "properties": {
         "level": {
-          "type": "string",
-          "enum": [
-            "low",
-            "moderate",
-            "high",
-            "veryHigh"
-          ],
-          "description": "Level of competition"
+          "description": "Level of competition",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            }
+          ]
         },
         "description": {
           "type": "string",
@@ -222,14 +220,14 @@
       "type": "array",
       "description": "Metrics used to measure market performance",
       "items": {
-        "$ref": "#/definitions/performanceIndicator"
+        "$ref": "common.schema.json#/definitions/performanceIndicator"
       }
     },
     "dependencies": {
       "type": "array",
       "description": "Other domains, processes or systems supporting market analysis",
       "items": {
-        "$ref": "#/definitions/dependency"
+        "$ref": "common.schema.json#/definitions/dependency"
       }
     },
     "relatedMarkets": {
@@ -255,10 +253,12 @@
             "description": "Nature of the relationship"
           },
           "relationshipStrength": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5,
-            "description": "Strength of the relationship (1 = lowest, 5 = highest)"
+            "description": "Strength of the relationship (1 = lowest, 5 = highest)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/scale1to5"
+              }
+            ]
           }
         },
         "required": [
@@ -277,80 +277,6 @@
     }
   },
   "definitions": {
-    "performanceIndicator": {
-      "type": "object",
-      "description": "A metric used to measure performance",
-      "properties": {
-        "metricName": {
-          "type": "string",
-          "description": "Name of the metric"
-        },
-        "metricDescription": {
-          "type": "string",
-          "description": "What the metric measures"
-        },
-        "currentValue": {
-          "type": "string",
-          "description": "Current value"
-        },
-        "targetValue": {
-          "type": "string",
-          "description": "Target value"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of measurement"
-        }
-      },
-      "required": [
-        "metricName"
-      ],
-      "additionalProperties": false
-    },
-    "dependency": {
-      "type": "object",
-      "description": "Another domain entity this element depends on",
-      "properties": {
-        "dependencyType": {
-          "type": "string",
-          "description": "Strength or nature of the dependency",
-          "examples": [
-            "Critical",
-            "Important",
-            "Enabler"
-          ]
-        },
-        "domainType": {
-          "type": "string",
-          "enum": [
-            "Capability",
-            "Service",
-            "Product",
-            "Information",
-            "Value Stream",
-            "Strategy",
-            "Organization",
-            "Technology",
-            "Initiative",
-            "Other"
-          ],
-          "description": "Domain of the entity depended upon"
-        },
-        "entityID": {
-          "type": "string",
-          "description": "ID of the entity depended upon"
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the dependency"
-        }
-      },
-      "required": [
-        "domainType",
-        "entityID"
-      ],
-      "additionalProperties": false
-    },
     "metricComparison": {
       "type": "object",
       "description": "A metric with current and target values",
@@ -373,30 +299,6 @@
       ],
       "additionalProperties": false
     },
-    "moneyAmount": {
-      "type": "object",
-      "description": "A monetary amount",
-      "properties": {
-        "amount": {
-          "type": "number",
-          "description": "Monetary amount"
-        },
-        "currency": {
-          "type": "string",
-          "description": "ISO 4217 currency code",
-          "examples": [
-            "USD",
-            "AUD",
-            "EUR"
-          ]
-        }
-      },
-      "required": [
-        "amount",
-        "currency"
-      ],
-      "additionalProperties": false
-    },
     "costShare": {
       "type": "object",
       "description": "A cost amount and its share of the total",
@@ -413,27 +315,6 @@
           "maximum": 100
         }
       },
-      "additionalProperties": false
-    },
-    "datePeriod": {
-      "type": "object",
-      "description": "A period between two dates",
-      "properties": {
-        "startDate": {
-          "type": "string",
-          "description": "Start date",
-          "format": "date"
-        },
-        "endDate": {
-          "type": "string",
-          "description": "End date",
-          "format": "date"
-        }
-      },
-      "required": [
-        "startDate",
-        "endDate"
-      ],
       "additionalProperties": false
     },
     "competitivePosition": {
@@ -475,10 +356,12 @@
           "description": "Classification of competitor"
         },
         "competitorStrength": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5,
-          "description": "Overall competitive strength (1 = lowest, 5 = highest)"
+          "description": "Overall competitive strength (1 = lowest, 5 = highest)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/scale1to5"
+            }
+          ]
         },
         "marketShare": {
           "type": "object",
@@ -495,13 +378,12 @@
               "description": "Year the estimate applies to"
             },
             "trend": {
-              "type": "string",
-              "enum": [
-                "increasing",
-                "stable",
-                "decreasing"
-              ],
-              "description": "Direction of change in market share"
+              "description": "Direction of change in market share",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/quantityTrend"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -528,10 +410,12 @@
                 "description": "Area of competitor strength"
               },
               "impactLevel": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "Impact of the advantage (1 = lowest, 5 = highest)"
+                "description": "Impact of the advantage (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               },
               "domain": {
                 "type": "string",
@@ -560,10 +444,12 @@
                 "description": "Area of competitor weakness"
               },
               "exploitability": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "How readily the weakness can be exploited (1 = lowest, 5 = highest)"
+                "description": "How readily the weakness can be exploited (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               },
               "domain": {
                 "type": "string",
@@ -596,10 +482,12 @@
                 "description": "Description of the action"
               },
               "significance": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "Significance of the action (1 = lowest, 5 = highest)"
+                "description": "Significance of the action (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               }
             },
             "required": [
@@ -642,17 +530,12 @@
           }
         },
         "monitoringFrequency": {
-          "type": "string",
-          "enum": [
-            "continuous",
-            "daily",
-            "weekly",
-            "monthly",
-            "quarterly",
-            "annually",
-            "adHoc"
-          ],
-          "description": "How often this competitor is formally assessed"
+          "description": "How often this competitor is formally assessed",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
+          ]
         },
         "informationSources": {
           "type": "array",
@@ -716,13 +599,12 @@
               "description": "Expected year or period of maturity"
             },
             "duration": {
-              "type": "string",
-              "enum": [
-                "shortTerm",
-                "mediumTerm",
-                "longTerm"
-              ],
-              "description": "Expected duration"
+              "description": "Expected duration",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/timeHorizon"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -732,26 +614,28 @@
           "description": "Potential impact on the organization",
           "properties": {
             "impactLevel": {
-              "type": "string",
-              "enum": [
-                "minimal",
-                "moderate",
-                "significant",
-                "disruptive"
-              ],
-              "description": "Overall impact on the organization"
+              "description": "Overall impact on the organization",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/changeMagnitude"
+                }
+              ]
             },
             "opportunityScore": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5,
-              "description": "Size of the opportunity (1 = lowest, 5 = highest)"
+              "description": "Size of the opportunity (1 = lowest, 5 = highest)",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/scale1to5"
+                }
+              ]
             },
             "threatScore": {
-              "type": "integer",
-              "minimum": 1,
-              "maximum": 5,
-              "description": "Size of the threat (1 = lowest, 5 = highest)"
+              "description": "Size of the threat (1 = lowest, 5 = highest)",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/scale1to5"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -793,13 +677,12 @@
           "description": "Level of certainty about the trend",
           "properties": {
             "uncertaintyLevel": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high"
-              ],
-              "description": "Level of certainty about the trend"
+              "description": "Level of certainty about the trend",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/simpleLevel"
+                }
+              ]
             },
             "uncertaintyFactors": {
               "type": "array",
@@ -826,10 +709,12 @@
                 "description": "How the domain is affected"
               },
               "impactSeverity": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "Severity of the impact (1 = lowest, 5 = highest)"
+                "description": "Severity of the impact (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               }
             },
             "required": [
@@ -849,14 +734,12 @@
                 "description": "Name of the response strategy"
               },
               "implementationStatus": {
-                "type": "string",
-                "enum": [
-                  "planned",
-                  "implementing",
-                  "implemented",
-                  "monitoring"
-                ],
-                "description": "Implementation status"
+                "description": "Implementation status",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/implementationStatus"
+                  }
+                ]
               }
             },
             "required": [
@@ -874,17 +757,12 @@
               "description": "How the trend is tracked"
             },
             "frequency": {
-              "type": "string",
-              "enum": [
-                "continuous",
-                "daily",
-                "weekly",
-                "monthly",
-                "quarterly",
-                "annually",
-                "adHoc"
-              ],
-              "description": "How often the trend is reviewed"
+              "description": "How often the trend is reviewed",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -900,13 +778,12 @@
                 "description": "Event that would accelerate a response"
               },
               "likelihood": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high"
-                ],
-                "description": "Likelihood of the trigger occurring"
+                "description": "Likelihood of the trigger occurring",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/likelihood"
+                  }
+                ]
               }
             },
             "required": [
@@ -936,10 +813,12 @@
                 "description": "Nature of the relationship"
               },
               "relationshipStrength": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "Strength of the relationship (1 = lowest, 5 = highest)"
+                "description": "Strength of the relationship (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               }
             },
             "required": [
@@ -991,14 +870,12 @@
           "description": "ID of the related market"
         },
         "industryMaturity": {
-          "type": "string",
-          "enum": [
-            "emerging",
-            "growth",
-            "mature",
-            "declining"
-          ],
-          "description": "Current lifecycle stage"
+          "description": "Current lifecycle stage",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/adoptionStage"
+            }
+          ]
         },
         "industryStructure": {
           "type": "object",
@@ -1057,7 +934,7 @@
                 "type": "string",
                 "description": "Factor driving profitability"
               },
-              "impact": {
+              "effectDirection": {
                 "type": "string",
                 "enum": [
                   "veryNegative",
@@ -1066,16 +943,15 @@
                   "positive",
                   "veryPositive"
                 ],
-                "description": "Effect on profitability"
+                "description": "Direction of the effect on profitability"
               },
               "trend": {
-                "type": "string",
-                "enum": [
-                  "increasing",
-                  "stable",
-                  "decreasing"
-                ],
-                "description": "Direction of change"
+                "description": "Direction of change",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/quantityTrend"
+                  }
+                ]
               }
             },
             "required": [
@@ -1089,13 +965,12 @@
           "description": "Likelihood of industry disruption",
           "properties": {
             "disruptionLevel": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high"
-              ],
-              "description": "Likelihood of industry disruption"
+              "description": "Likelihood of industry disruption",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/likelihood"
+                }
+              ]
             },
             "disruptionSources": {
               "type": "array",
@@ -1108,13 +983,12 @@
                     "description": "Source of potential disruption"
                   },
                   "likelihood": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "moderate",
-                      "high"
-                    ],
-                    "description": "Likelihood of disruption from this source"
+                    "description": "Likelihood of disruption from this source",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/likelihood"
+                      }
+                    ]
                   }
                 },
                 "required": [
@@ -1137,22 +1011,20 @@
                 "description": "Obstacle to new entrants"
               },
               "strength": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high"
-                ],
-                "description": "Strength of the barrier"
+                "description": "Strength of the barrier",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/simpleLevel"
+                  }
+                ]
               },
               "trend": {
-                "type": "string",
-                "enum": [
-                  "increasing",
-                  "stable",
-                  "decreasing"
-                ],
-                "description": "Direction of change"
+                "description": "Direction of change",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/quantityTrend"
+                  }
+                ]
               }
             },
             "required": [
@@ -1172,22 +1044,20 @@
                 "description": "Substitute product or service"
               },
               "threatLevel": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high"
-                ],
-                "description": "Level of threat"
+                "description": "Level of threat",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/simpleLevel"
+                  }
+                ]
               },
               "switchingCosts": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high"
-                ],
-                "description": "Cost for customers to switch"
+                "description": "Cost for customers to switch",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/simpleLevel"
+                  }
+                ]
               }
             },
             "required": [
@@ -1201,13 +1071,12 @@
           "description": "Power of suppliers in the industry",
           "properties": {
             "overallLeverage": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high"
-              ],
-              "description": "Overall leverage"
+              "description": "Overall leverage",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/simpleLevel"
+                }
+              ]
             },
             "concentration": {
               "type": "string",
@@ -1227,22 +1096,20 @@
           "description": "Power of customers in the industry",
           "properties": {
             "overallLeverage": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high"
-              ],
-              "description": "Overall leverage"
+              "description": "Overall leverage",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/simpleLevel"
+                }
+              ]
             },
             "switchingCosts": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high"
-              ],
-              "description": "Cost for customers to switch"
+              "description": "Cost for customers to switch",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/simpleLevel"
+                }
+              ]
             }
           },
           "additionalProperties": false
@@ -1252,13 +1119,12 @@
           "description": "Regulatory factors affecting the industry",
           "properties": {
             "regulatoryBurden": {
-              "type": "string",
-              "enum": [
-                "increasing",
-                "stable",
-                "decreasing"
-              ],
-              "description": "Direction of regulatory burden"
+              "description": "Direction of regulatory burden",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/quantityTrend"
+                }
+              ]
             },
             "keyRegulations": {
               "type": "array",
