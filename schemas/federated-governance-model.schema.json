@@ -66,7 +66,8 @@
             "type": "number",
             "description": "Relative weight in decisions, if applicable"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "minItems": 2
     },
@@ -86,5 +87,6 @@
       "type": "string",
       "description": "Link to governance documentation"
     }
-  }
+  },
+  "additionalProperties": false
 }

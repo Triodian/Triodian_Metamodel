@@ -458,7 +458,8 @@
           "description",
           "purpose",
           "owner"
-        ]
+        ],
+        "additionalProperties": false
       }
     }
   },
@@ -468,5 +469,6 @@
     "description",
     "purpose",
     "owner"
-  ]
+  ],
+  "additionalProperties": false
 }

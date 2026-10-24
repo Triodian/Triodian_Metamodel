@@ -771,7 +771,8 @@
           "title",
           "description",
           "purpose"
-        ]
+        ],
+        "additionalProperties": false
       }
     }
   },
@@ -781,5 +782,6 @@
     "description",
     "purpose",
     "owner"
-  ]
+  ],
+  "additionalProperties": false
 }

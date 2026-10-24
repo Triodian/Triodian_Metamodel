@@ -95,7 +95,8 @@
       },
       "required": [
         "valueStreamID"
-      ]
+      ],
+      "additionalProperties": false
     },
     "valueStreamStage": {
       "type": "object",
@@ -208,7 +209,9 @@
       },
       "required": [
         "stageID"
-      ]
+      ],
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

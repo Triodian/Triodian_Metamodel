@@ -3,7 +3,11 @@
   "title": "External Organization Schema",
   "description": "Schema for representing third-party entities such as partners, regulators, and customers",
   "type": "object",
-  "required": ["externalOrgID", "name", "type"],
+  "required": [
+    "externalOrgID",
+    "name",
+    "type"
+  ],
   "properties": {
     "externalOrgID": {
       "type": "string",
@@ -15,7 +19,13 @@
     },
     "type": {
       "type": "string",
-      "enum": ["Partner", "Regulator", "Customer", "Supplier", "Peer"],
+      "enum": [
+        "Partner",
+        "Regulator",
+        "Customer",
+        "Supplier",
+        "Peer"
+      ],
       "description": "Classification of the external organization"
     },
     "description": {
@@ -44,12 +54,13 @@
         "phone": {
           "type": "string"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "website": {
       "type": "string",
       "format": "uri"
     }
-  }
+  },
+  "additionalProperties": false
 }
-

@@ -64,5 +64,6 @@
     "coverageGapTolerance",
     "createdBy",
     "createdAt"
-  ]
+  ],
+  "additionalProperties": false
 }

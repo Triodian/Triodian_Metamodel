@@ -100,7 +100,8 @@
       },
       "required": [
         "sources"
-      ]
+      ],
+      "additionalProperties": false
     },
     "innovationStage": {
       "type": "string",
@@ -157,13 +158,15 @@
             },
             "required": [
               "objectiveID"
-            ]
+            ],
+            "additionalProperties": false
           }
         }
       },
       "required": [
         "alignmentLevel"
-      ]
+      ],
+      "additionalProperties": false
     },
     "investmentLevel": {
       "type": "object",
@@ -205,7 +208,8 @@
             "required": [
               "resourceType",
               "allocation"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "fundingSources": {
@@ -225,10 +229,12 @@
             },
             "required": [
               "source"
-            ]
+            ],
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskProfile": {
       "type": "object",
@@ -267,7 +273,8 @@
             "required": [
               "factorName",
               "riskLevel"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "riskManagementApproach": {
@@ -277,7 +284,8 @@
       },
       "required": [
         "overallRiskLevel"
-      ]
+      ],
+      "additionalProperties": false
     },
     "expectedOutcomes": {
       "type": "array",
@@ -305,7 +313,8 @@
         "required": [
           "outcomeName",
           "outcomeMetric"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "timeHorizon": {
@@ -333,14 +342,16 @@
             },
             "required": [
               "milestone"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "reviewCycles": {
           "type": "string",
           "description": "Frequency and approach to reviewing progress"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "successMetrics": {
       "type": "array",
@@ -371,7 +382,8 @@
         },
         "required": [
           "metricName"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "strategicHorizon": {
@@ -406,7 +418,156 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
+        },
+        "additionalProperties": false
+      }
+    },
+    "innovationBarriers": {
+      "type": "array",
+      "description": "Obstacles to innovation success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "barrierName": {
+            "type": "string",
+            "description": "Name of the barrier"
+          },
+          "barrierDescription": {
+            "type": "string",
+            "description": "Description of the barrier"
+          },
+          "impactLevel": {
+            "type": "string",
+            "description": "Impact of the barrier on innovation success (e.g. moderate, significant, high)"
+          },
+          "mitigationApproach": {
+            "type": "string",
+            "description": "How the barrier is being addressed"
+          }
+        },
+        "required": [
+          "barrierName"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "innovationEnablers": {
+      "type": "array",
+      "description": "Factors that support innovation success",
+      "items": {
+        "type": "object",
+        "properties": {
+          "enablerName": {
+            "type": "string",
+            "description": "Name of the enabler"
+          },
+          "enablerDescription": {
+            "type": "string",
+            "description": "Description of the enabler"
+          },
+          "contributionLevel": {
+            "type": "string",
+            "description": "Contribution to innovation success (e.g. high, significant, critical)"
+          }
+        },
+        "required": [
+          "enablerName"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "governanceApproach": {
+      "type": "object",
+      "description": "How innovation is managed and governed",
+      "properties": {
+        "governanceStructure": {
+          "type": "string",
+          "description": "Governance bodies and structure"
+        },
+        "decisionRights": {
+          "type": "string",
+          "description": "Where decisions are made"
+        },
+        "reviewProcess": {
+          "type": "string",
+          "description": "How innovations are reviewed"
+        },
+        "resourceAllocationProcess": {
+          "type": "string",
+          "description": "How resources are allocated"
         }
+      },
+      "additionalProperties": false
+    },
+    "intellectualPropertyStrategy": {
+      "type": "object",
+      "description": "Approach to managing intellectual property from innovation",
+      "properties": {
+        "patentStrategy": {
+          "type": "string",
+          "description": "Approach to patents"
+        },
+        "tradeSecretStrategy": {
+          "type": "string",
+          "description": "Approach to trade secrets"
+        },
+        "openInnovationApproach": {
+          "type": "string",
+          "description": "Approach to open innovation"
+        },
+        "licensingStrategy": {
+          "type": "string",
+          "description": "Approach to licensing"
+        }
+      },
+      "additionalProperties": false
+    },
+    "dependencies": {
+      "type": "array",
+      "description": "Other domain entities this innovation depends on",
+      "items": {
+        "$ref": "common.schema.json#/definitions/dependency"
+      }
+    },
+    "relatedInnovations": {
+      "type": "array",
+      "description": "Other innovations related to this one",
+      "items": {
+        "type": "object",
+        "properties": {
+          "innovationID": {
+            "description": "ID of the related innovation",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
+            ]
+          },
+          "relationshipType": {
+            "type": "string",
+            "description": "Nature of the relationship",
+            "examples": [
+              "enabling",
+              "synergistic"
+            ]
+          },
+          "relationshipStrength": {
+            "description": "Strength of the relationship",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/scale1to5"
+              }
+            ]
+          },
+          "description": {
+            "type": "string",
+            "description": "Description of the relationship"
+          }
+        },
+        "required": [
+          "innovationID"
+        ],
+        "additionalProperties": false
       }
     }
   },
@@ -418,5 +579,6 @@
     "orgUnitTitle",
     "innovationStage",
     "innovationOwner"
-  ]
+  ],
+  "additionalProperties": false
 }
