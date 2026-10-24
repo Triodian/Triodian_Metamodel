@@ -1,5 +1,5 @@
 {
-  "source": "Worked examples from the Orthogramic Metamodel documentation (03 Sep 2025), extracted verbatim",
+  "source": "Worked examples from the Orthogramic Metamodel documentation (03 Sep 2025). Extracted verbatim, then amended where noted in README.md so they conform to the schemas.",
   "examples": [
     {
       "instance": "organization--office-of-railroad-safety.json",

@@ -22,6 +22,7 @@
     {
       "title": "Troubleshooting Procedures",
       "description": "Step-by-step procedures for diagnosing and resolving technical issues",
+      "purpose": "Help staff resolve technical issues consistently and quickly",
       "elementType": "Document",
       "businessRules": "Must include validation steps and escalation procedures",
       "quality": "Expert review required, tested procedures only"

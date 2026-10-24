@@ -28,6 +28,7 @@
     {
       "title": "Regulatory Compliance Assessment",
       "description": "Comprehensive review of project compliance with federal and state regulations",
+      "purpose": "Identify compliance gaps early so projects gain regulatory approval without delay",
       "featureType": "Core Feature",
       "priority": "Critical",
       "complexity": "Highly Complex"
@@ -35,6 +36,7 @@
     {
       "title": "Digital Twin Modeling",
       "description": "Advanced 3D modeling and simulation for infrastructure optimization",
+      "purpose": "Test infrastructure design options virtually before committing capital",
       "featureType": "Premium Feature",
       "priority": "High",
       "complexity": "Highly Complex"
