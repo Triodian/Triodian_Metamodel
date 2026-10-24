@@ -1,8 +1,9 @@
 {
-  "domainType": "Capability",
+  "relationshipID": "IUR-001",
+  "domainType": "capability",
   "entityName": "Risk Management Capability",
-  "relationshipRole": "Contributing",
-  "organizationUnit": "Legal Division",
+  "relationshipRole": "contributing",
+  "orgUnitTitle": "Legal Division",
   "relationshipDescription": "Provides regulatory compliance expertise for risk assessments",
   "relationshipStrength": 4,
   "relationshipRationale": "Legal expertise required for regulatory risk assessment compliance"
