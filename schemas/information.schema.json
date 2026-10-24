@@ -182,6 +182,14 @@
         "Data stewardship committee, quality monitoring, access controls"
       ]
     },
+    "dataOwner": {
+      "type": "string",
+      "description": "Party accountable for the information asset"
+    },
+    "dataSteward": {
+      "type": "string",
+      "description": "Party responsible for the quality and governance of the information"
+    },
     "compliance": {
       "type": "array",
       "items": {

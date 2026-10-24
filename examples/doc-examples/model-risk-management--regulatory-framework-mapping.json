@@ -1,6 +1,8 @@
 {
   "frameworkMapID": "REGMAP-IFRS9-001",
-  "modelID": "MODEL-ECL-IFRS9-001",
+  "modelIDs": [
+    "MODEL-ECL-IFRS9-001"
+  ],
   "requirements": [
     {
       "framework": "IFRS9",

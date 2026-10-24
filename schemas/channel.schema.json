@@ -691,8 +691,12 @@
                 "description": "Name of the enabling technology"
               },
               "maturityLevel": {
-                "type": "string",
-                "description": "Maturity of the technology"
+                "description": "Maturity of the technology",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/maturityLevel"
+                  }
+                ]
               }
             },
             "additionalProperties": false
@@ -836,8 +840,12 @@
                 "description": "Vendor of the platform"
               },
               "implementationStatus": {
-                "type": "string",
-                "description": "Implementation status of the platform"
+                "description": "Implementation status of the platform",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/implementationStatus"
+                  }
+                ]
               }
             },
             "additionalProperties": false

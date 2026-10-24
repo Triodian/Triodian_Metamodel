@@ -25,6 +25,17 @@
       "type": "string",
       "description": "The intended purpose or function of the Policy within the Organization"
     },
+    "scope": {
+      "type": "string",
+      "description": "The range or extent to which the policy applies",
+      "examples": [
+        "All track maintenance activities on Class 1-5 track"
+      ]
+    },
+    "enforcedBy": {
+      "type": "string",
+      "description": "Party responsible for enforcing the policy"
+    },
     "owner": {
       "type": "string",
       "description": "The individual or team responsible for the Policy"

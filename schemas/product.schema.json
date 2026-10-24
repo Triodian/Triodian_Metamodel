@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/products.schema.json",
+  "$id": "https://triodian.com/schemas/product.schema.json",
   "title": "Products Domain Schema",
   "description": "Tangible and intangible offerings an organization creates to address customer needs and deliver value.",
   "type": "object",
@@ -215,26 +215,31 @@
           "api",
           "subscriptionService",
           "marketplace",
-          "internalDistribution",
-          "developerPortal"
+          "internalDistribution"
         ],
         "description": "Distribution or delivery channel"
       }
     },
     "customerSegments": {
       "type": "array",
-      "description": "Names of the customer segments the product targets",
+      "description": "Types of customer the product targets. Specific segments are records in the Customer domain, referenced by customerSegmentIDs.",
       "items": {
-        "type": "string"
-      },
-      "examples": [
-        [
+        "type": "string",
+        "enum": [
           "enterprise",
           "smb",
           "government",
-          "consumer"
-        ]
-      ]
+          "consumer",
+          "developer",
+          "partner",
+          "startup",
+          "education",
+          "healthcare",
+          "financial",
+          "internal"
+        ],
+        "description": "Customer type"
+      }
     },
     "customerSegmentIDs": {
       "type": "array",
@@ -329,6 +334,18 @@
       "items": {
         "$ref": "#/definitions/productFeature"
       }
+    },
+    "userEmpathyMappingIntegrated": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether empathy maps and user personas are used consistently in product development"
+    },
+    "ethicalAIByDesign": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): for AI-driven products, whether ethical considerations and potential empathetic impacts are designed in"
+    },
+    "accessibilityFeatures": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether the product includes features addressing diverse user needs and challenges"
     }
   },
   "required": [

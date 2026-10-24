@@ -192,8 +192,12 @@
             "description": "What the KPI measures."
           },
           "measurementFrequency": {
-            "type": "string",
-            "description": "How often the KPI is measured"
+            "description": "How often the KPI is measured",
+            "allOf": [
+              {
+                "$ref": "../common.schema.json#/definitions/frequency"
+              }
+            ]
           }
         },
         "required": [

@@ -17,7 +17,7 @@ A performance indicator measuring the organization's ability to retain customers
 
 ### JSON representation:
 
-```json
+```json performance-indicator.schema.json
 {
   "performanceIndicatorID": "pi-cust-ret-001",
   "title": "Customer Retention Rate",
@@ -28,21 +28,26 @@ A performance indicator measuring the organization's ability to retain customers
   "targetValue": 90.0,
   "variance": -4.2,
   "variancePercentage": -4.67,
-  "thresholdType": "higher-is-better",
+  "thresholdType": "higherIsBetter",
   "thresholds": [
     {
       "level": "critical",
       "value": 75.0,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Customer retention has fallen below critical threshold",
-      "notificationRecipients": ["CustomerSuccessHead", "ChiefRevOfficer"]
+      "notificationRecipients": [
+        "CustomerSuccessHead",
+        "ChiefRevOfficer"
+      ]
     },
     {
       "level": "warning",
       "value": 80.0,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Customer retention approaching concerning levels",
-      "notificationRecipients": ["CustomerSuccessManager"]
+      "notificationRecipients": [
+        "CustomerSuccessManager"
+      ]
     }
   ],
   "targetDate": "2025-12-31",
@@ -143,9 +148,15 @@ A performance indicator measuring the organization's ability to retain customers
       {
         "component": "Account Manager Assessment",
         "assessmentMethod": "Structured account health evaluations",
-        "assessors": ["Account Managers", "Customer Success Specialists"],
+        "assessors": [
+          "Account Managers",
+          "Customer Success Specialists"
+        ],
         "weight": 15,
-        "biasControlMeasures": ["Standardized evaluation criteria", "Regular calibration sessions"]
+        "biasControlMeasures": [
+          "Standardized evaluation criteria",
+          "Regular calibration sessions"
+        ]
       }
     ],
     "proxyComponents": [
@@ -154,7 +165,10 @@ A performance indicator measuring the organization's ability to retain customers
         "targetMeasure": "Customer engagement and satisfaction",
         "correlationStrength": 0.72,
         "validationMethod": "Quarterly analysis against retention outcomes",
-        "limitations": ["Less effective for certain product tiers", "Sensitive to UI/UX changes"],
+        "limitations": [
+          "Less effective for certain product tiers",
+          "Sensitive to UI/UX changes"
+        ],
         "weight": 15
       }
     ],
@@ -177,7 +191,7 @@ A performance indicator tracking the speed and efficiency of the product develop
 
 ### JSON representation:
 
-```json
+```json performance-indicator.schema.json
 {
   "performanceIndicatorID": "pi-prod-vel-002",
   "title": "Product Development Velocity",
@@ -188,21 +202,27 @@ A performance indicator tracking the speed and efficiency of the product develop
   "targetValue": 60,
   "variance": -8,
   "variancePercentage": -13.33,
-  "thresholdType": "target-is-optimal",
+  "thresholdType": "targetIsOptimal",
   "thresholds": [
     {
       "level": "warning-low",
       "value": 40,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Development velocity below expected capacity",
-      "notificationRecipients": ["ProductManager", "DeliveryLead"]
+      "notificationRecipients": [
+        "ProductManager",
+        "DeliveryLead"
+      ]
     },
     {
       "level": "warning-high",
       "value": 70,
-      "comparisonOperator": ">",
+      "comparisonOperator": "greaterThan",
       "alertMessage": "Velocity exceeding sustainable pace - quality risk",
-      "notificationRecipients": ["QualityAssuranceLead", "DeliveryLead"]
+      "notificationRecipients": [
+        "QualityAssuranceLead",
+        "DeliveryLead"
+      ]
     }
   ],
   "targetDate": "2025-06-30",
@@ -325,7 +345,7 @@ A composite performance indicator measuring the overall operational efficiency a
 
 ### JSON representation:
 
-```json
+```json performance-indicator.schema.json
 {
   "performanceIndicatorID": "pi-op-eff-003",
   "title": "Operational Efficiency Index",
@@ -336,21 +356,27 @@ A composite performance indicator measuring the overall operational efficiency a
   "targetValue": 85,
   "variance": -13,
   "variancePercentage": -15.29,
-  "thresholdType": "higher-is-better",
+  "thresholdType": "higherIsBetter",
   "thresholds": [
     {
       "level": "critical",
       "value": 60,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Operational efficiency index has fallen below critical threshold",
-      "notificationRecipients": ["COO", "OperationsDirector"]
+      "notificationRecipients": [
+        "COO",
+        "OperationsDirector"
+      ]
     },
     {
       "level": "warning",
       "value": 70,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Operational efficiency index trending toward concerning levels",
-      "notificationRecipients": ["OperationsManager", "ProcessImprovementLead"]
+      "notificationRecipients": [
+        "OperationsManager",
+        "ProcessImprovementLead"
+      ]
     }
   ],
   "targetDate": "2025-12-31",
@@ -480,9 +506,16 @@ A composite performance indicator measuring the overall operational efficiency a
       {
         "component": "Operational Flexibility Assessment",
         "assessmentMethod": "Structured evaluation by operational leaders",
-        "assessors": ["Department Heads", "Process Owners", "Line Managers"],
+        "assessors": [
+          "Department Heads",
+          "Process Owners",
+          "Line Managers"
+        ],
         "weight": 15,
-        "biasControlMeasures": ["Standardized assessment framework", "Multi-evaluator consensus"]
+        "biasControlMeasures": [
+          "Standardized assessment framework",
+          "Multi-evaluator consensus"
+        ]
       }
     ],
     "proxyComponents": [
@@ -491,7 +524,10 @@ A composite performance indicator measuring the overall operational efficiency a
         "targetMeasure": "Operational consistency and scalability",
         "correlationStrength": 0.68,
         "validationMethod": "Semi-annual comparison with direct efficiency measures",
-        "limitations": ["Cultural factors may influence standardization adoption", "Industry-specific constraints"],
+        "limitations": [
+          "Cultural factors may influence standardization adoption",
+          "Industry-specific constraints"
+        ],
         "weight": 30
       }
     ],
@@ -514,7 +550,7 @@ A performance indicator tracking the progress and effectiveness of key strategic
 
 ### JSON representation:
 
-```json
+```json performance-indicator.schema.json
 {
   "performanceIndicatorID": "pi-strat-init-004",
   "title": "Strategic Initiative Progress",
@@ -525,21 +561,28 @@ A performance indicator tracking the progress and effectiveness of key strategic
   "targetValue": 100,
   "variance": -35,
   "variancePercentage": -35,
-  "thresholdType": "higher-is-better",
+  "thresholdType": "higherIsBetter",
   "thresholds": [
     {
       "level": "critical",
       "value": 25,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Strategic initiative significantly behind schedule",
-      "notificationRecipients": ["CEO", "StrategyDirector", "InitiativeSponsor"]
+      "notificationRecipients": [
+        "CEO",
+        "StrategyDirector",
+        "InitiativeSponsor"
+      ]
     },
     {
       "level": "warning",
       "value": 40,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Strategic initiative progress falling behind plan",
-      "notificationRecipients": ["StrategyManager", "InitiativeOwner"]
+      "notificationRecipients": [
+        "StrategyManager",
+        "InitiativeOwner"
+      ]
     }
   ],
   "targetDate": "2025-12-31",
@@ -669,9 +712,16 @@ A performance indicator tracking the progress and effectiveness of key strategic
       {
         "component": "Strategic Alignment Assessment",
         "assessmentMethod": "Structured leadership evaluations",
-        "assessors": ["Executive Team", "Strategy Committee", "Initiative Sponsors"],
+        "assessors": [
+          "Executive Team",
+          "Strategy Committee",
+          "Initiative Sponsors"
+        ],
         "weight": 25,
-        "biasControlMeasures": ["Anonymous submissions", "Multi-level evaluation"]
+        "biasControlMeasures": [
+          "Anonymous submissions",
+          "Multi-level evaluation"
+        ]
       }
     ],
     "proxyComponents": [
@@ -680,7 +730,10 @@ A performance indicator tracking the progress and effectiveness of key strategic
         "targetMeasure": "Organizational ability to absorb strategic change",
         "correlationStrength": 0.65,
         "validationMethod": "Quarterly correlation analysis with initiative outcomes",
-        "limitations": ["Cultural variations across business units", "External factors influence"],
+        "limitations": [
+          "Cultural variations across business units",
+          "External factors influence"
+        ],
         "weight": 15
       }
     ],
@@ -703,7 +756,7 @@ A performance indicator measuring the organization's environmental sustainabilit
 
 ### JSON representation:
 
-```json
+```json performance-indicator.schema.json
 {
   "performanceIndicatorID": "pi-sust-005",
   "title": "Sustainability Performance Rating",
@@ -714,21 +767,28 @@ A performance indicator measuring the organization's environmental sustainabilit
   "targetValue": 85,
   "variance": -14,
   "variancePercentage": -16.47,
-  "thresholdType": "higher-is-better",
+  "thresholdType": "higherIsBetter",
   "thresholds": [
     {
       "level": "critical",
       "value": 50,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Sustainability performance below regulatory risk threshold",
-      "notificationRecipients": ["CEO", "SustainabilityOfficer", "LegalCounsel"]
+      "notificationRecipients": [
+        "CEO",
+        "SustainabilityOfficer",
+        "LegalCounsel"
+      ]
     },
     {
       "level": "warning",
       "value": 65,
-      "comparisonOperator": "<",
+      "comparisonOperator": "lessThan",
       "alertMessage": "Sustainability performance below industry average",
-      "notificationRecipients": ["SustainabilityManager", "OperationsDirector"]
+      "notificationRecipients": [
+        "SustainabilityManager",
+        "OperationsDirector"
+      ]
     }
   ],
   "targetDate": "2025-12-31",
@@ -883,9 +943,16 @@ A performance indicator measuring the organization's environmental sustainabilit
       {
         "component": "Sustainability Culture Assessment",
         "assessmentMethod": "Employee surveys and focus groups",
-        "assessors": ["Sustainability Team", "External Consultant", "Employee Representatives"],
+        "assessors": [
+          "Sustainability Team",
+          "External Consultant",
+          "Employee Representatives"
+        ],
         "weight": 15,
-        "biasControlMeasures": ["Anonymous participation", "Demographically balanced samples"]
+        "biasControlMeasures": [
+          "Anonymous participation",
+          "Demographically balanced samples"
+        ]
       }
     ],
     "proxyComponents": [
@@ -894,7 +961,10 @@ A performance indicator measuring the organization's environmental sustainabilit
         "targetMeasure": "Organizational commitment to sustainability transformation",
         "correlationStrength": 0.75,
         "validationMethod": "Annual correlation analysis with sustainability outcomes",
-        "limitations": ["Time lag between investment and outcomes", "External factors influence results"],
+        "limitations": [
+          "Time lag between investment and outcomes",
+          "External factors influence results"
+        ],
         "weight": 20
       }
     ],

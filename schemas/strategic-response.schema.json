@@ -489,8 +489,12 @@
             "description": "Potential monetary impact"
           },
           "likelihood": {
-            "type": "string",
-            "description": "Likelihood of this risk"
+            "description": "Likelihood of this risk",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/likelihood"
+              }
+            ]
           },
           "mitigationStrategy": {
             "type": "string",
@@ -572,8 +576,12 @@
             "description": "Key indicators being monitored"
           },
           "frequency": {
-            "type": "string",
-            "description": "Frequency of monitoring"
+            "description": "Frequency of monitoring",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/frequency"
+              }
+            ]
           }
         },
         "required": [

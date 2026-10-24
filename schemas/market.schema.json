@@ -725,8 +725,12 @@
             "type": "object",
             "properties": {
               "domainType": {
-                "type": "string",
-                "description": "Business domain affected"
+                "description": "Business domain affected",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/domainType"
+                  }
+                ]
               },
               "impactDescription": {
                 "type": "string",

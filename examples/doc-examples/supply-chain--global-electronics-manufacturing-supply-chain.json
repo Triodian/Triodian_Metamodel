@@ -229,21 +229,21 @@
       "opportunityName": "Supplier Collaboration Platform",
       "opportunityDescription": "Implementation of real-time collaboration tools for design and planning with key suppliers",
       "potentialImpact": "high",
-      "implementationComplexity": "medium",
+      "implementationComplexity": "moderate",
       "status": "planned"
     },
     {
       "opportunityName": "New Product Introduction Process Redesign",
       "opportunityDescription": "Streamlining of supply chain integration in NPI to reduce time-to-market",
       "potentialImpact": "high",
-      "implementationComplexity": "high",
+      "implementationComplexity": "complex",
       "status": "proposed"
     },
     {
       "opportunityName": "Logistics Network Optimization",
       "opportunityDescription": "Comprehensive review and redesign of global distribution network",
       "potentialImpact": "medium",
-      "implementationComplexity": "high",
+      "implementationComplexity": "complex",
       "status": "planned"
     }
   ],
@@ -273,13 +273,13 @@
   },
   "dependencies": [
     {
-      "dependencyType": "Critical",
+      "dependencyType": "critical",
       "domainType": "capability",
       "entityID": "CAP-SC-003",
       "description": "Advanced procurement capability"
     },
     {
-      "dependencyType": "Important",
+      "dependencyType": "important",
       "domainType": "technology",
       "entityID": "TECH-007",
       "description": "Supply chain planning and control tower systems"

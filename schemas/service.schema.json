@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/services.schema.json",
+  "$id": "https://triodian.com/schemas/service.schema.json",
   "title": "Services Domain Schema",
   "description": "Schema for the Services domain in the Triodian Metamodel",
   "version": "2.2",
