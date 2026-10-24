@@ -89,7 +89,8 @@
             "type": "string",
             "description": "Resources contributed by this organization"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "minItems": 1
     },
@@ -122,8 +123,10 @@
           "targetOrgID": {
             "type": "string"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

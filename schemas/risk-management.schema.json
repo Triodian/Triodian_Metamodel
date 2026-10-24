@@ -97,7 +97,8 @@
           "type": "string",
           "description": "Time period for probability assessment"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskImpact": {
       "type": "object",
@@ -146,14 +147,16 @@
                   }
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "rationale": {
           "type": "string",
           "description": "Explanation for impact assessment"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskSeverity": {
       "type": "object",
@@ -175,7 +178,8 @@
           "type": "string",
           "description": "Method used to determine severity"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskTolerance": {
       "type": "object",
@@ -210,14 +214,16 @@
                 "type": "string",
                 "description": "Action required when threshold is crossed"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "rationale": {
           "type": "string",
           "description": "Explanation for tolerance level"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskStatus": {
       "type": "string",
@@ -274,7 +280,8 @@
             }
           ]
         }
-      }
+      },
+      "additionalProperties": false
     },
     "residualRisk": {
       "type": "object",
@@ -303,7 +310,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "controlEffectiveness": {
       "type": "object",
@@ -329,7 +337,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "reviewFrequency": {
       "description": "How often risk is reassessed",
@@ -375,7 +384,8 @@
               }
             ]
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "strategicImplications": {
@@ -416,10 +426,12 @@
                   "critical"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "emergingFactors": {
       "type": "array",
@@ -458,7 +470,8 @@
             "type": "string",
             "description": "How this factor is being tracked"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "relatedRisks": {
@@ -495,7 +508,8 @@
             "type": "string",
             "description": "Description of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "keyRiskIndicators": {
@@ -532,7 +546,8 @@
             "type": "string",
             "description": "How often indicator is measured"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "dependencies": {
@@ -561,7 +576,8 @@
             "type": "string",
             "description": "Description of the dependency"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "crossDomainRelationships": {
@@ -587,7 +603,8 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "documentationReferences": {
@@ -622,7 +639,8 @@
             "format": "date",
             "description": "Date of document"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "assessments": {
@@ -676,7 +694,8 @@
                 "type": "string",
                 "description": "Explanation for scope boundaries"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "assessmentContext": {
             "type": "string",
@@ -700,7 +719,8 @@
                 "type": "string",
                 "description": "How long assessment remains valid"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "assessmentParticipants": {
             "type": "array",
@@ -729,7 +749,8 @@
                     "other"
                   ]
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "identifiedRisks": {
@@ -786,7 +807,8 @@
                     "very-high"
                   ]
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "assessmentFindings": {
@@ -826,7 +848,8 @@
                     "critical"
                   ]
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "assessmentRecommendations": {
@@ -863,10 +886,12 @@
                     "long-term"
                   ]
                 }
-              }
+              },
+              "additionalProperties": false
             }
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "controls": {
@@ -962,7 +987,8 @@
                   "not-assessed"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           },
           "controlTesting": {
             "type": "object",
@@ -1005,9 +1031,11 @@
                   "not-tested"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "responses": {
@@ -1084,7 +1112,8 @@
                 "format": "date",
                 "description": "Actual completion date"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "responseSuccess": {
             "type": "object",
@@ -1108,7 +1137,8 @@
                       "type": "string",
                       "description": "Current measurement"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               },
               "overallSuccess": {
@@ -1122,9 +1152,11 @@
                   "not-measured"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "monitoring": {
@@ -1161,7 +1193,8 @@
               "type": "string",
               "description": "Explanation for chosen frequency"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "monitoringMethods": {
           "type": "array",
@@ -1181,7 +1214,8 @@
                   }
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "earlyWarningSystem": {
@@ -1199,7 +1233,8 @@
               "type": "string",
               "description": "How alerts are escalated"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "reportingStructure": {
           "type": "object",
@@ -1219,7 +1254,8 @@
                     "type": "string",
                     "description": "How often produced"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "dashboards": {
@@ -1236,12 +1272,16 @@
                     "type": "string",
                     "description": "How often updated"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

@@ -83,7 +83,8 @@
           "type": "integer",
           "description": "Current number of open positions"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "skillsProfile": {
       "type": "object",
@@ -114,7 +115,8 @@
           "type": "string",
           "description": "How skills are assessed and measured"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "competencyFramework": {
       "type": "string",
@@ -146,7 +148,8 @@
           "type": "string",
           "description": "Budget allocated for development"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "talentAcquisitionStrategy": {
       "type": "object",
@@ -174,7 +177,8 @@
           "type": "string",
           "description": "Expected time until full productivity"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "culturalValues": {
       "type": "array",
@@ -199,7 +203,8 @@
           "type": "string",
           "description": "Typical span of control"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "engagementMetrics": {
       "type": "object",
@@ -227,7 +232,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "knowledgeManagementApproach": {
       "type": "object",
@@ -245,7 +251,8 @@
           "type": "string",
           "description": "Methods for preserving critical knowledge"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "performanceManagementSystem": {
       "type": "object",
@@ -269,7 +276,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "workforceFlexibility": {
       "type": "object",
@@ -287,7 +295,8 @@
           "type": "string",
           "description": "Assessment of workforce adaptability"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "diversityMetrics": {
       "type": "object",
@@ -309,7 +318,8 @@
           "type": "string",
           "description": "Targeted diversity objectives"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "strategicAlignment": {
       "type": "object",
@@ -333,7 +343,8 @@
                 "type": "string",
                 "description": "How this people element supports the objective"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "alignmentStrength": {
@@ -346,7 +357,8 @@
             "critical"
           ]
         }
-      }
+      },
+      "additionalProperties": false
     },
     "dependencies": {
       "type": "array",
@@ -383,7 +395,8 @@
           "dependencyType",
           "domainType",
           "entityID"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "relatedPeopleElements": {
@@ -426,7 +439,8 @@
           "elementID",
           "relationshipType",
           "relationshipStrength"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "workforceElements": {
@@ -484,7 +498,8 @@
                 "type": "number",
                 "description": "Percentage of contractors"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workforceLocation": {
             "type": "object",
@@ -504,10 +519,12 @@
                       "type": "number",
                       "description": "Percentage at this location"
                     }
-                  }
+                  },
+                  "additionalProperties": false
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workSkills": {
             "type": "object",
@@ -530,7 +547,8 @@
                   "Expert"
                 ]
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workExperience": {
             "type": "object",
@@ -544,7 +562,8 @@
                 "type": "string",
                 "description": "Breakdown of seniority levels"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workforceAvailability": {
             "type": "object",
@@ -562,7 +581,8 @@
                 "type": "string",
                 "description": "Typical overtime percentage"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workforceCost": {
             "type": "object",
@@ -580,7 +600,8 @@
                 "type": "string",
                 "description": "Yearly cost growth percentage"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workforceRisks": {
             "type": "array",
@@ -604,7 +625,8 @@
                   "type": "string",
                   "description": "Risk mitigation approach"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "successionPlanning": {
@@ -619,7 +641,8 @@
                 "type": "string",
                 "description": "Ratio of succession candidates to critical roles"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "workforceStrategy": {
             "type": "object",
@@ -633,9 +656,11 @@
                 "type": "string",
                 "description": "Primary development focus"
               }
-            }
+            },
+            "additionalProperties": false
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "cultureElements": {
@@ -677,7 +702,8 @@
                 "type": "string",
                 "description": "How consistently this attribute appears across the organization"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "desiredState": {
             "type": "object",
@@ -695,7 +721,8 @@
                 "type": "string",
                 "description": "Desired consistency across the organization"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "culturalImportance": {
             "type": "object",
@@ -713,7 +740,8 @@
                 "type": "string",
                 "description": "How this attribute impacts business outcomes"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "supportingBehaviors": {
             "type": "array",
@@ -744,7 +772,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "reinforcementMechanisms": {
             "type": "object",
@@ -764,7 +793,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "leadershipInfluence": {
             "type": "object",
@@ -781,7 +811,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "culturalBarriers": {
             "type": "array",
@@ -805,7 +836,8 @@
                   "type": "string",
                   "description": "How this barrier is being addressed"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "culturalEnablers": {
@@ -828,10 +860,12 @@
                     "critical"
                   ]
                 }
-              }
+              },
+              "additionalProperties": false
             }
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "competencyFrameworks": {
@@ -871,7 +905,8 @@
                   "type": "string",
                   "description": "Description of the category"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "competencyLevels": {
@@ -888,7 +923,8 @@
                   "type": "string",
                   "description": "Description of the level"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "assessmentMethods": {
@@ -903,7 +939,8 @@
                 "type": "string",
                 "description": "Process for ensuring consistency"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "developmentPaths": {
             "type": "array",
@@ -919,7 +956,8 @@
                   "type": "string",
                   "description": "Description of the path"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "certificationRequirements": {
@@ -940,7 +978,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "competencyOwner": {
             "type": "object",
@@ -957,7 +996,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "frameworkAdoption": {
             "type": "object",
@@ -971,7 +1011,8 @@
                 "type": "string",
                 "description": "How the framework is applied"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "frameworkReviewCycle": {
             "type": "object",
@@ -985,7 +1026,8 @@
                 "type": "string",
                 "description": "Date of last review"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "alignmentToStrategy": {
             "type": "object",
@@ -1013,7 +1055,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "industryStandards": {
             "type": "object",
@@ -1026,9 +1069,11 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "knowledgeAssets": {
@@ -1087,7 +1132,8 @@
                 "type": "string",
                 "description": "How this knowledge impacts business outcomes"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "knowledgeSources": {
             "type": "object",
@@ -1107,7 +1153,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "knowledgeUsers": {
             "type": "object",
@@ -1124,7 +1171,8 @@
                 "type": "string",
                 "description": "When and how the knowledge is typically used"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "captureMethod": {
             "type": "object",
@@ -1138,7 +1186,8 @@
                 "type": "string",
                 "description": "Process for collecting and documenting"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "storageApproach": {
             "type": "object",
@@ -1152,7 +1201,8 @@
                 "type": "string",
                 "description": "How the knowledge is structured and organized"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "accessControls": {
             "type": "object",
@@ -1166,7 +1216,8 @@
                 "type": "string",
                 "description": "Classification of the knowledge"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "sharingMechanisms": {
             "type": "object",
@@ -1186,7 +1237,8 @@
                   "type": "string"
                 }
               }
-            }
+            },
+            "additionalProperties": false
           },
           "utilizationMetrics": {
             "type": "object",
@@ -1203,7 +1255,8 @@
                 "type": "string",
                 "description": "Level of active use of this knowledge"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "knowledgeRisks": {
             "type": "array",
@@ -1227,7 +1280,8 @@
                   "type": "string",
                   "description": "Risk mitigation approach"
                 }
-              }
+              },
+              "additionalProperties": false
             }
           },
           "retentionStrategy": {
@@ -1242,9 +1296,11 @@
                 "type": "string",
                 "description": "Plan for knowledge transfer to successors"
               }
-            }
+            },
+            "additionalProperties": false
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "crossDomainRelationships": {
@@ -1270,8 +1326,10 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

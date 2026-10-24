@@ -4,15 +4,15 @@
   "description": "RESTful API platform providing secure access to rail infrastructure data for internal and partner systems",
   "purpose": "Enable data integration and sharing across rail ecosystem partners",
   "owner": "Platform Engineering Team",
-  "productCategory": "Platform Product",
-  "productType": "API",
-  "targetMarket": "B2B",
-  "businessModel": "Usage Based",
-  "lifecycleStage": "Launch",
+  "productCategory": "platformProduct",
+  "productType": "api",
+  "targetMarket": "b2b",
+  "businessModel": "usageBased",
+  "lifecycleStage": "launch",
   "customerSegments": [
-    "Enterprise",
-    "Partner",
-    "Developer"
+    "enterprise",
+    "partner",
+    "developer"
   ],
   "channels": [
     "API Platform",
@@ -20,13 +20,13 @@
   ],
   "pricingStrategy": "Usage Based",
   "complianceRequirements": [
-    "GDPR",
-    "Industry Standards"
+    "gdpr",
+    "industryStandards"
   ],
   "valueProposition": "Reduce integration time by 75% with standardized data access",
   "riskCategories": [
-    "Technical",
-    "Security",
-    "Regulatory"
+    "technology",
+    "security",
+    "compliance"
   ]
 }

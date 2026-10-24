@@ -148,7 +148,8 @@
           "type": "string",
           "description": "Expected cost trends"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "risks": {
       "type": "array",
@@ -217,7 +218,8 @@
               }
             ]
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "dependencies": {
@@ -250,7 +252,8 @@
             "type": "string",
             "description": "Description of the dependency"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "relatedTechnologies": {
@@ -288,7 +291,8 @@
             "type": "string",
             "description": "Description of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "improvementOpportunities": {
@@ -376,7 +380,8 @@
         "required": [
           "applicationName",
           "applicationDescription"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "technologyServices": {
@@ -460,7 +465,8 @@
         "required": [
           "serviceName",
           "serviceDescription"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "infrastructureElements": {
@@ -529,7 +535,8 @@
         "required": [
           "infrastructureName",
           "infrastructureType"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "standardElements": {
@@ -604,7 +611,8 @@
         "required": [
           "standardName",
           "standardDescription"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "governanceModel": {
@@ -627,7 +635,8 @@
           "type": "string",
           "description": "How changes are managed"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "dataSecurity": {
       "type": "object",
@@ -652,7 +661,8 @@
           "type": "string",
           "description": "Security assessment history"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "maturityLevel": {
       "type": "object",
@@ -678,7 +688,8 @@
           "type": "string",
           "description": "Plan for maturity improvement"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "lastUpdated": {
       "type": "string",
@@ -708,8 +719,10 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

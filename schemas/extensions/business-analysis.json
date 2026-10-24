@@ -144,7 +144,8 @@
         "type",
         "title",
         "description"
-      ]
+      ],
+      "additionalProperties": false
     },
     "RequirementArtefact": {
       "type": "object",
@@ -213,7 +214,8 @@
         "type",
         "purpose",
         "status"
-      ]
+      ],
+      "additionalProperties": false
     },
     "ElicitationActivity": {
       "type": "object",
@@ -278,7 +280,8 @@
         "id",
         "type",
         "date"
-      ]
+      ],
+      "additionalProperties": false
     },
     "AnalysisDesignDefinition": {
       "type": "object",
@@ -325,7 +328,8 @@
               "score": {
                 "type": "number"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Structured comparison of solution options."
         },
@@ -380,7 +384,8 @@
       "required": [
         "id",
         "description"
-      ]
+      ],
+      "additionalProperties": false
     },
     "SolutionEvaluation": {
       "type": "object",
@@ -450,7 +455,8 @@
         "description",
         "evaluationDate",
         "recommendation"
-      ]
+      ],
+      "additionalProperties": false
     },
     "Mapping": {
       "type": "object",
@@ -471,7 +477,9 @@
           "type": "string"
         }
       },
-      "description": "Mapping of the entity to concepts in various business analysis frameworks."
+      "description": "Mapping of the entity to concepts in various business analysis frameworks.",
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

@@ -5,11 +5,11 @@
   "purpose": "Track maintenance planning and quality assurance to optimize safety and efficiency",
   "owner": "Track Quality Analysis Team",
   "orgUnitTitle": "Track Maintenance Division",
-  "productCategory": "Information Product",
-  "productType": "Report",
-  "targetMarket": "Internal",
+  "productCategory": "informationProduct",
+  "productType": "report",
+  "targetMarket": "internal",
   "businessModel": "Internal Service",
-  "lifecycleStage": "Maturity",
+  "lifecycleStage": "maturity",
   "lifecycleManagement": "Monthly updates, annual review process with stakeholder feedback",
   "marketCompetitiveness": "Industry-leading accuracy of 98.5% with real-time processing capabilities",
   "customerFeedback": "User satisfaction: 4.2/5.0, 95% find reports actionable",
@@ -17,8 +17,8 @@
   "performanceIndicators": "Accuracy: 98.5%, Timeliness: 99%, User adoption: 100%",
   "valueProposition": "Reduce maintenance costs by 30% through predictive analytics and early problem detection",
   "riskCategories": [
-    "Technical",
-    "Operational"
+    "technology",
+    "operational"
   ],
   "strategicAlignment": "Supports track safety and efficiency goals, enables predictive maintenance strategy"
 }

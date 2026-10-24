@@ -3,7 +3,12 @@
   "$id": "https://triodian.com/schemas/trigger.schema.json",
   "title": "trigger",
   "type": "object",
-  "required": ["triggerID", "label", "primaryCategory", "origin"],
+  "required": [
+    "triggerID",
+    "label",
+    "primaryCategory",
+    "origin"
+  ],
   "properties": {
     "triggerID": {
       "type": "string",
@@ -82,7 +87,6 @@
       },
       "description": "References to related strategicResponseModel artefacts"
     },
-    
     "/* Market Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Market Domain properties"
@@ -99,7 +103,6 @@
       "type": "string",
       "description": "ID of the related competitor"
     },
-    
     "/* Supply Chain Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Supply Chain Domain properties"
@@ -135,9 +138,9 @@
           "description": "Impact on customer service"
         }
       },
-      "description": "Impact on supply chain operations"
+      "description": "Impact on supply chain operations",
+      "additionalProperties": false
     },
-    
     "/* Finance Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Finance Domain properties"
@@ -174,9 +177,9 @@
           "description": "When financial impact is expected"
         }
       },
-      "description": "Monetary impact of the trigger"
+      "description": "Monetary impact of the trigger",
+      "additionalProperties": false
     },
-    
     "/* Customer Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Customer Domain properties"
@@ -189,7 +192,6 @@
       "type": "string",
       "description": "ID of the affected journey stage"
     },
-    
     "/* Risk Management Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Risk Management Domain properties"
@@ -228,9 +230,9 @@
           "description": "Additional risks that may result"
         }
       },
-      "description": "Impact on risk profile"
+      "description": "Impact on risk profile",
+      "additionalProperties": false
     },
-    
     "/* Innovation Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Innovation Domain properties"
@@ -265,9 +267,9 @@
           "description": "Innovation areas requiring focus"
         }
       },
-      "description": "Impact on innovation capabilities or projects"
+      "description": "Impact on innovation capabilities or projects",
+      "additionalProperties": false
     },
-    
     "/* Sustainability Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Sustainability Domain properties"
@@ -299,9 +301,9 @@
           "description": "Impact on sustainability timelines"
         }
       },
-      "description": "Impact on sustainability efforts"
+      "description": "Impact on sustainability efforts",
+      "additionalProperties": false
     },
-    
     "/* People Domain Properties */": {
       "type": "null",
       "description": "Comment separator for People Domain properties"
@@ -333,9 +335,9 @@
           "description": "Impact on organizational culture"
         }
       },
-      "description": "Impact on workforce or culture"
+      "description": "Impact on workforce or culture",
+      "additionalProperties": false
     },
-    
     "/* Technology Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Technology Domain properties"
@@ -367,9 +369,9 @@
           "description": "Impact on technical architecture"
         }
       },
-      "description": "Impact on technology systems"
+      "description": "Impact on technology systems",
+      "additionalProperties": false
     },
-    
     "/* Channel Domain Properties */": {
       "type": "null",
       "description": "Comment separator for Channel Domain properties"
@@ -401,7 +403,9 @@
           "description": "Customer segments affected by channel impact"
         }
       },
-      "description": "Impact on distribution channels"
+      "description": "Impact on distribution channels",
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

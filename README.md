@@ -61,6 +61,8 @@ The structural checks confirm that every schema is well-formed JSON, valid again
 
 Shared concepts such as priority, risk level, frequency, status, maturity and domain type are defined once in [`schemas/common.schema.json`](schemas/common.schema.json), with camelCase values, and domains reference them with `$ref`. [`docs/shared-vocabulary.md`](docs/shared-vocabulary.md) lists the shared values and shows which domains still keep their own lists and how those map across. Regenerate it with `python scripts/vocabulary_map.py`.
 
+Every object a schema defines rejects fields it does not define (`"additionalProperties": false`), so a misspelt or undocumented field fails validation instead of being silently accepted. The validator enforces this for every schema.
+
 Every record has a required identifier named after its entity, such as `capabilityID`, `strategyID` or `orgUnitID`, using the shared `identifier` definition. Records link to each other by these identifiers. Fields such as `orgUnitID`, `parentCapabilityID` and `relatedStrategyIDs` sit alongside the corresponding name fields (`orgUnitTitle`, `parent`, `relatedStrategies`), which are kept for readability.
 
 The worked examples published in the metamodel documentation are kept in [`examples/doc-examples`](examples/doc-examples) and validated against their schemas, so drift between the documentation and the schemas is visible.
