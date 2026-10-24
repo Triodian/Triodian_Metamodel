@@ -1,0 +1,50 @@
+{
+  "validationID": "VAL-IFRS9-2025Q3",
+  "modelID": "MODEL-ECL-IFRS9-001",
+  "independence": true,
+  "plan": {
+    "scope": "Wholesale ECL v3.2",
+    "methods": [
+      "conceptualSoundness",
+      "outcomesAnalysis",
+      "benchmarking",
+      "implementationVerification"
+    ]
+  },
+  "activities": [
+    {
+      "activityID": "ACT-001",
+      "category": "outcomesAnalysis",
+      "date": "2025-08-12",
+      "tooling": "backtesting-suite"
+    }
+  ],
+  "findings": [
+    {
+      "findingID": "FND-007",
+      "category": "calibration",
+      "severity": "high",
+      "description": "Positive bias vs. realised losses in SICR segment B",
+      "evidenceRef": "BACKTEST-2025Q2",
+      "dueDate": "2025-10-15",
+      "owner": "Model Owner"
+    }
+  ],
+  "remediation": [
+    {
+      "actionID": "REM-003",
+      "action": "Recalibrate segment B PD curve",
+      "owner": "Risk Analytics",
+      "dueDate": "2025-10-10",
+      "status": "inProgress"
+    }
+  ],
+  "documentationReferences": [
+    {
+      "documentName": "Independent Validation Report 2025Q3",
+      "location": "RISK-RPT-2025-0930",
+      "type": "assessment",
+      "date": "2025-09-30"
+    }
+  ]
+}

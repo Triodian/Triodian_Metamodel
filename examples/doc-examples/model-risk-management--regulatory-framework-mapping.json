@@ -1,0 +1,42 @@
+{
+  "frameworkMapID": "REGMAP-IFRS9-001",
+  "modelID": "MODEL-ECL-IFRS9-001",
+  "requirements": [
+    {
+      "framework": "IFRS9",
+      "reference": "IFRS9.5.5.17",
+      "obligation": "Incorporate unbiased, probability-weighted forward-looking information.",
+      "appliesTo": "model",
+      "controls": [
+        "CTRL-SCENARIO-GOV-01",
+        "CTRL-ASSUMPTIONS-LOG-03"
+      ],
+      "evidence": [
+        "Scenario Pack 2025Q3",
+        "Model Document v3.2"
+      ],
+      "status": "compliant"
+    },
+    {
+      "framework": "SR11-7",
+      "reference": "SR11-7.Principle1",
+      "appliesTo": "governance",
+      "controls": [
+        "CTRL-SOD-DEV-VAL-02"
+      ],
+      "evidence": [
+        "MRM Policy 2025",
+        "Committee Minutes 2025-07-01"
+      ],
+      "status": "compliant"
+    }
+  ],
+  "documentationReferences": [
+    {
+      "documentName": "MRM Policy",
+      "location": "POL/MRM/2025-01",
+      "type": "policy",
+      "date": "2025-03-31"
+    }
+  ]
+}
