@@ -233,21 +233,21 @@
       "type": "array",
       "description": "Functions that define capability purpose",
       "items": {
-        "$ref": "#/definitions/CapabilityFunction"
+        "$ref": "#/definitions/capabilityFunction"
       }
     },
     "capabilityComponents": {
       "type": "array",
       "description": "Structural elements of the capability",
       "items": {
-        "$ref": "#/definitions/CapabilityComponent"
+        "$ref": "#/definitions/capabilityComponent"
       }
     },
     "capabilityProcesses": {
       "type": "array",
       "description": "Processes that drive capability operation",
       "items": {
-        "$ref": "#/definitions/CapabilityProcess"
+        "$ref": "#/definitions/capabilityProcess"
       }
     }
   },
@@ -260,7 +260,7 @@
   ],
   "additionalProperties": false,
   "definitions": {
-    "CapabilityFunction": {
+    "capabilityFunction": {
       "type": "object",
       "description": "A function that defines the overarching purpose of a capability",
       "properties": {
@@ -334,7 +334,7 @@
       ],
       "additionalProperties": false
     },
-    "CapabilityComponent": {
+    "capabilityComponent": {
       "type": "object",
       "description": "A structural element that makes up a capability",
       "properties": {
@@ -413,7 +413,7 @@
       ],
       "additionalProperties": false
     },
-    "CapabilityProcess": {
+    "capabilityProcess": {
       "type": "object",
       "description": "A process that drives the capability's operation",
       "properties": {

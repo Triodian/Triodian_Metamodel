@@ -1,135 +1,132 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/initiatives.schema.json",
   "title": "Initiatives Domain Schema",
-  "description": "Schema for high-level efforts aimed at achieving specific business outcomes, often involving multiple programs and projects",
+  "description": "Focused efforts undertaken to deliver value, following the hierarchy Initiative > Program > Project. The root is an Initiative; Program and Project are element records under definitions, linked by parentInitiativeID and parentProgramID.",
   "type": "object",
   "properties": {
-    "initiative": {
-      "type": "object",
-      "description": "Represents the overarching goal or strategic effort that typically spans across several programs",
-      "properties": {
-        "initiativeID": {
-          "description": "Unique identifier for the Initiative",
-          "allOf": [
-            {
-              "$ref": "common.schema.json#/definitions/identifier"
-            }
-          ]
-        },
-        "title": {
-          "type": "string",
-          "description": "The name or title of the Initiative"
-        },
-        "description": {
-          "type": "string",
-          "description": "A detailed explanation of what the Initiative entails"
-        },
-        "purpose": {
-          "type": "string",
-          "description": "The intended purpose or function of the Initiative within the Organization"
-        },
-        "owner": {
-          "type": "string",
-          "description": "The individual or team responsible for the Initiative"
-        },
-        "orgUnitTitle": {
-          "type": "string",
-          "description": "The Organization unit(s) to which the Initiative is linked"
-        },
-        "orgUnitID": {
-          "description": "ID of the organization unit (see orgUnitTitle)",
-          "allOf": [
-            {
-              "$ref": "common.schema.json#/definitions/identifier"
-            }
-          ]
-        },
-        "driverType": {
-          "type": "string",
-          "description": "Primary driver for this initiative, based on the SRM trigger catalogue."
-        },
-        "rationale": {
-          "type": "string",
-          "description": "Narrative explanation referencing this driver and the rationale for the initiative."
-        },
-        "goals": {
-          "type": "string",
-          "description": "Specific objectives of the Initiative"
-        },
-        "progressTracking": {
-          "type": "string",
-          "description": "Tools and methods to monitor progress towards Initiative goals"
-        },
-        "resourceAllocation": {
-          "type": "string",
-          "description": "Distribution and management of resources for Initiatives"
-        },
-        "dependencies": {
-          "type": "string",
-          "description": "Other Initiatives, processes or systems that the Initiative depends on"
-        },
-        "relatedInitiatives": {
-          "type": "string",
-          "description": "Initiatives that are related or linked to this Initiative"
-        },
-        "relatedInitiativeIDs": {
-          "type": "array",
-          "description": "IDs of related Initiatives",
-          "items": {
-            "$ref": "common.schema.json#/definitions/identifier"
-          },
-          "uniqueItems": true
-        },
-        "performanceIndicators": {
-          "type": "string",
-          "description": "Metrics used to measure the success and progress of the Initiative"
-        },
-        "risks": {
-          "type": "string",
-          "description": "Potential risks associated with the Initiative and its implementation"
-        },
-        "improvementOpportunities": {
-          "type": "string",
-          "description": "Areas where the Initiative can be enhanced or improved"
-        },
-        "strategicAlignment": {
-          "type": "string",
-          "description": "How the Initiative aligns with the Organization's strategic goals and objectives"
-        },
-        "justification": {
-          "type": "string",
-          "description": "Explanation of why the initiative is required, referencing business drivers, strategic goals, capability gaps, stakeholder needs, or regulatory obligations."
-        },
-        "relatedStrategies": {
-          "type": "string",
-          "description": "Strategies that are connected or aligned with the primary Strategy"
-        },
-        "relatedStrategyIDs": {
-          "type": "array",
-          "description": "IDs of the Strategies this Initiative aligns with",
-          "items": {
-            "$ref": "common.schema.json#/definitions/identifier"
-          },
-          "uniqueItems": true
-        },
-        "childProgram": {
-          "type": "string",
-          "description": "A specific Program that is part of a larger Initiative"
-        },
-        "childProgramIDs": {
-          "type": "array",
-          "description": "IDs of the Programs that are part of this Initiative",
-          "items": {
-            "$ref": "common.schema.json#/definitions/identifier"
-          },
-          "uniqueItems": true
+    "initiativeID": {
+      "description": "Unique identifier for the Initiative",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
         }
-      },
-      "required": [
-        "initiativeID"
-      ],
-      "additionalProperties": false
+      ]
     },
+    "title": {
+      "type": "string",
+      "description": "The name or title of the Initiative"
+    },
+    "description": {
+      "type": "string",
+      "description": "A detailed explanation of what the Initiative entails"
+    },
+    "purpose": {
+      "type": "string",
+      "description": "The intended purpose or function of the Initiative within the Organization"
+    },
+    "owner": {
+      "type": "string",
+      "description": "The individual or team responsible for the Initiative"
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "The Organization unit(s) to which the Initiative is linked"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
+    "driverType": {
+      "type": "string",
+      "description": "Primary driver for this initiative, based on the SRM trigger catalogue."
+    },
+    "rationale": {
+      "type": "string",
+      "description": "Narrative explanation referencing this driver and the rationale for the initiative."
+    },
+    "goals": {
+      "type": "string",
+      "description": "Specific objectives of the Initiative"
+    },
+    "progressTracking": {
+      "type": "string",
+      "description": "Tools and methods to monitor progress towards Initiative goals"
+    },
+    "resourceAllocation": {
+      "type": "string",
+      "description": "Distribution and management of resources for Initiatives"
+    },
+    "dependencies": {
+      "type": "string",
+      "description": "Other Initiatives, processes or systems that the Initiative depends on"
+    },
+    "relatedInitiatives": {
+      "type": "string",
+      "description": "Initiatives that are related or linked to this Initiative"
+    },
+    "relatedInitiativeIDs": {
+      "type": "array",
+      "description": "IDs of related Initiatives",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
+    "performanceIndicators": {
+      "type": "string",
+      "description": "Metrics used to measure the success and progress of the Initiative"
+    },
+    "risks": {
+      "type": "string",
+      "description": "Potential risks associated with the Initiative and its implementation"
+    },
+    "improvementOpportunities": {
+      "type": "string",
+      "description": "Areas where the Initiative can be enhanced or improved"
+    },
+    "strategicAlignment": {
+      "type": "string",
+      "description": "How the Initiative aligns with the Organization's strategic goals and objectives"
+    },
+    "justification": {
+      "type": "string",
+      "description": "Explanation of why the initiative is required, referencing business drivers, strategic goals, capability gaps, stakeholder needs, or regulatory obligations."
+    },
+    "relatedStrategies": {
+      "type": "string",
+      "description": "Strategies that are connected or aligned with the primary Strategy"
+    },
+    "relatedStrategyIDs": {
+      "type": "array",
+      "description": "IDs of the Strategies this Initiative aligns with",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
+    "childProgram": {
+      "type": "string",
+      "description": "A specific Program that is part of a larger Initiative"
+    },
+    "childProgramIDs": {
+      "type": "array",
+      "description": "IDs of the Programs that are part of this Initiative",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "initiativeID"
+  ],
+  "additionalProperties": false,
+  "definitions": {
     "program": {
       "type": "object",
       "description": "Programs sit beneath initiatives and are collections of related projects",
@@ -350,6 +347,5 @@
       ],
       "additionalProperties": false
     }
-  },
-  "additionalProperties": false
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/trigger.schema.json",
   "title": "trigger",
   "type": "object",
@@ -87,10 +87,6 @@
       },
       "description": "References to related strategicResponseModel artefacts"
     },
-    "/* Market Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Market Domain properties"
-    },
     "marketID": {
       "type": "string",
       "description": "ID of the affected market"
@@ -102,10 +98,6 @@
     "competitorID": {
       "type": "string",
       "description": "ID of the related competitor"
-    },
-    "/* Supply Chain Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Supply Chain Domain properties"
     },
     "supplyChainID": {
       "type": "string",
@@ -140,10 +132,6 @@
       },
       "description": "Impact on supply chain operations",
       "additionalProperties": false
-    },
-    "/* Finance Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Finance Domain properties"
     },
     "financeID": {
       "type": "string",
@@ -180,10 +168,6 @@
       "description": "Monetary impact of the trigger",
       "additionalProperties": false
     },
-    "/* Customer Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Customer Domain properties"
-    },
     "customerSegmentID": {
       "type": "string",
       "description": "ID of the affected customer segment"
@@ -191,10 +175,6 @@
     "journeyStageID": {
       "type": "string",
       "description": "ID of the affected journey stage"
-    },
-    "/* Risk Management Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Risk Management Domain properties"
     },
     "riskID": {
       "type": "string",
@@ -233,10 +213,6 @@
       "description": "Impact on risk profile",
       "additionalProperties": false
     },
-    "/* Innovation Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Innovation Domain properties"
-    },
     "innovationID": {
       "type": "string",
       "description": "ID of the related innovation"
@@ -270,10 +246,6 @@
       "description": "Impact on innovation capabilities or projects",
       "additionalProperties": false
     },
-    "/* Sustainability Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Sustainability Domain properties"
-    },
     "sustainabilityID": {
       "type": "string",
       "description": "ID of the related sustainability element"
@@ -303,10 +275,6 @@
       },
       "description": "Impact on sustainability efforts",
       "additionalProperties": false
-    },
-    "/* People Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for People Domain properties"
     },
     "peopleID": {
       "type": "string",
@@ -338,10 +306,6 @@
       "description": "Impact on workforce or culture",
       "additionalProperties": false
     },
-    "/* Technology Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Technology Domain properties"
-    },
     "technologyID": {
       "type": "string",
       "description": "ID of the affected technology element"
@@ -371,10 +335,6 @@
       },
       "description": "Impact on technology systems",
       "additionalProperties": false
-    },
-    "/* Channel Domain Properties */": {
-      "type": "null",
-      "description": "Comment separator for Channel Domain properties"
     },
     "channelID": {
       "type": "string",

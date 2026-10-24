@@ -8,36 +8,36 @@
     "requirements": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/Requirement"
+        "$ref": "#/definitions/requirement"
       }
     },
     "requirementArtefacts": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/RequirementArtefact"
+        "$ref": "#/definitions/requirementArtefact"
       }
     },
     "elicitationActivities": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ElicitationActivity"
+        "$ref": "#/definitions/elicitationActivity"
       }
     },
     "analysisDesignDefinitions": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/AnalysisDesignDefinition"
+        "$ref": "#/definitions/analysisDesignDefinition"
       }
     },
     "solutionEvaluations": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/SolutionEvaluation"
+        "$ref": "#/definitions/solutionEvaluation"
       }
     }
   },
   "definitions": {
-    "Requirement": {
+    "requirement": {
       "type": "object",
       "properties": {
         "id": {
@@ -78,7 +78,7 @@
           "format": "uri",
           "description": "Reference to the owner (Organisation Unit or Person) of the requirement.",
           "links": {
-            "$ref": "../organization.schema.json#/definitions/OrganizationUnit"
+            "$ref": "../organization.schema.json#/definitions/organizationUnit"
           }
         },
         "acceptanceCriteria": {
@@ -116,7 +116,7 @@
           "format": "uri",
           "description": "Link to the related Value Stream.",
           "links": {
-            "$ref": "../value-stream.schema.json#/properties/valueStream"
+            "$ref": "../value-stream.schema.json"
           }
         },
         "relatedInitiative": {
@@ -124,7 +124,7 @@
           "format": "uri",
           "description": "Link to the related Initiative.",
           "links": {
-            "$ref": "../initiatives.schema.json#/properties/initiative"
+            "$ref": "../initiatives.schema.json"
           }
         },
         "stakeholderRequirementRef": {
@@ -132,11 +132,11 @@
           "format": "uri",
           "description": "Reference to the original Stakeholder Requirement (1:1 traceability).",
           "links": {
-            "$ref": "../stakeholder.schema.json#/definitions/StakeholderRequirement"
+            "$ref": "../stakeholder.schema.json#/definitions/stakeholderRequirement"
           }
         },
         "mappings": {
-          "$ref": "#/definitions/Mapping"
+          "$ref": "#/definitions/mapping"
         }
       },
       "required": [
@@ -147,7 +147,7 @@
       ],
       "additionalProperties": false
     },
-    "RequirementArtefact": {
+    "requirementArtefact": {
       "type": "object",
       "properties": {
         "id": {
@@ -179,7 +179,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "#/definitions/Requirement"
+              "$ref": "#/definitions/requirement"
             }
           },
           "description": "References to requirements documented or addressed by this artefact."
@@ -206,7 +206,7 @@
           }
         },
         "mappings": {
-          "$ref": "#/definitions/Mapping"
+          "$ref": "#/definitions/mapping"
         }
       },
       "required": [
@@ -217,7 +217,7 @@
       ],
       "additionalProperties": false
     },
-    "ElicitationActivity": {
+    "elicitationActivity": {
       "type": "object",
       "properties": {
         "id": {
@@ -267,13 +267,13 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "#/definitions/RequirementArtefact"
+              "$ref": "#/definitions/requirementArtefact"
             }
           },
           "description": "References to artefacts produced during this activity."
         },
         "mappings": {
-          "$ref": "#/definitions/Mapping"
+          "$ref": "#/definitions/mapping"
         }
       },
       "required": [
@@ -283,7 +283,7 @@
       ],
       "additionalProperties": false
     },
-    "AnalysisDesignDefinition": {
+    "analysisDesignDefinition": {
       "type": "object",
       "properties": {
         "id": {
@@ -350,7 +350,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "../initiatives.schema.json#/properties/initiative"
+              "$ref": "../initiatives.schema.json"
             }
           },
           "description": "Initiatives related to the solution design."
@@ -372,13 +372,13 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "#/definitions/Requirement"
+              "$ref": "#/definitions/requirement"
             }
           },
           "description": "Requirements addressed by this analysis or design."
         },
         "mappings": {
-          "$ref": "#/definitions/Mapping"
+          "$ref": "#/definitions/mapping"
         }
       },
       "required": [
@@ -387,7 +387,7 @@
       ],
       "additionalProperties": false
     },
-    "SolutionEvaluation": {
+    "solutionEvaluation": {
       "type": "object",
       "properties": {
         "id": {
@@ -430,7 +430,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "../initiatives.schema.json#/properties/initiative"
+              "$ref": "../initiatives.schema.json"
             }
           },
           "description": "Initiatives that implemented the solution being evaluated."
@@ -441,13 +441,13 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "#/definitions/Requirement"
+              "$ref": "#/definitions/requirement"
             }
           },
           "description": "Requirements that were fulfilled by the solution being evaluated."
         },
         "mappings": {
-          "$ref": "#/definitions/Mapping"
+          "$ref": "#/definitions/mapping"
         }
       },
       "required": [
@@ -458,22 +458,22 @@
       ],
       "additionalProperties": false
     },
-    "Mapping": {
+    "mapping": {
       "type": "object",
       "properties": {
-        "BABOK": {
+        "babok": {
           "type": "string"
         },
-        "Volere": {
+        "volere": {
           "type": "string"
         },
-        "IREB": {
+        "ireb": {
           "type": "string"
         },
-        "TOGAF": {
+        "togaf": {
           "type": "string"
         },
-        "Agile": {
+        "agile": {
           "type": "string"
         }
       },

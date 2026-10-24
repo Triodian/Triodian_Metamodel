@@ -306,313 +306,28 @@
       "type": "array",
       "description": "Application components that are part of this technology",
       "items": {
-        "type": "object",
-        "properties": {
-          "applicationName": {
-            "type": "string",
-            "description": "Name of the application"
-          },
-          "applicationDescription": {
-            "type": "string",
-            "description": "Detailed description"
-          },
-          "applicationCategory": {
-            "type": "string",
-            "description": "Classification within portfolio"
-          },
-          "businessCapabilitiesSupported": {
-            "type": "array",
-            "description": "Linked business capabilities",
-            "items": {
-              "type": "string"
-            }
-          },
-          "functionalDescription": {
-            "type": "string",
-            "description": "Key functions provided"
-          },
-          "interfacesProvided": {
-            "type": "array",
-            "description": "Interfaces exposed to other systems",
-            "items": {
-              "type": "string"
-            }
-          },
-          "interfacesConsumed": {
-            "type": "array",
-            "description": "External interfaces consumed",
-            "items": {
-              "type": "string"
-            }
-          },
-          "dataEntitiesManaged": {
-            "type": "array",
-            "description": "Key data handled by the application",
-            "items": {
-              "type": "string"
-            }
-          },
-          "technologyStack": {
-            "type": "string",
-            "description": "Technical foundation"
-          },
-          "deploymentModel": {
-            "type": "string",
-            "description": "How the application is deployed"
-          },
-          "scalability": {
-            "type": "string",
-            "description": "Scaling capabilities and limitations"
-          },
-          "availability": {
-            "type": "string",
-            "description": "Availability requirements and measures"
-          },
-          "developmentApproach": {
-            "type": "string",
-            "description": "Development methodology used"
-          },
-          "lifecycleStage": {
-            "type": "string",
-            "description": "Current stage in application lifecycle"
-          }
-        },
-        "required": [
-          "applicationName",
-          "applicationDescription"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/applicationComponent"
       }
     },
     "technologyServices": {
       "type": "array",
       "description": "Technology services provided",
       "items": {
-        "type": "object",
-        "properties": {
-          "serviceName": {
-            "type": "string",
-            "description": "Name of the technology service"
-          },
-          "serviceDescription": {
-            "type": "string",
-            "description": "Detailed description"
-          },
-          "serviceType": {
-            "type": "string",
-            "description": "Classification of service"
-          },
-          "serviceLevel": {
-            "type": "string",
-            "description": "Performance and reliability parameters"
-          },
-          "serviceConsumers": {
-            "type": "array",
-            "description": "Systems that use this service",
-            "items": {
-              "type": "string"
-            }
-          },
-          "serviceProviders": {
-            "type": "array",
-            "description": "Systems that deliver this service",
-            "items": {
-              "type": "string"
-            }
-          },
-          "serviceProtocol": {
-            "type": "array",
-            "description": "Technical protocols used",
-            "items": {
-              "type": "string"
-            }
-          },
-          "serviceInterfaces": {
-            "type": "array",
-            "description": "Interface specifications",
-            "items": {
-              "type": "string"
-            }
-          },
-          "securityControls": {
-            "type": "string",
-            "description": "Security measures applied"
-          },
-          "serviceDependencies": {
-            "type": "array",
-            "description": "Other services required",
-            "items": {
-              "type": "string"
-            }
-          },
-          "serviceAvailability": {
-            "type": "string",
-            "description": "Availability characteristics"
-          },
-          "serviceScalability": {
-            "type": "string",
-            "description": "Scaling capabilities"
-          },
-          "serviceCost": {
-            "type": "string",
-            "description": "Cost structure for this service"
-          },
-          "serviceMonitoring": {
-            "type": "string",
-            "description": "How service health is tracked"
-          }
-        },
-        "required": [
-          "serviceName",
-          "serviceDescription"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/technologyService"
       }
     },
     "infrastructureElements": {
       "type": "array",
       "description": "Infrastructure elements",
       "items": {
-        "type": "object",
-        "properties": {
-          "infrastructureName": {
-            "type": "string",
-            "description": "Name of the infrastructure component"
-          },
-          "infrastructureType": {
-            "type": "string",
-            "description": "Type of infrastructure"
-          },
-          "infrastructureLocation": {
-            "type": "string",
-            "description": "Physical or logical location"
-          },
-          "capacityMetrics": {
-            "type": "string",
-            "description": "Key capacity parameters"
-          },
-          "utilizationMetrics": {
-            "type": "string",
-            "description": "Current utilization levels"
-          },
-          "environmentType": {
-            "type": "string",
-            "description": "Production, development, test, etc."
-          },
-          "infrastructureManager": {
-            "type": "string",
-            "description": "Responsible management entity"
-          },
-          "backupStrategy": {
-            "type": "string",
-            "description": "Data protection approach"
-          },
-          "disasterRecoveryCapability": {
-            "type": "string",
-            "description": "Recovery capabilities"
-          },
-          "technicalSpecifications": {
-            "type": "string",
-            "description": "Detailed specifications"
-          },
-          "maintenanceSchedule": {
-            "type": "string",
-            "description": "Maintenance approach"
-          },
-          "endOfLifeDate": {
-            "type": "string",
-            "description": "Expected retirement date"
-          },
-          "replacementStrategy": {
-            "type": "string",
-            "description": "Approach to replacement"
-          },
-          "infrastructureCost": {
-            "type": "string",
-            "description": "Cost structure"
-          }
-        },
-        "required": [
-          "infrastructureName",
-          "infrastructureType"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/infrastructureElement"
       }
     },
     "standardElements": {
       "type": "array",
       "description": "Technology standards",
       "items": {
-        "type": "object",
-        "properties": {
-          "standardName": {
-            "type": "string",
-            "description": "Name of the technology standard"
-          },
-          "standardType": {
-            "type": "string",
-            "description": "Category of standard"
-          },
-          "standardDescription": {
-            "type": "string",
-            "description": "Detailed description"
-          },
-          "standardVersion": {
-            "type": "string",
-            "description": "Current version"
-          },
-          "standardStatus": {
-            "type": "string",
-            "description": "Status (e.g., emerging, current, deprecated)",
-            "enum": [
-              "emerging",
-              "current",
-              "stable",
-              "declining",
-              "deprecated",
-              "retired"
-            ]
-          },
-          "complianceRequirement": {
-            "type": "string",
-            "description": "Mandatory or recommended",
-            "enum": [
-              "mandatory",
-              "recommended",
-              "optional",
-              "reference-only"
-            ]
-          },
-          "enforcementMechanism": {
-            "type": "string",
-            "description": "How compliance is enforced"
-          },
-          "waiverProcess": {
-            "type": "string",
-            "description": "Process for exceptions"
-          },
-          "standardUsage": {
-            "type": "string",
-            "description": "Where the standard applies"
-          },
-          "standardBenefits": {
-            "type": "string",
-            "description": "Benefits of adoption"
-          },
-          "alternativeStandards": {
-            "type": "string",
-            "description": "Acceptable alternatives"
-          },
-          "governingBody": {
-            "type": "string",
-            "description": "Entity managing the standard"
-          }
-        },
-        "required": [
-          "standardName",
-          "standardDescription"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/standardElement"
       }
     },
     "governanceModel": {
@@ -724,5 +439,304 @@
       }
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "applicationComponent": {
+      "type": "object",
+      "properties": {
+        "applicationName": {
+          "type": "string",
+          "description": "Name of the application"
+        },
+        "applicationDescription": {
+          "type": "string",
+          "description": "Detailed description"
+        },
+        "applicationCategory": {
+          "type": "string",
+          "description": "Classification within portfolio"
+        },
+        "businessCapabilitiesSupported": {
+          "type": "array",
+          "description": "Linked business capabilities",
+          "items": {
+            "type": "string"
+          }
+        },
+        "functionalDescription": {
+          "type": "string",
+          "description": "Key functions provided"
+        },
+        "interfacesProvided": {
+          "type": "array",
+          "description": "Interfaces exposed to other systems",
+          "items": {
+            "type": "string"
+          }
+        },
+        "interfacesConsumed": {
+          "type": "array",
+          "description": "External interfaces consumed",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dataEntitiesManaged": {
+          "type": "array",
+          "description": "Key data handled by the application",
+          "items": {
+            "type": "string"
+          }
+        },
+        "technologyStack": {
+          "type": "string",
+          "description": "Technical foundation"
+        },
+        "deploymentModel": {
+          "type": "string",
+          "description": "How the application is deployed"
+        },
+        "scalability": {
+          "type": "string",
+          "description": "Scaling capabilities and limitations"
+        },
+        "availability": {
+          "type": "string",
+          "description": "Availability requirements and measures"
+        },
+        "developmentApproach": {
+          "type": "string",
+          "description": "Development methodology used"
+        },
+        "lifecycleStage": {
+          "type": "string",
+          "description": "Current stage in application lifecycle"
+        }
+      },
+      "required": [
+        "applicationName",
+        "applicationDescription"
+      ],
+      "additionalProperties": false
+    },
+    "technologyService": {
+      "type": "object",
+      "properties": {
+        "serviceName": {
+          "type": "string",
+          "description": "Name of the technology service"
+        },
+        "serviceDescription": {
+          "type": "string",
+          "description": "Detailed description"
+        },
+        "serviceType": {
+          "type": "string",
+          "description": "Classification of service"
+        },
+        "serviceLevel": {
+          "type": "string",
+          "description": "Performance and reliability parameters"
+        },
+        "serviceConsumers": {
+          "type": "array",
+          "description": "Systems that use this service",
+          "items": {
+            "type": "string"
+          }
+        },
+        "serviceProviders": {
+          "type": "array",
+          "description": "Systems that deliver this service",
+          "items": {
+            "type": "string"
+          }
+        },
+        "serviceProtocol": {
+          "type": "array",
+          "description": "Technical protocols used",
+          "items": {
+            "type": "string"
+          }
+        },
+        "serviceInterfaces": {
+          "type": "array",
+          "description": "Interface specifications",
+          "items": {
+            "type": "string"
+          }
+        },
+        "securityControls": {
+          "type": "string",
+          "description": "Security measures applied"
+        },
+        "serviceDependencies": {
+          "type": "array",
+          "description": "Other services required",
+          "items": {
+            "type": "string"
+          }
+        },
+        "serviceAvailability": {
+          "type": "string",
+          "description": "Availability characteristics"
+        },
+        "serviceScalability": {
+          "type": "string",
+          "description": "Scaling capabilities"
+        },
+        "serviceCost": {
+          "type": "string",
+          "description": "Cost structure for this service"
+        },
+        "serviceMonitoring": {
+          "type": "string",
+          "description": "How service health is tracked"
+        }
+      },
+      "required": [
+        "serviceName",
+        "serviceDescription"
+      ],
+      "additionalProperties": false
+    },
+    "infrastructureElement": {
+      "type": "object",
+      "properties": {
+        "infrastructureName": {
+          "type": "string",
+          "description": "Name of the infrastructure component"
+        },
+        "infrastructureType": {
+          "type": "string",
+          "description": "Type of infrastructure"
+        },
+        "infrastructureLocation": {
+          "type": "string",
+          "description": "Physical or logical location"
+        },
+        "capacityMetrics": {
+          "type": "string",
+          "description": "Key capacity parameters"
+        },
+        "utilizationMetrics": {
+          "type": "string",
+          "description": "Current utilization levels"
+        },
+        "environmentType": {
+          "type": "string",
+          "description": "Production, development, test, etc."
+        },
+        "infrastructureManager": {
+          "type": "string",
+          "description": "Responsible management entity"
+        },
+        "backupStrategy": {
+          "type": "string",
+          "description": "Data protection approach"
+        },
+        "disasterRecoveryCapability": {
+          "type": "string",
+          "description": "Recovery capabilities"
+        },
+        "technicalSpecifications": {
+          "type": "string",
+          "description": "Detailed specifications"
+        },
+        "maintenanceSchedule": {
+          "type": "string",
+          "description": "Maintenance approach"
+        },
+        "endOfLifeDate": {
+          "type": "string",
+          "description": "Expected retirement date"
+        },
+        "replacementStrategy": {
+          "type": "string",
+          "description": "Approach to replacement"
+        },
+        "infrastructureCost": {
+          "type": "string",
+          "description": "Cost structure"
+        }
+      },
+      "required": [
+        "infrastructureName",
+        "infrastructureType"
+      ],
+      "additionalProperties": false
+    },
+    "standardElement": {
+      "type": "object",
+      "properties": {
+        "standardName": {
+          "type": "string",
+          "description": "Name of the technology standard"
+        },
+        "standardType": {
+          "type": "string",
+          "description": "Category of standard"
+        },
+        "standardDescription": {
+          "type": "string",
+          "description": "Detailed description"
+        },
+        "standardVersion": {
+          "type": "string",
+          "description": "Current version"
+        },
+        "standardStatus": {
+          "type": "string",
+          "description": "Status (e.g., emerging, current, deprecated)",
+          "enum": [
+            "emerging",
+            "current",
+            "stable",
+            "declining",
+            "deprecated",
+            "retired"
+          ]
+        },
+        "complianceRequirement": {
+          "type": "string",
+          "description": "Mandatory or recommended",
+          "enum": [
+            "mandatory",
+            "recommended",
+            "optional",
+            "reference-only"
+          ]
+        },
+        "enforcementMechanism": {
+          "type": "string",
+          "description": "How compliance is enforced"
+        },
+        "waiverProcess": {
+          "type": "string",
+          "description": "Process for exceptions"
+        },
+        "standardUsage": {
+          "type": "string",
+          "description": "Where the standard applies"
+        },
+        "standardBenefits": {
+          "type": "string",
+          "description": "Benefits of adoption"
+        },
+        "alternativeStandards": {
+          "type": "string",
+          "description": "Acceptable alternatives"
+        },
+        "governingBody": {
+          "type": "string",
+          "description": "Entity managing the standard"
+        }
+      },
+      "required": [
+        "standardName",
+        "standardDescription"
+      ],
+      "additionalProperties": false
+    }
+  }
 }

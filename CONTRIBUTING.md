@@ -13,7 +13,7 @@ Thank you for your interest in contributing! The Triodian Metamodel is open to c
 ## Contribution guidelines
 
 1. **Fork the repository** and create a new branch for your contribution.
-2. Use valid [JSON Schema Draft-07](http://json-schema.org/draft-07/schema) syntax.
+2. Use valid [JSON Schema Draft-07](http://json-schema.org/draft-07/schema) syntax, and follow the shared structure: the domain's main record at the root, element types under `definitions`, camelCase names, shared concepts from `schemas/common.schema.json`, a required identifier, and `"additionalProperties": false`. Run `python scripts/validate.py` before opening a pull request.
 3. Ensure any new or updated schema is accompanied by an example file or usage description.
 4. Add meaningful commit messages and update the `README.md` if your contribution changes usage.
 5. Submit a pull request and briefly describe your changes in the PR description.
