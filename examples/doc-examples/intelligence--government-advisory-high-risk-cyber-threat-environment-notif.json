@@ -8,25 +8,25 @@
   "sources": [
     {
       "sourceName": "Australian Signals Directorate Cyber Bulletin",
-      "sourceType": "Government intelligence",
-      "reliabilityRating": "High",
-      "collectionMethod": "Third-party acquisition",
+      "sourceType": "governmentIntelligence",
+      "reliabilityRating": "high",
+      "collectionMethod": "thirdPartyAcquisition",
       "cost": "No direct cost",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Joint Industry-Government Threat Sharing Program",
-      "sourceType": "Public data",
-      "reliabilityRating": "High",
-      "collectionMethod": "Manual research",
+      "sourceType": "publicData",
+      "reliabilityRating": "high",
+      "collectionMethod": "manualResearch",
       "cost": "Included in membership fees",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Agency intelligence feed",
+  "intelligenceType": "agencyIntelligenceFeed",
   "frequency": "eventDriven",
   "legalAndEthicalConsiderations": "Restricted internal dissemination per agency guidelines; no redistribution permitted.",
-  "confidentialityLevel": "Restricted",
+  "confidentialityLevel": "restricted",
   "performanceIndicators": [
     "Zero successful external cybersecurity breaches during elevated alert periods",
     "Mean time to threat response reduced by 50%"
@@ -42,7 +42,7 @@
   "strategicAlignment": "Supports business continuity and cyber resilience targets under Enterprise Risk Framework 2025.",
   "applications": [
     {
-      "applicationArea": "Risk management",
+      "applicationArea": "riskManagement",
       "organisationalDecisionsInfluenced": "Crisis simulation drills, temporary service isolation protocols, executive briefings on external threat levels.",
       "intelligenceConsumers": [
         "Board Risk Committee",

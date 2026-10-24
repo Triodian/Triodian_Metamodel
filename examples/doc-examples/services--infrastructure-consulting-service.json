@@ -5,21 +5,21 @@
   "purpose": "Provide specialized expertise to help clients optimize their rail infrastructure investments and ensure regulatory compliance",
   "owner": "Dr. Robert Chen, Chief Technical Consultant",
   "orgUnitTitle": "Engineering Consulting Division",
-  "serviceCategory": "Professional Service",
-  "serviceType": "Consulting",
-  "deliveryModel": "Assisted Service",
-  "serviceLevel": "Premium",
+  "serviceCategory": "professionalService",
+  "serviceType": "consulting",
+  "deliveryModel": "assistedService",
+  "serviceLevel": "premium",
   "serviceLevelAgreements": "Dedicated project manager, 48-hour response time, monthly progress reports",
   "channels": [
-    "In-Person",
-    "Online Portal",
-    "Phone"
+    "inPerson",
+    "onlinePortal",
+    "phone"
   ],
   "targetAudience": [
-    "External Customers",
-    "Government"
+    "externalCustomers",
+    "government"
   ],
-  "businessModel": "Fee for Service",
+  "businessModel": "feeForService",
   "automationLevel": "manual",
   "lifecycle": "operational",
   "pricing": "Hourly consulting rates, project-based pricing, retainer options",
@@ -30,7 +30,7 @@
       "title": "Regulatory Compliance Assessment",
       "description": "Comprehensive review of project compliance with federal and state regulations",
       "purpose": "Identify compliance gaps early so projects gain regulatory approval without delay",
-      "featureType": "Core Feature",
+      "featureType": "coreFeature",
       "priority": "critical",
       "complexity": "highlyComplex"
     },
@@ -38,7 +38,7 @@
       "title": "Digital Twin Modeling",
       "description": "Advanced 3D modeling and simulation for infrastructure optimization",
       "purpose": "Test infrastructure design options virtually before committing capital",
-      "featureType": "Premium Feature",
+      "featureType": "premiumFeature",
       "priority": "high",
       "complexity": "highlyComplex"
     }

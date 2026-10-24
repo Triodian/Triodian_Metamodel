@@ -37,10 +37,10 @@
           "principleName": {
             "type": "string",
             "enum": [
-              "Citizen-Centric Design",
-              "Data-Driven Decision Making",
-              "Continuous Evolution",
-              "Other"
+              "citizenCentricDesign",
+              "dataDrivenDecisionMaking",
+              "continuousEvolution",
+              "other"
             ],
             "description": "Name of the core principle."
           },
@@ -108,17 +108,17 @@
           "componentType": {
             "type": "string",
             "enum": [
-              "Core ERP Module",
-              "Integration Service",
-              "API Gateway",
-              "Workflow Engine",
-              "Event Bus",
-              "Data Warehouse",
-              "Reporting Tool",
-              "Security Proxy",
-              "External System Integration",
-              "Web Portal",
-              "Other"
+              "coreErpModule",
+              "integrationService",
+              "apiGateway",
+              "workflowEngine",
+              "eventBus",
+              "dataWarehouse",
+              "reportingTool",
+              "securityProxy",
+              "externalSystemIntegration",
+              "webPortal",
+              "other"
             ],
             "description": "Categorization of the architectural component (e.g., T1Finance, T1HR, Workflow, APIGateway, EventBus, Security Proxy from the diagram)."
           },

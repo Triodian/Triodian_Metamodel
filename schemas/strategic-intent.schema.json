@@ -24,14 +24,14 @@
     "opportunityType": {
       "type": "string",
       "enum": [
-        "Innovation",
-        "Growth",
-        "Efficiency",
-        "Resilience",
-        "Compliance",
-        "Differentiation",
-        "Sustainability",
-        "Transformation"
+        "innovation",
+        "growth",
+        "efficiency",
+        "resilience",
+        "compliance",
+        "differentiation",
+        "sustainability",
+        "transformation"
       ],
       "description": "Classification of opportunity type"
     },
@@ -42,33 +42,43 @@
     "maturityLevel": {
       "type": "string",
       "enum": [
-        "Conceptual",
-        "Emerging",
-        "Established",
-        "Scaling",
-        "Optimizing"
+        "conceptual",
+        "emerging",
+        "established",
+        "scaling",
+        "optimizing"
       ],
       "description": "Assessment of organizational readiness"
     },
     "potentialValue": {
-      "type": "string",
-      "enum": [
-        "Low",
-        "Medium",
-        "High",
-        "Transformative"
-      ],
-      "description": "Estimated business value or impact"
+      "description": "Estimated business value or impact",
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/ratingLevel"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "transformative"
+          ],
+          "description": "Domain-specific values in addition to the shared list"
+        }
+      ]
     },
     "uncertaintyLevel": {
-      "type": "string",
-      "enum": [
-        "Low",
-        "Medium",
-        "High",
-        "Experimental"
-      ],
-      "description": "Assessment of associated risks and unknowns"
+      "description": "Assessment of associated risks and unknowns",
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/ratingLevel"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "experimental"
+          ],
+          "description": "Domain-specific values in addition to the shared list"
+        }
+      ]
     },
     "responseReferences": {
       "type": "array",

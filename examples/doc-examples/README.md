@@ -26,6 +26,8 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **All domains use the shared vocabulary.** Values for shared concepts such as priority, risk level, frequency, status, maturity and automation are camelCase throughout (`"High"` → `"high"`, `"Semi-Automated"` → `"semiAutomated"`, `"PLANNED"` → `"planned"`). Risk levels use the shared four-point scale (`"High Risk"` → `"high"`). See [`docs/vocabulary-migration.json`](../../docs/vocabulary-migration.json) for the full mapping.
 
+**Every enumerated value is camelCase.** Values in all domains are camelCase, not only shared concepts (`"Core Business"` → `"coreBusiness"`, `"Policy_Change"` → `"policyChange"`, `"spare-parts"` → `"spareParts"`). Regulations use their short names (`"GDPR (General Data Protection Regulation)"` → `"gdpr"`, `"Basel III (Banking)"` → `"basel3"`).
+
 **Every record has an identifier.** Records whose schema now requires an identifier were given one in the form `PREFIX-NNN`, for example `capabilityID: "CAP-001"`, `strategyID: "STR-001"`, `orgUnitID: "OU-001"`. A record that also appears among a schema's own embedded examples has the same identifier in both places.
 
 **Products follow the documented attributes.** The Products schema now defines every documented attribute and product-feature element, so the Products examples are checked in full for the first time. Their values are camelCase (`"Information Product"` → `"informationProduct"`, `"B2B"` → `"b2b"`), and risk categories use the shared list (`"Technical"` → `"technology"`, `"Regulatory"` → `"compliance"`). The Innovation example's dependencies use the shared camelCase values, and the Sustainability example's `"third-party verified"` is now `"third-party-verified"`.

@@ -51,19 +51,19 @@
             "type": "string",
             "description": "Type of the participating organization",
             "enum": [
-              "Internal",
-              "External"
+              "internal",
+              "external"
             ]
           },
           "governanceRole": {
             "type": "string",
             "description": "Role the organization plays in governance",
             "enum": [
-              "Lead",
-              "Participant",
-              "Advisor",
-              "Approver",
-              "Auditor"
+              "lead",
+              "participant",
+              "advisor",
+              "approver",
+              "auditor"
             ]
           },
           "votingWeight": {

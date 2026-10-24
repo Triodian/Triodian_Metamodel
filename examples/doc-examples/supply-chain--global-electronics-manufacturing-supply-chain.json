@@ -29,7 +29,7 @@
     "expansionPlans": "Evaluating new manufacturing hub in Eastern Europe by 2026"
   },
   "locationStrategy": {
-    "strategyType": "proximity-to-supply",
+    "strategyType": "proximityToSupply",
     "strategyDescription": "Primary manufacturing facilities positioned near key semiconductor and component suppliers with regional distribution centers close to major markets",
     "evaluationCriteria": [
       "Supplier ecosystem density",
@@ -105,18 +105,18 @@
     "costReductionTargets": "8% total cost reduction target over next 24 months"
   },
   "flexibilityRating": {
-    "overallRating": "moderate",
+    "overallRating": "medium",
     "volumeFlexibility": "high",
-    "mixFlexibility": "moderate",
+    "mixFlexibility": "medium",
     "newProductFlexibility": "low",
     "improvementFocus": "Enhancing new product introduction capabilities through modular manufacturing processes"
   },
   "resilienceRating": {
-    "overallRating": "moderate",
+    "overallRating": "medium",
     "redundancyLevel": "low",
-    "diversificationLevel": "moderate",
+    "diversificationLevel": "medium",
     "visibilityLevel": "high",
-    "recoveryCapability": "moderate",
+    "recoveryCapability": "medium",
     "resilienceInvestments": [
       "Secondary supplier qualification program",
       "Regional inventory buffers",
@@ -145,7 +145,7 @@
     "riskMonitoringApproach": "Monthly risk review with quarterly simulation and mitigation updates"
   },
   "sustainabilityRating": {
-    "overallRating": "moderate",
+    "overallRating": "medium",
     "carbonFootprint": "187,000 metric tons CO2e annually",
     "wasteReduction": "72% manufacturing waste diverted from landfill",
     "socialResponsibility": "Tier 1 suppliers 100% audited for labor practices",

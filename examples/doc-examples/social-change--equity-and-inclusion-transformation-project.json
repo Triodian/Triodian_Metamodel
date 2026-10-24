@@ -1,10 +1,10 @@
 {
   "name": "Equity and Inclusion Transformation Project",
   "description": "Consultant-facilitated comprehensive organizational change to address systemic inequities",
-  "activityType": "Consulting Project",
-  "changeScope": "Organization-wide",
-  "changeAgentType": "External Consultant",
-  "institutionalContext": "Healthcare System",
+  "activityType": "consultingProject",
+  "changeScope": "organizationWide",
+  "changeAgentType": "externalConsultant",
+  "institutionalContext": "healthcareSystem",
   "specificActions": [
     "Organizational Assessment",
     "Training Programs",
@@ -20,7 +20,7 @@
     "Female employees",
     "LGBTQ+ staff and patients"
   ],
-  "changeMethodology": "Organizational Development",
+  "changeMethodology": "organizationalDevelopment",
   "tactics": [
     {
       "tacticType": "Consulting Intervention",
@@ -33,7 +33,7 @@
       "channel": "Organizational training programs"
     }
   ],
-  "resourceSource": "Consulting Contract",
+  "resourceSource": "consultingContract",
   "timeline": "2-year implementation",
   "successMetrics": [
     "Equity indicators",

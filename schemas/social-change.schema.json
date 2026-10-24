@@ -26,34 +26,34 @@
     "activityType": {
       "type": "string",
       "enum": [
-        "Campaign",
-        "Protest",
-        "Strike",
-        "Picket",
-        "Boycott",
-        "Legal Challenge",
-        "Coalition",
-        "Research Program",
-        "Revolution",
-        "Insurrection",
-        "Uprising",
-        "Organizational Reform",
-        "Policy Initiative",
-        "Community Organizing",
-        "Consulting Project",
-        "Institutional Transformation"
+        "campaign",
+        "protest",
+        "strike",
+        "picket",
+        "boycott",
+        "legalChallenge",
+        "coalition",
+        "researchProgram",
+        "revolution",
+        "insurrection",
+        "uprising",
+        "organizationalReform",
+        "policyInitiative",
+        "communityOrganizing",
+        "consultingProject",
+        "institutionalTransformation"
       ],
       "description": "Type of activity or intervention"
     },
     "activityCategory": {
       "type": "string",
       "enum": [
-        "Grassroots Organizing",
-        "Institutional Action",
-        "Revolutionary Action",
-        "Organizational Change",
-        "Research and Analysis",
-        "Community Development"
+        "grassrootsOrganizing",
+        "institutionalAction",
+        "revolutionaryAction",
+        "organizationalChange",
+        "researchAndAnalysis",
+        "communityDevelopment"
       ],
       "description": "Primary category classification of the activity"
     },
@@ -98,27 +98,27 @@
           "type": {
             "type": "string",
             "enum": [
-              "Labor Unions",
-              "Government Agencies",
-              "Corporate Leadership",
-              "NGOs/Civil Society",
-              "Community Groups",
-              "Professional Organizations",
-              "Academic Institutions",
-              "Media Organizations",
-              "Religious Organizations",
-              "Individual Citizens"
+              "laborUnions",
+              "governmentAgencies",
+              "corporateLeadership",
+              "ngosCivilSociety",
+              "communityGroups",
+              "professionalOrganizations",
+              "academicInstitutions",
+              "mediaOrganizations",
+              "religiousOrganizations",
+              "individualCitizens"
             ],
             "description": "Type of stakeholder"
           },
           "influenceLevel": {
             "type": "string",
             "enum": [
-              "Low",
-              "Low-Medium",
-              "Medium",
-              "Medium-High",
-              "High"
+              "low",
+              "lowMedium",
+              "medium",
+              "mediumHigh",
+              "high"
             ],
             "description": "Level of influence the stakeholder has"
           },
@@ -169,11 +169,11 @@
           "violenceLevel": {
             "type": "string",
             "enum": [
-              "Non-violent",
-              "Property Disruption",
-              "Minimal Violence",
-              "Armed Resistance",
-              "Civil War"
+              "nonViolent",
+              "propertyDisruption",
+              "minimalViolence",
+              "armedResistance",
+              "civilWar"
             ],
             "description": "Level of violence involved in the tactic"
           }
@@ -215,13 +215,12 @@
             "description": "Name of the capability"
           },
           "levelOfUse": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High"
-            ],
-            "description": "Level of capability utilization"
+            "description": "Level of capability utilization",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/simpleLevel"
+              }
+            ]
           }
         },
         "additionalProperties": false
@@ -245,10 +244,10 @@
         "measurementType": {
           "type": "string",
           "enum": [
-            "Output Metrics",
-            "Outcome Metrics",
-            "Impact Metrics",
-            "Process Metrics"
+            "outputMetrics",
+            "outcomeMetrics",
+            "impactMetrics",
+            "processMetrics"
           ],
           "description": "Category of measurement"
         },
@@ -288,31 +287,24 @@
         ],
         "properties": {
           "riskType": {
-            "type": "string",
-            "enum": [
-              "Political",
-              "Legal",
-              "Economic",
-              "Security",
-              "Organizational",
-              "Reputational",
-              "Operational"
-            ],
-            "description": "Category of risk"
+            "description": "Category of risk",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/riskCategory"
+              }
+            ]
           },
           "description": {
             "type": "string",
             "description": "Description of the risk"
           },
           "severityLevel": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High",
-              "Critical"
-            ],
-            "description": "Severity level of the risk"
+            "description": "Severity level of the risk",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/severity"
+              }
+            ]
           },
           "mitigationStrategy": {
             "type": "string",
@@ -370,81 +362,81 @@
     "changeScope": {
       "type": "string",
       "enum": [
-        "Department-level",
-        "Organization-wide",
-        "Multi-organizational",
-        "Sector-wide",
-        "Local",
-        "Regional",
-        "National",
-        "International"
+        "departmentLevel",
+        "organizationWide",
+        "multiOrganizational",
+        "sectorWide",
+        "local",
+        "regional",
+        "national",
+        "international"
       ],
       "description": "Level and breadth of change initiative"
     },
     "changeAgentType": {
       "type": "string",
       "enum": [
-        "Worker Committee",
-        "HR Leadership",
-        "External Consultant",
-        "Government Agency",
-        "NGO Partnership",
-        "Community Coalition",
-        "Revolutionary Council"
+        "workerCommittee",
+        "hrLeadership",
+        "externalConsultant",
+        "governmentAgency",
+        "ngoPartnership",
+        "communityCoalition",
+        "revolutionaryCouncil"
       ],
       "description": "Who is driving the change initiative"
     },
     "institutionalContext": {
       "type": "string",
       "enum": [
-        "Private Corporation",
-        "Government Agency",
-        "Non-profit Organization",
-        "Educational Institution",
-        "Healthcare System",
-        "Religious Institution",
-        "Community Organization"
+        "privateCorporation",
+        "governmentAgency",
+        "nonProfitOrganization",
+        "educationalInstitution",
+        "healthcareSystem",
+        "religiousInstitution",
+        "communityOrganization"
       ],
       "description": "Type of organization or institution"
     },
     "changeMethodology": {
       "type": "string",
       "enum": [
-        "Community Organizing",
-        "Policy Advocacy",
-        "Organizational Development",
-        "Direct Action",
-        "Legal Strategy",
-        "Research and Education",
-        "Participatory Action Research",
-        "Policy Design Thinking"
+        "communityOrganizing",
+        "policyAdvocacy",
+        "organizationalDevelopment",
+        "directAction",
+        "legalStrategy",
+        "researchAndEducation",
+        "participatoryActionResearch",
+        "policyDesignThinking"
       ],
       "description": "Approach or framework used for change"
     },
     "resourceSource": {
       "type": "string",
       "enum": [
-        "Internal Budget",
-        "Government Grant",
-        "Foundation Funding",
-        "Consulting Contract",
-        "Volunteer Resources",
-        "Membership Fees",
-        "Donations",
-        "Coalition Resources"
+        "internalBudget",
+        "governmentGrant",
+        "foundationFunding",
+        "consultingContract",
+        "volunteerResources",
+        "membershipFees",
+        "donations",
+        "coalitionResources"
       ],
       "description": "Funding and resource origin"
     },
     "timeline": {
       "type": "string",
       "enum": [
-        "Event-based",
-        "3-month pilot",
-        "6-month project",
-        "1-year implementation",
-        "Multi-year transformation",
-        "Ongoing program",
-        "Permanent initiative"
+        "eventBased",
+        "3MonthPilot",
+        "6MonthProject",
+        "1YearImplementation",
+        "multiYearTransformation",
+        "ongoingProgram",
+        "permanentInitiative"
       ],
       "description": "Expected duration of change initiative"
     },
@@ -462,43 +454,43 @@
     "revolutionType": {
       "type": "string",
       "enum": [
-        "Political Revolution",
-        "Social Revolution",
-        "Economic Revolution",
-        "Cultural Revolution"
+        "politicalRevolution",
+        "socialRevolution",
+        "economicRevolution",
+        "culturalRevolution"
       ],
       "description": "Classification of revolutionary approach (for revolutionary activities)"
     },
     "violenceClassification": {
       "type": "string",
       "enum": [
-        "Non-violent",
-        "Property Disruption",
-        "Minimal Violence",
-        "Armed Resistance",
-        "Civil War"
+        "nonViolent",
+        "propertyDisruption",
+        "minimalViolence",
+        "armedResistance",
+        "civilWar"
       ],
       "description": "Degree of violence employed (for revolutionary activities)"
     },
     "revolutionaryScope": {
       "type": "string",
       "enum": [
-        "Local Uprising",
-        "Regional Revolution",
-        "National Revolution",
-        "International Revolution"
+        "localUprising",
+        "regionalRevolution",
+        "nationalRevolution",
+        "internationalRevolution"
       ],
       "description": "Geographic and institutional reach (for revolutionary activities)"
     },
     "legitimacyBasis": {
       "type": "string",
       "enum": [
-        "Tyrannical Oppression",
-        "Colonial Liberation",
-        "Democratic Restoration",
-        "Economic Justice",
-        "Self-Determination",
-        "Human Rights Protection"
+        "tyrannicalOppression",
+        "colonialLiberation",
+        "democraticRestoration",
+        "economicJustice",
+        "selfDetermination",
+        "humanRightsProtection"
       ],
       "description": "Legal and moral justification for revolution (for revolutionary activities)"
     },
@@ -514,21 +506,21 @@
           "leadershipType": {
             "type": "string",
             "enum": [
-              "Decentralized",
-              "Hierarchical",
-              "Coalition-based",
-              "Emergent"
+              "decentralized",
+              "hierarchical",
+              "coalitionBased",
+              "emergent"
             ],
             "description": "Structure of revolutionary leadership"
           },
           "organizationType": {
             "type": "string",
             "enum": [
-              "Popular Movement",
-              "Liberation Army",
-              "Underground Network",
-              "Political Coalition",
-              "Worker Council"
+              "popularMovement",
+              "liberationArmy",
+              "undergroundNetwork",
+              "politicalCoalition",
+              "workerCouncil"
             ],
             "description": "Type of revolutionary organization"
           },
@@ -547,12 +539,12 @@
     "targetRegime": {
       "type": "string",
       "enum": [
-        "Authoritarian Government",
-        "Colonial Administration",
-        "Oligarchy",
-        "Military Dictatorship",
-        "Corrupt Democracy",
-        "Corporate Oligarchy"
+        "authoritarianGovernment",
+        "colonialAdministration",
+        "oligarchy",
+        "militaryDictatorship",
+        "corruptDemocracy",
+        "corporateOligarchy"
       ],
       "description": "Specific government or system being challenged (for revolutionary activities)"
     },
@@ -561,15 +553,15 @@
       "items": {
         "type": "string",
         "enum": [
-          "Pre-Revolutionary Conditions",
-          "Grievance Accumulation",
-          "Revolutionary Mobilization",
-          "Active Revolution",
-          "Confrontation",
-          "System Overthrow",
-          "Revolutionary Consolidation",
-          "Reconstruction",
-          "Institution Building"
+          "preRevolutionaryConditions",
+          "grievanceAccumulation",
+          "revolutionaryMobilization",
+          "activeRevolution",
+          "confrontation",
+          "systemOverthrow",
+          "revolutionaryConsolidation",
+          "reconstruction",
+          "institutionBuilding"
         ]
       },
       "description": "Progression through revolutionary stages (for revolutionary activities)"
@@ -586,11 +578,11 @@
           "supportType": {
             "type": "string",
             "enum": [
-              "Diplomatic",
-              "Economic",
-              "Military",
-              "Humanitarian",
-              "Media"
+              "diplomatic",
+              "economic",
+              "military",
+              "humanitarian",
+              "media"
             ],
             "description": "Type of international support"
           },
@@ -626,23 +618,22 @@
           "forceType": {
             "type": "string",
             "enum": [
-              "State Security",
-              "Military",
-              "Paramilitary",
-              "Foreign Intervention",
-              "Economic Elite",
-              "Political Opposition"
+              "stateSecurity",
+              "military",
+              "paramilitary",
+              "foreignIntervention",
+              "economicElite",
+              "politicalOpposition"
             ],
             "description": "Type of counter-revolutionary force"
           },
           "strength": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High"
-            ],
-            "description": "Strength of the counter-revolutionary force"
+            "description": "Strength of the counter-revolutionary force",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/simpleLevel"
+              }
+            ]
           },
           "tactics": {
             "type": "array",
@@ -836,9 +827,9 @@
               "impactType": {
                 "type": "string",
                 "enum": [
-                  "Disrupted",
-                  "Supported",
-                  "Transformed"
+                  "disrupted",
+                  "supported",
+                  "transformed"
                 ],
                 "description": "Type of impact on the value stream"
               }
@@ -863,10 +854,10 @@
               "relationshipType": {
                 "type": "string",
                 "enum": [
-                  "Target",
-                  "Ally",
-                  "Neutral",
-                  "Opposition"
+                  "target",
+                  "ally",
+                  "neutral",
+                  "opposition"
                 ],
                 "description": "Relationship type with the stakeholder"
               }
@@ -974,10 +965,10 @@
         "confidentialityLevel": {
           "type": "string",
           "enum": [
-            "Public",
-            "Internal",
-            "Confidential",
-            "Restricted"
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
           ],
           "description": "Level of confidentiality for this record"
         }

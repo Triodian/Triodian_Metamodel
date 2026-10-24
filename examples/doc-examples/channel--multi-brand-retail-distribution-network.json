@@ -23,7 +23,7 @@
       "Japan",
       "Australia"
     ],
-    "coverageType": "multi-tiered",
+    "coverageType": "multiTiered",
     "expansionPlans": "Targeted expansion in emerging Southeast Asian markets planned for 2026"
   },
   "customerSegmentsServed": [
@@ -108,14 +108,14 @@
   "channelPartners": [
     {
       "partnerName": "Premium Electronics Retailers Group",
-      "partnerType": "retail chain",
+      "partnerType": "retailChain",
       "relationshipStrength": "high",
       "coverageContribution": "1,200 locations across major markets",
       "strategicImportance": "critical for mainstream market presence"
     },
     {
       "partnerName": "TechDirect Marketplace",
-      "partnerType": "online marketplace",
+      "partnerType": "onlineMarketplace",
       "relationshipStrength": "medium",
       "coverageContribution": "Access to 35M monthly active users",
       "strategicImportance": "growing channel for digital-first customers"

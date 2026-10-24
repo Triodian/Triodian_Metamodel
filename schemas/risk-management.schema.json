@@ -24,22 +24,18 @@
       "description": "A detailed explanation of the risk"
     },
     "riskCategory": {
-      "type": "string",
       "description": "Classification of risk type",
-      "enum": [
-        "strategic",
-        "operational",
-        "financial",
-        "compliance",
-        "reputational",
-        "technology",
-        "legal",
-        "environmental",
-        "market",
-        "project",
-        "people",
-        "supply-chain",
-        "other"
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/riskCategory"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "project"
+          ],
+          "description": "Domain-specific values in addition to the shared list"
+        }
       ]
     },
     "orgUnitTitle": {
@@ -124,16 +120,18 @@
             "type": "object",
             "properties": {
               "impactType": {
-                "type": "string",
                 "description": "Type of non-financial impact",
-                "enum": [
-                  "reputational",
-                  "operational",
-                  "regulatory",
-                  "safety",
-                  "environmental",
-                  "strategic",
-                  "other"
+                "anyOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/riskCategory"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "safety"
+                    ],
+                    "description": "Domain-specific values in addition to the shared list"
+                  }
                 ]
               },
               "description": {
@@ -190,11 +188,11 @@
           "type": "string",
           "description": "Organizational tolerance for this risk",
           "enum": [
-            "zero-tolerance",
+            "zeroTolerance",
             "low",
             "moderate",
             "high",
-            "case-by-case"
+            "caseByCase"
           ]
         },
         "thresholds": {
@@ -418,13 +416,18 @@
                 "description": "Description of impact on objective"
               },
               "impactSeverity": {
-                "type": "string",
                 "description": "Severity of impact",
-                "enum": [
-                  "minor",
-                  "moderate",
-                  "significant",
-                  "critical"
+                "anyOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/impactMagnitude"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "critical"
+                    ],
+                    "description": "Domain-specific values in addition to the shared list"
+                  }
                 ]
               }
             },
@@ -611,7 +614,7 @@
               "assessment",
               "report",
               "plan",
-              "control-description",
+              "controlDescription",
               "other"
             ]
           },
@@ -643,13 +646,13 @@
             "description": "Methodology used for assessment",
             "enum": [
               "qualitative",
-              "semi-quantitative",
+              "semiQuantitative",
               "quantitative",
-              "scenario-based",
+              "scenarioBased",
               "workshop",
-              "expert-judgment",
-              "historical-analysis",
-              "model-based",
+              "expertJudgment",
+              "historicalAnalysis",
+              "modelBased",
               "other"
             ]
           },
@@ -722,9 +725,9 @@
                   "description": "Nature of participation",
                   "enum": [
                     "facilitator",
-                    "subject-matter-expert",
+                    "subjectMatterExpert",
                     "stakeholder",
-                    "risk-owner",
+                    "riskOwner",
                     "reviewer",
                     "approver",
                     "other"
@@ -767,25 +770,19 @@
                   }
                 },
                 "inherentRiskLevel": {
-                  "type": "string",
                   "description": "Risk level without controls",
-                  "enum": [
-                    "very-low",
-                    "low",
-                    "moderate",
-                    "high",
-                    "very-high"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/riskLevel"
+                    }
                   ]
                 },
                 "residualRiskLevel": {
-                  "type": "string",
                   "description": "Risk level with controls",
-                  "enum": [
-                    "very-low",
-                    "low",
-                    "moderate",
-                    "high",
-                    "very-high"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/riskLevel"
+                    }
                   ]
                 }
               },
@@ -810,23 +807,27 @@
                   "type": "string",
                   "description": "Type of finding",
                   "enum": [
-                    "risk-identification",
-                    "control-gap",
-                    "improvement-opportunity",
-                    "positive-observation",
-                    "compliance-issue",
+                    "riskIdentification",
+                    "controlGap",
+                    "improvementOpportunity",
+                    "positiveObservation",
+                    "complianceIssue",
                     "other"
                   ]
                 },
                 "findingSeverity": {
-                  "type": "string",
                   "description": "Severity of finding",
-                  "enum": [
-                    "informational",
-                    "low",
-                    "medium",
-                    "high",
-                    "critical"
+                  "anyOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/severity"
+                    },
+                    {
+                      "type": "string",
+                      "enum": [
+                        "informational"
+                      ],
+                      "description": "Domain-specific values in addition to the shared list"
+                    }
                   ]
                 }
               },
@@ -848,23 +849,19 @@
                   "description": "Detailed description"
                 },
                 "recommendationPriority": {
-                  "type": "string",
                   "description": "Implementation priority",
-                  "enum": [
-                    "low",
-                    "medium",
-                    "high",
-                    "critical"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/priority"
+                    }
                   ]
                 },
                 "timeframe": {
-                  "type": "string",
                   "description": "Suggested timeframe",
-                  "enum": [
-                    "immediate",
-                    "short-term",
-                    "medium-term",
-                    "long-term"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/timeHorizon"
+                    }
                   ]
                 }
               },
@@ -947,25 +944,19 @@
             "description": "How well control works",
             "properties": {
               "designEffectiveness": {
-                "type": "string",
                 "description": "How well control is designed",
-                "enum": [
-                  "ineffective",
-                  "partially-effective",
-                  "effective",
-                  "highly-effective",
-                  "not-assessed"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/effectiveness"
+                  }
                 ]
               },
               "operationalEffectiveness": {
-                "type": "string",
                 "description": "How well control operates",
-                "enum": [
-                  "ineffective",
-                  "partially-effective",
-                  "effective",
-                  "highly-effective",
-                  "not-assessed"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/effectiveness"
+                  }
                 ]
               }
             },
@@ -983,23 +974,17 @@
                   "observation",
                   "inquiry",
                   "analysis",
-                  "re-performance",
-                  "automated-monitoring",
+                  "rePerformance",
+                  "automatedMonitoring",
                   "other"
                 ]
               },
               "testingFrequency": {
-                "type": "string",
                 "description": "How often testing occurs",
-                "enum": [
-                  "continuous",
-                  "daily",
-                  "weekly",
-                  "monthly",
-                  "quarterly",
-                  "semi-annually",
-                  "annually",
-                  "ad-hoc"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/frequency"
+                  }
                 ]
               },
               "lastTestResult": {
@@ -1008,8 +993,8 @@
                 "enum": [
                   "passed",
                   "failed",
-                  "passed-with-exceptions",
-                  "not-tested"
+                  "passedWithExceptions",
+                  "notTested"
                 ]
               }
             },
@@ -1052,22 +1037,20 @@
             "description": "Detailed explanation of response approach"
           },
           "responsePriority": {
-            "type": "string",
             "description": "Priority level",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "critical"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/priority"
+              }
             ]
           },
           "responseStatus": {
             "type": "string",
             "description": "Current implementation status",
             "enum": [
-              "not-started",
+              "notStarted",
               "planning",
-              "in-progress",
+              "inProgress",
               "implemented",
               "completed",
               "canceled",
@@ -1127,10 +1110,10 @@
                 "description": "Overall success assessment",
                 "enum": [
                   "successful",
-                  "partially-successful",
+                  "partiallySuccessful",
                   "unsuccessful",
-                  "too-early-to-determine",
-                  "not-measured"
+                  "tooEarlyToDetermine",
+                  "notMeasured"
                 ]
               }
             },
@@ -1157,17 +1140,18 @@
           "description": "Frequency of monitoring activities",
           "properties": {
             "reviewCycle": {
-              "type": "string",
               "description": "How often monitoring occurs",
-              "enum": [
-                "real-time",
-                "daily",
-                "weekly",
-                "bi-weekly",
-                "monthly",
-                "quarterly",
-                "annually",
-                "event-driven"
+              "anyOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                },
+                {
+                  "type": "string",
+                  "enum": [
+                    "biWeekly"
+                  ],
+                  "description": "Domain-specific values in addition to the shared list"
+                }
               ]
             },
             "justification": {

@@ -1,12 +1,12 @@
 {
   "name": "Velvet Revolution 2025",
   "description": "Non-violent overthrow of authoritarian regime through mass civil disobedience",
-  "activityType": "Revolution",
-  "revolutionType": "Political Revolution",
-  "violenceClassification": "Non-violent",
-  "revolutionaryScope": "National Revolution",
-  "legitimacyBasis": "Democratic Restoration",
-  "targetRegime": "Authoritarian Government",
+  "activityType": "revolution",
+  "revolutionType": "politicalRevolution",
+  "violenceClassification": "nonViolent",
+  "revolutionaryScope": "nationalRevolution",
+  "legitimacyBasis": "democraticRestoration",
+  "targetRegime": "authoritarianGovernment",
   "leadingOrganizations": [
     "Democratic Coalition",
     "Civil Rights Union",
@@ -20,8 +20,8 @@
   ],
   "revolutionaryLeadership": [
     {
-      "leadershipType": "Decentralized",
-      "organizationType": "Popular Movement",
+      "leadershipType": "decentralized",
+      "organizationType": "popularMovement",
       "keyFigures": [
         "Coalition Council",
         "Student Leaders"
@@ -32,19 +32,19 @@
     {
       "tacticType": "Mass Demonstration",
       "description": "Coordinated peaceful protests in major cities",
-      "violenceLevel": "Non-violent",
+      "violenceLevel": "nonViolent",
       "channel": "Public squares and government buildings"
     },
     {
       "tacticType": "Civil Disobedience",
       "description": "Systematic non-compliance with authoritarian laws",
-      "violenceLevel": "Non-violent",
+      "violenceLevel": "nonViolent",
       "channel": "Public and private institutions"
     },
     {
       "tacticType": "General Strike",
       "description": "Economy-wide work stoppage",
-      "violenceLevel": "Non-violent",
+      "violenceLevel": "nonViolent",
       "channel": "Economic infrastructure"
     }
   ],
@@ -56,19 +56,19 @@
     "Parallel government formation"
   ],
   "revolutionaryPhases": [
-    "Grievance Accumulation",
+    "grievanceAccumulation",
     "Mobilization",
-    "Active Revolution",
+    "activeRevolution",
     "Consolidation"
   ],
   "internationalSupport": [
     {
-      "supportType": "Diplomatic",
+      "supportType": "diplomatic",
       "source": "Democratic nations",
       "level": "high"
     },
     {
-      "supportType": "Economic",
+      "supportType": "economic",
       "source": "International NGOs",
       "level": "medium"
     }
@@ -76,8 +76,8 @@
   "historicalPrecedent": "Velvet Revolution 1989",
   "counterRevolutionaryForces": [
     {
-      "forceType": "State Security",
-      "strength": "Medium",
+      "forceType": "stateSecurity",
+      "strength": "medium",
       "tactics": [
         "Surveillance",
         "Intimidation",

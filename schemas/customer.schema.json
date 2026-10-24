@@ -29,8 +29,8 @@
       "enum": [
         "demographic",
         "behavioral",
-        "value-based",
-        "needs-based",
+        "valueBased",
+        "needsBased",
         "lifecycle",
         "industry",
         "geographic",
@@ -95,7 +95,7 @@
         "growth",
         "retention",
         "advocacy",
-        "win-back",
+        "winBack",
         "other"
       ]
     },

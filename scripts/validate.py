@@ -9,7 +9,7 @@ Checks, in order:
      defines properties rejects fields it does not define (additionalProperties: false).
   4. Every schema has the same structure: JSON Schema draft-07; the root of each domain schema
      is the domain's main record (no wrapper properties, no oneOf); element types are named
-     under "definitions"; definition and property names are camelCase; passive domains
+     under "definitions"; definition and property names, and enumerated values, are camelCase; passive domains
      (as listed in cross-domain-relationship.schema.json) do not initiate relationships.
      Each file is kebab-case and ends ".schema.json", its $id is its location under
      https://triodian.com/schemas/, it has a title, and every property has a description.
@@ -57,6 +57,7 @@ VALIDATORS = {
 }
 NON_STANDARD = {"attributes", "elements", "nullable"}
 CAMEL = re.compile(r"[a-z][a-zA-Z0-9]*")
+CAMEL_VALUE = re.compile(r"[a-z0-9][a-zA-Z0-9]*")  # enumerated values may start with a digit, e.g. 24x7
 # Schema file for each domain value that can appear in a relationship.
 DOMAIN_FILES = {"information": "information.schema.json", "performance": "performance.schema.json",
                 "product": "products.schema.json", "service": "services.schema.json"}
@@ -176,6 +177,11 @@ def check_structure(docs: dict[Path, dict]) -> None:
             if "examples" in path:
                 continue
             here = "/" + "/".join(map(str, path))
+            for v in node.get("enum", []) if isinstance(node.get("enum"), list) else []:
+                if isinstance(v, str) and not CAMEL_VALUE.fullmatch(v):
+                    fail(f"{rel(f)}: {here}: value {v!r} is not camelCase")
+            if isinstance(node.get("const"), str) and not CAMEL_VALUE.fullmatch(node["const"]):
+                fail(f"{rel(f)}: {here}: value {node['const']!r} is not camelCase")
             if "$defs" in node and not (path and path[-1] == "properties"):
                 fail(f"{rel(f)}: {here}: use \"definitions\", not \"$defs\"")
             if path and path[-1] == "properties" and isinstance(node, dict):

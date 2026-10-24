@@ -28,12 +28,12 @@
     "targetCoverageLevel": {
       "type": "string",
       "enum": [
-        "None",
-        "Minimal",
-        "Documented",
-        "Analysed",
-        "Governed",
-        "Optimised"
+        "none",
+        "minimal",
+        "documented",
+        "analysed",
+        "governed",
+        "optimised"
       ],
       "description": "The desired level of coverage for the specified domain."
     },

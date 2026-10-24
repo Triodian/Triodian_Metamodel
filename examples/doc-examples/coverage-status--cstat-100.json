@@ -3,8 +3,8 @@
   "orgUnit": "OU-Finance",
   "domain": "Capability",
   "coverageScore": 0.67,
-  "coverageLevelAchieved": "Documented",
-  "expectedCoverageLevel": "Analysed",
+  "coverageLevelAchieved": "documented",
+  "expectedCoverageLevel": "analysed",
   "coverageGap": 1,
   "lastEvaluatedAt": "2025-07-02T09:00:00Z",
   "notes": "Good initial coverage, but process-level granularity missing"
