@@ -131,29 +131,10 @@
     },
     "affectedDomains": {
       "type": "array",
+      "description": "Business architecture domains impacted by this response",
       "items": {
-        "type": "string",
-        "enum": [
-          "Strategy",
-          "Capabilities",
-          "Initiatives",
-          "Policy",
-          "Performance",
-          "Information",
-          "Value Stream",
-          "Customer",
-          "Market",
-          "Finance",
-          "Risk Management",
-          "Supply Chain",
-          "Innovation",
-          "Sustainability",
-          "People",
-          "Technology",
-          "Channel"
-        ]
-      },
-      "description": "Business architecture domains impacted by this response"
+        "$ref": "common.schema.json#/definitions/domainType"
+      }
     },
     "impactedUnits": {
       "type": "array",
@@ -374,13 +355,12 @@
           "description": "Description of the competitive advantage"
         },
         "sustainability": {
-          "type": "string",
-          "enum": [
-            "short-term",
-            "medium-term",
-            "long-term"
-          ],
-          "description": "Expected duration of advantage"
+          "description": "Expected duration of advantage",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/timeHorizon"
+            }
+          ]
         }
       },
       "description": "Competitive advantage created or enhanced (Market domain)",

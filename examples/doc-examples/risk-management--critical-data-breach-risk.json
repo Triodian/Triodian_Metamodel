@@ -27,7 +27,7 @@
         "severity": "high"
       },
       {
-        "impactType": "regulatory",
+        "impactType": "compliance",
         "description": "Substantial fines under data protection regulations",
         "severity": "high"
       },

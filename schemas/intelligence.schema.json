@@ -149,13 +149,18 @@
           ]
         },
         "reliabilityRating": {
-          "type": "string",
           "description": "How reliable the source is",
-          "enum": [
-            "High",
-            "Medium",
-            "Low",
-            "Unverified"
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "unverified"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
           ]
         },
         "collectionMethod": {

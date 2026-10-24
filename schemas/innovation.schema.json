@@ -242,14 +242,11 @@
       "description": "Risk characteristics of the innovation",
       "properties": {
         "overallRiskLevel": {
-          "type": "string",
           "description": "Overall risk assessment",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskLevel"
+            }
           ]
         },
         "keyRiskFactors": {

@@ -215,13 +215,12 @@
             "description": "Name of the capability"
           },
           "levelOfUse": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High"
-            ],
-            "description": "Level of capability utilization"
+            "description": "Level of capability utilization",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/simpleLevel"
+              }
+            ]
           }
         },
         "additionalProperties": false
@@ -288,31 +287,24 @@
         ],
         "properties": {
           "riskType": {
-            "type": "string",
-            "enum": [
-              "Political",
-              "Legal",
-              "Economic",
-              "Security",
-              "Organizational",
-              "Reputational",
-              "Operational"
-            ],
-            "description": "Category of risk"
+            "description": "Category of risk",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/riskCategory"
+              }
+            ]
           },
           "description": {
             "type": "string",
             "description": "Description of the risk"
           },
           "severityLevel": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High",
-              "Critical"
-            ],
-            "description": "Severity level of the risk"
+            "description": "Severity level of the risk",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/severity"
+              }
+            ]
           },
           "mitigationStrategy": {
             "type": "string",
@@ -636,13 +628,12 @@
             "description": "Type of counter-revolutionary force"
           },
           "strength": {
-            "type": "string",
-            "enum": [
-              "Low",
-              "Medium",
-              "High"
-            ],
-            "description": "Strength of the counter-revolutionary force"
+            "description": "Strength of the counter-revolutionary force",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/simpleLevel"
+              }
+            ]
           },
           "tactics": {
             "type": "array",

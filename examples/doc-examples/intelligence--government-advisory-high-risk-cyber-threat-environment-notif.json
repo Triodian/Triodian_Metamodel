@@ -9,7 +9,7 @@
     {
       "sourceName": "Australian Signals Directorate Cyber Bulletin",
       "sourceType": "Government intelligence",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Third-party acquisition",
       "cost": "No direct cost",
       "complianceStatus": "compliant"
@@ -17,7 +17,7 @@
     {
       "sourceName": "Joint Industry-Government Threat Sharing Program",
       "sourceType": "Public data",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Manual research",
       "cost": "Included in membership fees",
       "complianceStatus": "compliant"

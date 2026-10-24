@@ -9,7 +9,7 @@
   "capabilityType": "Innovation",
   "businessDomain": "Strategy & Planning",
   "maturityLevel": "defined",
-  "targetMaturityLevel": "Level 4 - Managed",
+  "targetMaturityLevel": "managed",
   "investmentCategory": "CAPEX",
   "criticality": "high",
   "scalability": "Moderately Scalable"

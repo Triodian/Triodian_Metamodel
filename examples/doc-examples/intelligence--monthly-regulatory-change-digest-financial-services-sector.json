@@ -9,7 +9,7 @@
     {
       "sourceName": "Official Government Gazettes",
       "sourceType": "Public data",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Manual research",
       "cost": "No cost",
       "complianceStatus": "compliant"
@@ -17,7 +17,7 @@
     {
       "sourceName": "Thomson Reuters Regulatory Feed",
       "sourceType": "Paid research services",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Third-party acquisition",
       "cost": "$12,000/year",
       "complianceStatus": "compliant"
@@ -25,7 +25,7 @@
     {
       "sourceName": "Industry Association Updates",
       "sourceType": "Informal networks",
-      "reliabilityRating": "Medium",
+      "reliabilityRating": "medium",
       "collectionMethod": "Manual research",
       "cost": "Included in membership fees",
       "complianceStatus": "compliant"

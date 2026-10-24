@@ -9,7 +9,7 @@
     {
       "sourceName": "Company Financial Filings",
       "sourceType": "Regulatory filings",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Manual research",
       "cost": "No additional cost",
       "complianceStatus": "compliant"
@@ -17,7 +17,7 @@
     {
       "sourceName": "Venture Capital Portfolio Tracker",
       "sourceType": "Third-party subscription",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Third-party acquisition",
       "cost": "$22,000/year",
       "complianceStatus": "compliant"
@@ -25,7 +25,7 @@
     {
       "sourceName": "Industry Insider Forums",
       "sourceType": "Informal networks",
-      "reliabilityRating": "Medium",
+      "reliabilityRating": "medium",
       "collectionMethod": "Manual research",
       "cost": "Low, <$5,000/year",
       "complianceStatus": "compliant"

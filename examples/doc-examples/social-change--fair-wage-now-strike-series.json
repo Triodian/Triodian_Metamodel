@@ -52,7 +52,7 @@
     {
       "capabilityId": "cap-collective-bargaining",
       "name": "Collective Bargaining",
-      "levelOfUse": "High"
+      "levelOfUse": "high"
     }
   ],
   "valueStreams": [

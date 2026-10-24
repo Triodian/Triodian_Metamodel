@@ -70,13 +70,11 @@
       "description": "Significance to stakeholders and business",
       "properties": {
         "materialityLevel": {
-          "type": "string",
           "description": "Level of materiality",
-          "enum": [
-            "low",
-            "medium",
-            "high",
-            "critical"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            }
           ]
         },
         "assessmentMethod": {
@@ -246,13 +244,11 @@
       "description": "Level of stakeholder concern",
       "properties": {
         "interestLevel": {
-          "type": "string",
           "description": "Level of stakeholder interest",
-          "enum": [
-            "low",
-            "medium",
-            "high",
-            "critical"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            }
           ]
         },
         "keyStakeholders": {
@@ -602,13 +598,11 @@
               "description": "How often measurement occurs"
             },
             "dataQuality": {
-              "type": "string",
               "description": "Quality of measurement data",
-              "enum": [
-                "low",
-                "medium",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "verificationStatus": {
@@ -833,13 +827,18 @@
                     "description": "Regulatory jurisdiction"
                   },
                   "expectedImpact": {
-                    "type": "string",
                     "description": "Expected impact level",
-                    "enum": [
-                      "low",
-                      "moderate",
-                      "significant",
-                      "high"
+                    "anyOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/ratingLevel"
+                      },
+                      {
+                        "type": "string",
+                        "enum": [
+                          "significant"
+                        ],
+                        "description": "Domain-specific values in addition to the shared list"
+                      }
                     ]
                   },
                   "preparednessLevel": {
@@ -1212,13 +1211,18 @@
                     "description": "Current value"
                   },
                   "performanceTrend": {
-                    "type": "string",
                     "description": "Performance trend",
-                    "enum": [
-                      "improving",
-                      "stable",
-                      "declining",
-                      "mixed"
+                    "anyOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/performanceTrend"
+                      },
+                      {
+                        "type": "string",
+                        "enum": [
+                          "mixed"
+                        ],
+                        "description": "Domain-specific values in addition to the shared list"
+                      }
                     ]
                   }
                 },
@@ -1295,13 +1299,18 @@
                     "description": "Timeframe for phase"
                   },
                   "completionStatus": {
-                    "type": "string",
                     "description": "Completion status",
-                    "enum": [
-                      "not started",
-                      "in progress",
-                      "completed",
-                      "on hold"
+                    "anyOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/workStatus"
+                      },
+                      {
+                        "type": "string",
+                        "enum": [
+                          "notStarted"
+                        ],
+                        "description": "Domain-specific values in addition to the shared list"
+                      }
                     ]
                   }
                 },

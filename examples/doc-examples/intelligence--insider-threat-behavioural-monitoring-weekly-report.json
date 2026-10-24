@@ -9,7 +9,7 @@
     {
       "sourceName": "Endpoint User Activity Monitoring System",
       "sourceType": "Surveillance systems",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Sensor-based collection",
       "cost": "$35,000/year licensing fee",
       "complianceStatus": "compliant"
@@ -17,7 +17,7 @@
     {
       "sourceName": "HR Access Control Logs",
       "sourceType": "Internal monitoring",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Sensor-based collection",
       "cost": "Internal resource cost only",
       "complianceStatus": "compliant"

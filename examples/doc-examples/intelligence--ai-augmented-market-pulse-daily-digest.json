@@ -9,7 +9,7 @@
     {
       "sourceName": "Social Media Listening Platform",
       "sourceType": "Social media",
-      "reliabilityRating": "Medium",
+      "reliabilityRating": "medium",
       "collectionMethod": "AI-generated summarisation",
       "cost": "$9,000/year",
       "complianceStatus": "compliant"
@@ -17,7 +17,7 @@
     {
       "sourceName": "Real-Time Financial News Aggregator",
       "sourceType": "Paid research services",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Automated scraping",
       "cost": "$15,000/year",
       "complianceStatus": "compliant"
