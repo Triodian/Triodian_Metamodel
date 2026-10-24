@@ -1,4 +1,5 @@
 {
+  "capabilityID": "CAP-001",
   "title": "Automated Track Inspection System",
   "description": "AI-enabled system for continuous track geometry measurement and defect detection using advanced sensor technology",
   "purpose": "Enhance track inspection efficiency and accuracy while reducing manual inspection requirements",

@@ -1,4 +1,5 @@
 {
+  "performanceID": "PERF-004",
   "title": "Revenue per Customer",
   "description": "Average revenue generated per customer over a specific time period, measuring customer value and business efficiency",
   "purpose": "Track customer value generation and identify opportunities for revenue optimization and customer relationship enhancement",

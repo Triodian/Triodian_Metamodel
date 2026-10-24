@@ -1,4 +1,5 @@
 {
+  "productID": "PROD-004",
   "title": "SmartTrack Geometry Sensor",
   "description": "Advanced IoT sensor for continuous track geometry monitoring with realtime data transmission",
   "purpose": "Enable continuous track monitoring and predictive maintenance capabilities",

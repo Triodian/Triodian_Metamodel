@@ -1,4 +1,5 @@
 {
+  "productID": "PROD-001",
   "title": "Track Quality Index Report",
   "description": "Monthly analysis of track geometry and maintenance metrics providing actionable insights for infrastructure management",
   "purpose": "Track maintenance planning and quality assurance to optimize safety and efficiency",

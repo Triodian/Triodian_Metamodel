@@ -38,6 +38,14 @@
       "type": "string",
       "description": "The organization unit responsible for this channel"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Specific roles within the organization unit that manage this channel",

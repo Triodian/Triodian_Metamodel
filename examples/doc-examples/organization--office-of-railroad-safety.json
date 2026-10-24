@@ -1,4 +1,5 @@
 {
+  "organizationID": "ORG-001",
   "orgTitle": "Office of Railroad Safety",
   "orgShortName": "Railroad Safety",
   "orgType": "Government Agency",
@@ -23,6 +24,7 @@
   ],
   "organizationUnits": [
     {
+      "orgUnitID": "OU-001",
       "orgUnitTitle": "Track and Rail Infrastructure Division",
       "description": "Oversees track safety standards and inspection programs across the national rail network",
       "purpose": "Maintain Class 1-5 track safety standards compliance",

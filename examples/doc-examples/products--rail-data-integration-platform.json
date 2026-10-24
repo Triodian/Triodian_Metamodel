@@ -1,4 +1,5 @@
 {
+  "productID": "PROD-003",
   "title": "Rail Data Integration Platform",
   "description": "RESTful API platform providing secure access to rail infrastructure data for internal and partner systems",
   "purpose": "Enable data integration and sharing across rail ecosystem partners",

@@ -5,6 +5,14 @@
   "description": "Schema for the Organization domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "properties": {
+    "organizationID": {
+      "description": "Unique identifier for the Organization",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgTitle": {
       "type": "string",
       "description": "The name or title of the Organization",
@@ -297,6 +305,7 @@
     }
   },
   "required": [
+    "organizationID",
     "orgTitle",
     "orgType",
     "country",
@@ -309,6 +318,14 @@
       "type": "object",
       "description": "A sub-division or entity within an organization",
       "properties": {
+        "orgUnitID": {
+          "description": "Unique identifier for the organization unit; other records reference it as orgUnitID",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "orgUnitTitle": {
           "type": "string",
           "description": "The name or title of the Organization unit"
@@ -329,6 +346,14 @@
           "type": "string",
           "description": "The Organization or Organization unit above in the Organization hierarchy"
         },
+        "parentOrgUnitID": {
+          "description": "ID of the organization unit directly above this one (omit for a top-level unit)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "subOrganizationUnits": {
           "type": "array",
           "description": "Sub-Organization units directly below this Organization unit",
@@ -336,12 +361,21 @@
             "type": "string"
           }
         },
+        "subOrgUnitIDs": {
+          "type": "array",
+          "description": "IDs of the organization units directly below this one",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "roles": {
           "type": "string",
           "description": "Specific roles within the Organization unit"
         }
       },
       "required": [
+        "orgUnitID",
         "orgUnitTitle",
         "description",
         "purpose",
@@ -352,6 +386,7 @@
   },
   "examples": [
     {
+      "organizationID": "ORG-001",
       "orgTitle": "Office of Railroad Safety",
       "orgShortName": "Railroad Safety",
       "orgType": "Government Agency",
@@ -376,6 +411,7 @@
       ],
       "organizationUnits": [
         {
+          "orgUnitID": "OU-001",
           "orgUnitTitle": "Track and Rail Infrastructure Division",
           "description": "Oversees track safety standards and inspection programs across the national rail network",
           "purpose": "Maintain Class 1-5 track safety standards compliance",
@@ -391,6 +427,7 @@
       ]
     },
     {
+      "organizationID": "ORG-002",
       "orgTitle": "Deutsche Bahn AG",
       "orgShortName": "DB",
       "orgType": "Public Limited Company",
@@ -417,6 +454,7 @@
       ]
     },
     {
+      "organizationID": "ORG-003",
       "orgTitle": "Singapore Digital Railways Corporation",
       "orgShortName": "SDRC",
       "orgType": "State-Owned Enterprise",

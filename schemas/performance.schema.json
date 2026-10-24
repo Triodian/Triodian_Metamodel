@@ -4,6 +4,14 @@
   "description": "Schema for the Performance domain in the Triodian Metamodel",
   "type": "object",
   "properties": {
+    "performanceID": {
+      "description": "Unique identifier for the performance metric",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "The name or title of the performance metric"
@@ -23,6 +31,14 @@
     "orgUnitTitle": {
       "type": "string",
       "description": "The Organization unit(s) to which the performance metric is linked"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "performanceCategory": {
       "type": "string",
@@ -105,6 +121,14 @@
     "relatedPerformanceMetrics": {
       "type": "string",
       "description": "Performance metrics that are related or linked to this metric"
+    },
+    "relatedPerformanceIDs": {
+      "type": "array",
+      "description": "IDs of related performance metrics",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "maturityLevel": {
       "description": "The current maturity level of the performance metric",
@@ -308,6 +332,14 @@
             "type": "string",
             "description": "The Organization unit(s) responsible for tracking the KPI"
           },
+          "orgUnitID": {
+            "description": "ID of the organization unit (see orgUnitTitle)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
+            ]
+          },
           "measurementMethod": {
             "type": "string",
             "description": "How the Performance KPI is measured"
@@ -431,6 +463,7 @@
     }
   },
   "required": [
+    "performanceID",
     "title",
     "description",
     "purpose",

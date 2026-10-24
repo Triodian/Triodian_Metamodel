@@ -5,6 +5,14 @@
   "description": "Schema for the Stakeholder domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "properties": {
+    "stakeholderID": {
+      "description": "Unique identifier for the Stakeholder",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "Name/title of stakeholder",
@@ -60,6 +68,14 @@
     "orgUnitTitle": {
       "type": "string",
       "description": "Most closely linked org unit"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "stakeholderCategory": {
       "type": "string",
@@ -146,6 +162,14 @@
       "type": "string",
       "description": "Related/linked stakeholders"
     },
+    "relatedStakeholderIDs": {
+      "type": "array",
+      "description": "IDs of related Stakeholders",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
     "geographicScope": {
       "description": "Geographic scope of stakeholder",
       "allOf": [
@@ -224,6 +248,7 @@
     }
   },
   "required": [
+    "stakeholderID",
     "title",
     "tType",
     "description"
@@ -234,6 +259,14 @@
       "type": "object",
       "description": "A specific requirement from a stakeholder",
       "properties": {
+        "requirementID": {
+          "description": "Unique identifier for the requirement, so other records can reference it",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "Name/title of requirement"
@@ -253,6 +286,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Impacted organization units"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "priority": {
           "description": "Requirement priority level",
@@ -325,6 +366,7 @@
   },
   "examples": [
     {
+      "stakeholderID": "STK-001",
       "title": "Federal Railroad Administration",
       "tType": "Regulatory Body",
       "description": "Federal agency responsible for railroad safety regulation and oversight",
@@ -366,6 +408,7 @@
       ]
     },
     {
+      "stakeholderID": "STK-002",
       "title": "Railway Technology Solutions Ltd",
       "tType": "Strategic Partner",
       "description": "Technology company providing AI-powered track monitoring solutions",
@@ -388,6 +431,7 @@
       "strategicAlignment": "Enables digital transformation and predictive maintenance capabilities"
     },
     {
+      "stakeholderID": "STK-003",
       "title": "Downtown Residents Association",
       "tType": "Community Representative",
       "description": "Local community group representing residents near railway operations",

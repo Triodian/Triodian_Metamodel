@@ -36,6 +36,14 @@
       "type": "string",
       "description": "Organization unit responsible for market intelligence"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Roles within the organization unit that manage market analysis",
@@ -340,6 +348,14 @@
           "type": "string",
           "description": "Organization unit responsible for monitoring this competitor"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "marketID": {
           "type": "string",
           "description": "ID of the market this competitor operates in"
@@ -580,6 +596,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for monitoring this trend"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "marketID": {
           "type": "string",
@@ -864,6 +888,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for industry analysis"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "marketID": {
           "type": "string",

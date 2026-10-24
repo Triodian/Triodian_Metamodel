@@ -26,6 +26,8 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **All domains use the shared vocabulary.** Values for shared concepts such as priority, risk level, frequency, status, maturity and automation are camelCase throughout (`"High"` → `"high"`, `"Semi-Automated"` → `"semiAutomated"`, `"PLANNED"` → `"planned"`). Risk levels use the shared four-point scale (`"High Risk"` → `"high"`). See [`docs/vocabulary-migration.json`](../../docs/vocabulary-migration.json) for the full mapping.
 
+**Every record has an identifier.** Records whose schema now requires an identifier were given one in the form `PREFIX-NNN`, for example `capabilityID: "CAP-001"`, `strategyID: "STR-001"`, `orgUnitID: "OU-001"`. A record that also appears among a schema's own embedded examples has the same identifier in both places.
+
 ## Not included
 
 There is no schema in the repository yet for:

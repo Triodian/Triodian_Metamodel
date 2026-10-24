@@ -4,7 +4,14 @@
   "title": "Rationale",
   "description": "Schema for the logical reasoning that connects a trigger to a specific response within the Strategic Response Model",
   "type": "object",
-  "required": ["rationaleID", "rationaleTitle", "description", "triggerReference", "rationaleType", "rationaleOrientation"],
+  "required": [
+    "rationaleID",
+    "rationaleTitle",
+    "description",
+    "triggerReference",
+    "rationaleType",
+    "rationaleOrientation"
+  ],
   "properties": {
     "rationaleID": {
       "type": "string",
@@ -180,7 +187,9 @@
             "description": "Reasoning behind why this alternative was not selected"
           }
         },
-        "required": ["alternativeDescription"],
+        "required": [
+          "alternativeDescription"
+        ],
         "description": "A specific alternative that was considered but not selected"
       },
       "description": "Other strategic options that were evaluated but not selected"
@@ -322,7 +331,9 @@
           "description": "Specific market segment, competitor, or industry position targeted"
         }
       },
-      "required": ["positioningDescription"],
+      "required": [
+        "positioningDescription"
+      ],
       "description": "How this rationale advances competitive positioning"
     },
     "dateCreated": {
@@ -349,6 +360,14 @@
       "type": "string",
       "description": "The organisational unit that owns or authored the rationale"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "relatedRationales": {
       "type": "array",
       "items": {
@@ -361,12 +380,16 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["supports", "contradicts", "expands", "duplicates", "supersedes"]
+        "enum": [
+          "supports",
+          "contradicts",
+          "expands",
+          "duplicates",
+          "supersedes"
+        ]
       },
       "description": "Types of relationships with each related rationale"
     },
-    
-    
     "customerSegmentIDs": {
       "type": "array",
       "items": {
@@ -388,7 +411,6 @@
       ],
       "description": "Source of customer insights supporting this rationale"
     },
-    
     "marketIDs": {
       "type": "array",
       "items": {
@@ -415,7 +437,12 @@
       "properties": {
         "implicationType": {
           "type": "string",
-          "enum": ["offensive", "defensive", "neutral", "disruptive"],
+          "enum": [
+            "offensive",
+            "defensive",
+            "neutral",
+            "disruptive"
+          ],
           "description": "Type of competitive implication"
         },
         "targetCompetitors": {
@@ -458,12 +485,13 @@
             "description": "Approach to mitigating this risk"
           }
         },
-        "required": ["riskDescription"],
+        "required": [
+          "riskDescription"
+        ],
         "description": "A specific market risk associated with this rationale"
       },
       "description": "Market risks associated with this rationale"
     },
-    
     "financeIDs": {
       "type": "array",
       "items": {
@@ -490,7 +518,16 @@
       "properties": {
         "impactType": {
           "type": "string",
-          "enum": ["revenue", "cost", "profit_margin", "cash_flow", "balance_sheet", "income_statement", "capital_structure", "investment_return"],
+          "enum": [
+            "revenue",
+            "cost",
+            "profit_margin",
+            "cash_flow",
+            "balance_sheet",
+            "income_statement",
+            "capital_structure",
+            "investment_return"
+          ],
           "description": "Type of financial impact"
         },
         "estimatedAmount": {
@@ -528,12 +565,13 @@
             "description": "Approach to mitigating this risk"
           }
         },
-        "required": ["riskDescription"],
+        "required": [
+          "riskDescription"
+        ],
         "description": "A specific financial risk associated with this rationale"
       },
       "description": "Financial risks associated with this rationale"
     },
-    
     "riskIDs": {
       "type": "array",
       "items": {
@@ -559,17 +597,39 @@
       "properties": {
         "impactType": {
           "type": "string",
-          "enum": ["operational", "financial", "regulatory", "reputational", "strategic", "cyber", "environmental", "health_safety"],
+          "enum": [
+            "operational",
+            "financial",
+            "regulatory",
+            "reputational",
+            "strategic",
+            "cyber",
+            "environmental",
+            "health_safety"
+          ],
           "description": "Type of risk impact"
         },
         "impactSeverity": {
           "type": "string",
-          "enum": ["negligible", "minor", "moderate", "significant", "severe", "critical"],
+          "enum": [
+            "negligible",
+            "minor",
+            "moderate",
+            "significant",
+            "severe",
+            "critical"
+          ],
           "description": "Severity of impact"
         },
         "impactLikelihood": {
           "type": "string",
-          "enum": ["very_low", "low", "moderate", "high", "very_high"],
+          "enum": [
+            "very_low",
+            "low",
+            "moderate",
+            "high",
+            "very_high"
+          ],
           "description": "Likelihood of impact"
         },
         "confidenceLevel": {
@@ -581,7 +641,6 @@
       },
       "description": "Assessment of risk implications"
     },
-    
     "supplyChainIDs": {
       "type": "array",
       "items": {
@@ -610,24 +669,44 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["supplier_network", "logistics", "inventory", "manufacturing", "distribution", "procurement", "demand_planning", "fulfillment"]
+            "enum": [
+              "supplier_network",
+              "logistics",
+              "inventory",
+              "manufacturing",
+              "distribution",
+              "procurement",
+              "demand_planning",
+              "fulfillment"
+            ]
           },
           "description": "Areas of supply chain impacted"
         },
         "impactSeverity": {
           "type": "string",
-          "enum": ["negligible", "minor", "moderate", "significant", "severe", "critical"],
+          "enum": [
+            "negligible",
+            "minor",
+            "moderate",
+            "significant",
+            "severe",
+            "critical"
+          ],
           "description": "Severity of impact"
         },
         "impactTimeframe": {
           "type": "string",
-          "enum": ["immediate", "short-term", "medium-term", "long-term"],
+          "enum": [
+            "immediate",
+            "short-term",
+            "medium-term",
+            "long-term"
+          ],
           "description": "Timeframe for impact"
         }
       },
       "description": "Assessment of supply chain implications"
     },
-
     "innovationIDs": {
       "type": "array",
       "items": {
@@ -653,7 +732,13 @@
       "properties": {
         "impactType": {
           "type": "string",
-          "enum": ["acceleration", "redirection", "termination", "expansion", "contraction"],
+          "enum": [
+            "acceleration",
+            "redirection",
+            "termination",
+            "expansion",
+            "contraction"
+          ],
           "description": "Type of innovation impact"
         },
         "affectedCapabilities": {
@@ -670,7 +755,6 @@
       },
       "description": "Assessment of innovation implications"
     },
-
     "sustainabilityIDs": {
       "type": "array",
       "items": {
@@ -712,7 +796,6 @@
       },
       "description": "Assessment of sustainability implications"
     },
-
     "peopleIDs": {
       "type": "array",
       "items": {
@@ -758,7 +841,6 @@
       },
       "description": "Assessment of workforce implications"
     },
-
     "technologyIDs": {
       "type": "array",
       "items": {
@@ -800,7 +882,6 @@
       },
       "description": "Assessment of technology implications"
     },
-
     "channelIDs": {
       "type": "array",
       "items": {
@@ -837,7 +918,11 @@
         },
         "implementationComplexity": {
           "type": "string",
-          "enum": ["Low", "Medium", "High"],
+          "enum": [
+            "Low",
+            "Medium",
+            "High"
+          ],
           "description": "Complexity of implementation"
         }
       },

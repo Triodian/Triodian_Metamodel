@@ -8,6 +8,14 @@
       "type": "object",
       "description": "A guiding principle that sets boundaries and constraints for organizational behavior",
       "properties": {
+        "policyID": {
+          "description": "Unique identifier for the Policy",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "The name or title of the Policy"
@@ -27,6 +35,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "The Organization unit(s) to which the Policy is linked"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "requirements": {
           "type": "string",
@@ -48,6 +64,14 @@
           "type": "string",
           "description": "Policies that are related or linked to this Policy"
         },
+        "relatedPolicyIDs": {
+          "type": "array",
+          "description": "IDs of related Policies",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "complianceAndStandards": {
           "type": "string",
           "description": "Regulatory requirements and standards the Policy must adhere to"
@@ -64,7 +88,10 @@
           "type": "string",
           "description": "How the Policy aligns with the Organization's strategic goals and objectives"
         }
-      }
+      },
+      "required": [
+        "policyID"
+      ]
     }
   }
 }
