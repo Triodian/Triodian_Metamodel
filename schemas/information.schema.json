@@ -5,6 +5,14 @@
   "version": "2.2",
   "type": "object",
   "properties": {
+    "informationID": {
+      "description": "Unique identifier for the Information asset",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "The name or title of the Information asset",
@@ -40,6 +48,14 @@
       "description": "The organization unit(s) to which the Information asset is linked",
       "examples": [
         "Data and Analytics Division"
+      ]
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
       ]
     },
     "informationCategory": {
@@ -367,6 +383,14 @@
         "Customer master data, product reference data, transaction logs"
       ]
     },
+    "relatedInformationIDs": {
+      "type": "array",
+      "description": "IDs of related Information assets",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
     "technologyStack": {
       "type": "string",
       "description": "Underlying technologies used",
@@ -457,6 +481,14 @@
       "examples": [
         "Enterprise Data Warehouse",
         "Master Customer Database"
+      ]
+    },
+    "parentInformationID": {
+      "description": "ID of the parent Information asset this is derived from",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
       ]
     },
     "childInformation": {
@@ -584,6 +616,14 @@
             "description": "The organization unit(s) involved with the Information element",
             "examples": [
               "Finance and Operations Division"
+            ]
+          },
+          "orgUnitID": {
+            "description": "ID of the organization unit (see orgUnitTitle)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
             ]
           },
           "elementType": {
@@ -766,6 +806,7 @@
     }
   },
   "required": [
+    "informationID",
     "title",
     "description",
     "purpose",

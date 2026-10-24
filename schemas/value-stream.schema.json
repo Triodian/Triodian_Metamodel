@@ -8,6 +8,14 @@
       "type": "object",
       "description": "A sequence of activities that collectively deliver value to a stakeholder or customer",
       "properties": {
+        "valueStreamID": {
+          "description": "Unique identifier for the Value Stream",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "The name or title of the Value Stream"
@@ -28,6 +36,14 @@
           "type": "string",
           "description": "The Organization unit(s) to which the Value Stream is linked"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "performanceIndicators": {
           "type": "string",
           "description": "Metrics used to measure the effectiveness and efficiency of the Value Stream"
@@ -39,6 +55,14 @@
         "relatedValueStreams": {
           "type": "string",
           "description": "Value streams that are related or linked to this Value Stream"
+        },
+        "relatedValueStreamIDs": {
+          "type": "array",
+          "description": "IDs of related Value Streams",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
         },
         "maturityLevel": {
           "type": "string",
@@ -68,12 +92,23 @@
           "type": "string",
           "description": "How the Value Stream aligns with the Organization's strategic goals and objectives"
         }
-      }
+      },
+      "required": [
+        "valueStreamID"
+      ]
     },
     "valueStreamStage": {
       "type": "object",
       "description": "Sequential steps or phases within a value stream that contribute to value transformation",
       "properties": {
+        "stageID": {
+          "description": "Unique identifier for the Value Stream stage",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "stageTitle": {
           "type": "string",
           "description": "Name/title of the Value Stream stage"
@@ -81,6 +116,14 @@
         "parentValueStream": {
           "type": "string",
           "description": "The Value Stream it belongs to"
+        },
+        "parentValueStreamID": {
+          "description": "ID of the Value Stream this stage belongs to",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "description": {
           "type": "string",
@@ -102,6 +145,14 @@
           "type": "string",
           "description": "Associated Organization unit(s)"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "inputs": {
           "type": "string",
           "description": "Required resources/information"
@@ -122,6 +173,14 @@
           "type": "string",
           "description": "Connected stages"
         },
+        "relatedStageIDs": {
+          "type": "array",
+          "description": "IDs of connected stages",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "risks": {
           "type": "string",
           "description": "Potential risks"
@@ -137,8 +196,19 @@
         "enablingCapability": {
           "type": "string",
           "description": "Capability that enables this stage"
+        },
+        "enablingCapabilityID": {
+          "description": "ID of the Capability that enables this stage",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         }
-      }
+      },
+      "required": [
+        "stageID"
+      ]
     }
   }
 }

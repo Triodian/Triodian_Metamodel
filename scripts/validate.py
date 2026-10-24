@@ -7,15 +7,16 @@ Checks, in order:
   3. No non-standard structural keywords ("attributes"/"elements" used in place of
      "properties"/"definitions", or OpenAPI-style "nullable").
   4. Every $ref resolves, whether local (#/...) or to another schema file.
-  5. Every example embedded in a schema's top-level "examples" validates against that schema.
-  6. (--doc-examples) Every worked example from the documentation, listed in
+  5. Every record type requires an identifier (a property named "<entity>ID" or "id").
+  6. Every example embedded in a schema's top-level "examples" validates against that schema.
+  7. (--doc-examples) Every worked example from the documentation, listed in
      examples/doc-examples/manifest.json, validates against its schema.
 
 Exit status is non-zero if any check that was run fails.
 
 Usage:
-  python scripts/validate.py                 # checks 1-5
-  python scripts/validate.py --doc-examples  # checks 1-6
+  python scripts/validate.py                 # checks 1-6
+  python scripts/validate.py --doc-examples  # checks 1-7
   python scripts/validate.py --only-doc-examples
 """
 from __future__ import annotations
@@ -41,6 +42,13 @@ VALIDATORS = {
     "https://json-schema.org/draft/2020-12/schema": Draft202012Validator,
 }
 NON_STANDARD = {"attributes", "elements", "nullable"}
+# Schemas that collect other records rather than describing a record themselves.
+CONTAINERS = {
+    "common.schema.json",
+    "external-organizations-composite.schema.json",
+    "extensions/business-analysis.json",
+    "extensions/technology/TechnologyOneWellArchitectedFrameworkExtension",
+}
 
 failures: list[str] = []
 
@@ -110,6 +118,41 @@ def check_keywords(docs: dict[Path, dict]) -> None:
                 fail(f"{rel(f)}: /{'/'.join(map(str, path))}: non-standard keyword {kw!r}")
 
 
+def is_identifier(name: str) -> bool:
+    return name == "id" or name.endswith("ID")
+
+
+def record_schemas(f: Path, d: dict):
+    """Yield (label, schema) for each record type a schema file describes."""
+    name = f.relative_to(SCHEMA_DIR).as_posix()
+    if name in CONTAINERS:
+        return
+    props = d.get("properties")
+    if isinstance(props, dict) and props:
+        wrapped = all(isinstance(v, dict) and v.get("type") == "object" and "properties" in v for v in props.values())
+        if wrapped:  # e.g. policy.schema.json wraps a single "policy" record
+            for k, v in props.items():
+                yield f"{rel(f)} /properties/{k}", v
+        else:
+            yield rel(f), d
+    elif "oneOf" in d:  # e.g. strategic-response-model.schema.json: one of several record types
+        for branch in d["oneOf"]:
+            ref = branch.get("$ref", "")
+            if ref.startswith("#/definitions/"):
+                yield f"{rel(f)} {ref[1:]}", d["definitions"][ref.split("/")[-1]]
+
+
+def check_identifiers(docs: dict[Path, dict]) -> None:
+    print("5. Every record type requires an identifier")
+    for f, d in docs.items():
+        for label, schema in record_schemas(f, d):
+            required = [r for r in schema.get("required", []) if is_identifier(r)]
+            if not required:
+                own = [k for k in schema.get("properties", {}) if is_identifier(k)]
+                hint = f" ({own[0]} exists but is not required)" if own else ""
+                fail(f"{label}: no required identifier{hint}")
+
+
 def build_registry(docs: dict[Path, dict]) -> tuple[Registry, dict[Path, str]]:
     registry = Registry()
     uris = {}
@@ -156,7 +199,7 @@ def validate_instance(schema_doc: dict, uri: str, pointer: str, instance, regist
 
 
 def check_embedded_examples(docs, registry, uris) -> None:
-    print("5. Embedded schema examples validate")
+    print("6. Embedded schema examples validate")
     for f, d in docs.items():
         if f not in uris or d.get("type") != "object":
             continue
@@ -168,7 +211,7 @@ def check_embedded_examples(docs, registry, uris) -> None:
 
 
 def check_doc_examples(docs, registry, uris) -> None:
-    print("6. Documentation worked examples validate")
+    print("7. Documentation worked examples validate")
     manifest = json.loads((DOC_EXAMPLES / "manifest.json").read_text(encoding="utf-8"))
     passed = 0
     for entry in manifest["examples"]:
@@ -205,6 +248,7 @@ def main() -> int:
         check_meta(docs)
         check_keywords(docs)
         check_refs(docs, registry, uris)
+        check_identifiers(docs)
         check_embedded_examples(docs, registry, uris)
         if args.doc_examples:
             check_doc_examples(docs, registry, uris)

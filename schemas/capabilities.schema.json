@@ -5,6 +5,14 @@
   "description": "Schema for the Capabilities domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "properties": {
+    "capabilityID": {
+      "description": "Unique identifier for the Capability",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "The name or title of the Capability",
@@ -29,6 +37,14 @@
     "orgUnitTitle": {
       "type": "string",
       "description": "The organization unit(s) to which the Capability is linked"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "capabilityCategory": {
       "type": "string",
@@ -93,6 +109,14 @@
     "relatedCapabilities": {
       "type": "string",
       "description": "Capabilities that are related or linked"
+    },
+    "relatedCapabilityIDs": {
+      "type": "array",
+      "description": "IDs of related Capabilities",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "maturityLevel": {
       "description": "Current maturity level of the Capability",
@@ -185,9 +209,25 @@
       "type": "string",
       "description": "High-level Capability that encompasses this capability"
     },
+    "parentCapabilityID": {
+      "description": "ID of the higher-level Capability that encompasses this one",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "child": {
       "type": "string",
       "description": "Specific Capability that falls under this capability"
+    },
+    "childCapabilityIDs": {
+      "type": "array",
+      "description": "IDs of the Capabilities that fall under this one",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "capabilityFunctions": {
       "type": "array",
@@ -212,6 +252,7 @@
     }
   },
   "required": [
+    "capabilityID",
     "title",
     "description",
     "purpose",
@@ -242,6 +283,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit(s) where function resides"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "functionType": {
           "type": "string",
@@ -308,6 +357,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit(s) utilizing the component"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "componentType": {
           "type": "string",
@@ -380,9 +437,25 @@
           "type": "string",
           "description": "Organization unit(s) where Process resides"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "parentCapability": {
           "type": "string",
           "description": "The Capability this Process supports"
+        },
+        "parentCapabilityID": {
+          "description": "ID of the Capability this Process supports",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "processType": {
           "type": "string",
@@ -468,6 +541,7 @@
   },
   "examples": [
     {
+      "capabilityID": "CAP-001",
       "title": "Automated Track Inspection System",
       "description": "AI-enabled system for continuous track geometry measurement and defect detection using advanced sensor technology",
       "purpose": "Enhance track inspection efficiency and accuracy while reducing manual inspection requirements",
@@ -544,6 +618,7 @@
       ]
     },
     {
+      "capabilityID": "CAP-002",
       "title": "Digital Innovation Platform",
       "description": "Comprehensive platform for managing innovation initiatives, from ideation to implementation",
       "purpose": "Accelerate digital transformation and foster culture of continuous innovation",
@@ -559,6 +634,7 @@
       "scalability": "Moderately Scalable"
     },
     {
+      "capabilityID": "CAP-003",
       "title": "Enterprise Data Analytics Platform",
       "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
       "purpose": "Enable data-driven decision making and provide insights for operational optimization",

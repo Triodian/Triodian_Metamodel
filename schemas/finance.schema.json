@@ -36,6 +36,14 @@
       "type": "string",
       "description": "Organization unit responsible for financial management"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Roles within the organization unit that manage financial elements",
@@ -327,6 +335,14 @@
           "type": "string",
           "description": "Organization unit responsible for this resource"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "resourceType": {
           "type": "string",
           "enum": [
@@ -519,6 +535,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for this budget"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "budgetType": {
           "type": "string",
@@ -753,6 +777,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for this investment"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "investmentType": {
           "type": "string",
@@ -1004,6 +1036,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for this revenue stream"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "revenueType": {
           "type": "string",
@@ -1284,6 +1324,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit associated with this cost structure"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "costClassification": {
           "type": "string",

@@ -5,6 +5,14 @@
   "version": "2.2",
   "type": "object",
   "properties": {
+    "serviceID": {
+      "description": "Unique identifier for the Service",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "The name or title of the Service",
@@ -39,6 +47,14 @@
       "description": "The Organization unit the Service belongs to",
       "examples": [
         "Freight Operations Division"
+      ]
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
       ]
     },
     "serviceCategory": {
@@ -412,6 +428,14 @@
         "Enterprise Customer Management Platform"
       ]
     },
+    "parentServiceID": {
+      "description": "ID of the parent Service this is derived from",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "childServices": {
       "type": "string",
       "description": "Child services derived from this",
@@ -467,6 +491,14 @@
       "examples": [
         "Customer Analytics Service, Billing Management Service"
       ]
+    },
+    "relatedServiceIDs": {
+      "type": "array",
+      "description": "IDs of related Services",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "technologyStack": {
       "type": "string",
@@ -535,6 +567,14 @@
             "description": "The Organization unit(s) involved in the Service feature",
             "examples": [
               "Technology and Customer Experience Department"
+            ]
+          },
+          "orgUnitID": {
+            "description": "ID of the organization unit (see orgUnitTitle)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
             ]
           },
           "featureType": {
@@ -736,6 +776,7 @@
     }
   },
   "required": [
+    "serviceID",
     "title",
     "description",
     "purpose",

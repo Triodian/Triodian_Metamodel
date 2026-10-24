@@ -45,6 +45,14 @@
       "type": "string",
       "description": "The organization unit(s) responsible for managing this risk"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Specific roles within the organization unit that manage this risk",
