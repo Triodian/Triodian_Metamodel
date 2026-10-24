@@ -238,7 +238,8 @@
         "marketFollower",
         "nichePlayer",
         "disruptor",
-        "emergingPlayer"
+        "emergingPlayer",
+        "defensivePositioning"
       ]
     },
     "investmentLevel": {

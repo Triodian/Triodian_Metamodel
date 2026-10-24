@@ -14,7 +14,7 @@ Checks, in order:
      Each file is kebab-case and ends ".schema.json", its $id is its location under
      https://triodian.com/schemas/, it has a title, and every property has a description.
   5. Every $ref resolves, whether local (#/...) or to another schema file.
-  6. Every record type requires an identifier (a property named "<entity>ID" or "id").
+  6. Every record type requires an identifier, a property named "<entity>ID".
   7. Every example embedded in a schema's top-level "examples" validates against that schema.
   8. Every interoperability mapping (interoperability/*.jsonld) is valid JSON-LD, and every
      Triodian term it maps is a property, element type or domain defined in the schemas.
@@ -148,7 +148,7 @@ def check_keywords(docs: dict[Path, dict]) -> None:
 
 
 def is_identifier(name: str) -> bool:
-    return name == "id" or name.endswith("ID")
+    return name.endswith("ID")
 
 
 def is_record_schema(f: Path) -> bool:
@@ -189,6 +189,8 @@ def check_structure(docs: dict[Path, dict]) -> None:
                 for k, v in node.items():
                     if not CAMEL.fullmatch(k):
                         fail(f"{rel(f)}: {here}: property name {k!r} is not camelCase")
+                    elif k == "id" or re.search(r"Ids?$", k):
+                        fail(f"{rel(f)}: {here}: identifier {k!r} should be named <entity>ID (or <entity>IDs)")
                     if not conditional and isinstance(v, dict) and "description" not in v and "$ref" not in v:
                         fail(f"{rel(f)}: {here}/{k}: missing description")
         for k in d.get("definitions", {}):

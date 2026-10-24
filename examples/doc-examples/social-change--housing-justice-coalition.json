@@ -1,4 +1,5 @@
 {
+  "socialChangeID": "SC-004",
   "name": "Housing Justice Coalition",
   "description": "Multi-organization campaign to address affordable housing crisis through policy advocacy and community organizing",
   "activityType": "communityOrganizing",
@@ -21,7 +22,7 @@
     "Homeless individuals",
     "Low-income families"
   ],
-  "changeMethodology": "Community Organizing Model",
+  "changeMethodology": "communityOrganizing",
   "tactics": [
     {
       "tacticType": "Community Outreach",

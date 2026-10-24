@@ -5,7 +5,7 @@
   "type": "object",
   "description": "Defines the desired coverage level for a specific business architecture domain within an organisation or business unit.",
   "properties": {
-    "id": {
+    "coverageExpectationID": {
       "type": "string",
       "description": "Unique identifier for the coverage expectation."
     },
@@ -70,7 +70,7 @@
     }
   },
   "required": [
-    "id",
+    "coverageExpectationID",
     "domain",
     "targetCoverageLevel",
     "justification",

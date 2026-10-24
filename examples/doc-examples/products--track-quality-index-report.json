@@ -8,7 +8,7 @@
   "productCategory": "informationProduct",
   "productType": "report",
   "targetMarket": "internal",
-  "businessModel": "Internal Service",
+  "businessModel": "internalService",
   "lifecycleStage": "maturity",
   "lifecycleManagement": "Monthly updates, annual review process with stakeholder feedback",
   "marketCompetitiveness": "Industry-leading accuracy of 98.5% with real-time processing capabilities",

@@ -5,7 +5,7 @@
   "type": "object",
   "description": "A reusable pattern of coverage expectations for specific types of organisations or industries.",
   "properties": {
-    "id": {
+    "coverageTemplateID": {
       "type": "string",
       "description": "Unique identifier for the coverage template."
     },
@@ -72,7 +72,7 @@
     }
   },
   "required": [
-    "id",
+    "coverageTemplateID",
     "name",
     "sector",
     "sizeCategory",
