@@ -17,7 +17,7 @@ These fields accept the shared list plus a few values specific to their domain.
 | `information.schema.json` /properties/updateFrequency | `frequency` | `static` |
 | `innovation.schema.json` /properties/strategicAlignment/properties/alignmentLevel | `alignmentLevel` | `critical` |
 | `organization.schema.json` /properties/geographicScope | `geographicScope` | `regionalBloc`, `emergingMarkets`, `developedMarkets`, `asiaPacific`, `europeMiddleEastAfrica`, `americas` |
-| `people.schema.json` /properties/competencyFrameworks/items/properties/alignmentToStrategy/properties/alignmentLevel | `alignmentLevel` | `perfect` |
+| `people.schema.json` /definitions/competencyFramework/properties/alignmentToStrategy/properties/alignmentLevel | `alignmentLevel` | `perfect` |
 | `performance.schema.json` /properties/riskCategories | `riskCategory` | `interpretation` |
 | `products.schema.json` /properties/lifecycleStage | `lifecycleStage` | `concept`, `growth`, `maturity`, `decline`, `maintenance` |
 | `products.schema.json` /properties/riskCategories | `riskCategory` | `quality` |
@@ -25,7 +25,7 @@ These fields accept the shared list plus a few values specific to their domain.
 | `risk-management.schema.json` /properties/emergingFactors/items/properties/timeHorizon | `timeHorizon` | `uncertain` |
 | `social-change.json` /properties/successMeasurement/properties/timeHorizon | `timeHorizon` | `ongoing` |
 | `social-change.json` /properties/metadata/properties/status | `workStatus` | `failed` |
-| `strategic-response-model.schema.json` /definitions/strategicIntent/properties/status | `workStatus` | `transformed`, `superseded` |
+| `strategic-intent.schema.json` /properties/status | `workStatus` | `transformed`, `superseded` |
 | `strategy.schema.json` /properties/riskCategories | `riskCategory` | `diplomatic` |
 | `supply-chain.schema.json` /definitions/supplyChainProcess/properties/processRisks/items/properties/impact | `impactMagnitude` | `critical` |
 | `sustainability.schema.json` /properties/implementationStatus | `implementationStatus` | `optimizing` |
@@ -42,8 +42,8 @@ These fields reuse a generic name for a domain-specific idea. They keep their ow
 | `information.schema.json` /properties/lifecycle | `informationLifecycleStage` | Stages of data handling (creation, active use, archive, disposal), not a delivery lifecycle |
 | `performance-indicator.schema.json` /properties/statusHistory/items/properties/status | `targetStatus` | Position against target (above, on, below), not work progress |
 | `shared-initiative.schema.json` /properties/crossOrgDependencies/items/properties/dependencyType | `dependencyKind` | What is depended on (information, capability, resource, decision, approval), not how strongly |
-| `strategic-response-model.schema.json` /definitions/strategicResponse/properties/financialResources/properties/fundingSources/items/properties/status | `fundingStatus` | Whether funding is secured, pending or proposed |
-| `strategic-response-model.schema.json` /definitions/strategicIntent/properties/maturityLevel | `intentMaturity` | How established a strategic intent is (conceptual to optimizing), not capability maturity |
+| `strategic-intent.schema.json` /properties/maturityLevel | `intentMaturity` | How established a strategic intent is (conceptual to optimizing), not capability maturity |
+| `strategic-response.schema.json` /properties/financialResources/properties/fundingSources/items/properties/status | `fundingStatus` | Whether funding is secured, pending or proposed |
 | `supply-chain.schema.json` /definitions/supplyChainProcess/properties/processDependencies/items/properties/dependencyType | `sequenceRelationship` | Process sequencing (predecessor, successor, concurrent), not dependency strength |
 
 ## Definitions
@@ -138,7 +138,7 @@ Five-point likelihood or probability of an event occurring.
 
 Values: `veryLow`, `low`, `medium`, `high`, `veryHigh`
 
-Used by 8 field(s) in: `channel.schema.json`, `finance.schema.json`, `market.schema.json`, `risk-management.schema.json`, `strategic-response-model.schema.json`, `supply-chain.schema.json`
+Used by 8 field(s) in: `channel.schema.json`, `finance.schema.json`, `market.schema.json`, `risk-management.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`
 
 ### `impactMagnitude`
 
@@ -146,7 +146,7 @@ Five-point magnitude of an adverse consequence if a risk or event occurs (risk-a
 
 Values: `negligible`, `minor`, `moderate`, `major`, `severe`
 
-Used by 5 field(s) in: `finance.schema.json`, `people.schema.json`, `risk-management.schema.json`, `strategic-response-model.schema.json`, `supply-chain.schema.json`
+Used by 5 field(s) in: `finance.schema.json`, `people.schema.json`, `risk-management.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`
 
 ### `changeMagnitude`
 
@@ -216,7 +216,7 @@ Progress of a piece of work such as an initiative, program, project, action, res
 
 Values: `proposed`, `planned`, `approved`, `inProgress`, `onHold`, `deferred`, `completed`, `cancelled`
 
-Used by 11 field(s) in: `finance.schema.json`, `manufacturing.schema.json`, `shared-initiative.schema.json`, `social-change.json`, `strategic-response-model.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 11 field(s) in: `finance.schema.json`, `manufacturing.schema.json`, `shared-initiative.schema.json`, `social-change.json`, `strategic-intent.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `documentStatus`
 
@@ -232,7 +232,7 @@ Implementation state of a control, technology, strategy or practice. implemented
 
 Values: `notStarted`, `planned`, `inProgress`, `implemented`, `operational`, `verified`, `retiring`, `retired`, `abandoned`, `notApplicable`
 
-Used by 11 field(s) in: `market.schema.json`, `risk-management.schema.json`, `strategic-response-model.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 11 field(s) in: `market.schema.json`, `risk-management.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `complianceStatus`
 
@@ -310,7 +310,7 @@ Used by 2 field(s) in: `organization.schema.json`, `stakeholder.schema.json`
 
 Unique identifier of a record within its domain, for example "CAP-001" or "MKT-ENTSW-001".
 
-Used by 103 field(s) in: `capabilities.schema.json`, `channel.schema.json`, `customer.schema.json`, `finance.schema.json`, `information.schema.json`, `initiatives.schema.json`, `innovation.schema.json`, `intelligence.schema.json`, `manufacturing.schema.json`, `market.schema.json`, `organization.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `policy.schema.json`, `products.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategic-response-model.schema.json`, `strategy.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`, `value-stream.schema.json`
+Used by 103 field(s) in: `capabilities.schema.json`, `channel.schema.json`, `customer.schema.json`, `finance.schema.json`, `information.schema.json`, `initiatives.schema.json`, `innovation.schema.json`, `intelligence.schema.json`, `manufacturing.schema.json`, `market.schema.json`, `organization.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `policy.schema.json`, `products.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategic-response.schema.json`, `strategy.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`, `value-stream.schema.json`
 
 ### `currencyCode`
 

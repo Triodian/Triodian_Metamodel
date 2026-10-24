@@ -83,35 +83,35 @@
       "type": "array",
       "description": "A list of production units within this manufacturing entity.",
       "items": {
-        "$ref": "#/definitions/ProductionUnit"
+        "$ref": "#/definitions/productionUnit"
       }
     },
     "workOrders": {
       "type": "array",
       "description": "A list of active and completed work orders.",
       "items": {
-        "$ref": "#/definitions/WorkOrder"
+        "$ref": "#/definitions/workOrder"
       }
     },
     "billsOfMaterials": {
       "type": "array",
       "description": "A collection of bills of materials for various products.",
       "items": {
-        "$ref": "#/definitions/BillOfMaterials"
+        "$ref": "#/definitions/billOfMaterials"
       }
     },
     "inventory": {
       "type": "array",
       "description": "Current inventory levels of raw materials, WIP, and finished goods.",
       "items": {
-        "$ref": "#/definitions/Inventory"
+        "$ref": "#/definitions/inventory"
       }
     },
     "manufacturingObjectives": {
       "type": "array",
       "description": "Specific objectives supporting the manufacturing strategy.",
       "items": {
-        "$ref": "#/definitions/ManufacturingObjective"
+        "$ref": "#/definitions/manufacturingObjective"
       }
     },
     "keyActivities": {
@@ -162,7 +162,7 @@
   ],
   "additionalProperties": false,
   "definitions": {
-    "ProductionUnit": {
+    "productionUnit": {
       "type": "object",
       "description": "A structured entity for physical production.",
       "properties": {
@@ -204,7 +204,7 @@
       ],
       "additionalProperties": false
     },
-    "WorkOrder": {
+    "workOrder": {
       "type": "object",
       "description": "An authorization to produce a specific quantity of a product.",
       "properties": {
@@ -246,7 +246,7 @@
       ],
       "additionalProperties": false
     },
-    "BillOfMaterials": {
+    "billOfMaterials": {
       "type": "object",
       "description": "A complete list of raw materials, components, and sub-assemblies.",
       "properties": {
@@ -291,7 +291,7 @@
       ],
       "additionalProperties": false
     },
-    "Inventory": {
+    "inventory": {
       "type": "object",
       "description": "The stock of raw materials, work-in-progress, and finished goods.",
       "properties": {
@@ -331,7 +331,7 @@
       ],
       "additionalProperties": false
     },
-    "ManufacturingObjective": {
+    "manufacturingObjective": {
       "type": "object",
       "description": "A specific objective that supports a manufacturing strategy.",
       "properties": {
