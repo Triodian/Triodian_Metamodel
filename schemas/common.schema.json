@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/common.schema.json",
-  "title": "Shared Vocabulary",
+  "title": "Shared Vocabulary Schema",
   "description": "Controlled vocabularies and reusable structures shared by every Triodian domain. Domains reference these definitions with $ref (for example \"common.schema.json#/definitions/riskLevel\") instead of defining their own lists. All enumerated values are camelCase. This file defines no instance type of its own.",
   "definitions": {
     "ratingLevel": {

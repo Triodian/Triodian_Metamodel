@@ -1,63 +1,142 @@
 {
   "@context": {
-    "orth": "https://triodian.com/schemas/",
+    "triodian": "https://triodian.com/ontology#",
     "sap": "https://sap.com/enterprise-architecture/",
-    "documentationURL": "https://github.com/Triodian/Triodian_Metamodel/interoperability/README.md",
-
-    "Strategy": {
-      "@id": "orth:Strategy_Domain",
-      "@type": "@id",
-      "sap:StrategicObjective": "sap:StrategicGoal"
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#"
+  },
+  "@graph": [
+    {
+      "@id": "triodian:Strategy",
+      "rdfs:label": "Strategy",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:StrategicGoal"
+        },
+        {
+          "@id": "sap:StrategicObjective"
+        }
+      ]
     },
-    "Capabilities": {
-      "@id": "orth:Capabilities_Domain",
-      "@type": "@id",
-      "sap:BusinessCapability": "sap:Capability"
+    {
+      "@id": "triodian:Capability",
+      "rdfs:label": "Capability",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:BusinessCapability"
+        },
+        {
+          "@id": "sap:Capability"
+        }
+      ]
     },
-    "ValueStream": {
-      "@id": "orth:ValueStream_Domain",
-      "@type": "@id",
-      "sap:ValueStream": "sap:BusinessProcessSegment"
+    {
+      "@id": "triodian:ValueStream",
+      "rdfs:label": "ValueStream",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:BusinessProcessSegment"
+        },
+        {
+          "@id": "sap:ValueStream"
+        }
+      ]
     },
-    "Policy": {
-      "@id": "orth:Policy_Domain",
-      "@type": "@id",
-      "sap:Policy": "sap:GovernancePrinciple"
+    {
+      "@id": "triodian:Policy",
+      "rdfs:label": "Policy",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:GovernancePrinciple"
+        },
+        {
+          "@id": "sap:Policy"
+        }
+      ]
     },
-    "Organization": {
-      "@id": "orth:Organization_Domain",
-      "@type": "@id",
-      "sap:OrgUnit": "sap:OrganizationalUnit"
+    {
+      "@id": "triodian:Organization",
+      "rdfs:label": "Organization",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:OrgUnit"
+        },
+        {
+          "@id": "sap:OrganizationalUnit"
+        }
+      ]
     },
-    "Initiatives": {
-      "@id": "orth:Initiatives_Domain",
-      "@type": "@id",
-      "sap:Initiative": "sap:ChangeInitiative"
+    {
+      "@id": "triodian:Initiative",
+      "rdfs:label": "Initiative",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:ChangeInitiative"
+        },
+        {
+          "@id": "sap:Initiative"
+        }
+      ]
     },
-    "Information": {
-      "@id": "orth:Information_Domain",
-      "@type": "@id",
-      "sap:DataEntity": "sap:InformationObject"
+    {
+      "@id": "triodian:Information",
+      "rdfs:label": "Information",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:DataEntity"
+        },
+        {
+          "@id": "sap:InformationObject"
+        }
+      ]
     },
-    "Products": {
-      "@id": "orth:Products_Domain",
-      "@type": "@id",
-      "sap:Product": "sap:ServiceOrProduct"
+    {
+      "@id": "triodian:Product",
+      "rdfs:label": "Product",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:Product"
+        },
+        {
+          "@id": "sap:ServiceOrProduct"
+        }
+      ]
     },
-    "Services": {
-      "@id": "orth:Services_Domain",
-      "@type": "@id",
-      "sap:Service": "sap:BusinessService"
+    {
+      "@id": "triodian:Service",
+      "rdfs:label": "Service",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:BusinessService"
+        },
+        {
+          "@id": "sap:Service"
+        }
+      ]
     },
-    "Stakeholders": {
-      "@id": "orth:Stakeholders_Domain",
-      "@type": "@id",
-      "sap:Stakeholder": "sap:BusinessRole"
+    {
+      "@id": "triodian:Stakeholder",
+      "rdfs:label": "Stakeholder",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:BusinessRole"
+        },
+        {
+          "@id": "sap:Stakeholder"
+        }
+      ]
     },
-    "Performance": {
-      "@id": "orth:Performance_Domain",
-      "@type": "@id",
-      "sap:KPI": "sap:PerformanceIndicator"
+    {
+      "@id": "triodian:Performance",
+      "rdfs:label": "Performance",
+      "skos:closeMatch": [
+        {
+          "@id": "sap:KPI"
+        },
+        {
+          "@id": "sap:PerformanceIndicator"
+        }
+      ]
     }
-  }
+  ]
 }

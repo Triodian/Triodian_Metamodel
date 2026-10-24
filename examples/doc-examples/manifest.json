@@ -291,43 +291,43 @@
     },
     {
       "instance": "social-change--fair-wage-now-strike-series.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 34822
     },
     {
       "instance": "social-change--tech-workers-for-justice-initiative.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 34911
     },
     {
       "instance": "social-change--universal-basic-services-pilot-program.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 34977
     },
     {
       "instance": "social-change--housing-justice-coalition.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 35042
     },
     {
       "instance": "social-change--equity-and-inclusion-transformation-project.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 35104
     },
     {
       "instance": "social-change--velvet-revolution-2025.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 35169
     },
     {
       "instance": "social-change--colonial-liberation-revolution.json",
-      "schema": "social-change.json",
+      "schema": "social-change.schema.json",
       "pointer": "",
       "docLine": 35326
     },
@@ -458,26 +458,26 @@
       "docLine": 39507
     },
     {
-      "instance": "coverageTemplate--public-sector-large-agency.json",
-      "schema": "coverage/coverageTemplate.schema.json",
+      "instance": "coverage-template--public-sector-large-agency.json",
+      "schema": "coverage/coverage-template.schema.json",
       "pointer": "",
       "docLine": 39755
     },
     {
-      "instance": "organizationGoal--goal-001.json",
-      "schema": "coverage/organizationGoal.schema.json",
+      "instance": "organization-goal--goal-001.json",
+      "schema": "coverage/organization-goal.schema.json",
       "pointer": "",
       "docLine": 39924
     },
     {
-      "instance": "coverageStatus--cstat-100.json",
-      "schema": "coverage/coverageStatus.schema.json",
+      "instance": "coverage-status--cstat-100.json",
+      "schema": "coverage/coverage-status.schema.json",
       "pointer": "",
       "docLine": 40045
     },
     {
-      "instance": "coverageExpectation--cexp-001.json",
-      "schema": "coverage/coverageExpectation.schema.json",
+      "instance": "coverage-expectation--cexp-001.json",
+      "schema": "coverage/coverage-expectation.schema.json",
       "pointer": "",
       "docLine": 40197
     }

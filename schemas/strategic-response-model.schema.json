@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/strategic-response-model.schema.json",
-  "title": "Strategic Response Model",
+  "title": "Strategic Response Model Schema",
   "description": "Composite of the Strategic Response Model: triggers (what prompts change), rationales (why respond), strategic intents (proactive aspirations) and strategic responses (what is done). Each is defined in its own schema; this composite groups them for exchange.",
   "type": "object",
   "properties": {

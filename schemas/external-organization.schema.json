@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/external-organization.schema.json",
   "title": "External Organization Schema",
   "description": "Schema for representing third-party entities such as partners, regulators, and customers",
   "type": "object",
@@ -45,20 +46,24 @@
       "description": "Contact information for the external organization",
       "properties": {
         "primaryContact": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the primary contact"
         },
         "email": {
           "type": "string",
+          "description": "Contact email address",
           "format": "email"
         },
         "phone": {
-          "type": "string"
+          "type": "string",
+          "description": "Contact phone number"
         }
       },
       "additionalProperties": false
     },
     "website": {
       "type": "string",
+      "description": "Website of the organization",
       "format": "uri"
     }
   },

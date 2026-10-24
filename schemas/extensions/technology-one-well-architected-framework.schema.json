@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "TechnologyOneWellArchitectedFrameworkExtension",
+  "$id": "https://triodian.com/schemas/extensions/technology-one-well-architected-framework.schema.json",
+  "title": "TechnologyOne Well-Architected Framework Extension Schema",
   "description": "Schema extension for the Triodian Metamodel, detailing architectural principles and patterns inspired by the TechnologyOne Well-Architected Framework. Represents the application of TechnologyOne's Well-Architected principles within a technology solution.",
   "type": "object",
   "properties": {
@@ -191,7 +192,8 @@
             "description": "What the KPI measures."
           },
           "measurementFrequency": {
-            "type": "string"
+            "type": "string",
+            "description": "How often the KPI is measured"
           }
         },
         "required": [

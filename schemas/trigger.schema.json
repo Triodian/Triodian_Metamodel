@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/trigger.schema.json",
-  "title": "trigger",
+  "title": "Trigger Schema",
   "type": "object",
   "required": [
     "triggerID",
