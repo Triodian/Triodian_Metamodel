@@ -18,6 +18,7 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Products** – Tangible or intangible deliverables  
 - **Services** – Activities that create value through interaction  
 - **Customer** – Customer segments, with personas, journeys and relationships
+- **Model Risk Management** – A Risk sub-domain: model inventory, governance, validation, monitoring and regulatory framework mapping
 - **Cross-Domain Relationships** – Typed, directional links between entities in different domains
 - **Inter-unit Domain Relationships** – Links between units and domain artefacts  
 - **Strategic Response Model (SRM)** – How the organisation responds to change: Triggers, Rationales, Strategic Intents and Strategic Responses, each in its own schema and grouped by `strategic-response-model.schema.json`

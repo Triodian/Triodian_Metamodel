@@ -1,0 +1,28 @@
+{
+  "modelID": "MODEL-ECL-IFRS9-001",
+  "title": "IFRS 9 Wholesale ECL",
+  "description": "Expected credit loss model for wholesale portfolios.",
+  "modelType": "creditRisk/ECL_IFRS9",
+  "useCategory": "provisioning",
+  "orgUnitTitle": "Risk Analytics",
+  "orgUnitRoles": [
+    "Model Owner",
+    "Independent Validator",
+    "Approver"
+  ],
+  "modelOwner": "Head of Credit Modelling",
+  "regulatoryRelevance": [
+    "IFRS9",
+    "SR 11-7"
+  ],
+  "businessCriticality": "C1",
+  "status": "approved",
+  "relatedInformationAssets": [
+    "Loans_History",
+    "Macroeconomic_Scenarios"
+  ],
+  "supportsCapabilities": [
+    "Financial Reporting",
+    "Credit Risk Management"
+  ]
+}
