@@ -22,6 +22,7 @@
     {
       "title": "Temperature Readings",
       "description": "Temperature measurements from equipment sensors",
+      "purpose": "Detect overheating equipment early to prevent failures",
       "elementType": "Stream",
       "dataType": "FLOAT with timestamp and sensor ID",
       "constraints": "Range validation -50°C to 150°C",

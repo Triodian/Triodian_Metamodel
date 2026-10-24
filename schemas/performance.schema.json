@@ -286,7 +286,7 @@
       "type": "string",
       "description": "Documentation and knowledge management"
     },
-    "kpi": {
+    "performanceKPIs": {
       "type": "array",
       "description": "Key Performance Indicators",
       "items": {

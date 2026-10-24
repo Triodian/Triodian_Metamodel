@@ -30,6 +30,7 @@
     {
       "title": "Real-time Train Locations",
       "description": "Live GPS coordinates and status updates for all trains in the network",
+      "purpose": "Let partner applications show customers where trains are now",
       "featureType": "Core Feature",
       "priority": "Critical",
       "complexity": "Moderate"
@@ -37,6 +38,7 @@
     {
       "title": "Predictive Delay Analytics",
       "description": "Machine learning-powered predictions for potential delays and disruptions",
+      "purpose": "Warn partners of likely delays so they can adjust plans in advance",
       "featureType": "Premium Feature",
       "priority": "High",
       "complexity": "Complex"
