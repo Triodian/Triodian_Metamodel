@@ -476,6 +476,32 @@
       "items": {
         "$ref": "cross-domain-relationship.schema.json#/definitions/outgoingRelationship"
       }
+    },
+    "employeeEmpathyIndex": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): how empathetic employees perceive the organization to be",
+      "examples": [
+        "8.5/10"
+      ]
+    },
+    "cultureOfPsychologicalSafety": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether the culture promotes a safe environment for expressing concerns and vulnerability"
+    },
+    "leadershipEmpathyTraining": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether leadership development includes training on empathetic leadership and emotional intelligence"
+    },
+    "internalCommunicationEmpathyGuidelines": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether there are guidelines for empathetic communication across the organization"
+    },
+    "changeReadinessIndex": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): readiness for change, influenced by how well employee fears and concerns are addressed",
+      "examples": [
+        "75%"
+      ]
     }
   },
   "additionalProperties": false,
@@ -1043,8 +1069,12 @@
           "description": "Update process",
           "properties": {
             "reviewFrequency": {
-              "type": "string",
-              "description": "How often the framework is reviewed"
+              "description": "How often the framework is reviewed",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "lastReviewDate": {
               "type": "string",

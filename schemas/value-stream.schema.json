@@ -62,8 +62,12 @@
       "uniqueItems": true
     },
     "maturityLevel": {
-      "type": "string",
-      "description": "The current maturity level of the Value Stream"
+      "description": "The current maturity level of the Value Stream",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/maturityLevel"
+        }
+      ]
     },
     "toolsAndTechnologies": {
       "type": "string",

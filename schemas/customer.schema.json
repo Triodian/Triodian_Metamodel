@@ -159,8 +159,12 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
-            "description": "Type of dependency"
+            "description": "Type of dependency",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
             "description": "Type of domain this depends on",
@@ -225,6 +229,28 @@
     "strategicAlignment": {
       "type": "string",
       "description": "How this customer segment aligns with strategic goals"
+    },
+    "customerEmpathyScore": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): customers' perception of the organization's empathy",
+      "examples": [
+        "4.2/5"
+      ]
+    },
+    "customerJourneyEmotionalMapping": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether customer journeys are mapped to understand emotional touchpoints"
+    },
+    "clientTrustIndex": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): level of trust clients have in the organization",
+      "examples": [
+        "7/10"
+      ]
+    },
+    "feedbackLoopForEmotionalInsights": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether mechanisms capture and act on emotional feedback from customers"
     },
     "crossDomainRelationships": {
       "type": "array",

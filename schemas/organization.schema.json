@@ -31,6 +31,30 @@
         "SRC"
       ]
     },
+    "legalName": {
+      "type": "string",
+      "description": "Formal legal name of the organization",
+      "examples": [
+        "Deutsche Bahn Aktiengesellschaft"
+      ]
+    },
+    "registeredAddress": {
+      "type": "string",
+      "description": "Official registered address of the organization"
+    },
+    "incorporationDate": {
+      "type": "string",
+      "description": "Date the organization was legally formed",
+      "format": "date"
+    },
+    "jurisdictionOfEstablishment": {
+      "type": "string",
+      "description": "Legal jurisdiction where the organization is established",
+      "examples": [
+        "Germany",
+        "Delaware, United States"
+      ]
+    },
     "orgType": {
       "type": "string",
       "description": "Type of organization",

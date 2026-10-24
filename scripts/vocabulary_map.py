@@ -63,7 +63,7 @@ FIELD_CANDIDATES = {
 
 # Fields whose meaning can't be inferred from their values alone.
 FIELD_OVERRIDES = {
-    ("capabilities.schema.json", "/properties/targetMaturityLevel"): "maturityLevel",
+    ("capability.schema.json", "/properties/targetMaturityLevel"): "maturityLevel",
     ("channel.schema.json", "/properties/channelMaturity/properties/overallMaturity"): "maturityLevel",
     ("channel.schema.json", "/properties/channelPartnerDetails/items/properties/partnerDevelopmentStrategy/properties/investmentLevel"): "simpleLevel",
     ("channel.schema.json", "/properties/channelPartners/items/properties/relationshipStrength"): "ratingLevel",
@@ -117,14 +117,14 @@ FIELD_OVERRIDES = {
     ("supply-chain.schema.json", "/definitions/supplierNetwork/properties/riskProfile/properties/overallRiskLevel"): "riskLevel",
     ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/automationLevel/properties/overallAutomation"): "automationLevel",
     ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/processControls/items/properties/controlEffectiveness"): "effectiveness",
-    ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/processOptimizationOpportunities/items/properties/implementationComplexity"): "fivePointLevel",
+    ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/processOptimizationOpportunities/items/properties/implementationComplexity"): "complexity",
     ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/standardization/properties/complianceLevel"): "fivePointLevel",
     ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/technologySupport/items/properties/effectivenessAssessment"): "effectiveness",
     ("supply-chain.schema.json", "/properties/flexibilityRating/properties/mixFlexibility"): "fivePointLevel",
     ("supply-chain.schema.json", "/properties/flexibilityRating/properties/newProductFlexibility"): "fivePointLevel",
     ("supply-chain.schema.json", "/properties/flexibilityRating/properties/overallRating"): "fivePointLevel",
     ("supply-chain.schema.json", "/properties/flexibilityRating/properties/volumeFlexibility"): "fivePointLevel",
-    ("supply-chain.schema.json", "/properties/improvementOpportunities/items/properties/implementationComplexity"): "fivePointLevel",
+    ("supply-chain.schema.json", "/properties/improvementOpportunities/items/properties/implementationComplexity"): "complexity",
     ("supply-chain.schema.json", "/properties/improvementOpportunities/items/properties/potentialImpact"): "ratingLevel",
     ("supply-chain.schema.json", "/properties/maturityLevel/properties/overallMaturity"): "maturityLevel",
     ("supply-chain.schema.json", "/properties/maturityLevel/properties/performanceManagement"): "maturityLevel",
@@ -201,6 +201,7 @@ SYNONYMS["domainType"].update({"standard": ("policy", "lossy"), "process": ("cap
                                "services": "service", "stakeholders": "stakeholder", "valuestreams": "valueStream",
                                "riskmanagement": "risk", "policies": "policy", "strategies": "strategy"})
 SYNONYMS["frequency"]["yearly"] = "annually"
+SYNONYMS["frequency"]["annual"] = "annually"
 
 # Fields that reuse a generic name for a domain-specific idea. They keep their own list,
 # but should be renamed so they no longer look like the shared concept.

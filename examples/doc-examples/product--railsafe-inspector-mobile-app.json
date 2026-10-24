@@ -10,8 +10,7 @@
   "businessModel": "internalTool",
   "lifecycleStage": "growth",
   "customerSegments": [
-    "Field Inspectors",
-    "Maintenance Teams"
+    "internal"
   ],
   "channels": [
     "mobileApp",

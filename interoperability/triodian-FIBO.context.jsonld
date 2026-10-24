@@ -395,6 +395,102 @@
       "rdfs:comment": "The channel through which a product or service is delivered.",
       "triodian:domain": "Products, Services, Channel",
       "triodian:mappedToFIBO": "fibo-fbc-fep-rsvc:isProvidedThrough"
+    },
+    {
+      "@id": "triodian:industryAnalysis",
+      "@type": "rdf:Property",
+      "rdfs:label": "industryAnalysis",
+      "rdfs:comment": "Aggregated market intelligence",
+      "triodian:domain": "Market",
+      "triodian:mappedToFIBO": "fibo-ind-ei-ei:hasMarketInsight"
+    },
+    {
+      "@id": "triodian:identifier",
+      "@type": "rdf:Property",
+      "rdfs:label": "identifier",
+      "rdfs:comment": "Unique identifier for any entity",
+      "triodian:domain": "All Domains",
+      "triodian:mappedToFIBO": "fibo-fnd-utl-av:hasTag"
+    },
+    {
+      "@id": "triodian:validUntil",
+      "@type": "rdf:Property",
+      "rdfs:label": "validUntil",
+      "rdfs:comment": "Date when an entity or agreement ceases to be effective",
+      "triodian:domain": "Trigger",
+      "triodian:mappedToFIBO": "fibo-fnd-dt-fd:hasExpirationDate"
+    },
+    {
+      "@id": "triodian:legalName",
+      "@type": "rdf:Property",
+      "rdfs:label": "legalName",
+      "rdfs:comment": "Formal legal name of an organization",
+      "triodian:domain": "Organization",
+      "triodian:mappedToFIBO": "fibo-be-le-fbo:hasLegalName"
+    },
+    {
+      "@id": "triodian:registeredAddress",
+      "@type": "rdf:Property",
+      "rdfs:label": "registeredAddress",
+      "rdfs:comment": "Official physical address for an organization",
+      "triodian:domain": "Organization",
+      "triodian:mappedToFIBO": "fibo-fnd-plc-loc:hasPhysicalAddress"
+    },
+    {
+      "@id": "triodian:incorporationDate",
+      "@type": "rdf:Property",
+      "rdfs:label": "incorporationDate",
+      "rdfs:comment": "Date an organization was legally formed",
+      "triodian:domain": "Organization",
+      "triodian:mappedToFIBO": "fibo-be-le-fbo:dateOfFormation"
+    },
+    {
+      "@id": "triodian:jurisdictionOfEstablishment",
+      "@type": "rdf:Property",
+      "rdfs:label": "jurisdictionOfEstablishment",
+      "rdfs:comment": "Legal jurisdiction where the organization is established",
+      "triodian:domain": "Organization",
+      "triodian:mappedToFIBO": "fibo-fnd-plc-loc:hasJurisdiction"
+    },
+    {
+      "@id": "triodian:sources",
+      "@type": "rdf:Property",
+      "rdfs:label": "sources",
+      "rdfs:comment": "System that originates or produces information",
+      "triodian:domain": "Information",
+      "triodian:mappedToFIBO": "fibo-fnd-agr-agr:isProducedBy"
+    },
+    {
+      "@id": "triodian:scope",
+      "@type": "rdf:Property",
+      "rdfs:label": "scope",
+      "rdfs:comment": "The range or extent of an initiative or policy",
+      "triodian:domain": "Initiatives, Policy",
+      "triodian:mappedToFIBO": "fibo-fnd-agr-agr:appliesTo"
+    },
+    {
+      "@id": "triodian:dataOwner",
+      "@type": "rdf:Property",
+      "rdfs:label": "dataOwner",
+      "rdfs:comment": "The party responsible for the data",
+      "triodian:domain": "Information",
+      "triodian:mappedToFIBO": "fibo-fnd-rel-rel:isOwnedBy"
+    },
+    {
+      "@id": "triodian:dataSteward",
+      "@type": "rdf:Property",
+      "rdfs:label": "dataSteward",
+      "rdfs:comment": "The party responsible for the quality and governance of data",
+      "triodian:domain": "Information",
+      "triodian:mappedToFIBO": "fibo-fnd-rel-rel:hasSteward"
+    },
+    {
+      "@id": "triodian:enforcedBy",
+      "@type": "rdf:Property",
+      "rdfs:label": "enforcedBy",
+      "rdfs:comment": "The party responsible for enforcing the policy",
+      "triodian:domain": "Policy",
+      "triodian:mappedToFIBO": "fibo-fnd-agr-agr:hasPartyResponsibleFor"
     }
   ]
 }

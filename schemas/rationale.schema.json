@@ -296,7 +296,8 @@
             "industryLeadership",
             "fastFollower",
             "nicheDominance",
-            "strategicAlliance"
+            "strategicAlliance",
+            "innovationLeadership"
           ],
           "description": "Type of competitive positioning strategy"
         },

@@ -15,7 +15,8 @@ Checks, in order:
      https://triodian.com/schemas/, it has a title, and every property has a description.
   5. Every $ref resolves, whether local (#/...) or to another schema file.
   6. Every record type requires an identifier, a property named "<entity>ID".
-  7. Every example embedded in a schema's top-level "examples" validates against that schema.
+  7. Every example embedded in a schema's top-level "examples" validates against that schema, and
+     every JSON block in examples/*.md tagged with a schema (```json <file>.schema.json) validates.
   8. Every interoperability mapping (interoperability/*.jsonld) is valid JSON-LD, and every
      Triodian term it maps is a property, element type or domain defined in the schemas.
   9. (--doc-examples) Every worked example from the documentation, listed in
@@ -60,13 +61,13 @@ CAMEL = re.compile(r"[a-z][a-zA-Z0-9]*")
 CAMEL_VALUE = re.compile(r"[a-z0-9][a-zA-Z0-9]*")  # enumerated values may start with a digit, e.g. 24x7
 # Schema file for each domain value that can appear in a relationship.
 DOMAIN_FILES = {"information": "information.schema.json", "performance": "performance.schema.json",
-                "product": "products.schema.json", "service": "services.schema.json"}
+                "product": "product.schema.json", "service": "service.schema.json"}
 # Schemas that are not a domain record of their own.
 NOT_RECORDS = {
     # shared vocabulary
     "common.schema.json",
     # composites that group records defined in other schemas
-    "external-organizations-composite.schema.json",
+    "external-organization-composite.schema.json",
     "strategic-response-model.schema.json",
     "extensions/business-analysis.schema.json",
     # extension describing an aspect of a Technology record
@@ -322,7 +323,7 @@ def validate_instance(schema_doc: dict, uri: str, pointer: str, instance, regist
 
 
 def check_embedded_examples(docs, registry, uris) -> None:
-    print("7. Embedded schema examples validate")
+    print("7. Embedded schema examples and Markdown examples validate")
     for f, d in docs.items():
         if f not in uris or d.get("type") != "object":
             continue
@@ -331,6 +332,25 @@ def check_embedded_examples(docs, registry, uris) -> None:
                 continue
             for msg in validate_instance(d, uris[f], "", ex, registry):
                 fail(f"{rel(f)} example[{i}]{msg}")
+    check_markdown_examples(docs, registry, uris)
+
+
+def check_markdown_examples(docs, registry, uris) -> None:
+    by_name = {f.relative_to(SCHEMA_DIR).as_posix(): f for f in docs}
+    for md in sorted((ROOT / "examples").glob("*.md")):
+        for n, m in enumerate(re.finditer(r"```json[ \t]+(\S+\.schema\.json)[ \t]*\n(.*?)```", md.read_text(encoding="utf-8"), re.S), 1):
+            name, body = m.group(1), m.group(2)
+            if name not in by_name:
+                fail(f"{rel(md)} block {n}: unknown schema {name}")
+                continue
+            try:
+                instance = json.loads(body)
+            except json.JSONDecodeError as e:
+                fail(f"{rel(md)} block {n}: invalid JSON: {e}")
+                continue
+            f = by_name[name]
+            for msg in validate_instance(docs[f], uris[f], "", instance, registry):
+                fail(f"{rel(md)} block {n} -> {name}{msg}")
 
 
 def check_doc_examples(docs, registry, uris) -> None:
