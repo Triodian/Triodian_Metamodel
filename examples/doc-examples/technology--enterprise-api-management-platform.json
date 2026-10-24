@@ -27,14 +27,14 @@
   ],
   "costs": {
     "implementationCost": "$1.8M",
-    "annualOperatingCost": "$750K licensing + $450K operations"
+    "annualOperatingCost": "$1.2M ($750K licensing, $450K operations)"
   },
   "risks": [
     "API security vulnerabilities",
     "Scalability limitations during peak loads",
     "Developer adoption challenges"
   ],
-  "securityClassification": "restricted",
+  "securityClassification": "high",
   "performanceRequirements": "99.99% gateway availability, <100ms latency overhead, 5000 TPS capacity",
   "complianceRequirements": [
     "SOC2 compliance",

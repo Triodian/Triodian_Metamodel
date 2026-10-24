@@ -215,26 +215,31 @@
           "api",
           "subscriptionService",
           "marketplace",
-          "internalDistribution",
-          "developerPortal"
+          "internalDistribution"
         ],
         "description": "Distribution or delivery channel"
       }
     },
     "customerSegments": {
       "type": "array",
-      "description": "Names of the customer segments the product targets",
+      "description": "Types of customer the product targets. Specific segments are records in the Customer domain, referenced by customerSegmentIDs.",
       "items": {
-        "type": "string"
-      },
-      "examples": [
-        [
+        "type": "string",
+        "enum": [
           "enterprise",
           "smb",
           "government",
-          "consumer"
-        ]
-      ]
+          "consumer",
+          "developer",
+          "partner",
+          "startup",
+          "education",
+          "healthcare",
+          "financial",
+          "internal"
+        ],
+        "description": "Customer type"
+      }
     },
     "customerSegmentIDs": {
       "type": "array",

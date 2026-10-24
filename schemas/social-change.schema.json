@@ -555,11 +555,11 @@
         "enum": [
           "preRevolutionaryConditions",
           "grievanceAccumulation",
-          "revolutionaryMobilization",
+          "mobilization",
           "activeRevolution",
           "confrontation",
           "systemOverthrow",
-          "revolutionaryConsolidation",
+          "consolidation",
           "reconstruction",
           "institutionBuilding",
           "colonialResistance",

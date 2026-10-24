@@ -15,8 +15,7 @@
     "developer"
   ],
   "channels": [
-    "api",
-    "developerPortal"
+    "api"
   ],
   "pricingStrategy": "usageBased",
   "complianceRequirements": [
