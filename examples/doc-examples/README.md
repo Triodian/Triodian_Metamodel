@@ -32,6 +32,8 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **Cross-domain relationships are records with identifiers.** The documentation's three relationship examples (nine relationships) are checked one relationship per file, each given a `relationshipID` (`CDR-001` to `CDR-009`). Domains are camelCase (`"Value Stream"` → `"valueStream"`), and `metadata.impact` is named `impactArea`, because it classifies the area affected rather than a magnitude. `CDR-008` uses `"Compliance"` as its source domain, which is not a domain in the metamodel, so it still fails.
 
+**Inter-unit relationships follow the repository's conventions.** Each example has a `relationshipID` (`IUR-001`, `IUR-002`). The organization unit is `orgUnitTitle` (documented as `organizationUnit`), matching every other domain. Domains and roles are camelCase (`"Value Stream"` → `"valueStream"`, `"Contributing"` → `"contributing"`).
+
 ## Not included
 
 There is no schema in the repository yet for:
