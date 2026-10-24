@@ -257,13 +257,18 @@
             ]
           },
           "relationshipStrength": {
-            "type": "string",
             "description": "Strength of partnership",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "strategic"
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/ratingLevel"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "strategic"
+                ],
+                "description": "Domain-specific values in addition to the shared list"
+              }
             ]
           },
           "coverageContribution": {
@@ -334,15 +339,18 @@
       "description": "Development stage of the channel",
       "properties": {
         "overallMaturity": {
-          "type": "string",
           "description": "Overall maturity level",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "advanced",
-            "optimized"
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "advanced"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
           ]
         },
         "maturityByType": {
@@ -442,12 +450,11 @@
                 "description": "Area of investment focus"
               },
               "investmentLevel": {
-                "type": "string",
                 "description": "Level of investment",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/simpleLevel"
+                  }
                 ]
               },
               "timeframe": {
@@ -1320,12 +1327,11 @@
                 "description": "Where partner development is focused"
               },
               "investmentLevel": {
-                "type": "string",
                 "description": "Level of investment in the partner",
-                "enum": [
-                  "Low",
-                  "Medium",
-                  "High"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/simpleLevel"
+                  }
                 ]
               }
             },

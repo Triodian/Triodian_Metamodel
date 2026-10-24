@@ -127,14 +127,11 @@
       ]
     },
     "targetMaturityLevel": {
-      "type": "string",
       "description": "Desired future maturity level",
-      "enum": [
-        "Level 1 - Initial",
-        "Level 2 - Repeatable",
-        "Level 3 - Defined",
-        "Level 4 - Managed",
-        "Level 5 - Optimizing"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/maturityLevel"
+        }
       ]
     },
     "toolsAndTechnologies": {
@@ -553,7 +550,7 @@
       "inputs": "Track geometry data, rail wear measurements, historical defect data",
       "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
       "maturityLevel": "managed",
-      "targetMaturityLevel": "Level 5 - Optimizing",
+      "targetMaturityLevel": "optimizing",
       "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
       "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
       "investmentCategory": "Mixed",
@@ -628,7 +625,7 @@
       "capabilityType": "Innovation",
       "businessDomain": "Strategy & Planning",
       "maturityLevel": "defined",
-      "targetMaturityLevel": "Level 4 - Managed",
+      "targetMaturityLevel": "managed",
       "investmentCategory": "CAPEX",
       "criticality": "high",
       "scalability": "Moderately Scalable"

@@ -9,7 +9,7 @@
     {
       "sourceName": "Anonymous Product Acquisition Network",
       "sourceType": "Informal networks",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Manual research",
       "cost": "$45,000 per quarter",
       "complianceStatus": "underReview"
@@ -17,7 +17,7 @@
     {
       "sourceName": "In-house Engineering Teardown Reports",
       "sourceType": "Internal monitoring",
-      "reliabilityRating": "High",
+      "reliabilityRating": "high",
       "collectionMethod": "Manual research",
       "cost": "Internal resource cost",
       "complianceStatus": "compliant"
@@ -25,7 +25,7 @@
     {
       "sourceName": "Secondary Component Supply Chain Disclosures",
       "sourceType": "Public data",
-      "reliabilityRating": "Medium",
+      "reliabilityRating": "medium",
       "collectionMethod": "Manual research",
       "cost": "No additional cost",
       "complianceStatus": "compliant"

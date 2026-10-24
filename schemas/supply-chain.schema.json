@@ -262,47 +262,35 @@
       "description": "Adaptability to change",
       "properties": {
         "overallRating": {
-          "type": "string",
           "description": "Overall flexibility assessment",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "volumeFlexibility": {
-          "type": "string",
           "description": "Ability to adjust volumes",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "mixFlexibility": {
-          "type": "string",
           "description": "Ability to adjust product mix",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "newProductFlexibility": {
-          "type": "string",
           "description": "Ability to introduce new products",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "improvementFocus": {
@@ -317,58 +305,43 @@
       "description": "Ability to withstand disruption",
       "properties": {
         "overallRating": {
-          "type": "string",
           "description": "Overall resilience assessment",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "redundancyLevel": {
-          "type": "string",
           "description": "Level of built-in redundancy",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "diversificationLevel": {
-          "type": "string",
           "description": "Level of supplier/location diversification",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "visibilityLevel": {
-          "type": "string",
           "description": "Level of supply chain visibility",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "recoveryCapability": {
-          "type": "string",
           "description": "Ability to recover from disruption",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "resilienceInvestments": {
@@ -386,14 +359,11 @@
       "description": "Supply chain risk characteristics",
       "properties": {
         "overallRiskLevel": {
-          "type": "string",
           "description": "Aggregate risk assessment",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskLevel"
+            }
           ]
         },
         "keyRiskFactors": {
@@ -434,14 +404,11 @@
       "description": "Environmental and social performance",
       "properties": {
         "overallRating": {
-          "type": "string",
           "description": "Overall sustainability assessment",
-          "enum": [
-            "very-low",
-            "low",
-            "moderate",
-            "high",
-            "very-high"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/fivePointLevel"
+            }
           ]
         },
         "carbonFootprint": {
@@ -628,36 +595,27 @@
       "description": "Current development stage",
       "properties": {
         "overallMaturity": {
-          "type": "string",
           "description": "Overall supply chain maturity",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "optimizing"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            }
           ]
         },
         "processMaturity": {
-          "type": "string",
           "description": "Process management maturity",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "optimizing"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            }
           ]
         },
         "performanceManagement": {
-          "type": "string",
           "description": "Performance management maturity",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "optimizing"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            }
           ]
         },
         "maturityAssessmentDate": {
@@ -683,23 +641,26 @@
             "description": "Description of opportunity"
           },
           "potentialImpact": {
-            "type": "string",
             "description": "Potential business impact",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "transformative"
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/ratingLevel"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "transformative"
+                ],
+                "description": "Domain-specific values in addition to the shared list"
+              }
             ]
           },
           "implementationComplexity": {
-            "type": "string",
             "description": "Complexity of implementation",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "very-high"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/fivePointLevel"
+              }
             ]
           },
           "status": {
@@ -1226,14 +1187,11 @@
           "description": "Risk characteristics of supplier network",
           "properties": {
             "overallRiskLevel": {
-              "type": "string",
               "description": "Overall risk assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/riskLevel"
+                }
               ]
             },
             "riskCategories": {
@@ -1691,13 +1649,11 @@
                 "description": "Role responsible for this control"
               },
               "controlEffectiveness": {
-                "type": "string",
                 "description": "Assessment of effectiveness",
-                "enum": [
-                  "ineffective",
-                  "partially-effective",
-                  "effective",
-                  "highly-effective"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/effectiveness"
+                  }
                 ]
               }
             },
@@ -1855,13 +1811,11 @@
                 "description": "Benefits of implementation"
               },
               "implementationComplexity": {
-                "type": "string",
                 "description": "Complexity to implement",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high",
-                  "very-high"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/fivePointLevel"
+                  }
                 ]
               },
               "implementationStatus": {
@@ -1903,13 +1857,11 @@
                 ]
               },
               "effectivenessAssessment": {
-                "type": "string",
                 "description": "Assessment of effectiveness",
-                "enum": [
-                  "ineffective",
-                  "partially-effective",
-                  "effective",
-                  "highly-effective"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/effectiveness"
+                  }
                 ]
               }
             },
@@ -1921,13 +1873,11 @@
           "description": "Level of process automation",
           "properties": {
             "overallAutomation": {
-              "type": "string",
               "description": "Overall automation assessment",
-              "enum": [
-                "manual",
-                "partially-automated",
-                "mostly-automated",
-                "fully-automated"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/automationLevel"
+                }
               ]
             },
             "automationByStep": {
@@ -1989,13 +1939,11 @@
               }
             },
             "complianceLevel": {
-              "type": "string",
               "description": "Adherence to standards",
-              "enum": [
-                "low",
-                "medium",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             }
           },
@@ -2588,47 +2536,35 @@
           "description": "Adaptability of the logistics network to change",
           "properties": {
             "overallFlexibility": {
-              "type": "string",
               "description": "Overall flexibility assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "volumeFlexibility": {
-              "type": "string",
               "description": "Ability to handle volume changes",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "routingFlexibility": {
-              "type": "string",
               "description": "Ability to change routing",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "modeFlexibility": {
-              "type": "string",
               "description": "Ability to change transportation modes",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "limitingFactors": {
@@ -2650,14 +2586,11 @@
           "description": "Visibility into logistics network operations",
           "properties": {
             "overallVisibility": {
-              "type": "string",
               "description": "Overall visibility assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "trackingCapabilities": {
@@ -2805,14 +2738,11 @@
           "description": "Ability of the network to withstand disruptions",
           "properties": {
             "resilienceRating": {
-              "type": "string",
               "description": "Overall resilience assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "vulnerabilityPoints": {
@@ -3182,14 +3112,11 @@
           "description": "Tracking capabilities for inventory",
           "properties": {
             "visibilityLevel": {
-              "type": "string",
               "description": "Overall visibility assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/fivePointLevel"
+                }
               ]
             },
             "trackingMethods": {
@@ -3244,14 +3171,11 @@
           "description": "Risk of inventory depletion",
           "properties": {
             "overallRisk": {
-              "type": "string",
               "description": "Overall stockout risk assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/riskLevel"
+                }
               ]
             },
             "serviceLevel": {
@@ -3304,14 +3228,11 @@
           "description": "Risk of inventory obsolescence",
           "properties": {
             "overallRisk": {
-              "type": "string",
               "description": "Overall obsolescence risk assessment",
-              "enum": [
-                "very-low",
-                "low",
-                "moderate",
-                "high",
-                "very-high"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/riskLevel"
+                }
               ]
             },
             "obsolescenceRate": {

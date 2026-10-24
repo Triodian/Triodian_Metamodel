@@ -77,7 +77,7 @@
   "counterRevolutionaryForces": [
     {
       "forceType": "State Security",
-      "strength": "Medium",
+      "strength": "medium",
       "tactics": [
         "Surveillance",
         "Intimidation",

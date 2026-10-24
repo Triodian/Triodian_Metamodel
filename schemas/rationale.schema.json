@@ -41,32 +41,10 @@
     },
     "linkedDomains": {
       "type": "array",
+      "description": "Business architecture domains influenced or justified by this rationale",
       "items": {
-        "type": "string",
-        "enum": [
-          "Strategy",
-          "Capabilities",
-          "Initiatives",
-          "Policy",
-          "Information",
-          "Performance",
-          "Products",
-          "Services",
-          "Stakeholder",
-          "Value_Stream",
-          "Customer",
-          "Market",
-          "Finance",
-          "Risk_Management",
-          "Supply_Chain",
-          "Innovation",
-          "Sustainability",
-          "People",
-          "Technology",
-          "Channel"
-        ]
-      },
-      "description": "Business architecture domains influenced or justified by this rationale"
+        "$ref": "common.schema.json#/definitions/domainType"
+      }
     },
     "rationaleType": {
       "type": "string",
@@ -581,41 +559,43 @@
       "type": "object",
       "properties": {
         "impactType": {
-          "type": "string",
-          "enum": [
-            "operational",
-            "financial",
-            "regulatory",
-            "reputational",
-            "strategic",
-            "cyber",
-            "environmental",
-            "health_safety"
-          ],
-          "description": "Type of risk impact"
+          "description": "Type of risk impact",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskCategory"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "cyber",
+                "healthSafety"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "impactSeverity": {
-          "type": "string",
-          "enum": [
-            "negligible",
-            "minor",
-            "moderate",
-            "significant",
-            "severe",
-            "critical"
-          ],
-          "description": "Severity of impact"
+          "description": "Severity of impact",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/impactMagnitude"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "critical"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "impactLikelihood": {
-          "type": "string",
-          "enum": [
-            "very_low",
-            "low",
-            "moderate",
-            "high",
-            "very_high"
-          ],
-          "description": "Likelihood of impact"
+          "description": "Likelihood of impact",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/likelihood"
+            }
+          ]
         },
         "confidenceLevel": {
           "type": "integer",
@@ -662,26 +642,27 @@
           "description": "Areas of supply chain impacted"
         },
         "impactSeverity": {
-          "type": "string",
-          "enum": [
-            "negligible",
-            "minor",
-            "moderate",
-            "significant",
-            "severe",
-            "critical"
-          ],
-          "description": "Severity of impact"
+          "description": "Severity of impact",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/impactMagnitude"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "critical"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "impactTimeframe": {
-          "type": "string",
-          "enum": [
-            "immediate",
-            "short-term",
-            "medium-term",
-            "long-term"
-          ],
-          "description": "Timeframe for impact"
+          "description": "Timeframe for impact",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/timeHorizon"
+            }
+          ]
         }
       },
       "description": "Assessment of supply chain implications",
@@ -866,13 +847,12 @@
           "description": "Effects on customer journey"
         },
         "implementationComplexity": {
-          "type": "string",
-          "enum": [
-            "Low",
-            "Medium",
-            "High"
-          ],
-          "description": "Complexity of implementation"
+          "description": "Complexity of implementation",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/simpleLevel"
+            }
+          ]
         }
       },
       "description": "Assessment of channel implications",

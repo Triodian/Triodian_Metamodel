@@ -385,14 +385,11 @@
       "description": "Technology maturity assessment",
       "properties": {
         "overallMaturity": {
-          "type": "string",
           "description": "Overall maturity rating",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "optimizing"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            }
           ]
         },
         "maturityAssessmentDate": {

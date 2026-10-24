@@ -301,14 +301,19 @@
           "description": "Description of the solution option or design refinement."
         },
         "feasibilityRating": {
-          "type": "string",
-          "enum": [
-            "High",
-            "Medium",
-            "Low",
-            "Not Feasible"
-          ],
-          "description": "Assessment of the feasibility of the solution option."
+          "description": "Assessment of the feasibility of the solution option.",
+          "anyOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/ratingLevel"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "notFeasible"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "optionComparison": {
           "type": "array",

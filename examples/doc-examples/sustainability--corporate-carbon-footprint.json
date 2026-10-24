@@ -122,7 +122,7 @@
       {
         "regulationName": "Carbon Border Adjustment Mechanism",
         "jurisdiction": "European Union",
-        "expectedImpact": "moderate",
+        "expectedImpact": "medium",
         "preparednessLevel": "planning stage"
       }
     ]

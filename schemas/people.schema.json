@@ -349,13 +349,11 @@
           }
         },
         "alignmentStrength": {
-          "type": "string",
           "description": "Strength of strategic alignment",
-          "enum": [
-            "low",
-            "moderate",
-            "high",
-            "critical"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            }
           ]
         }
       },
@@ -883,13 +881,11 @@
                 "description": "Name of the supporting factor"
               },
               "contributionLevel": {
-                "type": "string",
                 "description": "How much this enables progress",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/ratingLevel"
+                  }
                 ]
               }
             },
@@ -1144,13 +1140,11 @@
           "description": "Strategic importance",
           "properties": {
             "criticalityLevel": {
-              "type": "string",
               "description": "How important this knowledge is",
-              "enum": [
-                "low",
-                "moderate",
-                "high",
-                "critical"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/criticality"
+                }
               ]
             },
             "businessImpact": {
