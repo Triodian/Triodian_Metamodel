@@ -389,14 +389,11 @@
                 "description": "Name of risk factor"
               },
               "riskLevel": {
-                "type": "string",
                 "description": "Level of this risk",
-                "enum": [
-                  "very-low",
-                  "low",
-                  "moderate",
-                  "high",
-                  "very-high"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/riskLevel"
+                  }
                 ]
               },
               "mitigationApproach": {
@@ -508,13 +505,11 @@
             "description": "Performance target"
           },
           "trend": {
-            "type": "string",
             "description": "Performance trend",
-            "enum": [
-              "improving",
-              "stable",
-              "declining",
-              "fluctuating"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/performanceTrend"
+              }
             ]
           }
         }
@@ -535,14 +530,11 @@
             "description": "Purpose in supply chain"
           },
           "implementationStatus": {
-            "type": "string",
             "description": "Status of implementation",
-            "enum": [
-              "planned",
-              "implementing",
-              "operational",
-              "upgrading",
-              "retiring"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/implementationStatus"
+              }
             ]
           },
           "businessImpact": {
@@ -685,14 +677,11 @@
             ]
           },
           "status": {
-            "type": "string",
             "description": "Current status",
-            "enum": [
-              "identified",
-              "evaluating",
-              "planning",
-              "implementing",
-              "completed"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/workStatus"
+              }
             ]
           }
         }
@@ -703,13 +692,11 @@
       "description": "Significance to business strategy",
       "properties": {
         "importanceLevel": {
-          "type": "string",
           "description": "Level of strategic importance",
-          "enum": [
-            "low",
-            "medium",
-            "high",
-            "critical"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/importance"
+            }
           ]
         },
         "strategicContribution": {
@@ -777,23 +764,11 @@
             "description": "Type of dependency"
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain this depends on",
-            "enum": [
-              "Capability",
-              "Service",
-              "Product",
-              "Information",
-              "Value Stream",
-              "Strategy",
-              "Organization",
-              "Technology",
-              "Initiative",
-              "Customer",
-              "Market",
-              "Finance",
-              "Risk",
-              "Other"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              }
             ]
           },
           "entityID": {
@@ -1030,13 +1005,11 @@
                 "description": "Name of supplier"
               },
               "criticality": {
-                "type": "string",
                 "description": "Importance to operations",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/criticality"
+                  }
                 ]
               },
               "rationale": {
@@ -1061,12 +1034,11 @@
                 "description": "Name of critical supplier"
               },
               "criticality": {
-                "type": "string",
                 "description": "Level of criticality",
-                "enum": [
-                  "high",
-                  "very-high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/criticality"
+                  }
                 ]
               },
               "criticalityRationale": {
@@ -1224,14 +1196,11 @@
                     "description": "Name of risk category"
                   },
                   "riskLevel": {
-                    "type": "string",
                     "description": "Level of risk in this category",
-                    "enum": [
-                      "very-low",
-                      "low",
-                      "moderate",
-                      "high",
-                      "very-high"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/riskLevel"
+                      }
                     ]
                   },
                   "mitigationApproach": {
@@ -1428,13 +1397,11 @@
                 "description": "Benefits of initiative"
               },
               "status": {
-                "type": "string",
                 "description": "Current status",
-                "enum": [
-                  "planned",
-                  "in-progress",
-                  "completed",
-                  "ongoing"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/workStatus"
+                  }
                 ]
               }
             }
@@ -1693,13 +1660,11 @@
                 "description": "Description of dependency"
               },
               "criticality": {
-                "type": "string",
                 "description": "Importance of dependency",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/criticality"
+                  }
                 ]
               }
             }
@@ -1765,25 +1730,26 @@
                 "description": "Description of risk"
               },
               "likelihood": {
-                "type": "string",
                 "description": "Probability of occurrence",
-                "enum": [
-                  "very-low",
-                  "low",
-                  "moderate",
-                  "high",
-                  "very-high"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/likelihood"
+                  }
                 ]
               },
               "impact": {
-                "type": "string",
                 "description": "Potential impact",
-                "enum": [
-                  "minimal",
-                  "moderate",
-                  "significant",
-                  "severe",
-                  "critical"
+                "anyOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/impactMagnitude"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "critical"
+                    ],
+                    "description": "Domain-specific values in addition to the shared list"
+                  }
                 ]
               },
               "mitigationStrategy": {
@@ -1822,14 +1788,11 @@
                 ]
               },
               "implementationStatus": {
-                "type": "string",
                 "description": "Current status",
-                "enum": [
-                  "identified",
-                  "evaluating",
-                  "planned",
-                  "implementing",
-                  "completed"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/implementationStatus"
+                  }
                 ]
               }
             }
@@ -1854,13 +1817,11 @@
                 "description": "What technology supports"
               },
               "implementationStatus": {
-                "type": "string",
                 "description": "Status of implementation",
-                "enum": [
-                  "planned",
-                  "implementing",
-                  "operational",
-                  "retiring"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/implementationStatus"
+                  }
                 ]
               },
               "effectivenessAssessment": {
@@ -1901,13 +1862,11 @@
                     "description": "Process step ID"
                   },
                   "automationLevel": {
-                    "type": "string",
                     "description": "Level of automation for this step",
-                    "enum": [
-                      "manual",
-                      "partially-automated",
-                      "mostly-automated",
-                      "fully-automated"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/automationLevel"
+                      }
                     ]
                   },
                   "automationTechnology": {
@@ -1993,14 +1952,11 @@
           "description": "Maturity assessment of the process",
           "properties": {
             "maturityLevel": {
-              "type": "string",
               "description": "Current maturity level",
-              "enum": [
-                "initial",
-                "managed",
-                "defined",
-                "quantitatively-managed",
-                "optimizing"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/maturityLevel"
+                }
               ]
             },
             "maturityAssessmentDate": {
@@ -2708,13 +2664,11 @@
                     "description": "Anticipated benefits"
                   },
                   "implementationStatus": {
-                    "type": "string",
                     "description": "Current status",
-                    "enum": [
-                      "planning",
-                      "implementing",
-                      "completed",
-                      "ongoing"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/implementationStatus"
+                      }
                     ]
                   }
                 }
@@ -2805,13 +2759,11 @@
                 "description": "Measures to ensure compliance"
               },
               "complianceStatus": {
-                "type": "string",
                 "description": "Current compliance status",
-                "enum": [
-                  "compliant",
-                  "partially-compliant",
-                  "non-compliant",
-                  "in-progress"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/complianceStatus"
+                  }
                 ]
               }
             }
@@ -3185,13 +3137,11 @@
                     "description": "Name of item"
                   },
                   "riskLevel": {
-                    "type": "string",
                     "description": "Level of stockout risk",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high",
-                      "very-high"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/riskLevel"
+                      }
                     ]
                   },
                   "mitigationStrategy": {
@@ -3241,13 +3191,11 @@
                     "description": "Name of item"
                   },
                   "riskLevel": {
-                    "type": "string",
                     "description": "Level of obsolescence risk",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high",
-                      "very-high"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/riskLevel"
+                      }
                     ]
                   },
                   "mitigationStrategy": {
@@ -3307,13 +3255,11 @@
                     "description": "Anticipated benefits"
                   },
                   "implementationStatus": {
-                    "type": "string",
                     "description": "Current status",
-                    "enum": [
-                      "planning",
-                      "implementing",
-                      "completed",
-                      "ongoing"
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/implementationStatus"
+                      }
                     ]
                   }
                 }
@@ -3351,13 +3297,11 @@
                 "description": "Target performance"
               },
               "trend": {
-                "type": "string",
                 "description": "Performance trend",
-                "enum": [
-                  "improving",
-                  "stable",
-                  "declining",
-                  "fluctuating"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/performanceTrend"
+                  }
                 ]
               },
               "benchmarks": {

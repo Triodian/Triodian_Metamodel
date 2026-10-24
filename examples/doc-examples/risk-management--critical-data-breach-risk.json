@@ -12,7 +12,7 @@
   "riskSource": "external",
   "riskOwner": "Chief Information Security Officer",
   "riskProbability": {
-    "level": "moderate",
+    "level": "medium",
     "numericValue": 0.35,
     "rationale": "Based on threat intelligence showing increased targeting of our industry, balanced against our enhanced security controls",
     "timeHorizon": "12 months"
@@ -68,7 +68,7 @@
     "implementationStatus": "implemented"
   },
   "residualRisk": {
-    "level": "moderate",
+    "level": "medium",
     "acceptableLevel": true,
     "description": "Remaining risk primarily related to zero-day vulnerabilities and sophisticated threat actors",
     "additionalControls": [
@@ -121,7 +121,7 @@
       "factorName": "AI-Enhanced Cyber Threats",
       "description": "Increasing sophistication of attacks using AI to evade detection",
       "potentialImpact": "Could increase probability of successful breach",
-      "timeHorizon": "medium-term",
+      "timeHorizon": "mediumTerm",
       "monitoringApproach": "Threat intelligence subscription and quarterly assessment"
     },
     {
@@ -175,13 +175,13 @@
   "dependencies": [
     {
       "dependencyType": "Critical",
-      "domainType": "Capability",
+      "domainType": "capability",
       "entityID": "CAP-SECOPS-001",
       "description": "Security Operations capability"
     },
     {
       "dependencyType": "Important",
-      "domainType": "Information",
+      "domainType": "information",
       "entityID": "INFO-DATA-003",
       "description": "Customer Data Security Classification Framework"
     }

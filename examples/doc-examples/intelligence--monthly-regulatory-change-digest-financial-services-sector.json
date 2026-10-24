@@ -12,7 +12,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Manual research",
       "cost": "No cost",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Thomson Reuters Regulatory Feed",
@@ -20,7 +20,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Third-party acquisition",
       "cost": "$12,000/year",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Industry Association Updates",
@@ -28,11 +28,11 @@
       "reliabilityRating": "Medium",
       "collectionMethod": "Manual research",
       "cost": "Included in membership fees",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Regulatory surveillance",
-  "frequency": "Monthly",
+  "frequency": "monthly",
   "legalAndEthicalConsiderations": "Sourced exclusively from publicly available and licensed data channels. Strict compliance with intellectual property rights.",
   "confidentialityLevel": "Internal",
   "performanceIndicators": [

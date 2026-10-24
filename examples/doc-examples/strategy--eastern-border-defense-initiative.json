@@ -7,7 +7,7 @@
   "strategyCategory": "Military",
   "strategyType": "Defensive",
   "strategicFocus": "Territory Control",
-  "timeHorizon": "Long-term (4-5 years)",
+  "timeHorizon": "longTerm",
   "scopeLevel": "Regional",
   "objectives": "Establish 500km defensive line, deploy 50,000 troops, achieve 95% early warning coverage",
   "keyActivities": "Fortification construction, troop deployment, sensor network installation, training exercises",
@@ -17,8 +17,8 @@
   "marketPosition": "Defensive Positioning",
   "investmentLevel": "High Investment",
   "riskCategories": [
-    "Strategic",
-    "Operational",
-    "Technical/Technology"
+    "strategic",
+    "operational",
+    "technology"
   ]
 }

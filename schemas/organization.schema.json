@@ -8,12 +8,20 @@
     "orgTitle": {
       "type": "string",
       "description": "The name or title of the Organization",
-      "examples": ["Office of Railroad Safety", "Deutsche Bahn AG", "Singapore Railways Corporation"]
+      "examples": [
+        "Office of Railroad Safety",
+        "Deutsche Bahn AG",
+        "Singapore Railways Corporation"
+      ]
     },
     "orgShortName": {
       "type": "string",
       "description": "Shortened form of organization name",
-      "examples": ["Railroad Safety", "DB", "SRC"]
+      "examples": [
+        "Railroad Safety",
+        "DB",
+        "SRC"
+      ]
     },
     "orgType": {
       "type": "string",
@@ -42,7 +50,13 @@
     "country": {
       "type": "string",
       "description": "The country where the organization is headquartered or primarily operates",
-      "examples": ["United States of America", "Germany", "Singapore", "United Kingdom", "Australia"]
+      "examples": [
+        "United States of America",
+        "Germany",
+        "Singapore",
+        "United Kingdom",
+        "Australia"
+      ]
     },
     "description": {
       "type": "string",
@@ -51,14 +65,18 @@
     "structure": {
       "type": "string",
       "description": "The Organization structure of the company",
-      "examples": ["5 Regional Offices - 8 Technical Divisions", "Matrix organization with 12 business units", "Flat structure with 6 departments"]
+      "examples": [
+        "5 Regional Offices - 8 Technical Divisions",
+        "Matrix organization with 12 business units",
+        "Flat structure with 6 departments"
+      ]
     },
     "structureType": {
       "type": "string",
       "description": "Type of organizational structure",
       "enum": [
         "Functional",
-        "Divisional", 
+        "Divisional",
         "Matrix",
         "Hierarchical",
         "Flat/Horizontal",
@@ -80,7 +98,7 @@
       ]
     },
     "roles": {
-      "type": "string", 
+      "type": "string",
       "description": "The roles within the Organization"
     },
     "missionStatement": {
@@ -88,7 +106,7 @@
       "description": "The mission of the Organization"
     },
     "visionStatement": {
-      "type": "string", 
+      "type": "string",
       "description": "The vision of the Organization"
     },
     "values": {
@@ -100,7 +118,7 @@
       "description": "The legal structure of the Organization",
       "enum": [
         "Federal/National Agency",
-        "State/Provincial Agency", 
+        "State/Provincial Agency",
         "Regional Authority",
         "Local/Municipal Authority",
         "Autonomous Public Body",
@@ -108,7 +126,7 @@
         "State-Owned Enterprise",
         "Government-Linked Company",
         "Public Limited Company",
-        "Private Limited Company", 
+        "Private Limited Company",
         "Corporation",
         "Limited Liability Company",
         "Partnership",
@@ -134,23 +152,23 @@
       "description": "Locations and geographic reach of the Organization"
     },
     "geographicScope": {
-      "type": "string",
       "description": "Geographic scope of operations",
-      "enum": [
-        "Local (City/Metropolitan)",
-        "Regional (State/Province)",
-        "National",
-        "Multi-national",
-        "Continental", 
-        "Global/Worldwide",
-        "Cross-border",
-        "Regional Bloc",
-        "Emerging Markets",
-        "Developed Markets",
-        "Asia-Pacific (APAC)",
-        "Europe, Middle East, Africa (EMEA)",
-        "Americas",
-        "Virtual/Digital Presence Only"
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/geographicScope"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "regionalBloc",
+            "emergingMarkets",
+            "developedMarkets",
+            "asiaPacific",
+            "europeMiddleEastAfrica",
+            "americas"
+          ],
+          "description": "Domain-specific values in addition to the shared list"
+        }
       ]
     },
     "operationalModel": {
@@ -177,7 +195,7 @@
       "description": "Primary currency for financial reporting",
       "enum": [
         "USD",
-        "EUR", 
+        "EUR",
         "GBP",
         "JPY",
         "CNY",
@@ -200,7 +218,7 @@
       "description": "Type of organizational culture",
       "enum": [
         "High-Context Culture",
-        "Low-Context Culture", 
+        "Low-Context Culture",
         "Hierarchical Culture",
         "Egalitarian Culture",
         "Individual-focused",
@@ -253,7 +271,7 @@
         "enum": [
           "English",
           "Mandarin Chinese",
-          "Spanish", 
+          "Spanish",
           "Hindi",
           "Arabic",
           "Portuguese",
@@ -278,7 +296,13 @@
       }
     }
   },
-  "required": ["orgTitle", "orgType", "country", "description", "legalStructure"],
+  "required": [
+    "orgTitle",
+    "orgType",
+    "country",
+    "description",
+    "legalStructure"
+  ],
   "additionalProperties": false,
   "definitions": {
     "OrganizationUnit": {
@@ -290,7 +314,7 @@
           "description": "The name or title of the Organization unit"
         },
         "description": {
-          "type": "string", 
+          "type": "string",
           "description": "A detailed explanation of what the Organization unit entails"
         },
         "purpose": {
@@ -317,7 +341,12 @@
           "description": "Specific roles within the Organization unit"
         }
       },
-      "required": ["orgUnitTitle", "description", "purpose", "owner"],
+      "required": [
+        "orgUnitTitle",
+        "description",
+        "purpose",
+        "owner"
+      ],
       "additionalProperties": false
     }
   },
@@ -334,13 +363,17 @@
       "visionStatement": "Zero train accidents and employee injuries through technology-enabled safety systems",
       "values": "Safety First, Data-Driven Decisions, Continuous Improvement",
       "legalStructure": "Federal/National Agency",
-      "geographicScope": "National",
+      "geographicScope": "national",
       "operationalModel": "Decentralized Operations",
       "currency": "USD",
       "cultureType": "Process-focused",
       "history": "Est. 1966, implemented PTC mandate 2008, achieved 99.6% compliance 2023",
-      "complianceFrameworks": ["Local Regulatory Requirements"],
-      "primaryLanguages": ["English"],
+      "complianceFrameworks": [
+        "Local Regulatory Requirements"
+      ],
+      "primaryLanguages": [
+        "English"
+      ],
       "organizationUnits": [
         {
           "orgUnitTitle": "Track and Rail Infrastructure Division",
@@ -348,7 +381,11 @@
           "purpose": "Maintain Class 1-5 track safety standards compliance",
           "owner": "Director of Track Safety",
           "higherOrganizationUnit": "Office of Railroad Safety",
-          "subOrganizationUnits": ["Track Geometry Program", "Rail Defect Detection", "Bridge Safety Unit"],
+          "subOrganizationUnits": [
+            "Track Geometry Program",
+            "Rail Defect Detection",
+            "Bridge Safety Unit"
+          ],
           "roles": "Senior Track Inspector, Rail Integrity Specialist, Bridge Safety Engineer"
         }
       ]
@@ -364,7 +401,7 @@
       "visionStatement": "Leading integrated mobility provider in Europe",
       "values": "Customer Focus, Sustainability, Innovation, Reliability",
       "legalStructure": "Public Limited Company",
-      "geographicScope": "Multi-national",
+      "geographicScope": "multinational",
       "operationalModel": "Hub-and-Spoke Model",
       "currency": "EUR",
       "cultureType": "Customer-centric",
@@ -374,7 +411,10 @@
         "ISO 14001 (Environmental Management)",
         "GDPR (General Data Protection Regulation)"
       ],
-      "primaryLanguages": ["German", "English"]
+      "primaryLanguages": [
+        "German",
+        "English"
+      ]
     },
     {
       "orgTitle": "Singapore Digital Railways Corporation",
@@ -387,7 +427,7 @@
       "visionStatement": "World's smartest rail network by 2030",
       "values": "Innovation, Excellence, Sustainability, Customer Delight",
       "legalStructure": "State-Owned Enterprise",
-      "geographicScope": "Local (City/Metropolitan)",
+      "geographicScope": "local",
       "operationalModel": "Centralized Operations",
       "currency": "SGD",
       "cultureType": "Innovation-focused",
@@ -395,7 +435,10 @@
         "ISO 27001 (Information Security)",
         "Local Regulatory Requirements"
       ],
-      "primaryLanguages": ["English", "Mandarin Chinese"]
+      "primaryLanguages": [
+        "English",
+        "Mandarin Chinese"
+      ]
     }
   ]
 }

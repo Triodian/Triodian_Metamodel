@@ -3,7 +3,12 @@
   "title": "Channel Domain Schema",
   "description": "Schema for the Channel domain in the Triodian Metamodel, representing the methods, pathways, and networks through which an organization delivers its products and services to customers.",
   "type": "object",
-  "required": ["channelID", "title", "description", "channelType"],
+  "required": [
+    "channelID",
+    "title",
+    "description",
+    "channelType"
+  ],
   "properties": {
     "channelID": {
       "type": "string",
@@ -20,7 +25,14 @@
     "channelType": {
       "type": "string",
       "description": "Classification of channel approach",
-      "enum": ["direct", "indirect", "digital", "physical", "hybrid", "omnichannel"]
+      "enum": [
+        "direct",
+        "indirect",
+        "digital",
+        "physical",
+        "hybrid",
+        "omnichannel"
+      ]
     },
     "orgUnitTitle": {
       "type": "string",
@@ -54,7 +66,13 @@
         "coverageType": {
           "type": "string",
           "description": "Type of market coverage",
-          "enum": ["selective", "intensive", "exclusive", "multi-tiered", "global"]
+          "enum": [
+            "selective",
+            "intensive",
+            "exclusive",
+            "multi-tiered",
+            "global"
+          ]
         },
         "expansionPlans": {
           "type": "string",
@@ -208,12 +226,28 @@
           "partnerType": {
             "type": "string",
             "description": "Type of partner",
-            "enum": ["distributor", "retailer", "agent", "franchise", "dealer", "value-added reseller", "system integrator", "online marketplace", "retail chain", "other"]
+            "enum": [
+              "distributor",
+              "retailer",
+              "agent",
+              "franchise",
+              "dealer",
+              "value-added reseller",
+              "system integrator",
+              "online marketplace",
+              "retail chain",
+              "other"
+            ]
           },
           "relationshipStrength": {
             "type": "string",
             "description": "Strength of partnership",
-            "enum": ["low", "medium", "high", "strategic"]
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "strategic"
+            ]
           },
           "coverageContribution": {
             "type": "string",
@@ -281,7 +315,14 @@
         "overallMaturity": {
           "type": "string",
           "description": "Overall maturity level",
-          "enum": ["initial", "developing", "defined", "managed", "advanced", "optimized"]
+          "enum": [
+            "initial",
+            "developing",
+            "defined",
+            "managed",
+            "advanced",
+            "optimized"
+          ]
         },
         "maturityByType": {
           "type": "array",
@@ -294,9 +335,20 @@
                 "description": "Type of channel"
               },
               "maturityLevel": {
-                "type": "string",
                 "description": "Maturity level of this type",
-                "enum": ["initial", "developing", "defined", "managed", "advanced", "optimized", "expanding"]
+                "anyOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/maturityLevel"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "advanced",
+                      "expanding"
+                    ],
+                    "description": "Domain-specific values in addition to the shared list"
+                  }
+                ]
               }
             }
           }
@@ -322,14 +374,20 @@
             "description": "Description of risk"
           },
           "impactLevel": {
-            "type": "string",
             "description": "Level of potential impact",
-            "enum": ["low", "medium", "high", "critical"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/ratingLevel"
+              }
+            ]
           },
           "probability": {
-            "type": "string",
             "description": "Likelihood of risk occurrence",
-            "enum": ["low", "medium", "high", "very-high"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/likelihood"
+              }
+            ]
           },
           "mitigationStrategy": {
             "type": "string",
@@ -362,7 +420,11 @@
               "investmentLevel": {
                 "type": "string",
                 "description": "Level of investment",
-                "enum": ["low", "medium", "high"]
+                "enum": [
+                  "low",
+                  "medium",
+                  "high"
+                ]
               },
               "timeframe": {
                 "type": "string",
@@ -996,7 +1058,13 @@
           "relationshipType": {
             "type": "string",
             "description": "Nature of relationship",
-            "enum": ["transactional", "preferred", "strategic alliance", "joint venture", "exclusive"]
+            "enum": [
+              "transactional",
+              "preferred",
+              "strategic alliance",
+              "joint venture",
+              "exclusive"
+            ]
           },
           "contractualTerms": {
             "type": "object",
@@ -1095,7 +1163,11 @@
               },
               "investmentLevel": {
                 "type": "string",
-                "enum": ["Low", "Medium", "High"]
+                "enum": [
+                  "Low",
+                  "Medium",
+                  "High"
+                ]
               }
             }
           },
@@ -1109,8 +1181,7 @@
                   "type": "string"
                 },
                 "riskLevel": {
-                  "type": "string",
-                  "enum": ["Low", "Medium", "High", "Critical"]
+                  "$ref": "common.schema.json#/definitions/riskLevel"
                 },
                 "mitigation": {
                   "type": "string"
@@ -1126,17 +1197,27 @@
       "description": "Other domains, processes, or systems supporting this channel",
       "items": {
         "type": "object",
-        "required": ["dependencyType", "domainType", "entityID"],
+        "required": [
+          "dependencyType",
+          "domainType",
+          "entityID"
+        ],
         "properties": {
           "dependencyType": {
-            "type": "string",
             "description": "Type of dependency",
-            "enum": ["Critical", "Important", "Supportive", "Minimal"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain this element depends on",
-            "enum": ["Capability", "Service", "Information", "Technology", "Product", "Customer", "Organization", "Strategy"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              }
+            ]
           },
           "entityID": {
             "type": "string",
@@ -1162,7 +1243,14 @@
           "relationshipType": {
             "type": "string",
             "description": "Type of relationship",
-            "enum": ["upstream", "downstream", "complementary", "competitive", "integrated", "supporting"]
+            "enum": [
+              "upstream",
+              "downstream",
+              "complementary",
+              "competitive",
+              "integrated",
+              "supporting"
+            ]
           },
           "relationshipStrength": {
             "type": "integer",
@@ -1182,7 +1270,11 @@
       "description": "Cross-domain relationships linking market domain to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",

@@ -17,8 +17,8 @@
     "External Customers"
   ],
   "businessModel": "Usage Based",
-  "automationLevel": "Fully Automated",
-  "lifecycle": "Operations",
+  "automationLevel": "fullyAutomated",
+  "lifecycle": "operational",
   "capacity": "10,000 requests per minute, auto-scaling during peak periods",
   "valueProposition": "Accelerate integration development by 75% with standardized, reliable data access",
   "performanceIndicators": "API response time, uptime percentage, error rate, developer adoption",
@@ -32,16 +32,16 @@
       "description": "Live GPS coordinates and status updates for all trains in the network",
       "purpose": "Let partner applications show customers where trains are now",
       "featureType": "Core Feature",
-      "priority": "Critical",
-      "complexity": "Moderate"
+      "priority": "critical",
+      "complexity": "moderate"
     },
     {
       "title": "Predictive Delay Analytics",
       "description": "Machine learning-powered predictions for potential delays and disruptions",
       "purpose": "Warn partners of likely delays so they can adjust plans in advance",
       "featureType": "Premium Feature",
-      "priority": "High",
-      "complexity": "Complex"
+      "priority": "high",
+      "complexity": "complex"
     }
   ]
 }

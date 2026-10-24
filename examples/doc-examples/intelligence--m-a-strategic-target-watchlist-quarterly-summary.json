@@ -12,7 +12,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Manual research",
       "cost": "No additional cost",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Venture Capital Portfolio Tracker",
@@ -20,7 +20,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Third-party acquisition",
       "cost": "$22,000/year",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Industry Insider Forums",
@@ -28,11 +28,11 @@
       "reliabilityRating": "Medium",
       "collectionMethod": "Manual research",
       "cost": "Low, <$5,000/year",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Business reporting",
-  "frequency": "Quarterly",
+  "frequency": "quarterly",
   "legalAndEthicalConsiderations": "Complies with anti-trust pre-merger review processes and fair competition standards.",
   "confidentialityLevel": "Restricted",
   "performanceIndicators": [

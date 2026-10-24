@@ -1,16 +1,13 @@
 #!/usr/bin/env python3
-"""Map every local enumeration of a shared concept onto schemas/common.schema.json.
+"""Report how the schemas use the shared vocabulary in schemas/common.schema.json.
 
-For each field that expresses a shared concept (risk level, frequency, status and so on),
-this works out which shared definition it corresponds to and how each current value maps
-onto the shared values. It writes:
-
-  docs/vocabulary-migration.json   machine-readable mapping, used to migrate domains
-  docs/shared-vocabulary.md        the same, for review
+Writes docs/shared-vocabulary.md: the shared definitions, which fields use each, the
+domain-specific values some fields add, fields to rename, and any field that keeps its
+own list for a shared concept (with how its values would map across).
 
 Usage:
-  python scripts/vocabulary_map.py           # write both files
-  python scripts/vocabulary_map.py --check   # exit non-zero if a mapped field still uses a local list
+  python scripts/vocabulary_map.py           # write docs/shared-vocabulary.md
+  python scripts/vocabulary_map.py --check   # exit non-zero if any shared concept uses a local list
 """
 from __future__ import annotations
 
@@ -189,30 +186,48 @@ def local_enum(prop: dict):
     return None
 
 
+def shared_ref(prop):
+    """If prop uses a shared definition, return (definition, domain-specific extra values)."""
+    if not isinstance(prop, dict):
+        return None
+    node = prop.get("items") if prop.get("type") == "array" and isinstance(prop.get("items"), dict) else prop
+    branches = [node] + node.get("allOf", []) + node.get("anyOf", [])
+    ref = next((b["$ref"] for b in branches if isinstance(b, dict) and "common.schema.json#/definitions/" in b.get("$ref", "")), None)
+    if ref is None:
+        return None
+    extras = [v for b in node.get("anyOf", []) if isinstance(b, dict) for v in b.get("enum", [])]
+    return ref.rsplit("/", 1)[-1], extras
+
+
 def collect():
-    usages = []
+    """Return (local, references): local lists of shared concepts, and fields using shared definitions."""
+    local, references = [], []
     for f in sorted(p for p in SCHEMAS.rglob("*") if p.is_file() and p.name != "common.schema.json"):
         doc = json.loads(f.read_text())
+        rel_file = f.relative_to(SCHEMAS).as_posix()
         for path, node in walk(doc):
             props = node.get("properties")
             if not isinstance(props, dict):
                 continue
             for field, prop in props.items():
+                rel_path = "/" + "/".join(map(str, path + ("properties", field)))
+                used = shared_ref(prop)
+                if used:
+                    references.append({"file": rel_file, "path": rel_path, "definition": used[0], "extras": used[1]})
+                    continue
                 if field not in FIELD_CANDIDATES:
                     continue
                 vocab = local_enum(prop)
                 if not vocab:
                     continue
-                rel_file = f.relative_to(SCHEMAS).as_posix()
-                rel_path = "/" + "/".join(map(str, path + ("properties", field)))
                 if (rel_file, rel_path) in DOMAIN_SPECIFIC:
                     rename, reason = DOMAIN_SPECIFIC[(rel_file, rel_path)]
-                    usages.append({"file": rel_file, "path": rel_path, "field": field, "target": None,
-                                   "renameTo": rename, "reason": reason, "values": {v: {"to": None, "note": "local"} for v in vocab}})
+                    local.append({"file": rel_file, "path": rel_path, "target": None,
+                                  "renameTo": rename, "reason": reason, "values": vocab})
                     continue
-                best = None
                 candidates = [FIELD_OVERRIDES[(rel_file, rel_path)]] if (rel_file, rel_path) in FIELD_OVERRIDES \
                     else FIELD_CANDIDATES[field]
+                best = None
                 for cand in candidates:
                     mapped = [map_value(cand, v, vocab) for v in vocab]
                     exact = sum(1 for v in vocab if norm(v) in {norm(c) for c in values_of(cand)})
@@ -220,95 +235,87 @@ def collect():
                     if best is None or score > best[0]:
                         best = (score, cand, mapped)
                 _, target, mapped = best
-                usages.append({
-                    "file": rel_file,
-                    "path": rel_path,
-                    "field": field,
-                    "target": target,
-                    "values": {v: {"to": m[0], "note": m[1]} for v, m in zip(vocab, mapped)},
-                })
-    return usages
+                local.append({"file": rel_file, "path": rel_path, "target": target,
+                              "values": {v: {"to": m[0], "note": m[1]} for v, m in zip(vocab, mapped)}})
+    return local, references
 
 
-def write(usages):
-    out = ROOT / "docs"
-    out.mkdir(exist_ok=True)
-    (out / "vocabulary-migration.json").write_text(json.dumps({"usages": usages}, indent=2, ensure_ascii=False) + "\n")
+def write(local, references):
+    pending = [u for u in local if u["target"] is not None]
+    renames = [u for u in local if u["target"] is None]
+    by_def = defaultdict(list)
+    for r in references:
+        by_def[r["definition"]].append(r)
+    extended = [r for r in references if r["extras"]]
 
-    local = [u for u in usages if u["target"] is None]
-    usages = [u for u in usages if u["target"] is not None]
-    by_target = defaultdict(list)
-    for u in usages:
-        by_target[u["target"]].append(u)
     lines = [
         "# Shared vocabulary",
         "",
-        "`schemas/common.schema.json` defines the controlled vocabularies and reusable structures every domain should use. "
-        "All values are camelCase. Domains reference them with `$ref` instead of keeping their own lists.",
+        "[`schemas/common.schema.json`](../schemas/common.schema.json) defines the controlled vocabularies and reusable "
+        "structures every domain uses. All values are camelCase. Domains reference them with `$ref` rather than keeping "
+        "their own lists; where a domain genuinely needs extra values, it adds them alongside the shared list.",
         "",
-        "This page is generated by `scripts/vocabulary_map.py`. For each shared definition it lists the canonical values "
-        "and every field in the schemas that currently keeps its own list, with how each current value maps across.",
+        "This page is generated by `scripts/vocabulary_map.py` and checked in CI. "
+        "[`vocabulary-migration.json`](vocabulary-migration.json) records how the previous domain-specific values were mapped.",
         "",
-        "- **lossy**: the mapping merges values that currently mean different things. Needs a decision.",
-        "- **unmapped**: the value has no shared equivalent. Either add it to the shared list or keep it as a domain-specific value.",
+        f"**{len(references)} fields** use a shared definition; {len(extended)} of them add domain-specific values. "
+        f"**{len(pending)} fields** keep their own list for a shared concept.",
         "",
     ]
-    total = sum(len(u["values"]) for u in usages)
-    lossy = [(u, v) for u in usages for v, m in u["values"].items() if m["note"] == "lossy"]
-    unmapped = [(u, v) for u in usages for v, m in u["values"].items() if m["note"] == "unmapped"]
-    lines += [f"**{len(usages)} fields** keep a local list for a shared concept ({total} values): "
-              f"{total - len(lossy) - len(unmapped)} map directly, {len(lossy)} are lossy, {len(unmapped)} are unmapped.", ""]
-
-    if lossy or unmapped:
-        lines += ["## Values needing a decision", "", "| Field | Value | Proposed | Issue |", "|---|---|---|---|"]
-        for u, v in lossy + unmapped:
-            m = u["values"][v]
-            lines.append(f"| `{u['file']}` {u['path']} | `{v}` | {('`' + m['to'] + '`') if m['to'] else '—'} | {m['note']} |")
+    if pending:
+        lines += ["## Fields still keeping their own list", "",
+                  "Replace these with a reference to the shared definition.", "",
+                  "| Field | Use | Current → shared |", "|---|---|---|"]
+        for u in pending:
+            pairs = ", ".join(f"`{v}`→`{m['to'] or '?'}`" + ("" if m["note"] == "ok" else f" ({m['note']})")
+                              for v, m in u["values"].items())
+            lines.append(f"| `{u['file']}` {u['path']} | `{u['target']}` | {pairs} |")
         lines.append("")
-
-    if local:
+    if extended:
+        lines += ["## Domain-specific additions", "",
+                  "These fields accept the shared list plus a few values specific to their domain.", "",
+                  "| Field | Shared definition | Additional values |", "|---|---|---|"]
+        for r in extended:
+            lines.append(f"| `{r['file']}` {r['path']} | `{r['definition']}` | {', '.join(f'`{v}`' for v in r['extras'])} |")
+        lines.append("")
+    if renames:
         lines += ["## Domain-specific lists to rename", "",
                   "These fields reuse a generic name for a domain-specific idea. They keep their own values "
                   "but should be renamed so they are not mistaken for the shared concept.", "",
                   "| Field | Rename to | Why |", "|---|---|---|"]
-        for u in local:
+        for u in renames:
             lines.append(f"| `{u['file']}` {u['path']} | `{u['renameTo']}` | {u['reason']} |")
         lines.append("")
 
-    lines += ["## Definitions and current usages", ""]
-    for name in COMMON:
-        d = COMMON[name]
-        if "enum" not in d and "allOf" not in d:
-            continue
-        lines += [f"### `{name}`", "", d.get("description", ""), "", "Values: " + ", ".join(f"`{v}`" for v in values_of(name)), ""]
-        if d.get("allOf"):
-            lines += [f"Uses the `{d['allOf'][0]['$ref'].split('/')[-1]}` scale.", ""]
-        if by_target.get(name):
-            lines += ["| Field | Current → shared |", "|---|---|"]
-            for u in by_target[name]:
-                pairs = []
-                for v, m in u["values"].items():
-                    to = m["to"] or "?"
-                    mark = "" if m["note"] == "ok" else f" ({m['note']})"
-                    pairs.append(f"`{v}`" if v == to else f"`{v}`→`{to}`{mark}")
-                lines.append(f"| `{u['file']}` {u['path']} | {', '.join(pairs)} |")
-            lines.append("")
-    (out / "shared-vocabulary.md").write_text("\n".join(lines) + "\n")
-    return total, len(lossy), len(unmapped)
+    lines += ["## Definitions", ""]
+    for name, d in COMMON.items():
+        lines += [f"### `{name}`", "", d.get("description", ""), ""]
+        if "enum" in d or "allOf" in d:
+            lines += ["Values: " + ", ".join(f"`{v}`" for v in values_of(name)), ""]
+            if d.get("allOf"):
+                lines += [f"Uses the `{d['allOf'][0]['$ref'].split('/')[-1]}` scale.", ""]
+        users = by_def.get(name, [])
+        if users:
+            files = sorted({r["file"] for r in users})
+            lines += [f"Used by {len(users)} field(s) in: " + ", ".join(f"`{f}`" for f in files), ""]
+    (ROOT / "docs").mkdir(exist_ok=True)
+    (ROOT / "docs" / "shared-vocabulary.md").write_text("\n".join(lines) + "\n")
+    return pending
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--check", action="store_true", help="fail if any shared concept still uses a local list")
     args = ap.parse_args()
-    usages = collect()
+    local, references = collect()
+    pending = [u for u in local if u["target"] is not None]
     if args.check:
-        pending = [u for u in usages if u["target"] is not None]
         for u in pending:
             print(f"local list for shared concept: {u['file']} {u['path']} (use {u['target']})")
+        print(f"{len(references)} fields use the shared vocabulary; {len(pending)} keep their own list")
         return 1 if pending else 0
-    total, lossy, unmapped = write(usages)
-    print(f"{len(usages)} fields, {total} values: {lossy} lossy, {unmapped} unmapped")
+    write(local, references)
+    print(f"{len(references)} fields use the shared vocabulary; {len(pending)} keep their own list")
     return 0
 
 

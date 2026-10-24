@@ -20,8 +20,8 @@
     "Partners"
   ],
   "businessModel": "Fee for Service",
-  "automationLevel": "Semi-Automated",
-  "lifecycle": "Operations",
+  "automationLevel": "semiAutomated",
+  "lifecycle": "operational",
   "valueProposition": "Reduce transportation costs by 25% while improving delivery reliability to 98%",
   "performanceIndicators": "On-time delivery percentage, average transit time, fuel efficiency per ton-mile, customer satisfaction score",
   "complianceRequirements": [
@@ -35,16 +35,16 @@
       "description": "GPS-based tracking system providing customers with real-time location and status updates",
       "purpose": "Give customers certainty about cargo location and arrival times",
       "featureType": "Core Feature",
-      "priority": "High",
-      "complexity": "Moderate"
+      "priority": "high",
+      "complexity": "moderate"
     },
     {
       "title": "Dynamic Route Optimization",
       "description": "AI-powered system that optimizes routes based on weather, traffic, and capacity",
       "purpose": "Reduce transit times and costs by adapting routes to current conditions",
       "featureType": "Premium Feature",
-      "priority": "Medium",
-      "complexity": "Complex"
+      "priority": "medium",
+      "complexity": "complex"
     }
   ]
 }

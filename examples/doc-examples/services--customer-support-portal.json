@@ -18,8 +18,8 @@
     "External Customers"
   ],
   "businessModel": "Support Model",
-  "automationLevel": "Highly Automated",
-  "lifecycle": "Enhancement",
+  "automationLevel": "highlyAutomated",
+  "lifecycle": "enhancement",
   "availability": "24/7 self-service, business hours live support",
   "valueProposition": "Reduce support costs by 40% while improving customer satisfaction through instant access to solutions",
   "performanceIndicators": "Self-service resolution rate, average handling time, customer satisfaction score, knowledge base usage",
@@ -29,16 +29,16 @@
       "description": "Intelligent chatbot that can resolve common issues and guide users to relevant resources",
       "purpose": "Resolve routine customer issues instantly and route complex ones to human support",
       "featureType": "Core Feature",
-      "priority": "Critical",
-      "complexity": "Complex"
+      "priority": "critical",
+      "complexity": "complex"
     },
     {
       "title": "Video Tutorial Library",
       "description": "Searchable library of how-to videos for common customer tasks",
       "purpose": "Help customers complete common tasks themselves without contacting support",
       "featureType": "Enhancement",
-      "priority": "Medium",
-      "complexity": "Simple"
+      "priority": "medium",
+      "complexity": "simple"
     }
   ]
 }

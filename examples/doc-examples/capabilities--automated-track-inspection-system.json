@@ -9,16 +9,16 @@
   "businessDomain": "Operations",
   "inputs": "Track geometry data, rail wear measurements, historical defect data",
   "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
-  "maturityLevel": "Level 4 - Managed",
+  "maturityLevel": "managed",
   "targetMaturityLevel": "Level 5 - Optimizing",
   "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
   "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
   "investmentCategory": "Mixed",
   "riskCategories": [
-    "Technical/Technology",
-    "Operational"
+    "technology",
+    "operational"
   ],
-  "criticality": "Critical",
+  "criticality": "critical",
   "availability": "24/7",
   "scalability": "Highly Scalable",
   "parent": "Track Safety Assurance System",

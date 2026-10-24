@@ -12,7 +12,7 @@
       "reliabilityRating": "Medium",
       "collectionMethod": "AI-generated summarisation",
       "cost": "$9,000/year",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Real-Time Financial News Aggregator",
@@ -20,11 +20,11 @@
       "reliabilityRating": "High",
       "collectionMethod": "Automated scraping",
       "cost": "$15,000/year",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Market intelligence",
-  "frequency": "Daily",
+  "frequency": "daily",
   "legalAndEthicalConsiderations": "Only public information sources monitored, strictly avoiding personal data harvesting.",
   "confidentialityLevel": "Internal",
   "performanceIndicators": [

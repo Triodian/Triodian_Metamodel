@@ -107,15 +107,12 @@
       "description": "Performance metrics that are related or linked to this metric"
     },
     "maturityLevel": {
-      "type": "string",
-      "enum": [
-        "initial",
-        "developing",
-        "defined",
-        "managed",
-        "optimizing"
-      ],
-      "description": "The current maturity level of the performance metric"
+      "description": "The current maturity level of the performance metric",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/maturityLevel"
+        }
+      ]
     },
     "toolsAndTechnologies": {
       "type": "string",
@@ -145,18 +142,21 @@
     },
     "riskCategories": {
       "type": "array",
+      "description": "Categories of risks",
       "items": {
-        "type": "string",
-        "enum": [
-          "dataQuality",
-          "technical",
-          "operational",
-          "compliance",
-          "resource",
-          "interpretation"
+        "anyOf": [
+          {
+            "$ref": "common.schema.json#/definitions/riskCategory"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "interpretation"
+            ],
+            "description": "Domain-specific values in addition to the shared list"
+          }
         ]
-      },
-      "description": "Categories of risks"
+      }
     },
     "improvementOpportunities": {
       "type": "string",
@@ -175,18 +175,12 @@
       "description": "Primary sources of data for the performance metric"
     },
     "frequency": {
-      "type": "string",
-      "enum": [
-        "realTime",
-        "hourly",
-        "daily",
-        "weekly",
-        "monthly",
-        "quarterly",
-        "annually",
-        "adHoc"
-      ],
-      "description": "How often the performance metric is measured and reported"
+      "description": "How often the performance metric is measured and reported",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/frequency"
+        }
+      ]
     },
     "targets": {
       "type": "string",
@@ -221,14 +215,12 @@
       "description": "Data quality measures and validation procedures"
     },
     "automation": {
-      "type": "string",
-      "enum": [
-        "manual",
-        "semiAutomated",
-        "highlyAutomated",
-        "fullyAutomated"
-      ],
-      "description": "Level of automation in data collection and processing"
+      "description": "Level of automation in data collection and processing",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/automationLevel"
+        }
+      ]
     },
     "scalability": {
       "type": "string",
@@ -325,18 +317,12 @@
             "description": "Specific targets or benchmarks for the Performance KPI"
           },
           "frequency": {
-            "type": "string",
-            "enum": [
-              "realTime",
-              "hourly",
-              "daily",
-              "weekly",
-              "monthly",
-              "quarterly",
-              "annually",
-              "adHoc"
-            ],
-            "description": "How often the Performance KPI is measured and reported"
+            "description": "How often the Performance KPI is measured and reported",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/frequency"
+              }
+            ]
           },
           "dataSource": {
             "type": "string",
@@ -375,24 +361,20 @@
             "description": "Type of KPI"
           },
           "priority": {
-            "type": "string",
-            "enum": [
-              "critical",
-              "high",
-              "medium",
-              "low"
-            ],
-            "description": "Business priority of the KPI"
+            "description": "Business priority of the KPI",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/priority"
+              }
+            ]
           },
           "complexity": {
-            "type": "string",
-            "enum": [
-              "simple",
-              "moderate",
-              "complex",
-              "highlyComplex"
-            ],
-            "description": "Measurement complexity level"
+            "description": "Measurement complexity level",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/complexity"
+              }
+            ]
           },
           "thresholds": {
             "type": "string",
@@ -415,14 +397,12 @@
             "description": "How the KPI is displayed"
           },
           "automation": {
-            "type": "string",
-            "enum": [
-              "manual",
-              "semiAutomated",
-              "highlyAutomated",
-              "fullyAutomated"
-            ],
-            "description": "Level of automation in KPI calculation"
+            "description": "Level of automation in KPI calculation",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/automationLevel"
+              }
+            ]
           },
           "benchmarking": {
             "type": "string",
@@ -441,9 +421,19 @@
             "description": "Who gets notified of KPI performance"
           }
         },
-        "required": ["title", "description", "purpose", "owner"]
+        "required": [
+          "title",
+          "description",
+          "purpose",
+          "owner"
+        ]
       }
     }
   },
-  "required": ["title", "description", "purpose", "owner"]
+  "required": [
+    "title",
+    "description",
+    "purpose",
+    "owner"
+  ]
 }
