@@ -145,7 +145,8 @@
             "socialMedia",
             "governmentIntelligence",
             "corporateWhistleblowers",
-            "surveillanceSystems"
+            "surveillanceSystems",
+            "internalMonitoring"
           ]
         },
         "reliabilityRating": {
@@ -157,7 +158,8 @@
             {
               "type": "string",
               "enum": [
-                "unverified"
+                "unverified",
+                "variable"
               ],
               "description": "Domain-specific values in addition to the shared list"
             }
@@ -173,7 +175,8 @@
             "thirdPartyAcquisition",
             "humanIntelligence",
             "signalsIntelligence",
-            "aiGeneratedSummarisation"
+            "aiGeneratedSummarisation",
+            "manualInvestigation"
           ]
         },
         "cost": {

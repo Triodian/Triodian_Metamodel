@@ -2,7 +2,7 @@
   "technologyID": "TECH-API-001",
   "title": "Enterprise API Management Platform",
   "description": "Centralized platform for designing, implementing, publishing, and monitoring APIs across the organization, enabling secure integration between internal and external systems.",
-  "technologyType": "infrastructure-software",
+  "technologyType": "infrastructure",
   "orgUnitTitle": "Enterprise Architecture & Integration",
   "orgUnitRoles": [
     "API Platform Manager",
@@ -10,7 +10,7 @@
     "Security Architect"
   ],
   "technologyLayer": "integration",
-  "currentState": "operational",
+  "currentState": "production",
   "targetState": "enhance with AI-driven API analytics and automated documentation generation",
   "businessOwner": "Chief Digital Officer",
   "technicalOwner": "VP of Enterprise Architecture",
@@ -27,15 +27,14 @@
   ],
   "costs": {
     "implementationCost": "$1.8M",
-    "annualLicensing": "$750K",
-    "annualOperational": "$450K"
+    "annualOperatingCost": "$750K licensing + $450K operations"
   },
   "risks": [
     "API security vulnerabilities",
     "Scalability limitations during peak loads",
     "Developer adoption challenges"
   ],
-  "securityClassification": "high - gateway to critical business systems",
+  "securityClassification": "restricted",
   "performanceRequirements": "99.99% gateway availability, <100ms latency overhead, 5000 TPS capacity",
   "complianceRequirements": [
     "SOC2 compliance",
@@ -151,52 +150,61 @@
   ],
   "performanceIndicators": [
     {
-      "indicatorName": "API Platform Adoption",
-      "description": "Percentage of enterprise integrations using the API platform",
+      "metricName": "API Platform Adoption",
+      "metricDescription": "Percentage of enterprise integrations using the API platform",
       "currentValue": "72%",
       "targetValue": "95%",
-      "trend": "increasing"
+      "trend": "improving"
     },
     {
-      "indicatorName": "Developer Satisfaction",
-      "description": "Average rating from API consumers",
+      "metricName": "Developer Satisfaction",
+      "metricDescription": "Average rating from API consumers",
       "currentValue": "4.1/5.0",
       "targetValue": "4.5/5.0",
       "trend": "stable"
     },
     {
-      "indicatorName": "API Response Time",
-      "description": "Average latency added by API gateway",
+      "metricName": "API Response Time",
+      "metricDescription": "Average latency added by API gateway",
       "currentValue": "85ms",
       "targetValue": "<50ms",
       "trend": "improving"
     },
     {
-      "indicatorName": "API Reuse Rate",
-      "description": "Average number of consumers per API",
+      "metricName": "API Reuse Rate",
+      "metricDescription": "Average number of consumers per API",
       "currentValue": "3.8",
       "targetValue": "6.0",
-      "trend": "increasing"
+      "trend": "improving"
     }
   ],
-  "relationshipExamples": [
+  "crossDomainRelationships": [
     {
-      "relationshipType": "Technology-Capability",
-      "relatedEntityID": "CAP-INT-001",
-      "relationshipDescription": "Enables System Integration capability through standardized API management",
-      "relationshipStrength": 5
+      "targetDomain": "capability",
+      "targetEntityID": "CAP-INT-001",
+      "relationshipType": "enables",
+      "description": "Enables System Integration capability through standardized API management",
+      "metadata": {
+        "strength": 5
+      }
     },
     {
-      "relationshipType": "Technology-Service",
-      "relatedEntityID": "SRV-PARTNER-002",
-      "relationshipDescription": "Delivers secure partner integration services through managed APIs",
-      "relationshipStrength": 4
+      "targetDomain": "service",
+      "targetEntityID": "SRV-PARTNER-002",
+      "relationshipType": "delivers",
+      "description": "Delivers secure partner integration services through managed APIs",
+      "metadata": {
+        "strength": 4
+      }
     },
     {
-      "relationshipType": "Technology-Initiative",
-      "relatedEntityID": "INIT-DIGITAL-005",
-      "relationshipDescription": "Core enabler for Digital Ecosystem Initiative",
-      "relationshipStrength": 5
+      "targetDomain": "initiative",
+      "targetEntityID": "INIT-DIGITAL-005",
+      "relationshipType": "enables",
+      "description": "Core enabler for Digital Ecosystem Initiative",
+      "metadata": {
+        "strength": 5
+      }
     }
   ]
 }

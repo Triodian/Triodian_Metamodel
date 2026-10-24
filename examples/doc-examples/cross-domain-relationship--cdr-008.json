@@ -1,6 +1,6 @@
 {
   "relationshipID": "CDR-008",
-  "sourceDomain": "Compliance",
+  "sourceDomain": "organization",
   "targetDomain": "valueStream",
   "relationshipType": "audits",
   "description": "Compliance function audits customer onboarding value stream for regulatory adherence",

@@ -5,7 +5,7 @@
   "type": "object",
   "description": "Derived record comparing actual domain coverage to expectations and identifying gaps.",
   "properties": {
-    "id": {
+    "coverageStatusID": {
       "type": "string",
       "description": "Unique identifier for the coverage status record."
     },
@@ -63,7 +63,7 @@
     }
   },
   "required": [
-    "id",
+    "coverageStatusID",
     "orgUnit",
     "domain",
     "coverageScore",

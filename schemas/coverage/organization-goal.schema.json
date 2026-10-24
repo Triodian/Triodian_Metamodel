@@ -5,7 +5,7 @@
   "type": "object",
   "description": "Represents an organisation's business architecture goal including domain weighting, coverage aspirations, and tolerances.",
   "properties": {
-    "id": {
+    "goalID": {
       "type": "string",
       "description": "Unique identifier for the goal."
     },
@@ -58,7 +58,7 @@
     }
   },
   "required": [
-    "id",
+    "goalID",
     "organization",
     "domain",
     "weighting",

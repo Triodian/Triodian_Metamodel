@@ -1,4 +1,5 @@
 {
+  "socialChangeID": "SC-003",
   "name": "Fair Wage Now Strike Series",
   "description": "National industrial action targeting minimum wage reform",
   "activityType": "campaign",
@@ -20,7 +21,7 @@
   "stakeholders": [
     {
       "name": "National Union of Educators",
-      "type": "Union",
+      "type": "laborUnions",
       "influenceLevel": "high",
       "engagementStrategy": "Collective Bargaining"
     }
@@ -50,7 +51,7 @@
   ],
   "capabilities": [
     {
-      "capabilityId": "cap-collective-bargaining",
+      "capabilityID": "cap-collective-bargaining",
       "name": "Collective Bargaining",
       "levelOfUse": "high"
     }

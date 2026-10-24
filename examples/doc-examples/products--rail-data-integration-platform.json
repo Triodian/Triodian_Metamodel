@@ -15,10 +15,10 @@
     "developer"
   ],
   "channels": [
-    "API Platform",
-    "Developer Portal"
+    "api",
+    "developerPortal"
   ],
-  "pricingStrategy": "Usage Based",
+  "pricingStrategy": "usageBased",
   "complianceRequirements": [
     "gdpr",
     "industryStandards"
