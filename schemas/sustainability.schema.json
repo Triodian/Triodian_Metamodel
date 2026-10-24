@@ -26,7 +26,12 @@
     "sustainabilityCategory": {
       "type": "string",
       "description": "Classification of sustainability type",
-      "enum": ["environmental", "social", "governance", "integrated"]
+      "enum": [
+        "environmental",
+        "social",
+        "governance",
+        "integrated"
+      ]
     },
     "orgUnitTitle": {
       "type": "string",
@@ -42,7 +47,14 @@
     "sustainabilityScope": {
       "type": "string",
       "description": "Organizational scope covered by this sustainability element",
-      "enum": ["enterprise", "business-unit", "product-line", "project", "location", "function"]
+      "enum": [
+        "enterprise",
+        "business-unit",
+        "product-line",
+        "project",
+        "location",
+        "function"
+      ]
     },
     "materiality": {
       "type": "object",
@@ -51,7 +63,12 @@
         "materialityLevel": {
           "type": "string",
           "description": "Level of materiality",
-          "enum": ["low", "medium", "high", "critical"]
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
         },
         "assessmentMethod": {
           "type": "string",
@@ -156,9 +173,19 @@
       "description": "Connection to business strategy",
       "properties": {
         "alignmentLevel": {
-          "type": "string",
           "description": "Level of alignment with strategy",
-          "enum": ["low", "medium", "high", "critical"]
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/alignmentLevel"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "critical"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "alignedObjectives": {
           "type": "array",
@@ -205,7 +232,12 @@
         "interestLevel": {
           "type": "string",
           "description": "Level of stakeholder interest",
-          "enum": ["low", "medium", "high", "critical"]
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "critical"
+          ]
         },
         "keyStakeholders": {
           "type": "array",
@@ -248,7 +280,12 @@
         "approach": {
           "type": "string",
           "description": "Approach to verification",
-          "enum": ["self-assessment", "internal-audit", "third-party-verification", "third-party-assurance"]
+          "enum": [
+            "self-assessment",
+            "internal-audit",
+            "third-party-verification",
+            "third-party-assurance"
+          ]
         },
         "standard": {
           "type": "string",
@@ -297,9 +334,12 @@
       "description": "Risks associated with sustainability element",
       "properties": {
         "riskLevel": {
-          "type": "string",
           "description": "Overall risk level",
-          "enum": ["low", "medium", "high", "critical"]
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskLevel"
+            }
+          ]
         },
         "keyRisks": {
           "type": "array",
@@ -328,14 +368,27 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
             "description": "Type of dependency",
-            "enum": ["Critical", "Important", "Supportive", "Minimal"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain the dependency relates to",
-            "enum": ["Capability", "Strategy", "Information", "Technology", "Process", "Organization", "Other"]
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "process"
+                ],
+                "description": "Domain-specific values in addition to the shared list"
+              }
+            ]
           },
           "entityID": {
             "type": "string",
@@ -346,7 +399,11 @@
             "description": "Description of the dependency"
           }
         },
-        "required": ["dependencyType", "domainType", "description"]
+        "required": [
+          "dependencyType",
+          "domainType",
+          "description"
+        ]
       }
     },
     "relatedSustainabilityElements": {
@@ -362,7 +419,14 @@
           "relationshipType": {
             "type": "string",
             "description": "Type of relationship",
-            "enum": ["upstream", "downstream", "supporting", "dependent", "complementary", "conflicting"]
+            "enum": [
+              "upstream",
+              "downstream",
+              "supporting",
+              "dependent",
+              "complementary",
+              "conflicting"
+            ]
           },
           "relationshipStrength": {
             "type": "integer",
@@ -375,7 +439,11 @@
             "description": "Description of the relationship"
           }
         },
-        "required": ["elementID", "relationshipType", "relationshipStrength"]
+        "required": [
+          "elementID",
+          "relationshipType",
+          "relationshipStrength"
+        ]
       }
     },
     "governanceModel": {
@@ -401,9 +469,19 @@
       }
     },
     "implementationStatus": {
-      "type": "string",
       "description": "Current status of implementation",
-      "enum": ["planning", "piloting", "implementing", "established", "optimizing"]
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/definitions/implementationStatus"
+        },
+        {
+          "type": "string",
+          "enum": [
+            "optimizing"
+          ],
+          "description": "Domain-specific values in addition to the shared list"
+        }
+      ]
     },
     "lastUpdated": {
       "type": "string",
@@ -415,7 +493,11 @@
       "description": "Cross-domain relationships linking market domain to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",
@@ -467,12 +549,28 @@
         "impactScope": {
           "type": "string",
           "description": "Organizational scope of the impact",
-          "enum": ["enterprise", "business-unit", "product-line", "project", "location", "function"]
+          "enum": [
+            "enterprise",
+            "business-unit",
+            "product-line",
+            "project",
+            "location",
+            "function"
+          ]
         },
         "impactCategory": {
           "type": "string",
           "description": "Type of environmental impact",
-          "enum": ["emissions", "energy", "water", "waste", "materials", "biodiversity", "land-use", "other"]
+          "enum": [
+            "emissions",
+            "energy",
+            "water",
+            "waste",
+            "materials",
+            "biodiversity",
+            "land-use",
+            "other"
+          ]
         },
         "impactMeasurement": {
           "type": "object",
@@ -493,12 +591,21 @@
             "dataQuality": {
               "type": "string",
               "description": "Quality of measurement data",
-              "enum": ["low", "medium", "high", "very-high"]
+              "enum": [
+                "low",
+                "medium",
+                "high",
+                "very-high"
+              ]
             },
             "verificationStatus": {
               "type": "string",
               "description": "Status of data verification",
-              "enum": ["unverified", "internally-verified", "third-party-verified"]
+              "enum": [
+                "unverified",
+                "internally-verified",
+                "third-party-verified"
+              ]
             }
           }
         },
@@ -644,9 +751,12 @@
                     "description": "Required investment"
                   },
                   "status": {
-                    "type": "string",
                     "description": "Implementation status",
-                    "enum": ["planning", "in progress", "completed", "on hold"]
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/workStatus"
+                      }
+                    ]
                   }
                 }
               }
@@ -672,9 +782,12 @@
                     "description": "Regulatory jurisdiction"
                   },
                   "complianceStatus": {
-                    "type": "string",
                     "description": "Status of compliance",
-                    "enum": ["compliant", "partial", "non-compliant", "exempted"]
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/complianceStatus"
+                      }
+                    ]
                   },
                   "requirementDescription": {
                     "type": "string",
@@ -700,12 +813,22 @@
                   "expectedImpact": {
                     "type": "string",
                     "description": "Expected impact level",
-                    "enum": ["low", "moderate", "significant", "high"]
+                    "enum": [
+                      "low",
+                      "moderate",
+                      "significant",
+                      "high"
+                    ]
                   },
                   "preparednessLevel": {
                     "type": "string",
                     "description": "Level of preparedness",
-                    "enum": ["not started", "planning stage", "preparation underway", "prepared"]
+                    "enum": [
+                      "not started",
+                      "planning stage",
+                      "preparation underway",
+                      "prepared"
+                    ]
                   }
                 }
               }
@@ -749,14 +872,22 @@
                 "description": "Title of initiative"
               },
               "status": {
-                "type": "string",
                 "description": "Status of initiative",
-                "enum": ["planned", "active", "completed", "on hold"]
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/workStatus"
+                  }
+                ]
               },
               "relationshipType": {
                 "type": "string",
                 "description": "Relationship to impact",
-                "enum": ["primary", "supporting", "indirect", "monitoring"]
+                "enum": [
+                  "primary",
+                  "supporting",
+                  "indirect",
+                  "monitoring"
+                ]
               },
               "relationshipStrength": {
                 "type": "integer",
@@ -782,7 +913,11 @@
             "publicDisclosure": {
               "type": "string",
               "description": "Whether reporting is public",
-              "enum": ["yes", "partial", "no"]
+              "enum": [
+                "yes",
+                "partial",
+                "no"
+              ]
             },
             "reportingPlatforms": {
               "type": "array",
@@ -808,7 +943,12 @@
             "assuranceLevel": {
               "type": "string",
               "description": "Level of assurance",
-              "enum": ["limited", "reasonable", "moderate", "not assured"]
+              "enum": [
+                "limited",
+                "reasonable",
+                "moderate",
+                "not assured"
+              ]
             },
             "verificationScope": {
               "type": "string",
@@ -856,7 +996,16 @@
         "socialCategory": {
           "type": "string",
           "description": "Type of social impact",
-          "enum": ["diversity-and-inclusion", "human-rights", "labor-practices", "community-development", "health-and-safety", "supply-chain-responsibility", "product-responsibility", "other"]
+          "enum": [
+            "diversity-and-inclusion",
+            "human-rights",
+            "labor-practices",
+            "community-development",
+            "health-and-safety",
+            "supply-chain-responsibility",
+            "product-responsibility",
+            "other"
+          ]
         },
         "stakeholderBeneficiaries": {
           "type": "array",
@@ -877,9 +1026,12 @@
               }
             },
             "impactLevel": {
-              "type": "string",
               "description": "Level of business impact",
-              "enum": ["minimal", "moderate", "significant", "transformative"]
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/changeMagnitude"
+                }
+              ]
             },
             "impactDescription": {
               "type": "string",
@@ -908,7 +1060,12 @@
                   "performanceTrend": {
                     "type": "string",
                     "description": "Performance trend",
-                    "enum": ["improving", "stable", "declining", "mixed"]
+                    "enum": [
+                      "improving",
+                      "stable",
+                      "declining",
+                      "mixed"
+                    ]
                   }
                 }
               }
@@ -982,7 +1139,12 @@
                   "completionStatus": {
                     "type": "string",
                     "description": "Completion status",
-                    "enum": ["not started", "in progress", "completed", "on hold"]
+                    "enum": [
+                      "not started",
+                      "in progress",
+                      "completed",
+                      "on hold"
+                    ]
                   }
                 }
               }
@@ -1131,12 +1293,28 @@
         "governanceCategory": {
           "type": "string",
           "description": "Type of governance practice",
-          "enum": ["board-oversight", "management-accountability", "stakeholder-engagement", "compliance-management", "reporting-disclosure", "ethics-integrity", "risk-oversight", "other"]
+          "enum": [
+            "board-oversight",
+            "management-accountability",
+            "stakeholder-engagement",
+            "compliance-management",
+            "reporting-disclosure",
+            "ethics-integrity",
+            "risk-oversight",
+            "other"
+          ]
         },
         "governanceScope": {
           "type": "string",
           "description": "Organizational reach of the practice",
-          "enum": ["enterprise", "business-unit", "product-line", "project", "location", "function"]
+          "enum": [
+            "enterprise",
+            "business-unit",
+            "product-line",
+            "project",
+            "location",
+            "function"
+          ]
         },
         "industryStandards": {
           "type": "array",
@@ -1146,9 +1324,19 @@
           }
         },
         "implementationStatus": {
-          "type": "string",
           "description": "Current state of implementation",
-          "enum": ["planning", "early-implementation", "established", "mature", "leading"]
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/implementationStatus"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "leading"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "verificationMethod": {
           "type": "object",
@@ -1270,7 +1458,12 @@
             "accessibilityLevel": {
               "type": "string",
               "description": "Accessibility of disclosures",
-              "enum": ["public", "investors-only", "regulators-only", "internal-only"]
+              "enum": [
+                "public",
+                "investors-only",
+                "regulators-only",
+                "internal-only"
+              ]
             }
           }
         },
@@ -1315,9 +1508,12 @@
                     "description": "Description of initiative"
                   },
                   "status": {
-                    "type": "string",
                     "description": "Status of initiative",
-                    "enum": ["planned", "in progress", "completed", "on hold"]
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/workStatus"
+                      }
+                    ]
                   },
                   "timeframe": {
                     "type": "string",
@@ -1601,7 +1797,12 @@
             "integrationLevel": {
               "type": "string",
               "description": "Level of integration with business strategy",
-              "enum": ["separate", "aligned", "integrated", "fully integrated"]
+              "enum": [
+                "separate",
+                "aligned",
+                "integrated",
+                "fully integrated"
+              ]
             },
             "strategicPillars": {
               "type": "array",

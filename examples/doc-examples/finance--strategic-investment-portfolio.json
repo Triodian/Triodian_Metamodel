@@ -54,7 +54,7 @@
     "description": "Investment portfolio directly enables our three strategic pillars of digital transformation, market expansion, and operational excellence"
   },
   "riskProfile": {
-    "riskLevel": "moderate",
+    "riskLevel": "medium",
     "description": "Balanced portfolio with mix of high-risk/high-return initiatives and foundational lower-risk investments",
     "mitigationStrategies": [
       "Portfolio diversification across technology, market, and product investments",
@@ -87,14 +87,14 @@
   ],
   "dependencies": [
     {
-      "dependencyType": "Enabler",
-      "domainType": "Strategy",
+      "dependencyType": "important",
+      "domainType": "strategy",
       "entityID": "STRAT-2025-01",
       "description": "Corporate Growth Strategy 2025-2030"
     },
     {
-      "dependencyType": "Critical",
-      "domainType": "Capability",
+      "dependencyType": "critical",
+      "domainType": "capability",
       "entityID": "CAP-FINPLAN-001",
       "description": "Financial Planning and Analysis capability"
     }

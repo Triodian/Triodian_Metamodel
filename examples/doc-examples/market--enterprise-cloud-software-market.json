@@ -117,14 +117,14 @@
   ],
   "dependencies": [
     {
-      "dependencyType": "Critical",
-      "domainType": "Capability",
+      "dependencyType": "critical",
+      "domainType": "capability",
       "entityID": "CAP-AI-001",
       "description": "AI/ML Development and Implementation capability"
     },
     {
-      "dependencyType": "Important",
-      "domainType": "Information",
+      "dependencyType": "important",
+      "domainType": "information",
       "entityID": "INFO-MARKET-003",
       "description": "Competitive Intelligence Database"
     }

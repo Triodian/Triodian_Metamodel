@@ -3,7 +3,12 @@
   "title": "Inter-Organizational Relationship Schema",
   "description": "Schema for modeling links between internal and external organizational units",
   "type": "object",
-  "required": ["relationshipID", "sourceOrgID", "targetOrgID", "relationshipType"],
+  "required": [
+    "relationshipID",
+    "sourceOrgID",
+    "targetOrgID",
+    "relationshipType"
+  ],
   "properties": {
     "relationshipID": {
       "type": "string",
@@ -15,7 +20,10 @@
     },
     "sourceType": {
       "type": "string",
-      "enum": ["Internal", "External"],
+      "enum": [
+        "Internal",
+        "External"
+      ],
       "description": "Whether the source is an internal or external organization"
     },
     "targetOrgID": {
@@ -24,7 +32,10 @@
     },
     "targetType": {
       "type": "string",
-      "enum": ["Internal", "External"],
+      "enum": [
+        "Internal",
+        "External"
+      ],
       "description": "Whether the target is an internal or external organization"
     },
     "relationshipType": {
@@ -72,15 +83,7 @@
         "type": "object",
         "properties": {
           "domainType": {
-            "type": "string",
-            "enum": [
-              "Capability",
-              "Service",
-              "Information",
-              "Policy",
-              "ValueStream",
-              "Initiative"
-            ]
+            "$ref": "common.schema.json#/definitions/domainType"
           },
           "domainID": {
             "type": "string"

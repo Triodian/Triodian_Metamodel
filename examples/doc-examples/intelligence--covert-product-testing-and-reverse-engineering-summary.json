@@ -12,7 +12,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Manual research",
       "cost": "$45,000 per quarter",
-      "complianceStatus": "Under review"
+      "complianceStatus": "underReview"
     },
     {
       "sourceName": "In-house Engineering Teardown Reports",
@@ -20,7 +20,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Manual research",
       "cost": "Internal resource cost",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Secondary Component Supply Chain Disclosures",
@@ -28,11 +28,11 @@
       "reliabilityRating": "Medium",
       "collectionMethod": "Manual research",
       "cost": "No additional cost",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Corporate espionage",
-  "frequency": "Ad-hoc",
+  "frequency": "adHoc",
   "legalAndEthicalConsiderations": "Strict legal review conducted prior to engagement; internal ethical risk logged due to aggressive market tactics.",
   "confidentialityLevel": "Top Secret",
   "performanceIndicators": [

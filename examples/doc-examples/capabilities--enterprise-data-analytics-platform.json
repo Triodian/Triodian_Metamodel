@@ -6,9 +6,9 @@
   "capabilityCategory": "Enabling",
   "capabilityType": "Analytical",
   "businessDomain": "Technology",
-  "maturityLevel": "Level 4 - Managed",
+  "maturityLevel": "managed",
   "investmentCategory": "Technology",
-  "criticality": "High",
+  "criticality": "high",
   "availability": "Business Hours",
   "scalability": "Highly Scalable"
 }

@@ -8,7 +8,11 @@
     "title": {
       "type": "string",
       "description": "Name/title of stakeholder",
-      "examples": ["Class I Railroad Operations", "Federal Railroad Administration", "Railway Technology Solutions Ltd"]
+      "examples": [
+        "Class I Railroad Operations",
+        "Federal Railroad Administration",
+        "Railway Technology Solutions Ltd"
+      ]
     },
     "tType": {
       "type": "string",
@@ -92,16 +96,11 @@
       "description": "Communication/interaction plans"
     },
     "engagementFrequency": {
-      "type": "string",
       "description": "How often engagement occurs",
-      "enum": [
-        "Daily",
-        "Weekly",
-        "Monthly",
-        "Quarterly",
-        "Annually",
-        "Ad-hoc",
-        "Continuous"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/frequency"
+        }
       ]
     },
     "communicationChannels": {
@@ -148,15 +147,11 @@
       "description": "Related/linked stakeholders"
     },
     "geographicScope": {
-      "type": "string",
       "description": "Geographic scope of stakeholder",
-      "enum": [
-        "Local",
-        "Regional",
-        "National",
-        "International",
-        "Continental",
-        "Global"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/geographicScope"
+        }
       ]
     },
     "industry": {
@@ -209,19 +204,7 @@
       "type": "array",
       "description": "Categories of risks",
       "items": {
-        "type": "string",
-        "enum": [
-          "Operational",
-          "Financial",
-          "Compliance/Regulatory",
-          "Reputational",
-          "Strategic",
-          "Communication",
-          "Relationship",
-          "External/Environmental",
-          "Technology",
-          "Legal"
-        ]
+        "$ref": "common.schema.json#/definitions/riskCategory"
       }
     },
     "improvementOpportunities": {
@@ -240,7 +223,11 @@
       }
     }
   },
-  "required": ["title", "tType", "description"],
+  "required": [
+    "title",
+    "tType",
+    "description"
+  ],
   "additionalProperties": false,
   "definitions": {
     "StakeholderRequirement": {
@@ -268,13 +255,11 @@
           "description": "Impacted organization units"
         },
         "priority": {
-          "type": "string",
           "description": "Requirement priority level",
-          "enum": [
-            "Critical",
-            "High",
-            "Medium",
-            "Low"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/priority"
+            }
           ]
         },
         "requirementType": {
@@ -322,16 +307,19 @@
           "description": "How requirement success is measured"
         },
         "riskLevel": {
-          "type": "string",
           "description": "Risk level if not met",
-          "enum": [
-            "High Risk",
-            "Medium Risk",
-            "Low Risk"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskLevel"
+            }
           ]
         }
       },
-      "required": ["title", "description", "purpose"],
+      "required": [
+        "title",
+        "description",
+        "purpose"
+      ],
       "additionalProperties": false
     }
   },
@@ -346,13 +334,20 @@
       "influenceLevel": "High Influence",
       "interestLevel": "High Interest",
       "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
-      "engagementFrequency": "Monthly",
-      "communicationChannels": ["Email", "In-Person Meeting", "Reports"],
+      "engagementFrequency": "monthly",
+      "communicationChannels": [
+        "Email",
+        "In-Person Meeting",
+        "Reports"
+      ],
       "expectations": "Full compliance with safety regulations, timely incident reporting",
-      "geographicScope": "National",
+      "geographicScope": "national",
       "industry": "Government",
       "organizationType": "Government Agency",
-      "riskCategories": ["Compliance/Regulatory", "Reputational"],
+      "riskCategories": [
+        "compliance",
+        "reputational"
+      ],
       "strategicAlignment": "Critical for maintaining operating licenses and safety compliance",
       "stakeholderRequirements": [
         {
@@ -361,12 +356,12 @@
           "purpose": "Ensure regulatory oversight and compliance monitoring",
           "owner": "Chief Safety Officer",
           "orgUnitTitle": "Safety Compliance Division",
-          "priority": "Critical",
+          "priority": "critical",
           "requirementType": "Compliance",
           "acceptanceCriteria": "Reports submitted by 5th of each month with 99.5% data accuracy",
           "complianceFramework": "Government Regulation",
           "regulatoryCompliance": "49 CFR Part 225 - Railroad Accidents/Incidents",
-          "riskLevel": "High Risk"
+          "riskLevel": "high"
         }
       ]
     },
@@ -379,11 +374,15 @@
       "influenceLevel": "Medium Influence",
       "interestLevel": "High Interest",
       "engagementStrategies": "Joint product development, regular technical reviews, innovation workshops",
-      "engagementFrequency": "Weekly",
-      "communicationChannels": ["Video Conference", "Digital Platform", "Workshops"],
+      "engagementFrequency": "weekly",
+      "communicationChannels": [
+        "Video Conference",
+        "Digital Platform",
+        "Workshops"
+      ],
       "inputs": "Technical expertise, software development, system integration",
       "outputs": "Licensing fees, partnership opportunities, market access",
-      "geographicScope": "International",
+      "geographicScope": "multinational",
       "industry": "Technology",
       "organizationType": "Private Company",
       "strategicAlignment": "Enables digital transformation and predictive maintenance capabilities"
@@ -397,23 +396,30 @@
       "influenceLevel": "Low Influence",
       "interestLevel": "High Interest",
       "engagementStrategies": "Community meetings, public consultations, safety briefings",
-      "engagementFrequency": "Quarterly",
-      "communicationChannels": ["In-Person Meeting", "Newsletter", "Website"],
+      "engagementFrequency": "quarterly",
+      "communicationChannels": [
+        "In-Person Meeting",
+        "Newsletter",
+        "Website"
+      ],
       "expectations": "Minimal noise disruption, advance notice of maintenance activities",
-      "geographicScope": "Local",
+      "geographicScope": "local",
       "industry": "Non-Profit",
       "organizationType": "Community Group",
-      "riskCategories": ["Reputational", "Operational"],
+      "riskCategories": [
+        "reputational",
+        "operational"
+      ],
       "stakeholderRequirements": [
         {
           "title": "Noise Level Compliance",
           "description": "Maintain railway noise levels within city ordinance limits",
           "purpose": "Ensure community quality of life standards",
-          "priority": "Medium",
+          "priority": "medium",
           "requirementType": "Compliance",
           "acceptanceCriteria": "Noise levels below 65dB during nighttime hours",
           "complianceFramework": "Government Regulation",
-          "riskLevel": "Medium Risk"
+          "riskLevel": "medium"
         }
       ]
     }

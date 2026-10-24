@@ -3,7 +3,12 @@
   "title": "Customer Domain Schema",
   "description": "Schema for the Customer domain in the Triodian Metamodel",
   "type": "object",
-  "required": ["customerID", "title", "description", "orgUnitTitle"],
+  "required": [
+    "customerID",
+    "title",
+    "description",
+    "orgUnitTitle"
+  ],
   "properties": {
     "customerID": {
       "type": "string",
@@ -20,7 +25,18 @@
     "customerSegmentType": {
       "type": "string",
       "description": "Classification of segment (e.g., demographic, behavioral, value-based)",
-      "enum": ["demographic", "behavioral", "value-based", "needs-based", "lifecycle", "industry", "geographic", "psychographic", "technographic", "other"]
+      "enum": [
+        "demographic",
+        "behavioral",
+        "value-based",
+        "needs-based",
+        "lifecycle",
+        "industry",
+        "geographic",
+        "psychographic",
+        "technographic",
+        "other"
+      ]
     },
     "orgUnitTitle": {
       "type": "string",
@@ -61,7 +77,18 @@
     "customerLifecycleStage": {
       "type": "string",
       "description": "Current position in the customer journey",
-      "enum": ["awareness", "consideration", "purchase", "onboarding", "usage", "growth", "retention", "advocacy", "win-back", "other"]
+      "enum": [
+        "awareness",
+        "consideration",
+        "purchase",
+        "onboarding",
+        "usage",
+        "growth",
+        "retention",
+        "advocacy",
+        "win-back",
+        "other"
+      ]
     },
     "customerLifetimeValue": {
       "type": "object",
@@ -125,9 +152,12 @@
             "description": "Type of dependency"
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain this depends on",
-            "enum": ["Capability", "Service", "Product", "Information", "Value Stream", "Strategy", "Organization", "Technology", "Initiative", "Other"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              }
+            ]
           },
           "entityID": {
             "type": "string",
@@ -153,7 +183,15 @@
           "relationshipType": {
             "type": "string",
             "description": "Type of relationship",
-            "enum": ["parent", "child", "complementary", "competitor", "influencer", "progression", "other"]
+            "enum": [
+              "parent",
+              "child",
+              "complementary",
+              "competitor",
+              "influencer",
+              "progression",
+              "other"
+            ]
           },
           "relationshipStrength": {
             "type": "integer",
@@ -180,7 +218,11 @@
       "description": "Cross-domain relationships linking customer domain entities to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",
