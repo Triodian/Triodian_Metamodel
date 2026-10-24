@@ -1,0 +1,43 @@
+{
+  "governanceID": "GOV-IFRS9-001",
+  "modelID": "MODEL-ECL-IFRS9-001",
+  "roles": {
+    "owner": "Head of Credit Modelling",
+    "sponsor": "CFO",
+    "independentValidator": "Model Validation Lead",
+    "approver": "Model Risk Committee"
+  },
+  "approval": {
+    "decision": "approved",
+    "date": "2025-07-01",
+    "conditions": "Quarterly monitoring"
+  },
+  "changeEvents": [
+    {
+      "eventID": "CHG-2025-09-15",
+      "type": "material",
+      "description": "Macroeconomic scenario specification update",
+      "effectiveDate": "2025-10-01",
+      "approvedBy": "Model Risk Committee",
+      "rollbackPlan": "Revert to v3.1 scenario set"
+    }
+  ],
+  "exceptions": [
+    {
+      "exceptionID": "EXC-2025-01",
+      "rationale": "Temporary data quality waiver for small segment",
+      "expiry": "2025-12-31",
+      "compensatingControls": [
+        "Manual overlay ceiling = 20 bps"
+      ]
+    }
+  ],
+  "documentationReferences": [
+    {
+      "documentName": "MRM Policy",
+      "location": "POL/MRM/2025-01",
+      "type": "policy",
+      "date": "2025-03-31"
+    }
+  ]
+}
