@@ -226,6 +226,28 @@
       "type": "string",
       "description": "How this customer segment aligns with strategic goals"
     },
+    "customerEmpathyScore": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): customers' perception of the organization's empathy",
+      "examples": [
+        "4.2/5"
+      ]
+    },
+    "customerJourneyEmotionalMapping": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether customer journeys are mapped to understand emotional touchpoints"
+    },
+    "clientTrustIndex": {
+      "type": "string",
+      "description": "Strategic empathy (suggested in the documentation): level of trust clients have in the organization",
+      "examples": [
+        "7/10"
+      ]
+    },
+    "feedbackLoopForEmotionalInsights": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether mechanisms capture and act on emotional feedback from customers"
+    },
     "crossDomainRelationships": {
       "type": "array",
       "description": "Directional relationships from this record to entities in other domains",

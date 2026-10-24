@@ -25,6 +25,18 @@
       "type": "string",
       "description": "The intended purpose or function of the Initiative within the Organization"
     },
+    "scope": {
+      "type": "string",
+      "description": "The range or extent of the initiative"
+    },
+    "status": {
+      "description": "Current progress state of the initiative",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/workStatus"
+        }
+      ]
+    },
     "owner": {
       "type": "string",
       "description": "The individual or team responsible for the Initiative"
