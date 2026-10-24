@@ -1,0 +1,30 @@
+{
+  "title": "Technical Knowledge Base",
+  "description": "Comprehensive repository of technical documentation, best practices, troubleshooting guides, and expert knowledge for engineering and operations teams",
+  "purpose": "Capture and share organizational knowledge to improve efficiency, reduce errors, and accelerate problem resolution",
+  "owner": "Knowledge Management Director",
+  "orgUnitTitle": "Engineering and Operations",
+  "informationCategory": "Knowledge",
+  "informationType": "Knowledge Base",
+  "dataClassification": "Internal",
+  "dataQuality": "Good Quality",
+  "format": "Wiki-based system with structured templates, searchable content, multimedia support",
+  "volume": "50,000 articles, 10,000 images, 500 videos, updated by 200+ contributors",
+  "updateFrequency": "Daily",
+  "retention": "Active content maintained, outdated content archived with version history",
+  "sources": "Engineering teams, operations staff, external consultants, vendor documentation",
+  "consumers": "Engineers, technicians, customer support, training department, contractors",
+  "quality": "Peer review process, expert validation, usage analytics, regular content audits",
+  "training": "Content creation workshops, knowledge sharing incentives, expert mentoring",
+  "innovation": "AI-powered content recommendations, automated knowledge extraction, chatbot integration",
+  "businessValue": "Reduces problem resolution time by 40%, improves first-time fix rate to 85%",
+  "informationElements": [
+    {
+      "title": "Troubleshooting Procedures",
+      "description": "Step-by-step procedures for diagnosing and resolving technical issues",
+      "elementType": "Document",
+      "businessRules": "Must include validation steps and escalation procedures",
+      "quality": "Expert review required, tested procedures only"
+    }
+  ]
+}

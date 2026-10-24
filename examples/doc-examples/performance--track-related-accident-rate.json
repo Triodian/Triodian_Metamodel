@@ -1,0 +1,37 @@
+{
+  "title": "Track-Related Accident Rate",
+  "description": "Measurement of accidents caused by track conditions per million trainmiles operated, tracking safety performance and regulatory compliance",
+  "purpose": "Monitor and reduce track-related accidents through targeted interventions and continuous improvement",
+  "owner": "Chief Safety Analysis Officer",
+  "orgUnitTitle": "Safety Analysis Division",
+  "performanceCategory": "Safety Performance",
+  "performanceType": "Rate",
+  "measurementLevel": "Enterprise",
+  "metricClass": "Lagging Indicator",
+  "inputs": "Accident reports, track inspection data, train movement logs, incident investigation reports",
+  "outputs": "Monthly safety reports, trend analysis, intervention recommendations, regulatory filings",
+  "performanceIndicators": "Current rate: 1.2 accidents per million train-miles, Year-overyear improvement: 15%",
+  "frequency": "Monthly",
+  "targets": "Target: <1.0 accidents per million train-miles, Industry benchmark: 1.5, Regulatory threshold: 2.5",
+  "thresholds": "Green: <1.0, Yellow: 1.0-1.5, Red: >1.5, Emergency: >2.5 per million trainmiles",
+  "dataSource": "Incident management system, operational data warehouse, FRA reporting system",
+  "measurementMethod": "Total track-related accidents divided by total train-miles operated (in millions)",
+  "automation": "Highly Automated",
+  "maturityLevel": "Optimizing",
+  "complianceAndStandards": [
+    "Federal Regulations",
+    "Safety Standards"
+  ],
+  "businessValue": "Prevented $5M in accident costs annually, 20% reduction in insurance premiums",
+  "strategicAlignment": "Direct measure of safety performance and regulatory effectiveness, core to operational excellence strategy",
+  "performanceKPIs": [
+    {
+      "title": "Monthly Accident Rate Trend",
+      "description": "Monthly tracking of accident rate trends and patterns",
+      "kpiType": "Lagging KPI",
+      "priority": "Critical",
+      "frequency": "Monthly",
+      "targets": "Consistent monthly improvement toward annual target"
+    }
+  ]
+}

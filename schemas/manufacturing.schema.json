@@ -1,11 +1,10 @@
-```json
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/manufacturing.schema.json",
   "title": "Manufacturing Domain Schema",
   "description": "Schema for the Manufacturing domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
-  "attributes": {
+  "properties": {
     "title": {
       "type": "string",
       "description": "Name/title of the manufacturing entity",
@@ -75,35 +74,35 @@
       "type": "array",
       "description": "A list of production units within this manufacturing entity.",
       "items": {
-        "$ref": "#/elements/ProductionUnit"
+        "$ref": "#/definitions/ProductionUnit"
       }
     },
     "workOrders": {
       "type": "array",
       "description": "A list of active and completed work orders.",
       "items": {
-        "$ref": "#/elements/WorkOrder"
+        "$ref": "#/definitions/WorkOrder"
       }
     },
     "billsOfMaterials": {
       "type": "array",
       "description": "A collection of bills of materials for various products.",
       "items": {
-        "$ref": "#/elements/BillOfMaterials"
+        "$ref": "#/definitions/BillOfMaterials"
       }
     },
     "inventory": {
       "type": "array",
       "description": "Current inventory levels of raw materials, WIP, and finished goods.",
       "items": {
-        "$ref": "#/elements/Inventory"
+        "$ref": "#/definitions/Inventory"
       }
     },
     "manufacturingObjectives": {
       "type": "array",
       "description": "Specific objectives supporting the manufacturing strategy.",
       "items": {
-        "$ref": "#/elements/ManufacturingObjective"
+        "$ref": "#/definitions/ManufacturingObjective"
       }
     },
     "keyActivities": {
@@ -161,11 +160,11 @@
     "scopeLevel"
   ],
   "additionalProperties": false,
-  "elements": {
+  "definitions": {
     "ProductionUnit": {
       "type": "object",
       "description": "A structured entity for physical production.",
-      "attributes": {
+      "properties": {
         "unitName": {
           "type": "string",
           "description": "The name or title of the production unit.",
@@ -197,7 +196,7 @@
     "WorkOrder": {
       "type": "object",
       "description": "An authorization to produce a specific quantity of a product.",
-      "attributes": {
+      "properties": {
         "orderID": {
           "type": "string",
           "description": "A unique identifier for the work order.",
@@ -230,7 +229,7 @@
     "BillOfMaterials": {
       "type": "object",
       "description": "A complete list of raw materials, components, and sub-assemblies.",
-      "attributes": {
+      "properties": {
         "bomID": {
           "type": "string",
           "description": "A unique identifier for the Bill of Materials.",
@@ -246,7 +245,7 @@
           "description": "A list of components and their required quantities.",
           "items": {
             "type": "object",
-            "attributes": {
+            "properties": {
               "item": {
                 "type": "string"
               },
@@ -266,7 +265,7 @@
     "Inventory": {
       "type": "object",
       "description": "The stock of raw materials, work-in-progress, and finished goods.",
-      "attributes": {
+      "properties": {
         "materialReference": {
           "type": "string",
           "description": "A link to the 'Material' or 'Product' element in the metamodel.",
@@ -295,7 +294,7 @@
     "ManufacturingObjective": {
       "type": "object",
       "description": "A specific objective that supports a manufacturing strategy.",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of objective."
@@ -412,4 +411,3 @@
     }
   ]
 }
-```

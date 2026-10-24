@@ -1,0 +1,39 @@
+{
+  "orgTitle": "Office of Railroad Safety",
+  "orgShortName": "Railroad Safety",
+  "orgType": "Government Agency",
+  "country": "United States of America",
+  "description": "Regional safety oversight office responsible for inspections and enforcement of federal railroad safety regulations in the Northeast corridor",
+  "structure": "5 Regional Offices - 8 Technical Divisions",
+  "structureType": "Regional",
+  "missionStatement": "Reduce railroad-related accidents through proactive inspections and data-driven safety programs",
+  "visionStatement": "Zero train accidents and employee injuries through technology-enabled safety systems",
+  "values": "Safety First, Data-Driven Decisions, Continuous Improvement",
+  "legalStructure": "Federal/National Agency",
+  "geographicScope": "National",
+  "operationalModel": "Decentralized Operations",
+  "currency": "USD",
+  "cultureType": "Process-focused",
+  "history": "Est. 1966, implemented PTC mandate 2008, achieved 99.6% compliance 2023",
+  "complianceFrameworks": [
+    "Local Regulatory Requirements"
+  ],
+  "primaryLanguages": [
+    "English"
+  ],
+  "organizationUnits": [
+    {
+      "orgUnitTitle": "Track and Rail Infrastructure Division",
+      "description": "Oversees track safety standards and inspection programs across the national rail network",
+      "purpose": "Maintain Class 1-5 track safety standards compliance",
+      "owner": "Director of Track Safety",
+      "higherOrganizationUnit": "Office of Railroad Safety",
+      "subOrganizationUnits": [
+        "Track Geometry Program",
+        "Rail Defect Detection",
+        "Bridge Safety Unit"
+      ],
+      "roles": "Senior Track Inspector, Rail Integrity Specialist, Bridge Safety Engineer"
+    }
+  ]
+}

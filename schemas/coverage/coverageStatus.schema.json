@@ -22,12 +22,26 @@
     },
     "coverageLevelAchieved": {
       "type": "string",
-      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "enum": [
+        "None",
+        "Minimal",
+        "Documented",
+        "Analysed",
+        "Governed",
+        "Optimised"
+      ],
       "description": "Categorical level derived from the score."
     },
     "expectedCoverageLevel": {
       "type": "string",
-      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "enum": [
+        "None",
+        "Minimal",
+        "Documented",
+        "Analysed",
+        "Governed",
+        "Optimised"
+      ],
       "description": "Target level defined in CoverageExpectation."
     },
     "coverageGap": {
@@ -40,10 +54,21 @@
       "description": "Timestamp when this coverage status was last assessed."
     },
     "notes": {
-      "type": "string",
-      "description": "Optional comments or explanation for gap.",
-      "nullable": true
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional comments or explanation for gap."
     }
   },
-  "required": ["id", "orgUnit", "domain", "coverageScore", "coverageLevelAchieved", "expectedCoverageLevel", "coverageGap", "lastEvaluatedAt"]
+  "required": [
+    "id",
+    "orgUnit",
+    "domain",
+    "coverageScore",
+    "coverageLevelAchieved",
+    "expectedCoverageLevel",
+    "coverageGap",
+    "lastEvaluatedAt"
+  ]
 }

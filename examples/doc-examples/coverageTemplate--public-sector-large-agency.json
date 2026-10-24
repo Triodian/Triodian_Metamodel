@@ -1,0 +1,23 @@
+{
+  "id": "ct-public-large-001",
+  "name": "Public Sector – Large Agency",
+  "description": "Typical baseline coverage for large, compliance-driven public agencies.",
+  "sector": "Government",
+  "sizeCategory": "Large",
+  "expectations": [
+    {
+      "domain": "Policy",
+      "targetCoverageLevel": "Governed"
+    },
+    {
+      "domain": "Capability",
+      "targetCoverageLevel": "Analysed"
+    },
+    {
+      "domain": "Performance",
+      "targetCoverageLevel": "Documented"
+    }
+  ],
+  "createdBy": "system@orthogramic.com",
+  "createdAt": "2025-06-01T12:00:00Z"
+}

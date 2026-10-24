@@ -1,0 +1,66 @@
+{
+  "intelligenceID": "ORGINT-007",
+  "title": "Covert Product Testing and Reverse Engineering Summary",
+  "description": "Technical analysis of competitor flagship product performance and supply chain components, obtained through covert market purchases and reverse engineering activities.",
+  "purpose": "Provide early visibility into proprietary product features, material sourcing strategies, and cost structures of a primary market rival.",
+  "owner": "Head of Special Competitive Operations",
+  "orgUnitTitle": "Strategic Intelligence Unit",
+  "sources": [
+    {
+      "sourceName": "Anonymous Product Acquisition Network",
+      "sourceType": "Informal networks",
+      "reliabilityRating": "High",
+      "collectionMethod": "Manual research",
+      "cost": "$45,000 per quarter",
+      "complianceStatus": "Under review"
+    },
+    {
+      "sourceName": "In-house Engineering Teardown Reports",
+      "sourceType": "Internal monitoring",
+      "reliabilityRating": "High",
+      "collectionMethod": "Manual research",
+      "cost": "Internal resource cost",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Secondary Component Supply Chain Disclosures",
+      "sourceType": "Public data",
+      "reliabilityRating": "Medium",
+      "collectionMethod": "Manual research",
+      "cost": "No additional cost",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Corporate espionage",
+  "frequency": "Ad-hoc",
+  "legalAndEthicalConsiderations": "Strict legal review conducted prior to engagement; internal ethical risk logged due to aggressive market tactics.",
+  "confidentialityLevel": "Top Secret",
+  "performanceIndicators": [
+    "6-month competitive feature advantage maintained in key product lines",
+    "Reduction in cost estimation errors by 25%"
+  ],
+  "risks": [
+    "High reputational risk if operation exposed",
+    "Legal exposure depending on jurisdictional interpretations"
+  ],
+  "improvementOpportunities": [
+    "Transition from physical acquisition to cyber-focused competitive monitoring",
+    "Engage legal counsel earlier in operational planning"
+  ],
+  "strategicAlignment": "Supports Product Leadership Strategy by securing proprietary product roadmap insights.",
+  "applications": [
+    {
+      "applicationArea": "Competitive response",
+      "organisationalDecisionsInfluenced": "Next-generation product timing, component supplier renegotiations, targeted IP strategy.",
+      "intelligenceConsumers": [
+        "Chief Product Officer",
+        "Chief Technology Officer",
+        "IP Counsel"
+      ],
+      "measurableOutcomes": [
+        "Acceleration of internal product innovation by two release cycles",
+        "Increased gross margin by 8% via early supplier targeting"
+      ]
+    }
+  ]
+}

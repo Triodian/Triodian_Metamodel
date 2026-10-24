@@ -1,0 +1,12 @@
+{
+  "id": "goal-001",
+  "organization": "Org-Alpha",
+  "orgUnit": "OU-Finance",
+  "domain": "Performance",
+  "weighting": 0.3,
+  "coverageGapTolerance": 0.1,
+  "maturityTargetDate": "2025-12-31",
+  "notes": "Performance visibility is essential for our annual reporting cycle",
+  "createdBy": "coo@org-alpha.com",
+  "createdAt": "2025-07-01T11:15:00Z"
+}

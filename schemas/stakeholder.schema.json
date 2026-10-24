@@ -4,7 +4,7 @@
   "title": "Stakeholder Domain Schema",
   "description": "Schema for the Stakeholder domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
-  "attributes": {
+  "properties": {
     "title": {
       "type": "string",
       "description": "Name/title of stakeholder",
@@ -236,17 +236,17 @@
       "type": "array",
       "description": "Specific requirements from stakeholder",
       "items": {
-        "$ref": "#/elements/StakeholderRequirement"
+        "$ref": "#/definitions/StakeholderRequirement"
       }
     }
   },
   "required": ["title", "tType", "description"],
   "additionalProperties": false,
-  "elements": {
+  "definitions": {
     "StakeholderRequirement": {
       "type": "object",
       "description": "A specific requirement from a stakeholder",
-      "attributes": {
+      "properties": {
         "title": {
           "type": "string",
           "description": "Name/title of requirement"

@@ -11,39 +11,57 @@
     "domain": {
       "type": "string",
       "description": "The business architecture domain this expectation applies to.",
-      "examples": ["Capability", "Strategy", "Information"]
+      "examples": [
+        "Capability",
+        "Strategy",
+        "Information"
+      ]
     },
     "orgUnit": {
-      "type": "string",
-      "description": "The organisation unit this expectation applies to. Leave null if applying to the whole organisation.",
-      "nullable": true
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "The organisation unit this expectation applies to. Leave null if applying to the whole organisation."
     },
     "targetCoverageLevel": {
       "type": "string",
-      "enum": ["None", "Minimal", "Documented", "Analysed", "Governed", "Optimised"],
+      "enum": [
+        "None",
+        "Minimal",
+        "Documented",
+        "Analysed",
+        "Governed",
+        "Optimised"
+      ],
       "description": "The desired level of coverage for the specified domain."
     },
     "lifecycleStage": {
-      "type": "string",
-      "nullable": true,
+      "type": [
+        "string",
+        "null"
+      ],
       "description": "Optional lifecycle stage this expectation applies to. Used to tailor expectations based on the maturity or development phase of the domain element.",
-        "enum": [
-          "Ideation",
-          "Design",
-          "Development",
-          "Operational",
-          "Optimisation",
-          "Retirement"
-          ]
-    }
+      "enum": [
+        "Ideation",
+        "Design",
+        "Development",
+        "Operational",
+        "Optimisation",
+        "Retirement",
+        null
+      ]
+    },
     "justification": {
       "type": "string",
       "description": "Reason for the desired coverage level (e.g. compliance, risk, opportunity)."
     },
     "linkedStrategy": {
-      "type": "string",
-      "description": "Link to the Strategy element supporting this expectation.",
-      "nullable": true
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Link to the Strategy element supporting this expectation."
     },
     "createdBy": {
       "type": "string",
@@ -55,5 +73,12 @@
       "description": "Timestamp of creation."
     }
   },
-  "required": ["id", "domain", "targetCoverageLevel", "justification", "createdBy", "createdAt"]
+  "required": [
+    "id",
+    "domain",
+    "targetCoverageLevel",
+    "justification",
+    "createdBy",
+    "createdAt"
+  ]
 }

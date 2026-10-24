@@ -1,0 +1,66 @@
+{
+  "intelligenceID": "ORGINT-006",
+  "title": "M&A Strategic Target Watchlist Quarterly Summary",
+  "description": "Assessment of strategic fit, market positioning, and risk profile of top 10 potential acquisition targets in the SaaS sector, based on financial disclosures, insider signals, and market reputation.",
+  "purpose": "Enable the executive committee to maintain a proactive acquisition pipeline aligned to the growth strategy.",
+  "owner": "Director of M&A Strategy",
+  "orgUnitTitle": "Corporate Development Office",
+  "sources": [
+    {
+      "sourceName": "Company Financial Filings",
+      "sourceType": "Regulatory filings",
+      "reliabilityRating": "High",
+      "collectionMethod": "Manual research",
+      "cost": "No additional cost",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Venture Capital Portfolio Tracker",
+      "sourceType": "Third-party subscription",
+      "reliabilityRating": "High",
+      "collectionMethod": "Third-party acquisition",
+      "cost": "$22,000/year",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Industry Insider Forums",
+      "sourceType": "Informal networks",
+      "reliabilityRating": "Medium",
+      "collectionMethod": "Manual research",
+      "cost": "Low, <$5,000/year",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Business reporting",
+  "frequency": "Quarterly",
+  "legalAndEthicalConsiderations": "Complies with anti-trust pre-merger review processes and fair competition standards.",
+  "confidentialityLevel": "Restricted",
+  "performanceIndicators": [
+    "Improved pre-diligence pipeline coverage to 95% of relevant targets",
+    "Reduction in acquisition timeline by two quarters"
+  ],
+  "risks": [
+    "Potential loss of confidentiality in target tracking",
+    "Shifts in market dynamics making quarterly summaries obsolete quickly"
+  ],
+  "improvementOpportunities": [
+    "Incorporate AI valuation modelling into watchlist ranking",
+    "Expand non-financial risk screening (e.g., ESG controversies)"
+  ],
+  "strategicAlignment": "Directly supports non-organic growth objectives under Strategic Expansion Agenda 2030.",
+  "applications": [
+    {
+      "applicationArea": "Mergers and acquisitions",
+      "organisationalDecisionsInfluenced": "Prioritisation of acquisition targets, deal timing, early-stage engagement strategies.",
+      "intelligenceConsumers": [
+        "CEO",
+        "Chief Strategy Officer",
+        "M&A Committee Members"
+      ],
+      "measurableOutcomes": [
+        "Two successful acquisitions from proactive pipeline per annum",
+        "40% higher post-acquisition strategic alignment scores"
+      ]
+    }
+  ]
+}

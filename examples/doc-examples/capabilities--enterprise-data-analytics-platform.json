@@ -1,0 +1,14 @@
+{
+  "title": "Enterprise Data Analytics Platform",
+  "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
+  "purpose": "Enable data-driven decision making and provide insights for operational optimization",
+  "owner": "Chief Data Officer",
+  "capabilityCategory": "Enabling",
+  "capabilityType": "Analytical",
+  "businessDomain": "Technology",
+  "maturityLevel": "Level 4 - Managed",
+  "investmentCategory": "Technology",
+  "criticality": "High",
+  "availability": "Business Hours",
+  "scalability": "Highly Scalable"
+}

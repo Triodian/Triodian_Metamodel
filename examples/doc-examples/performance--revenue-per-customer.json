@@ -1,0 +1,29 @@
+{
+  "title": "Revenue per Customer",
+  "description": "Average revenue generated per customer over a specific time period, measuring customer value and business efficiency",
+  "purpose": "Track customer value generation and identify opportunities for revenue optimization and customer relationship enhancement",
+  "owner": "Chief Financial Officer",
+  "orgUnitTitle": "Finance Division",
+  "performanceCategory": "Financial Performance",
+  "performanceType": "Ratio",
+  "measurementLevel": "Enterprise",
+  "metricClass": "Lagging Indicator",
+  "inputs": "Revenue data, customer count, service utilization data, pricing information",
+  "outputs": "Monthly financial reports, customer value analysis, pricing strategy recommendations",
+  "frequency": "Monthly",
+  "targets": "Target: $2,500 per customer, Industry benchmark: $2,200, Growth target: 8% annually",
+  "dataSource": "Financial systems, CRM platform, billing systems, customer database",
+  "automation": "Highly Automated",
+  "maturityLevel": "Defined",
+  "businessValue": "Increased revenue per customer by 12%, improved pricing strategy effectiveness",
+  "performanceKPIs": [
+    {
+      "title": "Customer Lifetime Value",
+      "description": "Projected total revenue from customer relationship",
+      "kpiType": "Leading KPI",
+      "priority": "High",
+      "frequency": "Quarterly",
+      "targets": "Increase CLV by 10% annually"
+    }
+  ]
+}
