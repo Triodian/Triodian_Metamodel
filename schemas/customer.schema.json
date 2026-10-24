@@ -159,8 +159,12 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
-            "description": "Type of dependency"
+            "description": "Type of dependency",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
             "description": "Type of domain this depends on",

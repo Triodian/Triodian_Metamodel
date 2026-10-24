@@ -201,6 +201,7 @@ SYNONYMS["domainType"].update({"standard": ("policy", "lossy"), "process": ("cap
                                "services": "service", "stakeholders": "stakeholder", "valuestreams": "valueStream",
                                "riskmanagement": "risk", "policies": "policy", "strategies": "strategy"})
 SYNONYMS["frequency"]["yearly"] = "annually"
+SYNONYMS["frequency"]["annual"] = "annually"
 
 # Fields that reuse a generic name for a domain-specific idea. They keep their own list,
 # but should be renamed so they no longer look like the shared concept.

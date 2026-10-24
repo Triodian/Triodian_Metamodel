@@ -174,13 +174,13 @@
   ],
   "dependencies": [
     {
-      "dependencyType": "Critical",
+      "dependencyType": "critical",
       "domainType": "capability",
       "entityID": "CAP-SECOPS-001",
       "description": "Security Operations capability"
     },
     {
-      "dependencyType": "Important",
+      "dependencyType": "important",
       "domainType": "information",
       "entityID": "INFO-DATA-003",
       "description": "Customer Data Security Classification Framework"

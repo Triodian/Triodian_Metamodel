@@ -547,8 +547,12 @@
             ]
           },
           "monitoringFrequency": {
-            "type": "string",
-            "description": "How often indicator is measured"
+            "description": "How often indicator is measured",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/frequency"
+              }
+            ]
           }
         },
         "additionalProperties": false
@@ -561,8 +565,12 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
-            "description": "Type of dependency"
+            "description": "Type of dependency",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
             "description": "Type of domain this depends on",
@@ -1234,8 +1242,12 @@
                     "description": "Name of dashboard"
                   },
                   "updateFrequency": {
-                    "type": "string",
-                    "description": "How often updated"
+                    "description": "How often updated",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/frequency"
+                      }
+                    ]
                   }
                 },
                 "additionalProperties": false

@@ -51,13 +51,13 @@
   ],
   "dependencies": [
     {
-      "dependencyType": "Critical",
+      "dependencyType": "critical",
       "domainType": "capability",
       "entityID": "CAP-001",
       "description": "Wealth Advisory Services capability"
     },
     {
-      "dependencyType": "Important",
+      "dependencyType": "important",
       "domainType": "service",
       "entityID": "SVC-003",
       "description": "Portfolio Management Service"

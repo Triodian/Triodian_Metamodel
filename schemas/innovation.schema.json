@@ -260,8 +260,12 @@
                 "description": "Name of the risk factor"
               },
               "riskLevel": {
-                "type": "string",
-                "description": "Level of this specific risk"
+                "description": "Level of this specific risk",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/riskLevel"
+                  }
+                ]
               },
               "mitigationApproach": {
                 "type": "string",
