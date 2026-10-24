@@ -8,6 +8,14 @@
       "type": "object",
       "description": "Represents the overarching goal or strategic effort that typically spans across several programs",
       "properties": {
+        "initiativeID": {
+          "description": "Unique identifier for the Initiative",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "The name or title of the Initiative"
@@ -28,14 +36,22 @@
           "type": "string",
           "description": "The Organization unit(s) to which the Initiative is linked"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "driverType": {
           "type": "string",
-       "description": "Primary driver for this initiative, based on the SRM trigger catalogue."
+          "description": "Primary driver for this initiative, based on the SRM trigger catalogue."
         },
         "rationale": {
-         "type": "string",
-         "description": "Narrative explanation referencing this driver and the rationale for the initiative."
-        }, 
+          "type": "string",
+          "description": "Narrative explanation referencing this driver and the rationale for the initiative."
+        },
         "goals": {
           "type": "string",
           "description": "Specific objectives of the Initiative"
@@ -56,6 +72,14 @@
           "type": "string",
           "description": "Initiatives that are related or linked to this Initiative"
         },
+        "relatedInitiativeIDs": {
+          "type": "array",
+          "description": "IDs of related Initiatives",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "performanceIndicators": {
           "type": "string",
           "description": "Metrics used to measure the success and progress of the Initiative"
@@ -72,24 +96,51 @@
           "type": "string",
           "description": "How the Initiative aligns with the Organization's strategic goals and objectives"
         },
-        "justification": {   
-        "type": "string",   
-        "description": "Explanation of why the initiative is required, referencing business drivers, strategic goals, capability gaps, stakeholder needs, or regulatory obligations." 
-        }, 
+        "justification": {
+          "type": "string",
+          "description": "Explanation of why the initiative is required, referencing business drivers, strategic goals, capability gaps, stakeholder needs, or regulatory obligations."
+        },
         "relatedStrategies": {
           "type": "string",
           "description": "Strategies that are connected or aligned with the primary Strategy"
         },
+        "relatedStrategyIDs": {
+          "type": "array",
+          "description": "IDs of the Strategies this Initiative aligns with",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "childProgram": {
           "type": "string",
           "description": "A specific Program that is part of a larger Initiative"
+        },
+        "childProgramIDs": {
+          "type": "array",
+          "description": "IDs of the Programs that are part of this Initiative",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
         }
-      }
+      },
+      "required": [
+        "initiativeID"
+      ]
     },
     "program": {
       "type": "object",
       "description": "Programs sit beneath initiatives and are collections of related projects",
       "properties": {
+        "programID": {
+          "description": "Unique identifier for the Program",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "The name or title of the Program"
@@ -109,6 +160,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "The Organization unit(s) to which the Program is linked"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "goals": {
           "type": "string",
@@ -134,6 +193,14 @@
           "type": "string",
           "description": "Programs that are related or linked to this Program"
         },
+        "relatedProgramIDs": {
+          "type": "array",
+          "description": "IDs of related Programs",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "risks": {
           "type": "string",
           "description": "Potential risks associated with the Program and its implementation"
@@ -150,16 +217,43 @@
           "type": "string",
           "description": "The parent Initiative to which this Program belongs"
         },
+        "parentInitiativeID": {
+          "description": "ID of the Initiative this Program belongs to",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "childProjects": {
           "type": "string",
           "description": "Projects that are part of this Program"
+        },
+        "childProjectIDs": {
+          "type": "array",
+          "description": "IDs of the Projects that are part of this Program",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
         }
-      }
+      },
+      "required": [
+        "programID"
+      ]
     },
     "project": {
       "type": "object",
       "description": "Projects are specific tasks or efforts at the base of the hierarchy",
       "properties": {
+        "projectID": {
+          "description": "Unique identifier for the Project",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "The name or title of the Project"
@@ -204,6 +298,14 @@
           "type": "string",
           "description": "Projects that are related or linked to this Project"
         },
+        "relatedProjectIDs": {
+          "type": "array",
+          "description": "IDs of related Projects",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
+        },
         "risks": {
           "type": "string",
           "description": "Potential risks associated with the Project and its implementation"
@@ -220,11 +322,30 @@
           "type": "string",
           "description": "The parent Program to which this Project belongs"
         },
+        "parentProgramID": {
+          "description": "ID of the Program this Project belongs to",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "childProjects": {
           "type": "string",
           "description": "Projects that are part of this Project"
+        },
+        "childProjectIDs": {
+          "type": "array",
+          "description": "IDs of sub-Projects that are part of this Project",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          },
+          "uniqueItems": true
         }
-      }
+      },
+      "required": [
+        "projectID"
+      ]
     }
   }
 }

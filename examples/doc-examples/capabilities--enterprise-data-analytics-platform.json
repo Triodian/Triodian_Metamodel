@@ -1,4 +1,5 @@
 {
+  "capabilityID": "CAP-003",
   "title": "Enterprise Data Analytics Platform",
   "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
   "purpose": "Enable data-driven decision making and provide insights for operational optimization",

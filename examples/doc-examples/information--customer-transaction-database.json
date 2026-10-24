@@ -1,4 +1,5 @@
 {
+  "informationID": "INFO-001",
   "title": "Customer Transaction Database",
   "description": "Comprehensive database containing all customer transaction records, payment details, and purchase history for operational and analytical purposes",
   "purpose": "Support real-time transaction processing and enable customer analytics and business intelligence",

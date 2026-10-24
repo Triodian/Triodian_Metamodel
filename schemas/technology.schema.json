@@ -43,6 +43,14 @@
       "type": "string",
       "description": "The IT or technology organization unit responsible for this component"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Specific roles within the technology organization that manage this component",

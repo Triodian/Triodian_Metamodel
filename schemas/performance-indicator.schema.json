@@ -43,7 +43,12 @@
     "thresholdType": {
       "type": "string",
       "description": "General threshold logic, e.g. higher-is-better or lower-is-better",
-      "enum": ["higher-is-better", "lower-is-better", "target-is-optimal", "range-is-optimal"]
+      "enum": [
+        "higher-is-better",
+        "lower-is-better",
+        "target-is-optimal",
+        "range-is-optimal"
+      ]
     },
     "thresholds": {
       "type": "array",
@@ -61,7 +66,14 @@
           },
           "comparisonOperator": {
             "type": "string",
-            "enum": [">", "<", ">=", "<=", "==", "!="],
+            "enum": [
+              ">",
+              "<",
+              ">=",
+              "<=",
+              "==",
+              "!="
+            ],
             "description": "Logical operator for threshold evaluation"
           },
           "alertMessage": {
@@ -76,7 +88,11 @@
             "description": "List of roles or individuals to be notified"
           }
         },
-        "required": ["level", "value", "comparisonOperator"]
+        "required": [
+          "level",
+          "value",
+          "comparisonOperator"
+        ]
       }
     },
     "targetDate": {
@@ -96,7 +112,15 @@
     },
     "aggregationPeriod": {
       "type": "string",
-      "enum": ["real-time", "hourly", "daily", "weekly", "monthly", "quarterly", "yearly"],
+      "enum": [
+        "real-time",
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "quarterly",
+        "yearly"
+      ],
       "description": "The timeframe used to aggregate performance data"
     },
     "assessmentFrequency": {
@@ -133,6 +157,14 @@
       "type": "string",
       "description": "The organizational unit to which this indicator belongs"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "leadingIndicators": {
       "type": "array",
       "description": "Metrics that show early progress before outcomes materialize",
@@ -164,7 +196,10 @@
             "description": "Current measurement for this leading indicator"
           }
         },
-        "required": ["indicatorName", "description"]
+        "required": [
+          "indicatorName",
+          "description"
+        ]
       }
     },
     "potentialMetrics": {
@@ -204,7 +239,10 @@
             "description": "Estimated time required to implement this metric"
           }
         },
-        "required": ["metricName", "description"]
+        "required": [
+          "metricName",
+          "description"
+        ]
       }
     },
     "outcomeTimeframes": {
@@ -218,7 +256,7 @@
             "type": "object",
             "properties": {
               "outcome": {
-                "type": "string", 
+                "type": "string",
                 "description": "Description of the immediate outcome"
               },
               "expectedValue": {
@@ -239,7 +277,7 @@
             "type": "object",
             "properties": {
               "outcome": {
-                "type": "string", 
+                "type": "string",
                 "description": "Description of the intermediate outcome"
               },
               "expectedValue": {
@@ -260,7 +298,7 @@
             "type": "object",
             "properties": {
               "outcome": {
-                "type": "string", 
+                "type": "string",
                 "description": "Description of the long-term outcome"
               },
               "expectedValue": {
@@ -308,7 +346,12 @@
       "properties": {
         "approachType": {
           "type": "string",
-          "enum": ["objective", "subjective", "proxy", "hybrid"],
+          "enum": [
+            "objective",
+            "subjective",
+            "proxy",
+            "hybrid"
+          ],
           "description": "The primary approach to measurement"
         },
         "objectiveComponents": {
@@ -338,7 +381,10 @@
                 "description": "Process used to validate this measurement"
               }
             },
-            "required": ["component", "method"]
+            "required": [
+              "component",
+              "method"
+            ]
           }
         },
         "subjectiveComponents": {
@@ -374,7 +420,10 @@
                 "description": "Measures to control bias in subjective assessment"
               }
             },
-            "required": ["component", "assessmentMethod"]
+            "required": [
+              "component",
+              "assessmentMethod"
+            ]
           }
         },
         "proxyComponents": {
@@ -411,7 +460,10 @@
                 "description": "Weight of this component in the overall metric (0-100%)"
               }
             },
-            "required": ["component", "targetMeasure"]
+            "required": [
+              "component",
+              "targetMeasure"
+            ]
           }
         },
         "dataNormalization": {
@@ -433,7 +485,9 @@
           }
         }
       },
-      "required": ["approachType"]
+      "required": [
+        "approachType"
+      ]
     },
     "strategicAlignments": {
       "type": "array",
@@ -447,7 +501,13 @@
           },
           "alignmentType": {
             "type": "string",
-            "enum": ["strategic-objective", "initiative", "policy", "capability", "value-stream"],
+            "enum": [
+              "strategic-objective",
+              "initiative",
+              "policy",
+              "capability",
+              "value-stream"
+            ],
             "description": "Type of strategic element this indicator aligns with"
           },
           "alignmentStrength": {
@@ -461,7 +521,10 @@
             "description": "Description of how this indicator supports the strategic element"
           }
         },
-        "required": ["alignmentID", "alignmentType"]
+        "required": [
+          "alignmentID",
+          "alignmentType"
+        ]
       }
     },
     "statusHistory": {
@@ -481,7 +544,12 @@
           },
           "status": {
             "type": "string",
-            "enum": ["above-target", "on-target", "below-target", "critical"],
+            "enum": [
+              "above-target",
+              "on-target",
+              "below-target",
+              "critical"
+            ],
             "description": "Performance status relative to target"
           },
           "comment": {
@@ -489,7 +557,10 @@
             "description": "Optional commentary on this measurement"
           }
         },
-        "required": ["date", "value"]
+        "required": [
+          "date",
+          "value"
+        ]
       }
     },
     "relatedIndicators": {
@@ -504,7 +575,14 @@
           },
           "relationshipType": {
             "type": "string",
-            "enum": ["parent", "child", "correlates-with", "influences", "derived-from", "component-of"],
+            "enum": [
+              "parent",
+              "child",
+              "correlates-with",
+              "influences",
+              "derived-from",
+              "component-of"
+            ],
             "description": "Type of relationship with the related indicator"
           },
           "relationshipStrength": {
@@ -518,7 +596,10 @@
             "description": "Description of how this indicator relates to the other"
           }
         },
-        "required": ["indicatorID", "relationshipType"]
+        "required": [
+          "indicatorID",
+          "relationshipType"
+        ]
       }
     },
     "stakeholderImpacts": {
@@ -533,7 +614,12 @@
           },
           "interestLevel": {
             "type": "string",
-            "enum": ["low", "medium", "high", "critical"],
+            "enum": [
+              "low",
+              "medium",
+              "high",
+              "critical"
+            ],
             "description": "Level of interest from this stakeholder"
           },
           "impactDescription": {
@@ -545,7 +631,9 @@
             "description": "How often updates are shared with this stakeholder"
           }
         },
-        "required": ["stakeholderID"]
+        "required": [
+          "stakeholderID"
+        ]
       }
     },
     "lastUpdated": {
@@ -558,5 +646,9 @@
       "description": "Version of this indicator definition"
     }
   },
-  "required": ["performanceIndicatorID", "title", "description"]
+  "required": [
+    "performanceIndicatorID",
+    "title",
+    "description"
+  ]
 }
