@@ -2,7 +2,7 @@
   "id": "cexp-001",
   "domain": "Capability",
   "orgUnit": "OU-Finance",
-  "targetCoverageLevel": "Analysed",
+  "targetCoverageLevel": "analysed",
   "justification": "Required for budgeting accuracy and integration with forecasting process",
   "linkedStrategy": "strat-2025-03",
   "createdBy": "admin@org.com",

@@ -34,7 +34,7 @@
         "database",
         "integration",
         "security",
-        "end-user",
+        "endUser",
         "network",
         "standard",
         "other"
@@ -70,7 +70,7 @@
         "infrastructure",
         "security",
         "management",
-        "cross-cutting",
+        "crossCutting",
         "other"
       ]
     },
@@ -79,10 +79,10 @@
       "description": "Status of the technology element",
       "enum": [
         "proposed",
-        "under-development",
+        "underDevelopment",
         "pilot",
         "production",
-        "being-replaced",
+        "beingReplaced",
         "deprecated",
         "retired"
       ]
@@ -271,11 +271,11 @@
             "type": "string",
             "description": "Type of relationship",
             "enum": [
-              "depends-on",
+              "dependsOn",
               "supports",
-              "integrates-with",
+              "integratesWith",
               "replaces",
-              "is-replaced-by",
+              "isReplacedBy",
               "extends",
               "complement",
               "alternative",
@@ -385,14 +385,11 @@
       "description": "Technology maturity assessment",
       "properties": {
         "overallMaturity": {
-          "type": "string",
           "description": "Overall maturity rating",
-          "enum": [
-            "initial",
-            "developing",
-            "defined",
-            "managed",
-            "optimizing"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/maturityLevel"
+            }
           ]
         },
         "maturityAssessmentDate": {
@@ -685,7 +682,7 @@
             "mandatory",
             "recommended",
             "optional",
-            "reference-only"
+            "referenceOnly"
           ]
         },
         "enforcementMechanism": {

@@ -8,25 +8,25 @@
   "sources": [
     {
       "sourceName": "Social Media Listening Platform",
-      "sourceType": "Social media",
-      "reliabilityRating": "Medium",
-      "collectionMethod": "AI-generated summarisation",
+      "sourceType": "socialMedia",
+      "reliabilityRating": "medium",
+      "collectionMethod": "aiGeneratedSummarisation",
       "cost": "$9,000/year",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Real-Time Financial News Aggregator",
-      "sourceType": "Paid research services",
-      "reliabilityRating": "High",
-      "collectionMethod": "Automated scraping",
+      "sourceType": "paidResearchServices",
+      "reliabilityRating": "high",
+      "collectionMethod": "automatedScraping",
       "cost": "$15,000/year",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Market intelligence",
+  "intelligenceType": "marketIntelligence",
   "frequency": "daily",
   "legalAndEthicalConsiderations": "Only public information sources monitored, strictly avoiding personal data harvesting.",
-  "confidentialityLevel": "Internal",
+  "confidentialityLevel": "internal",
   "performanceIndicators": [
     "Reduction in campaign adjustment lead time by 40%",
     "Improved accuracy of market reaction predictions to promotional events by 20%"
@@ -42,7 +42,7 @@
   "strategicAlignment": "Supports real-time marketing agility objective under Commercial Effectiveness Program.",
   "applications": [
     {
-      "applicationArea": "Tactical operations",
+      "applicationArea": "tacticalOperations",
       "organisationalDecisionsInfluenced": "Real-time bid adjustments, campaign pivoting, competitor counter-offers.",
       "intelligenceConsumers": [
         "VP Marketing",

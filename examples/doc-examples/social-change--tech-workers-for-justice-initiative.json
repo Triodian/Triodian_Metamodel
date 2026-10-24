@@ -1,10 +1,10 @@
 {
   "name": "Tech Workers for Justice Initiative",
   "description": "Employee-driven campaign to eliminate biased AI algorithms and improve workplace equity",
-  "activityType": "Organizational Reform",
-  "changeScope": "Organization-wide",
-  "changeAgentType": "Worker Committee",
-  "institutionalContext": "Private Corporation",
+  "activityType": "organizationalReform",
+  "changeScope": "organizationWide",
+  "changeAgentType": "workerCommittee",
+  "institutionalContext": "privateCorporation",
   "specificActions": [
     "Worker Petition",
     "Internal Advocacy",
@@ -32,8 +32,8 @@
       "channel": "Technical analysis and reporting"
     }
   ],
-  "resourceSource": "Volunteer Resources",
-  "timeline": "1-year implementation",
+  "resourceSource": "volunteerResources",
+  "timeline": "1YearImplementation",
   "successMetrics": [
     "Policy adoption rates",
     "Bias reduction in AI systems",

@@ -69,20 +69,20 @@
           "orgType": {
             "type": "string",
             "enum": [
-              "Internal",
-              "External"
+              "internal",
+              "external"
             ],
             "description": "Whether this is an internal or external organization"
           },
           "role": {
             "type": "string",
             "enum": [
-              "Lead",
-              "Sponsor",
-              "Funding partner",
-              "Implementation partner",
-              "Stakeholder",
-              "Oversight"
+              "lead",
+              "sponsor",
+              "fundingPartner",
+              "implementationPartner",
+              "stakeholder",
+              "oversight"
             ],
             "description": "Role of the organization in this initiative"
           },
@@ -113,11 +113,11 @@
             "type": "string",
             "description": "What is depended on",
             "enum": [
-              "Information",
-              "Capability",
-              "Resource",
-              "Decision",
-              "Approval"
+              "information",
+              "capability",
+              "resource",
+              "decision",
+              "approval"
             ]
           },
           "description": {

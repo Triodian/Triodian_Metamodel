@@ -37,22 +37,22 @@
       "type": "string",
       "description": "Broad categorization of the type of manufacturing process.",
       "enum": [
-        "Job Shop",
-        "Batch Production",
-        "Mass Production",
-        "Continuous Flow",
-        "Custom Manufacturing"
+        "jobShop",
+        "batchProduction",
+        "massProduction",
+        "continuousFlow",
+        "customManufacturing"
       ]
     },
     "manufacturingFocus": {
       "type": "string",
       "description": "Primary focus area of the manufacturing strategy.",
       "enum": [
-        "Cost Reduction",
-        "Quality Improvement",
-        "Lead Time Reduction",
-        "Flexibility",
-        "Innovation"
+        "costReduction",
+        "qualityImprovement",
+        "leadTimeReduction",
+        "flexibility",
+        "innovation"
       ]
     },
     "timeHorizon": {
@@ -67,12 +67,12 @@
       "type": "string",
       "description": "Organizational or geographical scope",
       "enum": [
-        "Global",
-        "Continental",
-        "Regional",
-        "National",
-        "Site-level",
-        "Production-line"
+        "global",
+        "continental",
+        "regional",
+        "national",
+        "siteLevel",
+        "productionLine"
       ]
     },
     "strategicAlignment": {
@@ -178,9 +178,9 @@
           "type": "string",
           "description": "The type of production unit.",
           "enum": [
-            "ASSEMBLY",
-            "FABRICATION",
-            "CHEMICAL_PROCESSING"
+            "assembly",
+            "fabrication",
+            "chemicalProcessing"
           ]
         },
         "location": {
@@ -391,15 +391,15 @@
       "description": "The central repository for all manufacturing data.",
       "purpose": "To provide a canonical source of truth for manufacturing processes.",
       "owner": "Head of Operations",
-      "manufacturingCategory": "Continuous Flow",
-      "manufacturingFocus": "Cost Reduction",
+      "manufacturingCategory": "continuousFlow",
+      "manufacturingFocus": "costReduction",
       "timeHorizon": "mediumTerm",
-      "scopeLevel": "Global",
+      "scopeLevel": "global",
       "strategicAlignment": "Supports the corporate goal of improving profit margins by 5%.",
       "productionUnits": [
         {
           "unitName": "Engine Assembly Line 1",
-          "unitType": "ASSEMBLY",
+          "unitType": "assembly",
           "location": "Building 5, Plant North",
           "capacity": 500
         }

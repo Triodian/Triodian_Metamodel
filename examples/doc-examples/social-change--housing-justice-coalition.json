@@ -1,10 +1,10 @@
 {
   "name": "Housing Justice Coalition",
   "description": "Multi-organization campaign to address affordable housing crisis through policy advocacy and community organizing",
-  "activityType": "Community Organizing",
-  "changeScope": "Multi-organizational",
-  "changeAgentType": "NGO Partnership",
-  "institutionalContext": "Non-profit Organization",
+  "activityType": "communityOrganizing",
+  "changeScope": "multiOrganizational",
+  "changeAgentType": "ngoPartnership",
+  "institutionalContext": "nonProfitOrganization",
   "specificActions": [
     "Community Education",
     "Policy Advocacy",
@@ -34,8 +34,8 @@
       "channel": "City council meetings and media campaigns"
     }
   ],
-  "resourceSource": "Foundation Funding",
-  "timeline": "Ongoing program",
+  "resourceSource": "foundationFunding",
+  "timeline": "ongoingProgram",
   "successMetrics": [
     "Policy adoption rates",
     "Community engagement levels",

@@ -8,33 +8,33 @@
   "sources": [
     {
       "sourceName": "Official Government Gazettes",
-      "sourceType": "Public data",
-      "reliabilityRating": "High",
-      "collectionMethod": "Manual research",
+      "sourceType": "publicData",
+      "reliabilityRating": "high",
+      "collectionMethod": "manualResearch",
       "cost": "No cost",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Thomson Reuters Regulatory Feed",
-      "sourceType": "Paid research services",
-      "reliabilityRating": "High",
-      "collectionMethod": "Third-party acquisition",
+      "sourceType": "paidResearchServices",
+      "reliabilityRating": "high",
+      "collectionMethod": "thirdPartyAcquisition",
       "cost": "$12,000/year",
       "complianceStatus": "compliant"
     },
     {
       "sourceName": "Industry Association Updates",
-      "sourceType": "Informal networks",
-      "reliabilityRating": "Medium",
-      "collectionMethod": "Manual research",
+      "sourceType": "informalNetworks",
+      "reliabilityRating": "medium",
+      "collectionMethod": "manualResearch",
       "cost": "Included in membership fees",
       "complianceStatus": "compliant"
     }
   ],
-  "intelligenceType": "Regulatory surveillance",
+  "intelligenceType": "regulatorySurveillance",
   "frequency": "monthly",
   "legalAndEthicalConsiderations": "Sourced exclusively from publicly available and licensed data channels. Strict compliance with intellectual property rights.",
-  "confidentialityLevel": "Internal",
+  "confidentialityLevel": "internal",
   "performanceIndicators": [
     "Reduction in non-compliance incidents by 30% YoY",
     "Zero regulatory fines post-implementation of digest system"
@@ -50,7 +50,7 @@
   "strategicAlignment": "Supports Compliance Excellence Program and reduces operational risk exposure.",
   "applications": [
     {
-      "applicationArea": "Risk management",
+      "applicationArea": "riskManagement",
       "organisationalDecisionsInfluenced": "Product compliance checks, internal policy updates, operational workflow adjustments.",
       "intelligenceConsumers": [
         "Chief Risk Officer",

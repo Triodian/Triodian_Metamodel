@@ -1,7 +1,7 @@
 {
   "name": "Fair Wage Now Strike Series",
   "description": "National industrial action targeting minimum wage reform",
-  "activityType": "Campaign",
+  "activityType": "campaign",
   "specificActions": [
     "Strike",
     "Protest March",
@@ -21,7 +21,7 @@
     {
       "name": "National Union of Educators",
       "type": "Union",
-      "influenceLevel": "High",
+      "influenceLevel": "high",
       "engagementStrategy": "Collective Bargaining"
     }
   ],
@@ -38,7 +38,7 @@
       "tacticType": "Strike",
       "description": "Coordinated work stoppage across education sector",
       "channel": "Educational institutions and public demonstrations",
-      "violenceLevel": "Non-violent"
+      "violenceLevel": "nonViolent"
     }
   ],
   "escalationSequence": [
@@ -52,7 +52,7 @@
     {
       "capabilityId": "cap-collective-bargaining",
       "name": "Collective Bargaining",
-      "levelOfUse": "High"
+      "levelOfUse": "high"
     }
   ],
   "valueStreams": [

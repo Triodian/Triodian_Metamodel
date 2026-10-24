@@ -5,37 +5,37 @@
   "purpose": "To provide reliable, cost-effective, and environmentally sustainable freight transportation solutions for businesses across the country",
   "owner": "James Wilson, Director of Freight Operations",
   "orgUnitTitle": "Freight Operations Division",
-  "serviceCategory": "Operational Service",
-  "serviceType": "Transportation",
-  "deliveryModel": "Scheduled",
-  "serviceLevel": "Standard",
+  "serviceCategory": "operationalService",
+  "serviceType": "transportation",
+  "deliveryModel": "scheduled",
+  "serviceLevel": "standard",
   "serviceLevelAgreements": "98% on-time delivery, maximum delay of 2 hours for priority shipments, 24-hour customer service response time",
   "channels": [
-    "Online Portal",
-    "Mobile App",
-    "Phone",
-    "In-Person"
+    "onlinePortal",
+    "mobileApp",
+    "phone",
+    "inPerson"
   ],
   "targetAudience": [
-    "External Customers",
-    "Partners"
+    "externalCustomers",
+    "partners"
   ],
-  "businessModel": "Fee for Service",
+  "businessModel": "feeForService",
   "automationLevel": "semiAutomated",
   "lifecycle": "operational",
   "valueProposition": "Reduce transportation costs by 25% while improving delivery reliability to 98%",
   "performanceIndicators": "On-time delivery percentage, average transit time, fuel efficiency per ton-mile, customer satisfaction score",
   "complianceRequirements": [
-    "Federal Regulations",
-    "Environmental Standards",
-    "Safety Requirements"
+    "federalRegulations",
+    "environmentalStandards",
+    "safetyRequirements"
   ],
   "serviceFeatures": [
     {
       "title": "Real-time Cargo Tracking",
       "description": "GPS-based tracking system providing customers with real-time location and status updates",
       "purpose": "Give customers certainty about cargo location and arrival times",
-      "featureType": "Core Feature",
+      "featureType": "coreFeature",
       "priority": "high",
       "complexity": "moderate"
     },
@@ -43,7 +43,7 @@
       "title": "Dynamic Route Optimization",
       "description": "AI-powered system that optimizes routes based on weather, traffic, and capacity",
       "purpose": "Reduce transit times and costs by adapting routes to current conditions",
-      "featureType": "Premium Feature",
+      "featureType": "premiumFeature",
       "priority": "medium",
       "complexity": "complex"
     }

@@ -24,10 +24,10 @@
     "sizeCategory": {
       "type": "string",
       "enum": [
-        "Small",
-        "Medium",
-        "Large",
-        "Enterprise"
+        "small",
+        "medium",
+        "large",
+        "enterprise"
       ],
       "description": "Size category of organisations that this template is intended for."
     },
@@ -44,12 +44,12 @@
           "targetCoverageLevel": {
             "type": "string",
             "enum": [
-              "None",
-              "Minimal",
-              "Documented",
-              "Analysed",
-              "Governed",
-              "Optimised"
+              "none",
+              "minimal",
+              "documented",
+              "analysed",
+              "governed",
+              "optimised"
             ],
             "description": "Target coverage level for the domain."
           }

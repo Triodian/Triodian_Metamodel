@@ -5,10 +5,10 @@
   "purpose": "Provide comprehensive market insights to support strategic planning and competitive positioning",
   "owner": "Director of Strategic Intelligence",
   "orgUnitTitle": "Strategy and Planning Division",
-  "informationCategory": "Intelligence",
-  "informationType": "Knowledge Base",
-  "dataClassification": "Confidential",
-  "dataQuality": "Good Quality",
+  "informationCategory": "intelligence",
+  "informationType": "knowledgeBase",
+  "dataClassification": "confidential",
+  "dataQuality": "goodQuality",
   "format": "Mixed format repository: documents, spreadsheets, databases, web content",
   "volume": "500GB of documents, reports, and datasets updated weekly",
   "updateFrequency": "weekly",
@@ -16,8 +16,8 @@
   "sources": "Market research firms, industry reports, competitive analysis, internal research",
   "consumers": "Executive team, product managers, strategic planning team, business development",
   "compliance": [
-    "Internal Policies",
-    "Industry Standards"
+    "internalPolicies",
+    "industryStandards"
   ],
   "security": "Document-level access controls, watermarking, secure sharing protocols",
   "quality": "Expert review process, source verification, regular content updates",
@@ -28,8 +28,8 @@
       "title": "Competitive Analysis Reports",
       "description": "Detailed analysis of competitor strategies, strengths, and market positioning",
       "purpose": "Inform strategic positioning against key competitors",
-      "elementType": "Document",
-      "sensitivity": "Restricted",
+      "elementType": "document",
+      "sensitivity": "restricted",
       "businessRules": "Quarterly updates required, executive approval for sharing"
     }
   ]

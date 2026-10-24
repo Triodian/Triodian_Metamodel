@@ -1,5 +1,5 @@
 {
-  "description": "Record of the October 2026 migration of domain-specific lists to schemas/common.schema.json. For each field: the shared definition it now uses, how each previous value was mapped, and any values kept as domain-specific additions. Use it to convert existing data.",
+  "description": "Record of how value lists were migrated (October 2026): migrations 1 and 2 moved lists onto schemas/common.schema.json; migration 3 renamed the remaining domain-specific values to camelCase (sharedDefinition is null). For each field: the shared definition it now uses, how each previous value was mapped, and any values kept as domain-specific additions. Use it to convert existing data. Paths are as they were at the time of each migration.",
   "fields": [
     {
       "file": "capabilities.schema.json",
@@ -12,7 +12,8 @@
         "Level 4 - Managed": "managed",
         "Level 5 - Optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -30,7 +31,8 @@
         "Reputational": "reputational",
         "Change Management": "changeManagement"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -42,7 +44,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -58,7 +61,8 @@
         "Annually": "annually",
         "On-Demand": "onDemand"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -72,7 +76,8 @@
         "Enhancement": "enhancement",
         "Retirement": "retirement"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -88,7 +93,8 @@
         "Annually": "annually",
         "On-Demand": "onDemand"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -100,7 +106,8 @@
         "Fully Automated": "fullyAutomated",
         "AI-Enabled": "aiEnabled"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "capabilities.schema.json",
@@ -112,7 +119,8 @@
         "Complex": "complex",
         "Highly Complex": "highlyComplex"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -130,7 +138,8 @@
       "domainSpecificValues": [
         "advanced",
         "expanding"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -142,7 +151,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -154,7 +164,8 @@
         "high": "high",
         "very-high": "veryHigh"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -166,7 +177,8 @@
         "High": "high",
         "Critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -178,7 +190,8 @@
         "Supportive": "supportive",
         "Minimal": "optional"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "channel.schema.json",
@@ -194,7 +207,8 @@
         "Organization": "organization",
         "Strategy": "strategy"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "coverage/coverageExpectation.schema.json",
@@ -208,7 +222,8 @@
         "Optimisation": "optimization",
         "Retirement": "retirement"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "customer.schema.json",
@@ -226,7 +241,8 @@
         "Initiative": "initiative",
         "Other": "other"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "extensions/business-analysis.json",
@@ -238,7 +254,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "extensions/business-analysis.json",
@@ -250,7 +267,8 @@
         "Low": "low",
         "Negligible": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "extensions/business-analysis.json",
@@ -262,7 +280,8 @@
         "In Review": "inReview",
         "Obsolete": "obsolete"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "federated-governance-model.schema.json",
@@ -277,7 +296,8 @@
       },
       "domainSpecificValues": [
         "standard"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "information.schema.json",
@@ -296,7 +316,8 @@
       },
       "domainSpecificValues": [
         "static"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "information.schema.json",
@@ -311,7 +332,8 @@
         "Technical": "technology",
         "Operational": "operational"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "information.schema.json",
@@ -324,7 +346,8 @@
         "Managed": "managed",
         "Optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "innovation.schema.json",
@@ -338,7 +361,8 @@
       },
       "domainSpecificValues": [
         "critical"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "intelligence.schema.json",
@@ -354,7 +378,8 @@
         "Event-driven": "eventDriven",
         "Ad-hoc": "adHoc"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "intelligence.schema.json",
@@ -366,7 +391,8 @@
         "Non-compliant": "nonCompliant",
         "Under review": "underReview"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "inter-organizational-relationship.schema.json",
@@ -380,7 +406,8 @@
         "ValueStream": "valueStream",
         "Initiative": "initiative"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "manufacturing.schema.json",
@@ -392,7 +419,8 @@
         "Long-term (4-5 years)": "longTerm",
         "Extended (5+ years)": "extended"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "manufacturing.schema.json",
@@ -407,7 +435,8 @@
         "Environmental": "environmental",
         "Labor": "people"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "manufacturing.schema.json",
@@ -419,7 +448,8 @@
         "COMPLETED": "completed",
         "CANCELED": "cancelled"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "manufacturing.schema.json",
@@ -431,7 +461,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "organization.schema.json",
@@ -460,7 +491,8 @@
         "asiaPacific",
         "europeMiddleEastAfrica",
         "americas"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -472,7 +504,8 @@
         "Supportive": "supportive",
         "Informational": "optional"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -489,7 +522,8 @@
         "Technology": "technology",
         "Product": "product"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -501,7 +535,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -514,7 +549,8 @@
         "managed": "managed",
         "optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -527,7 +563,8 @@
         "managed": "managed",
         "optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -539,7 +576,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -551,7 +589,8 @@
         "significant": "major",
         "severe": "severe"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -565,7 +604,8 @@
       },
       "domainSpecificValues": [
         "perfect"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "people.schema.json",
@@ -577,7 +617,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -590,7 +631,8 @@
         "managed": "managed",
         "optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -606,7 +648,8 @@
       },
       "domainSpecificValues": [
         "interpretation"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -622,7 +665,8 @@
         "annually": "annually",
         "adHoc": "adHoc"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -634,7 +678,8 @@
         "highlyAutomated": "highlyAutomated",
         "fullyAutomated": "fullyAutomated"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -650,7 +695,8 @@
         "annually": "annually",
         "adHoc": "adHoc"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -662,7 +708,8 @@
         "medium": "medium",
         "low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -674,7 +721,8 @@
         "complex": "complex",
         "highlyComplex": "highlyComplex"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "performance.schema.json",
@@ -686,7 +734,8 @@
         "highlyAutomated": "highlyAutomated",
         "fullyAutomated": "fullyAutomated"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -702,7 +751,8 @@
         "annually": "annually",
         "event-triggered": "eventDriven"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -715,7 +765,8 @@
         "high": "high",
         "very-high": "veryHigh"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -728,7 +779,8 @@
         "major": "major",
         "severe": "severe"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -740,7 +792,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -753,7 +806,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -770,7 +824,8 @@
       },
       "domainSpecificValues": [
         "ineffective"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -783,7 +838,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -796,7 +852,8 @@
         "highly-effective": "highlyEffective",
         "not-assessed": "notAssessed"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -809,7 +866,8 @@
         "not-applicable": "notApplicable",
         "under-review": "underReview"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -824,7 +882,8 @@
       },
       "domainSpecificValues": [
         "uncertain"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -837,7 +896,8 @@
         "fluctuating": "fluctuating",
         "not-tracked": "notTracked"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -858,7 +918,8 @@
         "Finance": "finance",
         "Other": "other"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -873,7 +934,8 @@
         "replaced": "retired",
         "not-applicable": "notApplicable"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "risk-management.schema.json",
@@ -884,7 +946,8 @@
         "partially-automated": "semiAutomated",
         "fully-automated": "fullyAutomated"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "services.schema.json",
@@ -896,7 +959,8 @@
         "Highly Automated": "highlyAutomated",
         "Fully Automated": "fullyAutomated"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "services.schema.json",
@@ -910,7 +974,8 @@
         "Enhancement": "enhancement",
         "Retirement": "retirement"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "services.schema.json",
@@ -922,7 +987,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "services.schema.json",
@@ -934,7 +1000,8 @@
         "Complex": "complex",
         "Highly Complex": "highlyComplex"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "shared-initiative.schema.json",
@@ -948,7 +1015,8 @@
         "Cancelled": "cancelled",
         "On Hold": "onHold"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "social-change.json",
@@ -962,7 +1030,8 @@
       },
       "domainSpecificValues": [
         "ongoing"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "social-change.json",
@@ -973,7 +1042,8 @@
         "Medium": "medium",
         "High": "high"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "social-change.json",
@@ -989,7 +1059,8 @@
       },
       "domainSpecificValues": [
         "failed"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "stakeholder.schema.json",
@@ -1004,7 +1075,8 @@
         "Ad-hoc": "adHoc",
         "Continuous": "continuous"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "stakeholder.schema.json",
@@ -1018,7 +1090,8 @@
         "Continental": "continental",
         "Global": "global"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "stakeholder.schema.json",
@@ -1036,7 +1109,8 @@
         "Technology": "technology",
         "Legal": "legal"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "stakeholder.schema.json",
@@ -1048,7 +1122,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "stakeholder.schema.json",
@@ -1059,7 +1134,8 @@
         "Medium Risk": "medium",
         "Low Risk": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategic-response-model.schema.json",
@@ -1072,7 +1148,8 @@
         "Deferred": "deferred",
         "Cancelled": "cancelled"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategic-response-model.schema.json",
@@ -1084,7 +1161,8 @@
         "implemented": "implemented",
         "verified": "verified"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategic-response-model.schema.json",
@@ -1096,7 +1174,8 @@
         "high": "high",
         "very-high": "veryHigh"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategic-response-model.schema.json",
@@ -1108,7 +1187,8 @@
         "significant": "major",
         "severe": "severe"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategic-response-model.schema.json",
@@ -1125,7 +1205,8 @@
       "domainSpecificValues": [
         "transformed",
         "superseded"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "strategy.schema.json",
@@ -1137,7 +1218,8 @@
         "Long-term (4-5 years)": "longTerm",
         "Extended (5+ years)": "extended"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategy.schema.json",
@@ -1160,7 +1242,8 @@
       },
       "domainSpecificValues": [
         "diplomatic"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "strategy.schema.json",
@@ -1172,7 +1255,8 @@
         "Medium": "medium",
         "Low": "low"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "strategy.schema.json",
@@ -1186,7 +1270,8 @@
         "Annually": "annually",
         "Ad-hoc": "adHoc"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1199,7 +1284,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1211,7 +1297,8 @@
         "declining": "declining",
         "fluctuating": "fluctuating"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1224,7 +1311,8 @@
         "upgrading": "operational",
         "retiring": "retiring"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1237,7 +1325,8 @@
         "implementing": "inProgress",
         "completed": "completed"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1249,7 +1338,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1271,7 +1361,8 @@
         "Risk": "risk",
         "Other": "other"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1283,7 +1374,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1294,7 +1386,8 @@
         "very-high": "critical",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1307,7 +1400,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1319,7 +1413,8 @@
         "completed": "completed",
         "ongoing": "inProgress"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1331,7 +1426,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1344,7 +1440,8 @@
         "high": "high",
         "very-high": "veryHigh"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1359,7 +1456,8 @@
       },
       "domainSpecificValues": [
         "critical"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1372,7 +1470,8 @@
         "implementing": "inProgress",
         "completed": "implemented"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1384,7 +1483,8 @@
         "operational": "operational",
         "retiring": "retiring"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1396,7 +1496,8 @@
         "mostly-automated": "highlyAutomated",
         "fully-automated": "fullyAutomated"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1409,7 +1510,8 @@
         "quantitatively-managed": "managed",
         "optimizing": "optimizing"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1421,7 +1523,8 @@
         "completed": "implemented",
         "ongoing": "inProgress"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1433,7 +1536,8 @@
         "non-compliant": "nonCompliant",
         "in-progress": "underReview"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1445,7 +1549,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1457,7 +1562,8 @@
         "high": "high",
         "very-high": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1469,7 +1575,8 @@
         "completed": "implemented",
         "ongoing": "inProgress"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "supply-chain.schema.json",
@@ -1481,7 +1588,8 @@
         "declining": "declining",
         "fluctuating": "fluctuating"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1496,7 +1604,8 @@
       },
       "domainSpecificValues": [
         "optimizing"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1510,7 +1619,8 @@
       },
       "domainSpecificValues": [
         "critical"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1522,7 +1632,8 @@
         "high": "high",
         "critical": "critical"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1534,7 +1645,8 @@
         "Supportive": "supportive",
         "Minimal": "optional"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1551,7 +1663,8 @@
       },
       "domainSpecificValues": [
         "process"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1563,7 +1676,8 @@
         "completed": "completed",
         "on hold": "onHold"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1575,7 +1689,8 @@
         "non-compliant": "nonCompliant",
         "exempted": "exempt"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1587,7 +1702,8 @@
         "completed": "completed",
         "on hold": "onHold"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1599,7 +1715,8 @@
         "significant": "significant",
         "transformative": "transformative"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1614,7 +1731,8 @@
       },
       "domainSpecificValues": [
         "leading"
-      ]
+      ],
+      "migration": 1
     },
     {
       "file": "sustainability.schema.json",
@@ -1626,7 +1744,8 @@
         "completed": "completed",
         "on hold": "onHold"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "technology.schema.json",
@@ -1640,7 +1759,8 @@
         "legacy": "legacy",
         "sunset": "sunset"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "technology.schema.json",
@@ -1652,7 +1772,8 @@
         "declining": "declining",
         "fluctuating": "fluctuating"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "technology.schema.json",
@@ -1664,7 +1785,8 @@
         "supportive": "supportive",
         "optional": "optional"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
     },
     {
       "file": "technology.schema.json",
@@ -1683,7 +1805,4350 @@
         "Customer": "customer",
         "Other": "other"
       },
-      "domainSpecificValues": []
+      "domainSpecificValues": [],
+      "migration": 1
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/targetMaturityLevel",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "Level 1 - Initial": "initial",
+        "Level 2 - Repeatable": "repeatable",
+        "Level 3 - Defined": "defined",
+        "Level 4 - Managed": "managed",
+        "Level 5 - Optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelPartners/items/properties/relationshipStrength",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "strategic": "strategic"
+      },
+      "domainSpecificValues": [
+        "strategic"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelMaturity/properties/overallMaturity",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "initial": "initial",
+        "developing": "repeatable",
+        "defined": "defined",
+        "managed": "managed",
+        "advanced": "advanced",
+        "optimized": "optimizing"
+      },
+      "domainSpecificValues": [
+        "advanced"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelStrategy/properties/investmentFocus/items/properties/investmentLevel",
+      "sharedDefinition": "simpleLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelPartnerDetails/items/properties/partnerDevelopmentStrategy/properties/investmentLevel",
+      "sharedDefinition": "simpleLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "extensions/business-analysis.schema.json",
+      "path": "/definitions/analysisDesignDefinition/properties/feasibilityRating",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "High": "high",
+        "Medium": "medium",
+        "Low": "low",
+        "Not Feasible": "notFeasible"
+      },
+      "domainSpecificValues": [
+        "notFeasible"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/riskProfile/properties/overallRiskLevel",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/definitions/intelligenceSource/properties/reliabilityRating",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "High": "high",
+        "Medium": "medium",
+        "Low": "low",
+        "Unverified": "unverified"
+      },
+      "domainSpecificValues": [
+        "unverified"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/strategicAlignment/properties/alignmentStrength",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/definitions/cultureElement/properties/culturalEnablers/items/properties/contributionLevel",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/definitions/knowledgeAsset/properties/knowledgeCriticality/properties/criticalityLevel",
+      "sharedDefinition": "criticality",
+      "valueMap": {
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/aggregationPeriod",
+      "sharedDefinition": "frequency",
+      "valueMap": {
+        "real-time": "realTime",
+        "hourly": "hourly",
+        "daily": "daily",
+        "weekly": "weekly",
+        "monthly": "monthly",
+        "quarterly": "quarterly",
+        "yearly": "annually"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/strategicAlignments/items/properties/alignmentType",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "strategic-objective": "strategicObjective",
+        "initiative": "initiative",
+        "policy": "policy",
+        "capability": "capability",
+        "value-stream": "valueStream"
+      },
+      "domainSpecificValues": [
+        "strategicObjective"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/stakeholderImpacts/items/properties/interestLevel",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/linkedDomains",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Strategy": "strategy",
+        "Capabilities": "capability",
+        "Initiatives": "initiative",
+        "Policy": "policy",
+        "Information": "information",
+        "Performance": "performance",
+        "Products": "product",
+        "Services": "service",
+        "Stakeholder": "stakeholder",
+        "Value_Stream": "valueStream",
+        "Customer": "customer",
+        "Market": "market",
+        "Finance": "finance",
+        "Risk_Management": "risk",
+        "Supply_Chain": "supplyChain",
+        "Innovation": "innovation",
+        "Sustainability": "sustainability",
+        "People": "people",
+        "Technology": "technology",
+        "Channel": "channel"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/riskImpactAssessment/properties/impactType",
+      "sharedDefinition": "riskCategory",
+      "valueMap": {
+        "operational": "operational",
+        "financial": "financial",
+        "regulatory": "compliance",
+        "reputational": "reputational",
+        "strategic": "strategic",
+        "cyber": "cyber",
+        "environmental": "environmental",
+        "health_safety": "healthSafety"
+      },
+      "domainSpecificValues": [
+        "cyber",
+        "healthSafety"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/riskImpactAssessment/properties/impactSeverity",
+      "sharedDefinition": "impactMagnitude",
+      "valueMap": {
+        "negligible": "negligible",
+        "minor": "minor",
+        "moderate": "moderate",
+        "significant": "major",
+        "severe": "severe",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [
+        "critical"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/riskImpactAssessment/properties/impactLikelihood",
+      "sharedDefinition": "likelihood",
+      "valueMap": {
+        "very_low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very_high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/supplyChainImpactAssessment/properties/impactSeverity",
+      "sharedDefinition": "impactMagnitude",
+      "valueMap": {
+        "negligible": "negligible",
+        "minor": "minor",
+        "moderate": "moderate",
+        "significant": "major",
+        "severe": "severe",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [
+        "critical"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/supplyChainImpactAssessment/properties/impactTimeframe",
+      "sharedDefinition": "timeHorizon",
+      "valueMap": {
+        "immediate": "immediate",
+        "short-term": "shortTerm",
+        "medium-term": "mediumTerm",
+        "long-term": "longTerm"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/channelImpactAssessment/properties/implementationComplexity",
+      "sharedDefinition": "simpleLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskCategory",
+      "sharedDefinition": "riskCategory",
+      "valueMap": {
+        "strategic": "strategic",
+        "operational": "operational",
+        "financial": "financial",
+        "compliance": "compliance",
+        "reputational": "reputational",
+        "technology": "technology",
+        "legal": "legal",
+        "environmental": "environmental",
+        "market": "market",
+        "project": "project",
+        "people": "people",
+        "supply-chain": "supplyChain",
+        "other": "other"
+      },
+      "domainSpecificValues": [
+        "project"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskImpact/properties/nonFinancialImpacts/items/properties/impactType",
+      "sharedDefinition": "riskCategory",
+      "valueMap": {
+        "reputational": "reputational",
+        "operational": "operational",
+        "regulatory": "compliance",
+        "safety": "safety",
+        "environmental": "environmental",
+        "strategic": "strategic",
+        "other": "other"
+      },
+      "domainSpecificValues": [
+        "safety"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/strategicImplications/properties/affectedObjectives/items/properties/impactSeverity",
+      "sharedDefinition": "impactMagnitude",
+      "valueMap": {
+        "minor": "minor",
+        "moderate": "moderate",
+        "significant": "major",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [
+        "critical"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/identifiedRisks/items/properties/inherentRiskLevel",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/identifiedRisks/items/properties/residualRiskLevel",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentFindings/items/properties/findingSeverity",
+      "sharedDefinition": "severity",
+      "valueMap": {
+        "informational": "informational",
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [
+        "informational"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentRecommendations/items/properties/recommendationPriority",
+      "sharedDefinition": "priority",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentRecommendations/items/properties/timeframe",
+      "sharedDefinition": "timeHorizon",
+      "valueMap": {
+        "immediate": "immediate",
+        "short-term": "shortTerm",
+        "medium-term": "mediumTerm",
+        "long-term": "longTerm"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/controlEffectiveness/properties/designEffectiveness",
+      "sharedDefinition": "effectiveness",
+      "valueMap": {
+        "ineffective": "ineffective",
+        "partially-effective": "partiallyEffective",
+        "effective": "effective",
+        "highly-effective": "highlyEffective",
+        "not-assessed": "notAssessed"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/controlEffectiveness/properties/operationalEffectiveness",
+      "sharedDefinition": "effectiveness",
+      "valueMap": {
+        "ineffective": "ineffective",
+        "partially-effective": "partiallyEffective",
+        "effective": "effective",
+        "highly-effective": "highlyEffective",
+        "not-assessed": "notAssessed"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/controlTesting/properties/testingFrequency",
+      "sharedDefinition": "frequency",
+      "valueMap": {
+        "continuous": "continuous",
+        "daily": "daily",
+        "weekly": "weekly",
+        "monthly": "monthly",
+        "quarterly": "quarterly",
+        "semi-annually": "semiAnnually",
+        "annually": "annually",
+        "ad-hoc": "adHoc"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/responses/items/properties/responsePriority",
+      "sharedDefinition": "priority",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/monitoring/properties/monitoringFrequency/properties/reviewCycle",
+      "sharedDefinition": "frequency",
+      "valueMap": {
+        "real-time": "realTime",
+        "daily": "daily",
+        "weekly": "weekly",
+        "bi-weekly": "biWeekly",
+        "monthly": "monthly",
+        "quarterly": "quarterly",
+        "annually": "annually",
+        "event-driven": "eventDriven"
+      },
+      "domainSpecificValues": [
+        "biWeekly"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/capabilities/items/properties/levelOfUse",
+      "sharedDefinition": "simpleLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/risks/items/properties/riskType",
+      "sharedDefinition": "riskCategory",
+      "valueMap": {
+        "Political": "political",
+        "Legal": "legal",
+        "Economic": "economic",
+        "Security": "security",
+        "Organizational": "people",
+        "Reputational": "reputational",
+        "Operational": "operational"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/risks/items/properties/severityLevel",
+      "sharedDefinition": "severity",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high",
+        "Critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/counterRevolutionaryForces/items/properties/strength",
+      "sharedDefinition": "simpleLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "strategic-intent.schema.json",
+      "path": "/properties/potentialValue",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high",
+        "Transformative": "transformative"
+      },
+      "domainSpecificValues": [
+        "transformative"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "strategic-intent.schema.json",
+      "path": "/properties/uncertaintyLevel",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "Low": "low",
+        "Medium": "medium",
+        "High": "high",
+        "Experimental": "experimental"
+      },
+      "domainSpecificValues": [
+        "experimental"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/affectedDomains",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Strategy": "strategy",
+        "Capabilities": "capability",
+        "Initiatives": "initiative",
+        "Policy": "policy",
+        "Performance": "performance",
+        "Information": "information",
+        "Value Stream": "valueStream",
+        "Customer": "customer",
+        "Market": "market",
+        "Finance": "finance",
+        "Risk Management": "risk",
+        "Supply Chain": "supplyChain",
+        "Innovation": "innovation",
+        "Sustainability": "sustainability",
+        "People": "people",
+        "Technology": "technology",
+        "Channel": "channel"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/competitiveAdvantage/properties/sustainability",
+      "sharedDefinition": "timeHorizon",
+      "valueMap": {
+        "short-term": "shortTerm",
+        "medium-term": "mediumTerm",
+        "long-term": "longTerm"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/flexibilityRating/properties/overallRating",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/flexibilityRating/properties/volumeFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/flexibilityRating/properties/mixFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/flexibilityRating/properties/newProductFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/resilienceRating/properties/overallRating",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/resilienceRating/properties/redundancyLevel",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/resilienceRating/properties/diversificationLevel",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/resilienceRating/properties/visibilityLevel",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/resilienceRating/properties/recoveryCapability",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/riskProfile/properties/overallRiskLevel",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/sustainabilityRating/properties/overallRating",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/maturityLevel/properties/overallMaturity",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "initial": "initial",
+        "developing": "repeatable",
+        "defined": "defined",
+        "managed": "managed",
+        "optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/maturityLevel/properties/processMaturity",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "initial": "initial",
+        "developing": "repeatable",
+        "defined": "defined",
+        "managed": "managed",
+        "optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/maturityLevel/properties/performanceManagement",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "initial": "initial",
+        "developing": "repeatable",
+        "defined": "defined",
+        "managed": "managed",
+        "optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/improvementOpportunities/items/properties/potentialImpact",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "transformative": "transformative"
+      },
+      "domainSpecificValues": [
+        "transformative"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/improvementOpportunities/items/properties/implementationComplexity",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/riskProfile/properties/overallRiskLevel",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processControls/items/properties/controlEffectiveness",
+      "sharedDefinition": "effectiveness",
+      "valueMap": {
+        "ineffective": "ineffective",
+        "partially-effective": "partiallyEffective",
+        "effective": "effective",
+        "highly-effective": "highlyEffective"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processOptimizationOpportunities/items/properties/implementationComplexity",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/technologySupport/items/properties/effectivenessAssessment",
+      "sharedDefinition": "effectiveness",
+      "valueMap": {
+        "ineffective": "ineffective",
+        "partially-effective": "partiallyEffective",
+        "effective": "effective",
+        "highly-effective": "highlyEffective"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/automationLevel/properties/overallAutomation",
+      "sharedDefinition": "automationLevel",
+      "valueMap": {
+        "manual": "manual",
+        "partially-automated": "semiAutomated",
+        "mostly-automated": "highlyAutomated",
+        "fully-automated": "fullyAutomated"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/standardization/properties/complianceLevel",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkFlexibility/properties/overallFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkFlexibility/properties/volumeFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkFlexibility/properties/routingFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkFlexibility/properties/modeFlexibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkVisibility/properties/overallVisibility",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkResilience/properties/resilienceRating",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryVisibility/properties/visibilityLevel",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "very-low": "veryLow",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/stockoutRisk/properties/overallRisk",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/obsolescenceRisk/properties/overallRisk",
+      "sharedDefinition": "riskLevel",
+      "valueMap": {
+        "very-low": "low",
+        "low": "low",
+        "moderate": "medium",
+        "high": "high",
+        "very-high": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/materiality/properties/materialityLevel",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/stakeholderInterest/properties/interestLevel",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "critical": "critical"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/impactMeasurement/properties/dataQuality",
+      "sharedDefinition": "fivePointLevel",
+      "valueMap": {
+        "low": "low",
+        "medium": "medium",
+        "high": "high",
+        "very-high": "veryHigh"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/regulatoryRequirements/properties/emergingRegulations/items/properties/expectedImpact",
+      "sharedDefinition": "ratingLevel",
+      "valueMap": {
+        "low": "low",
+        "moderate": "medium",
+        "significant": "significant",
+        "high": "high"
+      },
+      "domainSpecificValues": [
+        "significant"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/socialResponsibility/properties/currentPerformance/properties/metrics/items/properties/performanceTrend",
+      "sharedDefinition": "performanceTrend",
+      "valueMap": {
+        "improving": "improving",
+        "stable": "stable",
+        "declining": "declining",
+        "mixed": "mixed"
+      },
+      "domainSpecificValues": [
+        "mixed"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/socialResponsibility/properties/implementationApproach/properties/implementationPhases/items/properties/completionStatus",
+      "sharedDefinition": "workStatus",
+      "valueMap": {
+        "not started": "notStarted",
+        "in progress": "inProgress",
+        "completed": "completed",
+        "on hold": "onHold"
+      },
+      "domainSpecificValues": [
+        "notStarted"
+      ],
+      "migration": 2
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/maturityLevel/properties/overallMaturity",
+      "sharedDefinition": "maturityLevel",
+      "valueMap": {
+        "initial": "initial",
+        "developing": "repeatable",
+        "defined": "defined",
+        "managed": "managed",
+        "optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 2
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/capabilityCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Core Business": "coreBusiness",
+        "Supporting": "supporting",
+        "Enabling": "enabling",
+        "Strategic": "strategic",
+        "Foundational": "foundational",
+        "Distinctive": "distinctive"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/capabilityType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Operational": "operational",
+        "Technical": "technical",
+        "Business": "business",
+        "Governance": "governance",
+        "Innovation": "innovation",
+        "Analytical": "analytical",
+        "Digital": "digital",
+        "Customer": "customer"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/businessDomain",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Operations": "operations",
+        "Finance": "finance",
+        "Technology": "technology",
+        "Human Resources": "humanResources",
+        "Sales & Marketing": "salesMarketing",
+        "Customer Service": "customerService",
+        "Legal & Compliance": "legalCompliance",
+        "Research & Development": "researchDevelopment",
+        "Quality Assurance": "qualityAssurance",
+        "Strategy & Planning": "strategyPlanning",
+        "Procurement": "procurement",
+        "Facilities": "facilities"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/investmentCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "CAPEX": "capex",
+        "OPEX": "opex",
+        "Mixed": "mixed",
+        "People": "people",
+        "Technology": "technology",
+        "Process": "process"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/availability",
+      "sharedDefinition": null,
+      "valueMap": {
+        "24/7": "24x7",
+        "Business Hours": "businessHours",
+        "On-Demand": "onDemand",
+        "Seasonal": "seasonal",
+        "Scheduled": "scheduled"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/scalability",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Highly Scalable": "highlyScalable",
+        "Moderately Scalable": "moderatelyScalable",
+        "Limited Scalability": "limitedScalability",
+        "Not Scalable": "notScalable"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/capabilityFunction/properties/functionType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Primary": "primary",
+        "Secondary": "secondary",
+        "Supporting": "supporting",
+        "Enabling": "enabling"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/capabilityComponent/properties/componentType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "People": "people",
+        "Process": "process",
+        "Technology": "technology",
+        "Information": "information",
+        "Infrastructure": "infrastructure"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/capabilityProcess/properties/processType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Core": "core",
+        "Support": "support",
+        "Management": "management",
+        "Governance": "governance"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/capabilityProcess/properties/processCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Operational": "operational",
+        "Strategic": "strategic",
+        "Tactical": "tactical",
+        "Administrative": "administrative"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelReach/properties/coverageType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "multi-tiered": "multiTiered"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelPartners/items/properties/partnerType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "value-added reseller": "valueAddedReseller",
+        "system integrator": "systemIntegrator",
+        "online marketplace": "onlineMarketplace",
+        "retail chain": "retailChain"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelPartnerDetails/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "strategic alliance": "strategicAlliance",
+        "joint venture": "jointVenture"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "coverage/coverage-expectation.schema.json",
+      "path": "/properties/targetCoverageLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "None": "none",
+        "Minimal": "minimal",
+        "Documented": "documented",
+        "Analysed": "analysed",
+        "Governed": "governed",
+        "Optimised": "optimised"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "coverage/coverage-status.schema.json",
+      "path": "/properties/coverageLevelAchieved",
+      "sharedDefinition": null,
+      "valueMap": {
+        "None": "none",
+        "Minimal": "minimal",
+        "Documented": "documented",
+        "Analysed": "analysed",
+        "Governed": "governed",
+        "Optimised": "optimised"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "coverage/coverage-status.schema.json",
+      "path": "/properties/expectedCoverageLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "None": "none",
+        "Minimal": "minimal",
+        "Documented": "documented",
+        "Analysed": "analysed",
+        "Governed": "governed",
+        "Optimised": "optimised"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "coverage/coverage-template.schema.json",
+      "path": "/properties/sizeCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Small": "small",
+        "Medium": "medium",
+        "Large": "large",
+        "Enterprise": "enterprise"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "coverage/coverage-template.schema.json",
+      "path": "/properties/expectations/items/properties/targetCoverageLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "None": "none",
+        "Minimal": "minimal",
+        "Documented": "documented",
+        "Analysed": "analysed",
+        "Governed": "governed",
+        "Optimised": "optimised"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "customer.schema.json",
+      "path": "/properties/customerSegmentType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "value-based": "valueBased",
+        "needs-based": "needsBased"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "customer.schema.json",
+      "path": "/properties/customerLifecycleStage",
+      "sharedDefinition": null,
+      "valueMap": {
+        "win-back": "winBack"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/business-analysis.schema.json",
+      "path": "/definitions/requirement/properties/type",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Business Requirement": "businessRequirement",
+        "Stakeholder Requirement": "stakeholderRequirement",
+        "Solution Requirement (Functional)": "solutionRequirementFunctional",
+        "Solution Requirement (Non-Functional)": "solutionRequirementNonFunctional",
+        "Transition Requirement": "transitionRequirement",
+        "Regulatory Requirement": "regulatoryRequirement"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/business-analysis.schema.json",
+      "path": "/definitions/requirementArtefact/properties/type",
+      "sharedDefinition": null,
+      "valueMap": {
+        "User Story": "userStory",
+        "Epic": "epic",
+        "Use Case": "useCase",
+        "Process Model": "processModel",
+        "Data Model": "dataModel",
+        "Wireframe/Prototype": "wireframePrototype",
+        "Requirements Traceability Matrix": "requirementsTraceabilityMatrix",
+        "Solution Design Document": "solutionDesignDocument"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/business-analysis.schema.json",
+      "path": "/definitions/elicitationActivity/properties/type",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Workshop": "workshop",
+        "Interview": "interview",
+        "Observation": "observation",
+        "Survey": "survey",
+        "Document Analysis": "documentAnalysis",
+        "Prototyping Session": "prototypingSession"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/business-analysis.schema.json",
+      "path": "/definitions/solutionEvaluation/properties/recommendation",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Continue": "continue",
+        "Pivot": "pivot",
+        "Retire": "retire"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/technology-one-well-architected-framework.schema.json",
+      "path": "/properties/corePrinciples/items/properties/principleName",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Citizen-Centric Design": "citizenCentricDesign",
+        "Data-Driven Decision Making": "dataDrivenDecisionMaking",
+        "Continuous Evolution": "continuousEvolution",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "extensions/technology-one-well-architected-framework.schema.json",
+      "path": "/properties/architecturalComponents/items/properties/componentType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Core ERP Module": "coreErpModule",
+        "Integration Service": "integrationService",
+        "API Gateway": "apiGateway",
+        "Workflow Engine": "workflowEngine",
+        "Event Bus": "eventBus",
+        "Data Warehouse": "dataWarehouse",
+        "Reporting Tool": "reportingTool",
+        "Security Proxy": "securityProxy",
+        "External System Integration": "externalSystemIntegration",
+        "Web Portal": "webPortal",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "external-organization.schema.json",
+      "path": "/properties/type",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Partner": "partner",
+        "Regulator": "regulator",
+        "Customer": "customer",
+        "Supplier": "supplier",
+        "Peer": "peer"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "federated-governance-model.schema.json",
+      "path": "/properties/participatingOrganizations/items/properties/orgType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal": "internal",
+        "External": "external"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "federated-governance-model.schema.json",
+      "path": "/properties/participatingOrganizations/items/properties/governanceRole",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Lead": "lead",
+        "Participant": "participant",
+        "Advisor": "advisor",
+        "Approver": "approver",
+        "Auditor": "auditor"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/informationCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Operational Data": "operationalData",
+        "Analytical Data": "analyticalData",
+        "Reference Data": "referenceData",
+        "Master Data": "masterData",
+        "Metadata": "metadata",
+        "Content": "content",
+        "Knowledge": "knowledge",
+        "Intelligence": "intelligence"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/informationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Database": "database",
+        "Dataset": "dataset",
+        "Report": "report",
+        "Document": "document",
+        "Knowledge Base": "knowledgeBase",
+        "API Data": "apiData",
+        "Real-time Stream": "realTimeStream",
+        "Archive": "archive",
+        "Model": "model",
+        "Dashboard": "dashboard"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/dataClassification",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Public": "public",
+        "Internal": "internal",
+        "Confidential": "confidential",
+        "Restricted": "restricted",
+        "Top Secret": "topSecret"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/dataQuality",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Quality": "highQuality",
+        "Good Quality": "goodQuality",
+        "Acceptable Quality": "acceptableQuality",
+        "Poor Quality": "poorQuality",
+        "Unknown Quality": "unknownQuality"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/compliance",
+      "sharedDefinition": null,
+      "valueMap": {
+        "GDPR": "gdpr",
+        "HIPAA": "hipaa",
+        "SOX": "sox",
+        "PCI DSS": "pciDss",
+        "Industry Standards": "industryStandards",
+        "Internal Policies": "internalPolicies"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/lifecycle",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Creation": "creation",
+        "Active Use": "activeUse",
+        "Maintenance": "maintenance",
+        "Archive": "archive",
+        "Disposal": "disposal",
+        "Migration": "migration"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/marketPosition",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Industry Leader": "industryLeader",
+        "Strong Position": "strongPosition",
+        "Competitive": "competitive",
+        "Developing": "developing",
+        "Lagging": "lagging"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/investmentLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Investment": "highInvestment",
+        "Medium Investment": "mediumInvestment",
+        "Low Investment": "lowInvestment",
+        "Minimal Investment": "minimalInvestment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/definitions/informationElement/properties/elementType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Table": "table",
+        "Field": "field",
+        "File": "file",
+        "Stream": "stream",
+        "Object": "object",
+        "Document": "document",
+        "Image": "image",
+        "Report Section": "reportSection"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/definitions/informationElement/properties/sensitivity",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Public": "public",
+        "Internal": "internal",
+        "Confidential": "confidential",
+        "Restricted": "restricted"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/innovationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-model": "businessModel",
+        "customer-experience": "customerExperience",
+        "supply-chain": "supplyChain"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/innovationScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-unit": "businessUnit",
+        "product-line": "productLine",
+        "cross-functional": "crossFunctional"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/innovationOrigin/properties/sources",
+      "sharedDefinition": null,
+      "valueMap": {
+        "customer-insights": "customerInsights",
+        "employee-idea": "employeeIdea",
+        "market-research": "marketResearch",
+        "technology-exploration": "technologyExploration",
+        "competitive-analysis": "competitiveAnalysis",
+        "regulatory-change": "regulatoryChange",
+        "strategic-initiative": "strategicInitiative",
+        "external-partnership": "externalPartnership",
+        "academic-research": "academicResearch",
+        "supplier-collaboration": "supplierCollaboration"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/strategicHorizon",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Horizon_1": "horizon1",
+        "Horizon_2": "horizon2",
+        "Horizon_3": "horizon3"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/properties/intelligenceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Business reporting": "businessReporting",
+        "Competitive intelligence": "competitiveIntelligence",
+        "Market intelligence": "marketIntelligence",
+        "Regulatory surveillance": "regulatorySurveillance",
+        "Security intelligence": "securityIntelligence",
+        "Insider threat monitoring": "insiderThreatMonitoring",
+        "Geopolitical analysis": "geopoliticalAnalysis",
+        "Corporate espionage": "corporateEspionage",
+        "Agency intelligence feed": "agencyIntelligenceFeed",
+        "Social media and OSINT": "socialMediaAndOsint",
+        "Dark web monitoring": "darkWebMonitoring"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/properties/confidentialityLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Public": "public",
+        "Internal": "internal",
+        "Confidential": "confidential",
+        "Restricted": "restricted",
+        "Secret": "secret",
+        "Top Secret": "topSecret"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/definitions/intelligenceSource/properties/sourceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Public data": "publicData",
+        "Paid research services": "paidResearchServices",
+        "Regulatory filings": "regulatoryFilings",
+        "Informal networks": "informalNetworks",
+        "Third-party subscription": "thirdPartySubscription",
+        "Dark web sources": "darkWebSources",
+        "Social media": "socialMedia",
+        "Government intelligence": "governmentIntelligence",
+        "Corporate whistleblowers": "corporateWhistleblowers",
+        "Surveillance systems": "surveillanceSystems"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/definitions/intelligenceSource/properties/collectionMethod",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Manual research": "manualResearch",
+        "Automated scraping": "automatedScraping",
+        "Sensor-based collection": "sensorBasedCollection",
+        "Third-party acquisition": "thirdPartyAcquisition",
+        "Human intelligence": "humanIntelligence",
+        "Signals intelligence": "signalsIntelligence",
+        "AI-generated summarisation": "aiGeneratedSummarisation"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/definitions/intelligenceApplication/properties/applicationArea",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Strategic decision-making": "strategicDecisionMaking",
+        "Tactical operations": "tacticalOperations",
+        "Mergers and acquisitions": "mergersAndAcquisitions",
+        "New market entry": "newMarketEntry",
+        "Product development": "productDevelopment",
+        "Risk management": "riskManagement",
+        "Competitive response": "competitiveResponse",
+        "Brand reputation management": "brandReputationManagement",
+        "Fraud prevention": "fraudPrevention"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "inter-organizational-relationship.schema.json",
+      "path": "/properties/sourceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal": "internal",
+        "External": "external"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "inter-organizational-relationship.schema.json",
+      "path": "/properties/targetType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal": "internal",
+        "External": "external"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "inter-organizational-relationship.schema.json",
+      "path": "/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Shares data with": "sharesDataWith",
+        "Provides services to": "providesServicesTo",
+        "Regulates": "regulates",
+        "Collaborates with": "collaboratesWith",
+        "Funds": "funds",
+        "Reports to": "reportsTo",
+        "Advises": "advises",
+        "Co-governs with": "coGovernsWith"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/properties/manufacturingCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Job Shop": "jobShop",
+        "Batch Production": "batchProduction",
+        "Mass Production": "massProduction",
+        "Continuous Flow": "continuousFlow",
+        "Custom Manufacturing": "customManufacturing"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/properties/manufacturingFocus",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Cost Reduction": "costReduction",
+        "Quality Improvement": "qualityImprovement",
+        "Lead Time Reduction": "leadTimeReduction",
+        "Flexibility": "flexibility",
+        "Innovation": "innovation"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/properties/scopeLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Global": "global",
+        "Continental": "continental",
+        "Regional": "regional",
+        "National": "national",
+        "Site-level": "siteLevel",
+        "Production-line": "productionLine"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/definitions/productionUnit/properties/unitType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "ASSEMBLY": "assembly",
+        "FABRICATION": "fabrication",
+        "CHEMICAL_PROCESSING": "chemicalProcessing"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/orgType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Government Agency": "governmentAgency",
+        "Federal/National Agency": "federalNationalAgency",
+        "State/Provincial Agency": "stateProvincialAgency",
+        "Regional Authority": "regionalAuthority",
+        "Local/Municipal Authority": "localMunicipalAuthority",
+        "Public Limited Company": "publicLimitedCompany",
+        "Private Limited Company": "privateLimitedCompany",
+        "Corporation": "corporation",
+        "Limited Liability Company": "limitedLiabilityCompany",
+        "Partnership": "partnership",
+        "Sole Proprietorship": "soleProprietorship",
+        "Cooperative": "cooperative",
+        "Joint Venture": "jointVenture",
+        "Non-Profit Organization": "nonProfitOrganization",
+        "Crown Corporation": "crownCorporation",
+        "State-Owned Enterprise": "stateOwnedEnterprise",
+        "International Organization": "internationalOrganization",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/structureType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Functional": "functional",
+        "Divisional": "divisional",
+        "Matrix": "matrix",
+        "Hierarchical": "hierarchical",
+        "Flat/Horizontal": "flatHorizontal",
+        "Regional": "regional",
+        "Country-based": "countryBased",
+        "Global/Transnational": "globalTransnational",
+        "Hub-and-Spoke": "hubAndSpoke",
+        "Distributed/Decentralized": "distributedDecentralized",
+        "Network": "network",
+        "Virtual/Remote": "virtualRemote",
+        "Hybrid": "hybrid",
+        "Product-based": "productBased",
+        "Customer/Market-based": "customerMarketBased",
+        "Service Line-based": "serviceLineBased",
+        "Project-based": "projectBased",
+        "Team-of-Teams": "teamOfTeams",
+        "Cross-functional Squads": "crossFunctionalSquads",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/legalStructure",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Federal/National Agency": "federalNationalAgency",
+        "State/Provincial Agency": "stateProvincialAgency",
+        "Regional Authority": "regionalAuthority",
+        "Local/Municipal Authority": "localMunicipalAuthority",
+        "Autonomous Public Body": "autonomousPublicBody",
+        "Crown Corporation": "crownCorporation",
+        "State-Owned Enterprise": "stateOwnedEnterprise",
+        "Government-Linked Company": "governmentLinkedCompany",
+        "Public Limited Company": "publicLimitedCompany",
+        "Private Limited Company": "privateLimitedCompany",
+        "Corporation": "corporation",
+        "Limited Liability Company": "limitedLiabilityCompany",
+        "Partnership": "partnership",
+        "Limited Partnership": "limitedPartnership",
+        "Limited Liability Partnership": "limitedLiabilityPartnership",
+        "Sole Proprietorship": "soleProprietorship",
+        "Cooperative/Mutual Society": "cooperativeMutualSociety",
+        "Joint Stock Company": "jointStockCompany",
+        "Public-Private Partnership": "publicPrivatePartnership",
+        "Joint Venture": "jointVenture",
+        "Consortium": "consortium",
+        "Special Purpose Vehicle": "specialPurposeVehicle",
+        "Trust": "trust",
+        "Foundation": "foundation",
+        "Non-Governmental Organization": "nonGovernmentalOrganization",
+        "International Organization": "internationalOrganization",
+        "Supranational Entity": "supranationalEntity",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/operationalModel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Centralized Operations": "centralizedOperations",
+        "Decentralized Operations": "decentralizedOperations",
+        "Hub-and-Spoke Model": "hubAndSpokeModel",
+        "Distributed Network": "distributedNetwork",
+        "Franchise Model": "franchiseModel",
+        "Licensing Model": "licensingModel",
+        "Representative Offices": "representativeOffices",
+        "Joint Ventures": "jointVentures",
+        "Strategic Partnerships": "strategicPartnerships"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/currency",
+      "sharedDefinition": null,
+      "valueMap": {
+        "USD": "usd",
+        "EUR": "eur",
+        "GBP": "gbp",
+        "JPY": "jpy",
+        "CNY": "cny",
+        "CHF": "chf",
+        "CAD": "cad",
+        "AUD": "aud",
+        "SGD": "sgd",
+        "INR": "inr",
+        "BRL": "brl",
+        "Local Currency": "localCurrency",
+        "Multi-currency": "multiCurrency"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/cultureType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High-Context Culture": "highContextCulture",
+        "Low-Context Culture": "lowContextCulture",
+        "Hierarchical Culture": "hierarchicalCulture",
+        "Egalitarian Culture": "egalitarianCulture",
+        "Individual-focused": "individualFocused",
+        "Collective-focused": "collectiveFocused",
+        "Risk-Averse": "riskAverse",
+        "Risk-Taking": "riskTaking",
+        "Innovation-focused": "innovationFocused",
+        "Process-focused": "processFocused",
+        "Customer-centric": "customerCentric",
+        "Employee-centric": "employeeCentric",
+        "Performance-driven": "performanceDriven",
+        "Collaborative": "collaborative"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/complianceFrameworks",
+      "sharedDefinition": null,
+      "valueMap": {
+        "ISO 9001 (Quality Management)": "iso9001",
+        "ISO 14001 (Environmental Management)": "iso14001",
+        "ISO 27001 (Information Security)": "iso27001",
+        "ISO 45001 (Occupational Health & Safety)": "iso45001",
+        "SOX (Sarbanes-Oxley)": "sox",
+        "GDPR (General Data Protection Regulation)": "gdpr",
+        "HIPAA (Health Insurance Portability)": "hipaa",
+        "PCI DSS (Payment Card Industry)": "pciDss",
+        "Basel III (Banking)": "basel3",
+        "Solvency II (Insurance)": "solvency2",
+        "MiFID II (Financial Markets)": "mifid2",
+        "COSO Framework": "cosoFramework",
+        "COBIT Framework": "cobitFramework",
+        "NIST Cybersecurity Framework": "nistCybersecurityFramework",
+        "Local Regulatory Requirements": "localRegulatoryRequirements",
+        "Industry-Specific Standards": "industrySpecificStandards",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/primaryLanguages",
+      "sharedDefinition": null,
+      "valueMap": {
+        "English": "english",
+        "Mandarin Chinese": "mandarinChinese",
+        "Spanish": "spanish",
+        "Hindi": "hindi",
+        "Arabic": "arabic",
+        "Portuguese": "portuguese",
+        "Russian": "russian",
+        "Japanese": "japanese",
+        "French": "french",
+        "German": "german",
+        "Korean": "korean",
+        "Italian": "italian",
+        "Dutch": "dutch",
+        "Swedish": "swedish",
+        "Local/Regional Language": "localRegionalLanguage",
+        "Multi-lingual": "multiLingual"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/talentCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "customer-facing": "customerFacing",
+        "cross-functional": "crossFunctional"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/relatedPeopleElements/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "depends on": "dependsOn",
+        "conflicts with": "conflictsWith"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/definitions/workforceElement/properties/workforceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "part-time": "partTime",
+        "full-time": "fullTime",
+        "on-site": "onSite"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/definitions/workforceElement/properties/workSkills/properties/skillProficiency",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Basic": "basic",
+        "Intermediate": "intermediate",
+        "Advanced": "advanced",
+        "Expert": "expert"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/thresholdType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "higher-is-better": "higherIsBetter",
+        "lower-is-better": "lowerIsBetter",
+        "target-is-optimal": "targetIsOptimal",
+        "range-is-optimal": "rangeIsOptimal"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/thresholds/items/properties/comparisonOperator",
+      "sharedDefinition": null,
+      "valueMap": {
+        ">": "greaterThan",
+        "<": "lessThan",
+        ">=": "greaterThanOrEqual",
+        "<=": "lessThanOrEqual",
+        "==": "equal",
+        "!=": "notEqual"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/statusHistory/items/properties/status",
+      "sharedDefinition": null,
+      "valueMap": {
+        "above-target": "aboveTarget",
+        "on-target": "onTarget",
+        "below-target": "belowTarget"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/relatedIndicators/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "correlates-with": "correlatesWith",
+        "derived-from": "derivedFrom",
+        "component-of": "componentOf"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/rationaleType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Preventative": "preventative",
+        "Remedial": "remedial",
+        "Opportunistic": "opportunistic",
+        "Proactive": "proactive",
+        "Reactive": "reactive",
+        "Compliance_Fulfillment": "complianceFulfillment",
+        "Strategic_Advancement": "strategicAdvancement",
+        "Customer_Needs_Based": "customerNeedsBased",
+        "Market_Trends_Based": "marketTrendsBased",
+        "Customer_Experience_Enhancement": "customerExperienceEnhancement",
+        "Customer_Feedback_Response": "customerFeedbackResponse",
+        "Customer_Retention_Focus": "customerRetentionFocus",
+        "Customer_Acquisition_Focus": "customerAcquisitionFocus",
+        "Competitive_Response": "competitiveResponse",
+        "Market_Opportunity": "marketOpportunity",
+        "Defensive_Position": "defensivePosition",
+        "Industry_Adaptation": "industryAdaptation",
+        "Growth_Initiative": "growthInitiative",
+        "Innovation_Imperative": "innovationImperative",
+        "Consolidation_Strategy": "consolidationStrategy",
+        "Financial_Performance_Improvement": "financialPerformanceImprovement",
+        "Cost_Optimization": "costOptimization",
+        "Investment_Justification": "investmentJustification",
+        "Capital_Allocation": "capitalAllocation",
+        "Financial_Risk_Management": "financialRiskManagement",
+        "Resource_Prioritization": "resourcePrioritization",
+        "Financial_Sustainability": "financialSustainability",
+        "Risk_Prevention": "riskPrevention",
+        "Risk_Mitigation": "riskMitigation",
+        "Risk_Transfer": "riskTransfer",
+        "Risk_Acceptance": "riskAcceptance",
+        "Control_Enhancement": "controlEnhancement",
+        "Response_Planning": "responsePlanning",
+        "Compliance_Management": "complianceManagement",
+        "Disruption_Response": "disruptionResponse",
+        "Network_Optimization": "networkOptimization",
+        "Cost_Reduction": "costReduction",
+        "Service_Improvement": "serviceImprovement",
+        "Capability_Development": "capabilityDevelopment",
+        "Technology_Adoption": "technologyAdoption",
+        "Innovation_Advancement": "innovationAdvancement",
+        "Capability_Enhancement": "capabilityEnhancement",
+        "Portfolio_Optimization": "portfolioOptimization",
+        "Experimentation_Need": "experimentationNeed",
+        "Innovation_Culture": "innovationCulture",
+        "Innovation_Process_Improvement": "innovationProcessImprovement",
+        "Sustainability_Compliance": "sustainabilityCompliance",
+        "Environmental_Stewardship": "environmentalStewardship",
+        "Social_Impact_Enhancement": "socialImpactEnhancement",
+        "Governance_Improvement": "governanceImprovement",
+        "Climate_Risk_Mitigation": "climateRiskMitigation",
+        "Stakeholder_Expectation_Management": "stakeholderExpectationManagement",
+        "Circular_Economy_Advancement": "circularEconomyAdvancement",
+        "Resource_Efficiency_Improvement": "resourceEfficiencyImprovement",
+        "Talent_Development": "talentDevelopment",
+        "Culture_Enhancement": "cultureEnhancement",
+        "Knowledge_Management": "knowledgeManagement",
+        "Workforce_Optimization": "workforceOptimization",
+        "Talent_Acquisition": "talentAcquisition",
+        "Employee_Experience_Improvement": "employeeExperienceImprovement",
+        "Leadership_Development": "leadershipDevelopment",
+        "Organizational_Alignment": "organizationalAlignment",
+        "Technology_Refresh": "technologyRefresh",
+        "Legacy_Modernization": "legacyModernization",
+        "Security_Enhancement": "securityEnhancement",
+        "Technology_Integration": "technologyIntegration",
+        "Technology_Standardization": "technologyStandardization",
+        "Architecture_Transformation": "architectureTransformation",
+        "Digital_Capability_Building": "digitalCapabilityBuilding",
+        "Technical_Debt_Reduction": "technicalDebtReduction",
+        "Channel_Optimization": "channelOptimization",
+        "Channel_Expansion": "channelExpansion",
+        "Partner_Management": "partnerManagement",
+        "Distribution_Efficiency": "distributionEfficiency",
+        "Omnichannel_Integration": "omnichannelIntegration",
+        "Channel_Conflict_Resolution": "channelConflictResolution",
+        "Digital_Channel_Development": "digitalChannelDevelopment",
+        "Channel_Mix_Rebalancing": "channelMixRebalancing"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/rationaleOrientation",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Reactive": "reactive",
+        "Proactive": "proactive"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/reasoningPattern",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Causal": "causal",
+        "Comparative": "comparative",
+        "Normative": "normative",
+        "Predictive": "predictive",
+        "Analogical": "analogical",
+        "Deductive": "deductive",
+        "Inductive": "inductive",
+        "Customer_Needs_Based": "customerNeedsBased",
+        "Journey_Friction_Based": "journeyFrictionBased",
+        "Segment_Value_Based": "segmentValueBased",
+        "Experience_Gap_Based": "experienceGapBased"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/evidenceBase",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Data_Driven": "dataDriven",
+        "Expert_Judgment": "expertJudgment",
+        "Industry_Best_Practice": "industryBestPractice",
+        "Customer_Feedback": "customerFeedback",
+        "Internal_Analysis": "internalAnalysis",
+        "External_Research": "externalResearch",
+        "Competitive_Analysis": "competitiveAnalysis",
+        "Voice_of_Customer": "voiceOfCustomer",
+        "Customer_Behavior_Analysis": "customerBehaviorAnalysis",
+        "Market_Research": "marketResearch",
+        "Customer_Service_Data": "customerServiceData",
+        "Social_Media_Analysis": "socialMediaAnalysis",
+        "Customer_Journey_Mapping": "customerJourneyMapping",
+        "Competitive_Intelligence": "competitiveIntelligence",
+        "Industry_Analysis": "industryAnalysis",
+        "Sales_Data": "salesData",
+        "Partner_Network": "partnerNetwork",
+        "External_Consultant": "externalConsultant",
+        "Strategic_Planning": "strategicPlanning",
+        "Financial_Analysis": "financialAnalysis",
+        "Performance_Metrics": "performanceMetrics",
+        "Investment_Review": "investmentReview",
+        "Budget_Analysis": "budgetAnalysis",
+        "Cost_Structure_Assessment": "costStructureAssessment",
+        "Revenue_Analysis": "revenueAnalysis",
+        "Risk_Assessment": "riskAssessment",
+        "Capital_Planning": "capitalPlanning",
+        "Incident_Analysis": "incidentAnalysis",
+        "Control_Monitoring": "controlMonitoring",
+        "Audit_Finding": "auditFinding",
+        "Industry_Intelligence": "industryIntelligence",
+        "Scenario_Analysis": "scenarioAnalysis",
+        "Supply_Chain_Analytics": "supplyChainAnalytics",
+        "Market_Intelligence": "marketIntelligence",
+        "Supplier_Feedback": "supplierFeedback",
+        "Customer_Requirements": "customerRequirements",
+        "Technology_Evaluation": "technologyEvaluation",
+        "Compliance_Analysis": "complianceAnalysis",
+        "Sustainability_Insight": "sustainabilityInsight",
+        "People_Insight": "peopleInsight",
+        "Experiment_Results": "experimentResults",
+        "Prototype_Feedback": "prototypeFeedback"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/businessValueType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Cost_Reduction": "costReduction",
+        "Revenue_Growth": "revenueGrowth",
+        "Risk_Reduction": "riskReduction",
+        "Customer_Experience": "customerExperience",
+        "Operational_Efficiency": "operationalEfficiency",
+        "Competitive_Advantage": "competitiveAdvantage",
+        "Brand_Perception": "brandPerception",
+        "Stakeholder_Trust": "stakeholderTrust",
+        "Market_Creation": "marketCreation",
+        "First_Mover_Advantage": "firstMoverAdvantage",
+        "Market_Disruption": "marketDisruption",
+        "Innovation_Leadership": "innovationLeadership",
+        "Ecosystem_Development": "ecosystemDevelopment",
+        "Strategic_Positioning": "strategicPositioning",
+        "Customer_Retention_Value": "customerRetentionValue",
+        "Customer_Acquisition_Value": "customerAcquisitionValue",
+        "Customer_Growth_Value": "customerGrowthValue",
+        "Brand_Loyalty_Value": "brandLoyaltyValue",
+        "Market_Share_Value": "marketShareValue",
+        "Environmental_Value": "environmentalValue",
+        "Social_Value": "socialValue",
+        "Governance_Value": "governanceValue",
+        "Talent_Value": "talentValue",
+        "Culture_Value": "cultureValue",
+        "Knowledge_Value": "knowledgeValue",
+        "Technical_Agility": "technicalAgility",
+        "System_Reliability": "systemReliability",
+        "Security_Posture": "securityPosture",
+        "Technical_Performance": "technicalPerformance",
+        "Integration_Effectiveness": "integrationEffectiveness",
+        "Technology_Cost_Efficiency": "technologyCostEfficiency",
+        "Digital_Experience": "digitalExperience",
+        "Channel_Reach_Value": "channelReachValue",
+        "Distribution_Efficiency_Value": "distributionEfficiencyValue",
+        "Partner_Network_Value": "partnerNetworkValue"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/competitivePositioning/properties/positioningType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Differentiation": "differentiation",
+        "Cost_Leadership": "costLeadership",
+        "Focus_Strategy": "focusStrategy",
+        "Blue_Ocean": "blueOcean",
+        "Industry_Leadership": "industryLeadership",
+        "Fast_Follower": "fastFollower",
+        "Niche_Dominance": "nicheDominance",
+        "Strategic_Alliance": "strategicAlliance"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/customerInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Voice_of_Customer": "voiceOfCustomer",
+        "Customer_Behavior_Analysis": "customerBehaviorAnalysis",
+        "Market_Research": "marketResearch",
+        "Customer_Service_Data": "customerServiceData",
+        "Social_Media_Analysis": "socialMediaAnalysis",
+        "Customer_Journey_Mapping": "customerJourneyMapping",
+        "Customer_Feedback": "customerFeedback",
+        "Competitive_Analysis": "competitiveAnalysis"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/marketInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Market_Research": "marketResearch",
+        "Competitive_Intelligence": "competitiveIntelligence",
+        "Industry_Analysis": "industryAnalysis",
+        "Customer_Feedback": "customerFeedback",
+        "Sales_Data": "salesData",
+        "Partner_Network": "partnerNetwork",
+        "External_Consultant": "externalConsultant",
+        "Strategic_Planning": "strategicPlanning"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/financialInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Financial_Analysis": "financialAnalysis",
+        "Performance_Metrics": "performanceMetrics",
+        "Investment_Review": "investmentReview",
+        "Budget_Analysis": "budgetAnalysis",
+        "Cost_Structure_Assessment": "costStructureAssessment",
+        "Revenue_Analysis": "revenueAnalysis",
+        "Risk_Assessment": "riskAssessment",
+        "Capital_Planning": "capitalPlanning"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/financialImpactAssessment/properties/impactType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "profit_margin": "profitMargin",
+        "cash_flow": "cashFlow",
+        "balance_sheet": "balanceSheet",
+        "income_statement": "incomeStatement",
+        "capital_structure": "capitalStructure",
+        "investment_return": "investmentReturn"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/riskInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Risk_Assessment": "riskAssessment",
+        "Incident_Analysis": "incidentAnalysis",
+        "Control_Monitoring": "controlMonitoring",
+        "Audit_Finding": "auditFinding",
+        "Industry_Intelligence": "industryIntelligence",
+        "Scenario_Analysis": "scenarioAnalysis",
+        "Expert_Judgment": "expertJudgment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/supplyChainInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Performance_Metrics": "performanceMetrics",
+        "Supply_Chain_Analytics": "supplyChainAnalytics",
+        "Market_Intelligence": "marketIntelligence",
+        "Supplier_Feedback": "supplierFeedback",
+        "Customer_Requirements": "customerRequirements",
+        "Risk_Assessment": "riskAssessment",
+        "Technology_Evaluation": "technologyEvaluation",
+        "Compliance_Analysis": "complianceAnalysis"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/supplyChainImpactAssessment/properties/impactAreas",
+      "sharedDefinition": null,
+      "valueMap": {
+        "supplier_network": "supplierNetwork",
+        "demand_planning": "demandPlanning"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/innovationInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Experiment_Results": "experimentResults",
+        "Innovation_Metrics": "innovationMetrics",
+        "Prototype_Feedback": "prototypeFeedback",
+        "Idea_Management_System": "ideaManagementSystem",
+        "Innovation_Assessment": "innovationAssessment",
+        "Technology_Scouting": "technologyScouting",
+        "Portfolio_Analysis": "portfolioAnalysis"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/sustainabilityInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "ESG_Assessment": "esgAssessment",
+        "Climate_Scenario_Analysis": "climateScenarioAnalysis",
+        "Stakeholder_Materiality_Assessment": "stakeholderMaterialityAssessment",
+        "Sustainability_Reporting": "sustainabilityReporting",
+        "External_ESG_Rating": "externalEsgRating",
+        "Environmental_Impact_Analysis": "environmentalImpactAnalysis",
+        "Social_Impact_Assessment": "socialImpactAssessment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/peopleInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Engagement_Assessment": "engagementAssessment",
+        "Skills_Analysis": "skillsAnalysis",
+        "Cultural_Assessment": "culturalAssessment",
+        "Competency_Evaluation": "competencyEvaluation",
+        "Knowledge_Audit": "knowledgeAudit",
+        "Exit_Interviews": "exitInterviews",
+        "Talent_Analytics": "talentAnalytics",
+        "Leadership_Assessment": "leadershipAssessment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/technologyInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Technology_Assessment": "technologyAssessment",
+        "Security_Monitoring": "securityMonitoring",
+        "Vendor_Notification": "vendorNotification",
+        "Technical_Debt_Analysis": "technicalDebtAnalysis",
+        "Architecture_Review": "architectureReview",
+        "Technology_Trend_Analysis": "technologyTrendAnalysis",
+        "System_Performance_Monitoring": "systemPerformanceMonitoring"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "rationale.schema.json",
+      "path": "/properties/channelInsightSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Channel_Performance_Analysis": "channelPerformanceAnalysis",
+        "Partner_Feedback": "partnerFeedback",
+        "Distribution_Network_Assessment": "distributionNetworkAssessment",
+        "Customer_Channel_Preference": "customerChannelPreference",
+        "Competitive_Channel_Analysis": "competitiveChannelAnalysis",
+        "Channel_Cost_Analysis": "channelCostAnalysis",
+        "Omnichannel_Integration_Assessment": "omnichannelIntegrationAssessment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskTolerance/properties/toleranceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "zero-tolerance": "zeroTolerance",
+        "case-by-case": "caseByCase"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/documentationReferences/items/properties/documentType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "control-description": "controlDescription"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentMethod",
+      "sharedDefinition": null,
+      "valueMap": {
+        "semi-quantitative": "semiQuantitative",
+        "scenario-based": "scenarioBased",
+        "expert-judgment": "expertJudgment",
+        "historical-analysis": "historicalAnalysis",
+        "model-based": "modelBased"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentParticipants/items/properties/participationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "subject-matter-expert": "subjectMatterExpert",
+        "risk-owner": "riskOwner"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/assessments/items/properties/assessmentFindings/items/properties/findingCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "risk-identification": "riskIdentification",
+        "control-gap": "controlGap",
+        "improvement-opportunity": "improvementOpportunity",
+        "positive-observation": "positiveObservation",
+        "compliance-issue": "complianceIssue"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/controlTesting/properties/testingMethod",
+      "sharedDefinition": null,
+      "valueMap": {
+        "re-performance": "rePerformance",
+        "automated-monitoring": "automatedMonitoring"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/controlTesting/properties/lastTestResult",
+      "sharedDefinition": null,
+      "valueMap": {
+        "passed-with-exceptions": "passedWithExceptions",
+        "not-tested": "notTested"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/responses/items/properties/responseStatus",
+      "sharedDefinition": null,
+      "valueMap": {
+        "not-started": "notStarted",
+        "in-progress": "inProgress"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/responses/items/properties/responseSuccess/properties/overallSuccess",
+      "sharedDefinition": null,
+      "valueMap": {
+        "partially-successful": "partiallySuccessful",
+        "too-early-to-determine": "tooEarlyToDetermine",
+        "not-measured": "notMeasured"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/serviceCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Customer Service": "customerService",
+        "Support Service": "supportService",
+        "Operational Service": "operationalService",
+        "Administrative Service": "administrativeService",
+        "Digital Service": "digitalService",
+        "Professional Service": "professionalService",
+        "Infrastructure Service": "infrastructureService"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/serviceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Transportation": "transportation",
+        "Consulting": "consulting",
+        "Maintenance": "maintenance",
+        "Support": "support",
+        "Platform": "platform",
+        "API Service": "apiService",
+        "Analytics": "analytics",
+        "Training": "training",
+        "Monitoring": "monitoring",
+        "Integration": "integration"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/deliveryModel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Self-Service": "selfService",
+        "Assisted Service": "assistedService",
+        "Automated Service": "automatedService",
+        "On-Demand": "onDemand",
+        "Scheduled": "scheduled",
+        "Continuous": "continuous",
+        "Hybrid": "hybrid"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/serviceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Basic": "basic",
+        "Standard": "standard",
+        "Premium": "premium",
+        "Enterprise": "enterprise",
+        "Mission Critical": "missionCritical"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/channels",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Online Portal": "onlinePortal",
+        "Mobile App": "mobileApp",
+        "Phone": "phone",
+        "In-Person": "inPerson",
+        "API": "api",
+        "Email": "email",
+        "Chat": "chat",
+        "Social Media": "socialMedia",
+        "Partner Channel": "partnerChannel"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/complianceRequirements",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Federal Regulations": "federalRegulations",
+        "State Regulations": "stateRegulations",
+        "Industry Standards": "industryStandards",
+        "Safety Requirements": "safetyRequirements",
+        "Environmental Standards": "environmentalStandards",
+        "Privacy Regulations": "privacyRegulations",
+        "Security Standards": "securityStandards"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/targetAudience",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal Employees": "internalEmployees",
+        "External Customers": "externalCustomers",
+        "Partners": "partners",
+        "Vendors": "vendors",
+        "Government": "government",
+        "Public": "public"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/businessModel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Fee for Service": "feeForService",
+        "Subscription": "subscription",
+        "Usage Based": "usageBased",
+        "Freemium": "freemium",
+        "Commission": "commission",
+        "License": "license",
+        "Support Model": "supportModel"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/customerSegments",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Enterprise": "enterprise",
+        "SMB": "smb",
+        "Government": "government",
+        "Individual": "individual",
+        "Partner": "partner",
+        "Developer": "developer"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/marketPosition",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Market Leader": "marketLeader",
+        "Market Challenger": "marketChallenger",
+        "Market Follower": "marketFollower",
+        "Niche Player": "nichePlayer",
+        "Disruptor": "disruptor",
+        "Emerging Player": "emergingPlayer"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/investmentLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Investment": "highInvestment",
+        "Medium Investment": "mediumInvestment",
+        "Low Investment": "lowInvestment",
+        "Minimal Investment": "minimalInvestment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/definitions/serviceFeature/properties/featureType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Core Feature": "coreFeature",
+        "Premium Feature": "premiumFeature",
+        "Add-on": "addOn",
+        "Integration": "integration",
+        "Automation": "automation",
+        "Enhancement": "enhancement"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/definitions/serviceFeature/properties/channels",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Web Portal": "webPortal",
+        "Mobile Application": "mobileApplication",
+        "SMS Alerts": "smsAlerts",
+        "Email Notifications": "emailNotifications",
+        "API Integration": "apiIntegration",
+        "Phone": "phone",
+        "Chat": "chat"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/definitions/serviceFeature/properties/rolloutStrategy",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Big Bang": "bigBang",
+        "Phased": "phased",
+        "Canary": "canary",
+        "Beta": "beta",
+        "Geographic": "geographic",
+        "Segment": "segment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "shared-initiative.schema.json",
+      "path": "/properties/owningOrganizations/items/properties/orgType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal": "internal",
+        "External": "external"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "shared-initiative.schema.json",
+      "path": "/properties/owningOrganizations/items/properties/role",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Lead": "lead",
+        "Sponsor": "sponsor",
+        "Funding partner": "fundingPartner",
+        "Implementation partner": "implementationPartner",
+        "Stakeholder": "stakeholder",
+        "Oversight": "oversight"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "shared-initiative.schema.json",
+      "path": "/properties/crossOrgDependencies/items/properties/dependencyType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Information": "information",
+        "Capability": "capability",
+        "Resource": "resource",
+        "Decision": "decision",
+        "Approval": "approval"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/activityType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Campaign": "campaign",
+        "Protest": "protest",
+        "Strike": "strike",
+        "Picket": "picket",
+        "Boycott": "boycott",
+        "Legal Challenge": "legalChallenge",
+        "Coalition": "coalition",
+        "Research Program": "researchProgram",
+        "Revolution": "revolution",
+        "Insurrection": "insurrection",
+        "Uprising": "uprising",
+        "Organizational Reform": "organizationalReform",
+        "Policy Initiative": "policyInitiative",
+        "Community Organizing": "communityOrganizing",
+        "Consulting Project": "consultingProject",
+        "Institutional Transformation": "institutionalTransformation"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/activityCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Grassroots Organizing": "grassrootsOrganizing",
+        "Institutional Action": "institutionalAction",
+        "Revolutionary Action": "revolutionaryAction",
+        "Organizational Change": "organizationalChange",
+        "Research and Analysis": "researchAndAnalysis",
+        "Community Development": "communityDevelopment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/stakeholders/items/properties/type",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Labor Unions": "laborUnions",
+        "Government Agencies": "governmentAgencies",
+        "Corporate Leadership": "corporateLeadership",
+        "NGOs/Civil Society": "ngosCivilSociety",
+        "Community Groups": "communityGroups",
+        "Professional Organizations": "professionalOrganizations",
+        "Academic Institutions": "academicInstitutions",
+        "Media Organizations": "mediaOrganizations",
+        "Religious Organizations": "religiousOrganizations",
+        "Individual Citizens": "individualCitizens"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/stakeholders/items/properties/influenceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Low": "low",
+        "Low-Medium": "lowMedium",
+        "Medium": "medium",
+        "Medium-High": "mediumHigh",
+        "High": "high"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/tactics/items/properties/violenceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Non-violent": "nonViolent",
+        "Property Disruption": "propertyDisruption",
+        "Minimal Violence": "minimalViolence",
+        "Armed Resistance": "armedResistance",
+        "Civil War": "civilWar"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/successMeasurement/properties/measurementType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Output Metrics": "outputMetrics",
+        "Outcome Metrics": "outcomeMetrics",
+        "Impact Metrics": "impactMetrics",
+        "Process Metrics": "processMetrics"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/changeScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Department-level": "departmentLevel",
+        "Organization-wide": "organizationWide",
+        "Multi-organizational": "multiOrganizational",
+        "Sector-wide": "sectorWide",
+        "Local": "local",
+        "Regional": "regional",
+        "National": "national",
+        "International": "international"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/changeAgentType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Worker Committee": "workerCommittee",
+        "HR Leadership": "hrLeadership",
+        "External Consultant": "externalConsultant",
+        "Government Agency": "governmentAgency",
+        "NGO Partnership": "ngoPartnership",
+        "Community Coalition": "communityCoalition",
+        "Revolutionary Council": "revolutionaryCouncil"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/institutionalContext",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Private Corporation": "privateCorporation",
+        "Government Agency": "governmentAgency",
+        "Non-profit Organization": "nonProfitOrganization",
+        "Educational Institution": "educationalInstitution",
+        "Healthcare System": "healthcareSystem",
+        "Religious Institution": "religiousInstitution",
+        "Community Organization": "communityOrganization"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/changeMethodology",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Community Organizing": "communityOrganizing",
+        "Policy Advocacy": "policyAdvocacy",
+        "Organizational Development": "organizationalDevelopment",
+        "Direct Action": "directAction",
+        "Legal Strategy": "legalStrategy",
+        "Research and Education": "researchAndEducation",
+        "Participatory Action Research": "participatoryActionResearch",
+        "Policy Design Thinking": "policyDesignThinking"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/resourceSource",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal Budget": "internalBudget",
+        "Government Grant": "governmentGrant",
+        "Foundation Funding": "foundationFunding",
+        "Consulting Contract": "consultingContract",
+        "Volunteer Resources": "volunteerResources",
+        "Membership Fees": "membershipFees",
+        "Donations": "donations",
+        "Coalition Resources": "coalitionResources"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/timeline",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Event-based": "eventBased",
+        "3-month pilot": "3MonthPilot",
+        "6-month project": "6MonthProject",
+        "1-year implementation": "1YearImplementation",
+        "Multi-year transformation": "multiYearTransformation",
+        "Ongoing program": "ongoingProgram",
+        "Permanent initiative": "permanentInitiative"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/revolutionType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Political Revolution": "politicalRevolution",
+        "Social Revolution": "socialRevolution",
+        "Economic Revolution": "economicRevolution",
+        "Cultural Revolution": "culturalRevolution"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/violenceClassification",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Non-violent": "nonViolent",
+        "Property Disruption": "propertyDisruption",
+        "Minimal Violence": "minimalViolence",
+        "Armed Resistance": "armedResistance",
+        "Civil War": "civilWar"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/revolutionaryScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Local Uprising": "localUprising",
+        "Regional Revolution": "regionalRevolution",
+        "National Revolution": "nationalRevolution",
+        "International Revolution": "internationalRevolution"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/legitimacyBasis",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Tyrannical Oppression": "tyrannicalOppression",
+        "Colonial Liberation": "colonialLiberation",
+        "Democratic Restoration": "democraticRestoration",
+        "Economic Justice": "economicJustice",
+        "Self-Determination": "selfDetermination",
+        "Human Rights Protection": "humanRightsProtection"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/revolutionaryLeadership/items/properties/leadershipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Decentralized": "decentralized",
+        "Hierarchical": "hierarchical",
+        "Coalition-based": "coalitionBased",
+        "Emergent": "emergent"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/revolutionaryLeadership/items/properties/organizationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Popular Movement": "popularMovement",
+        "Liberation Army": "liberationArmy",
+        "Underground Network": "undergroundNetwork",
+        "Political Coalition": "politicalCoalition",
+        "Worker Council": "workerCouncil"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/targetRegime",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Authoritarian Government": "authoritarianGovernment",
+        "Colonial Administration": "colonialAdministration",
+        "Oligarchy": "oligarchy",
+        "Military Dictatorship": "militaryDictatorship",
+        "Corrupt Democracy": "corruptDemocracy",
+        "Corporate Oligarchy": "corporateOligarchy"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/revolutionaryPhases",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Pre-Revolutionary Conditions": "preRevolutionaryConditions",
+        "Grievance Accumulation": "grievanceAccumulation",
+        "Revolutionary Mobilization": "revolutionaryMobilization",
+        "Active Revolution": "activeRevolution",
+        "Confrontation": "confrontation",
+        "System Overthrow": "systemOverthrow",
+        "Revolutionary Consolidation": "revolutionaryConsolidation",
+        "Reconstruction": "reconstruction",
+        "Institution Building": "institutionBuilding"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/internationalSupport/items/properties/supportType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Diplomatic": "diplomatic",
+        "Economic": "economic",
+        "Military": "military",
+        "Humanitarian": "humanitarian",
+        "Media": "media"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/counterRevolutionaryForces/items/properties/forceType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "State Security": "stateSecurity",
+        "Military": "military",
+        "Paramilitary": "paramilitary",
+        "Foreign Intervention": "foreignIntervention",
+        "Economic Elite": "economicElite",
+        "Political Opposition": "politicalOpposition"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/relationships/properties/valueStreamImpacts/items/properties/impactType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Disrupted": "disrupted",
+        "Supported": "supported",
+        "Transformed": "transformed"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/relationships/properties/stakeholderAffected/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Target": "target",
+        "Ally": "ally",
+        "Neutral": "neutral",
+        "Opposition": "opposition"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "social-change.schema.json",
+      "path": "/properties/metadata/properties/confidentialityLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Public": "public",
+        "Internal": "internal",
+        "Confidential": "confidential",
+        "Restricted": "restricted"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/tType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Primary Customer": "primaryCustomer",
+        "Secondary Customer": "secondaryCustomer",
+        "B2B Customer": "b2bCustomer",
+        "B2C Customer": "b2cCustomer",
+        "B2G Customer": "b2gCustomer",
+        "Internal Customer": "internalCustomer",
+        "End User": "endUser",
+        "Regulatory Body": "regulatoryBody",
+        "Government Agency": "governmentAgency",
+        "Local Authority": "localAuthority",
+        "International Body": "internationalBody",
+        "Standards Organization": "standardsOrganization",
+        "Strategic Partner": "strategicPartner",
+        "Supplier/Vendor": "supplierVendor",
+        "Distributor/Channel Partner": "distributorChannelPartner",
+        "System Integrator": "systemIntegrator",
+        "Consultant/Advisor": "consultantAdvisor",
+        "Financial Institution": "financialInstitution",
+        "Investor/Shareholder": "investorShareholder",
+        "Board Member": "boardMember",
+        "Employee/Staff": "employeeStaff",
+        "Trade Union": "tradeUnion",
+        "Industry Association": "industryAssociation",
+        "Community Representative": "communityRepresentative",
+        "Environmental Group": "environmentalGroup",
+        "Media/Press": "mediaPress",
+        "Academic Institution": "academicInstitution",
+        "Competitor": "competitor",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/stakeholderCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Internal Stakeholder": "internalStakeholder",
+        "External Stakeholder": "externalStakeholder",
+        "Primary Stakeholder": "primaryStakeholder",
+        "Secondary Stakeholder": "secondaryStakeholder",
+        "Key Stakeholder": "keyStakeholder",
+        "Influential Stakeholder": "influentialStakeholder"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/influenceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Influence": "highInfluence",
+        "Medium Influence": "mediumInfluence",
+        "Low Influence": "lowInfluence"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/interestLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Interest": "highInterest",
+        "Medium Interest": "mediumInterest",
+        "Low Interest": "lowInterest"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/communicationChannels",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Email": "email",
+        "Phone/Call": "phoneCall",
+        "Video Conference": "videoConference",
+        "In-Person Meeting": "inPersonMeeting",
+        "Digital Platform": "digitalPlatform",
+        "Social Media": "socialMedia",
+        "Website": "website",
+        "Newsletter": "newsletter",
+        "Reports": "reports",
+        "Surveys": "surveys",
+        "Workshops": "workshops",
+        "Conferences": "conferences",
+        "Mobile App": "mobileApp",
+        "Traditional Mail": "traditionalMail"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/industry",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Transportation": "transportation",
+        "Government": "government",
+        "Technology": "technology",
+        "Manufacturing": "manufacturing",
+        "Financial Services": "financialServices",
+        "Healthcare": "healthcare",
+        "Energy": "energy",
+        "Retail": "retail",
+        "Education": "education",
+        "Consulting": "consulting",
+        "Construction": "construction",
+        "Agriculture": "agriculture",
+        "Media": "media",
+        "Telecommunications": "telecommunications",
+        "Non-Profit": "nonProfit",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/organizationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Government Agency": "governmentAgency",
+        "Private Company": "privateCompany",
+        "Public Company": "publicCompany",
+        "Non-Profit Organization": "nonProfitOrganization",
+        "International Organization": "internationalOrganization",
+        "Academic Institution": "academicInstitution",
+        "Industry Association": "industryAssociation",
+        "Partnership": "partnership",
+        "Individual": "individual",
+        "Community Group": "communityGroup"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/definitions/stakeholderRequirement/properties/requirementType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Functional": "functional",
+        "Non-Functional": "nonFunctional",
+        "Compliance": "compliance",
+        "Business": "business",
+        "Technical": "technical",
+        "User Experience": "userExperience"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/definitions/stakeholderRequirement/properties/complianceFramework",
+      "sharedDefinition": null,
+      "valueMap": {
+        "ISO Standards": "isoStandards",
+        "Government Regulation": "governmentRegulation",
+        "Industry Standard": "industryStandard",
+        "Internal Policy": "internalPolicy",
+        "International Treaty": "internationalTreaty",
+        "Professional Standard": "professionalStandard"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-intent.schema.json",
+      "path": "/properties/opportunityType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Innovation": "innovation",
+        "Growth": "growth",
+        "Efficiency": "efficiency",
+        "Resilience": "resilience",
+        "Compliance": "compliance",
+        "Differentiation": "differentiation",
+        "Sustainability": "sustainability",
+        "Transformation": "transformation"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-intent.schema.json",
+      "path": "/properties/maturityLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Conceptual": "conceptual",
+        "Emerging": "emerging",
+        "Established": "established",
+        "Scaling": "scaling",
+        "Optimizing": "optimizing"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/responseType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Policy_Change": "policyChange",
+        "Capability_Development": "capabilityDevelopment",
+        "Initiative_Launch": "initiativeLaunch",
+        "Process_Improvement": "processImprovement",
+        "Technology_Implementation": "technologyImplementation",
+        "Organizational_Change": "organizationalChange",
+        "Market_Entry": "marketEntry",
+        "Market_Exit": "marketExit",
+        "Competitive_Response": "competitiveResponse",
+        "Product_Innovation": "productInnovation",
+        "Repositioning": "repositioning",
+        "Market_Expansion": "marketExpansion",
+        "Defensive_Action": "defensiveAction",
+        "Partnership_Strategy": "partnershipStrategy",
+        "Pricing_Strategy": "pricingStrategy",
+        "Channel_Strategy": "channelStrategy",
+        "Cost_Optimization": "costOptimization",
+        "Investment_Strategy": "investmentStrategy",
+        "Capital_Structure_Change": "capitalStructureChange",
+        "Financial_Risk_Management": "financialRiskManagement",
+        "Budget_Reallocation": "budgetReallocation",
+        "Funding_Strategy": "fundingStrategy",
+        "Revenue_Enhancement": "revenueEnhancement",
+        "Working_Capital_Management": "workingCapitalManagement",
+        "Financial_Restructuring": "financialRestructuring",
+        "Risk_Prevention": "riskPrevention",
+        "Risk_Mitigation": "riskMitigation",
+        "Risk_Transfer": "riskTransfer",
+        "Risk_Acceptance": "riskAcceptance",
+        "Control_Enhancement": "controlEnhancement",
+        "Incident_Response": "incidentResponse",
+        "Business_Continuity": "businessContinuity",
+        "Compliance_Program": "complianceProgram",
+        "Risk_Governance": "riskGovernance",
+        "Network_Redesign": "networkRedesign",
+        "Supplier_Change": "supplierChange",
+        "Inventory_Strategy": "inventoryStrategy",
+        "Logistics_Optimization": "logisticsOptimization",
+        "Cost_Reduction": "costReduction",
+        "Service_Enhancement": "serviceEnhancement",
+        "Sustainability_Initiative": "sustainabilityInitiative",
+        "Customer_Experience_Initiative": "customerExperienceInitiative",
+        "Customer_Retention_Program": "customerRetentionProgram",
+        "Customer_Acquisition_Campaign": "customerAcquisitionCampaign",
+        "Customer_Journey_Redesign": "customerJourneyRedesign",
+        "Customer_Segment_Strategy": "customerSegmentStrategy",
+        "Customer_Insight_Application": "customerInsightApplication",
+        "Customer_Technology_Implementation": "customerTechnologyImplementation",
+        "Innovation_Program": "innovationProgram",
+        "Innovation_Culture_Change": "innovationCultureChange",
+        "Innovation_Capability_Building": "innovationCapabilityBuilding",
+        "Portfolio_Adjustment": "portfolioAdjustment",
+        "Experimentation_Framework": "experimentationFramework",
+        "Idea_Management_Enhancement": "ideaManagementEnhancement",
+        "Environmental_Initiative": "environmentalInitiative",
+        "Social_Program": "socialProgram",
+        "Governance_Enhancement": "governanceEnhancement",
+        "Climate_Adaptation": "climateAdaptation",
+        "Sustainability_Reporting_Improvement": "sustainabilityReportingImprovement",
+        "Talent_Initiative": "talentInitiative",
+        "Culture_Change_Program": "cultureChangeProgram",
+        "Leadership_Development": "leadershipDevelopment",
+        "Knowledge_Retention_Program": "knowledgeRetentionProgram",
+        "Workforce_Restructuring": "workforceRestructuring",
+        "Technology_Modernization": "technologyModernization",
+        "Security_Remediation": "securityRemediation",
+        "Technology_Standardization": "technologyStandardization",
+        "Platform_Consolidation": "platformConsolidation",
+        "Digital_Transformation": "digitalTransformation",
+        "Channel_Expansion": "channelExpansion",
+        "Channel_Consolidation": "channelConsolidation",
+        "Partner_Strategy_Change": "partnerStrategyChange",
+        "Distribution_Network_Redesign": "distributionNetworkRedesign",
+        "Omnichannel_Integration": "omnichannelIntegration",
+        "Channel_Mix_Optimization": "channelMixOptimization"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/impactedUnits/items/properties/relationshipRole",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Owning unit": "owningUnit",
+        "Providing unit": "providingUnit",
+        "Consuming unit": "consumingUnit",
+        "Utilising unit": "utilisingUnit",
+        "Custodian unit": "custodianUnit",
+        "Dependent unit": "dependentUnit",
+        "Supported unit": "supportedUnit",
+        "Governing unit": "governingUnit"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/strategicLevers",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Scale": "scale",
+        "Scope": "scope",
+        "Differentiation": "differentiation",
+        "Innovation": "innovation",
+        "Efficiency": "efficiency",
+        "Resilience": "resilience",
+        "Other": "other"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategic-response.schema.json",
+      "path": "/properties/strategicHorizon",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Horizon_1": "horizon1",
+        "Horizon_2": "horizon2",
+        "Horizon_3": "horizon3"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/strategyCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Military": "military",
+        "Political": "political",
+        "Diplomatic": "diplomatic",
+        "Economic": "economic",
+        "Intelligence": "intelligence",
+        "Corporate": "corporate",
+        "Geopolitical": "geopolitical",
+        "Social Movement": "socialMovement",
+        "Technological": "technological",
+        "Resource Control": "resourceControl",
+        "Information": "information",
+        "Legal/Judicial": "legalJudicial"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/strategyType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Offensive": "offensive",
+        "Defensive": "defensive",
+        "Containment": "containment",
+        "Deterrence": "deterrence",
+        "Attrition": "attrition",
+        "Blitzkrieg": "blitzkrieg",
+        "Asymmetric": "asymmetric",
+        "Coalition Building": "coalitionBuilding",
+        "Divide and Conquer": "divideAndConquer",
+        "Encirclement": "encirclement",
+        "Infiltration": "infiltration",
+        "Scorched Earth": "scorchedEarth",
+        "Flanking": "flanking",
+        "Preemption": "preemption",
+        "Escalation": "escalation",
+        "De-escalation": "deEscalation",
+        "Provocation": "provocation",
+        "Deception": "deception",
+        "Accumulation": "accumulation",
+        "Disruption": "disruption",
+        "Withdrawal": "withdrawal",
+        "Retrenchment": "retrenchment",
+        "Transition": "transition",
+        "Abandonment": "abandonment",
+        "Appeasement": "appeasement",
+        "Capitulation": "capitulation"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/strategicFocus",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Power Accumulation": "powerAccumulation",
+        "Power Preservation": "powerPreservation",
+        "Power Transfer": "powerTransfer",
+        "Power Reduction": "powerReduction",
+        "Territory Control": "territoryControl",
+        "Territory Withdrawal": "territoryWithdrawal",
+        "Resource Dominance": "resourceDominance",
+        "Resource Denial": "resourceDenial",
+        "Information Control": "informationControl",
+        "Alliance Building": "allianceBuilding",
+        "Alliance Dissolution": "allianceDissolution",
+        "Opponent Neutralization": "opponentNeutralization",
+        "Conflict Avoidance": "conflictAvoidance",
+        "System Disruption": "systemDisruption",
+        "Status Quo Maintenance": "statusQuoMaintenance",
+        "Influence Projection": "influenceProjection",
+        "Influence Withdrawal": "influenceWithdrawal",
+        "Survival": "survival",
+        "Hegemony": "hegemony",
+        "Legitimacy": "legitimacy",
+        "Innovation Leadership": "innovationLeadership",
+        "Economic Dominance": "economicDominance",
+        "Cultural Hegemony": "culturalHegemony"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/scopeLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Global": "global",
+        "Continental": "continental",
+        "Regional": "regional",
+        "National": "national",
+        "State/Provincial": "stateProvincial",
+        "Local": "local",
+        "Sector": "sector",
+        "Organization": "organization",
+        "Coalition": "coalition",
+        "Bilateral": "bilateral",
+        "Multilateral": "multilateral",
+        "Asymmetric": "asymmetric"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/marketPosition",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Market Leader": "marketLeader",
+        "Market Challenger": "marketChallenger",
+        "Market Follower": "marketFollower",
+        "Niche Player": "nichePlayer",
+        "Disruptor": "disruptor",
+        "Emerging Player": "emergingPlayer"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/investmentLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "High Investment": "highInvestment",
+        "Medium Investment": "mediumInvestment",
+        "Low Investment": "lowInvestment",
+        "Minimal Investment": "minimalInvestment"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/empathyFocus",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Customer": "customer",
+        "Employee": "employee",
+        "Partner": "partner",
+        "Community": "community",
+        "Shareholder": "shareholder"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/empathyIntegrationLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "AdHoc": "adhoc",
+        "DefinedProcess": "definedprocess",
+        "Systemic": "systemic",
+        "CoreCapability": "corecapability"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/relationshipCentricity",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Transactional": "transactional",
+        "Collaborative": "collaborative",
+        "Partnership": "partnership"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/definitions/strategyObjective/properties/objectiveType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Power Acquisition": "powerAcquisition",
+        "Power Preservation": "powerPreservation",
+        "Power Transfer": "powerTransfer",
+        "Power Reduction": "powerReduction",
+        "Destruction": "destruction",
+        "Neutralization": "neutralization",
+        "Control": "control",
+        "Influence": "influence",
+        "Access": "access",
+        "Denial": "denial",
+        "Intelligence": "intelligence",
+        "Disruption": "disruption",
+        "Legitimacy": "legitimacy",
+        "Survival": "survival",
+        "Growth": "growth",
+        "Efficiency": "efficiency",
+        "Innovation": "innovation",
+        "Alliance": "alliance",
+        "Withdrawal": "withdrawal",
+        "Transition": "transition"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/supplyChainCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "spare-parts": "spareParts"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/supplyChainScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-unit": "businessUnit",
+        "product-line": "productLine"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/geographicCoverage/properties/coverageType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "multi-regional": "multiRegional"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/locationStrategy/properties/strategyType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "proximity-to-market": "proximityToMarket",
+        "proximity-to-supply": "proximityToSupply",
+        "cost-optimization": "costOptimization",
+        "tax-optimization": "taxOptimization",
+        "talent-access": "talentAccess",
+        "risk-diversification": "riskDiversification"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/competitiveAdvantage/properties/advantageLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "significant-advantage": "significantAdvantage"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/supplierTiers/items/properties/tierLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "tier-1": "tier1",
+        "tier-2": "tier2",
+        "tier-3": "tier3",
+        "tier-n": "tierN"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/supplierRelationshipTypes/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "joint-venture": "jointVenture"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/standardization/properties/standardizationLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "ad-hoc": "adHoc",
+        "partially-standardized": "partiallyStandardized",
+        "mostly-standardized": "mostlyStandardized",
+        "fully-standardized": "fullyStandardized"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkNodes/items/properties/nodeType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "distribution-center": "distributionCenter",
+        "fulfillment-center": "fulfillmentCenter",
+        "cross-dock": "crossDock"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/transportationModes/items/properties/carriers/items/properties/carrierType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "asset-based": "assetBased",
+        "non-asset": "nonAsset",
+        "freight-forwarder": "freightForwarder"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/thirdPartyLogistics/items/properties/performanceRating",
+      "sharedDefinition": null,
+      "valueMap": {
+        "below-expectations": "belowExpectations",
+        "meets-expectations": "meetsExpectations",
+        "exceeds-expectations": "exceedsExpectations"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "raw-materials": "rawMaterials",
+        "work-in-process": "workInProcess",
+        "finished-goods": "finishedGoods",
+        "spare-parts": "spareParts",
+        "maintenance-supplies": "maintenanceSupplies"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryPolicy/properties/policyType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "min-max": "minMax",
+        "economic-order-quantity": "economicOrderQuantity",
+        "just-in-time": "justInTime",
+        "vendor-managed": "vendorManaged",
+        "periodic-review": "periodicReview",
+        "continuous-review": "continuousReview"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryLocation/items/properties/locationType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "distribution-center": "distributionCenter",
+        "vendor-managed": "vendorManaged"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/sustainabilityScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-unit": "businessUnit",
+        "product-line": "productLine"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/verificationApproach/properties/approach",
+      "sharedDefinition": null,
+      "valueMap": {
+        "self-assessment": "selfAssessment",
+        "internal-audit": "internalAudit",
+        "third-party-verification": "thirdPartyVerification",
+        "third-party-assurance": "thirdPartyAssurance"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/impactScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-unit": "businessUnit",
+        "product-line": "productLine"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/impactCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "land-use": "landUse"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/impactMeasurement/properties/verificationStatus",
+      "sharedDefinition": null,
+      "valueMap": {
+        "internally-verified": "internallyVerified",
+        "third-party-verified": "thirdPartyVerified"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/regulatoryRequirements/properties/emergingRegulations/items/properties/preparednessLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "not started": "notStarted",
+        "planning stage": "planningStage",
+        "preparation underway": "preparationUnderway"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/verificationStandard/properties/assuranceLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "not assured": "notAssured"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/socialResponsibility/properties/socialCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "diversity-and-inclusion": "diversityAndInclusion",
+        "human-rights": "humanRights",
+        "labor-practices": "laborPractices",
+        "community-development": "communityDevelopment",
+        "health-and-safety": "healthAndSafety",
+        "supply-chain-responsibility": "supplyChainResponsibility",
+        "product-responsibility": "productResponsibility"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/governancePractice/properties/governanceCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "board-oversight": "boardOversight",
+        "management-accountability": "managementAccountability",
+        "stakeholder-engagement": "stakeholderEngagement",
+        "compliance-management": "complianceManagement",
+        "reporting-disclosure": "reportingDisclosure",
+        "ethics-integrity": "ethicsIntegrity",
+        "risk-oversight": "riskOversight"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/governancePractice/properties/governanceScope",
+      "sharedDefinition": null,
+      "valueMap": {
+        "business-unit": "businessUnit",
+        "product-line": "productLine"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/governancePractice/properties/transparencyMechanisms/properties/accessibilityLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "investors-only": "investorsOnly",
+        "regulators-only": "regulatorsOnly",
+        "internal-only": "internalOnly"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/sustainabilityStrategy/properties/integrationWithBusinessStrategy/properties/integrationLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "fully integrated": "fullyIntegrated"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/technologyType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "end-user": "endUser"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/technologyLayer",
+      "sharedDefinition": null,
+      "valueMap": {
+        "cross-cutting": "crossCutting"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/currentState",
+      "sharedDefinition": null,
+      "valueMap": {
+        "under-development": "underDevelopment",
+        "being-replaced": "beingReplaced"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/relatedTechnologies/items/properties/relationshipType",
+      "sharedDefinition": null,
+      "valueMap": {
+        "depends-on": "dependsOn",
+        "integrates-with": "integratesWith",
+        "is-replaced-by": "isReplacedBy"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/definitions/standardElement/properties/complianceRequirement",
+      "sharedDefinition": null,
+      "valueMap": {
+        "reference-only": "referenceOnly"
+      },
+      "domainSpecificValues": [],
+      "migration": 3
     }
   ]
 }

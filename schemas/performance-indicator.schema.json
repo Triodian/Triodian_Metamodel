@@ -45,10 +45,10 @@
       "type": "string",
       "description": "General threshold logic, e.g. higher-is-better or lower-is-better",
       "enum": [
-        "higher-is-better",
-        "lower-is-better",
-        "target-is-optimal",
-        "range-is-optimal"
+        "higherIsBetter",
+        "lowerIsBetter",
+        "targetIsOptimal",
+        "rangeIsOptimal"
       ]
     },
     "thresholds": {
@@ -68,12 +68,12 @@
           "comparisonOperator": {
             "type": "string",
             "enum": [
-              ">",
-              "<",
-              ">=",
-              "<=",
-              "==",
-              "!="
+              "greaterThan",
+              "lessThan",
+              "greaterThanOrEqual",
+              "lessThanOrEqual",
+              "equal",
+              "notEqual"
             ],
             "description": "Logical operator for threshold evaluation"
           },
@@ -113,17 +113,12 @@
       "description": "End date of the performance measurement period"
     },
     "aggregationPeriod": {
-      "type": "string",
-      "enum": [
-        "real-time",
-        "hourly",
-        "daily",
-        "weekly",
-        "monthly",
-        "quarterly",
-        "yearly"
-      ],
-      "description": "The timeframe used to aggregate performance data"
+      "description": "The timeframe used to aggregate performance data",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/frequency"
+        }
+      ]
     },
     "assessmentFrequency": {
       "type": "string",
@@ -515,15 +510,19 @@
             "description": "ID of the strategic objective or initiative"
           },
           "alignmentType": {
-            "type": "string",
-            "enum": [
-              "strategic-objective",
-              "initiative",
-              "policy",
-              "capability",
-              "value-stream"
-            ],
-            "description": "Type of strategic element this indicator aligns with"
+            "description": "Type of strategic element this indicator aligns with",
+            "anyOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              },
+              {
+                "type": "string",
+                "enum": [
+                  "strategicObjective"
+                ],
+                "description": "Domain-specific values in addition to the shared list"
+              }
+            ]
           },
           "alignmentStrength": {
             "type": "integer",
@@ -561,9 +560,9 @@
           "status": {
             "type": "string",
             "enum": [
-              "above-target",
-              "on-target",
-              "below-target",
+              "aboveTarget",
+              "onTarget",
+              "belowTarget",
               "critical"
             ],
             "description": "Performance status relative to target"
@@ -595,10 +594,10 @@
             "enum": [
               "parent",
               "child",
-              "correlates-with",
+              "correlatesWith",
               "influences",
-              "derived-from",
-              "component-of"
+              "derivedFrom",
+              "componentOf"
             ],
             "description": "Type of relationship with the related indicator"
           },
@@ -631,14 +630,12 @@
             "description": "ID of the stakeholder"
           },
           "interestLevel": {
-            "type": "string",
-            "enum": [
-              "low",
-              "medium",
-              "high",
-              "critical"
-            ],
-            "description": "Level of interest from this stakeholder"
+            "description": "Level of interest from this stakeholder",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/ratingLevel"
+              }
+            ]
           },
           "impactDescription": {
             "type": "string",

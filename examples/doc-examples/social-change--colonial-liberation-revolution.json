@@ -1,12 +1,12 @@
 {
   "name": "Colonial Liberation Revolution",
   "description": "Armed resistance against colonial occupation forces",
-  "activityType": "Revolution",
-  "revolutionType": "Political Revolution",
-  "violenceClassification": "Armed Resistance",
-  "revolutionaryScope": "National Revolution",
-  "legitimacyBasis": "Colonial Liberation",
-  "targetRegime": "Colonial Administration",
+  "activityType": "revolution",
+  "revolutionType": "politicalRevolution",
+  "violenceClassification": "armedResistance",
+  "revolutionaryScope": "nationalRevolution",
+  "legitimacyBasis": "colonialLiberation",
+  "targetRegime": "colonialAdministration",
   "leadingOrganizations": [
     "Liberation Front",
     "Underground Network",
@@ -20,8 +20,8 @@
   ],
   "revolutionaryLeadership": [
     {
-      "leadershipType": "Hierarchical",
-      "organizationType": "Liberation Army",
+      "leadershipType": "hierarchical",
+      "organizationType": "liberationArmy",
       "keyFigures": [
         "Revolutionary Command"
       ]
@@ -37,13 +37,13 @@
     {
       "tacticType": "Information Warfare",
       "description": "International propaganda campaign",
-      "violenceLevel": "Non-violent",
+      "violenceLevel": "nonViolent",
       "channel": "International media and diplomacy"
     },
     {
       "tacticType": "Parallel Institution Building",
       "description": "Alternative governance in liberated areas",
-      "violenceLevel": "Non-violent",
+      "violenceLevel": "nonViolent",
       "channel": "Community organizations"
     }
   ],
@@ -62,12 +62,12 @@
   ],
   "internationalSupport": [
     {
-      "supportType": "Military",
+      "supportType": "military",
       "source": "Anti-colonial nations",
       "level": "medium"
     },
     {
-      "supportType": "Diplomatic",
+      "supportType": "diplomatic",
       "source": "UN Decolonization Committee",
       "level": "high"
     }

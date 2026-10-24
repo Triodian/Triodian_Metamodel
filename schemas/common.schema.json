@@ -63,6 +63,17 @@
       ],
       "description": "Simple three-point rating, for strength, threat, leverage, uncertainty and similar judgements where a critical level does not apply."
     },
+    "fivePointLevel": {
+      "type": "string",
+      "enum": [
+        "veryLow",
+        "low",
+        "medium",
+        "high",
+        "veryHigh"
+      ],
+      "description": "Five-point rating from very low to very high, for judgements such as flexibility, resilience, visibility or data quality where a critical level does not apply. Risk levels use riskLevel instead."
+    },
     "confidenceLevel": {
       "description": "Confidence in an estimate, assumption or assessment.",
       "allOf": [

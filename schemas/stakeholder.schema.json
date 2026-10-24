@@ -26,35 +26,35 @@
       "type": "string",
       "description": "Position relation to organization",
       "enum": [
-        "Primary Customer",
-        "Secondary Customer",
-        "B2B Customer",
-        "B2C Customer",
-        "B2G Customer",
-        "Internal Customer",
-        "End User",
-        "Regulatory Body",
-        "Government Agency",
-        "Local Authority",
-        "International Body",
-        "Standards Organization",
-        "Strategic Partner",
-        "Supplier/Vendor",
-        "Distributor/Channel Partner",
-        "System Integrator",
-        "Consultant/Advisor",
-        "Financial Institution",
-        "Investor/Shareholder",
-        "Board Member",
-        "Employee/Staff",
-        "Trade Union",
-        "Industry Association",
-        "Community Representative",
-        "Environmental Group",
-        "Media/Press",
-        "Academic Institution",
-        "Competitor",
-        "Other"
+        "primaryCustomer",
+        "secondaryCustomer",
+        "b2bCustomer",
+        "b2cCustomer",
+        "b2gCustomer",
+        "internalCustomer",
+        "endUser",
+        "regulatoryBody",
+        "governmentAgency",
+        "localAuthority",
+        "internationalBody",
+        "standardsOrganization",
+        "strategicPartner",
+        "supplierVendor",
+        "distributorChannelPartner",
+        "systemIntegrator",
+        "consultantAdvisor",
+        "financialInstitution",
+        "investorShareholder",
+        "boardMember",
+        "employeeStaff",
+        "tradeUnion",
+        "industryAssociation",
+        "communityRepresentative",
+        "environmentalGroup",
+        "mediaPress",
+        "academicInstitution",
+        "competitor",
+        "other"
       ]
     },
     "description": {
@@ -81,30 +81,30 @@
       "type": "string",
       "description": "Broad stakeholder classification",
       "enum": [
-        "Internal Stakeholder",
-        "External Stakeholder",
-        "Primary Stakeholder",
-        "Secondary Stakeholder",
-        "Key Stakeholder",
-        "Influential Stakeholder"
+        "internalStakeholder",
+        "externalStakeholder",
+        "primaryStakeholder",
+        "secondaryStakeholder",
+        "keyStakeholder",
+        "influentialStakeholder"
       ]
     },
     "influenceLevel": {
       "type": "string",
       "description": "Degree of influence on organization",
       "enum": [
-        "High Influence",
-        "Medium Influence",
-        "Low Influence"
+        "highInfluence",
+        "mediumInfluence",
+        "lowInfluence"
       ]
     },
     "interestLevel": {
       "type": "string",
       "description": "Level of interest in organization",
       "enum": [
-        "High Interest",
-        "Medium Interest",
-        "Low Interest"
+        "highInterest",
+        "mediumInterest",
+        "lowInterest"
       ]
     },
     "engagementStrategies": {
@@ -125,20 +125,20 @@
       "items": {
         "type": "string",
         "enum": [
-          "Email",
-          "Phone/Call",
-          "Video Conference",
-          "In-Person Meeting",
-          "Digital Platform",
-          "Social Media",
-          "Website",
-          "Newsletter",
-          "Reports",
-          "Surveys",
-          "Workshops",
-          "Conferences",
-          "Mobile App",
-          "Traditional Mail"
+          "email",
+          "phoneCall",
+          "videoConference",
+          "inPersonMeeting",
+          "digitalPlatform",
+          "socialMedia",
+          "website",
+          "newsletter",
+          "reports",
+          "surveys",
+          "workshops",
+          "conferences",
+          "mobileApp",
+          "traditionalMail"
         ]
       }
     },
@@ -182,38 +182,38 @@
       "type": "string",
       "description": "Industry sector of stakeholder",
       "enum": [
-        "Transportation",
-        "Government",
-        "Technology",
-        "Manufacturing",
-        "Financial Services",
-        "Healthcare",
-        "Energy",
-        "Retail",
-        "Education",
-        "Consulting",
-        "Construction",
-        "Agriculture",
-        "Media",
-        "Telecommunications",
-        "Non-Profit",
-        "Other"
+        "transportation",
+        "government",
+        "technology",
+        "manufacturing",
+        "financialServices",
+        "healthcare",
+        "energy",
+        "retail",
+        "education",
+        "consulting",
+        "construction",
+        "agriculture",
+        "media",
+        "telecommunications",
+        "nonProfit",
+        "other"
       ]
     },
     "organizationType": {
       "type": "string",
       "description": "Type of organization stakeholder represents",
       "enum": [
-        "Government Agency",
-        "Private Company",
-        "Public Company",
-        "Non-Profit Organization",
-        "International Organization",
-        "Academic Institution",
-        "Industry Association",
-        "Partnership",
-        "Individual",
-        "Community Group"
+        "governmentAgency",
+        "privateCompany",
+        "publicCompany",
+        "nonProfitOrganization",
+        "internationalOrganization",
+        "academicInstitution",
+        "industryAssociation",
+        "partnership",
+        "individual",
+        "communityGroup"
       ]
     },
     "performanceIndicators": {
@@ -307,12 +307,12 @@
           "type": "string",
           "description": "Type of requirement",
           "enum": [
-            "Functional",
-            "Non-Functional",
-            "Compliance",
-            "Business",
-            "Technical",
-            "User Experience"
+            "functional",
+            "nonFunctional",
+            "compliance",
+            "business",
+            "technical",
+            "userExperience"
           ]
         },
         "acceptanceCriteria": {
@@ -331,12 +331,12 @@
           "type": "string",
           "description": "Regulatory requirement framework",
           "enum": [
-            "ISO Standards",
-            "Government Regulation",
-            "Industry Standard",
-            "Internal Policy",
-            "International Treaty",
-            "Professional Standard"
+            "isoStandards",
+            "governmentRegulation",
+            "industryStandard",
+            "internalPolicy",
+            "internationalTreaty",
+            "professionalStandard"
           ]
         },
         "regulatoryCompliance": {
@@ -368,24 +368,24 @@
     {
       "stakeholderID": "STK-001",
       "title": "Federal Railroad Administration",
-      "tType": "Regulatory Body",
+      "tType": "regulatoryBody",
       "description": "Federal agency responsible for railroad safety regulation and oversight",
       "role": "Establish and enforce railroad safety standards and regulations",
       "orgUnitTitle": "Regulatory Compliance Division",
-      "stakeholderCategory": "External Stakeholder",
-      "influenceLevel": "High Influence",
-      "interestLevel": "High Interest",
+      "stakeholderCategory": "externalStakeholder",
+      "influenceLevel": "highInfluence",
+      "interestLevel": "highInterest",
       "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
       "engagementFrequency": "monthly",
       "communicationChannels": [
-        "Email",
-        "In-Person Meeting",
-        "Reports"
+        "email",
+        "inPersonMeeting",
+        "reports"
       ],
       "expectations": "Full compliance with safety regulations, timely incident reporting",
       "geographicScope": "national",
-      "industry": "Government",
-      "organizationType": "Government Agency",
+      "industry": "government",
+      "organizationType": "governmentAgency",
       "riskCategories": [
         "compliance",
         "reputational"
@@ -399,9 +399,9 @@
           "owner": "Chief Safety Officer",
           "orgUnitTitle": "Safety Compliance Division",
           "priority": "critical",
-          "requirementType": "Compliance",
+          "requirementType": "compliance",
           "acceptanceCriteria": "Reports submitted by 5th of each month with 99.5% data accuracy",
-          "complianceFramework": "Government Regulation",
+          "complianceFramework": "governmentRegulation",
           "regulatoryCompliance": "49 CFR Part 225 - Railroad Accidents/Incidents",
           "riskLevel": "high"
         }
@@ -410,46 +410,46 @@
     {
       "stakeholderID": "STK-002",
       "title": "Railway Technology Solutions Ltd",
-      "tType": "Strategic Partner",
+      "tType": "strategicPartner",
       "description": "Technology company providing AI-powered track monitoring solutions",
       "role": "Develop and maintain predictive maintenance technology systems",
-      "stakeholderCategory": "External Stakeholder",
-      "influenceLevel": "Medium Influence",
-      "interestLevel": "High Interest",
+      "stakeholderCategory": "externalStakeholder",
+      "influenceLevel": "mediumInfluence",
+      "interestLevel": "highInterest",
       "engagementStrategies": "Joint product development, regular technical reviews, innovation workshops",
       "engagementFrequency": "weekly",
       "communicationChannels": [
-        "Video Conference",
-        "Digital Platform",
-        "Workshops"
+        "videoConference",
+        "digitalPlatform",
+        "workshops"
       ],
       "inputs": "Technical expertise, software development, system integration",
       "outputs": "Licensing fees, partnership opportunities, market access",
       "geographicScope": "multinational",
-      "industry": "Technology",
-      "organizationType": "Private Company",
+      "industry": "technology",
+      "organizationType": "privateCompany",
       "strategicAlignment": "Enables digital transformation and predictive maintenance capabilities"
     },
     {
       "stakeholderID": "STK-003",
       "title": "Downtown Residents Association",
-      "tType": "Community Representative",
+      "tType": "communityRepresentative",
       "description": "Local community group representing residents near railway operations",
       "role": "Advocate for community safety and noise reduction concerns",
-      "stakeholderCategory": "External Stakeholder",
-      "influenceLevel": "Low Influence",
-      "interestLevel": "High Interest",
+      "stakeholderCategory": "externalStakeholder",
+      "influenceLevel": "lowInfluence",
+      "interestLevel": "highInterest",
       "engagementStrategies": "Community meetings, public consultations, safety briefings",
       "engagementFrequency": "quarterly",
       "communicationChannels": [
-        "In-Person Meeting",
-        "Newsletter",
-        "Website"
+        "inPersonMeeting",
+        "newsletter",
+        "website"
       ],
       "expectations": "Minimal noise disruption, advance notice of maintenance activities",
       "geographicScope": "local",
-      "industry": "Non-Profit",
-      "organizationType": "Community Group",
+      "industry": "nonProfit",
+      "organizationType": "communityGroup",
       "riskCategories": [
         "reputational",
         "operational"
@@ -460,9 +460,9 @@
           "description": "Maintain railway noise levels within city ordinance limits",
           "purpose": "Ensure community quality of life standards",
           "priority": "medium",
-          "requirementType": "Compliance",
+          "requirementType": "compliance",
           "acceptanceCriteria": "Noise levels below 65dB during nighttime hours",
-          "complianceFramework": "Government Regulation",
+          "complianceFramework": "governmentRegulation",
           "riskLevel": "medium"
         }
       ]

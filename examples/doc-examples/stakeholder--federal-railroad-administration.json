@@ -1,24 +1,24 @@
 {
   "stakeholderID": "STK-001",
   "title": "Federal Railroad Administration",
-  "tType": "Regulatory Body",
+  "tType": "regulatoryBody",
   "description": "Federal agency responsible for railroad safety regulation and oversight",
   "role": "Establish and enforce railroad safety standards and regulations",
   "orgUnitTitle": "Regulatory Compliance Division",
-  "stakeholderCategory": "External Stakeholder",
-  "influenceLevel": "High Influence",
-  "interestLevel": "High Interest",
+  "stakeholderCategory": "externalStakeholder",
+  "influenceLevel": "highInfluence",
+  "interestLevel": "highInterest",
   "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
   "engagementFrequency": "monthly",
   "communicationChannels": [
-    "Email",
-    "In-Person Meeting",
-    "Reports"
+    "email",
+    "inPersonMeeting",
+    "reports"
   ],
   "expectations": "Full compliance with safety regulations, timely incident reporting",
   "geographicScope": "national",
-  "industry": "Government",
-  "organizationType": "Government Agency",
+  "industry": "government",
+  "organizationType": "governmentAgency",
   "riskCategories": [
     "compliance",
     "reputational"

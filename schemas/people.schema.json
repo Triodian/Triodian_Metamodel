@@ -34,8 +34,8 @@
         "operational",
         "creative",
         "analytical",
-        "customer-facing",
-        "cross-functional"
+        "customerFacing",
+        "crossFunctional"
       ]
     },
     "orgUnitTitle": {
@@ -349,13 +349,11 @@
           }
         },
         "alignmentStrength": {
-          "type": "string",
           "description": "Strength of strategic alignment",
-          "enum": [
-            "low",
-            "moderate",
-            "high",
-            "critical"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/ratingLevel"
+            }
           ]
         }
       },
@@ -415,9 +413,9 @@
             "description": "Type of relationship",
             "enum": [
               "enables",
-              "depends on",
+              "dependsOn",
               "complements",
-              "conflicts with",
+              "conflictsWith",
               "precedes",
               "follows",
               "defines",
@@ -510,12 +508,12 @@
             "permanent",
             "contract",
             "temporary",
-            "part-time",
-            "full-time",
+            "partTime",
+            "fullTime",
             "contingent",
             "remote",
             "hybrid",
-            "on-site"
+            "onSite"
           ]
         },
         "workforceSize": {
@@ -577,10 +575,10 @@
               "type": "string",
               "description": "Overall skill level",
               "enum": [
-                "Basic",
-                "Intermediate",
-                "Advanced",
-                "Expert"
+                "basic",
+                "intermediate",
+                "advanced",
+                "expert"
               ]
             }
           },
@@ -883,13 +881,11 @@
                 "description": "Name of the supporting factor"
               },
               "contributionLevel": {
-                "type": "string",
                 "description": "How much this enables progress",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/ratingLevel"
+                  }
                 ]
               }
             },
@@ -1144,13 +1140,11 @@
           "description": "Strategic importance",
           "properties": {
             "criticalityLevel": {
-              "type": "string",
               "description": "How important this knowledge is",
-              "enum": [
-                "low",
-                "moderate",
-                "high",
-                "critical"
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/criticality"
+                }
               ]
             },
             "businessImpact": {
