@@ -279,7 +279,8 @@
               "unit": {
                 "type": "string"
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
       },

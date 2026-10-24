@@ -118,7 +118,8 @@
           "type": "string",
           "description": "Method used to calculate lifetime value"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "performanceIndicators": {
       "type": "array",
@@ -146,7 +147,8 @@
             "type": "string",
             "description": "Unit of measurement"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "dependencies": {
@@ -175,7 +177,8 @@
             "type": "string",
             "description": "Description of the dependency"
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "relatedCustomerSegments": {
@@ -207,7 +210,8 @@
             "minimum": 1,
             "maximum": 5
           }
-        }
+        },
+        "additionalProperties": false
       }
     },
     "improvementOpportunities": {
@@ -244,8 +248,10 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

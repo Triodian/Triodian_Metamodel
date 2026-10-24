@@ -126,7 +126,8 @@
             "type": "string",
             "description": "Strategy for engaging this stakeholder"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Structured list of involved or affected actors"
     },
@@ -176,7 +177,8 @@
             ],
             "description": "Level of violence involved in the tactic"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Advocacy and action tactics used"
     },
@@ -221,7 +223,8 @@
             ],
             "description": "Level of capability utilization"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "List of related capabilities leveraged"
     },
@@ -265,7 +268,15 @@
           ]
         }
       },
-      "description": "Method for evaluating effectiveness"
+      "description": "Method for evaluating effectiveness",
+      "additionalProperties": false
+    },
+    "successMetrics": {
+      "type": "array",
+      "description": "How success will be measured, e.g. policy adoption rates or community engagement levels",
+      "items": {
+        "type": "string"
+      }
     },
     "risks": {
       "type": "array",
@@ -307,7 +318,8 @@
             "type": "string",
             "description": "Strategy for mitigating the risk"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Operational or reputational risks"
     },
@@ -336,7 +348,8 @@
             "type": "string",
             "description": "Source of data for measurement"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "KPIs used to measure campaign success"
     },
@@ -526,7 +539,8 @@
             },
             "description": "Key leadership figures or bodies"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Leadership structure and organization (for revolutionary activities)"
     },
@@ -592,7 +606,8 @@
               }
             ]
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "External backing or opposition (for revolutionary activities)"
     },
@@ -636,7 +651,8 @@
             },
             "description": "Tactics employed by counter-revolutionary forces"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Opposition and resistance to revolutionary change (for revolutionary activities)"
     },
@@ -693,7 +709,8 @@
                   "type": "string",
                   "description": "Channel for the intervention"
                 }
-              }
+              },
+              "additionalProperties": false
             },
             "description": "Interventions deployed during this phase"
           },
@@ -732,7 +749,8 @@
                   "type": "string",
                   "description": "Method for measuring the indicator"
                 }
-              }
+              },
+              "additionalProperties": false
             },
             "description": "Metrics of success at this stage"
           },
@@ -753,11 +771,13 @@
                   "type": "string",
                   "description": "Description of the risk"
                 }
-              }
+              },
+              "additionalProperties": false
             },
             "description": "Stage-specific risks"
           }
-        }
+        },
+        "additionalProperties": false
       },
       "description": "Staged progression of the social change action"
     },
@@ -777,7 +797,8 @@
                 "type": "string",
                 "description": "Name of the owning organization unit"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Organisation unit responsible for coordination"
         },
@@ -794,7 +815,8 @@
                 "type": "string",
                 "description": "Name of the capability"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Capabilities activated or strengthened by campaign"
         },
@@ -820,7 +842,8 @@
                 ],
                 "description": "Type of impact on the value stream"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Value streams disrupted or supported"
         },
@@ -847,7 +870,8 @@
                 ],
                 "description": "Relationship type with the stakeholder"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Groups participating in or targeted by action"
         },
@@ -864,7 +888,8 @@
                 "type": "string",
                 "description": "Name of the policy"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Laws or regulations being influenced"
         },
@@ -881,7 +906,8 @@
                 "type": "string",
                 "description": "Name of the strategic goal"
               }
-            }
+            },
+            "additionalProperties": false
           },
           "description": "Higher-level goals this contributes to"
         },
@@ -897,10 +923,12 @@
               "description": "Name of the parent initiative"
             }
           },
-          "description": "Parent initiative or funding body"
+          "description": "Parent initiative or funding body",
+          "additionalProperties": false
         }
       },
-      "description": "Relationships to other domains in the Triodian Metamodel"
+      "description": "Relationships to other domains in the Triodian Metamodel",
+      "additionalProperties": false
     },
     "metadata": {
       "type": "object",
@@ -954,7 +982,9 @@
           "description": "Level of confidentiality for this record"
         }
       },
-      "description": "Metadata about the social change record"
+      "description": "Metadata about the social change record",
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

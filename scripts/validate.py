@@ -5,7 +5,8 @@ Checks, in order:
   1. Every file under schemas/ is well-formed JSON.
   2. Every schema declares a supported $schema and is valid against that meta-schema.
   3. No non-standard structural keywords ("attributes"/"elements" used in place of
-     "properties"/"definitions", or OpenAPI-style "nullable").
+     "properties"/"definitions", or OpenAPI-style "nullable"), and every object that
+     defines properties rejects fields it does not define (additionalProperties: false).
   4. Every $ref resolves, whether local (#/...) or to another schema file.
   5. Every record type requires an identifier (a property named "<entity>ID" or "id").
   6. Every example embedded in a schema's top-level "examples" validates against that schema.
@@ -104,7 +105,7 @@ def check_meta(docs: dict[Path, dict]) -> None:
 
 
 def check_keywords(docs: dict[Path, dict]) -> None:
-    print("3. No non-standard structural keywords")
+    print("3. No non-standard keywords, and objects reject undefined fields")
     for f, d in docs.items():
         for path, node in walk(d):
             # Skip the contents of property maps, where any key is a legitimate field name.
@@ -116,6 +117,10 @@ def check_keywords(docs: dict[Path, dict]) -> None:
                 continue
             for kw in NON_STANDARD & node.keys():
                 fail(f"{rel(f)}: /{'/'.join(map(str, path))}: non-standard keyword {kw!r}")
+            if isinstance(node.get("properties"), dict) and "additionalProperties" not in node \
+                    and "patternProperties" not in node:
+                fail(f"{rel(f)}: /{'/'.join(map(str, path))}: accepts undefined fields "
+                     "(add \"additionalProperties\": false)")
 
 
 def is_identifier(name: str) -> bool:

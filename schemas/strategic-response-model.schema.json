@@ -197,7 +197,8 @@
             "required": [
               "orgUnitTitle",
               "relationshipRole"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Organization units impacted by this response and their roles"
         },
@@ -307,7 +308,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific customer outcomes resulting from this response (Customer domain)"
         },
@@ -331,7 +333,8 @@
             },
             "required": [
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific changes to customer experience (Customer domain)"
         },
@@ -381,7 +384,8 @@
               "description": "Expected duration of advantage"
             }
           },
-          "description": "Competitive advantage created or enhanced (Market domain)"
+          "description": "Competitive advantage created or enhanced (Market domain)",
+          "additionalProperties": false
         },
         "marketPositionChanges": {
           "type": "array",
@@ -399,7 +403,8 @@
             },
             "required": [
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific changes to market position (Market domain)"
         },
@@ -418,7 +423,8 @@
               "description": "Key indicators being monitored"
             }
           },
-          "description": "How competitive reactions will be monitored (Market domain)"
+          "description": "How competitive reactions will be monitored (Market domain)",
+          "additionalProperties": false
         },
         "financeIDs": {
           "type": "array",
@@ -447,7 +453,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific financial outcomes resulting from this response (Finance domain)"
         },
@@ -483,12 +490,14 @@
                 },
                 "required": [
                   "sourceName"
-                ]
+                ],
+                "additionalProperties": false
               },
               "description": "Sources of funding for this response"
             }
           },
-          "description": "Resources required for this response (Finance domain)"
+          "description": "Resources required for this response (Finance domain)",
+          "additionalProperties": false
         },
         "financialRiskAssessment": {
           "type": "array",
@@ -514,7 +523,8 @@
             },
             "required": [
               "riskDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Assessment of financial risks (Finance domain)"
         },
@@ -564,7 +574,8 @@
             "required": [
               "controlName",
               "controlDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Risk controls implemented by this response (Risk Management domain)"
         },
@@ -591,7 +602,8 @@
             },
             "required": [
               "monitoringMethod"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Ongoing risk monitoring approaches (Risk Management domain)"
         },
@@ -626,7 +638,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific supply chain outcomes resulting from this response (Supply Chain domain)"
         },
@@ -658,7 +671,8 @@
             },
             "required": [
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific changes to supply chain configuration (Supply Chain domain)"
         },
@@ -694,7 +708,8 @@
             },
             "required": [
               "riskDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Risks related to the supply chain response (Supply Chain domain)"
         },
@@ -729,12 +744,14 @@
                 "required": [
                   "stakeholderName",
                   "stakeholderType"
-                ]
+                ],
+                "additionalProperties": false
               },
               "description": "Key stakeholders for this response"
             }
           },
-          "description": "Approach to engaging key stakeholders (Supply Chain domain)"
+          "description": "Approach to engaging key stakeholders (Supply Chain domain)",
+          "additionalProperties": false
         },
         "innovationIDs": {
           "type": "array",
@@ -763,7 +780,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific innovation outcomes resulting from this response (Innovation domain)"
         },
@@ -788,7 +806,8 @@
             "required": [
               "capabilityArea",
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Changes to innovation capabilities (Innovation domain)"
         },
@@ -811,7 +830,8 @@
               "description": "How feedback is collected and processed"
             }
           },
-          "description": "How concepts will be tested (Innovation domain)"
+          "description": "How concepts will be tested (Innovation domain)",
+          "additionalProperties": false
         },
         "portfolioImpact": {
           "type": "object",
@@ -825,7 +845,8 @@
               "description": "How resources will be reallocated"
             }
           },
-          "description": "How innovation portfolio is affected (Innovation domain)"
+          "description": "How innovation portfolio is affected (Innovation domain)",
+          "additionalProperties": false
         },
         "sustainabilityIDs": {
           "type": "array",
@@ -858,7 +879,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific environmental outcomes from this response (Sustainability domain)"
         },
@@ -882,7 +904,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific social outcomes from this response (Sustainability domain)"
         },
@@ -907,7 +930,8 @@
             "required": [
               "stakeholderGroup",
               "expectationDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Stakeholder expectations being addressed (Sustainability domain)"
         },
@@ -927,7 +951,8 @@
             },
             "required": [
               "regulationName"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Sustainability compliance requirements addressed (Sustainability domain)"
         },
@@ -956,7 +981,8 @@
               "description": "Adaptation measures included"
             }
           },
-          "description": "Climate scenarios factored into response (Sustainability domain)"
+          "description": "Climate scenarios factored into response (Sustainability domain)",
+          "additionalProperties": false
         },
         "peopleIDs": {
           "type": "array",
@@ -990,7 +1016,8 @@
             "required": [
               "changeArea",
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific workforce changes implemented (People domain)"
         },
@@ -1016,7 +1043,8 @@
               "description": "How cultural change will be measured"
             }
           },
-          "description": "Cultural development initiatives (People domain)"
+          "description": "Cultural development initiatives (People domain)",
+          "additionalProperties": false
         },
         "talentDevelopmentApproach": {
           "type": "object",
@@ -1037,7 +1065,8 @@
               "description": "How development will be evaluated"
             }
           },
-          "description": "Approach to talent development (People domain)"
+          "description": "Approach to talent development (People domain)",
+          "additionalProperties": false
         },
         "knowledgeManagementStrategy": {
           "type": "object",
@@ -1061,7 +1090,8 @@
               "description": "How knowledge will be transferred"
             }
           },
-          "description": "Strategy for managing knowledge (People domain)"
+          "description": "Strategy for managing knowledge (People domain)",
+          "additionalProperties": false
         },
         "competencyFrameworkUpdates": {
           "type": "array",
@@ -1084,7 +1114,8 @@
             "required": [
               "frameworkID",
               "updateDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Updates to competency frameworks (People domain)"
         },
@@ -1120,7 +1151,8 @@
             "required": [
               "architectureLayer",
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific architecture changes implemented (Technology domain)"
         },
@@ -1143,7 +1175,8 @@
               "description": "Expected improvement in technical debt"
             }
           },
-          "description": "Impact on technical debt (Technology domain)"
+          "description": "Impact on technical debt (Technology domain)",
+          "additionalProperties": false
         },
         "securityEnhancements": {
           "type": "array",
@@ -1166,7 +1199,8 @@
             "required": [
               "securityDomain",
               "enhancementDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Security improvements implemented (Technology domain)"
         },
@@ -1189,7 +1223,8 @@
               "description": "How integration will be governed"
             }
           },
-          "description": "Integration approaches implemented (Technology domain)"
+          "description": "Integration approaches implemented (Technology domain)",
+          "additionalProperties": false
         },
         "technologyStandardsChanges": {
           "type": "array",
@@ -1212,7 +1247,8 @@
             "required": [
               "standardID",
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Changes to technology standards (Technology domain)"
         },
@@ -1243,7 +1279,8 @@
             },
             "required": [
               "outcomeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific channel outcomes (Channel domain)"
         },
@@ -1272,7 +1309,8 @@
             "required": [
               "changeType",
               "changeDescription"
-            ]
+            ],
+            "additionalProperties": false
           },
           "description": "Specific changes to channel configuration (Channel domain)"
         },
@@ -1302,7 +1340,8 @@
               "description": "How partners will be incentivized"
             }
           },
-          "description": "Approach to engaging channel partners (Channel domain)"
+          "description": "Approach to engaging channel partners (Channel domain)",
+          "additionalProperties": false
         },
         "omniChannelIntegration": {
           "type": "object",
@@ -1323,7 +1362,8 @@
               "description": "How data will be unified across channels"
             }
           },
-          "description": "Omnichannel integration approach (Channel domain)"
+          "description": "Omnichannel integration approach (Channel domain)",
+          "additionalProperties": false
         },
         "distributionNetworkOptimization": {
           "type": "object",
@@ -1347,7 +1387,8 @@
               "description": "Approach to network modeling"
             }
           },
-          "description": "Distribution network optimization (Channel domain)"
+          "description": "Distribution network optimization (Channel domain)",
+          "additionalProperties": false
         }
       },
       "required": [
@@ -1357,7 +1398,8 @@
         "responseDescription",
         "affectedDomains",
         "status"
-      ]
+      ],
+      "additionalProperties": false
     },
     "strategicIntent": {
       "type": "object",
@@ -1490,7 +1532,8 @@
         "description",
         "strategicObjectiveReference",
         "opportunityType"
-      ]
+      ],
+      "additionalProperties": false
     }
   },
   "oneOf": [

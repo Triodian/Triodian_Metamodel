@@ -69,5 +69,6 @@
     "domainEntityId",
     "relationshipType",
     "organisationUnitId"
-  ]
+  ],
+  "additionalProperties": false
 }

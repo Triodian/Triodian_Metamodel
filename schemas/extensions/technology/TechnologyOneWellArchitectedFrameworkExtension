@@ -25,7 +25,11 @@
               "description": "A high-level description of the framework's purpose."
             }
           },
-          "required": ["name", "description"]
+          "required": [
+            "name",
+            "description"
+          ],
+          "additionalProperties": false
         },
         "corePrinciples": {
           "type": "array",
@@ -55,7 +59,11 @@
                 "description": "Specific guidelines or best practices associated with this principle."
               }
             },
-            "required": ["principleName", "description"]
+            "required": [
+              "principleName",
+              "description"
+            ],
+            "additionalProperties": false
           }
         },
         "architecturalPillars": {
@@ -87,7 +95,11 @@
                 "description": "Recommended best practices for implementing this pillar."
               }
             },
-            "required": ["pillarName", "description"]
+            "required": [
+              "pillarName",
+              "description"
+            ],
+            "additionalProperties": false
           }
         },
         "architecturalComponents": {
@@ -125,7 +137,11 @@
                 "description": "Common ways this component interacts with others (e.g., REST APIs, Business Events, Data Export, Authenticated Requests)."
               }
             },
-            "required": ["componentType", "genericDescription"]
+            "required": [
+              "componentType",
+              "genericDescription"
+            ],
+            "additionalProperties": false
           }
         },
         "implementationMethodology": {
@@ -146,7 +162,8 @@
               },
               "description": "Critical activities within the methodology."
             }
-          }
+          },
+          "additionalProperties": false
         },
         "governanceModel": {
           "type": "object",
@@ -160,7 +177,8 @@
               "type": "string",
               "description": "How architectural adherence and quality are reviewed."
             }
-          }
+          },
+          "additionalProperties": false
         },
         "kpis": {
           "type": "array",
@@ -180,10 +198,15 @@
                 "type": "string"
               }
             },
-            "required": ["kpiName"]
+            "required": [
+              "kpiName"
+            ],
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

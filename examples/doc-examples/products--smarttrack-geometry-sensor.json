@@ -4,24 +4,24 @@
   "description": "Advanced IoT sensor for continuous track geometry monitoring with realtime data transmission",
   "purpose": "Enable continuous track monitoring and predictive maintenance capabilities",
   "owner": "Hardware Engineering Team",
-  "productCategory": "Physical Product",
-  "productType": "Hardware",
-  "targetMarket": "B2B",
-  "businessModel": "One-time Purchase",
-  "lifecycleStage": "Development",
+  "productCategory": "physicalProduct",
+  "productType": "hardware",
+  "targetMarket": "b2b",
+  "businessModel": "oneTimePurchase",
+  "lifecycleStage": "development",
   "customerSegments": [
     "Railway Operators",
     "Infrastructure Managers"
   ],
   "channels": [
-    "Direct Sales",
-    "Partner Channel"
+    "directSales",
+    "partnerChannel"
   ],
-  "pricingStrategy": "Value Based",
+  "pricingStrategy": "valueBased",
   "valueProposition": "24/7 monitoring reduces unplanned maintenance by 50%",
   "riskCategories": [
-    "Technical",
-    "Market",
-    "Quality"
+    "technology",
+    "market",
+    "quality"
   ]
 }

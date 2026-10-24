@@ -94,7 +94,8 @@
             "type": "string"
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "regulatoryRequirements": {
       "type": "array",
@@ -136,14 +137,16 @@
                 "type": "string",
                 "description": "Time period for the measurement"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "performanceAssessment": {
           "type": "string",
           "description": "Overall assessment of current performance"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "targetPerformance": {
       "type": "object",
@@ -171,10 +174,12 @@
                 "type": "string",
                 "description": "Standard or framework aligned with this target"
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "strategicAlignment": {
       "type": "object",
@@ -206,7 +211,8 @@
           "type": "string",
           "description": "Description of how this element aligns with strategy"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "investmentLevel": {
       "type": "object",
@@ -231,7 +237,8 @@
           "type": "string",
           "description": "Expected return on investment"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "stakeholderInterest": {
       "type": "object",
@@ -258,7 +265,8 @@
           "type": "string",
           "description": "Approach to stakeholder engagement"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "reportingFramework": {
       "type": "object",
@@ -279,7 +287,8 @@
           "type": "boolean",
           "description": "Whether reporting is publicly disclosed"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "verificationApproach": {
       "type": "object",
@@ -307,7 +316,8 @@
           "type": "string",
           "description": "Scope of verification"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "improvementStrategy": {
       "type": "object",
@@ -335,7 +345,8 @@
           "type": "string",
           "description": "Process for reviewing improvements"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "riskImplications": {
       "type": "object",
@@ -367,7 +378,8 @@
           "type": "string",
           "description": "How often risks are assessed"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "dependencies": {
       "type": "array",
@@ -411,7 +423,8 @@
           "dependencyType",
           "domainType",
           "description"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "relatedSustainabilityElements": {
@@ -451,7 +464,8 @@
           "elementID",
           "relationshipType",
           "relationshipStrength"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "governanceModel": {
@@ -474,7 +488,8 @@
           "type": "string",
           "description": "Path for issue escalation"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "implementationStatus": {
       "description": "Current status of implementation",
@@ -519,7 +534,8 @@
             "type": "string",
             "description": "Narrative explaining the nature of the relationship"
           }
-        }
+        },
+        "additionalProperties": false
       }
     }
   },
@@ -623,7 +639,8 @@
                 "third-party-verified"
               ]
             }
-          }
+          },
+          "additionalProperties": false
         },
         "currentFootprint": {
           "type": "object",
@@ -662,7 +679,8 @@
                       "type": "string"
                     }
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "baselineComparison": {
@@ -681,9 +699,11 @@
                   "type": "string",
                   "description": "Absolute change from baseline"
                 }
-              }
+              },
+              "additionalProperties": false
             }
-          }
+          },
+          "additionalProperties": false
         },
         "targetFootprint": {
           "type": "object",
@@ -723,10 +743,12 @@
                     "type": "string",
                     "description": "Interim absolute target"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "reductionStrategy": {
           "type": "object",
@@ -774,10 +796,12 @@
                       }
                     ]
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "regulatoryRequirements": {
           "type": "object",
@@ -809,7 +833,8 @@
                     "type": "string",
                     "description": "Description of requirement"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "emergingRegulations": {
@@ -846,10 +871,12 @@
                       "prepared"
                     ]
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "industryBenchmarks": {
           "type": "object",
@@ -871,7 +898,8 @@
               "type": "string",
               "description": "Detailed comparison with peers"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "mitigationInitiatives": {
           "type": "array",
@@ -911,7 +939,8 @@
                 "minimum": 1,
                 "maximum": 5
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "reportingProtocol": {
@@ -942,7 +971,8 @@
                 "type": "string"
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "verificationStandard": {
           "type": "object",
@@ -975,9 +1005,127 @@
               "format": "date",
               "description": "Date of last verification"
             }
+          },
+          "additionalProperties": false
+        },
+        "orgUnitRoles": {
+          "type": "array",
+          "description": "Roles within the organization unit that manage this impact",
+          "items": {
+            "type": "string"
           }
+        },
+        "strategicAlignment": {
+          "type": "object",
+          "description": "Alignment with business strategy",
+          "properties": {
+            "alignmentDescription": {
+              "type": "string",
+              "description": "How the impact relates to strategy"
+            },
+            "strategicObjectives": {
+              "type": "array",
+              "description": "Strategic objectives the impact relates to",
+              "items": {
+                "type": "string"
+              }
+            },
+            "alignmentStrength": {
+              "description": "Strength of alignment",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/alignmentLevel"
+                }
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        "riskImplications": {
+          "type": "object",
+          "description": "Risks associated with this impact",
+          "properties": {
+            "primaryRisks": {
+              "type": "array",
+              "description": "Primary risks",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "riskType": {
+                    "type": "string",
+                    "description": "Kind of risk",
+                    "examples": [
+                      "transition",
+                      "physical",
+                      "reputation"
+                    ]
+                  },
+                  "riskDescription": {
+                    "type": "string",
+                    "description": "Description of the risk"
+                  },
+                  "potentialImpact": {
+                    "description": "Potential impact",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/ratingLevel"
+                      }
+                    ]
+                  },
+                  "mitigationApproach": {
+                    "type": "string",
+                    "description": "How the risk is mitigated"
+                  }
+                },
+                "required": [
+                  "riskType"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "secondaryRisks": {
+              "type": "array",
+              "description": "Secondary risks",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "riskType": {
+                    "type": "string",
+                    "description": "Kind of risk",
+                    "examples": [
+                      "transition",
+                      "physical",
+                      "reputation"
+                    ]
+                  },
+                  "riskDescription": {
+                    "type": "string",
+                    "description": "Description of the risk"
+                  },
+                  "potentialImpact": {
+                    "description": "Potential impact",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/ratingLevel"
+                      }
+                    ]
+                  },
+                  "mitigationApproach": {
+                    "type": "string",
+                    "description": "How the risk is mitigated"
+                  }
+                },
+                "required": [
+                  "riskType"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     },
     "socialResponsibility": {
       "type": "object",
@@ -1061,7 +1209,8 @@
               "type": "string",
               "description": "Description of business impact"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "currentPerformance": {
           "type": "object",
@@ -1091,14 +1240,16 @@
                       "mixed"
                     ]
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "qualitativeAssessment": {
               "type": "string",
               "description": "Qualitative assessment of current state"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "performanceTargets": {
           "type": "object",
@@ -1126,10 +1277,12 @@
                     "type": "string",
                     "description": "Framework aligned with target"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "implementationApproach": {
           "type": "object",
@@ -1170,10 +1323,12 @@
                       "on hold"
                     ]
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "resourceCommitment": {
           "type": "object",
@@ -1195,7 +1350,8 @@
               "type": "string",
               "description": "Timeframe for investment"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "partnershipModel": {
           "type": "object",
@@ -1216,7 +1372,8 @@
               "type": "string",
               "description": "Scope of partnerships"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "successMetrics": {
           "type": "object",
@@ -1237,7 +1394,8 @@
               "type": "string",
               "description": "Methodology for evaluation"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "reportingFramework": {
           "type": "object",
@@ -1258,7 +1416,8 @@
               "type": "boolean",
               "description": "Whether reporting is public"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "governanceModel": {
           "type": "object",
@@ -1280,9 +1439,11 @@
               "type": "string",
               "description": "Process for issue escalation"
             }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     },
     "governancePractice": {
       "type": "object",
@@ -1390,7 +1551,8 @@
               "type": "string",
               "description": "Scope of verification"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "responsibleParties": {
           "type": "object",
@@ -1415,7 +1577,8 @@
                 "type": "string"
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "performanceMetrics": {
           "type": "object",
@@ -1443,10 +1606,12 @@
                     "type": "string",
                     "description": "How often metric is evaluated"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "stakeholderEngagement": {
           "type": "object",
@@ -1470,7 +1635,8 @@
               "type": "string",
               "description": "How often engagement occurs"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "transparencyMechanisms": {
           "type": "object",
@@ -1497,7 +1663,8 @@
                 "internal-only"
               ]
             }
-          }
+          },
+          "additionalProperties": false
         },
         "reviewProcess": {
           "type": "object",
@@ -1519,7 +1686,8 @@
               "type": "string",
               "description": "Process for implementing improvements"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "improvementInitiatives": {
           "type": "object",
@@ -1551,12 +1719,15 @@
                     "type": "string",
                     "description": "Timeframe for implementation"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     },
     "sustainabilityStrategy": {
       "type": "object",
@@ -1631,7 +1802,8 @@
               "type": "string",
               "description": "Summary of business case"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "stakeholderAlignment": {
           "type": "object",
@@ -1652,7 +1824,8 @@
               "type": "string",
               "description": "Approach to stakeholder engagement"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "timeHorizon": {
           "type": "object",
@@ -1688,10 +1861,12 @@
                     "type": "string",
                     "description": "Description of milestone"
                   }
-                }
+                },
+                "additionalProperties": false
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "resourceRequirements": {
           "type": "object",
@@ -1716,7 +1891,8 @@
                 "type": "string"
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "implementationRoadmap": {
           "type": "object",
@@ -1750,14 +1926,16 @@
                       "type": "string"
                     }
                   }
-                }
+                },
+                "additionalProperties": false
               }
             },
             "implementationApproach": {
               "type": "string",
               "description": "Overall implementation approach"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "governanceStructure": {
           "type": "object",
@@ -1779,7 +1957,8 @@
               "type": "string",
               "description": "Strategy review process"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "performanceIndicators": {
           "type": "object",
@@ -1800,7 +1979,8 @@
               "type": "string",
               "description": "How often performance is evaluated"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "communicationApproach": {
           "type": "object",
@@ -1828,7 +2008,8 @@
                 "type": "string"
               }
             }
-          }
+          },
+          "additionalProperties": false
         },
         "integrationWithBusinessStrategy": {
           "type": "object",
@@ -1855,7 +2036,8 @@
               "type": "string",
               "description": "Approach to integration"
             }
-          }
+          },
+          "additionalProperties": false
         },
         "riskMitigationApproach": {
           "type": "object",
@@ -1879,9 +2061,12 @@
               "type": "string",
               "description": "Responsibility for risk oversight"
             }
-          }
+          },
+          "additionalProperties": false
         }
-      }
+      },
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }
