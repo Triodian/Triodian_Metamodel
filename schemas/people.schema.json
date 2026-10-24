@@ -1069,8 +1069,12 @@
           "description": "Update process",
           "properties": {
             "reviewFrequency": {
-              "type": "string",
-              "description": "How often the framework is reviewed"
+              "description": "How often the framework is reviewed",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "lastReviewDate": {
               "type": "string",

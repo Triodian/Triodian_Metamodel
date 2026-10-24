@@ -36,12 +36,20 @@
       "description": "Whether the trigger originates from inside or outside the organisation"
     },
     "timeHorizon": {
-      "type": "string",
-      "description": "The temporal nature of the trigger"
+      "description": "The temporal nature of the trigger",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/timeHorizon"
+        }
+      ]
     },
     "impactLevel": {
-      "type": "string",
-      "description": "The potential significance of the trigger"
+      "description": "The potential significance of the trigger",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/ratingLevel"
+        }
+      ]
     },
     "status": {
       "type": "string",
@@ -132,8 +140,12 @@
           "description": "Nature of financial impact"
         },
         "confidenceLevel": {
-          "type": "string",
-          "description": "Confidence in financial impact estimate"
+          "description": "Confidence in financial impact estimate",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/confidenceLevel"
+            }
+          ]
         },
         "impactTimeframe": {
           "type": "string",

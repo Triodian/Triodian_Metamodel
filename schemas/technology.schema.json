@@ -370,8 +370,12 @@
           }
         },
         "complianceStatus": {
-          "type": "string",
-          "description": "Current compliance status"
+          "description": "Current compliance status",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/complianceStatus"
+            }
+          ]
         },
         "securityAssessments": {
           "type": "string",

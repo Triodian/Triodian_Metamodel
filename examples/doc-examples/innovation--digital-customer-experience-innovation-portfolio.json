@@ -80,7 +80,7 @@
       },
       {
         "factorName": "Customer privacy concerns",
-        "riskLevel": "moderate",
+        "riskLevel": "medium",
         "mitigationApproach": "Privacy by design principles, transparent data usage"
       }
     ],

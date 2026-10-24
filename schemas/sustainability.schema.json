@@ -277,8 +277,12 @@
           }
         },
         "reportingFrequency": {
-          "type": "string",
-          "description": "How often reporting occurs"
+          "description": "How often reporting occurs",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
+          ]
         },
         "publicDisclosure": {
           "type": "boolean",
@@ -594,8 +598,12 @@
               "description": "Units used for measurement"
             },
             "measurementFrequency": {
-              "type": "string",
-              "description": "How often measurement occurs"
+              "description": "How often measurement occurs",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "dataQuality": {
               "description": "Quality of measurement data",
@@ -932,8 +940,12 @@
               "description": "Name of reporting framework"
             },
             "reportingFrequency": {
-              "type": "string",
-              "description": "How often reporting occurs"
+              "description": "How often reporting occurs",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "publicDisclosure": {
               "type": "string",
@@ -1399,8 +1411,12 @@
               }
             },
             "reportingFrequency": {
-              "type": "string",
-              "description": "How often reporting occurs"
+              "description": "How often reporting occurs",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "publicDisclosure": {
               "type": "boolean",
@@ -1418,8 +1434,12 @@
               "description": "Governing committee or body"
             },
             "reviewFrequency": {
-              "type": "string",
-              "description": "How often governance reviews occur"
+              "description": "How often governance reviews occur",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "decisionRights": {
               "type": "string",
@@ -1530,8 +1550,12 @@
               "description": "Name of verification method"
             },
             "frequency": {
-              "type": "string",
-              "description": "Frequency of verification"
+              "description": "Frequency of verification",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "verifier": {
               "type": "string",
@@ -1622,8 +1646,12 @@
               }
             },
             "engagementFrequency": {
-              "type": "string",
-              "description": "How often engagement occurs"
+              "description": "How often engagement occurs",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             }
           },
           "additionalProperties": false

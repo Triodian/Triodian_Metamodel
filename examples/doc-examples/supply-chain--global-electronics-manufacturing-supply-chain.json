@@ -273,13 +273,13 @@
   },
   "dependencies": [
     {
-      "dependencyType": "Critical",
+      "dependencyType": "critical",
       "domainType": "capability",
       "entityID": "CAP-SC-003",
       "description": "Advanced procurement capability"
     },
     {
-      "dependencyType": "Important",
+      "dependencyType": "important",
       "domainType": "technology",
       "entityID": "TECH-007",
       "description": "Supply chain planning and control tower systems"

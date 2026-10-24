@@ -751,8 +751,12 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
-            "description": "Type of dependency"
+            "description": "Type of dependency",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
             "description": "Type of domain this depends on",
@@ -2184,8 +2188,12 @@
                 "description": "Typical transit time"
               },
               "frequency": {
-                "type": "string",
-                "description": "Frequency of shipments"
+                "description": "Frequency of shipments",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/frequency"
+                  }
+                ]
               },
               "carrierName": {
                 "type": "string",
@@ -2903,8 +2911,12 @@
               "description": "Detailed explanation of policy"
             },
             "reviewFrequency": {
-              "type": "string",
-              "description": "How often inventory is reviewed"
+              "description": "How often inventory is reviewed",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/frequency"
+                }
+              ]
             },
             "orderingRules": {
               "type": "string",
