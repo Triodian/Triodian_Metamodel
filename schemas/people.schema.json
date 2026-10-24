@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/people.schema.json",
   "title": "People Domain Schema",
   "description": "Comprehensive schema for the People domain in the Triodian Metamodel, focusing on workforce capabilities, organizational culture, leadership approaches, and knowledge management practices",
   "type": "object",
@@ -1051,7 +1052,8 @@
             },
             "lastReviewDate": {
               "type": "string",
-              "description": "Date of last review"
+              "description": "Date of last review",
+              "format": "date"
             }
           },
           "additionalProperties": false

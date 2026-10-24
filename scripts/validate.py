@@ -11,17 +11,21 @@ Checks, in order:
      is the domain's main record (no wrapper properties, no oneOf); element types are named
      under "definitions"; definition and property names are camelCase; passive domains
      (as listed in cross-domain-relationship.schema.json) do not initiate relationships.
+     Each file is kebab-case and ends ".schema.json", its $id is its location under
+     https://triodian.com/schemas/, it has a title, and every property has a description.
   5. Every $ref resolves, whether local (#/...) or to another schema file.
   6. Every record type requires an identifier (a property named "<entity>ID" or "id").
   7. Every example embedded in a schema's top-level "examples" validates against that schema.
-  8. (--doc-examples) Every worked example from the documentation, listed in
+  8. Every interoperability mapping (interoperability/*.jsonld) is valid JSON-LD, and every
+     Triodian term it maps is a property, element type or domain defined in the schemas.
+  9. (--doc-examples) Every worked example from the documentation, listed in
      examples/doc-examples/manifest.json, validates against its schema.
 
 Exit status is non-zero if any check that was run fails.
 
 Usage:
-  python scripts/validate.py                 # checks 1-7
-  python scripts/validate.py --doc-examples  # checks 1-8
+  python scripts/validate.py                 # checks 1-8
+  python scripts/validate.py --doc-examples  # checks 1-9
   python scripts/validate.py --only-doc-examples
 """
 from __future__ import annotations
@@ -40,6 +44,9 @@ from referencing.exceptions import Unresolvable
 ROOT = Path(__file__).resolve().parent.parent
 SCHEMA_DIR = ROOT / "schemas"
 DOC_EXAMPLES = ROOT / "examples" / "doc-examples"
+INTEROP = ROOT / "interoperability"
+TRIODIAN_NS = "https://triodian.com/ontology#"
+FILE_NAME = re.compile(r"([a-z0-9]+(-[a-z0-9]+)*/)*[a-z0-9]+(-[a-z0-9]+)*\.schema\.json")
 BASE_URI = "https://triodian.com/schemas/"
 
 DRAFT = "http://json-schema.org/draft-07/schema#"
@@ -60,9 +67,9 @@ NOT_RECORDS = {
     # composites that group records defined in other schemas
     "external-organizations-composite.schema.json",
     "strategic-response-model.schema.json",
-    "extensions/business-analysis.json",
+    "extensions/business-analysis.schema.json",
     # extension describing an aspect of a Technology record
-    "extensions/technology/TechnologyOneWellArchitectedFrameworkExtension",
+    "extensions/technology-one-well-architected-framework.schema.json",
 }
 
 failures: list[str] = []
@@ -156,6 +163,13 @@ def record_schemas(f: Path, d: dict):
 def check_structure(docs: dict[Path, dict]) -> None:
     print("4. Every schema has the same structure")
     for f, d in docs.items():
+        name = f.relative_to(SCHEMA_DIR).as_posix()
+        if not FILE_NAME.fullmatch(name):
+            fail(f"{rel(f)}: file names are kebab-case and end in .schema.json")
+        if d.get("$id") != BASE_URI + name:
+            fail(f"{rel(f)}: $id is {d.get('$id')!r}; expected {BASE_URI + name!r}")
+        if not d.get("title"):
+            fail(f"{rel(f)}: missing title")
         if d.get("$schema") != DRAFT:
             fail(f"{rel(f)}: uses {d.get('$schema')!r}; all schemas use {DRAFT}")
         for path, node in walk(d):
@@ -165,9 +179,12 @@ def check_structure(docs: dict[Path, dict]) -> None:
             if "$defs" in node and not (path and path[-1] == "properties"):
                 fail(f"{rel(f)}: {here}: use \"definitions\", not \"$defs\"")
             if path and path[-1] == "properties" and isinstance(node, dict):
-                for k in node:
+                conditional = any(p in ("if", "then", "else", "not") for p in path)
+                for k, v in node.items():
                     if not CAMEL.fullmatch(k):
                         fail(f"{rel(f)}: {here}: property name {k!r} is not camelCase")
+                    if not conditional and isinstance(v, dict) and "description" not in v and "$ref" not in v:
+                        fail(f"{rel(f)}: {here}/{k}: missing description")
         for k in d.get("definitions", {}):
             if not CAMEL.fullmatch(k):
                 fail(f"{rel(f)}: definition name {k!r} is not camelCase")
@@ -205,6 +222,50 @@ def check_identifiers(docs: dict[Path, dict]) -> None:
                 own = [k for k in schema.get("properties", {}) if is_identifier(k)]
                 hint = f" ({own[0]} exists but is not required)" if own else ""
                 fail(f"{label}: no required identifier{hint}")
+
+
+def schema_vocabulary(docs: dict[Path, dict]) -> set[str]:
+    """Property names, element-type (definition) names and domain values defined in the schemas."""
+    names: set[str] = set()
+    for d in docs.values():
+        names.update(d.get("definitions", {}))
+        for path, node in walk(d):
+            if "examples" not in path and isinstance(node.get("properties"), dict):
+                names.update(node["properties"])
+    common = next((d for f, d in docs.items() if f.name == "common.schema.json"), {})
+    names.update(common.get("definitions", {}).get("domainType", {}).get("enum", []))
+    return names
+
+
+def check_interoperability(docs: dict[Path, dict]) -> None:
+    print("8. Interoperability mappings are valid JSON-LD and map defined terms")
+    try:
+        from pyld import jsonld
+    except ImportError:
+        fail("pyld is not installed (pip install -r scripts/requirements.txt)")
+        return
+    known = schema_vocabulary(docs)
+    no_remote = lambda url, options=None: (_ for _ in ()).throw(ValueError(f"remote context {url} not allowed"))
+    for f in sorted(INTEROP.glob("*.jsonld")):
+        doc = json.loads(f.read_text(encoding="utf-8"))
+        try:
+            expanded = jsonld.expand(doc, {"documentLoader": no_remote})
+        except Exception as e:  # pyld raises JsonLdError with nested details
+            fail(f"{rel(f)}: not valid JSON-LD: {str(e).splitlines()[0][:160]}")
+            continue
+        ctx = doc.get("@context", {})
+        terms = set()
+        if ctx.get("@vocab") == TRIODIAN_NS:  # terms of a vocabulary context are Triodian names
+            terms |= {k for k, v in ctx.items() if not k.startswith("@") and isinstance(v, str) and ":" in v
+                      and not v.endswith(("/", "#"))}
+        for node in expanded:
+            node_id = node.get("@id", "")
+            if node_id.startswith(TRIODIAN_NS):
+                terms.add(node_id[len(TRIODIAN_NS):])
+        for term in sorted(terms):
+            camel = term[0].lower() + term[1:]
+            if term not in known and camel not in known:
+                fail(f"{rel(f)}: maps {term!r}, which no schema defines")
 
 
 def build_registry(docs: dict[Path, dict]) -> tuple[Registry, dict[Path, str]]:
@@ -265,7 +326,7 @@ def check_embedded_examples(docs, registry, uris) -> None:
 
 
 def check_doc_examples(docs, registry, uris) -> None:
-    print("8. Documentation worked examples validate")
+    print("9. Documentation worked examples validate")
     manifest = json.loads((DOC_EXAMPLES / "manifest.json").read_text(encoding="utf-8"))
     passed = 0
     for entry in manifest["examples"]:
@@ -305,6 +366,7 @@ def main() -> int:
         check_refs(docs, registry, uris)
         check_identifiers(docs)
         check_embedded_examples(docs, registry, uris)
+        check_interoperability(docs)
         if args.doc_examples:
             check_doc_examples(docs, registry, uris)
 

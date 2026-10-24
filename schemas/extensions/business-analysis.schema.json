@@ -1,36 +1,41 @@
 {
-  "$id": "https://triodian.com/schemas/extensions/business-analysis.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Business Analysis",
+  "$id": "https://triodian.com/schemas/extensions/business-analysis.schema.json",
+  "title": "Business Analysis Extension Schema",
   "description": "Formalises BA activities, requirements and artefacts within the Triodian Metamodel.",
   "type": "object",
   "properties": {
     "requirements": {
       "type": "array",
+      "description": "Requirements",
       "items": {
         "$ref": "#/definitions/requirement"
       }
     },
     "requirementArtefacts": {
       "type": "array",
+      "description": "Requirement artefacts such as models, specifications and prototypes",
       "items": {
         "$ref": "#/definitions/requirementArtefact"
       }
     },
     "elicitationActivities": {
       "type": "array",
+      "description": "Elicitation activities such as workshops and interviews",
       "items": {
         "$ref": "#/definitions/elicitationActivity"
       }
     },
     "analysisDesignDefinitions": {
       "type": "array",
+      "description": "Analysis and design definitions of the solution",
       "items": {
         "$ref": "#/definitions/analysisDesignDefinition"
       }
     },
     "solutionEvaluations": {
       "type": "array",
+      "description": "Evaluations of implemented solutions",
       "items": {
         "$ref": "#/definitions/solutionEvaluation"
       }
@@ -311,22 +316,26 @@
             "type": "object",
             "properties": {
               "optionName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the option"
               },
               "pros": {
                 "type": "array",
+                "description": "Advantages of the option",
                 "items": {
                   "type": "string"
                 }
               },
               "cons": {
                 "type": "array",
+                "description": "Disadvantages of the option",
                 "items": {
                   "type": "string"
                 }
               },
               "score": {
-                "type": "number"
+                "type": "number",
+                "description": "Overall score given to the option"
               }
             },
             "additionalProperties": false
@@ -462,19 +471,24 @@
       "type": "object",
       "properties": {
         "babok": {
-          "type": "string"
+          "type": "string",
+          "description": "Corresponding BABOK concept"
         },
         "volere": {
-          "type": "string"
+          "type": "string",
+          "description": "Corresponding Volere concept"
         },
         "ireb": {
-          "type": "string"
+          "type": "string",
+          "description": "Corresponding IREB concept"
         },
         "togaf": {
-          "type": "string"
+          "type": "string",
+          "description": "Corresponding TOGAF concept"
         },
         "agile": {
-          "type": "string"
+          "type": "string",
+          "description": "Corresponding Agile concept"
         }
       },
       "description": "Mapping of the entity to concepts in various business analysis frameworks.",

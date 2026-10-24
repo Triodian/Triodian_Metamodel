@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/shared-initiative.schema.json",
   "title": "Shared Initiative Schema",
   "description": "Schema for initiatives with multiple owning organizations",
   "type": "object",
@@ -28,20 +29,24 @@
     },
     "startDate": {
       "type": "string",
+      "description": "Date the initiative starts",
       "format": "date"
     },
     "endDate": {
       "type": "string",
+      "description": "Date the initiative ends",
       "format": "date"
     },
     "status": {
       "$ref": "common.schema.json#/definitions/workStatus"
     },
     "budget": {
-      "type": "number"
+      "type": "number",
+      "description": "Total budget"
     },
     "goals": {
       "type": "array",
+      "description": "Goals of the initiative",
       "items": {
         "type": "string"
       }
@@ -106,6 +111,7 @@
         "properties": {
           "dependencyType": {
             "type": "string",
+            "description": "What is depended on",
             "enum": [
               "Information",
               "Capability",
@@ -115,13 +121,16 @@
             ]
           },
           "description": {
-            "type": "string"
+            "type": "string",
+            "description": "Description of the dependency"
           },
           "sourceOrgID": {
-            "type": "string"
+            "type": "string",
+            "description": "ID of the organization that depends"
           },
           "targetOrgID": {
-            "type": "string"
+            "type": "string",
+            "description": "ID of the organization depended on"
           }
         },
         "additionalProperties": false

@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CoverageExpectation",
+  "$id": "https://triodian.com/schemas/coverage/coverage-expectation.schema.json",
+  "title": "Coverage Expectation Schema",
   "type": "object",
   "description": "Defines the desired coverage level for a specific business architecture domain within an organisation or business unit.",
   "properties": {

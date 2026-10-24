@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/innovation.schema.json",
   "title": "Innovation Domain Schema",
   "description": "Schema for the Innovation Domain in the Triodian Metamodel, representing the structured approach to creating, developing, and implementing new ideas, products, services, processes, and business models.",
   "type": "object",

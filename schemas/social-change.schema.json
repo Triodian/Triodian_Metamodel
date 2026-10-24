@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/social-change.json",
-  "title": "Social Change",
+  "$id": "https://triodian.com/schemas/social-change.schema.json",
+  "title": "Social Change Domain Schema",
   "description": "Schema for modeling campaigns, movements, and interventions aimed at addressing systemic injustice, inequality, and exclusion, including revolutionary transformations and organizational change initiatives",
   "type": "object",
   "required": [
