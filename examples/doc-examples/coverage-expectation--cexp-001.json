@@ -1,5 +1,5 @@
 {
-  "id": "cexp-001",
+  "coverageExpectationID": "cexp-001",
   "domain": "Capability",
   "orgUnit": "OU-Finance",
   "targetCoverageLevel": "analysed",

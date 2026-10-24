@@ -97,7 +97,9 @@
         "licensing",
         "openSource",
         "enterprise",
-        "channel"
+        "channel",
+        "internalService",
+        "internalTool"
       ],
       "description": "Revenue or value delivery model"
     },
@@ -194,7 +196,8 @@
         "skimming",
         "freemium",
         "dynamic",
-        "bundle"
+        "bundle",
+        "usageBased"
       ],
       "description": "Pricing approach"
     },
@@ -211,30 +214,35 @@
           "mobileApp",
           "api",
           "subscriptionService",
-          "marketplace"
+          "marketplace",
+          "internalDistribution",
+          "developerPortal"
         ],
         "description": "Distribution or delivery channel"
       }
     },
     "customerSegments": {
       "type": "array",
-      "description": "Target customer segments",
+      "description": "Names of the customer segments the product targets",
       "items": {
-        "type": "string",
-        "enum": [
+        "type": "string"
+      },
+      "examples": [
+        [
           "enterprise",
           "smb",
           "government",
-          "consumer",
-          "developer",
-          "partner",
-          "startup",
-          "education",
-          "healthcare",
-          "financial"
-        ],
-        "description": "Customer segment"
-      }
+          "consumer"
+        ]
+      ]
+    },
+    "customerSegmentIDs": {
+      "type": "array",
+      "description": "IDs of the customer segments the product targets (see the Customer domain)",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "valueProposition": {
       "type": "string",

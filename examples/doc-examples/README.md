@@ -8,7 +8,7 @@ Run them with:
 python scripts/validate.py --only-doc-examples
 ```
 
-An example that fails means the documentation and the schema disagree. Decide which one is correct, then fix the schema or update the example (and the documentation) to match.
+All examples pass, and CI fails if one stops passing. An example that fails means the documentation and the schema disagree: decide which is correct, then fix the schema or update the example (and the documentation) to match.
 
 ## Amendments to the documentation's examples
 
@@ -37,3 +37,17 @@ The examples were extracted verbatim and then amended as follows to match agreed
 **Inter-unit relationships follow the repository's conventions.** Each example has a `relationshipID` (`IUR-001`, `IUR-002`). The organization unit is `orgUnitTitle` (documented as `organizationUnit`), matching every other domain. Domains and roles are camelCase (`"Value Stream"` → `"valueStream"`, `"Contributing"` → `"contributing"`).
 
 **Model Risk Management uses repository identifiers.** The five MRM examples use `…ID` rather than `…Id` (`modelId` → `modelID`, `findingId` → `findingID`), and each element example carries the `modelID` of the model it belongs to (`MODEL-ECL-IFRS9-001`). Monitoring dependencies use the shared camelCase values (`"Critical"` → `"critical"`, `"Information"` → `"information"`). Regulatory requirements use the shared compliance status (`"met"` → `"compliant"`), and `appliesTo` is camelCase (`"Model"` → `"model"`).
+
+**Values the documentation uses are in the lists.** The documentation's attribute tables give example values rather than complete lists. Where an example used a value that a near-duplicate already covers, the example uses the existing value; otherwise the value was added to the list.
+- Mapped to an existing value: `"Mobile App Store"` → `mobileApp`, `"API Platform"` → `api`, `"Union"` → `laborUnions`, `"Community Organizing Model"` → `communityOrganizing`, `"2-year implementation"` → `multiYearTransformation`, `"Mobilization"` → `revolutionaryMobilization`, `"Consolidation"` → `revolutionaryConsolidation`, `"Violent"` → `armedResistance`.
+- Added to the list: Products `businessModel` `internalService`, `internalTool`; `channels` `internalDistribution`, `developerPortal`; `pricingStrategy` `usageBased`. Strategy `marketPosition` `defensivePositioning`. Social Change `revolutionaryPhases` `colonialResistance`, `armedStruggle`, `territoryControl`, `independence`. Intelligence `sourceType` `internalMonitoring`, `collectionMethod` `manualInvestigation`, `reliabilityRating` `variable`.
+- Products `customerSegments` are names of Customer segments (`"Railway Operators"`), so they are free text, with `customerSegmentIDs` for the segment records. The documented segment types (Enterprise, SMB, Government, Consumer) are examples.
+
+**Technology follows its attribute table.** The Technology example uses the table's field names: `indicatorName`/`description` → `metricName`/`metricDescription`, and `annualLicensing` plus `annualOperational` combined in `annualOperatingCost`. Values are mapped to the documented lists (`"infrastructure-software"` → `infrastructure`, `"operational"` → `production`, `"high - gateway to critical business systems"` → `restricted`, trend `"increasing"` → `improving`). Its `relationshipExamples` are `crossDomainRelationships`: `enables` a capability and an initiative, and `delivers` a service.
+
+**Every identifier is named `<entity>ID`.** Social Change examples have a `socialChangeID` (`SC-001` …), and the coverage examples use `coverageExpectationID`, `coverageStatusID`, `coverageTemplateID` and `goalID` instead of `id`.
+
+**Cross-domain relationship CDR-008** ("Compliance function audits…") has source domain `organization`: the compliance function is an organization unit.
+
+**One example is not checked.** The documentation's second manufacturing work order example is a status-update payload (it changes only `status`), not a complete work order.
+

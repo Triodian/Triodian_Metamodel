@@ -5,15 +5,15 @@
   "description": "Schema for modeling campaigns, movements, and interventions aimed at addressing systemic injustice, inequality, and exclusion, including revolutionary transformations and organizational change initiatives",
   "type": "object",
   "required": [
-    "id",
+    "socialChangeID",
     "name",
     "description",
     "activityType"
   ],
   "properties": {
-    "id": {
+    "socialChangeID": {
       "type": "string",
-      "description": "Unique identifier for the social change action"
+      "description": "Unique identifier for the social change activity"
     },
     "name": {
       "type": "string",
@@ -202,11 +202,11 @@
       "items": {
         "type": "object",
         "required": [
-          "capabilityId",
+          "capabilityID",
           "name"
         ],
         "properties": {
-          "capabilityId": {
+          "capabilityID": {
             "type": "string",
             "description": "Identifier for the capability"
           },
@@ -561,7 +561,11 @@
           "systemOverthrow",
           "revolutionaryConsolidation",
           "reconstruction",
-          "institutionBuilding"
+          "institutionBuilding",
+          "colonialResistance",
+          "armedStruggle",
+          "territoryControl",
+          "independence"
         ]
       },
       "description": "Progression through revolutionary stages (for revolutionary activities)"
@@ -780,7 +784,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "orgUnitID": {
                 "type": "string",
                 "description": "ID of the owning organization unit"
               },
@@ -798,7 +802,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "capabilityID": {
                 "type": "string",
                 "description": "ID of the capability"
               },
@@ -816,7 +820,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "valueStreamID": {
                 "type": "string",
                 "description": "ID of the value stream"
               },
@@ -843,7 +847,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "stakeholderID": {
                 "type": "string",
                 "description": "ID of the stakeholder"
               },
@@ -871,7 +875,7 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "policyID": {
                 "type": "string",
                 "description": "ID of the policy"
               },
@@ -889,9 +893,9 @@
           "items": {
             "type": "object",
             "properties": {
-              "id": {
+              "strategyID": {
                 "type": "string",
-                "description": "ID of the strategic goal"
+                "description": "ID of the strategy"
               },
               "name": {
                 "type": "string",
@@ -905,9 +909,9 @@
         "initiativeContainer": {
           "type": "object",
           "properties": {
-            "id": {
+            "initiativeID": {
               "type": "string",
-              "description": "ID of the parent initiative"
+              "description": "ID of the initiative"
             },
             "name": {
               "type": "string",

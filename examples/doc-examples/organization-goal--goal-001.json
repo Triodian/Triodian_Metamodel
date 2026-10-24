@@ -1,5 +1,5 @@
 {
-  "id": "goal-001",
+  "goalID": "goal-001",
   "organization": "Org-Alpha",
   "orgUnit": "OU-Finance",
   "domain": "Performance",

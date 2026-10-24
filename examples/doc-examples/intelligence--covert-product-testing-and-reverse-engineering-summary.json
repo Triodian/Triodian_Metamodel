@@ -16,7 +16,7 @@
     },
     {
       "sourceName": "In-house Engineering Teardown Reports",
-      "sourceType": "Internal monitoring",
+      "sourceType": "internalMonitoring",
       "reliabilityRating": "high",
       "collectionMethod": "manualResearch",
       "cost": "Internal resource cost",

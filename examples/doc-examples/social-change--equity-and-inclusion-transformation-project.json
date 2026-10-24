@@ -1,4 +1,5 @@
 {
+  "socialChangeID": "SC-002",
   "name": "Equity and Inclusion Transformation Project",
   "description": "Consultant-facilitated comprehensive organizational change to address systemic inequities",
   "activityType": "consultingProject",
@@ -34,7 +35,7 @@
     }
   ],
   "resourceSource": "consultingContract",
-  "timeline": "2-year implementation",
+  "timeline": "multiYearTransformation",
   "successMetrics": [
     "Equity indicators",
     "Patient satisfaction by demographics",

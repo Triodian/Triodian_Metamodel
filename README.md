@@ -74,7 +74,7 @@ Every object a schema defines rejects fields it does not define (`"additionalPro
 
 Every record has a required identifier named after its entity, such as `capabilityID`, `strategyID` or `orgUnitID`, using the shared `identifier` definition. Records link to each other by these identifiers. Fields such as `orgUnitID`, `parentCapabilityID` and `relatedStrategyIDs` sit alongside the corresponding name fields (`orgUnitTitle`, `parent`, `relatedStrategies`), which are kept for readability.
 
-The worked examples published in the metamodel documentation are kept in [`examples/doc-examples`](examples/doc-examples) and validated against their schemas, so drift between the documentation and the schemas is visible.
+The worked examples published in the metamodel documentation are kept in [`examples/doc-examples`](examples/doc-examples) and validated against their schemas in CI, so the documentation and the schemas cannot drift apart.
 
 ## Contributing
 
