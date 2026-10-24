@@ -83,7 +83,7 @@
         "expectedReduction": "105,000 tCO2e",
         "timeframe": "2024-2027",
         "investmentRequired": "$42M",
-        "status": "in progress"
+        "status": "inProgress"
       },
       {
         "initiativeName": "Fleet Electrification",
@@ -91,7 +91,7 @@
         "expectedReduction": "35,000 tCO2e",
         "timeframe": "2024-2028",
         "investmentRequired": "$28M",
-        "status": "in progress"
+        "status": "inProgress"
       },
       {
         "initiativeName": "Supplier Engagement Program",
@@ -99,7 +99,7 @@
         "expectedReduction": "55,000 tCO2e",
         "timeframe": "2024-2030",
         "investmentRequired": "$12M",
-        "status": "planning"
+        "status": "planned"
       }
     ]
   },
@@ -137,14 +137,14 @@
     {
       "initiativeID": "INIT-CARBON-001",
       "initiativeTitle": "Carbon Reduction Program",
-      "status": "active",
+      "status": "inProgress",
       "relationshipType": "primary",
       "relationshipStrength": 5
     },
     {
       "initiativeID": "INIT-ENERGY-002",
       "initiativeTitle": "Energy Efficiency Program",
-      "status": "active",
+      "status": "inProgress",
       "relationshipType": "supporting",
       "relationshipStrength": 4
     }

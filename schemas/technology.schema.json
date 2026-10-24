@@ -3,7 +3,12 @@
   "title": "Technology Domain Schema",
   "description": "Schema for the Technology domain in the Triodian Metamodel",
   "type": "object",
-  "required": ["technologyID", "title", "description", "orgUnitTitle"],
+  "required": [
+    "technologyID",
+    "title",
+    "description",
+    "orgUnitTitle"
+  ],
   "properties": {
     "technologyID": {
       "type": "string",
@@ -20,7 +25,19 @@
     "technologyType": {
       "type": "string",
       "description": "Classification of technology (e.g., application, infrastructure, service, standard)",
-      "enum": ["application", "infrastructure", "service", "platform", "database", "integration", "security", "end-user", "network", "standard", "other"]
+      "enum": [
+        "application",
+        "infrastructure",
+        "service",
+        "platform",
+        "database",
+        "integration",
+        "security",
+        "end-user",
+        "network",
+        "standard",
+        "other"
+      ]
     },
     "orgUnitTitle": {
       "type": "string",
@@ -36,12 +53,30 @@
     "technologyLayer": {
       "type": "string",
       "description": "Position in the technology stack",
-      "enum": ["presentation", "application", "data", "integration", "infrastructure", "security", "management", "cross-cutting", "other"]
+      "enum": [
+        "presentation",
+        "application",
+        "data",
+        "integration",
+        "infrastructure",
+        "security",
+        "management",
+        "cross-cutting",
+        "other"
+      ]
     },
     "currentState": {
       "type": "string",
       "description": "Status of the technology element",
-      "enum": ["proposed", "under-development", "pilot", "production", "being-replaced", "deprecated", "retired"]
+      "enum": [
+        "proposed",
+        "under-development",
+        "pilot",
+        "production",
+        "being-replaced",
+        "deprecated",
+        "retired"
+      ]
     },
     "targetState": {
       "type": "string",
@@ -60,9 +95,12 @@
       "description": "Support and maintenance approach"
     },
     "lifecycle": {
-      "type": "string",
       "description": "Current lifecycle stage",
-      "enum": ["emerging", "growth", "mature", "declining", "legacy", "sunset"]
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/adoptionStage"
+        }
+      ]
     },
     "vendors": {
       "type": "array",
@@ -114,7 +152,13 @@
     "securityClassification": {
       "type": "string",
       "description": "Security requirements and rating",
-      "enum": ["public", "internal", "confidential", "restricted", "secret"]
+      "enum": [
+        "public",
+        "internal",
+        "confidential",
+        "restricted",
+        "secret"
+      ]
     },
     "performanceRequirements": {
       "type": "string",
@@ -158,9 +202,12 @@
             "description": "Unit of measurement"
           },
           "trend": {
-            "type": "string",
             "description": "Direction of change",
-            "enum": ["improving", "stable", "declining", "fluctuating"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/performanceTrend"
+              }
+            ]
           }
         }
       }
@@ -172,14 +219,20 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
             "description": "Type of dependency",
-            "enum": ["critical", "important", "supportive", "optional"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
+            ]
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain this depends on",
-            "enum": ["Capability", "Service", "Product", "Information", "Value Stream", "Strategy", "Organization", "Technology", "Initiative", "Customer", "Other"]
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              }
+            ]
           },
           "entityID": {
             "type": "string",
@@ -205,7 +258,17 @@
           "relationshipType": {
             "type": "string",
             "description": "Type of relationship",
-            "enum": ["depends-on", "supports", "integrates-with", "replaces", "is-replaced-by", "extends", "complement", "alternative", "other"]
+            "enum": [
+              "depends-on",
+              "supports",
+              "integrates-with",
+              "replaces",
+              "is-replaced-by",
+              "extends",
+              "complement",
+              "alternative",
+              "other"
+            ]
           },
           "relationshipStrength": {
             "type": "integer",
@@ -220,7 +283,6 @@
         }
       }
     },
-
     "improvementOpportunities": {
       "type": "array",
       "description": "Areas where technology can be enhanced",
@@ -303,7 +365,10 @@
             "description": "Current stage in application lifecycle"
           }
         },
-        "required": ["applicationName", "applicationDescription"]
+        "required": [
+          "applicationName",
+          "applicationDescription"
+        ]
       }
     },
     "technologyServices": {
@@ -384,7 +449,10 @@
             "description": "How service health is tracked"
           }
         },
-        "required": ["serviceName", "serviceDescription"]
+        "required": [
+          "serviceName",
+          "serviceDescription"
+        ]
       }
     },
     "infrastructureElements": {
@@ -450,7 +518,10 @@
             "description": "Cost structure"
           }
         },
-        "required": ["infrastructureName", "infrastructureType"]
+        "required": [
+          "infrastructureName",
+          "infrastructureType"
+        ]
       }
     },
     "standardElements": {
@@ -478,12 +549,24 @@
           "standardStatus": {
             "type": "string",
             "description": "Status (e.g., emerging, current, deprecated)",
-            "enum": ["emerging", "current", "stable", "declining", "deprecated", "retired"]
+            "enum": [
+              "emerging",
+              "current",
+              "stable",
+              "declining",
+              "deprecated",
+              "retired"
+            ]
           },
           "complianceRequirement": {
             "type": "string",
             "description": "Mandatory or recommended",
-            "enum": ["mandatory", "recommended", "optional", "reference-only"]
+            "enum": [
+              "mandatory",
+              "recommended",
+              "optional",
+              "reference-only"
+            ]
           },
           "enforcementMechanism": {
             "type": "string",
@@ -510,7 +593,10 @@
             "description": "Entity managing the standard"
           }
         },
-        "required": ["standardName", "standardDescription"]
+        "required": [
+          "standardName",
+          "standardDescription"
+        ]
       }
     },
     "governanceModel": {
@@ -567,7 +653,13 @@
         "overallMaturity": {
           "type": "string",
           "description": "Overall maturity rating",
-          "enum": ["initial", "developing", "defined", "managed", "optimizing"]
+          "enum": [
+            "initial",
+            "developing",
+            "defined",
+            "managed",
+            "optimizing"
+          ]
         },
         "maturityAssessmentDate": {
           "type": "string",
@@ -590,7 +682,11 @@
       "description": "Cross-domain relationships linking market domain to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",

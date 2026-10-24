@@ -21,6 +21,14 @@ jobs:
       - name: Structural checks (blocking)
         run: python scripts/validate.py
 
+      - name: Shared vocabulary report is up to date (blocking)
+        run: |
+          python scripts/vocabulary_map.py
+          git diff --exit-code docs/ || (echo "Run python scripts/vocabulary_map.py and commit the result" && exit 1)
+
+      - name: Shared concepts use the shared vocabulary (blocking)
+        run: python scripts/vocabulary_map.py --check
+
       # Reports drift between the documentation's worked examples and the schemas.
       # Non-blocking until the known drift is resolved; remove continue-on-error then.
       - name: Documentation examples (report only)

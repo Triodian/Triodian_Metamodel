@@ -64,12 +64,12 @@
     {
       "supportType": "Military",
       "source": "Anti-colonial nations",
-      "level": "Medium"
+      "level": "medium"
     },
     {
       "supportType": "Diplomatic",
       "source": "UN Decolonization Committee",
-      "level": "High"
+      "level": "high"
     }
   ],
   "historicalPrecedent": "Algerian War of Independence",

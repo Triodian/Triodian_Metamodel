@@ -65,12 +65,12 @@
     {
       "supportType": "Diplomatic",
       "source": "Democratic nations",
-      "level": "High"
+      "level": "high"
     },
     {
       "supportType": "Economic",
       "source": "International NGOs",
-      "level": "Medium"
+      "level": "medium"
     }
   ],
   "historicalPrecedent": "Velvet Revolution 1989",

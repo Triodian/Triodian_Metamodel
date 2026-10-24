@@ -135,14 +135,14 @@
   },
   "dependencies": [
     {
-      "dependencyType": "Critical",
-      "domainType": "Capability",
+      "dependencyType": "critical",
+      "domainType": "capability",
       "entityID": "CAP-DEV-001",
       "description": "Software development capability"
     },
     {
-      "dependencyType": "Important",
-      "domainType": "Technology",
+      "dependencyType": "important",
+      "domainType": "technology",
       "entityID": "TECH-CLOUD-002",
       "description": "Cloud platform expertise"
     }

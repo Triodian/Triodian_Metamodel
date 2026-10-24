@@ -14,7 +14,7 @@
   "targets": "Target: 85/100 index score, Current: 72/100, Improvement target: 5 points quarterly",
   "dataSource": "Project management systems, HR systems, IT asset management, digital adoption platforms",
   "automation": "semiAutomated",
-  "maturityLevel": "developing",
+  "maturityLevel": "repeatable",
   "innovation": "AI-powered progress tracking, predictive milestone analysis, automated skills gap identification",
   "businessValue": "Accelerated transformation timeline, $3M in efficiency gains, improved competitive positioning",
   "performanceKPIs": [

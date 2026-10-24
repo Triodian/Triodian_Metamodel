@@ -19,8 +19,8 @@
     "Government"
   ],
   "businessModel": "Fee for Service",
-  "automationLevel": "Manual",
-  "lifecycle": "Operations",
+  "automationLevel": "manual",
+  "lifecycle": "operational",
   "pricing": "Hourly consulting rates, project-based pricing, retainer options",
   "valueProposition": "Reduce project risks by 60% and accelerate approval timelines through expert guidance",
   "performanceIndicators": "Project success rate, client satisfaction, regulatory approval time, repeat business rate",
@@ -30,16 +30,16 @@
       "description": "Comprehensive review of project compliance with federal and state regulations",
       "purpose": "Identify compliance gaps early so projects gain regulatory approval without delay",
       "featureType": "Core Feature",
-      "priority": "Critical",
-      "complexity": "Highly Complex"
+      "priority": "critical",
+      "complexity": "highlyComplex"
     },
     {
       "title": "Digital Twin Modeling",
       "description": "Advanced 3D modeling and simulation for infrastructure optimization",
       "purpose": "Test infrastructure design options virtually before committing capital",
       "featureType": "Premium Feature",
-      "priority": "High",
-      "complexity": "Highly Complex"
+      "priority": "high",
+      "complexity": "highlyComplex"
     }
   ]
 }

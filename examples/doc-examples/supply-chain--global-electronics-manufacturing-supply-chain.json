@@ -138,7 +138,7 @@
       },
       {
         "factorName": "Ocean freight capacity and pricing volatility",
-        "riskLevel": "moderate",
+        "riskLevel": "medium",
         "mitigationApproach": "Multi-modal options, contract diversification, selective air freight"
       }
     ],
@@ -201,7 +201,7 @@
     {
       "technologyName": "Digital Twin Simulation",
       "technologyPurpose": "Network design and scenario planning",
-      "implementationStatus": "implementing",
+      "implementationStatus": "inProgress",
       "businessImpact": "Expected 12% improvement in network efficiency"
     },
     {
@@ -230,21 +230,21 @@
       "opportunityDescription": "Implementation of real-time collaboration tools for design and planning with key suppliers",
       "potentialImpact": "high",
       "implementationComplexity": "medium",
-      "status": "planning"
+      "status": "planned"
     },
     {
       "opportunityName": "New Product Introduction Process Redesign",
       "opportunityDescription": "Streamlining of supply chain integration in NPI to reduce time-to-market",
       "potentialImpact": "high",
       "implementationComplexity": "high",
-      "status": "evaluating"
+      "status": "proposed"
     },
     {
       "opportunityName": "Logistics Network Optimization",
       "opportunityDescription": "Comprehensive review and redesign of global distribution network",
       "potentialImpact": "medium",
       "implementationComplexity": "high",
-      "status": "planning"
+      "status": "planned"
     }
   ],
   "strategicImportance": {
@@ -274,13 +274,13 @@
   "dependencies": [
     {
       "dependencyType": "Critical",
-      "domainType": "Capability",
+      "domainType": "capability",
       "entityID": "CAP-SC-003",
       "description": "Advanced procurement capability"
     },
     {
       "dependencyType": "Important",
-      "domainType": "Technology",
+      "domainType": "technology",
       "entityID": "TECH-007",
       "description": "Supply chain planning and control tower systems"
     }
