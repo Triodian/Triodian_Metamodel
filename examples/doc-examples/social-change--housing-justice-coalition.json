@@ -1,0 +1,45 @@
+{
+  "name": "Housing Justice Coalition",
+  "description": "Multi-organization campaign to address affordable housing crisis through policy advocacy and community organizing",
+  "activityType": "Community Organizing",
+  "changeScope": "Multi-organizational",
+  "changeAgentType": "NGO Partnership",
+  "institutionalContext": "Non-profit Organization",
+  "specificActions": [
+    "Community Education",
+    "Policy Advocacy",
+    "Tenant Organizing"
+  ],
+  "leadingOrganizations": [
+    "Housing Rights Network",
+    "Community Legal Aid",
+    "Tenant Union Coalition"
+  ],
+  "systemicProblem": "Housing affordability crisis and displacement",
+  "primaryAffectedGroups": [
+    "Renters",
+    "Homeless individuals",
+    "Low-income families"
+  ],
+  "changeMethodology": "Community Organizing Model",
+  "tactics": [
+    {
+      "tacticType": "Community Outreach",
+      "description": "Building resident leadership and advocacy capacity",
+      "channel": "Door-to-door organizing and community meetings"
+    },
+    {
+      "tacticType": "Policy Advocacy",
+      "description": "Promoting rent control and affordable housing policies",
+      "channel": "City council meetings and media campaigns"
+    }
+  ],
+  "resourceSource": "Foundation Funding",
+  "timeline": "Ongoing program",
+  "successMetrics": [
+    "Policy adoption rates",
+    "Community engagement levels",
+    "Housing displacement prevention"
+  ],
+  "sustainabilityPlan": "Ongoing community leadership development"
+}

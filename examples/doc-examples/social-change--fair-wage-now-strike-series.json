@@ -1,0 +1,69 @@
+{
+  "name": "Fair Wage Now Strike Series",
+  "description": "National industrial action targeting minimum wage reform",
+  "activityType": "Campaign",
+  "specificActions": [
+    "Strike",
+    "Protest March",
+    "Picket Line"
+  ],
+  "leadingOrganizations": [
+    "National Union of Educators",
+    "Service Workers Coalition"
+  ],
+  "systemicProblem": "Structural wage suppression through casualisation",
+  "primaryAffectedGroups": [
+    "Casual workers",
+    "Part-time employees",
+    "Service industry workers"
+  ],
+  "stakeholders": [
+    {
+      "name": "National Union of Educators",
+      "type": "Union",
+      "influenceLevel": "High",
+      "engagementStrategy": "Collective Bargaining"
+    }
+  ],
+  "policyTargets": [
+    "Modern Awards",
+    "Industrial Relations Act"
+  ],
+  "institutionalTargets": [
+    "Fair Work Commission",
+    "Department of Labour"
+  ],
+  "tactics": [
+    {
+      "tacticType": "Strike",
+      "description": "Coordinated work stoppage across education sector",
+      "channel": "Educational institutions and public demonstrations",
+      "violenceLevel": "Non-violent"
+    }
+  ],
+  "escalationSequence": [
+    "Member ballot",
+    "Protected action notice",
+    "Strike action",
+    "Picket lines",
+    "Solidarity actions"
+  ],
+  "capabilities": [
+    {
+      "capabilityId": "cap-collective-bargaining",
+      "name": "Collective Bargaining",
+      "levelOfUse": "High"
+    }
+  ],
+  "valueStreams": [
+    "Workforce Participation",
+    "Wage Distribution"
+  ],
+  "keyPerformanceIndicators": [
+    {
+      "indicatorName": "Wage increase percentage",
+      "targetValue": "10%",
+      "measurementMethod": "Post-negotiation audit"
+    }
+  ]
+}

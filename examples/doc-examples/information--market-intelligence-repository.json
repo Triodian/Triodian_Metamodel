@@ -1,0 +1,34 @@
+{
+  "title": "Market Intelligence Repository",
+  "description": "Centralized repository of market research, competitive intelligence, industry trends, and strategic analysis to support business decision-making",
+  "purpose": "Provide comprehensive market insights to support strategic planning and competitive positioning",
+  "owner": "Director of Strategic Intelligence",
+  "orgUnitTitle": "Strategy and Planning Division",
+  "informationCategory": "Intelligence",
+  "informationType": "Knowledge Base",
+  "dataClassification": "Confidential",
+  "dataQuality": "Good Quality",
+  "format": "Mixed format repository: documents, spreadsheets, databases, web content",
+  "volume": "500GB of documents, reports, and datasets updated weekly",
+  "updateFrequency": "Weekly",
+  "retention": "Current intelligence for 3 years, archived for historical reference",
+  "sources": "Market research firms, industry reports, competitive analysis, internal research",
+  "consumers": "Executive team, product managers, strategic planning team, business development",
+  "compliance": [
+    "Internal Policies",
+    "Industry Standards"
+  ],
+  "security": "Document-level access controls, watermarking, secure sharing protocols",
+  "quality": "Expert review process, source verification, regular content updates",
+  "businessValue": "Supports strategic decisions worth $10M+ annually in market opportunities",
+  "strategicAlignment": "Directly supports market expansion and competitive strategy initiatives",
+  "informationElements": [
+    {
+      "title": "Competitive Analysis Reports",
+      "description": "Detailed analysis of competitor strategies, strengths, and market positioning",
+      "elementType": "Document",
+      "sensitivity": "Restricted",
+      "businessRules": "Quarterly updates required, executive approval for sharing"
+    }
+  ]
+}

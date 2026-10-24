@@ -1,0 +1,66 @@
+{
+  "intelligenceID": "ORGINT-003",
+  "title": "Monthly Regulatory Change Digest: Financial Services Sector",
+  "description": "A structured summary of regulatory updates impacting financial service providers across Australia, the UK, and the EU, including enacted and proposed legislation.",
+  "purpose": "Ensure ongoing compliance and proactive adaptation of operational processes to new regulatory requirements.",
+  "owner": "Regulatory Compliance Intelligence Lead",
+  "orgUnitTitle": "Regulatory Affairs and Compliance Department",
+  "sources": [
+    {
+      "sourceName": "Official Government Gazettes",
+      "sourceType": "Public data",
+      "reliabilityRating": "High",
+      "collectionMethod": "Manual research",
+      "cost": "No cost",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Thomson Reuters Regulatory Feed",
+      "sourceType": "Paid research services",
+      "reliabilityRating": "High",
+      "collectionMethod": "Third-party acquisition",
+      "cost": "$12,000/year",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Industry Association Updates",
+      "sourceType": "Informal networks",
+      "reliabilityRating": "Medium",
+      "collectionMethod": "Manual research",
+      "cost": "Included in membership fees",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Regulatory surveillance",
+  "frequency": "Monthly",
+  "legalAndEthicalConsiderations": "Sourced exclusively from publicly available and licensed data channels. Strict compliance with intellectual property rights.",
+  "confidentialityLevel": "Internal",
+  "performanceIndicators": [
+    "Reduction in non-compliance incidents by 30% YoY",
+    "Zero regulatory fines post-implementation of digest system"
+  ],
+  "risks": [
+    "Delayed reporting of regulatory changes with immediate effect",
+    "Inaccuracies arising from secondary data interpretation"
+  ],
+  "improvementOpportunities": [
+    "Integrate direct API feeds from regulators",
+    "Automate mapping of regulatory changes to internal policies"
+  ],
+  "strategicAlignment": "Supports Compliance Excellence Program and reduces operational risk exposure.",
+  "applications": [
+    {
+      "applicationArea": "Risk management",
+      "organisationalDecisionsInfluenced": "Product compliance checks, internal policy updates, operational workflow adjustments.",
+      "intelligenceConsumers": [
+        "Chief Risk Officer",
+        "Head of Legal",
+        "Operational Compliance Managers"
+      ],
+      "measurableOutcomes": [
+        "100% policy updates within 10 days of regulatory publication",
+        "Reduction of manual compliance audits by 40%"
+      ]
+    }
+  ]
+}

@@ -7,25 +7,25 @@
     "externalOrganizations": {
       "type": "array",
       "items": {
-        "$ref": "externalOrganization.schema.json"
+        "$ref": "external-organization.schema.json"
       }
     },
     "interOrganizationalRelationships": {
       "type": "array",
       "items": {
-        "$ref": "interOrganizationalRelationship.schema.json"
+        "$ref": "inter-organizational-relationship.schema.json"
       }
     },
     "sharedInitiatives": {
       "type": "array",
       "items": {
-        "$ref": "sharedInitiative.schema.json"
+        "$ref": "shared-initiative.schema.json"
       }
     },
     "federatedGovernanceModels": {
       "type": "array",
       "items": {
-        "$ref": "federatedGovernanceModel.schema.json"
+        "$ref": "federated-governance-model.schema.json"
       }
     }
   }

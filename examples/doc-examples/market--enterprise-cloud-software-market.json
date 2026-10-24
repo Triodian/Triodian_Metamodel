@@ -1,0 +1,144 @@
+{
+  "marketID": "MKT-ENTSW-001",
+  "title": "Enterprise Cloud Software Market",
+  "description": "The market for cloud-based enterprise software solutions, including SaaS, PaaS, and IaaS offerings targeting medium to large organizations.",
+  "marketDefinition": "Cloud-based software solutions designed for organizations with 500+ employees, providing business functionality through subscription models with minimal onpremises infrastructure.",
+  "orgUnitTitle": "Market Intelligence Division",
+  "orgUnitRoles": [
+    "Market Research Manager",
+    "Competitive Analyst",
+    "Industry Specialist"
+  ],
+  "marketSize": {
+    "currentSize": "$457 billion",
+    "currency": "USD",
+    "year": "2024",
+    "projectedSize": "$892 billion",
+    "projectionYear": "2028",
+    "calculationMethod": "Revenue-based analysis of public and private cloud software providers"
+  },
+  "marketGrowthRate": {
+    "currentRate": 18.2,
+    "projectedRate": 16.7,
+    "timespan": "Annual"
+  },
+  "marketSegmentation": [
+    {
+      "segmentName": "Enterprise Resource Planning",
+      "segmentDescription": "Finance, HR, and operational management solutions",
+      "segmentSize": "$125 billion",
+      "segmentGrowth": "12.5%"
+    },
+    {
+      "segmentName": "Customer Relationship Management",
+      "segmentDescription": "Sales, marketing, and service management solutions",
+      "segmentSize": "$96 billion",
+      "segmentGrowth": "15.8%"
+    },
+    {
+      "segmentName": "Business Intelligence & Analytics",
+      "segmentDescription": "Data analysis and visualization tools",
+      "segmentSize": "$84 billion",
+      "segmentGrowth": "22.3%"
+    }
+  ],
+  "marketTrends": [
+    "Rapid adoption of AI capabilities across all enterprise software categories",
+    "Increased focus on vertical-specific solutions and industry clouds",
+    "Growing importance of API-first architecture and integration capabilities",
+    "Shift toward composable business applications and microservices"
+  ],
+  "marketBarriers": [
+    "High switching costs for core enterprise systems",
+    "Data security and sovereignty requirements",
+    "Integration complexity with legacy systems",
+    "Procurement processes favoring incumbent providers"
+  ],
+  "competitiveIntensity": {
+    "level": "high",
+    "description": "Mature incumbents face pressure from nimble cloud-native providers and platform expansion from tech giants"
+  },
+  "regulatoryFactors": [
+    "Data privacy regulations (GDPR, CCPA, etc.) influencing architectural decisions",
+    "Industry-specific compliance requirements creating market niches",
+    "Antitrust scrutiny of platform providers affecting integration strategies"
+  ],
+  "technologicalFactors": [
+    "AI/ML capabilities becoming table stakes across all categories",
+    "Container-based architectures enabling multi-cloud deployments",
+    "Low-code/no-code capabilities expanding addressable market",
+    "Edge computing changing deployment models for certain use cases"
+  ],
+  "economicFactors": [
+    "Subscription models creating predictable revenue streams",
+    "Economic uncertainty driving focus on provable ROI",
+    "Digital transformation investments remaining priority despite budget constraints",
+    "Consolidation of vendors through mergers and acquisitions"
+  ],
+  "socialFactors": [
+    "Remote and hybrid work driving demand for collaborative capabilities",
+    "Employee experience becoming key purchase criterion",
+    "Growing emphasis on sustainability tracking and reporting",
+    "Changing demographics of decision-makers favoring digital-native solutions"
+  ],
+  "environmentalFactors": [
+    "Cloud migration reducing on-premises data center footprints",
+    "Growing demand for carbon footprint tracking capabilities",
+    "Supplier sustainability becoming procurement criterion"
+  ],
+  "strategicOpportunities": [
+    "Industry-specific AI capabilities to drive differentiation",
+    "Composable enterprise applications addressing flexibility requirements",
+    "Mid-market expansion with simplified implementation approaches",
+    "Integration platforms connecting best-of-breed solutions"
+  ],
+  "strategicThreats": [
+    "Platform consolidation reducing independent software vendor opportunities",
+    "Commoditization of core functionality through standard APIs",
+    "Pricing pressure from open-source alternatives",
+    "Talent shortages limiting implementation capacity"
+  ],
+  "strategicAlignment": "This market analysis supports our strategic pivot to industryfocused cloud solutions and expansion of our AI capabilities across the product portfolio.",
+  "performanceIndicators": [
+    {
+      "metricName": "Market Share",
+      "metricDescription": "Percentage of total market revenue",
+      "currentValue": "3.8%",
+      "targetValue": "5.2%",
+      "unit": "Percentage"
+    },
+    {
+      "metricName": "Competitive Win Rate",
+      "metricDescription": "Percentage of competitive deals won",
+      "currentValue": "42%",
+      "targetValue": "55%",
+      "unit": "Percentage"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-AI-001",
+      "description": "AI/ML Development and Implementation capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Information",
+      "entityID": "INFO-MARKET-003",
+      "description": "Competitive Intelligence Database"
+    }
+  ],
+  "relatedMarkets": [
+    {
+      "marketID": "MKT-CLOUD-002",
+      "relationshipType": "overlapping",
+      "relationshipStrength": 4
+    }
+  ],
+  "improvementOpportunities": [
+    "Enhanced tracking of emerging competitors",
+    "More granular segment-specific growth analysis",
+    "Better integration of customer feedback into market intelligence"
+  ]
+}

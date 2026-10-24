@@ -1,0 +1,164 @@
+{
+  "peopleID": "PEOPLE-WORKFORCE-001",
+  "title": "Product Engineering Team",
+  "description": "Core product development engineering workforce responsible for design, development, and maintenance of enterprise software products.",
+  "talentCategory": "technical",
+  "orgUnitTitle": "Engineering Division",
+  "orgUnitRoles": [
+    "Chief Technology Officer",
+    "VP of Engineering",
+    "Talent Acquisition Manager"
+  ],
+  "orgUnitsCovered": [
+    "Product Development",
+    "Quality Engineering",
+    "DevOps"
+  ],
+  "workforceSize": {
+    "currentHeadcount": 125,
+    "plannedHeadcount": 150,
+    "timeframe": "EOY 2025",
+    "vacancies": 15
+  },
+  "skillsProfile": {
+    "technicalSkills": [
+      "Full-stack development",
+      "Cloud architecture",
+      "DevOps",
+      "AI/ML implementation"
+    ],
+    "coreCompetencies": [
+      "Problem solving",
+      "Technical design",
+      "Agile methodology"
+    ],
+    "criticalSkillGaps": [
+      "Quantum computing expertise",
+      "Advanced AI model development"
+    ],
+    "skillAssessmentMethod": "Annual technical skills assessment with peer review"
+  },
+  "competencyFramework": "Engineering Excellence Framework",
+  "talentDevelopmentApproach": {
+    "developmentMethodology": "70-20-10 learning model",
+    "formalPrograms": [
+      "Technical mentorship program",
+      "Engineering leadership pathway"
+    ],
+    "learningResources": [
+      "Internal knowledge base",
+      "Conference participation",
+      "Online learning subscriptions"
+    ],
+    "developmentBudget": "$4,200 per employee annually"
+  },
+  "talentAcquisitionStrategy": {
+    "sourcingChannels": [
+      "Technical referrals",
+      "University partnerships",
+      "Tech community events"
+    ],
+    "selectionCriteria": [
+      "Technical assessment",
+      "Culture-fit interview",
+      "Problem-solving challenge"
+    ],
+    "onboardingProcess": "6-week structured technical onboarding with mentor assignment",
+    "timeToProductivity": "3 months for junior roles, 1 month for senior roles"
+  },
+  "culturalValues": [
+    "Innovation",
+    "Technical excellence",
+    "Continuous learning",
+    "Collaboration"
+  ],
+  "leadershipModel": {
+    "leadershipStyle": "Servant leadership with technical expertise",
+    "decisionMakingApproach": "Distributed authority with clear escalation paths",
+    "leaderToIndividualContributorRatio": "1:8"
+  },
+  "engagementMetrics": {
+    "overallEngagementScore": 82,
+    "benchmarkComparison": "7 points above technology industry average",
+    "keyDrivers": [
+      "Technical challenge",
+      "Learning opportunities",
+      "Work-life balance"
+    ],
+    "improvementAreas": [
+      "Recognition programs",
+      "Career path clarity"
+    ]
+  },
+  "knowledgeManagementApproach": {
+    "primaryKnowledgeSharing": "Documentation-as-code in internal wiki",
+    "technicalDocumentation": "Mandatory for all systems and processes",
+    "knowledgeRetention": "Pair programming and cross-training on critical systems"
+  },
+  "performanceManagementSystem": {
+    "reviewCycle": "Quarterly objectives with annual in-depth review",
+    "performanceCriteria": [
+      "Technical contribution",
+      "Knowledge sharing",
+      "Innovation",
+      "Reliability"
+    ],
+    "feedbackMechanisms": [
+      "360-degree feedback",
+      "Continuous peer feedback platform"
+    ]
+  },
+  "workforceFlexibility": {
+    "workModel": "Hybrid with 2 core in-office days",
+    "geographicDistribution": "65% headquarters, 35% distributed",
+    "adaptabilityScore": "High - demonstrated ability to reorganize for strategic initiatives"
+  },
+  "diversityMetrics": {
+    "genderDiversity": "28% women in engineering roles vs. industry average of 25%",
+    "ethnicDiversity": "Representation matches regional demographics with 15% underrepresented minorities",
+    "inclusionScore": 76,
+    "diversityGoals": "35% women in engineering roles by 2026, 20% underrepresented minorities"
+  },
+  "strategicAlignment": {
+    "alignmentDescription": "Engineering workforce directly enables product innovation strategy and technical excellence pillar",
+    "strategicObjectives": [
+      {
+        "objectiveID": "STRAT-PROD-2025-01",
+        "alignmentDescription": "Technical capabilities support cloud-native product transformation"
+      },
+      {
+        "objectiveID": "STRAT-INNO-2025-02",
+        "alignmentDescription": "AI/ML skills enable new product features and capabilities"
+      }
+    ],
+    "alignmentStrength": "high"
+  },
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-DEV-001",
+      "description": "Software development capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Technology",
+      "entityID": "TECH-CLOUD-002",
+      "description": "Cloud platform expertise"
+    }
+  ],
+  "relatedPeopleElements": [
+    {
+      "elementID": "CULT-INNO-001",
+      "relationshipType": "enables",
+      "relationshipStrength": 5,
+      "description": "Innovation culture element supports engineering excellence"
+    },
+    {
+      "elementID": "COMP-ENG-001",
+      "relationshipType": "defines",
+      "relationshipStrength": 5,
+      "description": "Engineering competency framework defines skill requirements"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "title": "Regional Political Consolidation Campaign",
+  "description": "Multi-year campaign to consolidate political control across regional administrative districts",
+  "purpose": "Accumulate political power and establish dominant influence in regional governance",
+  "owner": "Regional Party Chairman",
+  "orgUnitTitle": "Regional Political Committee",
+  "strategyCategory": "Political",
+  "strategyType": "Accumulation",
+  "strategicFocus": "Power Accumulation",
+  "timeHorizon": "Medium-term (2-3 years)",
+  "scopeLevel": "Regional",
+  "objectives": "Control 75% of district councils, secure 60% of popular vote, place allies in key positions",
+  "keyActivities": "Coalition building, candidate recruitment, media campaigns, grassroots organizing",
+  "investmentLevel": "Medium Investment",
+  "riskCategories": [
+    "Political",
+    "Reputational",
+    "Organizational"
+  ]
+}

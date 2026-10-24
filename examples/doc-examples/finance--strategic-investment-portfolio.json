@@ -1,0 +1,119 @@
+{
+  "financeID": "FIN-INV-001",
+  "title": "Strategic Investment Portfolio",
+  "description": "The corporate strategic investment portfolio supporting long-term growth initiatives and capability development across the enterprise.",
+  "financeDefinition": "Strategic financial resources allocated to initiatives that drive future revenue growth, market expansion, and competitive differentiation.",
+  "orgUnitTitle": "Corporate Finance Division",
+  "orgUnitRoles": [
+    "Chief Financial Officer",
+    "Investment Director",
+    "Financial Analyst"
+  ],
+  "totalValue": {
+    "currentValue": "$275 million",
+    "currency": "USD",
+    "fiscalYear": "2025",
+    "projectedValue": "$350 million",
+    "projectionYear": "2027",
+    "valuationMethod": "Discounted cash flow analysis with strategic value adjustment"
+  },
+  "accountingTreatment": "capital",
+  "fiscalPeriod": {
+    "startDate": "2025-01-01",
+    "endDate": "2025-12-31",
+    "periodType": "annual"
+  },
+  "governanceModel": "Investment Review Board with quarterly funding gate reviews and annual strategic portfolio realignment",
+  "complianceRequirements": [
+    "SOX Section 404 controls for investment authorization",
+    "Capital allocation policy compliance",
+    "Board reporting requirements for investments over $10M"
+  ],
+  "approvalAuthority": [
+    "Investment Committee (<$5M)",
+    "Executive Committee ($5M-$25M)",
+    "Board of Directors (>$25M)"
+  ],
+  "marketInfluences": [
+    "Rising interest rates affecting investment hurdle rates",
+    "Industry consolidation creating acquisition opportunities",
+    "Emerging technology disruption requiring defensive investments"
+  ],
+  "regulatoryFactors": [
+    "Capital adequacy requirements",
+    "SEC reporting obligations for material investments",
+    "Environmental compliance considerations for infrastructure investments"
+  ],
+  "economicConditions": [
+    "Moderate economic growth forecast (2.7%)",
+    "Increasing wage inflation pressures",
+    "Supply chain constraints affecting capital project timelines"
+  ],
+  "strategicPriority": {
+    "priorityLevel": "high",
+    "description": "Investment portfolio directly enables our three strategic pillars of digital transformation, market expansion, and operational excellence"
+  },
+  "riskProfile": {
+    "riskLevel": "moderate",
+    "description": "Balanced portfolio with mix of high-risk/high-return initiatives and foundational lower-risk investments",
+    "mitigationStrategies": [
+      "Portfolio diversification across technology, market, and product investments",
+      "Stage-gated funding model with defined exit criteria",
+      "Quarterly risk reassessment with portfolio rebalancing"
+    ]
+  },
+  "performanceIndicators": [
+    {
+      "metricName": "Portfolio Return on Investment",
+      "metricDescription": "Blended financial return across all active investments",
+      "currentValue": "16.8%",
+      "targetValue": "18.5%",
+      "unit": "Percentage"
+    },
+    {
+      "metricName": "Strategic Alignment Score",
+      "metricDescription": "Weighted measure of portfolio alignment with strategic objectives",
+      "currentValue": "4.2",
+      "targetValue": "4.5",
+      "unit": "Score (1-5)"
+    },
+    {
+      "metricName": "Investment Execution Index",
+      "metricDescription": "Composite metric of on-time, on-budget delivery of investment outcomes",
+      "currentValue": "78%",
+      "targetValue": "85%",
+      "unit": "Percentage"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependencyType": "Enabler",
+      "domainType": "Strategy",
+      "entityID": "STRAT-2025-01",
+      "description": "Corporate Growth Strategy 2025-2030"
+    },
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-FINPLAN-001",
+      "description": "Financial Planning and Analysis capability"
+    }
+  ],
+  "relatedFinancialElements": [
+    {
+      "elementID": "FIN-BUD-002",
+      "relationshipType": "allocates to",
+      "relationshipStrength": 4
+    },
+    {
+      "elementID": "FIN-FUND-003",
+      "relationshipType": "funds",
+      "relationshipStrength": 5
+    }
+  ],
+  "improvementOpportunities": [
+    "Enhanced predictive analytics for investment outcome forecasting",
+    "Integration of ESG metrics into investment evaluation criteria",
+    "Streamlined investment approval process for high-potential initiatives"
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "intelligenceID": "ORGINT-004",
+  "title": "Insider Threat Behavioural Monitoring: Weekly Report",
+  "description": "Early detection report on anomalous behavioural indicators within highrisk departments, focused on preventing data leakage and fraud incidents.",
+  "purpose": "Support the protection of sensitive intellectual property and reduce internal fraud risks.",
+  "owner": "Chief Security Intelligence Analyst",
+  "orgUnitTitle": "Enterprise Security Operations Centre (ESOC)",
+  "sources": [
+    {
+      "sourceName": "Endpoint User Activity Monitoring System",
+      "sourceType": "Surveillance systems",
+      "reliabilityRating": "High",
+      "collectionMethod": "Sensor-based collection",
+      "cost": "$35,000/year licensing fee",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "HR Access Control Logs",
+      "sourceType": "Internal monitoring",
+      "reliabilityRating": "High",
+      "collectionMethod": "Sensor-based collection",
+      "cost": "Internal resource cost only",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Anonymous Whistleblower Hotline Reports",
+      "sourceType": "Corporate whistleblowers",
+      "reliabilityRating": "Variable",
+      "collectionMethod": "Manual investigation",
+      "cost": "Internal case management resource",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Insider threat monitoring",
+  "frequency": "Weekly",
+  "legalAndEthicalConsiderations": "Strict alignment to employee monitoring policies, privacy by design, and regulatory employment protections.",
+  "confidentialityLevel": "Restricted",
+  "performanceIndicators": [
+    "Time-to-intervention reduced from 15 to 5 working days",
+    "Incident containment effectiveness rate increased by 60%"
+  ],
+  "risks": [
+    "False positives leading to reputational harm or employee dissatisfaction",
+    "Regulatory scrutiny around employee privacy rights"
+  ],
+  "improvementOpportunities": [
+    "Introduce AI behavioural baselining to reduce false positives",
+    "Expand early-warning signals with passive sentiment analysis"
+  ],
+  "strategicAlignment": "Supports zero internal data breach objective under Corporate Security Strategy 2025.",
+  "applications": [
+    {
+      "applicationArea": "Fraud prevention",
+      "organisationalDecisionsInfluenced": "Suspicious activity investigations, internal access rights management, training and cultural interventions.",
+      "intelligenceConsumers": [
+        "Chief Information Security Officer",
+        "Head of Corporate Ethics",
+        "Head of Human Resources"
+      ],
+      "measurableOutcomes": [
+        "Reduction in unreported incidents by 50%",
+        "Decrease in fraudulent account access events to zero per quarter"
+      ]
+    }
+  ]
+}

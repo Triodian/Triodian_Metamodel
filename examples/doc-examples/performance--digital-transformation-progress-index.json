@@ -1,0 +1,30 @@
+{
+  "title": "Digital Transformation Progress Index",
+  "description": "Composite index measuring progress across digital transformation initiatives, technology adoption, and organizational digital maturity",
+  "purpose": "Track and accelerate digital transformation efforts to ensure competitive advantage and operational modernization",
+  "owner": "Chief Digital Officer",
+  "orgUnitTitle": "Digital Transformation Office",
+  "performanceCategory": "Innovation Performance",
+  "performanceType": "Index",
+  "measurementLevel": "Enterprise",
+  "metricClass": "Leading Indicator",
+  "inputs": "Project completion data, technology adoption metrics, employee digital skills assessments, system modernization progress",
+  "outputs": "Quarterly transformation reports, digital maturity assessments, technology roadmap updates",
+  "frequency": "Quarterly",
+  "targets": "Target: 85/100 index score, Current: 72/100, Improvement target: 5 points quarterly",
+  "dataSource": "Project management systems, HR systems, IT asset management, digital adoption platforms",
+  "automation": "Semi-Automated",
+  "maturityLevel": "Developing",
+  "innovation": "AI-powered progress tracking, predictive milestone analysis, automated skills gap identification",
+  "businessValue": "Accelerated transformation timeline, $3M in efficiency gains, improved competitive positioning",
+  "performanceKPIs": [
+    {
+      "title": "Employee Digital Skills Score",
+      "description": "Average digital competency score across all employees",
+      "kpiType": "Input KPI",
+      "priority": "Medium",
+      "frequency": "Quarterly",
+      "targets": "Achieve 80% proficiency score across all staff"
+    }
+  ]
+}

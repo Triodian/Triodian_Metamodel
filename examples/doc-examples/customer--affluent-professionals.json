@@ -1,0 +1,79 @@
+{
+  "customerID": "CUST-SEG-001",
+  "title": "Affluent Professionals",
+  "description": "High-income professionals with complex financial needs and limited time",
+  "customerSegmentType": "value-based",
+  "orgUnitTitle": "Premium Banking Division",
+  "orgUnitRoles": [
+    "Segment Manager",
+    "Relationship Banking Lead",
+    "Product Specialist"
+  ],
+  "customerNeeds": [
+    "Time-efficient financial management",
+    "Wealth preservation and growth",
+    "Personalized advisory services",
+    "Seamless digital and in-person experiences"
+  ],
+  "customerValue": "Comprehensive financial management with personalized service and premium digital capabilities",
+  "acquisitionChannels": [
+    "Professional referrals",
+    "Executive events",
+    "Digital targeting"
+  ],
+  "retentionStrategies": [
+    "Dedicated advisor",
+    "Quarterly portfolio reviews",
+    "Premium service level"
+  ],
+  "customerLifecycleStage": "growth",
+  "customerLifetimeValue": {
+    "value": 25000,
+    "currency": "USD",
+    "timespan": "Annual",
+    "calculationMethod": "Risk-adjusted revenue minus servicing costs"
+  },
+  "performanceIndicators": [
+    {
+      "metricName": "Relationship Depth",
+      "metricDescription": "Average number of products per customer",
+      "currentValue": "3.7",
+      "targetValue": "4.5",
+      "unit": "Products"
+    },
+    {
+      "metricName": "Net Promoter Score",
+      "metricDescription": "Likelihood to recommend to others",
+      "currentValue": "42",
+      "targetValue": "60",
+      "unit": "NPS Points"
+    }
+  ],
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-001",
+      "description": "Wealth Advisory Services capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Service",
+      "entityID": "SVC-003",
+      "description": "Portfolio Management Service"
+    }
+  ],
+  "relatedCustomerSegments": [
+    {
+      "segmentID": "CUST-SEG-003",
+      "relationshipType": "progression",
+      "relationshipStrength": 4
+    }
+  ],
+  "improvementOpportunities": [
+    "Enhanced mobile investment capabilities",
+    "Proactive life event planning",
+    "Integrated business and personal banking"
+  ],
+  "strategicAlignment": "Core focus segment for 2025 growth strategy, driving 40% of total profits"
+}

@@ -1,0 +1,58 @@
+{
+  "intelligenceID": "ORGINT-008",
+  "title": "Government Advisory: High-Risk Cyber Threat Environment Notification",
+  "description": "Confidential advisory bulletin from national intelligence agency highlighting increased threat activity from specific hostile nation-state actors targeting critical infrastructure sectors.",
+  "purpose": "Inform board-level cyber security posture adjustments and operational contingency planning in response to rising external cyber threats.",
+  "owner": "Chief Security Officer",
+  "orgUnitTitle": "Corporate Cybersecurity and Risk Office",
+  "sources": [
+    {
+      "sourceName": "Australian Signals Directorate Cyber Bulletin",
+      "sourceType": "Government intelligence",
+      "reliabilityRating": "High",
+      "collectionMethod": "Third-party acquisition",
+      "cost": "No direct cost",
+      "complianceStatus": "Compliant"
+    },
+    {
+      "sourceName": "Joint Industry-Government Threat Sharing Program",
+      "sourceType": "Public data",
+      "reliabilityRating": "High",
+      "collectionMethod": "Manual research",
+      "cost": "Included in membership fees",
+      "complianceStatus": "Compliant"
+    }
+  ],
+  "intelligenceType": "Agency intelligence feed",
+  "frequency": "Event-driven",
+  "legalAndEthicalConsiderations": "Restricted internal dissemination per agency guidelines; no redistribution permitted.",
+  "confidentialityLevel": "Restricted",
+  "performanceIndicators": [
+    "Zero successful external cybersecurity breaches during elevated alert periods",
+    "Mean time to threat response reduced by 50%"
+  ],
+  "risks": [
+    "Potential for over-response to non-specific advisories",
+    "Risk of internal leaks of restricted advisory content"
+  ],
+  "improvementOpportunities": [
+    "Enhance internal cross-functional threat escalation workflows",
+    "Develop pre-approved operational responses aligned to threat escalation levels"
+  ],
+  "strategicAlignment": "Supports business continuity and cyber resilience targets under Enterprise Risk Framework 2025.",
+  "applications": [
+    {
+      "applicationArea": "Risk management",
+      "organisationalDecisionsInfluenced": "Crisis simulation drills, temporary service isolation protocols, executive briefings on external threat levels.",
+      "intelligenceConsumers": [
+        "Board Risk Committee",
+        "Chief Information Security Officer",
+        "Regional Operations Managers"
+      ],
+      "measurableOutcomes": [
+        "Enhanced operational uptime during external threat campaigns",
+        "50% reduction in threat response cycle times"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "supplyChainID": "SC-MFG-001",
+  "title": "Global Electronics Manufacturing Supply Chain",
+  "description": "End-to-end supply chain for consumer electronics manufacturing, including component sourcing, assembly operations, distribution networks, and aftermarket service fulfillment.",
+  "supplyChainCategory": "manufacturing",
+  "orgUnitTitle": "Global Supply Chain Management",
+  "orgUnitRoles": [
+    "Chief Supply Chain Officer",
+    "Director of Global Sourcing",
+    "Logistics Operations Manager"
+  ],
+  "supplyChainScope": "enterprise",
+  "geographicCoverage": {
+    "regions": [
+      "North America",
+      "Europe",
+      "Asia-Pacific",
+      "Southeast Asia"
+    ],
+    "countries": [
+      "United States",
+      "China",
+      "Vietnam",
+      "Germany",
+      "Malaysia",
+      "Mexico"
+    ],
+    "coverageType": "global",
+    "expansionPlans": "Evaluating new manufacturing hub in Eastern Europe by 2026"
+  },
+  "locationStrategy": {
+    "strategyType": "proximity-to-supply",
+    "strategyDescription": "Primary manufacturing facilities positioned near key semiconductor and component suppliers with regional distribution centers close to major markets",
+    "evaluationCriteria": [
+      "Supplier ecosystem density",
+      "Labor expertise",
+      "Logistics infrastructure",
+      "Tax incentives"
+    ]
+  },
+  "leadTime": {
+    "endToEndLeadTime": "45-60 days",
+    "componentLeadTimes": [
+      {
+        "componentName": "Semiconductor procurement",
+        "duration": "30-45 days",
+        "variability": "High - affected by global shortages"
+      },
+      {
+        "componentName": "Final assembly",
+        "duration": "7 days",
+        "variability": "Low"
+      },
+      {
+        "componentName": "Distribution to regional centers",
+        "duration": "5-10 days",
+        "variability": "Medium - affected by port congestion"
+      }
+    ],
+    "leadTimeReliability": "72% on-time delivery to commitment dates",
+    "improvementTargets": "Reduce end-to-end lead time to 35 days by Q4 2026"
+  },
+  "volumeCapacity": {
+    "normalCapacity": "1.2 million units per month",
+    "peakCapacity": "1.5 million units per month",
+    "unitOfMeasure": "Finished device units",
+    "utilizationRate": "83% average utilization",
+    "capacityConstraints": [
+      "Semiconductor availability",
+      "Skilled labor in Vietnam facility",
+      "Q4 shipping capacity"
+    ],
+    "expansionPlans": "15% capacity increase planned for Vietnam facility in 2026"
+  },
+  "costStructure": {
+    "totalCost": "$425M annual supply chain operational cost",
+    "costComponents": [
+      {
+        "componentName": "Materials and components",
+        "amount": "$312M",
+        "percentage": 73.4
+      },
+      {
+        "componentName": "Manufacturing labor",
+        "amount": "$48M",
+        "percentage": 11.3
+      },
+      {
+        "componentName": "Logistics and transportation",
+        "amount": "$36M",
+        "percentage": 8.5
+      },
+      {
+        "componentName": "Warehousing and inventory",
+        "amount": "$19M",
+        "percentage": 4.5
+      },
+      {
+        "componentName": "Supply chain management",
+        "amount": "$10M",
+        "percentage": 2.3
+      }
+    ],
+    "costTrends": "Component costs decreasing 3% annually, logistics costs increasing 7% annually",
+    "costReductionTargets": "8% total cost reduction target over next 24 months"
+  },
+  "flexibilityRating": {
+    "overallRating": "moderate",
+    "volumeFlexibility": "high",
+    "mixFlexibility": "moderate",
+    "newProductFlexibility": "low",
+    "improvementFocus": "Enhancing new product introduction capabilities through modular manufacturing processes"
+  },
+  "resilienceRating": {
+    "overallRating": "moderate",
+    "redundancyLevel": "low",
+    "diversificationLevel": "moderate",
+    "visibilityLevel": "high",
+    "recoveryCapability": "moderate",
+    "resilienceInvestments": [
+      "Secondary supplier qualification program",
+      "Regional inventory buffers",
+      "Multi-modal transportation capability"
+    ]
+  },
+  "riskProfile": {
+    "overallRiskLevel": "high",
+    "keyRiskFactors": [
+      {
+        "factorName": "Semiconductor supply constraints",
+        "riskLevel": "high",
+        "mitigationApproach": "Long-term contracts, strategic inventory, supplier diversification"
+      },
+      {
+        "factorName": "Geopolitical disruption in Asia",
+        "riskLevel": "high",
+        "mitigationApproach": "Manufacturing footprint diversification, scenario planning"
+      },
+      {
+        "factorName": "Ocean freight capacity and pricing volatility",
+        "riskLevel": "moderate",
+        "mitigationApproach": "Multi-modal options, contract diversification, selective air freight"
+      }
+    ],
+    "riskMonitoringApproach": "Monthly risk review with quarterly simulation and mitigation updates"
+  },
+  "sustainabilityRating": {
+    "overallRating": "moderate",
+    "carbonFootprint": "187,000 metric tons CO2e annually",
+    "wasteReduction": "72% manufacturing waste diverted from landfill",
+    "socialResponsibility": "Tier 1 suppliers 100% audited for labor practices",
+    "sustainabilityInitiatives": [
+      "Renewable energy transition at owned facilities",
+      "Packaging redesign program",
+      "Scope 3 emissions tracking implementation"
+    ],
+    "sustainabilityReporting": "Annual sustainability report with science-based targets"
+  },
+  "environmentalImpact": {
+    "carbonEmissions": "187,000 metric tons CO2e annually",
+    "waterUsage": "450 million gallons annually",
+    "wasteGeneration": "5,200 tons annually",
+    "resourceConsumption": "Critical minerals: 860 tons annually",
+    "environmentalCompliance": "100% compliance with regulated standards, 85% compliance with voluntary standards",
+    "reductionTargets": [
+      "30% carbon reduction by 2028",
+      "20% water reduction by 2027",
+      "Zero waste to landfill by 2029"
+    ]
+  },
+  "qualityMetrics": [
+    {
+      "metricName": "First Pass Yield",
+      "metricDescription": "Percentage of units passing quality testing on first attempt",
+      "currentValue": "94.6%",
+      "targetValue": "97%",
+      "trend": "improving"
+    },
+    {
+      "metricName": "Defect Rate",
+      "metricDescription": "Defects per million opportunities",
+      "currentValue": "350 DPMO",
+      "targetValue": "200 DPMO",
+      "trend": "improving"
+    },
+    {
+      "metricName": "Customer Return Rate",
+      "metricDescription": "Percentage of shipped products returned due to quality issues",
+      "currentValue": "1.8%",
+      "targetValue": "1.0%",
+      "trend": "stable"
+    }
+  ],
+  "technologyEnablers": [
+    {
+      "technologyName": "Supply Chain Control Tower",
+      "technologyPurpose": "End-to-end visibility and exception management",
+      "implementationStatus": "operational",
+      "businessImpact": "45% reduction in supply disruption resolution time"
+    },
+    {
+      "technologyName": "Digital Twin Simulation",
+      "technologyPurpose": "Network design and scenario planning",
+      "implementationStatus": "implementing",
+      "businessImpact": "Expected 12% improvement in network efficiency"
+    },
+    {
+      "technologyName": "Machine Learning Demand Forecasting",
+      "technologyPurpose": "Improved demand prediction accuracy",
+      "implementationStatus": "operational",
+      "businessImpact": "18% reduction in forecast error"
+    }
+  ],
+  "digitalMaturity": {
+    "overallMaturity": "defined",
+    "dataVisibility": "advanced",
+    "processAutomation": "developing",
+    "advancedAnalytics": "defined",
+    "digitalRoadmap": "Digital supply chain transformation program with focus on process automation and predictive analytics through 2027"
+  },
+  "maturityLevel": {
+    "overallMaturity": "defined",
+    "processMaturity": "managed",
+    "performanceManagement": "defined",
+    "maturityAssessmentDate": "2025-02-15"
+  },
+  "improvementOpportunities": [
+    {
+      "opportunityName": "Supplier Collaboration Platform",
+      "opportunityDescription": "Implementation of real-time collaboration tools for design and planning with key suppliers",
+      "potentialImpact": "high",
+      "implementationComplexity": "medium",
+      "status": "planning"
+    },
+    {
+      "opportunityName": "New Product Introduction Process Redesign",
+      "opportunityDescription": "Streamlining of supply chain integration in NPI to reduce time-to-market",
+      "potentialImpact": "high",
+      "implementationComplexity": "high",
+      "status": "evaluating"
+    },
+    {
+      "opportunityName": "Logistics Network Optimization",
+      "opportunityDescription": "Comprehensive review and redesign of global distribution network",
+      "potentialImpact": "medium",
+      "implementationComplexity": "high",
+      "status": "planning"
+    }
+  ],
+  "strategicImportance": {
+    "importanceLevel": "critical",
+    "strategicContribution": "Supply chain capabilities are central to product availability, cost competitiveness, and sustainability goals",
+    "alignmentWithObjectives": [
+      {
+        "objectiveID": "SO-2025-02",
+        "alignmentDescription": "Supply chain digitalization supports corporate digital transformation objective"
+      },
+      {
+        "objectiveID": "SO-2025-04",
+        "alignmentDescription": "Sustainability initiatives in supply chain support corporate ESG objectives"
+      }
+    ]
+  },
+  "competitiveAdvantage": {
+    "advantageLevel": "advantage",
+    "advantageSources": [
+      "Advanced visibility technology",
+      "Supplier relationship depth",
+      "Multi-region manufacturing flexibility"
+    ],
+    "competitiveBenchmarking": "Leading in technology adoption and visibility, lagging in new product flexibility compared to key competitors",
+    "sustainabilityOfAdvantage": "Technology advantage requires ongoing investment, relationship advantage sustainable with continued engagement"
+  },
+  "dependencies": [
+    {
+      "dependencyType": "Critical",
+      "domainType": "Capability",
+      "entityID": "CAP-SC-003",
+      "description": "Advanced procurement capability"
+    },
+    {
+      "dependencyType": "Important",
+      "domainType": "Technology",
+      "entityID": "TECH-007",
+      "description": "Supply chain planning and control tower systems"
+    }
+  ],
+  "relatedSupplyChainElements": [
+    {
+      "elementID": "SC-MFG-002",
+      "relationshipType": "upstream",
+      "relationshipStrength": 4,
+      "description": "Component supplier network for semiconductors"
+    },
+    {
+      "elementID": "SC-LOG-001",
+      "relationshipType": "downstream",
+      "relationshipStrength": 5,
+      "description": "Global distribution network for finished goods"
+    }
+  ],
+  "governanceModel": {
+    "governanceStructure": "Cross-functional Supply Chain Leadership Council with regional representation",
+    "decisionRights": "Network design decisions centralized, execution decisions regionalized",
+    "performanceReviewProcess": "Monthly operational reviews, quarterly strategic reviews",
+    "continuousImprovement": "Dedicated supply chain excellence team with agile improvement methodology"
+  }
+}

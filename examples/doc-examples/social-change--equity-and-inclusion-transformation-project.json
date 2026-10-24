@@ -1,0 +1,44 @@
+{
+  "name": "Equity and Inclusion Transformation Project",
+  "description": "Consultant-facilitated comprehensive organizational change to address systemic inequities",
+  "activityType": "Consulting Project",
+  "changeScope": "Organization-wide",
+  "changeAgentType": "External Consultant",
+  "institutionalContext": "Healthcare System",
+  "specificActions": [
+    "Organizational Assessment",
+    "Training Programs",
+    "Policy Reform"
+  ],
+  "leadingOrganizations": [
+    "Social Justice Consultancy",
+    "Internal Equity Committee"
+  ],
+  "systemicProblem": "Racial and gender inequities in healthcare delivery and employment",
+  "primaryAffectedGroups": [
+    "Patients of color",
+    "Female employees",
+    "LGBTQ+ staff and patients"
+  ],
+  "changeMethodology": "Organizational Development",
+  "tactics": [
+    {
+      "tacticType": "Consulting Intervention",
+      "description": "Comprehensive equity audit and transformation planning",
+      "channel": "Executive workshops and staff assessments"
+    },
+    {
+      "tacticType": "Training and Education",
+      "description": "Anti-bias training and cultural competency development",
+      "channel": "Organizational training programs"
+    }
+  ],
+  "resourceSource": "Consulting Contract",
+  "timeline": "2-year implementation",
+  "successMetrics": [
+    "Equity indicators",
+    "Patient satisfaction by demographics",
+    "Employee retention rates"
+  ],
+  "sustainabilityPlan": "Training programs and ongoing monitoring"
+}
