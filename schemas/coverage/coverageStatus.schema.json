@@ -70,5 +70,6 @@
     "expectedCoverageLevel",
     "coverageGap",
     "lastEvaluatedAt"
-  ]
+  ],
+  "additionalProperties": false
 }

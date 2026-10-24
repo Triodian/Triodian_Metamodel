@@ -190,7 +190,8 @@
         "required": [
           "alternativeDescription"
         ],
-        "description": "A specific alternative that was considered but not selected"
+        "description": "A specific alternative that was considered but not selected",
+        "additionalProperties": false
       },
       "description": "Other strategic options that were evaluated but not selected"
     },
@@ -334,7 +335,8 @@
       "required": [
         "positioningDescription"
       ],
-      "description": "How this rationale advances competitive positioning"
+      "description": "How this rationale advances competitive positioning",
+      "additionalProperties": false
     },
     "dateCreated": {
       "type": "string",
@@ -457,7 +459,8 @@
           "description": "Expected competitive response"
         }
       },
-      "description": "How this rationale affects competitive position"
+      "description": "How this rationale affects competitive position",
+      "additionalProperties": false
     },
     "marketRisks": {
       "type": "array",
@@ -488,7 +491,8 @@
         "required": [
           "riskDescription"
         ],
-        "description": "A specific market risk associated with this rationale"
+        "description": "A specific market risk associated with this rationale",
+        "additionalProperties": false
       },
       "description": "Market risks associated with this rationale"
     },
@@ -539,7 +543,8 @@
           "description": "Timeframe for the financial impact"
         }
       },
-      "description": "Assessment of financial implications"
+      "description": "Assessment of financial implications",
+      "additionalProperties": false
     },
     "financialRisks": {
       "type": "array",
@@ -568,7 +573,8 @@
         "required": [
           "riskDescription"
         ],
-        "description": "A specific financial risk associated with this rationale"
+        "description": "A specific financial risk associated with this rationale",
+        "additionalProperties": false
       },
       "description": "Financial risks associated with this rationale"
     },
@@ -639,7 +645,8 @@
           "description": "Confidence in this assessment (1-5)"
         }
       },
-      "description": "Assessment of risk implications"
+      "description": "Assessment of risk implications",
+      "additionalProperties": false
     },
     "supplyChainIDs": {
       "type": "array",
@@ -705,7 +712,8 @@
           "description": "Timeframe for impact"
         }
       },
-      "description": "Assessment of supply chain implications"
+      "description": "Assessment of supply chain implications",
+      "additionalProperties": false
     },
     "innovationIDs": {
       "type": "array",
@@ -753,7 +761,8 @@
           "description": "Impact on innovation timelines"
         }
       },
-      "description": "Assessment of innovation implications"
+      "description": "Assessment of innovation implications",
+      "additionalProperties": false
     },
     "sustainabilityIDs": {
       "type": "array",
@@ -794,7 +803,8 @@
           "description": "Relevance to sustainability compliance requirements"
         }
       },
-      "description": "Assessment of sustainability implications"
+      "description": "Assessment of sustainability implications",
+      "additionalProperties": false
     },
     "peopleIDs": {
       "type": "array",
@@ -839,7 +849,8 @@
           "description": "Timeframe for people changes"
         }
       },
-      "description": "Assessment of workforce implications"
+      "description": "Assessment of workforce implications",
+      "additionalProperties": false
     },
     "technologyIDs": {
       "type": "array",
@@ -880,7 +891,8 @@
           "description": "Timeframe for technology implementation"
         }
       },
-      "description": "Assessment of technology implications"
+      "description": "Assessment of technology implications",
+      "additionalProperties": false
     },
     "channelIDs": {
       "type": "array",
@@ -926,7 +938,9 @@
           "description": "Complexity of implementation"
         }
       },
-      "description": "Assessment of channel implications"
+      "description": "Assessment of channel implications",
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

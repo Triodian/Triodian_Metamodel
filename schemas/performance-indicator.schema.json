@@ -92,7 +92,8 @@
           "level",
           "value",
           "comparisonOperator"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "targetDate": {
@@ -143,7 +144,8 @@
           "type": "string",
           "description": "Explanation of the model's role or calculation logic"
         }
-      }
+      },
+      "additionalProperties": false
     },
     "dataSource": {
       "type": "string",
@@ -199,7 +201,8 @@
         "required": [
           "indicatorName",
           "description"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "potentialMetrics": {
@@ -242,7 +245,8 @@
         "required": [
           "metricName",
           "description"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "outcomeTimeframes": {
@@ -267,7 +271,8 @@
                 "type": "number",
                 "description": "Confidence level for this outcome (0-100%)"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "intermediateOutcomes": {
@@ -288,7 +293,8 @@
                 "type": "number",
                 "description": "Confidence level for this outcome (0-100%)"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "longTermOutcomes": {
@@ -309,7 +315,8 @@
                 "type": "number",
                 "description": "Confidence level for this outcome (0-100%)"
               }
-            }
+            },
+            "additionalProperties": false
           }
         },
         "catalyticEvents": {
@@ -335,10 +342,12 @@
                 "format": "date",
                 "description": "Estimated date when this event might occur"
               }
-            }
+            },
+            "additionalProperties": false
           }
         }
-      }
+      },
+      "additionalProperties": false
     },
     "measurement": {
       "type": "object",
@@ -384,7 +393,8 @@
             "required": [
               "component",
               "method"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "subjectiveComponents": {
@@ -423,7 +433,8 @@
             "required": [
               "component",
               "assessmentMethod"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "proxyComponents": {
@@ -463,7 +474,8 @@
             "required": [
               "component",
               "targetMeasure"
-            ]
+            ],
+            "additionalProperties": false
           }
         },
         "dataNormalization": {
@@ -482,12 +494,14 @@
               "type": "object",
               "description": "Parameters used in the normalization process"
             }
-          }
+          },
+          "additionalProperties": false
         }
       },
       "required": [
         "approachType"
-      ]
+      ],
+      "additionalProperties": false
     },
     "strategicAlignments": {
       "type": "array",
@@ -524,7 +538,8 @@
         "required": [
           "alignmentID",
           "alignmentType"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "statusHistory": {
@@ -560,7 +575,8 @@
         "required": [
           "date",
           "value"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "relatedIndicators": {
@@ -599,7 +615,8 @@
         "required": [
           "indicatorID",
           "relationshipType"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "stakeholderImpacts": {
@@ -633,7 +650,8 @@
         },
         "required": [
           "stakeholderID"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "lastUpdated": {
@@ -650,5 +668,6 @@
     "performanceIndicatorID",
     "title",
     "description"
-  ]
+  ],
+  "additionalProperties": false
 }

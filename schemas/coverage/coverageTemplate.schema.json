@@ -56,7 +56,8 @@
         "required": [
           "domain",
           "targetCoverageLevel"
-        ]
+        ],
+        "additionalProperties": false
       }
     },
     "createdBy": {
@@ -77,5 +78,6 @@
     "expectations",
     "createdBy",
     "createdAt"
-  ]
+  ],
+  "additionalProperties": false
 }

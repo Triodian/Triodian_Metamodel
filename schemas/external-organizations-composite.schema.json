@@ -28,5 +28,6 @@
         "$ref": "federated-governance-model.schema.json"
       }
     }
-  }
+  },
+  "additionalProperties": false
 }

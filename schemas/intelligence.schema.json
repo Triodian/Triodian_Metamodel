@@ -176,7 +176,8 @@
       "required": [
         "sourceName",
         "sourceType"
-      ]
+      ],
+      "additionalProperties": false
     },
     "intelligenceApplication": {
       "type": "object",
@@ -213,7 +214,9 @@
       },
       "required": [
         "applicationArea"
-      ]
+      ],
+      "additionalProperties": false
     }
-  }
+  },
+  "additionalProperties": false
 }

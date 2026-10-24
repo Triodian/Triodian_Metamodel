@@ -198,14 +198,14 @@
   },
   "dependencies": [
     {
-      "dependencyType": "Critical",
-      "domainType": "Capability",
+      "dependencyType": "critical",
+      "domainType": "capability",
       "entityID": "CAP-DIGITAL-003",
       "description": "Digital experience design capability"
     },
     {
-      "dependencyType": "Important",
-      "domainType": "Information",
+      "dependencyType": "important",
+      "domainType": "information",
       "entityID": "INFO-DATA-004",
       "description": "Customer behavior analytics"
     }
