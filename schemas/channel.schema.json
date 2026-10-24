@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/channel.schema.json",
   "title": "Channel Domain Schema",
   "description": "Schema for the Channel domain in the Triodian Metamodel, representing the methods, pathways, and networks through which an organization delivers its products and services to customers.",
   "type": "object",
@@ -511,15 +512,18 @@
           "properties": {
             "regions": {
               "type": "array",
+              "description": "Regions served",
               "items": {
                 "type": "string"
               }
             },
             "countries": {
-              "type": "number"
+              "type": "number",
+              "description": "Number of countries served"
             },
             "cities": {
-              "type": "number"
+              "type": "number",
+              "description": "Number of cities served"
             }
           },
           "additionalProperties": false
@@ -531,13 +535,16 @@
             "type": "object",
             "properties": {
               "centerName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the distribution center"
               },
               "location": {
-                "type": "string"
+                "type": "string",
+                "description": "Location of the distribution center"
               },
               "capacity": {
-                "type": "string"
+                "type": "string",
+                "description": "Capacity of the distribution center"
               }
             },
             "additionalProperties": false
@@ -550,13 +557,16 @@
             "type": "object",
             "properties": {
               "modeName": {
-                "type": "string"
+                "type": "string",
+                "description": "Transportation mode, e.g. road, rail, air or sea"
               },
               "percentage": {
-                "type": "number"
+                "type": "number",
+                "description": "Share of volume carried by this mode, as a percentage"
               },
               "costPerUnit": {
-                "type": "string"
+                "type": "string",
+                "description": "Cost per unit shipped by this mode"
               }
             },
             "additionalProperties": false
@@ -567,13 +577,16 @@
           "description": "Throughput capability",
           "properties": {
             "totalCapacity": {
-              "type": "string"
+              "type": "string",
+              "description": "Total throughput capacity"
             },
             "utilizationRate": {
-              "type": "string"
+              "type": "string",
+              "description": "Share of capacity in use"
             },
             "peakCapacity": {
-              "type": "string"
+              "type": "string",
+              "description": "Maximum throughput at peak"
             }
           },
           "additionalProperties": false
@@ -585,13 +598,16 @@
             "type": "object",
             "properties": {
               "metricName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the service level metric"
               },
               "target": {
-                "type": "string"
+                "type": "string",
+                "description": "Target value"
               },
               "actual": {
-                "type": "string"
+                "type": "string",
+                "description": "Actual value"
               }
             },
             "additionalProperties": false
@@ -602,10 +618,12 @@
           "description": "Fulfillment time",
           "properties": {
             "averageLeadTime": {
-              "type": "string"
+              "type": "string",
+              "description": "Average time from order to fulfilment"
             },
             "variability": {
-              "type": "string"
+              "type": "string",
+              "description": "Variation in lead time"
             }
           },
           "additionalProperties": false
@@ -615,13 +633,16 @@
           "description": "Cost structure",
           "properties": {
             "totalAnnualCost": {
-              "type": "string"
+              "type": "string",
+              "description": "Total annual cost of the network"
             },
             "fixedCosts": {
-              "type": "number"
+              "type": "number",
+              "description": "Fixed costs"
             },
             "variableCosts": {
-              "type": "number"
+              "type": "number",
+              "description": "Variable costs"
             }
           },
           "additionalProperties": false
@@ -631,7 +652,8 @@
           "description": "Adaptability",
           "properties": {
             "scalingCapability": {
-              "type": "string"
+              "type": "string",
+              "description": "Ability to scale capacity up or down"
             }
           },
           "additionalProperties": false
@@ -641,10 +663,12 @@
           "description": "Disruption resistance",
           "properties": {
             "riskAssessment": {
-              "type": "string"
+              "type": "string",
+              "description": "Assessment of disruption risk"
             },
             "backupCapability": {
-              "type": "string"
+              "type": "string",
+              "description": "Backup or redundancy available if disrupted"
             }
           },
           "additionalProperties": false
@@ -656,10 +680,12 @@
             "type": "object",
             "properties": {
               "technologyName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the enabling technology"
               },
               "maturityLevel": {
-                "type": "string"
+                "type": "string",
+                "description": "Maturity of the technology"
               }
             },
             "additionalProperties": false
@@ -671,12 +697,14 @@
           "properties": {
             "focusAreas": {
               "type": "array",
+              "description": "Areas the optimization focuses on",
               "items": {
                 "type": "string"
               }
             },
             "expectedOutcomes": {
               "type": "array",
+              "description": "Outcomes expected from the optimization",
               "items": {
                 "type": "string"
               }
@@ -718,10 +746,12 @@
           "description": "Technical approach",
           "properties": {
             "architectureType": {
-              "type": "string"
+              "type": "string",
+              "description": "Type of integration architecture, e.g. API-led or event-driven"
             },
             "dataIntegrationApproach": {
-              "type": "string"
+              "type": "string",
+              "description": "How data is integrated across channels"
             }
           },
           "additionalProperties": false
@@ -732,12 +762,14 @@
           "properties": {
             "impactAreas": {
               "type": "array",
+              "description": "Aspects of customer experience affected",
               "items": {
                 "type": "string"
               }
             },
             "customerFeedback": {
-              "type": "string"
+              "type": "string",
+              "description": "Customer feedback on the integration"
             }
           },
           "additionalProperties": false
@@ -749,13 +781,16 @@
             "type": "object",
             "properties": {
               "dataType": {
-                "type": "string"
+                "type": "string",
+                "description": "Type of data shared"
               },
               "sharingMethod": {
-                "type": "string"
+                "type": "string",
+                "description": "How the data is shared"
               },
               "privacyControls": {
-                "type": "string"
+                "type": "string",
+                "description": "Privacy controls applied to the shared data"
               }
             },
             "additionalProperties": false
@@ -768,10 +803,12 @@
             "type": "object",
             "properties": {
               "processName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the synchronized process"
               },
               "synchronizationMethod": {
-                "type": "string"
+                "type": "string",
+                "description": "How the process is kept synchronized across channels"
               }
             },
             "additionalProperties": false
@@ -784,13 +821,16 @@
             "type": "object",
             "properties": {
               "platformName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the platform"
               },
               "vendorName": {
-                "type": "string"
+                "type": "string",
+                "description": "Vendor of the platform"
               },
               "implementationStatus": {
-                "type": "string"
+                "type": "string",
+                "description": "Implementation status of the platform"
               }
             },
             "additionalProperties": false
@@ -803,13 +843,16 @@
             "type": "object",
             "properties": {
               "challengeType": {
-                "type": "string"
+                "type": "string",
+                "description": "Kind of challenge"
               },
               "severityLevel": {
-                "type": "string"
+                "type": "string",
+                "description": "Severity of the challenge"
               },
               "resolutionApproach": {
-                "type": "string"
+                "type": "string",
+                "description": "How the challenge is being resolved"
               }
             },
             "additionalProperties": false
@@ -822,16 +865,20 @@
             "type": "object",
             "properties": {
               "metricName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the metric"
               },
               "baselineValue": {
-                "type": "string"
+                "type": "string",
+                "description": "Baseline value"
               },
               "currentValue": {
-                "type": "string"
+                "type": "string",
+                "description": "Current value"
               },
               "targetValue": {
-                "type": "string"
+                "type": "string",
+                "description": "Target value"
               }
             },
             "additionalProperties": false
@@ -842,13 +889,16 @@
           "description": "Management approach",
           "properties": {
             "governanceBody": {
-              "type": "string"
+              "type": "string",
+              "description": "Body that governs the integration"
             },
             "meetingFrequency": {
-              "type": "string"
+              "type": "string",
+              "description": "How often the body meets"
             },
             "decisionRights": {
-              "type": "string"
+              "type": "string",
+              "description": "Decisions the body can make"
             }
           },
           "additionalProperties": false
@@ -860,13 +910,16 @@
             "type": "object",
             "properties": {
               "initiativeName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the planned initiative"
               },
               "planningStatus": {
-                "type": "string"
+                "type": "string",
+                "description": "Planning status of the initiative"
               },
               "implementationTimeline": {
-                "type": "string"
+                "type": "string",
+                "description": "Expected implementation timeline"
               }
             },
             "additionalProperties": false
@@ -906,10 +959,12 @@
           "description": "Experience design",
           "properties": {
             "journeyFocus": {
-              "type": "string"
+              "type": "string",
+              "description": "Customer journey the channel design focuses on"
             },
             "keyTouchpoints": {
               "type": "array",
+              "description": "Key touchpoints in the journey",
               "items": {
                 "type": "string"
               }
@@ -924,13 +979,16 @@
             "type": "object",
             "properties": {
               "channelName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the channel"
               },
               "primaryRole": {
-                "type": "string"
+                "type": "string",
+                "description": "Main role the channel plays in the journey"
               },
               "secondaryRole": {
-                "type": "string"
+                "type": "string",
+                "description": "Supporting role the channel plays"
               }
             },
             "additionalProperties": false
@@ -943,16 +1001,20 @@
             "type": "object",
             "properties": {
               "transitionName": {
-                "type": "string"
+                "type": "string",
+                "description": "Name of the transition between channels"
               },
               "transitionMethod": {
-                "type": "string"
+                "type": "string",
+                "description": "How customers move between the channels"
               },
               "successRate": {
-                "type": "string"
+                "type": "string",
+                "description": "Share of transitions completed successfully"
               },
               "improvementFocus": {
-                "type": "string"
+                "type": "string",
+                "description": "What is being improved in the transition"
               }
             },
             "additionalProperties": false
@@ -964,12 +1026,14 @@
           "properties": {
             "consistencyElements": {
               "type": "array",
+              "description": "Elements kept consistent across channels, e.g. pricing or branding",
               "items": {
                 "type": "string"
               }
             },
             "enforcementMethod": {
-              "type": "string"
+              "type": "string",
+              "description": "How consistency is enforced"
             }
           },
           "additionalProperties": false
@@ -979,16 +1043,19 @@
           "description": "Information integration",
           "properties": {
             "unificationApproach": {
-              "type": "string"
+              "type": "string",
+              "description": "How customer and operational data are unified across channels"
             },
             "keyDatasets": {
               "type": "array",
+              "description": "Datasets that are unified",
               "items": {
                 "type": "string"
               }
             },
             "dataSynchronization": {
-              "type": "string"
+              "type": "string",
+              "description": "How unified data is kept in sync"
             }
           },
           "additionalProperties": false
@@ -998,10 +1065,12 @@
           "description": "Price management",
           "properties": {
             "pricingApproach": {
-              "type": "string"
+              "type": "string",
+              "description": "How prices are set across channels"
             },
             "exceptionHandling": {
-              "type": "string"
+              "type": "string",
+              "description": "How channel-specific price exceptions are handled"
             }
           },
           "additionalProperties": false
@@ -1011,13 +1080,16 @@
           "description": "Stock management",
           "properties": {
             "visibilityLevel": {
-              "type": "string"
+              "type": "string",
+              "description": "Extent of inventory visibility across channels"
             },
             "allocationStrategy": {
-              "type": "string"
+              "type": "string",
+              "description": "How inventory is allocated between channels"
             },
             "reservationRules": {
-              "type": "string"
+              "type": "string",
+              "description": "Rules for reserving inventory"
             }
           },
           "additionalProperties": false
@@ -1029,10 +1101,12 @@
             "type": "object",
             "properties": {
               "metricGroup": {
-                "type": "string"
+                "type": "string",
+                "description": "Group the metrics belong to"
               },
               "metrics": {
                 "type": "array",
+                "description": "Metrics in the group",
                 "items": {
                   "type": "string"
                 }
@@ -1047,17 +1121,21 @@
           "properties": {
             "implementationPhases": {
               "type": "array",
+              "description": "Phases of the implementation",
               "items": {
                 "type": "object",
                 "properties": {
                   "phaseName": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "Name of the phase"
                   },
                   "timeframe": {
-                    "type": "string"
+                    "type": "string",
+                    "description": "When the phase runs"
                   },
                   "deliverables": {
                     "type": "array",
+                    "description": "What the phase delivers",
                     "items": {
                       "type": "string"
                     }
@@ -1074,16 +1152,19 @@
           "description": "Management structure",
           "properties": {
             "governanceBody": {
-              "type": "string"
+              "type": "string",
+              "description": "Body that governs the partnership"
             },
             "participants": {
               "type": "array",
+              "description": "Members of the governance body",
               "items": {
                 "type": "string"
               }
             },
             "meetingCadence": {
-              "type": "string"
+              "type": "string",
+              "description": "How often the body meets"
             }
           },
           "additionalProperties": false
@@ -1132,13 +1213,17 @@
             "description": "Agreement details",
             "properties": {
               "contractDuration": {
-                "type": "string"
+                "type": "string",
+                "description": "Length of the contract"
               },
               "exclusivityLevel": {
-                "type": "string"
+                "type": "string",
+                "description": "Degree of exclusivity agreed"
               },
               "renewalDate": {
-                "type": "string"
+                "type": "string",
+                "description": "Date the contract is due for renewal",
+                "format": "date"
               }
             },
             "additionalProperties": false
@@ -1156,12 +1241,14 @@
             "properties": {
               "regions": {
                 "type": "array",
+                "description": "Regions the partner covers",
                 "items": {
                   "type": "string"
                 }
               },
               "penetration": {
-                "type": "string"
+                "type": "string",
+                "description": "Market penetration achieved"
               }
             },
             "additionalProperties": false
@@ -1186,12 +1273,14 @@
             "properties": {
               "exclusiveProducts": {
                 "type": "array",
+                "description": "Products the partner sells exclusively",
                 "items": {
                   "type": "string"
                 }
               },
               "territorialExclusivity": {
-                "type": "string"
+                "type": "string",
+                "description": "Territories where the partner has exclusivity"
               }
             },
             "additionalProperties": false
@@ -1203,13 +1292,16 @@
               "type": "object",
               "properties": {
                 "metricName": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Name of the metric"
                 },
                 "target": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Target value"
                 },
                 "actual": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Actual value"
                 }
               },
               "additionalProperties": false
@@ -1224,10 +1316,12 @@
             "description": "Growth approach",
             "properties": {
               "developmentFocus": {
-                "type": "string"
+                "type": "string",
+                "description": "Where partner development is focused"
               },
               "investmentLevel": {
                 "type": "string",
+                "description": "Level of investment in the partner",
                 "enum": [
                   "Low",
                   "Medium",
@@ -1244,13 +1338,15 @@
               "type": "object",
               "properties": {
                 "riskType": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "Kind of partner risk"
                 },
                 "riskLevel": {
                   "$ref": "common.schema.json#/definitions/riskLevel"
                 },
                 "mitigation": {
-                  "type": "string"
+                  "type": "string",
+                  "description": "How the risk is mitigated"
                 }
               },
               "additionalProperties": false

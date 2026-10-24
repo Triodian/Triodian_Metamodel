@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "Unified Risk Management Schema",
+  "$id": "https://triodian.com/schemas/risk-management.schema.json",
+  "title": "Risk Management Domain Schema",
   "description": "Comprehensive schema encompassing all Risk Management domain elements including risk, assessment, control, response, and monitoring",
   "type": "object",
   "required": [

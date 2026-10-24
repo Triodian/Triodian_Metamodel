@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/inter-organizational-relationship.schema.json",
   "title": "Inter-Organizational Relationship Schema",
   "description": "Schema for modeling links between internal and external organizational units",
   "type": "object",
@@ -86,7 +87,8 @@
             "$ref": "common.schema.json#/definitions/domainType"
           },
           "domainID": {
-            "type": "string"
+            "type": "string",
+            "description": "ID of the linked domain entity"
           }
         },
         "additionalProperties": false

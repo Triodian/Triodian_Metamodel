@@ -24,8 +24,8 @@ These fields accept the shared list plus a few values specific to their domain.
 | `products.schema.json` /properties/riskCategories | `riskCategory` | `quality` |
 | `risk-management.schema.json` /properties/mitigationStrategy/properties/implementationStatus | `implementationStatus` | `ineffective` |
 | `risk-management.schema.json` /properties/emergingFactors/items/properties/timeHorizon | `timeHorizon` | `uncertain` |
-| `social-change.json` /properties/successMeasurement/properties/timeHorizon | `timeHorizon` | `ongoing` |
-| `social-change.json` /properties/metadata/properties/status | `workStatus` | `failed` |
+| `social-change.schema.json` /properties/successMeasurement/properties/timeHorizon | `timeHorizon` | `ongoing` |
+| `social-change.schema.json` /properties/metadata/properties/status | `workStatus` | `failed` |
 | `strategic-intent.schema.json` /properties/status | `workStatus` | `transformed`, `superseded` |
 | `strategy.schema.json` /properties/riskCategories | `riskCategory` | `diplomatic` |
 | `supply-chain.schema.json` /definitions/supplyChainProcess/properties/processRisks/items/properties/impact | `impactMagnitude` | `critical` |
@@ -65,7 +65,7 @@ Values: `low`, `medium`, `high`, `critical`
 
 Uses the `ratingLevel` scale.
 
-Used by 9 field(s) in: `cross-domain-relationship.schema.json`, `extensions/business-analysis.json`, `finance.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `products.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
+Used by 9 field(s) in: `cross-domain-relationship.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `products.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
 
 ### `criticality`
 
@@ -95,7 +95,7 @@ Values: `low`, `medium`, `high`, `critical`
 
 Uses the `ratingLevel` scale.
 
-Used by 15 field(s) in: `channel.schema.json`, `extensions/business-analysis.json`, `finance.schema.json`, `people.schema.json`, `risk-management.schema.json`, `stakeholder.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 15 field(s) in: `channel.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `people.schema.json`, `risk-management.schema.json`, `stakeholder.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `severity`
 
@@ -113,7 +113,7 @@ Simple three-point rating, for strength, threat, leverage, uncertainty and simil
 
 Values: `low`, `medium`, `high`
 
-Used by 8 field(s) in: `market.schema.json`, `social-change.json`
+Used by 8 field(s) in: `market.schema.json`, `social-change.schema.json`
 
 ### `confidenceLevel`
 
@@ -193,7 +193,7 @@ Planning or impact horizon. Default ranges unless a domain states otherwise: imm
 
 Values: `immediate`, `shortTerm`, `mediumTerm`, `longTerm`, `extended`
 
-Used by 5 field(s) in: `manufacturing.schema.json`, `market.schema.json`, `risk-management.schema.json`, `social-change.json`, `strategy.schema.json`
+Used by 5 field(s) in: `manufacturing.schema.json`, `market.schema.json`, `risk-management.schema.json`, `social-change.schema.json`, `strategy.schema.json`
 
 ### `performanceTrend`
 
@@ -217,7 +217,7 @@ Progress of a piece of work such as an initiative, program, project, action, res
 
 Values: `proposed`, `planned`, `approved`, `inProgress`, `onHold`, `deferred`, `completed`, `cancelled`
 
-Used by 12 field(s) in: `finance.schema.json`, `manufacturing.schema.json`, `model-risk-management.schema.json`, `shared-initiative.schema.json`, `social-change.json`, `strategic-intent.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 12 field(s) in: `finance.schema.json`, `manufacturing.schema.json`, `model-risk-management.schema.json`, `shared-initiative.schema.json`, `social-change.schema.json`, `strategic-intent.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `documentStatus`
 
@@ -225,7 +225,7 @@ Approval state of a document, artefact, policy or standard.
 
 Values: `draft`, `inReview`, `approved`, `superseded`, `obsolete`
 
-Used by 2 field(s) in: `extensions/business-analysis.json`, `model-risk-management.schema.json`
+Used by 2 field(s) in: `extensions/business-analysis.schema.json`, `model-risk-management.schema.json`
 
 ### `implementationStatus`
 
@@ -249,7 +249,7 @@ Delivery lifecycle stage of something the organization builds or runs, such as a
 
 Values: `ideation`, `planning`, `design`, `development`, `implementation`, `launch`, `operational`, `enhancement`, `optimization`, `retirement`
 
-Used by 4 field(s) in: `capabilities.schema.json`, `coverage/coverageExpectation.schema.json`, `products.schema.json`, `services.schema.json`
+Used by 4 field(s) in: `capabilities.schema.json`, `coverage/coverage-expectation.schema.json`, `products.schema.json`, `services.schema.json`
 
 ### `adoptionStage`
 
