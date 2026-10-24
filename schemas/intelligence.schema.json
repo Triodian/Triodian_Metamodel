@@ -116,6 +116,22 @@
       "items": {
         "$ref": "#/definitions/intelligenceApplication"
       }
+    },
+    "sentimentAnalysisCapability": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): ability to analyze stakeholder sentiment from sources such as social media and internal communications"
+    },
+    "stakeholderNetworkMapping": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether key internal and external stakeholders and their relationships are identified and mapped"
+    },
+    "culturalIntelligenceIntegration": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): ability to incorporate cultural nuances and contexts into intelligence analysis"
+    },
+    "unstructuredDataAnalysisForEmpathy": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): ability to extract emotional and unspoken insights from qualitative data"
     }
   },
   "required": [

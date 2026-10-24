@@ -329,6 +329,18 @@
       "items": {
         "$ref": "#/definitions/productFeature"
       }
+    },
+    "userEmpathyMappingIntegrated": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether empathy maps and user personas are used consistently in product development"
+    },
+    "ethicalAIByDesign": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): for AI-driven products, whether ethical considerations and potential empathetic impacts are designed in"
+    },
+    "accessibilityFeatures": {
+      "type": "boolean",
+      "description": "Strategic empathy (suggested in the documentation): whether the product includes features addressing diverse user needs and challenges"
     }
   },
   "required": [
