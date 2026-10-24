@@ -1,0 +1,13 @@
+{
+  "relationshipID": "CDR-001",
+  "sourceDomain": "finance",
+  "targetDomain": "capability",
+  "relationshipType": "funds",
+  "description": "Finance provides funding to capabilities to enable development and enhancement of organizational competencies aligned with strategic objectives",
+  "metadata": {
+    "priority": "critical",
+    "impactArea": "strategic",
+    "frequency": "quarterly",
+    "strength": 5
+  }
+}

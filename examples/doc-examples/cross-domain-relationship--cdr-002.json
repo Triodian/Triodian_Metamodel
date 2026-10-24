@@ -1,0 +1,13 @@
+{
+  "relationshipID": "CDR-002",
+  "sourceDomain": "finance",
+  "targetDomain": "initiative",
+  "relationshipType": "measures",
+  "description": "Finance establishes ROI and financial performance metrics for strategic initiatives",
+  "metadata": {
+    "priority": "high",
+    "impactArea": "financial",
+    "frequency": "monthly",
+    "strength": 4
+  }
+}

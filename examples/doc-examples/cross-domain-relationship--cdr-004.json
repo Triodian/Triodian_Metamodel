@@ -1,0 +1,12 @@
+{
+  "relationshipID": "CDR-004",
+  "sourceDomain": "strategy",
+  "targetDomain": "capability",
+  "relationshipType": "designs",
+  "description": "Strategic vision shapes required future capability architecture",
+  "metadata": {
+    "priority": "strategic",
+    "impactArea": "innovation",
+    "strength": 5
+  }
+}
