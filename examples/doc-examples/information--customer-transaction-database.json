@@ -27,6 +27,7 @@
     {
       "title": "Transaction Amount",
       "description": "Monetary value of individual customer transactions",
+      "purpose": "Record the value of each transaction for financial reporting and analytics",
       "elementType": "Field",
       "dataType": "DECIMAL(10,2)",
       "constraints": "NOT NULL, positive value only",

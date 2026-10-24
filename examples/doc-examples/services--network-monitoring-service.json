@@ -27,6 +27,7 @@
     {
       "title": "Automated Alert System",
       "description": "AI-powered system that automatically detects anomalies and sends alerts to appropriate personnel",
+      "purpose": "Detect network anomalies early and get them to the right people quickly",
       "featureType": "Core Feature",
       "priority": "Critical",
       "complexity": "Complex"
@@ -34,6 +35,7 @@
     {
       "title": "Predictive Maintenance Dashboard",
       "description": "Visual dashboard showing predicted maintenance needs based on sensor data analysis",
+      "purpose": "Plan maintenance before failures occur",
       "featureType": "Enhancement",
       "priority": "High",
       "complexity": "Moderate"

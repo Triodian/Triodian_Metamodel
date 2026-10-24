@@ -27,6 +27,7 @@
     {
       "title": "AI-Powered Chatbot",
       "description": "Intelligent chatbot that can resolve common issues and guide users to relevant resources",
+      "purpose": "Resolve routine customer issues instantly and route complex ones to human support",
       "featureType": "Core Feature",
       "priority": "Critical",
       "complexity": "Complex"
@@ -34,6 +35,7 @@
     {
       "title": "Video Tutorial Library",
       "description": "Searchable library of how-to videos for common customer tasks",
+      "purpose": "Help customers complete common tasks themselves without contacting support",
       "featureType": "Enhancement",
       "priority": "Medium",
       "complexity": "Simple"
