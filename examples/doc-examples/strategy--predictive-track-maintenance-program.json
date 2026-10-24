@@ -1,4 +1,5 @@
 {
+  "strategyID": "STR-004",
   "title": "Predictive Track Maintenance Program",
   "description": "Implementation of AI-powered track defect prediction system to transform maintenance operations",
   "purpose": "Reduce track-related accidents by 35% through early detection and predictive maintenance",

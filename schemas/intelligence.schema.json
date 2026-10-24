@@ -29,6 +29,14 @@
       "type": "string",
       "description": "Organizational unit responsible or consuming the intelligence."
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "sources": {
       "type": "array",
       "description": "List of sources used for intelligence gathering.",
@@ -111,6 +119,7 @@
     }
   },
   "required": [
+    "intelligenceID",
     "title",
     "intelligenceType"
   ],

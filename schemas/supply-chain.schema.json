@@ -43,6 +43,14 @@
       "type": "string",
       "description": "The organization unit(s) responsible for this supply chain element"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Specific roles within the organization unit that manage this supply chain element",
@@ -871,6 +879,14 @@
           "type": "string",
           "description": "The organization unit responsible for this supplier network"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "supplyChainID": {
           "type": "string",
           "description": "ID of the supply chain domain this network belongs to"
@@ -1436,6 +1452,14 @@
           "type": "string",
           "description": "The organization unit responsible for this process"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "supplyChainID": {
           "type": "string",
           "description": "ID of the supply chain domain this process belongs to"
@@ -1998,6 +2022,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "The organization unit responsible for this logistics network"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "supplyChainID": {
           "type": "string",
@@ -2807,6 +2839,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "The organization unit responsible for this inventory"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "supplyChainID": {
           "type": "string",

@@ -165,6 +165,14 @@
                 "type": "string",
                 "description": "Name of the organization unit"
               },
+              "orgUnitID": {
+                "description": "ID of the organization unit (see orgUnitTitle)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/identifier"
+                  }
+                ]
+              },
               "relationshipRole": {
                 "type": "string",
                 "enum": [

@@ -1,4 +1,5 @@
 {
+  "serviceID": "SVC-001",
   "title": "Rail Freight Transport Service",
   "description": "End-to-end freight transportation service using the national rail network, including cargo loading, transport, tracking, and delivery to specified destinations",
   "purpose": "To provide reliable, cost-effective, and environmentally sustainable freight transportation solutions for businesses across the country",

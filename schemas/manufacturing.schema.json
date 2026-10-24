@@ -5,6 +5,14 @@
   "description": "Schema for the Manufacturing domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "properties": {
+    "manufacturingID": {
+      "description": "Unique identifier for the manufacturing entity",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "Name/title of the manufacturing entity",
@@ -142,6 +150,7 @@
     }
   },
   "required": [
+    "manufacturingID",
     "title",
     "description",
     "purpose",
@@ -373,6 +382,7 @@
   },
   "examples": [
     {
+      "manufacturingID": "MFG-001",
       "title": "Global Manufacturing Operations",
       "description": "The central repository for all manufacturing data.",
       "purpose": "To provide a canonical source of truth for manufacturing processes.",

@@ -5,6 +5,14 @@
   "description": "Schema for the Strategy domain in the Triodian Metamodel with global enumeration support",
   "type": "object",
   "properties": {
+    "strategyID": {
+      "description": "Unique identifier for the Strategy",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "Name/title of strategy",
@@ -29,6 +37,14 @@
     "orgUnitTitle": {
       "type": "string",
       "description": "Most closely linked organizational units"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "strategyCategory": {
       "type": "string",
@@ -163,6 +179,14 @@
       "type": "string",
       "description": "Related/linked strategies"
     },
+    "relatedStrategyIDs": {
+      "type": "array",
+      "description": "IDs of related Strategies",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
     "risks": {
       "type": "string",
       "description": "Associated risks"
@@ -243,9 +267,25 @@
       "type": "string",
       "description": "Parent strategy"
     },
+    "parentStrategyID": {
+      "description": "ID of the parent Strategy",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "child": {
       "type": "string",
       "description": "Child strategy"
+    },
+    "childStrategyIDs": {
+      "type": "array",
+      "description": "IDs of child Strategies",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "strategyObjectives": {
       "type": "array",
@@ -317,6 +357,7 @@
     }
   },
   "required": [
+    "strategyID",
     "title",
     "description",
     "purpose",
@@ -328,6 +369,14 @@
       "type": "object",
       "description": "A specific objective that supports a strategy",
       "properties": {
+        "objectiveID": {
+          "description": "Unique identifier for the objective, so other records can reference it",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "title": {
           "type": "string",
           "description": "Name/title of objective"
@@ -347,6 +396,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Aligned organization units"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "objectiveType": {
           "type": "string",
@@ -437,6 +494,14 @@
         "parentStrategy": {
           "type": "string",
           "description": "Parent strategy this objective supports"
+        },
+        "parentStrategyID": {
+          "description": "ID of the Strategy this objective supports",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         }
       },
       "required": [
@@ -450,6 +515,7 @@
   },
   "examples": [
     {
+      "strategyID": "STR-001",
       "title": "Eastern Border Defense Initiative",
       "description": "Comprehensive defensive strategy to secure eastern territorial borders against potential invasion",
       "purpose": "Maintain territorial integrity and deter aggression through layered defense",
@@ -480,6 +546,7 @@
       "stakeholderImpact": "Enhanced security for border communities, military readiness"
     },
     {
+      "strategyID": "STR-002",
       "title": "Regional Political Consolidation Campaign",
       "description": "Multi-year campaign to consolidate political control across regional administrative districts",
       "purpose": "Accumulate political power and establish dominant influence in regional governance",
@@ -500,6 +567,7 @@
       ]
     },
     {
+      "strategyID": "STR-003",
       "title": "Trade Route Disruption Initiative",
       "description": "Economic strategy to limit competitor's access to critical trade routes and markets",
       "purpose": "Contain economic expansion and maintain strategic trade advantages",

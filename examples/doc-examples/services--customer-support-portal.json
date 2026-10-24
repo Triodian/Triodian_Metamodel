@@ -1,4 +1,5 @@
 {
+  "serviceID": "SVC-002",
   "title": "Customer Support Portal",
   "description": "Comprehensive digital platform providing customers with self-service capabilities, knowledge base access, and integrated support ticket management",
   "purpose": "Enable efficient customer self-service while providing seamless escalation to human support when needed",

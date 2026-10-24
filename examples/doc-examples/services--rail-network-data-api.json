@@ -1,4 +1,5 @@
 {
+  "serviceID": "SVC-004",
   "title": "Rail Network Data API",
   "description": "RESTful API service providing real-time and historical data about rail network status, schedules, and performance metrics",
   "purpose": "Enable third-party developers and partners to integrate rail network data into their applications and services",

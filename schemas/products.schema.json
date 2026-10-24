@@ -4,6 +4,14 @@
   "description": "Schema for the Products domain in the Triodian Metamodel",
   "type": "object",
   "properties": {
+    "productID": {
+      "description": "Unique identifier for the Product",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "title": {
       "type": "string",
       "description": "The name or title of the Product"
@@ -24,6 +32,14 @@
       "type": "string",
       "description": "The Organization unit(s) to which the Product is linked"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "lifecycleManagement": {
       "type": "string",
       "description": "Strategies for managing the Product from inception to retirement"
@@ -43,6 +59,14 @@
     "relatedProducts": {
       "type": "string",
       "description": "Products that are related or linked to this Product"
+    },
+    "relatedProductIDs": {
+      "type": "array",
+      "description": "IDs of related Products",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
     },
     "performanceIndicators": {
       "type": "string",
@@ -86,6 +110,14 @@
             "type": "string",
             "description": "The Organization unit(s) involved in the Product feature"
           },
+          "orgUnitID": {
+            "description": "ID of the organization unit (see orgUnitTitle)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
+            ]
+          },
           "userStories": {
             "type": "string",
             "description": "The user stories or use cases related to the Product feature"
@@ -101,5 +133,8 @@
         }
       }
     }
-  }
+  },
+  "required": [
+    "productID"
+  ]
 }

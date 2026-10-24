@@ -1,4 +1,5 @@
 {
+  "serviceID": "SVC-005",
   "title": "Network Monitoring Service",
   "description": "Comprehensive 24/7 monitoring of rail network infrastructure including tracks, signals, communication systems, and environmental conditions",
   "purpose": "Ensure optimal network performance and safety through continuous monitoring and proactive issue detection",

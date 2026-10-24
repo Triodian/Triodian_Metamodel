@@ -37,6 +37,14 @@
       "type": "string",
       "description": "The organization unit responsible for this sustainability element"
     },
+    "orgUnitID": {
+      "description": "ID of the organization unit (see orgUnitTitle)",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
     "orgUnitRoles": {
       "type": "array",
       "description": "Specific roles within the organization unit that manage this sustainability element",
@@ -542,6 +550,14 @@
           "type": "string",
           "description": "Organization unit responsible for this impact"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "sustainabilityID": {
           "type": "string",
           "description": "ID of the sustainability domain this impact belongs to"
@@ -989,6 +1005,14 @@
           "type": "string",
           "description": "Organization unit responsible for this initiative"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "sustainabilityID": {
           "type": "string",
           "description": "ID of the sustainability domain this initiative belongs to"
@@ -1286,6 +1310,14 @@
           "type": "string",
           "description": "Organization unit responsible for this practice"
         },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
         "sustainabilityID": {
           "type": "string",
           "description": "ID of the sustainability domain this practice belongs to"
@@ -1550,6 +1582,14 @@
         "orgUnitTitle": {
           "type": "string",
           "description": "Organization unit responsible for this strategy"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "sustainabilityID": {
           "type": "string",

@@ -1,4 +1,5 @@
 {
+  "informationID": "INFO-003",
   "title": "IoT Sensor Data Stream",
   "description": "Real-time data stream from IoT sensors monitoring infrastructure conditions, equipment performance, and environmental factors",
   "purpose": "Enable predictive maintenance, real-time monitoring, and operational optimization through continuous sensor data",
