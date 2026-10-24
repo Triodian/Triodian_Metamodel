@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/external-organizations-composite.schema.json",
+  "$id": "https://triodian.com/schemas/external-organization-composite.schema.json",
   "title": "External Organizations Composite Schema",
   "description": "Composite schema linking all external organization related schemas",
   "type": "object",

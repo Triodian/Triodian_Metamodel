@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/initiatives.schema.json",
+  "$id": "https://triodian.com/schemas/initiative.schema.json",
   "title": "Initiatives Domain Schema",
   "description": "Focused efforts undertaken to deliver value, following the hierarchy Initiative > Program > Project. The root is an Initiative; Program and Project are element records under definitions, linked by parentInitiativeID and parentProgramID.",
   "type": "object",

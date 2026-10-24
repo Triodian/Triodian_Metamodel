@@ -63,7 +63,7 @@ FIELD_CANDIDATES = {
 
 # Fields whose meaning can't be inferred from their values alone.
 FIELD_OVERRIDES = {
-    ("capabilities.schema.json", "/properties/targetMaturityLevel"): "maturityLevel",
+    ("capability.schema.json", "/properties/targetMaturityLevel"): "maturityLevel",
     ("channel.schema.json", "/properties/channelMaturity/properties/overallMaturity"): "maturityLevel",
     ("channel.schema.json", "/properties/channelPartnerDetails/items/properties/partnerDevelopmentStrategy/properties/investmentLevel"): "simpleLevel",
     ("channel.schema.json", "/properties/channelPartners/items/properties/relationshipStrength"): "ratingLevel",

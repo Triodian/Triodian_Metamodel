@@ -113,7 +113,7 @@
           "format": "uri",
           "description": "Link to the related Capability.",
           "links": {
-            "$ref": "../capabilities.schema.json"
+            "$ref": "../capability.schema.json"
           }
         },
         "relatedValueStream": {
@@ -129,7 +129,7 @@
           "format": "uri",
           "description": "Link to the related Initiative.",
           "links": {
-            "$ref": "../initiatives.schema.json"
+            "$ref": "../initiative.schema.json"
           }
         },
         "stakeholderRequirementRef": {
@@ -353,7 +353,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "../capabilities.schema.json"
+              "$ref": "../capability.schema.json"
             }
           },
           "description": "Capabilities impacted or enabled by the solution."
@@ -364,7 +364,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "../initiatives.schema.json"
+              "$ref": "../initiative.schema.json"
             }
           },
           "description": "Initiatives related to the solution design."
@@ -444,7 +444,7 @@
             "type": "string",
             "format": "uri",
             "links": {
-              "$ref": "../initiatives.schema.json"
+              "$ref": "../initiative.schema.json"
             }
           },
           "description": "Initiatives that implemented the solution being evaluated."
