@@ -581,228 +581,7 @@
       "type": "array",
       "description": "Specific components or structures within the information asset",
       "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The name or title of the Information element",
-            "examples": [
-              "Customer Transaction Records"
-            ]
-          },
-          "description": {
-            "type": "string",
-            "description": "A detailed explanation of what the Information element contains",
-            "examples": [
-              "Individual transaction records with timestamp, amount, product details"
-            ]
-          },
-          "purpose": {
-            "type": "string",
-            "description": "The intended purpose or function of the Information element",
-            "examples": [
-              "Track individual customer purchases for analytics and reporting"
-            ]
-          },
-          "owner": {
-            "type": "string",
-            "description": "The individual or team responsible for the Information element",
-            "examples": [
-              "Transaction Processing Team"
-            ]
-          },
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "The organization unit(s) involved with the Information element",
-            "examples": [
-              "Finance and Operations Division"
-            ]
-          },
-          "orgUnitID": {
-            "description": "ID of the organization unit (see orgUnitTitle)",
-            "allOf": [
-              {
-                "$ref": "common.schema.json#/definitions/identifier"
-              }
-            ]
-          },
-          "elementType": {
-            "type": "string",
-            "enum": [
-              "Table",
-              "Field",
-              "File",
-              "Stream",
-              "Object",
-              "Document",
-              "Image",
-              "Report Section"
-            ],
-            "description": "Type of information element"
-          },
-          "dataType": {
-            "type": "string",
-            "description": "Technical data type or format",
-            "examples": [
-              "VARCHAR(255)",
-              "INTEGER",
-              "TIMESTAMP",
-              "JSON",
-              "BLOB"
-            ]
-          },
-          "size": {
-            "type": "string",
-            "description": "Size or volume of the element",
-            "examples": [
-              "50 characters max",
-              "1-999999",
-              "Up to 10MB",
-              "Average 2KB per record"
-            ]
-          },
-          "constraints": {
-            "type": "string",
-            "description": "Data validation rules and constraints",
-            "examples": [
-              "NOT NULL",
-              "UNIQUE",
-              "Foreign key to customer table",
-              "Date range validation"
-            ]
-          },
-          "defaultValue": {
-            "type": "string",
-            "description": "Default values or behaviors",
-            "examples": [
-              "Current timestamp",
-              "NULL",
-              "System generated ID"
-            ]
-          },
-          "businessRules": {
-            "type": "string",
-            "description": "Business logic governing the element",
-            "examples": [
-              "Must be positive value",
-              "Required for premium customers",
-              "Auto-calculated field"
-            ]
-          },
-          "relationships": {
-            "type": "string",
-            "description": "Relationships to other information elements",
-            "examples": [
-              "Links to customer ID",
-              "Parent-child with order items",
-              "References product catalog"
-            ]
-          },
-          "quality": {
-            "type": "string",
-            "description": "Quality measures specific to this element",
-            "examples": [
-              "99.9% completeness",
-              "Real-time validation",
-              "Monthly quality audits"
-            ]
-          },
-          "sensitivity": {
-            "type": "string",
-            "enum": [
-              "Public",
-              "Internal",
-              "Confidential",
-              "Restricted"
-            ],
-            "description": "Sensitivity level of the element"
-          },
-          "retention": {
-            "type": "string",
-            "description": "Retention policies specific to this element",
-            "examples": [
-              "Keep for 7 years then archive",
-              "Purge after customer deletion"
-            ]
-          },
-          "access": {
-            "type": "string",
-            "description": "Access controls and permissions",
-            "examples": [
-              "Read-only for analysts",
-              "Write access for transaction systems"
-            ]
-          },
-          "transformations": {
-            "type": "string",
-            "description": "Data transformations applied to the element",
-            "examples": [
-              "Encrypted storage",
-              "Masked in non-production",
-              "Aggregated for reporting"
-            ]
-          },
-          "validations": {
-            "type": "string",
-            "description": "Data validation procedures",
-            "examples": [
-              "Format validation",
-              "Business rule checks",
-              "Cross-reference validation"
-            ]
-          },
-          "sources": {
-            "type": "string",
-            "description": "Source systems or processes for this element",
-            "examples": [
-              "POS systems",
-              "Online checkout",
-              "Mobile app transactions"
-            ]
-          },
-          "usage": {
-            "type": "string",
-            "description": "How the element is typically used",
-            "examples": [
-              "Real-time fraud detection",
-              "Monthly reporting",
-              "Customer analytics"
-            ]
-          },
-          "performance": {
-            "type": "string",
-            "description": "Performance characteristics",
-            "examples": [
-              "Indexed for fast lookup",
-              "Partitioned by date",
-              "Cached for frequent access"
-            ]
-          },
-          "monitoring": {
-            "type": "string",
-            "description": "Monitoring and alerting for the element",
-            "examples": [
-              "Quality monitoring",
-              "Volume alerts",
-              "Performance tracking"
-            ]
-          },
-          "documentation": {
-            "type": "string",
-            "description": "Documentation and metadata",
-            "examples": [
-              "Business definition",
-              "Technical specifications",
-              "Usage guidelines"
-            ]
-          }
-        },
-        "required": [
-          "title",
-          "description",
-          "purpose"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/informationElement"
       }
     }
   },
@@ -813,5 +592,231 @@
     "purpose",
     "owner"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "informationElement": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Information element",
+          "examples": [
+            "Customer Transaction Records"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Information element contains",
+          "examples": [
+            "Individual transaction records with timestamp, amount, product details"
+          ]
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or function of the Information element",
+          "examples": [
+            "Track individual customer purchases for analytics and reporting"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Information element",
+          "examples": [
+            "Transaction Processing Team"
+          ]
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The organization unit(s) involved with the Information element",
+          "examples": [
+            "Finance and Operations Division"
+          ]
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
+        "elementType": {
+          "type": "string",
+          "enum": [
+            "Table",
+            "Field",
+            "File",
+            "Stream",
+            "Object",
+            "Document",
+            "Image",
+            "Report Section"
+          ],
+          "description": "Type of information element"
+        },
+        "dataType": {
+          "type": "string",
+          "description": "Technical data type or format",
+          "examples": [
+            "VARCHAR(255)",
+            "INTEGER",
+            "TIMESTAMP",
+            "JSON",
+            "BLOB"
+          ]
+        },
+        "size": {
+          "type": "string",
+          "description": "Size or volume of the element",
+          "examples": [
+            "50 characters max",
+            "1-999999",
+            "Up to 10MB",
+            "Average 2KB per record"
+          ]
+        },
+        "constraints": {
+          "type": "string",
+          "description": "Data validation rules and constraints",
+          "examples": [
+            "NOT NULL",
+            "UNIQUE",
+            "Foreign key to customer table",
+            "Date range validation"
+          ]
+        },
+        "defaultValue": {
+          "type": "string",
+          "description": "Default values or behaviors",
+          "examples": [
+            "Current timestamp",
+            "NULL",
+            "System generated ID"
+          ]
+        },
+        "businessRules": {
+          "type": "string",
+          "description": "Business logic governing the element",
+          "examples": [
+            "Must be positive value",
+            "Required for premium customers",
+            "Auto-calculated field"
+          ]
+        },
+        "relationships": {
+          "type": "string",
+          "description": "Relationships to other information elements",
+          "examples": [
+            "Links to customer ID",
+            "Parent-child with order items",
+            "References product catalog"
+          ]
+        },
+        "quality": {
+          "type": "string",
+          "description": "Quality measures specific to this element",
+          "examples": [
+            "99.9% completeness",
+            "Real-time validation",
+            "Monthly quality audits"
+          ]
+        },
+        "sensitivity": {
+          "type": "string",
+          "enum": [
+            "Public",
+            "Internal",
+            "Confidential",
+            "Restricted"
+          ],
+          "description": "Sensitivity level of the element"
+        },
+        "retention": {
+          "type": "string",
+          "description": "Retention policies specific to this element",
+          "examples": [
+            "Keep for 7 years then archive",
+            "Purge after customer deletion"
+          ]
+        },
+        "access": {
+          "type": "string",
+          "description": "Access controls and permissions",
+          "examples": [
+            "Read-only for analysts",
+            "Write access for transaction systems"
+          ]
+        },
+        "transformations": {
+          "type": "string",
+          "description": "Data transformations applied to the element",
+          "examples": [
+            "Encrypted storage",
+            "Masked in non-production",
+            "Aggregated for reporting"
+          ]
+        },
+        "validations": {
+          "type": "string",
+          "description": "Data validation procedures",
+          "examples": [
+            "Format validation",
+            "Business rule checks",
+            "Cross-reference validation"
+          ]
+        },
+        "sources": {
+          "type": "string",
+          "description": "Source systems or processes for this element",
+          "examples": [
+            "POS systems",
+            "Online checkout",
+            "Mobile app transactions"
+          ]
+        },
+        "usage": {
+          "type": "string",
+          "description": "How the element is typically used",
+          "examples": [
+            "Real-time fraud detection",
+            "Monthly reporting",
+            "Customer analytics"
+          ]
+        },
+        "performance": {
+          "type": "string",
+          "description": "Performance characteristics",
+          "examples": [
+            "Indexed for fast lookup",
+            "Partitioned by date",
+            "Cached for frequent access"
+          ]
+        },
+        "monitoring": {
+          "type": "string",
+          "description": "Monitoring and alerting for the element",
+          "examples": [
+            "Quality monitoring",
+            "Volume alerts",
+            "Performance tracking"
+          ]
+        },
+        "documentation": {
+          "type": "string",
+          "description": "Documentation and metadata",
+          "examples": [
+            "Business definition",
+            "Technical specifications",
+            "Usage guidelines"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "purpose"
+      ],
+      "additionalProperties": false
+    }
+  }
 }

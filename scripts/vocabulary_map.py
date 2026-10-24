@@ -128,9 +128,9 @@ DOMAIN_SPECIFIC = {
         ("dependencyKind", "What is depended on (information, capability, resource, decision, approval), not how strongly"),
     ("supply-chain.schema.json", "/definitions/supplyChainProcess/properties/processDependencies/items/properties/dependencyType"):
         ("sequenceRelationship", "Process sequencing (predecessor, successor, concurrent), not dependency strength"),
-    ("strategic-response-model.schema.json", "/definitions/strategicResponse/properties/financialResources/properties/fundingSources/items/properties/status"):
+    ("strategic-response.schema.json", "/properties/financialResources/properties/fundingSources/items/properties/status"):
         ("fundingStatus", "Whether funding is secured, pending or proposed"),
-    ("strategic-response-model.schema.json", "/definitions/strategicIntent/properties/maturityLevel"):
+    ("strategic-intent.schema.json", "/properties/maturityLevel"):
         ("intentMaturity", "How established a strategic intent is (conceptual to optimizing), not capability maturity"),
 }
 

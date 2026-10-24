@@ -18,7 +18,7 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Products** – Tangible or intangible deliverables  
 - **Services** – Activities that create value through interaction  
 - **Inter-unit Domain Relationships** – Links between units and domain artefacts  
-- **Strategic Response Model (SRM)** – How the organisation responds to triggers and rationales
+- **Strategic Response Model (SRM)** – How the organisation responds to change: Triggers, Rationales, Strategic Intents and Strategic Responses, each in its own schema and grouped by `strategic-response-model.schema.json`
 
 All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
 
@@ -60,6 +60,8 @@ python scripts/validate.py --doc-examples     # plus the documentation's worked 
 The structural checks confirm that every schema is well-formed JSON, valid against its declared JSON Schema draft, free of non-standard keywords (such as `attributes`, `elements` or `nullable`), that every `$ref` resolves, and that each schema's embedded examples validate against it.
 
 Shared concepts such as priority, risk level, frequency, status, maturity and domain type are defined once in [`schemas/common.schema.json`](schemas/common.schema.json), with camelCase values, and domains reference them with `$ref`. [`docs/shared-vocabulary.md`](docs/shared-vocabulary.md) lists the shared values and shows which domains still keep their own lists and how those map across. Regenerate it with `python scripts/vocabulary_map.py`.
+
+Every domain schema has the same structure. The root is the domain's main record (an Initiative, a Value Stream, a Policy), and its element types (a Program, a Value Stream Stage, a Capability Function) are named, camelCase entries under `definitions`, referenced with `$ref`. All schemas use JSON Schema draft-07, and all definition and property names are camelCase. Composite schemas such as `strategic-response-model.schema.json` group records defined in other schemas.
 
 Every object a schema defines rejects fields it does not define (`"additionalProperties": false`), so a misspelt or undocumented field fails validation instead of being silently accepted. The validator enforces this for every schema.
 

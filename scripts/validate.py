@@ -7,23 +7,27 @@ Checks, in order:
   3. No non-standard structural keywords ("attributes"/"elements" used in place of
      "properties"/"definitions", or OpenAPI-style "nullable"), and every object that
      defines properties rejects fields it does not define (additionalProperties: false).
-  4. Every $ref resolves, whether local (#/...) or to another schema file.
-  5. Every record type requires an identifier (a property named "<entity>ID" or "id").
-  6. Every example embedded in a schema's top-level "examples" validates against that schema.
-  7. (--doc-examples) Every worked example from the documentation, listed in
+  4. Every schema has the same structure: JSON Schema draft-07; the root of each domain schema
+     is the domain's main record (no wrapper properties, no oneOf); element types are named
+     under "definitions"; definition and property names are camelCase.
+  5. Every $ref resolves, whether local (#/...) or to another schema file.
+  6. Every record type requires an identifier (a property named "<entity>ID" or "id").
+  7. Every example embedded in a schema's top-level "examples" validates against that schema.
+  8. (--doc-examples) Every worked example from the documentation, listed in
      examples/doc-examples/manifest.json, validates against its schema.
 
 Exit status is non-zero if any check that was run fails.
 
 Usage:
-  python scripts/validate.py                 # checks 1-6
-  python scripts/validate.py --doc-examples  # checks 1-7
+  python scripts/validate.py                 # checks 1-7
+  python scripts/validate.py --doc-examples  # checks 1-8
   python scripts/validate.py --only-doc-examples
 """
 from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from urllib.parse import urldefrag, urljoin
@@ -37,17 +41,23 @@ SCHEMA_DIR = ROOT / "schemas"
 DOC_EXAMPLES = ROOT / "examples" / "doc-examples"
 BASE_URI = "https://triodian.com/schemas/"
 
+DRAFT = "http://json-schema.org/draft-07/schema#"
 VALIDATORS = {
-    "http://json-schema.org/draft-07/schema#": Draft7Validator,
+    DRAFT: Draft7Validator,
     "http://json-schema.org/draft-07/schema": Draft7Validator,
     "https://json-schema.org/draft/2020-12/schema": Draft202012Validator,
 }
 NON_STANDARD = {"attributes", "elements", "nullable"}
-# Schemas that collect other records rather than describing a record themselves.
-CONTAINERS = {
+CAMEL = re.compile(r"[a-z][a-zA-Z0-9]*")
+# Schemas that are not a domain record of their own.
+NOT_RECORDS = {
+    # shared vocabulary
     "common.schema.json",
+    # composites that group records defined in other schemas
     "external-organizations-composite.schema.json",
+    "strategic-response-model.schema.json",
     "extensions/business-analysis.json",
+    # extension describing an aspect of a Technology record
     "extensions/technology/TechnologyOneWellArchitectedFrameworkExtension",
 }
 
@@ -127,28 +137,49 @@ def is_identifier(name: str) -> bool:
     return name == "id" or name.endswith("ID")
 
 
+def is_record_schema(f: Path) -> bool:
+    return f.relative_to(SCHEMA_DIR).as_posix() not in NOT_RECORDS
+
+
 def record_schemas(f: Path, d: dict):
-    """Yield (label, schema) for each record type a schema file describes."""
-    name = f.relative_to(SCHEMA_DIR).as_posix()
-    if name in CONTAINERS:
-        return
-    props = d.get("properties")
-    if isinstance(props, dict) and props:
-        wrapped = all(isinstance(v, dict) and v.get("type") == "object" and "properties" in v for v in props.values())
-        if wrapped:  # e.g. policy.schema.json wraps a single "policy" record
-            for k, v in props.items():
-                yield f"{rel(f)} /properties/{k}", v
-        else:
-            yield rel(f), d
-    elif "oneOf" in d:  # e.g. strategic-response-model.schema.json: one of several record types
-        for branch in d["oneOf"]:
-            ref = branch.get("$ref", "")
-            if ref.startswith("#/definitions/"):
-                yield f"{rel(f)} {ref[1:]}", d["definitions"][ref.split("/")[-1]]
+    """Yield (label, schema) for the record type a domain schema describes: its root."""
+    if is_record_schema(f):
+        yield rel(f), d
+
+
+def check_structure(docs: dict[Path, dict]) -> None:
+    print("4. Every schema has the same structure")
+    for f, d in docs.items():
+        if d.get("$schema") != DRAFT:
+            fail(f"{rel(f)}: uses {d.get('$schema')!r}; all schemas use {DRAFT}")
+        for path, node in walk(d):
+            if "examples" in path:
+                continue
+            here = "/" + "/".join(map(str, path))
+            if "$defs" in node and not (path and path[-1] == "properties"):
+                fail(f"{rel(f)}: {here}: use \"definitions\", not \"$defs\"")
+            if path and path[-1] == "properties" and isinstance(node, dict):
+                for k in node:
+                    if not CAMEL.fullmatch(k):
+                        fail(f"{rel(f)}: {here}: property name {k!r} is not camelCase")
+        for k in d.get("definitions", {}):
+            if not CAMEL.fullmatch(k):
+                fail(f"{rel(f)}: definition name {k!r} is not camelCase")
+        if not is_record_schema(f):
+            continue
+        props = d.get("properties")
+        if d.get("type") != "object" or not isinstance(props, dict) or not props:
+            fail(f"{rel(f)}: root must be the domain's main record (an object with properties)")
+            continue
+        for kw in ("oneOf", "anyOf", "allOf"):
+            if kw in d:
+                fail(f"{rel(f)}: root uses {kw}; put each record type in its own schema or under definitions")
+        if all(isinstance(v, dict) and v.get("type") == "object" and "properties" in v for v in props.values()):
+            fail(f"{rel(f)}: root wraps its record in {list(props)}; make the record the root")
 
 
 def check_identifiers(docs: dict[Path, dict]) -> None:
-    print("5. Every record type requires an identifier")
+    print("6. Every record type requires an identifier")
     for f, d in docs.items():
         for label, schema in record_schemas(f, d):
             required = [r for r in schema.get("required", []) if is_identifier(r)]
@@ -176,7 +207,7 @@ def build_registry(docs: dict[Path, dict]) -> tuple[Registry, dict[Path, str]]:
 
 
 def check_refs(docs, registry, uris) -> None:
-    print("4. Every $ref resolves")
+    print("5. Every $ref resolves")
     for f, d in docs.items():
         if f not in uris:
             continue
@@ -204,7 +235,7 @@ def validate_instance(schema_doc: dict, uri: str, pointer: str, instance, regist
 
 
 def check_embedded_examples(docs, registry, uris) -> None:
-    print("6. Embedded schema examples validate")
+    print("7. Embedded schema examples validate")
     for f, d in docs.items():
         if f not in uris or d.get("type") != "object":
             continue
@@ -216,7 +247,7 @@ def check_embedded_examples(docs, registry, uris) -> None:
 
 
 def check_doc_examples(docs, registry, uris) -> None:
-    print("7. Documentation worked examples validate")
+    print("8. Documentation worked examples validate")
     manifest = json.loads((DOC_EXAMPLES / "manifest.json").read_text(encoding="utf-8"))
     passed = 0
     for entry in manifest["examples"]:
@@ -252,6 +283,7 @@ def main() -> int:
     else:
         check_meta(docs)
         check_keywords(docs)
+        check_structure(docs)
         check_refs(docs, registry, uris)
         check_identifiers(docs)
         check_embedded_examples(docs, registry, uris)

@@ -532,247 +532,7 @@
       "type": "array",
       "description": "Specific features or components of the Service",
       "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The name or title of the Service feature",
-            "examples": [
-              "Real-time Cargo Tracking"
-            ]
-          },
-          "description": {
-            "type": "string",
-            "description": "A detailed explanation of what the Service feature entails",
-            "examples": [
-              "GPS-based tracking system providing customers with real-time location updates"
-            ]
-          },
-          "purpose": {
-            "type": "string",
-            "description": "The intended purpose or benefit of the Service feature",
-            "examples": [
-              "Provide transparency and certainty about cargo location and arrival times"
-            ]
-          },
-          "owner": {
-            "type": "string",
-            "description": "The individual or team responsible for the Service feature",
-            "examples": [
-              "Sarah Johnson, Head of Digital Services"
-            ]
-          },
-          "orgUnitTitle": {
-            "type": "string",
-            "description": "The Organization unit(s) involved in the Service feature",
-            "examples": [
-              "Technology and Customer Experience Department"
-            ]
-          },
-          "orgUnitID": {
-            "description": "ID of the organization unit (see orgUnitTitle)",
-            "allOf": [
-              {
-                "$ref": "common.schema.json#/definitions/identifier"
-              }
-            ]
-          },
-          "featureType": {
-            "type": "string",
-            "enum": [
-              "Core Feature",
-              "Premium Feature",
-              "Add-on",
-              "Integration",
-              "Automation",
-              "Enhancement"
-            ],
-            "description": "Type of service feature"
-          },
-          "priority": {
-            "description": "Business and development priority",
-            "allOf": [
-              {
-                "$ref": "common.schema.json#/definitions/priority"
-              }
-            ]
-          },
-          "complexity": {
-            "description": "Implementation and operational complexity",
-            "allOf": [
-              {
-                "$ref": "common.schema.json#/definitions/complexity"
-              }
-            ]
-          },
-          "serviceLevelAgreements": {
-            "type": "string",
-            "description": "The SLAs associated with the Service feature",
-            "examples": [
-              "99.5% system uptime, location updates every 15 minutes"
-            ]
-          },
-          "channels": {
-            "type": "array",
-            "items": {
-              "type": "string",
-              "enum": [
-                "Web Portal",
-                "Mobile Application",
-                "SMS Alerts",
-                "Email Notifications",
-                "API Integration",
-                "Phone",
-                "Chat"
-              ]
-            },
-            "description": "The channels through which the Service feature is provided"
-          },
-          "customerFeedback": {
-            "type": "string",
-            "description": "Methods for collecting feedback on this feature",
-            "examples": [
-              "In-app feedback option, usage analytics, satisfaction surveys"
-            ]
-          },
-          "userExperience": {
-            "type": "string",
-            "description": "Description of user interaction and experience",
-            "examples": [
-              "Intuitive interface with real-time map visualization and status updates"
-            ]
-          },
-          "performanceMetrics": {
-            "type": "string",
-            "description": "Metrics specific to this feature",
-            "examples": [
-              "Update frequency, accuracy rate, user engagement, satisfaction score"
-            ]
-          },
-          "dependencies": {
-            "type": "string",
-            "description": "Technical or business dependencies for this feature",
-            "examples": [
-              "GPS infrastructure, mobile networks, database systems"
-            ]
-          },
-          "integrationRequirements": {
-            "type": "string",
-            "description": "Integration needs with other systems or services",
-            "examples": [
-              "ERP integration, mobile push notifications, third-party mapping services"
-            ]
-          },
-          "securityRequirements": {
-            "type": "string",
-            "description": "Security specifications for the feature",
-            "examples": [
-              "Encrypted data transmission, secure authentication, access controls"
-            ]
-          },
-          "accessibilityFeatures": {
-            "type": "string",
-            "description": "Accessibility accommodations",
-            "examples": [
-              "Screen reader support, high contrast mode, voice commands"
-            ]
-          },
-          "businessValue": {
-            "type": "string",
-            "description": "Business impact and value delivered",
-            "examples": [
-              "Reduces customer inquiries by 40%, improves satisfaction scores"
-            ]
-          },
-          "implementationTimeline": {
-            "type": "string",
-            "description": "Development and rollout timeline",
-            "examples": [
-              "Phase 1: Basic tracking Q1, Phase 2: Advanced analytics Q3"
-            ]
-          },
-          "maintenanceRequirements": {
-            "type": "string",
-            "description": "Ongoing maintenance and support needs",
-            "examples": [
-              "Daily monitoring, weekly updates, quarterly system maintenance"
-            ]
-          },
-          "scalabilityConsiderations": {
-            "type": "string",
-            "description": "Scaling capabilities and constraints",
-            "examples": [
-              "Auto-scaling infrastructure, handles 10,000 concurrent users"
-            ]
-          },
-          "complianceAspects": {
-            "type": "string",
-            "description": "Regulatory and compliance considerations",
-            "examples": [
-              "Data privacy compliance, location sharing consent"
-            ]
-          },
-          "innovationOpportunities": {
-            "type": "string",
-            "description": "Future enhancement possibilities",
-            "examples": [
-              "Predictive delivery times, IoT sensor integration, AI-powered insights"
-            ]
-          },
-          "rolloutStrategy": {
-            "type": "string",
-            "enum": [
-              "Big Bang",
-              "Phased",
-              "Canary",
-              "Beta",
-              "Geographic",
-              "Segment"
-            ],
-            "description": "Feature rollout approach"
-          },
-          "targetAudience": {
-            "type": "string",
-            "description": "Specific users or groups for the feature",
-            "examples": [
-              "Customer service representatives, field technicians, managers"
-            ]
-          },
-          "successMetrics": {
-            "type": "string",
-            "description": "Metrics to measure feature success",
-            "examples": [
-              "User adoption rate, error reduction, time savings, satisfaction score"
-            ]
-          },
-          "feedback": {
-            "type": "string",
-            "description": "User feedback and feature reception",
-            "examples": [
-              "Initial users report 30% time savings and improved accuracy"
-            ]
-          },
-          "costs": {
-            "type": "string",
-            "description": "Development and operational costs for the feature",
-            "examples": [
-              "Development: $50K, Annual maintenance: $10K"
-            ]
-          },
-          "riskFactors": {
-            "type": "string",
-            "description": "Key risks to feature success",
-            "examples": [
-              "Integration complexity, user adoption challenges, data quality issues"
-            ]
-          }
-        },
-        "required": [
-          "title",
-          "description",
-          "purpose"
-        ],
-        "additionalProperties": false
+        "$ref": "#/definitions/serviceFeature"
       }
     }
   },
@@ -783,5 +543,250 @@
     "purpose",
     "owner"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "definitions": {
+    "serviceFeature": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "The name or title of the Service feature",
+          "examples": [
+            "Real-time Cargo Tracking"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "A detailed explanation of what the Service feature entails",
+          "examples": [
+            "GPS-based tracking system providing customers with real-time location updates"
+          ]
+        },
+        "purpose": {
+          "type": "string",
+          "description": "The intended purpose or benefit of the Service feature",
+          "examples": [
+            "Provide transparency and certainty about cargo location and arrival times"
+          ]
+        },
+        "owner": {
+          "type": "string",
+          "description": "The individual or team responsible for the Service feature",
+          "examples": [
+            "Sarah Johnson, Head of Digital Services"
+          ]
+        },
+        "orgUnitTitle": {
+          "type": "string",
+          "description": "The Organization unit(s) involved in the Service feature",
+          "examples": [
+            "Technology and Customer Experience Department"
+          ]
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
+        "featureType": {
+          "type": "string",
+          "enum": [
+            "Core Feature",
+            "Premium Feature",
+            "Add-on",
+            "Integration",
+            "Automation",
+            "Enhancement"
+          ],
+          "description": "Type of service feature"
+        },
+        "priority": {
+          "description": "Business and development priority",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/priority"
+            }
+          ]
+        },
+        "complexity": {
+          "description": "Implementation and operational complexity",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/complexity"
+            }
+          ]
+        },
+        "serviceLevelAgreements": {
+          "type": "string",
+          "description": "The SLAs associated with the Service feature",
+          "examples": [
+            "99.5% system uptime, location updates every 15 minutes"
+          ]
+        },
+        "channels": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "Web Portal",
+              "Mobile Application",
+              "SMS Alerts",
+              "Email Notifications",
+              "API Integration",
+              "Phone",
+              "Chat"
+            ]
+          },
+          "description": "The channels through which the Service feature is provided"
+        },
+        "customerFeedback": {
+          "type": "string",
+          "description": "Methods for collecting feedback on this feature",
+          "examples": [
+            "In-app feedback option, usage analytics, satisfaction surveys"
+          ]
+        },
+        "userExperience": {
+          "type": "string",
+          "description": "Description of user interaction and experience",
+          "examples": [
+            "Intuitive interface with real-time map visualization and status updates"
+          ]
+        },
+        "performanceMetrics": {
+          "type": "string",
+          "description": "Metrics specific to this feature",
+          "examples": [
+            "Update frequency, accuracy rate, user engagement, satisfaction score"
+          ]
+        },
+        "dependencies": {
+          "type": "string",
+          "description": "Technical or business dependencies for this feature",
+          "examples": [
+            "GPS infrastructure, mobile networks, database systems"
+          ]
+        },
+        "integrationRequirements": {
+          "type": "string",
+          "description": "Integration needs with other systems or services",
+          "examples": [
+            "ERP integration, mobile push notifications, third-party mapping services"
+          ]
+        },
+        "securityRequirements": {
+          "type": "string",
+          "description": "Security specifications for the feature",
+          "examples": [
+            "Encrypted data transmission, secure authentication, access controls"
+          ]
+        },
+        "accessibilityFeatures": {
+          "type": "string",
+          "description": "Accessibility accommodations",
+          "examples": [
+            "Screen reader support, high contrast mode, voice commands"
+          ]
+        },
+        "businessValue": {
+          "type": "string",
+          "description": "Business impact and value delivered",
+          "examples": [
+            "Reduces customer inquiries by 40%, improves satisfaction scores"
+          ]
+        },
+        "implementationTimeline": {
+          "type": "string",
+          "description": "Development and rollout timeline",
+          "examples": [
+            "Phase 1: Basic tracking Q1, Phase 2: Advanced analytics Q3"
+          ]
+        },
+        "maintenanceRequirements": {
+          "type": "string",
+          "description": "Ongoing maintenance and support needs",
+          "examples": [
+            "Daily monitoring, weekly updates, quarterly system maintenance"
+          ]
+        },
+        "scalabilityConsiderations": {
+          "type": "string",
+          "description": "Scaling capabilities and constraints",
+          "examples": [
+            "Auto-scaling infrastructure, handles 10,000 concurrent users"
+          ]
+        },
+        "complianceAspects": {
+          "type": "string",
+          "description": "Regulatory and compliance considerations",
+          "examples": [
+            "Data privacy compliance, location sharing consent"
+          ]
+        },
+        "innovationOpportunities": {
+          "type": "string",
+          "description": "Future enhancement possibilities",
+          "examples": [
+            "Predictive delivery times, IoT sensor integration, AI-powered insights"
+          ]
+        },
+        "rolloutStrategy": {
+          "type": "string",
+          "enum": [
+            "Big Bang",
+            "Phased",
+            "Canary",
+            "Beta",
+            "Geographic",
+            "Segment"
+          ],
+          "description": "Feature rollout approach"
+        },
+        "targetAudience": {
+          "type": "string",
+          "description": "Specific users or groups for the feature",
+          "examples": [
+            "Customer service representatives, field technicians, managers"
+          ]
+        },
+        "successMetrics": {
+          "type": "string",
+          "description": "Metrics to measure feature success",
+          "examples": [
+            "User adoption rate, error reduction, time savings, satisfaction score"
+          ]
+        },
+        "feedback": {
+          "type": "string",
+          "description": "User feedback and feature reception",
+          "examples": [
+            "Initial users report 30% time savings and improved accuracy"
+          ]
+        },
+        "costs": {
+          "type": "string",
+          "description": "Development and operational costs for the feature",
+          "examples": [
+            "Development: $50K, Annual maintenance: $10K"
+          ]
+        },
+        "riskFactors": {
+          "type": "string",
+          "description": "Key risks to feature success",
+          "examples": [
+            "Integration complexity, user adoption challenges, data quality issues"
+          ]
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "purpose"
+      ],
+      "additionalProperties": false
+    }
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/rationale.schema.json",
   "title": "Rationale",
   "description": "Schema for the logical reasoning that connects a trigger to a specific response within the Strategic Response Model",
