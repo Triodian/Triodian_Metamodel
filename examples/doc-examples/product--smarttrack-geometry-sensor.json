@@ -10,8 +10,8 @@
   "businessModel": "oneTimePurchase",
   "lifecycleStage": "development",
   "customerSegments": [
-    "Railway Operators",
-    "Infrastructure Managers"
+    "enterprise",
+    "government"
   ],
   "channels": [
     "directSales",

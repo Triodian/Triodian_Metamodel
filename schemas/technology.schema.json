@@ -160,14 +160,11 @@
       }
     },
     "securityClassification": {
-      "type": "string",
-      "description": "Security requirements and rating",
-      "enum": [
-        "public",
-        "internal",
-        "confidential",
-        "restricted",
-        "secret"
+      "description": "Security requirements rating; give the reason in prose, e.g. \"high: contains sensitive customer data\"",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/ratingLevel"
+        }
       ]
     },
     "performanceRequirements": {
@@ -189,38 +186,7 @@
       "type": "array",
       "description": "Metrics used to measure technology performance",
       "items": {
-        "type": "object",
-        "properties": {
-          "metricName": {
-            "type": "string",
-            "description": "Name of the performance metric"
-          },
-          "metricDescription": {
-            "type": "string",
-            "description": "Description of what the metric measures"
-          },
-          "currentValue": {
-            "type": "string",
-            "description": "Current performance value"
-          },
-          "targetValue": {
-            "type": "string",
-            "description": "Target performance value"
-          },
-          "unit": {
-            "type": "string",
-            "description": "Unit of measurement"
-          },
-          "trend": {
-            "description": "Direction of change",
-            "allOf": [
-              {
-                "$ref": "common.schema.json#/definitions/performanceTrend"
-              }
-            ]
-          }
-        },
-        "additionalProperties": false
+        "$ref": "common.schema.json#/definitions/performanceIndicator"
       }
     },
     "dependencies": {

@@ -95,10 +95,10 @@
       ]
     },
     "status": {
-      "description": "Approval state of the model",
+      "description": "Lifecycle state of the model",
       "allOf": [
         {
-          "$ref": "common.schema.json#/definitions/documentStatus"
+          "$ref": "#/definitions/modelStatus"
         }
       ]
     },
@@ -762,13 +762,14 @@
             }
           ]
         },
-        "modelID": {
-          "description": "ID of the model this record belongs to",
-          "allOf": [
-            {
-              "$ref": "common.schema.json#/definitions/identifier"
-            }
-          ]
+        "modelIDs": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "description": "IDs of the models the mapping covers; omit when it maps the model risk framework as a whole",
+          "items": {
+            "$ref": "common.schema.json#/definitions/identifier"
+          }
         },
         "requirements": {
           "type": "array",
@@ -801,9 +802,13 @@
                 "type": "string",
                 "enum": [
                   "model",
+                  "data",
+                  "implementation",
+                  "use",
                   "governance",
                   "validation",
-                  "monitoring"
+                  "monitoring",
+                  "other"
                 ],
                 "description": "Which part of model risk management the obligation applies to"
               },
@@ -846,10 +851,24 @@
         }
       },
       "required": [
-        "frameworkMapID",
-        "modelID"
+        "frameworkMapID"
       ],
       "additionalProperties": false
+    },
+    "modelStatus": {
+      "type": "string",
+      "description": "Lifecycle state of a model",
+      "enum": [
+        "inDevelopment",
+        "pendingValidation",
+        "underValidation",
+        "approved",
+        "conditionallyApproved",
+        "inUse",
+        "underReview",
+        "suspended",
+        "retired"
+      ]
     }
   }
 }

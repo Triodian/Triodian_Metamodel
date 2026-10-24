@@ -74,7 +74,7 @@ General four-point rating, from least to most significant. The basis for priorit
 
 Values: `low`, `medium`, `high`, `critical`
 
-Used by 18 field(s) in: `channel.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `intelligence.schema.json`, `market.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `strategic-intent.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `trigger.schema.json`
+Used by 19 field(s) in: `channel.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `intelligence.schema.json`, `market.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `strategic-intent.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`, `trigger.schema.json`
 
 ### `priority`
 
@@ -140,7 +140,7 @@ Five-point rating from very low to very high, for judgements such as flexibility
 
 Values: `veryLow`, `low`, `medium`, `high`, `veryHigh`
 
-Used by 21 field(s) in: `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 19 field(s) in: `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `confidenceLevel`
 
@@ -198,7 +198,7 @@ Implementation or operational complexity.
 
 Values: `simple`, `moderate`, `complex`, `highlyComplex`
 
-Used by 4 field(s) in: `capability.schema.json`, `performance.schema.json`, `product.schema.json`, `service.schema.json`
+Used by 6 field(s) in: `capability.schema.json`, `performance.schema.json`, `product.schema.json`, `service.schema.json`, `supply-chain.schema.json`
 
 ### `scale1to5`
 
@@ -228,7 +228,7 @@ Direction of a measure judged against its goal (better or worse).
 
 Values: `improving`, `stable`, `declining`, `fluctuating`, `notTracked`
 
-Used by 6 field(s) in: `model-risk-management.schema.json`, `risk-management.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`
+Used by 5 field(s) in: `model-risk-management.schema.json`, `risk-management.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `quantityTrend`
 
@@ -252,7 +252,7 @@ Approval state of a document, artefact, policy or standard.
 
 Values: `draft`, `inReview`, `approved`, `superseded`, `obsolete`
 
-Used by 2 field(s) in: `extensions/business-analysis.schema.json`, `model-risk-management.schema.json`
+Used by 1 field(s) in: `extensions/business-analysis.schema.json`
 
 ### `implementationStatus`
 
@@ -374,5 +374,5 @@ Used by 4 field(s) in: `finance.schema.json`, `innovation.schema.json`, `market.
 
 A metric used to measure performance, with current and target values.
 
-Used by 2 field(s) in: `finance.schema.json`, `market.schema.json`
+Used by 3 field(s) in: `finance.schema.json`, `market.schema.json`, `technology.schema.json`
 

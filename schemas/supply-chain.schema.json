@@ -659,7 +659,7 @@
             "description": "Complexity of implementation",
             "allOf": [
               {
-                "$ref": "common.schema.json#/definitions/fivePointLevel"
+                "$ref": "common.schema.json#/definitions/complexity"
               }
             ]
           },
@@ -1818,7 +1818,7 @@
                 "description": "Complexity to implement",
                 "allOf": [
                   {
-                    "$ref": "common.schema.json#/definitions/fivePointLevel"
+                    "$ref": "common.schema.json#/definitions/complexity"
                   }
                 ]
               },
