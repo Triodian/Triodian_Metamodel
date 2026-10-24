@@ -392,12 +392,12 @@
       },
       "description": "Types of relationships with each related rationale"
     },
-    "customerSegmentIDs": {
+    "relatedEntities": {
       "type": "array",
+      "description": "Entities in any domain this rationale relates to, by domain and ID. Replaces the per-domain ID lists.",
       "items": {
-        "type": "string"
-      },
-      "description": "Customer segments this rationale relates to"
+        "$ref": "common.schema.json#/definitions/entityReference"
+      }
     },
     "customerInsightSource": {
       "type": "string",
@@ -412,13 +412,6 @@
         "Competitive_Analysis"
       ],
       "description": "Source of customer insights supporting this rationale"
-    },
-    "marketIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Markets this rationale relates to"
     },
     "marketInsightSource": {
       "type": "string",
@@ -496,13 +489,6 @@
       },
       "description": "Market risks associated with this rationale"
     },
-    "financeIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Financial elements this rationale relates to"
-    },
     "financialInsightSource": {
       "type": "string",
       "enum": [
@@ -578,13 +564,6 @@
       },
       "description": "Financial risks associated with this rationale"
     },
-    "riskIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Risks this rationale relates to"
-    },
     "riskInsightSource": {
       "type": "string",
       "enum": [
@@ -648,13 +627,6 @@
       "description": "Assessment of risk implications",
       "additionalProperties": false
     },
-    "supplyChainIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Supply chain elements this rationale relates to"
-    },
     "supplyChainInsightSource": {
       "type": "string",
       "enum": [
@@ -715,13 +687,6 @@
       "description": "Assessment of supply chain implications",
       "additionalProperties": false
     },
-    "innovationIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Innovation elements this rationale relates to"
-    },
     "innovationInsightSource": {
       "type": "string",
       "enum": [
@@ -764,13 +729,6 @@
       "description": "Assessment of innovation implications",
       "additionalProperties": false
     },
-    "sustainabilityIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Sustainability elements this rationale relates to"
-    },
     "sustainabilityInsightSource": {
       "type": "string",
       "enum": [
@@ -805,13 +763,6 @@
       },
       "description": "Assessment of sustainability implications",
       "additionalProperties": false
-    },
-    "peopleIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "People elements this rationale relates to"
     },
     "peopleInsightSource": {
       "type": "string",
@@ -852,13 +803,6 @@
       "description": "Assessment of workforce implications",
       "additionalProperties": false
     },
-    "technologyIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Technology elements this rationale relates to"
-    },
     "technologyInsightSource": {
       "type": "string",
       "enum": [
@@ -893,13 +837,6 @@
       },
       "description": "Assessment of technology implications",
       "additionalProperties": false
-    },
-    "channelIDs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Channel elements this rationale relates to"
     },
     "channelInsightSource": {
       "type": "string",

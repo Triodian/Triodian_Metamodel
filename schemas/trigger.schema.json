@@ -87,25 +87,12 @@
       },
       "description": "References to related strategicResponseModel artefacts"
     },
-    "marketID": {
-      "type": "string",
-      "description": "ID of the affected market"
-    },
-    "industryID": {
-      "type": "string",
-      "description": "ID of the affected industry"
-    },
-    "competitorID": {
-      "type": "string",
-      "description": "ID of the related competitor"
-    },
-    "supplyChainID": {
-      "type": "string",
-      "description": "ID of the affected supply chain element"
-    },
-    "networkID": {
-      "type": "string",
-      "description": "ID of the related supplier network"
+    "affectedEntities": {
+      "type": "array",
+      "description": "Entities in any domain this trigger affects or relates to, by domain and ID (for example a market, budget, customer journey stage, risk control or channel). Replaces the per-domain ID fields.",
+      "items": {
+        "$ref": "common.schema.json#/definitions/entityReference"
+      }
     },
     "supplyChainImpact": {
       "type": "object",
@@ -133,18 +120,6 @@
       "description": "Impact on supply chain operations",
       "additionalProperties": false
     },
-    "financeID": {
-      "type": "string",
-      "description": "ID of the affected financial element"
-    },
-    "budgetID": {
-      "type": "string",
-      "description": "ID of the affected budget"
-    },
-    "investmentID": {
-      "type": "string",
-      "description": "ID of the related investment"
-    },
     "financialImpact": {
       "type": "object",
       "properties": {
@@ -167,22 +142,6 @@
       },
       "description": "Monetary impact of the trigger",
       "additionalProperties": false
-    },
-    "customerSegmentID": {
-      "type": "string",
-      "description": "ID of the affected customer segment"
-    },
-    "journeyStageID": {
-      "type": "string",
-      "description": "ID of the affected journey stage"
-    },
-    "riskID": {
-      "type": "string",
-      "description": "ID of the affected risk"
-    },
-    "controlID": {
-      "type": "string",
-      "description": "ID of the related control"
     },
     "riskImpact": {
       "type": "object",
@@ -213,10 +172,6 @@
       "description": "Impact on risk profile",
       "additionalProperties": false
     },
-    "innovationID": {
-      "type": "string",
-      "description": "ID of the related innovation"
-    },
     "innovationImpact": {
       "type": "object",
       "properties": {
@@ -246,10 +201,6 @@
       "description": "Impact on innovation capabilities or projects",
       "additionalProperties": false
     },
-    "sustainabilityID": {
-      "type": "string",
-      "description": "ID of the related sustainability element"
-    },
     "sustainabilityImpact": {
       "type": "object",
       "properties": {
@@ -275,10 +226,6 @@
       },
       "description": "Impact on sustainability efforts",
       "additionalProperties": false
-    },
-    "peopleID": {
-      "type": "string",
-      "description": "ID of the related people element"
     },
     "peopleImpact": {
       "type": "object",
@@ -306,10 +253,6 @@
       "description": "Impact on workforce or culture",
       "additionalProperties": false
     },
-    "technologyID": {
-      "type": "string",
-      "description": "ID of the affected technology element"
-    },
     "technologyImpact": {
       "type": "object",
       "properties": {
@@ -335,10 +278,6 @@
       },
       "description": "Impact on technology systems",
       "additionalProperties": false
-    },
-    "channelID": {
-      "type": "string",
-      "description": "ID of the related channel element"
     },
     "channelImpact": {
       "type": "object",
