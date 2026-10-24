@@ -26,6 +26,7 @@
     {
       "title": "Audit Trail Records",
       "description": "Detailed records of all financial system transactions and changes",
+      "purpose": "Provide an immutable record of financial changes for audit and regulatory review",
       "elementType": "Document",
       "sensitivity": "Restricted",
       "constraints": "Immutable once created, digitally signed",
