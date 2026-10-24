@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/intelligence.schema.json",
   "title": "Intelligence",
   "description": "Schema for capturing organizational intelligence activities, sources, applications, and attributes.",
@@ -41,7 +41,7 @@
       "type": "array",
       "description": "List of sources used for intelligence gathering.",
       "items": {
-        "$ref": "#/$defs/intelligenceSource"
+        "$ref": "#/definitions/intelligenceSource"
       }
     },
     "intelligenceType": {
@@ -114,7 +114,7 @@
       "type": "array",
       "description": "Applications and outcomes linked to the intelligence activity.",
       "items": {
-        "$ref": "#/$defs/intelligenceApplication"
+        "$ref": "#/definitions/intelligenceApplication"
       }
     }
   },
@@ -123,7 +123,8 @@
     "title",
     "intelligenceType"
   ],
-  "$defs": {
+  "additionalProperties": false,
+  "definitions": {
     "intelligenceSource": {
       "type": "object",
       "properties": {
@@ -217,6 +218,5 @@
       ],
       "additionalProperties": false
     }
-  },
-  "additionalProperties": false
+  }
 }

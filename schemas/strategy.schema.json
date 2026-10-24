@@ -291,7 +291,7 @@
       "type": "array",
       "description": "Specific objectives supporting the strategy",
       "items": {
-        "$ref": "#/definitions/StrategyObjective"
+        "$ref": "#/definitions/strategyObjective"
       }
     },
     "empathyFocus": {
@@ -365,7 +365,7 @@
   ],
   "additionalProperties": false,
   "definitions": {
-    "StrategyObjective": {
+    "strategyObjective": {
       "type": "object",
       "description": "A specific objective that supports a strategy",
       "properties": {

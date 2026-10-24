@@ -300,7 +300,7 @@
       "type": "array",
       "description": "Sub-organization units within this organization",
       "items": {
-        "$ref": "#/definitions/OrganizationUnit"
+        "$ref": "#/definitions/organizationUnit"
       }
     }
   },
@@ -314,7 +314,7 @@
   ],
   "additionalProperties": false,
   "definitions": {
-    "OrganizationUnit": {
+    "organizationUnit": {
       "type": "object",
       "description": "A sub-division or entity within an organization",
       "properties": {

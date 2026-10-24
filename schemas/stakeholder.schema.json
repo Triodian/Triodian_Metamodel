@@ -243,7 +243,7 @@
       "type": "array",
       "description": "Specific requirements from stakeholder",
       "items": {
-        "$ref": "#/definitions/StakeholderRequirement"
+        "$ref": "#/definitions/stakeholderRequirement"
       }
     }
   },
@@ -255,7 +255,7 @@
   ],
   "additionalProperties": false,
   "definitions": {
-    "StakeholderRequirement": {
+    "stakeholderRequirement": {
       "type": "object",
       "description": "A specific requirement from a stakeholder",
       "properties": {

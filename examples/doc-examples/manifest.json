@@ -340,25 +340,25 @@
     {
       "instance": "manufacturing--workorder-37866.json",
       "schema": "manufacturing.schema.json",
-      "pointer": "#/definitions/WorkOrder",
+      "pointer": "#/definitions/workOrder",
       "docLine": 37866
     },
     {
       "instance": "manufacturing--workorder-37892.json",
       "schema": "manufacturing.schema.json",
-      "pointer": "#/definitions/WorkOrder",
+      "pointer": "#/definitions/workOrder",
       "docLine": 37892
     },
     {
       "instance": "manufacturing--productionunit-37892.json",
       "schema": "manufacturing.schema.json",
-      "pointer": "#/definitions/ProductionUnit",
+      "pointer": "#/definitions/productionUnit",
       "docLine": 37892
     },
     {
       "instance": "manufacturing--inventory-37919.json",
       "schema": "manufacturing.schema.json",
-      "pointer": "#/definitions/Inventory",
+      "pointer": "#/definitions/inventory",
       "docLine": 37919
     },
     {
