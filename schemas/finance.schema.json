@@ -13,10 +13,11 @@
   "additionalProperties": false,
   "properties": {
     "financeID": {
-      "type": "string",
       "description": "Unique identifier for the finance element",
-      "examples": [
-        "FIN-INV-001"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
       ]
     },
     "title": {
@@ -54,8 +55,7 @@
           ]
         },
         "currency": {
-          "type": "string",
-          "description": "ISO 4217 currency code"
+          "$ref": "common.schema.json#/definitions/currencyCode"
         },
         "fiscalYear": {
           "type": "string",
@@ -161,14 +161,12 @@
       "description": "Level of strategic importance",
       "properties": {
         "priorityLevel": {
-          "type": "string",
-          "enum": [
-            "critical",
-            "high",
-            "medium",
-            "low"
-          ],
-          "description": "Level of strategic importance"
+          "description": "Level of strategic importance",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/priority"
+            }
+          ]
         },
         "description": {
           "type": "string",
@@ -185,14 +183,12 @@
       "description": "Risk characteristics of the financial element",
       "properties": {
         "riskLevel": {
-          "type": "string",
-          "enum": [
-            "low",
-            "moderate",
-            "high",
-            "veryHigh"
-          ],
-          "description": "Overall risk level"
+          "description": "Overall risk level",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/riskLevel"
+            }
+          ]
         },
         "description": {
           "type": "string",
@@ -215,14 +211,14 @@
       "type": "array",
       "description": "Metrics used to measure financial performance",
       "items": {
-        "$ref": "#/definitions/performanceIndicator"
+        "$ref": "common.schema.json#/definitions/performanceIndicator"
       }
     },
     "dependencies": {
       "type": "array",
       "description": "Other domains, processes or systems supporting the financial element",
       "items": {
-        "$ref": "#/definitions/dependency"
+        "$ref": "common.schema.json#/definitions/dependency"
       }
     },
     "relatedFinancialElements": {
@@ -244,10 +240,12 @@
             ]
           },
           "relationshipStrength": {
-            "type": "integer",
-            "minimum": 1,
-            "maximum": 5,
-            "description": "Strength of the relationship (1 = lowest, 5 = highest)"
+            "description": "Strength of the relationship (1 = lowest, 5 = highest)",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/scale1to5"
+              }
+            ]
           }
         },
         "required": [
@@ -266,80 +264,6 @@
     }
   },
   "definitions": {
-    "performanceIndicator": {
-      "type": "object",
-      "description": "A metric used to measure performance",
-      "properties": {
-        "metricName": {
-          "type": "string",
-          "description": "Name of the metric"
-        },
-        "metricDescription": {
-          "type": "string",
-          "description": "What the metric measures"
-        },
-        "currentValue": {
-          "type": "string",
-          "description": "Current value"
-        },
-        "targetValue": {
-          "type": "string",
-          "description": "Target value"
-        },
-        "unit": {
-          "type": "string",
-          "description": "Unit of measurement"
-        }
-      },
-      "required": [
-        "metricName"
-      ],
-      "additionalProperties": false
-    },
-    "dependency": {
-      "type": "object",
-      "description": "Another domain entity this element depends on",
-      "properties": {
-        "dependencyType": {
-          "type": "string",
-          "description": "Strength or nature of the dependency",
-          "examples": [
-            "Critical",
-            "Important",
-            "Enabler"
-          ]
-        },
-        "domainType": {
-          "type": "string",
-          "enum": [
-            "Capability",
-            "Service",
-            "Product",
-            "Information",
-            "Value Stream",
-            "Strategy",
-            "Organization",
-            "Technology",
-            "Initiative",
-            "Other"
-          ],
-          "description": "Domain of the entity depended upon"
-        },
-        "entityID": {
-          "type": "string",
-          "description": "ID of the entity depended upon"
-        },
-        "description": {
-          "type": "string",
-          "description": "Description of the dependency"
-        }
-      },
-      "required": [
-        "domainType",
-        "entityID"
-      ],
-      "additionalProperties": false
-    },
     "metricComparison": {
       "type": "object",
       "description": "A metric with current and target values",
@@ -362,30 +286,6 @@
       ],
       "additionalProperties": false
     },
-    "moneyAmount": {
-      "type": "object",
-      "description": "A monetary amount",
-      "properties": {
-        "amount": {
-          "type": "number",
-          "description": "Monetary amount"
-        },
-        "currency": {
-          "type": "string",
-          "description": "ISO 4217 currency code",
-          "examples": [
-            "USD",
-            "AUD",
-            "EUR"
-          ]
-        }
-      },
-      "required": [
-        "amount",
-        "currency"
-      ],
-      "additionalProperties": false
-    },
     "costShare": {
       "type": "object",
       "description": "A cost amount and its share of the total",
@@ -402,27 +302,6 @@
           "maximum": 100
         }
       },
-      "additionalProperties": false
-    },
-    "datePeriod": {
-      "type": "object",
-      "description": "A period between two dates",
-      "properties": {
-        "startDate": {
-          "type": "string",
-          "description": "Start date",
-          "format": "date"
-        },
-        "endDate": {
-          "type": "string",
-          "description": "End date",
-          "format": "date"
-        }
-      },
-      "required": [
-        "startDate",
-        "endDate"
-      ],
       "additionalProperties": false
     },
     "financialResource": {
@@ -472,8 +351,7 @@
               "description": "Current value"
             },
             "currency": {
-              "type": "string",
-              "description": "ISO 4217 currency code"
+              "$ref": "common.schema.json#/definitions/currencyCode"
             },
             "valuationDate": {
               "type": "string",
@@ -506,7 +384,7 @@
           "type": "object",
           "description": "Lifecycle information for the resource",
           "properties": {
-            "lifecycleStage": {
+            "resourceStatus": {
               "type": "string",
               "enum": [
                 "planned",
@@ -514,7 +392,7 @@
                 "maturing",
                 "retired"
               ],
-              "description": "Lifecycle stage"
+              "description": "State of the resource"
             },
             "refreshCycle": {
               "type": "string",
@@ -528,14 +406,12 @@
           "description": "Risk characteristics of the resource",
           "properties": {
             "riskLevel": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high",
-                "veryHigh"
-              ],
-              "description": "Overall risk level"
+              "description": "Overall risk level",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/riskLevel"
+                }
+              ]
             },
             "riskFactors": {
               "type": "array",
@@ -590,10 +466,12 @@
                 "description": "ID of the supported capability"
               },
               "importanceLevel": {
-                "type": "integer",
-                "minimum": 1,
-                "maximum": 5,
-                "description": "Importance of the resource to the capability (1 = lowest, 5 = highest)"
+                "description": "Importance of the resource to the capability (1 = lowest, 5 = highest)",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/scale1to5"
+                  }
+                ]
               }
             },
             "required": [
@@ -603,17 +481,12 @@
           }
         },
         "monitoringFrequency": {
-          "type": "string",
-          "enum": [
-            "continuous",
-            "daily",
-            "weekly",
-            "monthly",
-            "quarterly",
-            "annually",
-            "adHoc"
-          ],
-          "description": "How often the resource is formally assessed"
+          "description": "How often the resource is formally assessed",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
+          ]
         }
       },
       "required": [
@@ -662,7 +535,7 @@
           "description": "Time period covered by the budget",
           "allOf": [
             {
-              "$ref": "#/definitions/datePeriod"
+              "$ref": "common.schema.json#/definitions/datePeriod"
             }
           ]
         },
@@ -676,8 +549,7 @@
               "minimum": 0
             },
             "currency": {
-              "type": "string",
-              "description": "ISO 4217 currency code"
+              "$ref": "common.schema.json#/definitions/currencyCode"
             },
             "amountType": {
               "type": "string",
@@ -786,13 +658,12 @@
                 "description": "Assumption underlying the budget"
               },
               "confidenceLevel": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high"
-                ],
-                "description": "Confidence in the assumption"
+                "description": "Confidence in the assumption",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/confidenceLevel"
+                  }
+                ]
               }
             },
             "required": [
@@ -901,7 +772,7 @@
           "description": "Financial dimensions of the investment",
           "allOf": [
             {
-              "$ref": "#/definitions/moneyAmount"
+              "$ref": "common.schema.json#/definitions/moneyAmount"
             }
           ]
         },
@@ -909,7 +780,7 @@
           "description": "Temporal aspects of the investment",
           "allOf": [
             {
-              "$ref": "#/definitions/datePeriod"
+              "$ref": "common.schema.json#/definitions/datePeriod"
             }
           ]
         },
@@ -944,14 +815,12 @@
           "description": "Evaluation of investment risks",
           "properties": {
             "overallRisk": {
-              "type": "string",
-              "enum": [
-                "low",
-                "moderate",
-                "high",
-                "veryHigh"
-              ],
-              "description": "Overall risk level"
+              "description": "Overall risk level",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/riskLevel"
+                }
+              ]
             },
             "riskFactors": {
               "type": "array",
@@ -964,22 +833,20 @@
                     "description": "Risk factor"
                   },
                   "probability": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high"
-                    ],
-                    "description": "Probability of the risk"
+                    "description": "Probability of the risk",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/likelihood"
+                      }
+                    ]
                   },
                   "impact": {
-                    "type": "string",
-                    "enum": [
-                      "low",
-                      "medium",
-                      "high"
-                    ],
-                    "description": "Impact if the risk occurs"
+                    "description": "Impact if the risk occurs",
+                    "allOf": [
+                      {
+                        "$ref": "common.schema.json#/definitions/impactMagnitude"
+                      }
+                    ]
                   }
                 },
                 "required": [
@@ -996,13 +863,12 @@
           "description": "How the investment supports strategy",
           "properties": {
             "alignmentLevel": {
-              "type": "string",
-              "enum": [
-                "weak",
-                "moderate",
-                "strong"
-              ],
-              "description": "Degree of alignment"
+              "description": "Degree of alignment",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/alignmentLevel"
+                }
+              ]
             },
             "strategicObjectives": {
               "type": "array",
@@ -1100,16 +966,12 @@
           }
         },
         "status": {
-          "type": "string",
-          "enum": [
-            "proposed",
-            "approved",
-            "active",
-            "onHold",
-            "completed",
-            "cancelled"
-          ],
-          "description": "Current status of the investment"
+          "description": "Current status of the investment",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/workStatus"
+            }
+          ]
         }
       },
       "required": [
@@ -1198,8 +1060,7 @@
               "description": "Current revenue"
             },
             "currency": {
-              "type": "string",
-              "description": "ISO 4217 currency code"
+              "$ref": "common.schema.json#/definitions/currencyCode"
             },
             "revenueGrowth": {
               "type": "number",
@@ -1346,14 +1207,12 @@
           "description": "Strategic significance of this revenue stream",
           "properties": {
             "importanceLevel": {
-              "type": "string",
-              "enum": [
-                "critical",
-                "high",
-                "medium",
-                "low"
-              ],
-              "description": "Strategic importance"
+              "description": "Strategic importance",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/importance"
+                }
+              ]
             },
             "strategicRole": {
               "type": "string",
@@ -1448,8 +1307,7 @@
               "minimum": 0
             },
             "currency": {
-              "type": "string",
-              "description": "ISO 4217 currency code"
+              "$ref": "common.schema.json#/definitions/currencyCode"
             },
             "timeframe": {
               "type": "string",
@@ -1508,14 +1366,12 @@
                 "description": "Factor influencing cost"
               },
               "impactLevel": {
-                "type": "string",
-                "enum": [
-                  "low",
-                  "medium",
-                  "high",
-                  "critical"
-                ],
-                "description": "Influence on cost"
+                "description": "Influence on cost",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/ratingLevel"
+                  }
+                ]
               }
             },
             "required": [
@@ -1529,13 +1385,12 @@
           "description": "Cost movement over time",
           "properties": {
             "overallTrend": {
-              "type": "string",
-              "enum": [
-                "increasing",
-                "stable",
-                "decreasing"
-              ],
-              "description": "Overall direction of costs"
+              "description": "Overall direction of costs",
+              "allOf": [
+                {
+                  "$ref": "common.schema.json#/definitions/quantityTrend"
+                }
+              ]
             },
             "annualGrowthRate": {
               "type": "number",

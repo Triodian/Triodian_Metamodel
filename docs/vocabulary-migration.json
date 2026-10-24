@@ -1,0 +1,3788 @@
+{
+  "usages": [
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "Level 1 - Initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "Level 2 - Repeatable": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "Level 3 - Defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "Level 4 - Managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "Level 5 - Optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "Technical/Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Financial": {
+          "to": "financial",
+          "note": "ok"
+        },
+        "Compliance/Regulatory": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "Strategic": {
+          "to": "strategic",
+          "note": "ok"
+        },
+        "Resource/Capacity": {
+          "to": "people",
+          "note": "ok"
+        },
+        "External/Environmental": {
+          "to": "external",
+          "note": "ok"
+        },
+        "Security/Cybersecurity": {
+          "to": "security",
+          "note": "ok"
+        },
+        "Reputational": {
+          "to": "reputational",
+          "note": "ok"
+        },
+        "Change Management": {
+          "to": "changeManagement",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/properties/criticality",
+      "field": "criticality",
+      "target": "criticality",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/CapabilityFunction/properties/frequency",
+      "field": "frequency",
+      "target": "frequency",
+      "values": {
+        "Continuous": {
+          "to": "continuous",
+          "note": "ok"
+        },
+        "Real-time": {
+          "to": "realTime",
+          "note": "ok"
+        },
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "On-Demand": {
+          "to": "onDemand",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/CapabilityComponent/properties/lifecycle",
+      "field": "lifecycle",
+      "target": "lifecycleStage",
+      "values": {
+        "Planning": {
+          "to": "planning",
+          "note": "ok"
+        },
+        "Development": {
+          "to": "development",
+          "note": "ok"
+        },
+        "Implementation": {
+          "to": "implementation",
+          "note": "ok"
+        },
+        "Operations": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Enhancement": {
+          "to": "enhancement",
+          "note": "ok"
+        },
+        "Retirement": {
+          "to": "retirement",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/CapabilityProcess/properties/frequency",
+      "field": "frequency",
+      "target": "frequency",
+      "values": {
+        "Continuous": {
+          "to": "continuous",
+          "note": "ok"
+        },
+        "Real-time": {
+          "to": "realTime",
+          "note": "ok"
+        },
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "On-Demand": {
+          "to": "onDemand",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/CapabilityProcess/properties/automation",
+      "field": "automation",
+      "target": "automationLevel",
+      "values": {
+        "Manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "Semi-Automated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "Fully Automated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        },
+        "AI-Enabled": {
+          "to": "aiEnabled",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "capabilities.schema.json",
+      "path": "/definitions/CapabilityProcess/properties/complexity",
+      "field": "complexity",
+      "target": "complexity",
+      "values": {
+        "Simple": {
+          "to": "simple",
+          "note": "ok"
+        },
+        "Moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "Complex": {
+          "to": "complex",
+          "note": "ok"
+        },
+        "Highly Complex": {
+          "to": "highlyComplex",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelMaturity/properties/maturityByType/items/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "developing": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "advanced": {
+          "to": "managed",
+          "note": "lossy"
+        },
+        "optimized": {
+          "to": "optimizing",
+          "note": "ok"
+        },
+        "expanding": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelRisks/items/properties/impactLevel",
+      "field": "impactLevel",
+      "target": "ratingLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelRisks/items/properties/probability",
+      "field": "probability",
+      "target": "likelihood",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "veryHigh",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/channelPartnerDetails/items/properties/partnerRisks/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/dependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": "dependencyStrength",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "Important": {
+          "to": "important",
+          "note": "ok"
+        },
+        "Supportive": {
+          "to": "supportive",
+          "note": "ok"
+        },
+        "Minimal": {
+          "to": "optional",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "channel.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        },
+        "Customer": {
+          "to": "customer",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "coverage/coverageExpectation.schema.json",
+      "path": "/properties/lifecycleStage",
+      "field": "lifecycleStage",
+      "target": "lifecycleStage",
+      "values": {
+        "Ideation": {
+          "to": "ideation",
+          "note": "ok"
+        },
+        "Design": {
+          "to": "design",
+          "note": "ok"
+        },
+        "Development": {
+          "to": "development",
+          "note": "ok"
+        },
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Optimisation": {
+          "to": "optimization",
+          "note": "ok"
+        },
+        "Retirement": {
+          "to": "retirement",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "customer.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Value Stream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Initiative": {
+          "to": "initiative",
+          "note": "ok"
+        },
+        "Other": {
+          "to": "other",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "extensions/business-analysis.json",
+      "path": "/definitions/Requirement/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "extensions/business-analysis.json",
+      "path": "/definitions/Requirement/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "Negligible": {
+          "to": "low",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "extensions/business-analysis.json",
+      "path": "/definitions/RequirementArtefact/properties/status",
+      "field": "status",
+      "target": "documentStatus",
+      "values": {
+        "Draft": {
+          "to": "draft",
+          "note": "ok"
+        },
+        "Approved": {
+          "to": "approved",
+          "note": "ok"
+        },
+        "In Review": {
+          "to": "inReview",
+          "note": "ok"
+        },
+        "Obsolete": {
+          "to": "obsolete",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "federated-governance-model.schema.json",
+      "path": "/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Policy": {
+          "to": "policy",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Standard": {
+          "to": "policy",
+          "note": "lossy"
+        },
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/updateFrequency",
+      "field": "updateFrequency",
+      "target": "frequency",
+      "values": {
+        "Real-time": {
+          "to": "realTime",
+          "note": "ok"
+        },
+        "Hourly": {
+          "to": "hourly",
+          "note": "ok"
+        },
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "Ad-hoc": {
+          "to": "adHoc",
+          "note": "ok"
+        },
+        "Static": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/lifecycle",
+      "field": "lifecycle",
+      "target": null,
+      "renameTo": "informationLifecycleStage",
+      "reason": "Stages of data handling (creation, active use, archive, disposal), not a delivery lifecycle",
+      "values": {
+        "Creation": {
+          "to": null,
+          "note": "local"
+        },
+        "Active Use": {
+          "to": null,
+          "note": "local"
+        },
+        "Maintenance": {
+          "to": null,
+          "note": "local"
+        },
+        "Archive": {
+          "to": null,
+          "note": "local"
+        },
+        "Disposal": {
+          "to": null,
+          "note": "local"
+        },
+        "Migration": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "Security": {
+          "to": "security",
+          "note": "ok"
+        },
+        "Privacy": {
+          "to": "privacy",
+          "note": "ok"
+        },
+        "Quality": {
+          "to": "dataQuality",
+          "note": "ok"
+        },
+        "Availability": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Compliance": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "Technical": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "information.schema.json",
+      "path": "/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "Initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "Developing": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "Defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "Managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "Optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "innovation.schema.json",
+      "path": "/properties/strategicAlignment/properties/alignmentLevel",
+      "field": "alignmentLevel",
+      "target": "alignmentLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "high",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/properties/frequency",
+      "field": "frequency",
+      "target": "frequency",
+      "values": {
+        "Continuous": {
+          "to": "continuous",
+          "note": "ok"
+        },
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "Event-driven": {
+          "to": "eventDriven",
+          "note": "ok"
+        },
+        "Ad-hoc": {
+          "to": "adHoc",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "intelligence.schema.json",
+      "path": "/$defs/intelligenceSource/properties/complianceStatus",
+      "field": "complianceStatus",
+      "target": "complianceStatus",
+      "values": {
+        "Compliant": {
+          "to": "compliant",
+          "note": "ok"
+        },
+        "Not applicable": {
+          "to": "notApplicable",
+          "note": "ok"
+        },
+        "Non-compliant": {
+          "to": "nonCompliant",
+          "note": "ok"
+        },
+        "Under review": {
+          "to": "underReview",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "inter-organizational-relationship.schema.json",
+      "path": "/properties/linkedDomains/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Policy": {
+          "to": "policy",
+          "note": "ok"
+        },
+        "ValueStream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Initiative": {
+          "to": "initiative",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/properties/timeHorizon",
+      "field": "timeHorizon",
+      "target": "timeHorizon",
+      "values": {
+        "Short-term (1 year)": {
+          "to": "shortTerm",
+          "note": "ok"
+        },
+        "Medium-term (2-3 years)": {
+          "to": "mediumTerm",
+          "note": "ok"
+        },
+        "Long-term (4-5 years)": {
+          "to": "longTerm",
+          "note": "ok"
+        },
+        "Extended (5+ years)": {
+          "to": "extended",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Financial": {
+          "to": "financial",
+          "note": "ok"
+        },
+        "Supply Chain": {
+          "to": "supplyChain",
+          "note": "ok"
+        },
+        "Technical/Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Regulatory": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "Environmental": {
+          "to": "environmental",
+          "note": "ok"
+        },
+        "Labor": {
+          "to": "people",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/definitions/WorkOrder/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "PLANNED": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "IN_PROGRESS": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "COMPLETED": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "CANCELED": {
+          "to": "cancelled",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "manufacturing.schema.json",
+      "path": "/definitions/ManufacturingObjective/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "organization.schema.json",
+      "path": "/properties/geographicScope",
+      "field": "geographicScope",
+      "target": "geographicScope",
+      "values": {
+        "Local (City/Metropolitan)": {
+          "to": "local",
+          "note": "ok"
+        },
+        "Regional (State/Province)": {
+          "to": "regional",
+          "note": "ok"
+        },
+        "National": {
+          "to": "national",
+          "note": "ok"
+        },
+        "Multi-national": {
+          "to": "multinational",
+          "note": "ok"
+        },
+        "Continental": {
+          "to": "continental",
+          "note": "ok"
+        },
+        "Global/Worldwide": {
+          "to": "global",
+          "note": "ok"
+        },
+        "Cross-border": {
+          "to": "crossBorder",
+          "note": "ok"
+        },
+        "Regional Bloc": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Emerging Markets": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Developed Markets": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Asia-Pacific (APAC)": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Europe, Middle East, Africa (EMEA)": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Americas": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Virtual/Digital Presence Only": {
+          "to": "virtual",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/dependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": "dependencyStrength",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "Important": {
+          "to": "important",
+          "note": "ok"
+        },
+        "Supportive": {
+          "to": "supportive",
+          "note": "ok"
+        },
+        "Informational": {
+          "to": "optional",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Value Stream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Performance": {
+          "to": "performance",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/workforceElements/items/properties/workforceRisks/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/cultureElements/items/properties/currentState/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "developing": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/cultureElements/items/properties/desiredState/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "developing": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/cultureElements/items/properties/culturalImportance/properties/importanceLevel",
+      "field": "importanceLevel",
+      "target": "importance",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/cultureElements/items/properties/culturalBarriers/items/properties/impactLevel",
+      "field": "impactLevel",
+      "target": "impactMagnitude",
+      "values": {
+        "minor": {
+          "to": "minor",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "significant": {
+          "to": "major",
+          "note": "ok"
+        },
+        "severe": {
+          "to": "severe",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/competencyFrameworks/items/properties/alignmentToStrategy/properties/alignmentLevel",
+      "field": "alignmentLevel",
+      "target": "alignmentLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "perfect": {
+          "to": "high",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "people.schema.json",
+      "path": "/properties/knowledgeAssets/items/properties/knowledgeRisks/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance-indicator.schema.json",
+      "path": "/properties/statusHistory/items/properties/status",
+      "field": "status",
+      "target": null,
+      "renameTo": "targetStatus",
+      "reason": "Position against target (above, on, below), not work progress",
+      "values": {
+        "above-target": {
+          "to": null,
+          "note": "local"
+        },
+        "on-target": {
+          "to": null,
+          "note": "local"
+        },
+        "below-target": {
+          "to": null,
+          "note": "local"
+        },
+        "critical": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "developing": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "dataQuality": {
+          "to": "dataQuality",
+          "note": "ok"
+        },
+        "technical": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "compliance": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "resource": {
+          "to": "people",
+          "note": "ok"
+        },
+        "interpretation": {
+          "to": "other",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/frequency",
+      "field": "frequency",
+      "target": "frequency",
+      "values": {
+        "realTime": {
+          "to": "realTime",
+          "note": "ok"
+        },
+        "hourly": {
+          "to": "hourly",
+          "note": "ok"
+        },
+        "daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "adHoc": {
+          "to": "adHoc",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/automation",
+      "field": "automation",
+      "target": "automationLevel",
+      "values": {
+        "manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "semiAutomated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "highlyAutomated": {
+          "to": "highlyAutomated",
+          "note": "ok"
+        },
+        "fullyAutomated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/performanceKPIs/items/properties/frequency",
+      "field": "frequency",
+      "target": "frequency",
+      "values": {
+        "realTime": {
+          "to": "realTime",
+          "note": "ok"
+        },
+        "hourly": {
+          "to": "hourly",
+          "note": "ok"
+        },
+        "daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "adHoc": {
+          "to": "adHoc",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/performanceKPIs/items/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/performanceKPIs/items/properties/complexity",
+      "field": "complexity",
+      "target": "complexity",
+      "values": {
+        "simple": {
+          "to": "simple",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "complex": {
+          "to": "complex",
+          "note": "ok"
+        },
+        "highlyComplex": {
+          "to": "highlyComplex",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "performance.schema.json",
+      "path": "/properties/performanceKPIs/items/properties/automation",
+      "field": "automation",
+      "target": "automationLevel",
+      "values": {
+        "manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "semiAutomated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "highlyAutomated": {
+          "to": "highlyAutomated",
+          "note": "ok"
+        },
+        "fullyAutomated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/reviewFrequency",
+      "field": "reviewFrequency",
+      "target": "frequency",
+      "values": {
+        "continuous": {
+          "to": "continuous",
+          "note": "ok"
+        },
+        "daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "semi-annually": {
+          "to": "semiAnnually",
+          "note": "ok"
+        },
+        "annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "event-triggered": {
+          "to": "eventDriven",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskProbability/properties/level",
+      "field": "level",
+      "target": "likelihood",
+      "values": {
+        "very-low": {
+          "to": "veryLow",
+          "note": "ok"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "veryHigh",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskImpact/properties/level",
+      "field": "level",
+      "target": "impactMagnitude",
+      "values": {
+        "negligible": {
+          "to": "negligible",
+          "note": "ok"
+        },
+        "minor": {
+          "to": "minor",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "major": {
+          "to": "major",
+          "note": "ok"
+        },
+        "severe": {
+          "to": "severe",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskImpact/properties/nonFinancialImpacts/items/properties/severity",
+      "field": "severity",
+      "target": "severity",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/riskSeverity/properties/level",
+      "field": "level",
+      "target": "riskLevel",
+      "values": {
+        "very-low": {
+          "to": "low",
+          "note": "lossy"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/mitigationStrategy/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "not-started": {
+          "to": "notStarted",
+          "note": "ok"
+        },
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "in-progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "implemented": {
+          "to": "implemented",
+          "note": "ok"
+        },
+        "verified": {
+          "to": "verified",
+          "note": "ok"
+        },
+        "ineffective": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "abandoned": {
+          "to": "abandoned",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/residualRisk/properties/level",
+      "field": "level",
+      "target": "riskLevel",
+      "values": {
+        "very-low": {
+          "to": "low",
+          "note": "lossy"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controlEffectiveness/properties/level",
+      "field": "level",
+      "target": "effectiveness",
+      "values": {
+        "ineffective": {
+          "to": "ineffective",
+          "note": "ok"
+        },
+        "partially-effective": {
+          "to": "partiallyEffective",
+          "note": "ok"
+        },
+        "effective": {
+          "to": "effective",
+          "note": "ok"
+        },
+        "highly-effective": {
+          "to": "highlyEffective",
+          "note": "ok"
+        },
+        "not-assessed": {
+          "to": "notAssessed",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/regulatoryImplications/items/properties/complianceStatus",
+      "field": "complianceStatus",
+      "target": "complianceStatus",
+      "values": {
+        "compliant": {
+          "to": "compliant",
+          "note": "ok"
+        },
+        "non-compliant": {
+          "to": "nonCompliant",
+          "note": "ok"
+        },
+        "partially-compliant": {
+          "to": "partiallyCompliant",
+          "note": "ok"
+        },
+        "not-applicable": {
+          "to": "notApplicable",
+          "note": "ok"
+        },
+        "under-review": {
+          "to": "underReview",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/emergingFactors/items/properties/timeHorizon",
+      "field": "timeHorizon",
+      "target": "timeHorizon",
+      "values": {
+        "immediate": {
+          "to": "immediate",
+          "note": "ok"
+        },
+        "short-term": {
+          "to": "shortTerm",
+          "note": "ok"
+        },
+        "medium-term": {
+          "to": "mediumTerm",
+          "note": "ok"
+        },
+        "long-term": {
+          "to": "longTerm",
+          "note": "ok"
+        },
+        "uncertain": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/keyRiskIndicators/items/properties/trend",
+      "field": "trend",
+      "target": "performanceTrend",
+      "values": {
+        "improving": {
+          "to": "improving",
+          "note": "ok"
+        },
+        "stable": {
+          "to": "stable",
+          "note": "ok"
+        },
+        "worsening": {
+          "to": "declining",
+          "note": "ok"
+        },
+        "fluctuating": {
+          "to": "fluctuating",
+          "note": "ok"
+        },
+        "not-tracked": {
+          "to": "notTracked",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Value Stream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Initiative": {
+          "to": "initiative",
+          "note": "ok"
+        },
+        "Customer": {
+          "to": "customer",
+          "note": "ok"
+        },
+        "Market": {
+          "to": "market",
+          "note": "ok"
+        },
+        "Finance": {
+          "to": "finance",
+          "note": "ok"
+        },
+        "Other": {
+          "to": "other",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/controls/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "not-implemented": {
+          "to": "notStarted",
+          "note": "ok"
+        },
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "decommissioning": {
+          "to": "retiring",
+          "note": "ok"
+        },
+        "replaced": {
+          "to": "retired",
+          "note": "ok"
+        },
+        "not-applicable": {
+          "to": "notApplicable",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "risk-management.schema.json",
+      "path": "/properties/monitoring/properties/monitoringMethods/items/properties/automationLevel",
+      "field": "automationLevel",
+      "target": "automationLevel",
+      "values": {
+        "manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "partially-automated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "fully-automated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/automationLevel",
+      "field": "automationLevel",
+      "target": "automationLevel",
+      "values": {
+        "Manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "Semi-Automated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "Highly Automated": {
+          "to": "highlyAutomated",
+          "note": "ok"
+        },
+        "Fully Automated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/lifecycle",
+      "field": "lifecycle",
+      "target": "lifecycleStage",
+      "values": {
+        "Planning": {
+          "to": "planning",
+          "note": "ok"
+        },
+        "Development": {
+          "to": "development",
+          "note": "ok"
+        },
+        "Launch": {
+          "to": "launch",
+          "note": "ok"
+        },
+        "Operations": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Enhancement": {
+          "to": "enhancement",
+          "note": "ok"
+        },
+        "Retirement": {
+          "to": "retirement",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/serviceFeatures/items/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "services.schema.json",
+      "path": "/properties/serviceFeatures/items/properties/complexity",
+      "field": "complexity",
+      "target": "complexity",
+      "values": {
+        "Simple": {
+          "to": "simple",
+          "note": "ok"
+        },
+        "Moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "Complex": {
+          "to": "complex",
+          "note": "ok"
+        },
+        "Highly Complex": {
+          "to": "highlyComplex",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "shared-initiative.schema.json",
+      "path": "/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "Proposed": {
+          "to": "proposed",
+          "note": "ok"
+        },
+        "Approved": {
+          "to": "approved",
+          "note": "ok"
+        },
+        "In Progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "Completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "Cancelled": {
+          "to": "cancelled",
+          "note": "ok"
+        },
+        "On Hold": {
+          "to": "onHold",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "shared-initiative.schema.json",
+      "path": "/properties/crossOrgDependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": null,
+      "renameTo": "dependencyKind",
+      "reason": "What is depended on (information, capability, resource, decision, approval), not how strongly",
+      "values": {
+        "Information": {
+          "to": null,
+          "note": "local"
+        },
+        "Capability": {
+          "to": null,
+          "note": "local"
+        },
+        "Resource": {
+          "to": null,
+          "note": "local"
+        },
+        "Decision": {
+          "to": null,
+          "note": "local"
+        },
+        "Approval": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "social-change.json",
+      "path": "/properties/successMeasurement/properties/timeHorizon",
+      "field": "timeHorizon",
+      "target": "timeHorizon",
+      "values": {
+        "Short-term (0-6 months)": {
+          "to": "shortTerm",
+          "note": "ok"
+        },
+        "Medium-term (6 months-2 years)": {
+          "to": "mediumTerm",
+          "note": "ok"
+        },
+        "Long-term (2+ years)": {
+          "to": "longTerm",
+          "note": "ok"
+        },
+        "Ongoing": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "social-change.json",
+      "path": "/properties/internationalSupport/items/properties/level",
+      "field": "level",
+      "target": "simpleLevel",
+      "values": {
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "social-change.json",
+      "path": "/properties/metadata/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "Planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "Active": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "Suspended": {
+          "to": "onHold",
+          "note": "ok"
+        },
+        "Completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "Failed": {
+          "to": "cancelled",
+          "note": "lossy"
+        },
+        "Ongoing": {
+          "to": "inProgress",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/engagementFrequency",
+      "field": "engagementFrequency",
+      "target": "frequency",
+      "values": {
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "Ad-hoc": {
+          "to": "adHoc",
+          "note": "ok"
+        },
+        "Continuous": {
+          "to": "continuous",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/geographicScope",
+      "field": "geographicScope",
+      "target": "geographicScope",
+      "values": {
+        "Local": {
+          "to": "local",
+          "note": "ok"
+        },
+        "Regional": {
+          "to": "regional",
+          "note": "ok"
+        },
+        "National": {
+          "to": "national",
+          "note": "ok"
+        },
+        "International": {
+          "to": "multinational",
+          "note": "ok"
+        },
+        "Continental": {
+          "to": "continental",
+          "note": "ok"
+        },
+        "Global": {
+          "to": "global",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Financial": {
+          "to": "financial",
+          "note": "ok"
+        },
+        "Compliance/Regulatory": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "Reputational": {
+          "to": "reputational",
+          "note": "ok"
+        },
+        "Strategic": {
+          "to": "strategic",
+          "note": "ok"
+        },
+        "Communication": {
+          "to": "relationship",
+          "note": "ok"
+        },
+        "Relationship": {
+          "to": "relationship",
+          "note": "ok"
+        },
+        "External/Environmental": {
+          "to": "external",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Legal": {
+          "to": "legal",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/definitions/StakeholderRequirement/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "stakeholder.schema.json",
+      "path": "/definitions/StakeholderRequirement/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "High Risk": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium Risk": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low Risk": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicResponse/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "Planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "In_Progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "Completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "Deferred": {
+          "to": "deferred",
+          "note": "ok"
+        },
+        "Cancelled": {
+          "to": "cancelled",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicResponse/properties/financialResources/properties/fundingSources/items/properties/status",
+      "field": "status",
+      "target": null,
+      "renameTo": "fundingStatus",
+      "reason": "Whether funding is secured, pending or proposed",
+      "values": {
+        "secured": {
+          "to": null,
+          "note": "local"
+        },
+        "pending": {
+          "to": null,
+          "note": "local"
+        },
+        "proposed": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicResponse/properties/implementedControls/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "in-progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "implemented": {
+          "to": "implemented",
+          "note": "ok"
+        },
+        "verified": {
+          "to": "verified",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicResponse/properties/supplyChainRisks/items/properties/likelihood",
+      "field": "likelihood",
+      "target": "likelihood",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "veryHigh",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicResponse/properties/supplyChainRisks/items/properties/impact",
+      "field": "impact",
+      "target": "impactMagnitude",
+      "values": {
+        "minor": {
+          "to": "minor",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "significant": {
+          "to": "major",
+          "note": "ok"
+        },
+        "severe": {
+          "to": "severe",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicIntent/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": null,
+      "renameTo": "intentMaturity",
+      "reason": "How established a strategic intent is (conceptual to optimizing), not capability maturity",
+      "values": {
+        "Conceptual": {
+          "to": null,
+          "note": "local"
+        },
+        "Emerging": {
+          "to": null,
+          "note": "local"
+        },
+        "Established": {
+          "to": null,
+          "note": "local"
+        },
+        "Scaling": {
+          "to": null,
+          "note": "local"
+        },
+        "Optimizing": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "strategic-response-model.schema.json",
+      "path": "/definitions/strategicIntent/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "Proposed": {
+          "to": "proposed",
+          "note": "ok"
+        },
+        "Active": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "Completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "Abandoned": {
+          "to": "cancelled",
+          "note": "ok"
+        },
+        "Transformed": {
+          "to": null,
+          "note": "unmapped"
+        },
+        "Superseded": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/timeHorizon",
+      "field": "timeHorizon",
+      "target": "timeHorizon",
+      "values": {
+        "Short-term (1 year)": {
+          "to": "shortTerm",
+          "note": "ok"
+        },
+        "Medium-term (2-3 years)": {
+          "to": "mediumTerm",
+          "note": "ok"
+        },
+        "Long-term (4-5 years)": {
+          "to": "longTerm",
+          "note": "ok"
+        },
+        "Extended (5+ years)": {
+          "to": "extended",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/riskCategories",
+      "field": "riskCategories",
+      "target": "riskCategory",
+      "values": {
+        "Strategic": {
+          "to": "strategic",
+          "note": "ok"
+        },
+        "Operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "Financial": {
+          "to": "financial",
+          "note": "ok"
+        },
+        "Technical/Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Market": {
+          "to": "market",
+          "note": "ok"
+        },
+        "Regulatory": {
+          "to": "compliance",
+          "note": "ok"
+        },
+        "Organizational": {
+          "to": "people",
+          "note": "ok"
+        },
+        "External/Environmental": {
+          "to": "external",
+          "note": "ok"
+        },
+        "Reputational": {
+          "to": "reputational",
+          "note": "ok"
+        },
+        "Cybersecurity": {
+          "to": "security",
+          "note": "ok"
+        },
+        "Political": {
+          "to": "political",
+          "note": "ok"
+        },
+        "Diplomatic": {
+          "to": "political",
+          "note": "lossy"
+        },
+        "Economic": {
+          "to": "economic",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/definitions/StrategyObjective/properties/priority",
+      "field": "priority",
+      "target": "priority",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "High": {
+          "to": "high",
+          "note": "ok"
+        },
+        "Medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "Low": {
+          "to": "low",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/definitions/StrategyObjective/properties/reportingFrequency",
+      "field": "reportingFrequency",
+      "target": "frequency",
+      "values": {
+        "Daily": {
+          "to": "daily",
+          "note": "ok"
+        },
+        "Weekly": {
+          "to": "weekly",
+          "note": "ok"
+        },
+        "Monthly": {
+          "to": "monthly",
+          "note": "ok"
+        },
+        "Quarterly": {
+          "to": "quarterly",
+          "note": "ok"
+        },
+        "Annually": {
+          "to": "annually",
+          "note": "ok"
+        },
+        "Ad-hoc": {
+          "to": "adHoc",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/riskProfile/properties/keyRiskFactors/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "very-low": {
+          "to": "low",
+          "note": "lossy"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/qualityMetrics/items/properties/trend",
+      "field": "trend",
+      "target": "performanceTrend",
+      "values": {
+        "improving": {
+          "to": "improving",
+          "note": "ok"
+        },
+        "stable": {
+          "to": "stable",
+          "note": "ok"
+        },
+        "declining": {
+          "to": "declining",
+          "note": "ok"
+        },
+        "fluctuating": {
+          "to": "fluctuating",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/technologyEnablers/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "upgrading": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "retiring": {
+          "to": "retiring",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/improvementOpportunities/items/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "identified": {
+          "to": "proposed",
+          "note": "ok"
+        },
+        "evaluating": {
+          "to": "proposed",
+          "note": "ok"
+        },
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "completed",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/strategicImportance/properties/importanceLevel",
+      "field": "importanceLevel",
+      "target": "importance",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Value Stream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Initiative": {
+          "to": "initiative",
+          "note": "ok"
+        },
+        "Customer": {
+          "to": "customer",
+          "note": "ok"
+        },
+        "Market": {
+          "to": "market",
+          "note": "ok"
+        },
+        "Finance": {
+          "to": "finance",
+          "note": "ok"
+        },
+        "Risk": {
+          "to": "risk",
+          "note": "ok"
+        },
+        "Other": {
+          "to": "other",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/singleSourceComponents/items/properties/criticality",
+      "field": "criticality",
+      "target": "criticality",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/criticalSuppliers/items/properties/criticality",
+      "field": "criticality",
+      "target": "criticality",
+      "values": {
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/riskProfile/properties/riskCategories/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "very-low": {
+          "to": "low",
+          "note": "lossy"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplierNetwork/properties/improvementInitiatives/items/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "in-progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "ongoing": {
+          "to": "inProgress",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processDependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": null,
+      "renameTo": "sequenceRelationship",
+      "reason": "Process sequencing (predecessor, successor, concurrent), not dependency strength",
+      "values": {
+        "predecessor": {
+          "to": null,
+          "note": "local"
+        },
+        "successor": {
+          "to": null,
+          "note": "local"
+        },
+        "concurrent": {
+          "to": null,
+          "note": "local"
+        },
+        "supporting": {
+          "to": null,
+          "note": "local"
+        },
+        "constraining": {
+          "to": null,
+          "note": "local"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processDependencies/items/properties/criticality",
+      "field": "criticality",
+      "target": "criticality",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processRisks/items/properties/likelihood",
+      "field": "likelihood",
+      "target": "likelihood",
+      "values": {
+        "very-low": {
+          "to": "veryLow",
+          "note": "ok"
+        },
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "veryHigh",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processRisks/items/properties/impact",
+      "field": "impact",
+      "target": "impactMagnitude",
+      "values": {
+        "minimal": {
+          "to": "negligible",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "significant": {
+          "to": "major",
+          "note": "ok"
+        },
+        "severe": {
+          "to": "severe",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "severe",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processOptimizationOpportunities/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "identified": {
+          "to": "notStarted",
+          "note": "ok"
+        },
+        "evaluating": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "implemented",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/technologySupport/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "operational": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "retiring": {
+          "to": "retiring",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/automationLevel/properties/automationByStep/items/properties/automationLevel",
+      "field": "automationLevel",
+      "target": "automationLevel",
+      "values": {
+        "manual": {
+          "to": "manual",
+          "note": "ok"
+        },
+        "partially-automated": {
+          "to": "semiAutomated",
+          "note": "ok"
+        },
+        "mostly-automated": {
+          "to": "highlyAutomated",
+          "note": "ok"
+        },
+        "fully-automated": {
+          "to": "fullyAutomated",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/supplyChainProcess/properties/processMaturity/properties/maturityLevel",
+      "field": "maturityLevel",
+      "target": "maturityLevel",
+      "values": {
+        "initial": {
+          "to": "initial",
+          "note": "ok"
+        },
+        "managed": {
+          "to": "repeatable",
+          "note": "ok"
+        },
+        "defined": {
+          "to": "defined",
+          "note": "ok"
+        },
+        "quantitatively-managed": {
+          "to": "managed",
+          "note": "ok"
+        },
+        "optimizing": {
+          "to": "optimizing",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/networkOptimizationStrategy/properties/majorInitiatives/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "implemented",
+          "note": "ok"
+        },
+        "ongoing": {
+          "to": "inProgress",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/logisticsNetwork/properties/complianceRequirements/items/properties/complianceStatus",
+      "field": "complianceStatus",
+      "target": "complianceStatus",
+      "values": {
+        "compliant": {
+          "to": "compliant",
+          "note": "ok"
+        },
+        "partially-compliant": {
+          "to": "partiallyCompliant",
+          "note": "ok"
+        },
+        "non-compliant": {
+          "to": "nonCompliant",
+          "note": "ok"
+        },
+        "in-progress": {
+          "to": "underReview",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/stockoutRisk/properties/criticalItems/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/obsolescenceRisk/properties/atRiskItems/items/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "very-high": {
+          "to": "critical",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryOptimizationStrategy/properties/majorInitiatives/items/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "implemented",
+          "note": "ok"
+        },
+        "ongoing": {
+          "to": "inProgress",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "supply-chain.schema.json",
+      "path": "/definitions/inventoryManagement/properties/inventoryPerformanceMetrics/items/properties/trend",
+      "field": "trend",
+      "target": "performanceTrend",
+      "values": {
+        "improving": {
+          "to": "improving",
+          "note": "ok"
+        },
+        "stable": {
+          "to": "stable",
+          "note": "ok"
+        },
+        "declining": {
+          "to": "declining",
+          "note": "ok"
+        },
+        "fluctuating": {
+          "to": "fluctuating",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "piloting": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "implementing": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "established": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "optimizing": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/strategicAlignment/properties/alignmentLevel",
+      "field": "alignmentLevel",
+      "target": "alignmentLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "high",
+          "note": "lossy"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/riskImplications/properties/riskLevel",
+      "field": "riskLevel",
+      "target": "riskLevel",
+      "values": {
+        "low": {
+          "to": "low",
+          "note": "ok"
+        },
+        "medium": {
+          "to": "medium",
+          "note": "ok"
+        },
+        "high": {
+          "to": "high",
+          "note": "ok"
+        },
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/dependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": "dependencyStrength",
+      "values": {
+        "Critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "Important": {
+          "to": "important",
+          "note": "ok"
+        },
+        "Supportive": {
+          "to": "supportive",
+          "note": "ok"
+        },
+        "Minimal": {
+          "to": "optional",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Process": {
+          "to": "capability",
+          "note": "lossy"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Other": {
+          "to": "other",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/reductionStrategy/properties/keyInitiatives/items/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "in progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "on hold": {
+          "to": "onHold",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/regulatoryRequirements/properties/currentRegulations/items/properties/complianceStatus",
+      "field": "complianceStatus",
+      "target": "complianceStatus",
+      "values": {
+        "compliant": {
+          "to": "compliant",
+          "note": "ok"
+        },
+        "partial": {
+          "to": "partiallyCompliant",
+          "note": "ok"
+        },
+        "non-compliant": {
+          "to": "nonCompliant",
+          "note": "ok"
+        },
+        "exempted": {
+          "to": "exempt",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/environmentalImpact/properties/mitigationInitiatives/items/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "active": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "on hold": {
+          "to": "onHold",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/socialResponsibility/properties/businessImpact/properties/impactLevel",
+      "field": "impactLevel",
+      "target": "changeMagnitude",
+      "values": {
+        "minimal": {
+          "to": "minimal",
+          "note": "ok"
+        },
+        "moderate": {
+          "to": "moderate",
+          "note": "ok"
+        },
+        "significant": {
+          "to": "significant",
+          "note": "ok"
+        },
+        "transformative": {
+          "to": "transformative",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/governancePractice/properties/implementationStatus",
+      "field": "implementationStatus",
+      "target": "implementationStatus",
+      "values": {
+        "planning": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "early-implementation": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "established": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "mature": {
+          "to": "operational",
+          "note": "ok"
+        },
+        "leading": {
+          "to": null,
+          "note": "unmapped"
+        }
+      }
+    },
+    {
+      "file": "sustainability.schema.json",
+      "path": "/definitions/governancePractice/properties/improvementInitiatives/properties/initiatives/items/properties/status",
+      "field": "status",
+      "target": "workStatus",
+      "values": {
+        "planned": {
+          "to": "planned",
+          "note": "ok"
+        },
+        "in progress": {
+          "to": "inProgress",
+          "note": "ok"
+        },
+        "completed": {
+          "to": "completed",
+          "note": "ok"
+        },
+        "on hold": {
+          "to": "onHold",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/lifecycle",
+      "field": "lifecycle",
+      "target": "adoptionStage",
+      "values": {
+        "emerging": {
+          "to": "emerging",
+          "note": "ok"
+        },
+        "growth": {
+          "to": "growth",
+          "note": "ok"
+        },
+        "mature": {
+          "to": "mature",
+          "note": "ok"
+        },
+        "declining": {
+          "to": "declining",
+          "note": "ok"
+        },
+        "legacy": {
+          "to": "legacy",
+          "note": "ok"
+        },
+        "sunset": {
+          "to": "sunset",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/performanceIndicators/items/properties/trend",
+      "field": "trend",
+      "target": "performanceTrend",
+      "values": {
+        "improving": {
+          "to": "improving",
+          "note": "ok"
+        },
+        "stable": {
+          "to": "stable",
+          "note": "ok"
+        },
+        "declining": {
+          "to": "declining",
+          "note": "ok"
+        },
+        "fluctuating": {
+          "to": "fluctuating",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/dependencies/items/properties/dependencyType",
+      "field": "dependencyType",
+      "target": "dependencyStrength",
+      "values": {
+        "critical": {
+          "to": "critical",
+          "note": "ok"
+        },
+        "important": {
+          "to": "important",
+          "note": "ok"
+        },
+        "supportive": {
+          "to": "supportive",
+          "note": "ok"
+        },
+        "optional": {
+          "to": "optional",
+          "note": "ok"
+        }
+      }
+    },
+    {
+      "file": "technology.schema.json",
+      "path": "/properties/dependencies/items/properties/domainType",
+      "field": "domainType",
+      "target": "domainType",
+      "values": {
+        "Capability": {
+          "to": "capability",
+          "note": "ok"
+        },
+        "Service": {
+          "to": "service",
+          "note": "ok"
+        },
+        "Product": {
+          "to": "product",
+          "note": "ok"
+        },
+        "Information": {
+          "to": "information",
+          "note": "ok"
+        },
+        "Value Stream": {
+          "to": "valueStream",
+          "note": "ok"
+        },
+        "Strategy": {
+          "to": "strategy",
+          "note": "ok"
+        },
+        "Organization": {
+          "to": "organization",
+          "note": "ok"
+        },
+        "Technology": {
+          "to": "technology",
+          "note": "ok"
+        },
+        "Initiative": {
+          "to": "initiative",
+          "note": "ok"
+        },
+        "Customer": {
+          "to": "customer",
+          "note": "ok"
+        },
+        "Other": {
+          "to": "other",
+          "note": "ok"
+        }
+      }
+    }
+  ]
+}

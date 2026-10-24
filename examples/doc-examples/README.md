@@ -20,7 +20,9 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **Sub-elements carry a `purpose`.** Service features, information elements and performance KPIs require a `purpose`, and KPIs also require an `owner`. A `purpose` was added to each such sub-element in the Services (5), Information (5) and Performance (5) examples, and each KPI's `owner` was set to the owner of its parent metric.
 
-**Market and Finance validate against rewritten schemas.** These examples are unchanged; the schemas were rewritten to describe market and finance records as the documentation does.
+**Market and Finance validate against rewritten schemas.** The schemas were rewritten to describe market and finance records as the documentation does.
+
+**Market and Finance use the shared vocabulary.** Their dependencies use camelCase domain and dependency values (`"Capability"` → `"capability"`, `"Critical"` → `"critical"`), and the Finance risk level uses the shared four-point scale (`"moderate"` → `"medium"`). The Finance example's `"dependencyType": "Enabler"` has no shared equivalent; it is mapped to `"important"`, which should be confirmed.
 
 ## Not included
 
