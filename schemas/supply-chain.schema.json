@@ -34,7 +34,7 @@
         "service",
         "digital",
         "project",
-        "spare-parts",
+        "spareParts",
         "aftermarket",
         "reverse",
         "other"
@@ -64,8 +64,8 @@
       "description": "Organizational scope covered by this supply chain element",
       "enum": [
         "enterprise",
-        "business-unit",
-        "product-line",
+        "businessUnit",
+        "productLine",
         "facility",
         "regional",
         "global",
@@ -99,7 +99,7 @@
             "regional",
             "national",
             "local",
-            "multi-regional",
+            "multiRegional",
             "other"
           ]
         },
@@ -118,12 +118,12 @@
           "type": "string",
           "description": "Type of location strategy",
           "enum": [
-            "proximity-to-market",
-            "proximity-to-supply",
-            "cost-optimization",
-            "tax-optimization",
-            "talent-access",
-            "risk-diversification",
+            "proximityToMarket",
+            "proximityToSupply",
+            "costOptimization",
+            "taxOptimization",
+            "talentAccess",
+            "riskDiversification",
             "other"
           ]
         },
@@ -723,7 +723,7 @@
             "disadvantage",
             "parity",
             "advantage",
-            "significant-advantage"
+            "significantAdvantage"
           ]
         },
         "advantageSources": {
@@ -917,10 +917,10 @@
                 "type": "string",
                 "description": "Tier designation",
                 "enum": [
-                  "tier-1",
-                  "tier-2",
-                  "tier-3",
-                  "tier-n",
+                  "tier1",
+                  "tier2",
+                  "tier3",
+                  "tierN",
                   "direct",
                   "indirect",
                   "other"
@@ -1135,7 +1135,7 @@
                   "strategic",
                   "partnership",
                   "alliance",
-                  "joint-venture",
+                  "jointVenture",
                   "other"
                 ]
               },
@@ -1921,10 +1921,10 @@
               "type": "string",
               "description": "Degree of standardization",
               "enum": [
-                "ad-hoc",
-                "partially-standardized",
-                "mostly-standardized",
-                "fully-standardized"
+                "adHoc",
+                "partiallyStandardized",
+                "mostlyStandardized",
+                "fullyStandardized"
               ]
             },
             "standardDocumentation": {
@@ -2076,10 +2076,10 @@
                 "description": "Type of node",
                 "enum": [
                   "manufacturing",
-                  "distribution-center",
+                  "distributionCenter",
                   "warehouse",
-                  "fulfillment-center",
-                  "cross-dock",
+                  "fulfillmentCenter",
+                  "crossDock",
                   "retail",
                   "port",
                   "terminal",
@@ -2231,10 +2231,10 @@
                       "type": "string",
                       "description": "Type of carrier",
                       "enum": [
-                        "asset-based",
-                        "non-asset",
+                        "assetBased",
+                        "nonAsset",
                         "broker",
-                        "freight-forwarder",
+                        "freightForwarder",
                         "parcel",
                         "other"
                       ]
@@ -2665,9 +2665,9 @@
                 "type": "string",
                 "description": "Performance assessment",
                 "enum": [
-                  "below-expectations",
-                  "meets-expectations",
-                  "exceeds-expectations"
+                  "belowExpectations",
+                  "meetsExpectations",
+                  "exceedsExpectations"
                 ]
               },
               "contractTerms": {
@@ -2836,11 +2836,11 @@
           "type": "string",
           "description": "Type of inventory",
           "enum": [
-            "raw-materials",
-            "work-in-process",
-            "finished-goods",
-            "spare-parts",
-            "maintenance-supplies",
+            "rawMaterials",
+            "workInProcess",
+            "finishedGoods",
+            "spareParts",
+            "maintenanceSupplies",
             "consumables",
             "packaging",
             "other"
@@ -2888,13 +2888,13 @@
               "type": "string",
               "description": "Type of inventory policy",
               "enum": [
-                "min-max",
-                "economic-order-quantity",
-                "just-in-time",
-                "vendor-managed",
+                "minMax",
+                "economicOrderQuantity",
+                "justInTime",
+                "vendorManaged",
                 "consignment",
-                "periodic-review",
-                "continuous-review",
+                "periodicReview",
+                "continuousReview",
                 "other"
               ]
             },
@@ -3076,11 +3076,11 @@
                 "description": "Type of location",
                 "enum": [
                   "manufacturing",
-                  "distribution-center",
+                  "distributionCenter",
                   "warehouse",
                   "retail",
                   "3pl",
-                  "vendor-managed",
+                  "vendorManaged",
                   "other"
                 ]
               },

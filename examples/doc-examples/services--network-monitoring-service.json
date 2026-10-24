@@ -5,20 +5,20 @@
   "purpose": "Ensure optimal network performance and safety through continuous monitoring and proactive issue detection",
   "owner": "Jennifer Lee, Director of Network Operations",
   "orgUnitTitle": "Network Operations Center",
-  "serviceCategory": "Infrastructure Service",
-  "serviceType": "Monitoring",
-  "deliveryModel": "Continuous",
-  "serviceLevel": "Mission Critical",
+  "serviceCategory": "infrastructureService",
+  "serviceType": "monitoring",
+  "deliveryModel": "continuous",
+  "serviceLevel": "missionCritical",
   "serviceLevelAgreements": "24/7 monitoring, 5-minute incident detection, 15-minute response time",
   "channels": [
-    "Online Portal",
-    "Mobile App",
-    "Phone"
+    "onlinePortal",
+    "mobileApp",
+    "phone"
   ],
   "targetAudience": [
-    "Internal Employees"
+    "internalEmployees"
   ],
-  "businessModel": "Support Model",
+  "businessModel": "supportModel",
   "automationLevel": "highlyAutomated",
   "lifecycle": "operational",
   "availability": "24/7/365 monitoring and response",
@@ -29,7 +29,7 @@
       "title": "Automated Alert System",
       "description": "AI-powered system that automatically detects anomalies and sends alerts to appropriate personnel",
       "purpose": "Detect network anomalies early and get them to the right people quickly",
-      "featureType": "Core Feature",
+      "featureType": "coreFeature",
       "priority": "critical",
       "complexity": "complex"
     },
@@ -37,7 +37,7 @@
       "title": "Predictive Maintenance Dashboard",
       "description": "Visual dashboard showing predicted maintenance needs based on sensor data analysis",
       "purpose": "Plan maintenance before failures occur",
-      "featureType": "Enhancement",
+      "featureType": "enhancement",
       "priority": "high",
       "complexity": "moderate"
     }

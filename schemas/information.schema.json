@@ -62,52 +62,52 @@
     "informationCategory": {
       "type": "string",
       "enum": [
-        "Operational Data",
-        "Analytical Data",
-        "Reference Data",
-        "Master Data",
-        "Metadata",
-        "Content",
-        "Knowledge",
-        "Intelligence"
+        "operationalData",
+        "analyticalData",
+        "referenceData",
+        "masterData",
+        "metadata",
+        "content",
+        "knowledge",
+        "intelligence"
       ],
       "description": "Broad categorization of information type"
     },
     "informationType": {
       "type": "string",
       "enum": [
-        "Database",
-        "Dataset",
-        "Report",
-        "Document",
-        "Knowledge Base",
-        "API Data",
-        "Real-time Stream",
-        "Archive",
-        "Model",
-        "Dashboard"
+        "database",
+        "dataset",
+        "report",
+        "document",
+        "knowledgeBase",
+        "apiData",
+        "realTimeStream",
+        "archive",
+        "model",
+        "dashboard"
       ],
       "description": "Specific type of information"
     },
     "dataClassification": {
       "type": "string",
       "enum": [
-        "Public",
-        "Internal",
-        "Confidential",
-        "Restricted",
-        "Top Secret"
+        "public",
+        "internal",
+        "confidential",
+        "restricted",
+        "topSecret"
       ],
       "description": "Security and sensitivity classification"
     },
     "dataQuality": {
       "type": "string",
       "enum": [
-        "High Quality",
-        "Good Quality",
-        "Acceptable Quality",
-        "Poor Quality",
-        "Unknown Quality"
+        "highQuality",
+        "goodQuality",
+        "acceptableQuality",
+        "poorQuality",
+        "unknownQuality"
       ],
       "description": "Quality level of the information"
     },
@@ -187,12 +187,12 @@
       "items": {
         "type": "string",
         "enum": [
-          "GDPR",
-          "HIPAA",
-          "SOX",
-          "PCI DSS",
-          "Industry Standards",
-          "Internal Policies"
+          "gdpr",
+          "hipaa",
+          "sox",
+          "pciDss",
+          "industryStandards",
+          "internalPolicies"
         ]
       },
       "description": "Regulatory and compliance requirements"
@@ -235,12 +235,12 @@
     "lifecycle": {
       "type": "string",
       "enum": [
-        "Creation",
-        "Active Use",
-        "Maintenance",
-        "Archive",
-        "Disposal",
-        "Migration"
+        "creation",
+        "activeUse",
+        "maintenance",
+        "archive",
+        "disposal",
+        "migration"
       ],
       "description": "Current stage in information lifecycle"
     },
@@ -451,21 +451,21 @@
     "marketPosition": {
       "type": "string",
       "enum": [
-        "Industry Leader",
-        "Strong Position",
-        "Competitive",
-        "Developing",
-        "Lagging"
+        "industryLeader",
+        "strongPosition",
+        "competitive",
+        "developing",
+        "lagging"
       ],
       "description": "Information maturity position relative to industry"
     },
     "investmentLevel": {
       "type": "string",
       "enum": [
-        "High Investment",
-        "Medium Investment",
-        "Low Investment",
-        "Minimal Investment"
+        "highInvestment",
+        "mediumInvestment",
+        "lowInvestment",
+        "minimalInvestment"
       ],
       "description": "Required investment level for information management"
     },
@@ -644,14 +644,14 @@
         "elementType": {
           "type": "string",
           "enum": [
-            "Table",
-            "Field",
-            "File",
-            "Stream",
-            "Object",
-            "Document",
-            "Image",
-            "Report Section"
+            "table",
+            "field",
+            "file",
+            "stream",
+            "object",
+            "document",
+            "image",
+            "reportSection"
           ],
           "description": "Type of information element"
         },
@@ -725,10 +725,10 @@
         "sensitivity": {
           "type": "string",
           "enum": [
-            "Public",
-            "Internal",
-            "Confidential",
-            "Restricted"
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
           ],
           "description": "Sensitivity level of the element"
         },

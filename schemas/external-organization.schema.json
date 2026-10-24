@@ -21,11 +21,11 @@
     "type": {
       "type": "string",
       "enum": [
-        "Partner",
-        "Regulator",
-        "Customer",
-        "Supplier",
-        "Peer"
+        "partner",
+        "regulator",
+        "customer",
+        "supplier",
+        "peer"
       ],
       "description": "Classification of the external organization"
     },

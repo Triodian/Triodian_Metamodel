@@ -5,20 +5,20 @@
   "purpose": "Enable efficient customer self-service while providing seamless escalation to human support when needed",
   "owner": "Maria Rodriguez, Head of Customer Experience",
   "orgUnitTitle": "Customer Experience Division",
-  "serviceCategory": "Digital Service",
-  "serviceType": "Support",
-  "deliveryModel": "Self-Service",
-  "serviceLevel": "Standard",
+  "serviceCategory": "digitalService",
+  "serviceType": "support",
+  "deliveryModel": "selfService",
+  "serviceLevel": "standard",
   "serviceLevelAgreements": "99.5% uptime, 2-second page load times, 24/7 availability",
   "channels": [
-    "Online Portal",
-    "Mobile App",
-    "Chat"
+    "onlinePortal",
+    "mobileApp",
+    "chat"
   ],
   "targetAudience": [
-    "External Customers"
+    "externalCustomers"
   ],
-  "businessModel": "Support Model",
+  "businessModel": "supportModel",
   "automationLevel": "highlyAutomated",
   "lifecycle": "enhancement",
   "availability": "24/7 self-service, business hours live support",
@@ -29,7 +29,7 @@
       "title": "AI-Powered Chatbot",
       "description": "Intelligent chatbot that can resolve common issues and guide users to relevant resources",
       "purpose": "Resolve routine customer issues instantly and route complex ones to human support",
-      "featureType": "Core Feature",
+      "featureType": "coreFeature",
       "priority": "critical",
       "complexity": "complex"
     },
@@ -37,7 +37,7 @@
       "title": "Video Tutorial Library",
       "description": "Searchable library of how-to videos for common customer tasks",
       "purpose": "Help customers complete common tasks themselves without contacting support",
-      "featureType": "Enhancement",
+      "featureType": "enhancement",
       "priority": "medium",
       "complexity": "simple"
     }

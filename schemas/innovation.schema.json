@@ -24,12 +24,12 @@
         "product",
         "service",
         "process",
-        "business-model",
+        "businessModel",
         "organizational",
         "market",
         "technology",
-        "customer-experience",
-        "supply-chain",
+        "customerExperience",
+        "supplyChain",
         "financial",
         "other"
       ]
@@ -58,11 +58,11 @@
       "description": "Organizational breadth of the innovation",
       "enum": [
         "enterprise",
-        "business-unit",
+        "businessUnit",
         "department",
         "team",
-        "product-line",
-        "cross-functional",
+        "productLine",
+        "crossFunctional",
         "ecosystem"
       ]
     },
@@ -76,16 +76,16 @@
           "items": {
             "type": "string",
             "enum": [
-              "customer-insights",
-              "employee-idea",
-              "market-research",
-              "technology-exploration",
-              "competitive-analysis",
-              "regulatory-change",
-              "strategic-initiative",
-              "external-partnership",
-              "academic-research",
-              "supplier-collaboration",
+              "customerInsights",
+              "employeeIdea",
+              "marketResearch",
+              "technologyExploration",
+              "competitiveAnalysis",
+              "regulatoryChange",
+              "strategicInitiative",
+              "externalPartnership",
+              "academicResearch",
+              "supplierCollaboration",
               "other"
             ]
           }
@@ -388,9 +388,9 @@
       "type": "string",
       "description": "Strategic timeframe category",
       "enum": [
-        "Horizon_1",
-        "Horizon_2",
-        "Horizon_3"
+        "horizon1",
+        "horizon2",
+        "horizon3"
       ]
     },
     "crossDomainRelationships": {

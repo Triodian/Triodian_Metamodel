@@ -45,10 +45,10 @@
       "type": "string",
       "description": "General threshold logic, e.g. higher-is-better or lower-is-better",
       "enum": [
-        "higher-is-better",
-        "lower-is-better",
-        "target-is-optimal",
-        "range-is-optimal"
+        "higherIsBetter",
+        "lowerIsBetter",
+        "targetIsOptimal",
+        "rangeIsOptimal"
       ]
     },
     "thresholds": {
@@ -68,12 +68,12 @@
           "comparisonOperator": {
             "type": "string",
             "enum": [
-              ">",
-              "<",
-              ">=",
-              "<=",
-              "==",
-              "!="
+              "greaterThan",
+              "lessThan",
+              "greaterThanOrEqual",
+              "lessThanOrEqual",
+              "equal",
+              "notEqual"
             ],
             "description": "Logical operator for threshold evaluation"
           },
@@ -560,9 +560,9 @@
           "status": {
             "type": "string",
             "enum": [
-              "above-target",
-              "on-target",
-              "below-target",
+              "aboveTarget",
+              "onTarget",
+              "belowTarget",
               "critical"
             ],
             "description": "Performance status relative to target"
@@ -594,10 +594,10 @@
             "enum": [
               "parent",
               "child",
-              "correlates-with",
+              "correlatesWith",
               "influences",
-              "derived-from",
-              "component-of"
+              "derivedFrom",
+              "componentOf"
             ],
             "description": "Type of relationship with the related indicator"
           },

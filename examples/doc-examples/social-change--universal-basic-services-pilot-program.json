@@ -1,10 +1,10 @@
 {
   "name": "Universal Basic Services Pilot Program",
   "description": "Government-led initiative to test comprehensive social service delivery model",
-  "activityType": "Policy Initiative",
-  "changeScope": "Regional",
-  "changeAgentType": "Government Agency",
-  "institutionalContext": "Government Agency",
+  "activityType": "policyInitiative",
+  "changeScope": "regional",
+  "changeAgentType": "governmentAgency",
+  "institutionalContext": "governmentAgency",
   "specificActions": [
     "Policy Development",
     "Pilot Implementation",
@@ -20,7 +20,7 @@
     "Unemployed workers",
     "Rural communities"
   ],
-  "changeMethodology": "Policy Design Thinking",
+  "changeMethodology": "policyDesignThinking",
   "tactics": [
     {
       "tacticType": "Pilot Programs",
@@ -33,8 +33,8 @@
       "channel": "Community meetings and surveys"
     }
   ],
-  "resourceSource": "Government Grant",
-  "timeline": "Multi-year transformation",
+  "resourceSource": "governmentGrant",
+  "timeline": "multiYearTransformation",
   "successMetrics": [
     "Service utilization rates",
     "Community satisfaction",

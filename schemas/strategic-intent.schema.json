@@ -24,14 +24,14 @@
     "opportunityType": {
       "type": "string",
       "enum": [
-        "Innovation",
-        "Growth",
-        "Efficiency",
-        "Resilience",
-        "Compliance",
-        "Differentiation",
-        "Sustainability",
-        "Transformation"
+        "innovation",
+        "growth",
+        "efficiency",
+        "resilience",
+        "compliance",
+        "differentiation",
+        "sustainability",
+        "transformation"
       ],
       "description": "Classification of opportunity type"
     },
@@ -42,11 +42,11 @@
     "maturityLevel": {
       "type": "string",
       "enum": [
-        "Conceptual",
-        "Emerging",
-        "Established",
-        "Scaling",
-        "Optimizing"
+        "conceptual",
+        "emerging",
+        "established",
+        "scaling",
+        "optimizing"
       ],
       "description": "Assessment of organizational readiness"
     },

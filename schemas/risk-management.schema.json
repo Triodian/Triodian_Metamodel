@@ -188,11 +188,11 @@
           "type": "string",
           "description": "Organizational tolerance for this risk",
           "enum": [
-            "zero-tolerance",
+            "zeroTolerance",
             "low",
             "moderate",
             "high",
-            "case-by-case"
+            "caseByCase"
           ]
         },
         "thresholds": {
@@ -614,7 +614,7 @@
               "assessment",
               "report",
               "plan",
-              "control-description",
+              "controlDescription",
               "other"
             ]
           },
@@ -646,13 +646,13 @@
             "description": "Methodology used for assessment",
             "enum": [
               "qualitative",
-              "semi-quantitative",
+              "semiQuantitative",
               "quantitative",
-              "scenario-based",
+              "scenarioBased",
               "workshop",
-              "expert-judgment",
-              "historical-analysis",
-              "model-based",
+              "expertJudgment",
+              "historicalAnalysis",
+              "modelBased",
               "other"
             ]
           },
@@ -725,9 +725,9 @@
                   "description": "Nature of participation",
                   "enum": [
                     "facilitator",
-                    "subject-matter-expert",
+                    "subjectMatterExpert",
                     "stakeholder",
-                    "risk-owner",
+                    "riskOwner",
                     "reviewer",
                     "approver",
                     "other"
@@ -807,11 +807,11 @@
                   "type": "string",
                   "description": "Type of finding",
                   "enum": [
-                    "risk-identification",
-                    "control-gap",
-                    "improvement-opportunity",
-                    "positive-observation",
-                    "compliance-issue",
+                    "riskIdentification",
+                    "controlGap",
+                    "improvementOpportunity",
+                    "positiveObservation",
+                    "complianceIssue",
                     "other"
                   ]
                 },
@@ -974,8 +974,8 @@
                   "observation",
                   "inquiry",
                   "analysis",
-                  "re-performance",
-                  "automated-monitoring",
+                  "rePerformance",
+                  "automatedMonitoring",
                   "other"
                 ]
               },
@@ -993,8 +993,8 @@
                 "enum": [
                   "passed",
                   "failed",
-                  "passed-with-exceptions",
-                  "not-tested"
+                  "passedWithExceptions",
+                  "notTested"
                 ]
               }
             },
@@ -1048,9 +1048,9 @@
             "type": "string",
             "description": "Current implementation status",
             "enum": [
-              "not-started",
+              "notStarted",
               "planning",
-              "in-progress",
+              "inProgress",
               "implemented",
               "completed",
               "canceled",
@@ -1110,10 +1110,10 @@
                 "description": "Overall success assessment",
                 "enum": [
                   "successful",
-                  "partially-successful",
+                  "partiallySuccessful",
                   "unsuccessful",
-                  "too-early-to-determine",
-                  "not-measured"
+                  "tooEarlyToDetermine",
+                  "notMeasured"
                 ]
               }
             },

@@ -50,44 +50,44 @@
       "type": "string",
       "description": "Broad categorization of capability type",
       "enum": [
-        "Core Business",
-        "Supporting",
-        "Enabling",
-        "Strategic",
-        "Foundational",
-        "Distinctive"
+        "coreBusiness",
+        "supporting",
+        "enabling",
+        "strategic",
+        "foundational",
+        "distinctive"
       ]
     },
     "capabilityType": {
       "type": "string",
       "description": "Specific type of capability",
       "enum": [
-        "Operational",
-        "Technical",
-        "Business",
-        "Governance",
-        "Innovation",
-        "Analytical",
-        "Digital",
-        "Customer"
+        "operational",
+        "technical",
+        "business",
+        "governance",
+        "innovation",
+        "analytical",
+        "digital",
+        "customer"
       ]
     },
     "businessDomain": {
       "type": "string",
       "description": "Business domain area",
       "enum": [
-        "Operations",
-        "Finance",
-        "Technology",
-        "Human Resources",
-        "Sales & Marketing",
-        "Customer Service",
-        "Legal & Compliance",
-        "Research & Development",
-        "Quality Assurance",
-        "Strategy & Planning",
-        "Procurement",
-        "Facilities"
+        "operations",
+        "finance",
+        "technology",
+        "humanResources",
+        "salesMarketing",
+        "customerService",
+        "legalCompliance",
+        "researchDevelopment",
+        "qualityAssurance",
+        "strategyPlanning",
+        "procurement",
+        "facilities"
       ]
     },
     "inputs": {
@@ -146,12 +146,12 @@
       "type": "string",
       "description": "Type of investment required",
       "enum": [
-        "CAPEX",
-        "OPEX",
-        "Mixed",
-        "People",
-        "Technology",
-        "Process"
+        "capex",
+        "opex",
+        "mixed",
+        "people",
+        "technology",
+        "process"
       ]
     },
     "risks": {
@@ -185,21 +185,21 @@
       "type": "string",
       "description": "Availability requirement",
       "enum": [
-        "24/7",
-        "Business Hours",
-        "On-Demand",
-        "Seasonal",
-        "Scheduled"
+        "24x7",
+        "businessHours",
+        "onDemand",
+        "seasonal",
+        "scheduled"
       ]
     },
     "scalability": {
       "type": "string",
       "description": "Scalability characteristics",
       "enum": [
-        "Highly Scalable",
-        "Moderately Scalable",
-        "Limited Scalability",
-        "Not Scalable"
+        "highlyScalable",
+        "moderatelyScalable",
+        "limitedScalability",
+        "notScalable"
       ]
     },
     "parent": {
@@ -293,10 +293,10 @@
           "type": "string",
           "description": "Type of function",
           "enum": [
-            "Primary",
-            "Secondary",
-            "Supporting",
-            "Enabling"
+            "primary",
+            "secondary",
+            "supporting",
+            "enabling"
           ]
         },
         "inputs": {
@@ -367,11 +367,11 @@
           "type": "string",
           "description": "Type of component",
           "enum": [
-            "People",
-            "Process",
-            "Technology",
-            "Information",
-            "Infrastructure"
+            "people",
+            "process",
+            "technology",
+            "information",
+            "infrastructure"
           ]
         },
         "technologies": {
@@ -458,20 +458,20 @@
           "type": "string",
           "description": "Type of process",
           "enum": [
-            "Core",
-            "Support",
-            "Management",
-            "Governance"
+            "core",
+            "support",
+            "management",
+            "governance"
           ]
         },
         "processCategory": {
           "type": "string",
           "description": "Process category",
           "enum": [
-            "Operational",
-            "Strategic",
-            "Tactical",
-            "Administrative"
+            "operational",
+            "strategic",
+            "tactical",
+            "administrative"
           ]
         },
         "inputs": {
@@ -544,23 +544,23 @@
       "purpose": "Enhance track inspection efficiency and accuracy while reducing manual inspection requirements",
       "owner": "Chief of Track Inspection Technology",
       "orgUnitTitle": "Track and Rail Infrastructure Division",
-      "capabilityCategory": "Core Business",
-      "capabilityType": "Technical",
-      "businessDomain": "Operations",
+      "capabilityCategory": "coreBusiness",
+      "capabilityType": "technical",
+      "businessDomain": "operations",
       "inputs": "Track geometry data, rail wear measurements, historical defect data",
       "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
       "maturityLevel": "managed",
       "targetMaturityLevel": "optimizing",
       "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
       "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
-      "investmentCategory": "Mixed",
+      "investmentCategory": "mixed",
       "riskCategories": [
         "technology",
         "operational"
       ],
       "criticality": "critical",
-      "availability": "24/7",
-      "scalability": "Highly Scalable",
+      "availability": "24x7",
+      "scalability": "highlyScalable",
       "parent": "Track Safety Assurance System",
       "child": "Rail Profile Measurement",
       "capabilityFunctions": [
@@ -570,7 +570,7 @@
           "purpose": "Ensure compliance with FRA track geometry standards",
           "owner": "Track Geometry Program Manager",
           "orgUnitTitle": "Track Inspection Division",
-          "functionType": "Primary",
+          "functionType": "primary",
           "inputs": "Raw sensor data, track class information",
           "outputs": "Geometry exception reports, maintenance alerts",
           "processes": "Data collection, analysis, reporting, validation",
@@ -584,7 +584,7 @@
           "purpose": "Monitor rail degradation and predict maintenance needs",
           "owner": "Rail Integrity Program Lead",
           "orgUnitTitle": "Track Maintenance Division",
-          "componentType": "Technology",
+          "componentType": "technology",
           "technologies": "Laser profilers, ultrasonic sensors, analysis software",
           "processes": "Data collection, wear analysis, reporting",
           "skills": "Rail inspection certification, data analysis expertise",
@@ -599,8 +599,8 @@
           "owner": "Chief Track Inspector",
           "orgUnitTitle": "Track Safety Division",
           "parentCapability": "Track Safety Assurance System",
-          "processType": "Core",
-          "processCategory": "Operational",
+          "processType": "core",
+          "processCategory": "operational",
           "inputs": "Track class specifications, Previous inspection data, Maintenance history",
           "outputs": "Inspection reports, Defect notifications, Maintenance recommendations",
           "steps": "1. Pre-inspection preparation, 2. Visual examination, 3. Geometry measurement, 4. Data analysis, 5. Report generation",
@@ -621,14 +621,14 @@
       "purpose": "Accelerate digital transformation and foster culture of continuous innovation",
       "owner": "Chief Innovation Officer",
       "orgUnitTitle": "Digital Transformation Office",
-      "capabilityCategory": "Strategic",
-      "capabilityType": "Innovation",
-      "businessDomain": "Strategy & Planning",
+      "capabilityCategory": "strategic",
+      "capabilityType": "innovation",
+      "businessDomain": "strategyPlanning",
       "maturityLevel": "defined",
       "targetMaturityLevel": "managed",
-      "investmentCategory": "CAPEX",
+      "investmentCategory": "capex",
       "criticality": "high",
-      "scalability": "Moderately Scalable"
+      "scalability": "moderatelyScalable"
     },
     {
       "capabilityID": "CAP-003",
@@ -636,14 +636,14 @@
       "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
       "purpose": "Enable data-driven decision making and provide insights for operational optimization",
       "owner": "Chief Data Officer",
-      "capabilityCategory": "Enabling",
-      "capabilityType": "Analytical",
-      "businessDomain": "Technology",
+      "capabilityCategory": "enabling",
+      "capabilityType": "analytical",
+      "businessDomain": "technology",
       "maturityLevel": "managed",
-      "investmentCategory": "Technology",
+      "investmentCategory": "technology",
       "criticality": "high",
-      "availability": "Business Hours",
-      "scalability": "Highly Scalable"
+      "availability": "businessHours",
+      "scalability": "highlyScalable"
     }
   ]
 }

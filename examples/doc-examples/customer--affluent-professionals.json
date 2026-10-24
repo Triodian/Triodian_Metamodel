@@ -2,7 +2,7 @@
   "customerID": "CUST-SEG-001",
   "title": "Affluent Professionals",
   "description": "High-income professionals with complex financial needs and limited time",
-  "customerSegmentType": "value-based",
+  "customerSegmentType": "valueBased",
   "orgUnitTitle": "Premium Banking Division",
   "orgUnitRoles": [
     "Segment Manager",

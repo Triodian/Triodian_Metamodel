@@ -4,12 +4,12 @@
   "description": "Centralized platform for data integration, analysis, and business intelligence across the organization",
   "purpose": "Enable data-driven decision making and provide insights for operational optimization",
   "owner": "Chief Data Officer",
-  "capabilityCategory": "Enabling",
-  "capabilityType": "Analytical",
-  "businessDomain": "Technology",
+  "capabilityCategory": "enabling",
+  "capabilityType": "analytical",
+  "businessDomain": "technology",
   "maturityLevel": "managed",
-  "investmentCategory": "Technology",
+  "investmentCategory": "technology",
   "criticality": "high",
-  "availability": "Business Hours",
-  "scalability": "Highly Scalable"
+  "availability": "businessHours",
+  "scalability": "highlyScalable"
 }

@@ -1,23 +1,23 @@
 {
   "stakeholderID": "STK-002",
   "title": "Railway Technology Solutions Ltd",
-  "tType": "Strategic Partner",
+  "tType": "strategicPartner",
   "description": "Technology company providing AI-powered track monitoring solutions",
   "role": "Develop and maintain predictive maintenance technology systems",
-  "stakeholderCategory": "External Stakeholder",
-  "influenceLevel": "Medium Influence",
-  "interestLevel": "High Interest",
+  "stakeholderCategory": "externalStakeholder",
+  "influenceLevel": "mediumInfluence",
+  "interestLevel": "highInterest",
   "engagementStrategies": "Joint product development, regular technical reviews, innovation workshops",
   "engagementFrequency": "weekly",
   "communicationChannels": [
-    "Video Conference",
-    "Digital Platform",
-    "Workshops"
+    "videoConference",
+    "digitalPlatform",
+    "workshops"
   ],
   "inputs": "Technical expertise, software development, system integration",
   "outputs": "Licensing fees, partnership opportunities, market access",
   "geographicScope": "multinational",
-  "industry": "Technology",
-  "organizationType": "Private Company",
+  "industry": "technology",
+  "organizationType": "privateCompany",
   "strategicAlignment": "Enables digital transformation and predictive maintenance capabilities"
 }

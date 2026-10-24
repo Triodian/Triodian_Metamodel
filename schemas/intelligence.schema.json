@@ -48,17 +48,17 @@
       "type": "string",
       "description": "Type of intelligence gathered.",
       "enum": [
-        "Business reporting",
-        "Competitive intelligence",
-        "Market intelligence",
-        "Regulatory surveillance",
-        "Security intelligence",
-        "Insider threat monitoring",
-        "Geopolitical analysis",
-        "Corporate espionage",
-        "Agency intelligence feed",
-        "Social media and OSINT",
-        "Dark web monitoring"
+        "businessReporting",
+        "competitiveIntelligence",
+        "marketIntelligence",
+        "regulatorySurveillance",
+        "securityIntelligence",
+        "insiderThreatMonitoring",
+        "geopoliticalAnalysis",
+        "corporateEspionage",
+        "agencyIntelligenceFeed",
+        "socialMediaAndOsint",
+        "darkWebMonitoring"
       ]
     },
     "frequency": {
@@ -77,12 +77,12 @@
       "type": "string",
       "description": "Level of confidentiality applied to the intelligence output.",
       "enum": [
-        "Public",
-        "Internal",
-        "Confidential",
-        "Restricted",
-        "Secret",
-        "Top Secret"
+        "public",
+        "internal",
+        "confidential",
+        "restricted",
+        "secret",
+        "topSecret"
       ]
     },
     "performanceIndicators": {
@@ -136,16 +136,16 @@
           "type": "string",
           "description": "Kind of source",
           "enum": [
-            "Public data",
-            "Paid research services",
-            "Regulatory filings",
-            "Informal networks",
-            "Third-party subscription",
-            "Dark web sources",
-            "Social media",
-            "Government intelligence",
-            "Corporate whistleblowers",
-            "Surveillance systems"
+            "publicData",
+            "paidResearchServices",
+            "regulatoryFilings",
+            "informalNetworks",
+            "thirdPartySubscription",
+            "darkWebSources",
+            "socialMedia",
+            "governmentIntelligence",
+            "corporateWhistleblowers",
+            "surveillanceSystems"
           ]
         },
         "reliabilityRating": {
@@ -167,13 +167,13 @@
           "type": "string",
           "description": "How intelligence is collected from the source",
           "enum": [
-            "Manual research",
-            "Automated scraping",
-            "Sensor-based collection",
-            "Third-party acquisition",
-            "Human intelligence",
-            "Signals intelligence",
-            "AI-generated summarisation"
+            "manualResearch",
+            "automatedScraping",
+            "sensorBasedCollection",
+            "thirdPartyAcquisition",
+            "humanIntelligence",
+            "signalsIntelligence",
+            "aiGeneratedSummarisation"
           ]
         },
         "cost": {
@@ -197,15 +197,15 @@
           "type": "string",
           "description": "Area where the intelligence is applied",
           "enum": [
-            "Strategic decision-making",
-            "Tactical operations",
-            "Mergers and acquisitions",
-            "New market entry",
-            "Product development",
-            "Risk management",
-            "Competitive response",
-            "Brand reputation management",
-            "Fraud prevention"
+            "strategicDecisionMaking",
+            "tacticalOperations",
+            "mergersAndAcquisitions",
+            "newMarketEntry",
+            "productDevelopment",
+            "riskManagement",
+            "competitiveResponse",
+            "brandReputationManagement",
+            "fraudPrevention"
           ]
         },
         "organisationalDecisionsInfluenced": {

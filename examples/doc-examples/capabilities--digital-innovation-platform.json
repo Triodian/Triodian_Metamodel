@@ -5,12 +5,12 @@
   "purpose": "Accelerate digital transformation and foster culture of continuous innovation",
   "owner": "Chief Innovation Officer",
   "orgUnitTitle": "Digital Transformation Office",
-  "capabilityCategory": "Strategic",
-  "capabilityType": "Innovation",
-  "businessDomain": "Strategy & Planning",
+  "capabilityCategory": "strategic",
+  "capabilityType": "innovation",
+  "businessDomain": "strategyPlanning",
   "maturityLevel": "defined",
   "targetMaturityLevel": "managed",
-  "investmentCategory": "CAPEX",
+  "investmentCategory": "capex",
   "criticality": "high",
-  "scalability": "Moderately Scalable"
+  "scalability": "moderatelyScalable"
 }

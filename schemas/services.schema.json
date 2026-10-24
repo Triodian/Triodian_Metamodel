@@ -61,53 +61,53 @@
     "serviceCategory": {
       "type": "string",
       "enum": [
-        "Customer Service",
-        "Support Service",
-        "Operational Service",
-        "Administrative Service",
-        "Digital Service",
-        "Professional Service",
-        "Infrastructure Service"
+        "customerService",
+        "supportService",
+        "operationalService",
+        "administrativeService",
+        "digitalService",
+        "professionalService",
+        "infrastructureService"
       ],
       "description": "Broad categorization of service type"
     },
     "serviceType": {
       "type": "string",
       "enum": [
-        "Transportation",
-        "Consulting",
-        "Maintenance",
-        "Support",
-        "Platform",
-        "API Service",
-        "Analytics",
-        "Training",
-        "Monitoring",
-        "Integration"
+        "transportation",
+        "consulting",
+        "maintenance",
+        "support",
+        "platform",
+        "apiService",
+        "analytics",
+        "training",
+        "monitoring",
+        "integration"
       ],
       "description": "Specific type of service"
     },
     "deliveryModel": {
       "type": "string",
       "enum": [
-        "Self-Service",
-        "Assisted Service",
-        "Automated Service",
-        "On-Demand",
-        "Scheduled",
-        "Continuous",
-        "Hybrid"
+        "selfService",
+        "assistedService",
+        "automatedService",
+        "onDemand",
+        "scheduled",
+        "continuous",
+        "hybrid"
       ],
       "description": "How the service is delivered"
     },
     "serviceLevel": {
       "type": "string",
       "enum": [
-        "Basic",
-        "Standard",
-        "Premium",
-        "Enterprise",
-        "Mission Critical"
+        "basic",
+        "standard",
+        "premium",
+        "enterprise",
+        "missionCritical"
       ],
       "description": "Service tier or quality level"
     },
@@ -123,15 +123,15 @@
       "items": {
         "type": "string",
         "enum": [
-          "Online Portal",
-          "Mobile App",
-          "Phone",
-          "In-Person",
-          "API",
-          "Email",
-          "Chat",
-          "Social Media",
-          "Partner Channel"
+          "onlinePortal",
+          "mobileApp",
+          "phone",
+          "inPerson",
+          "api",
+          "email",
+          "chat",
+          "socialMedia",
+          "partnerChannel"
         ]
       },
       "description": "The channels through which the Service is provided"
@@ -225,13 +225,13 @@
       "items": {
         "type": "string",
         "enum": [
-          "Federal Regulations",
-          "State Regulations",
-          "Industry Standards",
-          "Safety Requirements",
-          "Environmental Standards",
-          "Privacy Regulations",
-          "Security Standards"
+          "federalRegulations",
+          "stateRegulations",
+          "industryStandards",
+          "safetyRequirements",
+          "environmentalStandards",
+          "privacyRegulations",
+          "securityStandards"
         ]
       },
       "description": "Regulatory and Policy requirements affecting Service delivery"
@@ -241,12 +241,12 @@
       "items": {
         "type": "string",
         "enum": [
-          "Internal Employees",
-          "External Customers",
-          "Partners",
-          "Vendors",
-          "Government",
-          "Public"
+          "internalEmployees",
+          "externalCustomers",
+          "partners",
+          "vendors",
+          "government",
+          "public"
         ]
       },
       "description": "Primary users or beneficiaries of the service"
@@ -340,13 +340,13 @@
     "businessModel": {
       "type": "string",
       "enum": [
-        "Fee for Service",
-        "Subscription",
-        "Usage Based",
-        "Freemium",
-        "Commission",
-        "License",
-        "Support Model"
+        "feeForService",
+        "subscription",
+        "usageBased",
+        "freemium",
+        "commission",
+        "license",
+        "supportModel"
       ],
       "description": "Revenue or value creation model"
     },
@@ -355,12 +355,12 @@
       "items": {
         "type": "string",
         "enum": [
-          "Enterprise",
-          "SMB",
-          "Government",
-          "Individual",
-          "Partner",
-          "Developer"
+          "enterprise",
+          "smb",
+          "government",
+          "individual",
+          "partner",
+          "developer"
         ]
       },
       "description": "Target customer segments"
@@ -396,22 +396,22 @@
     "marketPosition": {
       "type": "string",
       "enum": [
-        "Market Leader",
-        "Market Challenger",
-        "Market Follower",
-        "Niche Player",
-        "Disruptor",
-        "Emerging Player"
+        "marketLeader",
+        "marketChallenger",
+        "marketFollower",
+        "nichePlayer",
+        "disruptor",
+        "emergingPlayer"
       ],
       "description": "Desired market position in the service category"
     },
     "investmentLevel": {
       "type": "string",
       "enum": [
-        "High Investment",
-        "Medium Investment",
-        "Low Investment",
-        "Minimal Investment"
+        "highInvestment",
+        "mediumInvestment",
+        "lowInvestment",
+        "minimalInvestment"
       ],
       "description": "Required investment level for service delivery"
     },
@@ -595,12 +595,12 @@
         "featureType": {
           "type": "string",
           "enum": [
-            "Core Feature",
-            "Premium Feature",
-            "Add-on",
-            "Integration",
-            "Automation",
-            "Enhancement"
+            "coreFeature",
+            "premiumFeature",
+            "addOn",
+            "integration",
+            "automation",
+            "enhancement"
           ],
           "description": "Type of service feature"
         },
@@ -632,13 +632,13 @@
           "items": {
             "type": "string",
             "enum": [
-              "Web Portal",
-              "Mobile Application",
-              "SMS Alerts",
-              "Email Notifications",
-              "API Integration",
-              "Phone",
-              "Chat"
+              "webPortal",
+              "mobileApplication",
+              "smsAlerts",
+              "emailNotifications",
+              "apiIntegration",
+              "phone",
+              "chat"
             ]
           },
           "description": "The channels through which the Service feature is provided"
@@ -737,12 +737,12 @@
         "rolloutStrategy": {
           "type": "string",
           "enum": [
-            "Big Bang",
-            "Phased",
-            "Canary",
-            "Beta",
-            "Geographic",
-            "Segment"
+            "bigBang",
+            "phased",
+            "canary",
+            "beta",
+            "geographic",
+            "segment"
           ],
           "description": "Feature rollout approach"
         },

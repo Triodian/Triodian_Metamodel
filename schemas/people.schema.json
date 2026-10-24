@@ -34,8 +34,8 @@
         "operational",
         "creative",
         "analytical",
-        "customer-facing",
-        "cross-functional"
+        "customerFacing",
+        "crossFunctional"
       ]
     },
     "orgUnitTitle": {
@@ -413,9 +413,9 @@
             "description": "Type of relationship",
             "enum": [
               "enables",
-              "depends on",
+              "dependsOn",
               "complements",
-              "conflicts with",
+              "conflictsWith",
               "precedes",
               "follows",
               "defines",
@@ -508,12 +508,12 @@
             "permanent",
             "contract",
             "temporary",
-            "part-time",
-            "full-time",
+            "partTime",
+            "fullTime",
             "contingent",
             "remote",
             "hybrid",
-            "on-site"
+            "onSite"
           ]
         },
         "workforceSize": {
@@ -575,10 +575,10 @@
               "type": "string",
               "description": "Overall skill level",
               "enum": [
-                "Basic",
-                "Intermediate",
-                "Advanced",
-                "Expert"
+                "basic",
+                "intermediate",
+                "advanced",
+                "expert"
               ]
             }
           },

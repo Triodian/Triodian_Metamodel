@@ -53,12 +53,12 @@
         "type": {
           "type": "string",
           "enum": [
-            "Business Requirement",
-            "Stakeholder Requirement",
-            "Solution Requirement (Functional)",
-            "Solution Requirement (Non-Functional)",
-            "Transition Requirement",
-            "Regulatory Requirement"
+            "businessRequirement",
+            "stakeholderRequirement",
+            "solutionRequirementFunctional",
+            "solutionRequirementNonFunctional",
+            "transitionRequirement",
+            "regulatoryRequirement"
           ],
           "description": "The classification of the requirement."
         },
@@ -163,14 +163,14 @@
         "type": {
           "type": "string",
           "enum": [
-            "User Story",
-            "Epic",
-            "Use Case",
-            "Process Model",
-            "Data Model",
-            "Wireframe/Prototype",
-            "Requirements Traceability Matrix",
-            "Solution Design Document"
+            "userStory",
+            "epic",
+            "useCase",
+            "processModel",
+            "dataModel",
+            "wireframePrototype",
+            "requirementsTraceabilityMatrix",
+            "solutionDesignDocument"
           ],
           "description": "The type of requirement artefact."
         },
@@ -233,12 +233,12 @@
         "type": {
           "type": "string",
           "enum": [
-            "Workshop",
-            "Interview",
-            "Observation",
-            "Survey",
-            "Document Analysis",
-            "Prototyping Session"
+            "workshop",
+            "interview",
+            "observation",
+            "survey",
+            "documentAnalysis",
+            "prototypingSession"
           ],
           "description": "The type of elicitation activity."
         },
@@ -432,9 +432,9 @@
         "recommendation": {
           "type": "string",
           "enum": [
-            "Continue",
-            "Pivot",
-            "Retire"
+            "continue",
+            "pivot",
+            "retire"
           ],
           "description": "Recommendation based on the evaluation."
         },
