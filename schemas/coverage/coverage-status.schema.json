@@ -1,6 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "CoverageStatus",
+  "$id": "https://triodian.com/schemas/coverage/coverage-status.schema.json",
+  "title": "Coverage Status Schema",
   "type": "object",
   "description": "Derived record comparing actual domain coverage to expectations and identifying gaps.",
   "properties": {

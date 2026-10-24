@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://triodian.com/schemas/intelligence.schema.json",
-  "title": "Intelligence",
+  "title": "Intelligence Domain Schema",
   "description": "Schema for capturing organizational intelligence activities, sources, applications, and attributes.",
   "type": "object",
   "properties": {
@@ -129,10 +129,12 @@
       "type": "object",
       "properties": {
         "sourceName": {
-          "type": "string"
+          "type": "string",
+          "description": "Name of the source"
         },
         "sourceType": {
           "type": "string",
+          "description": "Kind of source",
           "enum": [
             "Public data",
             "Paid research services",
@@ -148,6 +150,7 @@
         },
         "reliabilityRating": {
           "type": "string",
+          "description": "How reliable the source is",
           "enum": [
             "High",
             "Medium",
@@ -157,6 +160,7 @@
         },
         "collectionMethod": {
           "type": "string",
+          "description": "How intelligence is collected from the source",
           "enum": [
             "Manual research",
             "Automated scraping",
@@ -168,7 +172,8 @@
           ]
         },
         "cost": {
-          "type": "string"
+          "type": "string",
+          "description": "Cost of the source"
         },
         "complianceStatus": {
           "$ref": "common.schema.json#/definitions/complianceStatus"
@@ -185,6 +190,7 @@
       "properties": {
         "applicationArea": {
           "type": "string",
+          "description": "Area where the intelligence is applied",
           "enum": [
             "Strategic decision-making",
             "Tactical operations",
@@ -198,16 +204,19 @@
           ]
         },
         "organisationalDecisionsInfluenced": {
-          "type": "string"
+          "type": "string",
+          "description": "Decisions the intelligence influences"
         },
         "intelligenceConsumers": {
           "type": "array",
+          "description": "Who uses the intelligence",
           "items": {
             "type": "string"
           }
         },
         "measurableOutcomes": {
           "type": "array",
+          "description": "Measurable outcomes of using the intelligence",
           "items": {
             "type": "string"
           }

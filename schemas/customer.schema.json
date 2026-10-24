@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/customer.schema.json",
   "title": "Customer Domain Schema",
   "description": "Customer segments: distinct groups of customers with similar characteristics, needs or value. The root is a Customer Segment; Customer Persona, Customer Journey and Customer Relationship are element records under definitions, linked to the segment by customerSegmentID.",
   "type": "object",

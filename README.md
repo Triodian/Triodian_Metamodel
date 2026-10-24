@@ -62,6 +62,8 @@ python scripts/validate.py --doc-examples     # plus the documentation's worked 
 
 The structural checks confirm that every schema is well-formed JSON, valid against its declared JSON Schema draft, free of non-standard keywords (such as `attributes`, `elements` or `nullable`), that every `$ref` resolves, and that each schema's embedded examples validate against it.
 
+Every schema file is kebab-case, ends in `.schema.json`, and has an `$id` of `https://triodian.com/schemas/` followed by its path. Every property has a description. The interoperability mappings in [`interoperability/`](interoperability) are valid JSON-LD and map only terms the schemas define.
+
 Shared concepts such as priority, risk level, frequency, status, maturity and domain type are defined once in [`schemas/common.schema.json`](schemas/common.schema.json), with camelCase values, and domains reference them with `$ref`. [`docs/shared-vocabulary.md`](docs/shared-vocabulary.md) lists the shared values and shows which domains still keep their own lists and how those map across. Regenerate it with `python scripts/vocabulary_map.py`.
 
 Every domain schema has the same structure. The root is the domain's main record (an Initiative, a Value Stream, a Policy), and its element types (a Program, a Value Stream Stage, a Capability Function) are named, camelCase entries under `definitions`, referenced with `$ref`. All schemas use JSON Schema draft-07, and all definition and property names are camelCase. Composite schemas such as `strategic-response-model.schema.json` group records defined in other schemas.

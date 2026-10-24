@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/federated-governance-model.schema.json",
   "title": "Federated Governance Model Schema",
   "description": "Schema for modeling how multiple organizations co-own or co-steward resources",
   "type": "object",
@@ -43,10 +44,12 @@
         "type": "object",
         "properties": {
           "orgID": {
-            "type": "string"
+            "type": "string",
+            "description": "ID of the participating organization"
           },
           "orgType": {
             "type": "string",
+            "description": "Type of the participating organization",
             "enum": [
               "Internal",
               "External"
@@ -54,6 +57,7 @@
           },
           "governanceRole": {
             "type": "string",
+            "description": "Role the organization plays in governance",
             "enum": [
               "Lead",
               "Participant",

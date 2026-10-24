@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/information.schema.json",
   "title": "Information Domain Schema",
   "description": "Schema for the Information domain in the Triodian Metamodel",
   "version": "2.2",

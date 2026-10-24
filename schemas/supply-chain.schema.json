@@ -1,5 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/supply-chain.schema.json",
   "title": "Supply Chain Domain Schema",
   "description": "Schema for the Supply Chain domain in the Triodian Metamodel",
   "type": "object",
@@ -3061,6 +3062,7 @@
             },
             "benchmarks": {
               "type": "object",
+              "description": "Benchmark values for comparison",
               "properties": {
                 "industryAverage": {
                   "type": "string",
@@ -3210,6 +3212,7 @@
             },
             "cycleCounting": {
               "type": "object",
+              "description": "Cycle-counting practice",
               "properties": {
                 "countingMethod": {
                   "type": "string",
@@ -3445,6 +3448,7 @@
               },
               "benchmarks": {
                 "type": "object",
+                "description": "Benchmark values for comparison",
                 "properties": {
                   "industryAverage": {
                     "type": "string",

@@ -271,13 +271,16 @@
             "type": "object",
             "properties": {
               "item": {
-                "type": "string"
+                "type": "string",
+                "description": "Component or material"
               },
               "quantity": {
-                "type": "integer"
+                "type": "integer",
+                "description": "Quantity required"
               },
               "unit": {
-                "type": "string"
+                "type": "string",
+                "description": "Unit of measure"
               }
             },
             "additionalProperties": false

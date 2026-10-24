@@ -65,7 +65,7 @@ FIELD_CANDIDATES = {
 FIELD_OVERRIDES = {
     ("risk-management.schema.json", "/properties/riskSeverity/properties/level"): "riskLevel",
     ("risk-management.schema.json", "/properties/residualRisk/properties/level"): "riskLevel",
-    ("social-change.json", "/properties/internationalSupport/items/properties/level"): "simpleLevel",
+    ("social-change.schema.json", "/properties/internationalSupport/items/properties/level"): "simpleLevel",
 }
 
 # Synonyms, keyed by normalised current value. A value of (target, "lossy") marks a mapping
