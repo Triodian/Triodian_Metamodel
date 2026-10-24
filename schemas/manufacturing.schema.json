@@ -8,7 +8,10 @@
     "title": {
       "type": "string",
       "description": "Name/title of the manufacturing entity",
-      "examples": ["Global Manufacturing Operations", "North American Production Hub"]
+      "examples": [
+        "Global Manufacturing Operations",
+        "North American Production Hub"
+      ]
     },
     "description": {
       "type": "string",
@@ -45,13 +48,11 @@
       ]
     },
     "timeHorizon": {
-      "type": "string",
       "description": "Strategy time frame",
-      "enum": [
-        "Short-term (1 year)",
-        "Medium-term (2-3 years)",
-        "Long-term (4-5 years)",
-        "Extended (5+ years)"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/timeHorizon"
+        }
       ]
     },
     "scopeLevel": {
@@ -132,16 +133,7 @@
       "type": "array",
       "description": "Categories of risks",
       "items": {
-        "type": "string",
-        "enum": [
-          "Operational",
-          "Financial",
-          "Supply Chain",
-          "Technical/Technology",
-          "Regulatory",
-          "Environmental",
-          "Labor"
-        ]
+        "$ref": "common.schema.json#/definitions/riskCategory"
       }
     },
     "mitigationStrategies": {
@@ -168,7 +160,10 @@
         "unitName": {
           "type": "string",
           "description": "The name or title of the production unit.",
-          "examples": ["Engine Assembly Line 1", "Plastics Molding Department"]
+          "examples": [
+            "Engine Assembly Line 1",
+            "Plastics Molding Department"
+          ]
         },
         "unitType": {
           "type": "string",
@@ -182,15 +177,22 @@
         "location": {
           "type": "string",
           "description": "The physical location of the production unit.",
-          "examples": ["Building 5, Plant North"]
+          "examples": [
+            "Building 5, Plant North"
+          ]
         },
         "capacity": {
           "type": "integer",
           "description": "The maximum output capacity of the unit per time period.",
-          "examples": [500]
+          "examples": [
+            500
+          ]
         }
       },
-      "required": ["unitName", "unitType"],
+      "required": [
+        "unitName",
+        "unitType"
+      ],
       "additionalProperties": false
     },
     "WorkOrder": {
@@ -200,30 +202,39 @@
         "orderID": {
           "type": "string",
           "description": "A unique identifier for the work order.",
-          "examples": ["WO-2025-001"]
+          "examples": [
+            "WO-2025-001"
+          ]
         },
         "productReference": {
           "type": "string",
           "description": "A link to the 'Product' domain element being manufactured.",
-          "examples": ["PROD-A123"]
+          "examples": [
+            "PROD-A123"
+          ]
         },
         "quantity": {
           "type": "integer",
           "description": "The number of units to be produced.",
-          "examples": [1000]
+          "examples": [
+            1000
+          ]
         },
         "status": {
-          "type": "string",
           "description": "The current state of the production order.",
-          "enum": [
-            "PLANNED",
-            "IN_PROGRESS",
-            "COMPLETED",
-            "CANCELED"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/workStatus"
+            }
           ]
         }
       },
-      "required": ["orderID", "productReference", "quantity", "status"],
+      "required": [
+        "orderID",
+        "productReference",
+        "quantity",
+        "status"
+      ],
       "additionalProperties": false
     },
     "BillOfMaterials": {
@@ -233,12 +244,16 @@
         "bomID": {
           "type": "string",
           "description": "A unique identifier for the Bill of Materials.",
-          "examples": ["BOM-A123"]
+          "examples": [
+            "BOM-A123"
+          ]
         },
         "productReference": {
           "type": "string",
           "description": "A link to the 'Product' domain element this BOM is for.",
-          "examples": ["PROD-A123"]
+          "examples": [
+            "PROD-A123"
+          ]
         },
         "items": {
           "type": "array",
@@ -259,7 +274,11 @@
           }
         }
       },
-      "required": ["bomID", "productReference", "items"],
+      "required": [
+        "bomID",
+        "productReference",
+        "items"
+      ],
       "additionalProperties": false
     },
     "Inventory": {
@@ -269,26 +288,37 @@
         "materialReference": {
           "type": "string",
           "description": "A link to the 'Material' or 'Product' element in the metamodel.",
-          "examples": ["RAW-MTL-24"]
+          "examples": [
+            "RAW-MTL-24"
+          ]
         },
         "quantity": {
           "type": "integer",
           "description": "The amount of the item currently in stock.",
-          "examples": [5000]
+          "examples": [
+            5000
+          ]
         },
         "warehouseLocation": {
           "type": "string",
           "description": "The physical location of the inventory.",
-          "examples": ["Warehouse 3, Shelf A"]
+          "examples": [
+            "Warehouse 3, Shelf A"
+          ]
         },
         "lastUpdated": {
           "type": "string",
           "format": "date-time",
           "description": "The timestamp of the last inventory update.",
-          "examples": ["2025-08-04T12:00:00Z"]
+          "examples": [
+            "2025-08-04T12:00:00Z"
+          ]
         }
       },
-      "required": ["materialReference", "quantity"],
+      "required": [
+        "materialReference",
+        "quantity"
+      ],
       "additionalProperties": false
     },
     "ManufacturingObjective": {
@@ -308,9 +338,12 @@
           "description": "Responsible individual/team."
         },
         "priority": {
-          "type": "string",
           "description": "Priority level.",
-          "enum": ["Critical", "High", "Medium", "Low"]
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/priority"
+            }
+          ]
         },
         "metrics": {
           "type": "string",
@@ -329,7 +362,12 @@
           "description": "Achievement timeframe."
         }
       },
-      "required": ["title", "description", "owner", "priority"],
+      "required": [
+        "title",
+        "description",
+        "owner",
+        "priority"
+      ],
       "additionalProperties": false
     }
   },
@@ -341,7 +379,7 @@
       "owner": "Head of Operations",
       "manufacturingCategory": "Continuous Flow",
       "manufacturingFocus": "Cost Reduction",
-      "timeHorizon": "Medium-term (2-3 years)",
+      "timeHorizon": "mediumTerm",
       "scopeLevel": "Global",
       "strategicAlignment": "Supports the corporate goal of improving profit margins by 5%.",
       "productionUnits": [
@@ -357,7 +395,7 @@
           "orderID": "WO-2025-002",
           "productReference": "PROD-B555",
           "quantity": 1000,
-          "status": "PLANNED"
+          "status": "planned"
         }
       ],
       "billsOfMaterials": [
@@ -386,7 +424,7 @@
           "title": "Reduce Waste by 15%",
           "description": "Implement new processes to reduce material waste on all production lines.",
           "owner": "Process Improvement Team",
-          "priority": "High",
+          "priority": "high",
           "metrics": "Waste reduction percentage",
           "targetValue": "15%",
           "currentValue": "5%",
@@ -403,9 +441,9 @@
       "dependencies": "Stable supply chain, strong IT infrastructure for real-time monitoring.",
       "risks": "Equipment failure, labor shortages, supply chain disruptions.",
       "riskCategories": [
-        "Operational",
-        "Supply Chain",
-        "Labor"
+        "operational",
+        "supplyChain",
+        "people"
       ],
       "mitigationStrategies": "Redundant equipment, cross-trained staff, diversify suppliers."
     }

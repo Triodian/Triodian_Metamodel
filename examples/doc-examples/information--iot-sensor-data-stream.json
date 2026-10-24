@@ -10,7 +10,7 @@
   "dataQuality": "Good Quality",
   "format": "JSON message streams via Apache Kafka, time-series database storage",
   "volume": "10GB daily from 5,000 sensors generating 1M messages per hour",
-  "updateFrequency": "Real-time",
+  "updateFrequency": "realTime",
   "retention": "Real-time for 30 days, aggregated for 2 years, archived for 7 years",
   "sources": "Temperature sensors, vibration monitors, GPS trackers, environmental sensors",
   "consumers": "Predictive maintenance system, real-time dashboards, alert systems, analytics platform",

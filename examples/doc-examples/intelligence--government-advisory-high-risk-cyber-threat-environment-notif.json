@@ -12,7 +12,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Third-party acquisition",
       "cost": "No direct cost",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Joint Industry-Government Threat Sharing Program",
@@ -20,11 +20,11 @@
       "reliabilityRating": "High",
       "collectionMethod": "Manual research",
       "cost": "Included in membership fees",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Agency intelligence feed",
-  "frequency": "Event-driven",
+  "frequency": "eventDriven",
   "legalAndEthicalConsiderations": "Restricted internal dissemination per agency guidelines; no redistribution permitted.",
   "confidentialityLevel": "Restricted",
   "performanceIndicators": [

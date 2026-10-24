@@ -10,7 +10,7 @@
   "dataQuality": "Good Quality",
   "format": "Wiki-based system with structured templates, searchable content, multimedia support",
   "volume": "50,000 articles, 10,000 images, 500 videos, updated by 200+ contributors",
-  "updateFrequency": "Daily",
+  "updateFrequency": "daily",
   "retention": "Active content maintained, outdated content archived with version history",
   "sources": "Engineering teams, operations staff, external consultants, vendor documentation",
   "consumers": "Engineers, technicians, customer support, training department, contractors",

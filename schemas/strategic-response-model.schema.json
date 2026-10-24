@@ -18,30 +18,84 @@
           "type": "string",
           "description": "The classification of the response",
           "enum": [
-            "Policy_Change", "Capability_Development", "Initiative_Launch", 
-            "Process_Improvement", "Technology_Implementation", "Organizational_Change",
-            "Market_Entry", "Market_Exit", "Competitive_Response", "Product_Innovation", 
-            "Repositioning", "Market_Expansion", "Defensive_Action", "Partnership_Strategy", 
-            "Pricing_Strategy", "Channel_Strategy", "Cost_Optimization", "Investment_Strategy",
-            "Capital_Structure_Change", "Financial_Risk_Management", "Budget_Reallocation",
-            "Funding_Strategy", "Revenue_Enhancement", "Working_Capital_Management",
-            "Financial_Restructuring", "Risk_Prevention", "Risk_Mitigation", "Risk_Transfer",
-            "Risk_Acceptance", "Control_Enhancement", "Incident_Response", "Business_Continuity",
-            "Compliance_Program", "Risk_Governance", "Network_Redesign", "Supplier_Change",
-            "Inventory_Strategy", "Logistics_Optimization", "Technology_Implementation",
-            "Process_Improvement", "Risk_Mitigation", "Cost_Reduction", "Service_Enhancement",
-            "Sustainability_Initiative", "Customer_Experience_Initiative", "Customer_Retention_Program",
-            "Customer_Acquisition_Campaign", "Customer_Journey_Redesign", "Customer_Segment_Strategy",
-            "Customer_Insight_Application", "Customer_Technology_Implementation",
-            "Innovation_Program", "Innovation_Culture_Change", "Innovation_Capability_Building",
-            "Portfolio_Adjustment", "Experimentation_Framework", "Idea_Management_Enhancement",
-            "Environmental_Initiative", "Social_Program", "Governance_Enhancement", 
-            "Climate_Adaptation", "Sustainability_Reporting_Improvement", "Talent_Initiative", 
-            "Culture_Change_Program", "Leadership_Development", "Knowledge_Retention_Program",
-            "Workforce_Restructuring", "Technology_Modernization", "Security_Remediation", 
-            "Technology_Standardization", "Platform_Consolidation", "Digital_Transformation",
-            "Channel_Expansion", "Channel_Consolidation", "Partner_Strategy_Change", 
-            "Distribution_Network_Redesign", "Omnichannel_Integration", "Channel_Mix_Optimization"
+            "Policy_Change",
+            "Capability_Development",
+            "Initiative_Launch",
+            "Process_Improvement",
+            "Technology_Implementation",
+            "Organizational_Change",
+            "Market_Entry",
+            "Market_Exit",
+            "Competitive_Response",
+            "Product_Innovation",
+            "Repositioning",
+            "Market_Expansion",
+            "Defensive_Action",
+            "Partnership_Strategy",
+            "Pricing_Strategy",
+            "Channel_Strategy",
+            "Cost_Optimization",
+            "Investment_Strategy",
+            "Capital_Structure_Change",
+            "Financial_Risk_Management",
+            "Budget_Reallocation",
+            "Funding_Strategy",
+            "Revenue_Enhancement",
+            "Working_Capital_Management",
+            "Financial_Restructuring",
+            "Risk_Prevention",
+            "Risk_Mitigation",
+            "Risk_Transfer",
+            "Risk_Acceptance",
+            "Control_Enhancement",
+            "Incident_Response",
+            "Business_Continuity",
+            "Compliance_Program",
+            "Risk_Governance",
+            "Network_Redesign",
+            "Supplier_Change",
+            "Inventory_Strategy",
+            "Logistics_Optimization",
+            "Technology_Implementation",
+            "Process_Improvement",
+            "Risk_Mitigation",
+            "Cost_Reduction",
+            "Service_Enhancement",
+            "Sustainability_Initiative",
+            "Customer_Experience_Initiative",
+            "Customer_Retention_Program",
+            "Customer_Acquisition_Campaign",
+            "Customer_Journey_Redesign",
+            "Customer_Segment_Strategy",
+            "Customer_Insight_Application",
+            "Customer_Technology_Implementation",
+            "Innovation_Program",
+            "Innovation_Culture_Change",
+            "Innovation_Capability_Building",
+            "Portfolio_Adjustment",
+            "Experimentation_Framework",
+            "Idea_Management_Enhancement",
+            "Environmental_Initiative",
+            "Social_Program",
+            "Governance_Enhancement",
+            "Climate_Adaptation",
+            "Sustainability_Reporting_Improvement",
+            "Talent_Initiative",
+            "Culture_Change_Program",
+            "Leadership_Development",
+            "Knowledge_Retention_Program",
+            "Workforce_Restructuring",
+            "Technology_Modernization",
+            "Security_Remediation",
+            "Technology_Standardization",
+            "Platform_Consolidation",
+            "Digital_Transformation",
+            "Channel_Expansion",
+            "Channel_Consolidation",
+            "Partner_Strategy_Change",
+            "Distribution_Network_Redesign",
+            "Omnichannel_Integration",
+            "Channel_Mix_Optimization"
           ]
         },
         "responseDescription": {
@@ -81,10 +135,23 @@
           "items": {
             "type": "string",
             "enum": [
-              "Strategy", "Capabilities", "Initiatives", "Policy", 
-              "Performance", "Information", "Value Stream", "Customer", 
-              "Market", "Finance", "Risk Management", "Supply Chain", 
-              "Innovation", "Sustainability", "People", "Technology", "Channel"
+              "Strategy",
+              "Capabilities",
+              "Initiatives",
+              "Policy",
+              "Performance",
+              "Information",
+              "Value Stream",
+              "Customer",
+              "Market",
+              "Finance",
+              "Risk Management",
+              "Supply Chain",
+              "Innovation",
+              "Sustainability",
+              "People",
+              "Technology",
+              "Channel"
             ]
           },
           "description": "Business architecture domains impacted by this response"
@@ -101,9 +168,14 @@
               "relationshipRole": {
                 "type": "string",
                 "enum": [
-                  "Owning unit", "Providing unit", "Consuming unit", 
-                  "Utilising unit", "Custodian unit", "Dependent unit", 
-                  "Supported unit", "Governing unit"
+                  "Owning unit",
+                  "Providing unit",
+                  "Consuming unit",
+                  "Utilising unit",
+                  "Custodian unit",
+                  "Dependent unit",
+                  "Supported unit",
+                  "Governing unit"
                 ],
                 "description": "Role the unit plays in relation to this response"
               },
@@ -114,7 +186,10 @@
                 "description": "Strength of the relationship on a scale from 1 (very weak) to 5 (very strong)"
               }
             },
-            "required": ["orgUnitTitle", "relationshipRole"]
+            "required": [
+              "orgUnitTitle",
+              "relationshipRole"
+            ]
           },
           "description": "Organization units impacted by this response and their roles"
         },
@@ -144,9 +219,12 @@
           "description": "The planned completion date for the strategic response"
         },
         "status": {
-          "type": "string",
-          "enum": ["Planned", "In_Progress", "Completed", "Deferred", "Cancelled"],
-          "description": "The current status of the strategic response"
+          "description": "The current status of the strategic response",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/workStatus"
+            }
+          ]
         },
         "lastUpdated": {
           "type": "string",
@@ -177,17 +255,27 @@
           "type": "array",
           "items": {
             "type": "string",
-            "enum": ["Scale", "Scope", "Differentiation", "Innovation", "Efficiency", "Resilience", "Other"]
+            "enum": [
+              "Scale",
+              "Scope",
+              "Differentiation",
+              "Innovation",
+              "Efficiency",
+              "Resilience",
+              "Other"
+            ]
           },
           "description": "Business mechanisms being utilized to effect change"
         },
         "strategicHorizon": {
           "type": "string",
-          "enum": ["Horizon_1", "Horizon_2", "Horizon_3"],
+          "enum": [
+            "Horizon_1",
+            "Horizon_2",
+            "Horizon_3"
+          ],
           "description": "Categorization of the strategic timeframe (H1: 0-18 months, H2: 18-36 months, H3: 36+ months)"
         },
-        
-        
         "customerSegmentIDs": {
           "type": "array",
           "items": {
@@ -209,7 +297,9 @@
                 "description": "Target value for this outcome"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific customer outcomes resulting from this response (Customer domain)"
         },
@@ -231,7 +321,9 @@
                 "description": "Expected impact of the change"
               }
             },
-            "required": ["changeDescription"]
+            "required": [
+              "changeDescription"
+            ]
           },
           "description": "Specific changes to customer experience (Customer domain)"
         },
@@ -239,7 +331,6 @@
           "type": "string",
           "description": "How customer feedback will be collected (Customer domain)"
         },
-        
         "marketIDs": {
           "type": "array",
           "items": {
@@ -259,7 +350,13 @@
           "properties": {
             "advantageType": {
               "type": "string",
-              "enum": ["cost", "differentiation", "focus", "innovation", "other"],
+              "enum": [
+                "cost",
+                "differentiation",
+                "focus",
+                "innovation",
+                "other"
+              ],
               "description": "Type of competitive advantage created"
             },
             "description": {
@@ -268,7 +365,11 @@
             },
             "sustainability": {
               "type": "string",
-              "enum": ["short-term", "medium-term", "long-term"],
+              "enum": [
+                "short-term",
+                "medium-term",
+                "long-term"
+              ],
               "description": "Expected duration of advantage"
             }
           },
@@ -288,7 +389,9 @@
                 "description": "Description of market position change"
               }
             },
-            "required": ["changeDescription"]
+            "required": [
+              "changeDescription"
+            ]
           },
           "description": "Specific changes to market position (Market domain)"
         },
@@ -309,7 +412,6 @@
           },
           "description": "How competitive reactions will be monitored (Market domain)"
         },
-        
         "financeIDs": {
           "type": "array",
           "items": {
@@ -335,7 +437,9 @@
                 "description": "Timeline for realizing this outcome"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific financial outcomes resulting from this response (Finance domain)"
         },
@@ -361,11 +465,17 @@
                   },
                   "status": {
                     "type": "string",
-                    "enum": ["secured", "pending", "proposed"],
+                    "enum": [
+                      "secured",
+                      "pending",
+                      "proposed"
+                    ],
                     "description": "Status of this funding"
                   }
                 },
-                "required": ["sourceName"]
+                "required": [
+                  "sourceName"
+                ]
               },
               "description": "Sources of funding for this response"
             }
@@ -394,7 +504,9 @@
                 "description": "Strategy to mitigate this risk"
               }
             },
-            "required": ["riskDescription"]
+            "required": [
+              "riskDescription"
+            ]
           },
           "description": "Assessment of financial risks (Finance domain)"
         },
@@ -402,7 +514,6 @@
           "type": "string",
           "description": "How financial performance will be reviewed (Finance domain)"
         },
-        
         "riskIDs": {
           "type": "array",
           "items": {
@@ -425,16 +536,27 @@
               },
               "controlType": {
                 "type": "string",
-                "enum": ["preventive", "detective", "corrective", "directive"],
+                "enum": [
+                  "preventive",
+                  "detective",
+                  "corrective",
+                  "directive"
+                ],
                 "description": "Type of control"
               },
               "implementationStatus": {
-                "type": "string",
-                "enum": ["planned", "in-progress", "implemented", "verified"],
-                "description": "Status of control implementation"
+                "description": "Status of control implementation",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/implementationStatus"
+                  }
+                ]
               }
             },
-            "required": ["controlName", "controlDescription"]
+            "required": [
+              "controlName",
+              "controlDescription"
+            ]
           },
           "description": "Risk controls implemented by this response (Risk Management domain)"
         },
@@ -459,7 +581,9 @@
                 "description": "Frequency of monitoring"
               }
             },
-            "required": ["monitoringMethod"]
+            "required": [
+              "monitoringMethod"
+            ]
           },
           "description": "Ongoing risk monitoring approaches (Risk Management domain)"
         },
@@ -467,7 +591,6 @@
           "type": "string",
           "description": "Assessment of risk remaining after response (Risk Management domain)"
         },
-        
         "supplyChainIDs": {
           "type": "array",
           "items": {
@@ -493,7 +616,9 @@
                 "description": "How this outcome will be measured"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific supply chain outcomes resulting from this response (Supply Chain domain)"
         },
@@ -504,7 +629,14 @@
             "properties": {
               "changeType": {
                 "type": "string",
-                "enum": ["network", "process", "supplier", "inventory", "logistics", "technology"],
+                "enum": [
+                  "network",
+                  "process",
+                  "supplier",
+                  "inventory",
+                  "logistics",
+                  "technology"
+                ],
                 "description": "Type of supply chain change"
               },
               "changeDescription": {
@@ -516,7 +648,9 @@
                 "description": "Approach to implementing this change"
               }
             },
-            "required": ["changeDescription"]
+            "required": [
+              "changeDescription"
+            ]
           },
           "description": "Specific changes to supply chain configuration (Supply Chain domain)"
         },
@@ -530,21 +664,29 @@
                 "description": "Description of supply chain risk"
               },
               "likelihood": {
-                "type": "string",
-                "enum": ["low", "moderate", "high", "very-high"],
-                "description": "Likelihood of this risk"
+                "description": "Likelihood of this risk",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/likelihood"
+                  }
+                ]
               },
               "impact": {
-                "type": "string",
-                "enum": ["minor", "moderate", "significant", "severe"],
-                "description": "Impact if this risk materializes"
+                "description": "Impact if this risk materializes",
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/impactMagnitude"
+                  }
+                ]
               },
               "mitigationStrategy": {
                 "type": "string",
                 "description": "Strategy to mitigate this risk"
               }
             },
-            "required": ["riskDescription"]
+            "required": [
+              "riskDescription"
+            ]
           },
           "description": "Risks related to the supply chain response (Supply Chain domain)"
         },
@@ -562,7 +704,13 @@
                   },
                   "stakeholderType": {
                     "type": "string",
-                    "enum": ["supplier", "customer", "partner", "regulator", "internal"],
+                    "enum": [
+                      "supplier",
+                      "customer",
+                      "partner",
+                      "regulator",
+                      "internal"
+                    ],
                     "description": "Type of stakeholder"
                   },
                   "engagementApproach": {
@@ -570,14 +718,16 @@
                     "description": "How this stakeholder will be engaged"
                   }
                 },
-                "required": ["stakeholderName", "stakeholderType"]
+                "required": [
+                  "stakeholderName",
+                  "stakeholderType"
+                ]
               },
               "description": "Key stakeholders for this response"
             }
           },
           "description": "Approach to engaging key stakeholders (Supply Chain domain)"
         },
-        
         "innovationIDs": {
           "type": "array",
           "items": {
@@ -603,7 +753,9 @@
                 "description": "How this outcome will be measured"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific innovation outcomes resulting from this response (Innovation domain)"
         },
@@ -625,7 +777,10 @@
                 "description": "Expected impact of the change"
               }
             },
-            "required": ["capabilityArea", "changeDescription"]
+            "required": [
+              "capabilityArea",
+              "changeDescription"
+            ]
           },
           "description": "Changes to innovation capabilities (Innovation domain)"
         },
@@ -664,7 +819,6 @@
           },
           "description": "How innovation portfolio is affected (Innovation domain)"
         },
-        
         "sustainabilityIDs": {
           "type": "array",
           "items": {
@@ -694,7 +848,9 @@
                 "description": "How this outcome will be measured"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific environmental outcomes from this response (Sustainability domain)"
         },
@@ -716,7 +872,9 @@
                 "description": "How this outcome will be measured"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific social outcomes from this response (Sustainability domain)"
         },
@@ -738,7 +896,10 @@
                 "description": "How the expectation will be addressed"
               }
             },
-            "required": ["stakeholderGroup", "expectationDescription"]
+            "required": [
+              "stakeholderGroup",
+              "expectationDescription"
+            ]
           },
           "description": "Stakeholder expectations being addressed (Sustainability domain)"
         },
@@ -756,7 +917,9 @@
                 "description": "How compliance will be achieved"
               }
             },
-            "required": ["regulationName"]
+            "required": [
+              "regulationName"
+            ]
           },
           "description": "Sustainability compliance requirements addressed (Sustainability domain)"
         },
@@ -787,7 +950,6 @@
           },
           "description": "Climate scenarios factored into response (Sustainability domain)"
         },
-        
         "peopleIDs": {
           "type": "array",
           "items": {
@@ -817,7 +979,10 @@
                 "description": "Expected impact of the change"
               }
             },
-            "required": ["changeArea", "changeDescription"]
+            "required": [
+              "changeArea",
+              "changeDescription"
+            ]
           },
           "description": "Specific workforce changes implemented (People domain)"
         },
@@ -908,11 +1073,13 @@
                 "description": "Timeframe for implementation"
               }
             },
-            "required": ["frameworkID", "updateDescription"]
+            "required": [
+              "frameworkID",
+              "updateDescription"
+            ]
           },
           "description": "Updates to competency frameworks (People domain)"
         },
-        
         "technologyIDs": {
           "type": "array",
           "items": {
@@ -942,7 +1109,10 @@
                 "description": "Expected impact of the change"
               }
             },
-            "required": ["architectureLayer", "changeDescription"]
+            "required": [
+              "architectureLayer",
+              "changeDescription"
+            ]
           },
           "description": "Specific architecture changes implemented (Technology domain)"
         },
@@ -985,7 +1155,10 @@
                 "description": "Approach to implementing this enhancement"
               }
             },
-            "required": ["securityDomain", "enhancementDescription"]
+            "required": [
+              "securityDomain",
+              "enhancementDescription"
+            ]
           },
           "description": "Security improvements implemented (Technology domain)"
         },
@@ -1028,11 +1201,13 @@
                 "description": "Timeline for implementation"
               }
             },
-            "required": ["standardID", "changeDescription"]
+            "required": [
+              "standardID",
+              "changeDescription"
+            ]
           },
           "description": "Changes to technology standards (Technology domain)"
         },
-        
         "channelIDs": {
           "type": "array",
           "items": {
@@ -1058,7 +1233,9 @@
                 "description": "How this outcome will be measured"
               }
             },
-            "required": ["outcomeDescription"]
+            "required": [
+              "outcomeDescription"
+            ]
           },
           "description": "Specific channel outcomes (Channel domain)"
         },
@@ -1084,7 +1261,10 @@
                 "description": "Expected impact of the change"
               }
             },
-            "required": ["changeType", "changeDescription"]
+            "required": [
+              "changeType",
+              "changeDescription"
+            ]
           },
           "description": "Specific changes to channel configuration (Channel domain)"
         },
@@ -1162,7 +1342,14 @@
           "description": "Distribution network optimization (Channel domain)"
         }
       },
-      "required": ["responseID", "responseTitle", "responseType", "responseDescription", "affectedDomains", "status"]
+      "required": [
+        "responseID",
+        "responseTitle",
+        "responseType",
+        "responseDescription",
+        "affectedDomains",
+        "status"
+      ]
     },
     "strategicIntent": {
       "type": "object",
@@ -1186,8 +1373,14 @@
         "opportunityType": {
           "type": "string",
           "enum": [
-            "Innovation", "Growth", "Efficiency", "Resilience", 
-            "Compliance", "Differentiation", "Sustainability", "Transformation"
+            "Innovation",
+            "Growth",
+            "Efficiency",
+            "Resilience",
+            "Compliance",
+            "Differentiation",
+            "Sustainability",
+            "Transformation"
           ],
           "description": "Classification of opportunity type"
         },
@@ -1198,21 +1391,31 @@
         "maturityLevel": {
           "type": "string",
           "enum": [
-            "Conceptual", "Emerging", "Established", "Scaling", "Optimizing"
+            "Conceptual",
+            "Emerging",
+            "Established",
+            "Scaling",
+            "Optimizing"
           ],
           "description": "Assessment of organizational readiness"
         },
         "potentialValue": {
           "type": "string",
           "enum": [
-            "Low", "Medium", "High", "Transformative"
+            "Low",
+            "Medium",
+            "High",
+            "Transformative"
           ],
           "description": "Estimated business value or impact"
         },
         "uncertaintyLevel": {
           "type": "string",
           "enum": [
-            "Low", "Medium", "High", "Experimental"
+            "Low",
+            "Medium",
+            "High",
+            "Experimental"
           ],
           "description": "Assessment of associated risks and unknowns"
         },
@@ -1252,11 +1455,20 @@
           "description": "Metrics or KPIs that will be used to measure the success of the strategic intent"
         },
         "status": {
-          "type": "string",
-          "enum": [
-            "Proposed", "Active", "Completed", "Abandoned", "Transformed", "Superseded"
-          ],
-          "description": "The current status of the strategic intent"
+          "description": "The current status of the strategic intent",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/workStatus"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "transformed",
+                "superseded"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "lastUpdated": {
           "type": "string",
@@ -1264,7 +1476,13 @@
           "description": "The date when the strategic intent record was last updated"
         }
       },
-      "required": ["intentID", "title", "description", "strategicObjectiveReference", "opportunityType"]
+      "required": [
+        "intentID",
+        "title",
+        "description",
+        "strategicObjectiveReference",
+        "opportunityType"
+      ]
     }
   },
   "oneOf": [

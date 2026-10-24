@@ -10,7 +10,7 @@
   "dataQuality": "High Quality",
   "format": "Immutable document storage with cryptographic signatures and timestamps",
   "volume": "100TB of financial records and audit documentation spanning 15 years",
-  "updateFrequency": "Monthly",
+  "updateFrequency": "monthly",
   "retention": "Permanent retention with 7-year active access requirement",
   "sources": "Financial systems, audit processes, regulatory filings, legal documentation",
   "consumers": "Auditors, compliance team, legal department, regulatory agencies",

@@ -37,19 +37,14 @@
       "description": "The desired level of coverage for the specified domain."
     },
     "lifecycleStage": {
-      "type": [
-        "string",
-        "null"
-      ],
       "description": "Optional lifecycle stage this expectation applies to. Used to tailor expectations based on the maturity or development phase of the domain element.",
-      "enum": [
-        "Ideation",
-        "Design",
-        "Development",
-        "Operational",
-        "Optimisation",
-        "Retirement",
-        null
+      "anyOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/lifecycleStage"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "justification": {

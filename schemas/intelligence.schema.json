@@ -54,17 +54,11 @@
       ]
     },
     "frequency": {
-      "type": "string",
       "description": "Frequency of intelligence reporting or updates.",
-      "enum": [
-        "Continuous",
-        "Daily",
-        "Weekly",
-        "Monthly",
-        "Quarterly",
-        "Annually",
-        "Event-driven",
-        "Ad-hoc"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/frequency"
+        }
       ]
     },
     "legalAndEthicalConsiderations": {
@@ -116,7 +110,10 @@
       }
     }
   },
-  "required": ["title", "intelligenceType"],
+  "required": [
+    "title",
+    "intelligenceType"
+  ],
   "$defs": {
     "intelligenceSource": {
       "type": "object",
@@ -141,7 +138,12 @@
         },
         "reliabilityRating": {
           "type": "string",
-          "enum": ["High", "Medium", "Low", "Unverified"]
+          "enum": [
+            "High",
+            "Medium",
+            "Low",
+            "Unverified"
+          ]
         },
         "collectionMethod": {
           "type": "string",
@@ -159,11 +161,13 @@
           "type": "string"
         },
         "complianceStatus": {
-          "type": "string",
-          "enum": ["Compliant", "Not applicable", "Non-compliant", "Under review"]
+          "$ref": "common.schema.json#/definitions/complianceStatus"
         }
       },
-      "required": ["sourceName", "sourceType"]
+      "required": [
+        "sourceName",
+        "sourceType"
+      ]
     },
     "intelligenceApplication": {
       "type": "object",
@@ -198,7 +202,9 @@
           }
         }
       },
-      "required": ["applicationArea"]
+      "required": [
+        "applicationArea"
+      ]
     }
   }
 }

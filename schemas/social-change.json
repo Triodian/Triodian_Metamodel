@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://raw.githubusercontent.com/Triodian/Triodian_Metamodel/main/schemas/social-change.json",
+  "$id": "https://triodian.com/schemas/social-change.json",
   "title": "Social Change",
   "description": "Schema for modeling campaigns, movements, and interventions aimed at addressing systemic injustice, inequality, and exclusion, including revolutionary transformations and organizational change initiatives",
   "type": "object",
@@ -86,7 +86,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["name", "type"],
+        "required": [
+          "name",
+          "type"
+        ],
         "properties": {
           "name": {
             "type": "string",
@@ -110,7 +113,13 @@
           },
           "influenceLevel": {
             "type": "string",
-            "enum": ["Low", "Low-Medium", "Medium", "Medium-High", "High"],
+            "enum": [
+              "Low",
+              "Low-Medium",
+              "Medium",
+              "Medium-High",
+              "High"
+            ],
             "description": "Level of influence the stakeholder has"
           },
           "engagementStrategy": {
@@ -139,7 +148,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["tacticType", "description"],
+        "required": [
+          "tacticType",
+          "description"
+        ],
         "properties": {
           "tacticType": {
             "type": "string",
@@ -187,7 +199,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["capabilityId", "name"],
+        "required": [
+          "capabilityId",
+          "name"
+        ],
         "properties": {
           "capabilityId": {
             "type": "string",
@@ -199,7 +214,11 @@
           },
           "levelOfUse": {
             "type": "string",
-            "enum": ["Low", "Medium", "High"],
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ],
             "description": "Level of capability utilization"
           }
         }
@@ -231,14 +250,19 @@
           "description": "Category of measurement"
         },
         "timeHorizon": {
-          "type": "string",
-          "enum": [
-            "Short-term (0-6 months)",
-            "Medium-term (6 months-2 years)",
-            "Long-term (2+ years)",
-            "Ongoing"
-          ],
-          "description": "Time frame for measurement"
+          "description": "Time frame for measurement",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/timeHorizon"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "ongoing"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         }
       },
       "description": "Method for evaluating effectiveness"
@@ -247,7 +271,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["riskType", "description"],
+        "required": [
+          "riskType",
+          "description"
+        ],
         "properties": {
           "riskType": {
             "type": "string",
@@ -268,7 +295,12 @@
           },
           "severityLevel": {
             "type": "string",
-            "enum": ["Low", "Medium", "High", "Critical"],
+            "enum": [
+              "Low",
+              "Medium",
+              "High",
+              "Critical"
+            ],
             "description": "Severity level of the risk"
           },
           "mitigationStrategy": {
@@ -283,7 +315,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["indicatorName", "measurementMethod"],
+        "required": [
+          "indicatorName",
+          "measurementMethod"
+        ],
         "properties": {
           "indicatorName": {
             "type": "string",
@@ -458,11 +493,19 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["leadershipType", "organizationType"],
+        "required": [
+          "leadershipType",
+          "organizationType"
+        ],
         "properties": {
           "leadershipType": {
             "type": "string",
-            "enum": ["Decentralized", "Hierarchical", "Coalition-based", "Emergent"],
+            "enum": [
+              "Decentralized",
+              "Hierarchical",
+              "Coalition-based",
+              "Emergent"
+            ],
             "description": "Structure of revolutionary leadership"
           },
           "organizationType": {
@@ -521,11 +564,20 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["supportType", "source"],
+        "required": [
+          "supportType",
+          "source"
+        ],
         "properties": {
           "supportType": {
             "type": "string",
-            "enum": ["Diplomatic", "Economic", "Military", "Humanitarian", "Media"],
+            "enum": [
+              "Diplomatic",
+              "Economic",
+              "Military",
+              "Humanitarian",
+              "Media"
+            ],
             "description": "Type of international support"
           },
           "source": {
@@ -533,9 +585,12 @@
             "description": "Source of the support"
           },
           "level": {
-            "type": "string",
-            "enum": ["Low", "Medium", "High"],
-            "description": "Level of support provided"
+            "description": "Level of support provided",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/simpleLevel"
+              }
+            ]
           }
         }
       },
@@ -549,7 +604,9 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["forceType"],
+        "required": [
+          "forceType"
+        ],
         "properties": {
           "forceType": {
             "type": "string",
@@ -565,7 +622,11 @@
           },
           "strength": {
             "type": "string",
-            "enum": ["Low", "Medium", "High"],
+            "enum": [
+              "Low",
+              "Medium",
+              "High"
+            ],
             "description": "Strength of the counter-revolutionary force"
           },
           "tactics": {
@@ -583,7 +644,10 @@
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["stageName", "stageDescription"],
+        "required": [
+          "stageName",
+          "stageDescription"
+        ],
         "properties": {
           "stageName": {
             "type": "string",
@@ -612,7 +676,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["tacticType", "description"],
+              "required": [
+                "tacticType",
+                "description"
+              ],
               "properties": {
                 "tacticType": {
                   "type": "string",
@@ -648,7 +715,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["indicatorName", "measurementMethod"],
+              "required": [
+                "indicatorName",
+                "measurementMethod"
+              ],
               "properties": {
                 "indicatorName": {
                   "type": "string",
@@ -670,7 +740,10 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": ["riskType", "description"],
+              "required": [
+                "riskType",
+                "description"
+              ],
               "properties": {
                 "riskType": {
                   "type": "string",
@@ -740,7 +813,11 @@
               },
               "impactType": {
                 "type": "string",
-                "enum": ["Disrupted", "Supported", "Transformed"],
+                "enum": [
+                  "Disrupted",
+                  "Supported",
+                  "Transformed"
+                ],
                 "description": "Type of impact on the value stream"
               }
             }
@@ -762,7 +839,12 @@
               },
               "relationshipType": {
                 "type": "string",
-                "enum": ["Target", "Ally", "Neutral", "Opposition"],
+                "enum": [
+                  "Target",
+                  "Ally",
+                  "Neutral",
+                  "Opposition"
+                ],
                 "description": "Relationship type with the stakeholder"
               }
             }
@@ -838,16 +920,19 @@
           "description": "Person or system that created the record"
         },
         "status": {
-          "type": "string",
-          "enum": [
-            "Planning",
-            "Active",
-            "Suspended",
-            "Completed",
-            "Failed",
-            "Ongoing"
-          ],
-          "description": "Current status of the social change action"
+          "description": "Current status of the social change action",
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/workStatus"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "failed"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "progressiveOrientation": {
           "type": "boolean",
@@ -860,7 +945,12 @@
         },
         "confidentialityLevel": {
           "type": "string",
-          "enum": ["Public", "Internal", "Confidential", "Restricted"],
+          "enum": [
+            "Public",
+            "Internal",
+            "Confidential",
+            "Restricted"
+          ],
           "description": "Level of confidentiality for this record"
         }
       },

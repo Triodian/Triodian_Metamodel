@@ -90,7 +90,9 @@
           "description": "Additional context about the innovation's origin"
         }
       },
-      "required": ["sources"]
+      "required": [
+        "sources"
+      ]
     },
     "innovationStage": {
       "type": "string",
@@ -116,9 +118,19 @@
       "description": "How innovation aligns with organization strategy",
       "properties": {
         "alignmentLevel": {
-          "type": "string",
           "description": "Degree of alignment with strategic objectives",
-          "enum": ["low", "moderate", "high", "critical"]
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/definitions/alignmentLevel"
+            },
+            {
+              "type": "string",
+              "enum": [
+                "critical"
+              ],
+              "description": "Domain-specific values in addition to the shared list"
+            }
+          ]
         },
         "alignedObjectives": {
           "type": "array",
@@ -135,18 +147,25 @@
                 "description": "How this innovation supports the objective"
               }
             },
-            "required": ["objectiveID"]
+            "required": [
+              "objectiveID"
+            ]
           }
         }
       },
-      "required": ["alignmentLevel"]
+      "required": [
+        "alignmentLevel"
+      ]
     },
     "investmentLevel": {
       "type": "object",
       "description": "Resources committed to the innovation",
       "properties": {
         "annualBudget": {
-          "type": ["string", "number"],
+          "type": [
+            "string",
+            "number"
+          ],
           "description": "Annual budget allocated to this innovation"
         },
         "resourceAllocation": {
@@ -158,14 +177,27 @@
               "resourceType": {
                 "type": "string",
                 "description": "Type of resource allocated",
-                "enum": ["personnel", "technology", "research", "marketing", "facilities", "other"]
+                "enum": [
+                  "personnel",
+                  "technology",
+                  "research",
+                  "marketing",
+                  "facilities",
+                  "other"
+                ]
               },
               "allocation": {
-                "type": ["string", "number"],
+                "type": [
+                  "string",
+                  "number"
+                ],
                 "description": "Amount or description of allocation"
               }
             },
-            "required": ["resourceType", "allocation"]
+            "required": [
+              "resourceType",
+              "allocation"
+            ]
           }
         },
         "fundingSources": {
@@ -183,7 +215,9 @@
                 "description": "Percentage of total funding from this source"
               }
             },
-            "required": ["source"]
+            "required": [
+              "source"
+            ]
           }
         }
       }
@@ -195,7 +229,13 @@
         "overallRiskLevel": {
           "type": "string",
           "description": "Overall risk assessment",
-          "enum": ["very-low", "low", "moderate", "high", "very-high"]
+          "enum": [
+            "very-low",
+            "low",
+            "moderate",
+            "high",
+            "very-high"
+          ]
         },
         "keyRiskFactors": {
           "type": "array",
@@ -216,7 +256,10 @@
                 "description": "Approach to mitigate this risk"
               }
             },
-            "required": ["factorName", "riskLevel"]
+            "required": [
+              "factorName",
+              "riskLevel"
+            ]
           }
         },
         "riskManagementApproach": {
@@ -224,7 +267,9 @@
           "description": "Overall approach to managing innovation risks"
         }
       },
-      "required": ["overallRiskLevel"]
+      "required": [
+        "overallRiskLevel"
+      ]
     },
     "expectedOutcomes": {
       "type": "array",
@@ -249,7 +294,10 @@
             "description": "Current value for the outcome"
           }
         },
-        "required": ["outcomeName", "outcomeMetric"]
+        "required": [
+          "outcomeName",
+          "outcomeMetric"
+        ]
       }
     },
     "timeHorizon": {
@@ -275,7 +323,9 @@
                 "description": "Target date for achieving the milestone"
               }
             },
-            "required": ["milestone"]
+            "required": [
+              "milestone"
+            ]
           }
         },
         "reviewCycles": {
@@ -311,7 +361,9 @@
             "description": "How often the metric is measured"
           }
         },
-        "required": ["metricName"]
+        "required": [
+          "metricName"
+        ]
       }
     },
     "strategicHorizon": {
@@ -328,7 +380,11 @@
       "description": "Cross-domain relationships linking innovation domain entities to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",

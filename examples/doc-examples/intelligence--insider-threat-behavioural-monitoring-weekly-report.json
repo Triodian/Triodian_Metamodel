@@ -12,7 +12,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Sensor-based collection",
       "cost": "$35,000/year licensing fee",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "HR Access Control Logs",
@@ -20,7 +20,7 @@
       "reliabilityRating": "High",
       "collectionMethod": "Sensor-based collection",
       "cost": "Internal resource cost only",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     },
     {
       "sourceName": "Anonymous Whistleblower Hotline Reports",
@@ -28,11 +28,11 @@
       "reliabilityRating": "Variable",
       "collectionMethod": "Manual investigation",
       "cost": "Internal case management resource",
-      "complianceStatus": "Compliant"
+      "complianceStatus": "compliant"
     }
   ],
   "intelligenceType": "Insider threat monitoring",
-  "frequency": "Weekly",
+  "frequency": "weekly",
   "legalAndEthicalConsiderations": "Strict alignment to employee monitoring policies, privacy by design, and regulatory employment protections.",
   "confidentialityLevel": "Restricted",
   "performanceIndicators": [

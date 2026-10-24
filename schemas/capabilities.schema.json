@@ -8,7 +8,11 @@
     "title": {
       "type": "string",
       "description": "The name or title of the Capability",
-      "examples": ["Automated Track Inspection System", "Customer Data Analytics", "Digital Innovation Platform"]
+      "examples": [
+        "Automated Track Inspection System",
+        "Customer Data Analytics",
+        "Digital Innovation Platform"
+      ]
     },
     "description": {
       "type": "string",
@@ -78,7 +82,6 @@
       "type": "string",
       "description": "Deliverables or results produced"
     },
-
     "performanceIndicators": {
       "type": "string",
       "description": "Effectiveness and efficiency metrics"
@@ -92,14 +95,11 @@
       "description": "Capabilities that are related or linked"
     },
     "maturityLevel": {
-      "type": "string",
       "description": "Current maturity level of the Capability",
-      "enum": [
-        "Level 1 - Initial",
-        "Level 2 - Repeatable",
-        "Level 3 - Defined",
-        "Level 4 - Managed",
-        "Level 5 - Optimizing"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/maturityLevel"
+        }
       ]
     },
     "targetMaturityLevel": {
@@ -141,19 +141,7 @@
       "type": "array",
       "description": "Categories of risks",
       "items": {
-        "type": "string",
-        "enum": [
-          "Technical/Technology",
-          "Operational",
-          "Financial",
-          "Compliance/Regulatory",
-          "Strategic",
-          "Resource/Capacity",
-          "External/Environmental",
-          "Security/Cybersecurity",
-          "Reputational",
-          "Change Management"
-        ]
+        "$ref": "common.schema.json#/definitions/riskCategory"
       }
     },
     "improvementOpportunities": {
@@ -165,13 +153,11 @@
       "description": "Alignment with strategic goals and objectives"
     },
     "criticality": {
-      "type": "string",
       "description": "Business criticality level",
-      "enum": [
-        "Critical",
-        "High",
-        "Medium",
-        "Low"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/criticality"
+        }
       ]
     },
     "availability": {
@@ -225,7 +211,12 @@
       }
     }
   },
-  "required": ["title", "description", "purpose", "owner"],
+  "required": [
+    "title",
+    "description",
+    "purpose",
+    "owner"
+  ],
   "additionalProperties": false,
   "definitions": {
     "CapabilityFunction": {
@@ -279,21 +270,19 @@
           "description": "Metrics for measuring function effectiveness"
         },
         "frequency": {
-          "type": "string",
           "description": "How often the function is performed",
-          "enum": [
-            "Continuous",
-            "Real-time",
-            "Daily",
-            "Weekly",
-            "Monthly",
-            "Quarterly",
-            "Annually",
-            "On-Demand"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
           ]
         }
       },
-      "required": ["title", "description", "purpose"],
+      "required": [
+        "title",
+        "description",
+        "purpose"
+      ],
       "additionalProperties": false
     },
     "CapabilityComponent": {
@@ -348,15 +337,11 @@
           "description": "External vendor or supplier"
         },
         "lifecycle": {
-          "type": "string",
           "description": "Lifecycle stage of component",
-          "enum": [
-            "Planning",
-            "Development",
-            "Implementation",
-            "Operations",
-            "Enhancement",
-            "Retirement"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/lifecycleStage"
+            }
           ]
         },
         "cost": {
@@ -364,7 +349,11 @@
           "description": "Cost associated with the component"
         }
       },
-      "required": ["title", "description", "purpose"],
+      "required": [
+        "title",
+        "description",
+        "purpose"
+      ],
       "additionalProperties": false
     },
     "CapabilityProcess": {
@@ -444,41 +433,36 @@
           "description": "Typical time to complete the process"
         },
         "frequency": {
-          "type": "string",
           "description": "How often the process is executed",
-          "enum": [
-            "Continuous",
-            "Real-time",
-            "Daily",
-            "Weekly",
-            "Monthly",
-            "Quarterly",
-            "Annually",
-            "On-Demand"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
           ]
         },
         "automation": {
-          "type": "string",
           "description": "Level of automation in the process",
-          "enum": [
-            "Manual",
-            "Semi-Automated",
-            "Fully Automated",
-            "AI-Enabled"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/automationLevel"
+            }
           ]
         },
         "complexity": {
-          "type": "string",
           "description": "Process complexity level",
-          "enum": [
-            "Simple",
-            "Moderate",
-            "Complex",
-            "Highly Complex"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/complexity"
+            }
           ]
         }
       },
-      "required": ["title", "description", "purpose", "owner"],
+      "required": [
+        "title",
+        "description",
+        "purpose",
+        "owner"
+      ],
       "additionalProperties": false
     }
   },
@@ -494,13 +478,16 @@
       "businessDomain": "Operations",
       "inputs": "Track geometry data, rail wear measurements, historical defect data",
       "outputs": "Daily inspection reports, defect predictions, maintenance recommendations",
-      "maturityLevel": "Level 4 - Managed",
+      "maturityLevel": "managed",
       "targetMaturityLevel": "Level 5 - Optimizing",
       "toolsAndTechnologies": "LIDAR sensors, machine learning models, track geometry cars, cloud analytics",
       "cost": "Annual operating cost: $12.8M, Initial investment: $45M",
       "investmentCategory": "Mixed",
-      "riskCategories": ["Technical/Technology", "Operational"],
-      "criticality": "Critical",
+      "riskCategories": [
+        "technology",
+        "operational"
+      ],
+      "criticality": "critical",
       "availability": "24/7",
       "scalability": "Highly Scalable",
       "parent": "Track Safety Assurance System",
@@ -516,7 +503,7 @@
           "inputs": "Raw sensor data, track class information",
           "outputs": "Geometry exception reports, maintenance alerts",
           "processes": "Data collection, analysis, reporting, validation",
-          "frequency": "Continuous"
+          "frequency": "continuous"
         }
       ],
       "capabilityComponents": [
@@ -530,7 +517,7 @@
           "technologies": "Laser profilers, ultrasonic sensors, analysis software",
           "processes": "Data collection, wear analysis, reporting",
           "skills": "Rail inspection certification, data analysis expertise",
-          "lifecycle": "Operations"
+          "lifecycle": "operational"
         }
       ],
       "capabilityProcesses": [
@@ -550,9 +537,9 @@
           "complianceRequirements": "49 CFR Part 213 - Track Safety Standards",
           "toolsRequired": "Track geometry car, Gauge measurement devices, Digital inspection tablets",
           "duration": "4-6 hours per track segment",
-          "frequency": "Daily",
-          "automation": "Semi-Automated",
-          "complexity": "Complex"
+          "frequency": "daily",
+          "automation": "semiAutomated",
+          "complexity": "complex"
         }
       ]
     },
@@ -565,10 +552,10 @@
       "capabilityCategory": "Strategic",
       "capabilityType": "Innovation",
       "businessDomain": "Strategy & Planning",
-      "maturityLevel": "Level 3 - Defined",
+      "maturityLevel": "defined",
       "targetMaturityLevel": "Level 4 - Managed",
       "investmentCategory": "CAPEX",
-      "criticality": "High",
+      "criticality": "high",
       "scalability": "Moderately Scalable"
     },
     {
@@ -579,9 +566,9 @@
       "capabilityCategory": "Enabling",
       "capabilityType": "Analytical",
       "businessDomain": "Technology",
-      "maturityLevel": "Level 4 - Managed",
+      "maturityLevel": "managed",
       "investmentCategory": "Technology",
-      "criticality": "High",
+      "criticality": "high",
       "availability": "Business Hours",
       "scalability": "Highly Scalable"
     }

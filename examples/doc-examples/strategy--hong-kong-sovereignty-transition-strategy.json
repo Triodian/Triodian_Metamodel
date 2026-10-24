@@ -7,7 +7,7 @@
   "strategyCategory": "Diplomatic",
   "strategyType": "Transition",
   "strategicFocus": "Power Transfer",
-  "timeHorizon": "Long-term (4-5 years)",
+  "timeHorizon": "longTerm",
   "scopeLevel": "Bilateral",
   "objectives": "Complete sovereignty transfer by 1997, preserve One Country Two Systems, maintain British influence",
   "keyActivities": "Treaty negotiation, legal framework development, transition planning, stakeholder management",
@@ -15,8 +15,8 @@
   "keyPerformanceIndicators": "Peaceful transition, economic stability, international recognition",
   "investmentLevel": "Medium Investment",
   "riskCategories": [
-    "Diplomatic",
-    "Economic",
-    "Political"
+    "diplomatic",
+    "economic",
+    "political"
   ]
 }

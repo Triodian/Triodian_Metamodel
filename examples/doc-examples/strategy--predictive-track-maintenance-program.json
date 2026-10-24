@@ -7,7 +7,7 @@
   "strategyCategory": "Corporate",
   "strategyType": "Disruption",
   "strategicFocus": "Innovation Leadership",
-  "timeHorizon": "Long-term (4-5 years)",
+  "timeHorizon": "longTerm",
   "scopeLevel": "Organization",
   "objectives": "Deploy sensors on 85% of mainline track by 2026, achieve 92% prediction accuracy",
   "keyActivities": "Sensor installation, data integration, AI model development, staff training",
@@ -18,9 +18,9 @@
   "relatedStrategies": "Digital Track Inspection, Rail Stress Monitoring",
   "risks": "Sensor reliability in extreme weather, data quality issues",
   "riskCategories": [
-    "Technical/Technology",
-    "Operational",
-    "Financial"
+    "technology",
+    "operational",
+    "financial"
   ],
   "mitigationStrategies": "Redundant sensor deployment, enhanced data validation",
   "strategicAlignment": "Directly supports 25% accident reduction goal",

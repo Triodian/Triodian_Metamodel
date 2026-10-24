@@ -157,7 +157,7 @@
     "maturityByType": [
       {
         "channelType": "Owned Retail",
-        "maturityLevel": "optimized"
+        "maturityLevel": "optimizing"
       },
       {
         "channelType": "Partner Locations",

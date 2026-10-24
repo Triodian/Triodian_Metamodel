@@ -148,7 +148,8 @@ def check_refs(docs, registry, uris) -> None:
 
 def validate_instance(schema_doc: dict, uri: str, pointer: str, instance, registry) -> list[str]:
     cls = VALIDATORS[schema_doc["$schema"]]
-    schema = {"$ref": uri + pointer} if pointer else schema_doc
+    # Always validate through the registered URI so relative $refs (e.g. common.schema.json) resolve.
+    schema = {"$ref": uri + pointer}
     validator = cls(schema, registry=registry)
     errs = sorted(validator.iter_errors(instance), key=lambda e: list(e.absolute_path))
     return [f"/{'/'.join(map(str, e.absolute_path))}: {e.message[:200]}" for e in errs]

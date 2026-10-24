@@ -347,28 +347,19 @@
         "type": "object",
         "properties": {
           "dependencyType": {
-            "type": "string",
             "description": "Type of dependency",
-            "enum": [
-              "Critical",
-              "Important",
-              "Supportive",
-              "Informational"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/dependencyStrength"
+              }
             ]
           },
           "domainType": {
-            "type": "string",
             "description": "Type of domain this depends on",
-            "enum": [
-              "Strategy",
-              "Capability",
-              "Value Stream",
-              "Organization",
-              "Service",
-              "Information",
-              "Performance",
-              "Technology",
-              "Product"
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/domainType"
+              }
             ]
           },
           "entityID": {
@@ -594,13 +585,11 @@
                   "description": "Name of the risk"
                 },
                 "riskLevel": {
-                  "type": "string",
                   "description": "Severity of the risk",
-                  "enum": [
-                    "low",
-                    "moderate",
-                    "high",
-                    "critical"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/riskLevel"
+                    }
                   ]
                 },
                 "mitigation": {
@@ -669,14 +658,11 @@
             "description": "Present condition of this attribute",
             "properties": {
               "maturityLevel": {
-                "type": "string",
                 "description": "Current maturity of the attribute",
-                "enum": [
-                  "initial",
-                  "developing",
-                  "defined",
-                  "managed",
-                  "optimizing"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/maturityLevel"
+                  }
                 ]
               },
               "consistencyLevel": {
@@ -690,14 +676,11 @@
             "description": "Target condition for this attribute",
             "properties": {
               "maturityLevel": {
-                "type": "string",
                 "description": "Desired maturity of the attribute",
-                "enum": [
-                  "initial",
-                  "developing",
-                  "defined",
-                  "managed",
-                  "optimizing"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/maturityLevel"
+                  }
                 ]
               },
               "consistencyLevel": {
@@ -711,13 +694,11 @@
             "description": "Strategic significance",
             "properties": {
               "importanceLevel": {
-                "type": "string",
                 "description": "Level of importance to the organization",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high",
-                  "critical"
+                "allOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/importance"
+                  }
                 ]
               },
               "businessImpact": {
@@ -805,13 +786,11 @@
                   "description": "Name of the obstacle"
                 },
                 "impactLevel": {
-                  "type": "string",
                   "description": "How much this blocks progress",
-                  "enum": [
-                    "minor",
-                    "moderate",
-                    "significant",
-                    "severe"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/impactMagnitude"
+                    }
                   ]
                 },
                 "mitigationApproach": {
@@ -1005,13 +984,18 @@
             "description": "Strategic alignment",
             "properties": {
               "alignmentLevel": {
-                "type": "string",
                 "description": "Degree of alignment with strategy",
-                "enum": [
-                  "low",
-                  "moderate",
-                  "high",
-                  "perfect"
+                "anyOf": [
+                  {
+                    "$ref": "common.schema.json#/definitions/alignmentLevel"
+                  },
+                  {
+                    "type": "string",
+                    "enum": [
+                      "perfect"
+                    ],
+                    "description": "Domain-specific values in addition to the shared list"
+                  }
                 ]
               },
               "strategicObjectives": {
@@ -1224,13 +1208,11 @@
                   "description": "Name of the risk"
                 },
                 "riskLevel": {
-                  "type": "string",
                   "description": "Severity of the risk",
-                  "enum": [
-                    "low",
-                    "moderate",
-                    "high",
-                    "critical"
+                  "allOf": [
+                    {
+                      "$ref": "common.schema.json#/definitions/riskLevel"
+                    }
                   ]
                 },
                 "mitigation": {
@@ -1262,7 +1244,11 @@
       "description": "Cross-domain relationships linking market domain to other domains based on defined relationship types",
       "items": {
         "type": "object",
-        "required": ["domain", "relationshipType", "description"],
+        "required": [
+          "domain",
+          "relationshipType",
+          "description"
+        ],
         "properties": {
           "domain": {
             "type": "string",

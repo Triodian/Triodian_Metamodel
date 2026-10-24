@@ -10,7 +10,7 @@
   "dataQuality": "Good Quality",
   "format": "Mixed format repository: documents, spreadsheets, databases, web content",
   "volume": "500GB of documents, reports, and datasets updated weekly",
-  "updateFrequency": "Weekly",
+  "updateFrequency": "weekly",
   "retention": "Current intelligence for 3 years, archived for historical reference",
   "sources": "Market research firms, industry reports, competitive analysis, internal research",
   "consumers": "Executive team, product managers, strategic planning team, business development",

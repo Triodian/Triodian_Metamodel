@@ -7,30 +7,30 @@
   "influenceLevel": "Low Influence",
   "interestLevel": "High Interest",
   "engagementStrategies": "Community meetings, public consultations, safety briefings",
-  "engagementFrequency": "Quarterly",
+  "engagementFrequency": "quarterly",
   "communicationChannels": [
     "In-Person Meeting",
     "Newsletter",
     "Website"
   ],
   "expectations": "Minimal noise disruption, advance notice of maintenance activities",
-  "geographicScope": "Local",
+  "geographicScope": "local",
   "industry": "Non-Profit",
   "organizationType": "Community Group",
   "riskCategories": [
-    "Reputational",
-    "Operational"
+    "reputational",
+    "operational"
   ],
   "stakeholderRequirements": [
     {
       "title": "Noise Level Compliance",
       "description": "Maintain railway noise levels within city ordinance limits",
       "purpose": "Ensure community quality of life standards",
-      "priority": "Medium",
+      "priority": "medium",
       "requirementType": "Compliance",
       "acceptanceCriteria": "Noise levels below 65dB during nighttime hours",
       "complianceFramework": "Government Regulation",
-      "riskLevel": "Medium Risk"
+      "riskLevel": "medium"
     }
   ]
 }

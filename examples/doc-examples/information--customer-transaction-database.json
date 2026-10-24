@@ -10,7 +10,7 @@
   "dataQuality": "High Quality",
   "format": "PostgreSQL relational database with JSON fields for flexible attributes",
   "volume": "2.5TB database with 50M transaction records, growing by 100K records daily",
-  "updateFrequency": "Real-time",
+  "updateFrequency": "realTime",
   "retention": "Active transactions for 7 years, archived for additional 10 years",
   "sources": "POS systems, e-commerce platform, mobile app, customer service systems",
   "consumers": "Analytics platform, fraud detection system, customer service tools, executive dashboards",

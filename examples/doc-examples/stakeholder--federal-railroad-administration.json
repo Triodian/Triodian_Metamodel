@@ -8,19 +8,19 @@
   "influenceLevel": "High Influence",
   "interestLevel": "High Interest",
   "engagementStrategies": "Regular compliance reporting, safety audits, policy consultations",
-  "engagementFrequency": "Monthly",
+  "engagementFrequency": "monthly",
   "communicationChannels": [
     "Email",
     "In-Person Meeting",
     "Reports"
   ],
   "expectations": "Full compliance with safety regulations, timely incident reporting",
-  "geographicScope": "National",
+  "geographicScope": "national",
   "industry": "Government",
   "organizationType": "Government Agency",
   "riskCategories": [
-    "Compliance/Regulatory",
-    "Reputational"
+    "compliance",
+    "reputational"
   ],
   "strategicAlignment": "Critical for maintaining operating licenses and safety compliance"
 }

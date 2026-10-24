@@ -26,10 +26,7 @@ jobs:
           python scripts/vocabulary_map.py
           git diff --exit-code docs/ || (echo "Run python scripts/vocabulary_map.py and commit the result" && exit 1)
 
-      # Lists fields that still keep a local list for a shared concept.
-      # Non-blocking until every domain has migrated; remove continue-on-error then.
-      - name: Shared vocabulary adoption (report only)
-        continue-on-error: true
+      - name: Shared concepts use the shared vocabulary (blocking)
         run: python scripts/vocabulary_map.py --check
 
       # Reports drift between the documentation's worked examples and the schemas.

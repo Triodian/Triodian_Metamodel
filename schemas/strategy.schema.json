@@ -8,7 +8,11 @@
     "title": {
       "type": "string",
       "description": "Name/title of strategy",
-      "examples": ["Predictive Track Maintenance Program", "Digital Transformation Strategy", "Customer Excellence Initiative"]
+      "examples": [
+        "Predictive Track Maintenance Program",
+        "Digital Transformation Strategy",
+        "Customer Excellence Initiative"
+      ]
     },
     "description": {
       "type": "string",
@@ -106,13 +110,11 @@
       ]
     },
     "timeHorizon": {
-      "type": "string",
       "description": "Strategy time frame",
-      "enum": [
-        "Short-term (1 year)",
-        "Medium-term (2-3 years)",
-        "Long-term (4-5 years)",
-        "Extended (5+ years)"
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/timeHorizon"
+        }
       ]
     },
     "scopeLevel": {
@@ -169,21 +171,17 @@
       "type": "array",
       "description": "Categories of risks",
       "items": {
-        "type": "string",
-        "enum": [
-          "Strategic",
-          "Operational",
-          "Financial",
-          "Technical/Technology",
-          "Market",
-          "Regulatory",
-          "Organizational",
-          "External/Environmental",
-          "Reputational",
-          "Cybersecurity",
-          "Political",
-          "Diplomatic",
-          "Economic"
+        "anyOf": [
+          {
+            "$ref": "common.schema.json#/definitions/riskCategory"
+          },
+          {
+            "type": "string",
+            "enum": [
+              "diplomatic"
+            ],
+            "description": "Domain-specific values in addition to the shared list"
+          }
         ]
       }
     },
@@ -318,7 +316,12 @@
       "description": "Whether the strategy is designed with a deep understanding of organizational and external cultural nuances."
     }
   },
-  "required": ["title", "description", "purpose", "owner"],
+  "required": [
+    "title",
+    "description",
+    "purpose",
+    "owner"
+  ],
   "additionalProperties": false,
   "definitions": {
     "StrategyObjective": {
@@ -372,13 +375,11 @@
           ]
         },
         "priority": {
-          "type": "string",
           "description": "Priority level",
-          "enum": [
-            "Critical",
-            "High",
-            "Medium",
-            "Low"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/priority"
+            }
           ]
         },
         "metrics": {
@@ -426,15 +427,11 @@
           "description": "Criteria for success measurement"
         },
         "reportingFrequency": {
-          "type": "string",
           "description": "How often progress is reported",
-          "enum": [
-            "Daily",
-            "Weekly",
-            "Monthly",
-            "Quarterly",
-            "Annually",
-            "Ad-hoc"
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/frequency"
+            }
           ]
         },
         "parentStrategy": {
@@ -442,7 +439,12 @@
           "description": "Parent strategy this objective supports"
         }
       },
-      "required": ["title", "description", "purpose", "owner"],
+      "required": [
+        "title",
+        "description",
+        "purpose",
+        "owner"
+      ],
       "additionalProperties": false
     }
   },
@@ -456,7 +458,7 @@
       "strategyCategory": "Military",
       "strategyType": "Defensive",
       "strategicFocus": "Territory Control",
-      "timeHorizon": "Long-term (4-5 years)",
+      "timeHorizon": "longTerm",
       "scopeLevel": "Regional",
       "objectives": "Establish 500km defensive line, deploy 50,000 troops, achieve 95% early warning coverage",
       "keyActivities": "Fortification construction, troop deployment, sensor network installation, training exercises",
@@ -466,7 +468,11 @@
       "dependencies": "Allied support, intelligence sharing, logistics infrastructure",
       "relatedStrategies": "Northern Defense Strategy, Cyber Defense Initiative",
       "risks": "Budget constraints, equipment delays, intelligence failures",
-      "riskCategories": ["Strategic", "Operational", "Technical/Technology"],
+      "riskCategories": [
+        "strategic",
+        "operational",
+        "technology"
+      ],
       "mitigationStrategies": "Redundant systems, phased deployment, international cooperation",
       "strategicAlignment": "National defense and territorial sovereignty",
       "investmentLevel": "High Investment",
@@ -482,12 +488,16 @@
       "strategyCategory": "Political",
       "strategyType": "Accumulation",
       "strategicFocus": "Power Accumulation",
-      "timeHorizon": "Medium-term (2-3 years)",
+      "timeHorizon": "mediumTerm",
       "scopeLevel": "Regional",
       "objectives": "Control 75% of district councils, secure 60% of popular vote, place allies in key positions",
       "keyActivities": "Coalition building, candidate recruitment, media campaigns, grassroots organizing",
       "investmentLevel": "Medium Investment",
-      "riskCategories": ["Political", "Reputational", "Organizational"]
+      "riskCategories": [
+        "political",
+        "reputational",
+        "people"
+      ]
     },
     {
       "title": "Trade Route Disruption Initiative",
@@ -497,10 +507,14 @@
       "strategyCategory": "Economic",
       "strategyType": "Containment",
       "strategicFocus": "Resource Dominance",
-      "timeHorizon": "Medium-term (2-3 years)",
+      "timeHorizon": "mediumTerm",
       "scopeLevel": "Continental",
       "investmentLevel": "High Investment",
-      "riskCategories": ["Economic", "Diplomatic", "Strategic"]
+      "riskCategories": [
+        "economic",
+        "diplomatic",
+        "strategic"
+      ]
     }
   ]
 }

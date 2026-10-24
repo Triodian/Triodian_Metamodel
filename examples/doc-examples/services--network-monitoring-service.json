@@ -18,8 +18,8 @@
     "Internal Employees"
   ],
   "businessModel": "Support Model",
-  "automationLevel": "Highly Automated",
-  "lifecycle": "Operations",
+  "automationLevel": "highlyAutomated",
+  "lifecycle": "operational",
   "availability": "24/7/365 monitoring and response",
   "valueProposition": "Prevent 95% of potential incidents through early detection and proactive maintenance",
   "performanceIndicators": "Mean time to detection, system availability, incident prevention rate, false positive rate",
@@ -29,16 +29,16 @@
       "description": "AI-powered system that automatically detects anomalies and sends alerts to appropriate personnel",
       "purpose": "Detect network anomalies early and get them to the right people quickly",
       "featureType": "Core Feature",
-      "priority": "Critical",
-      "complexity": "Complex"
+      "priority": "critical",
+      "complexity": "complex"
     },
     {
       "title": "Predictive Maintenance Dashboard",
       "description": "Visual dashboard showing predicted maintenance needs based on sensor data analysis",
       "purpose": "Plan maintenance before failures occur",
       "featureType": "Enhancement",
-      "priority": "High",
-      "complexity": "Moderate"
+      "priority": "high",
+      "complexity": "moderate"
     }
   ]
 }
