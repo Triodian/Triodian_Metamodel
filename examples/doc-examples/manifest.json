@@ -38,20 +38,20 @@
       "docLine": 3644
     },
     {
-      "instance": "capabilities--automated-track-inspection-system.json",
-      "schema": "capabilities.schema.json",
+      "instance": "capability--automated-track-inspection-system.json",
+      "schema": "capability.schema.json",
       "pointer": "",
       "docLine": 5332
     },
     {
-      "instance": "capabilities--digital-innovation-platform.json",
-      "schema": "capabilities.schema.json",
+      "instance": "capability--digital-innovation-platform.json",
+      "schema": "capability.schema.json",
       "pointer": "",
       "docLine": 5384
     },
     {
-      "instance": "capabilities--enterprise-data-analytics-platform.json",
-      "schema": "capabilities.schema.json",
+      "instance": "capability--enterprise-data-analytics-platform.json",
+      "schema": "capability.schema.json",
       "pointer": "",
       "docLine": 5417
     },
@@ -86,56 +86,56 @@
       "docLine": 7263
     },
     {
-      "instance": "products--track-quality-index-report.json",
-      "schema": "products.schema.json",
+      "instance": "product--track-quality-index-report.json",
+      "schema": "product.schema.json",
       "pointer": "",
       "docLine": 9251
     },
     {
-      "instance": "products--railsafe-inspector-mobile-app.json",
-      "schema": "products.schema.json",
+      "instance": "product--railsafe-inspector-mobile-app.json",
+      "schema": "product.schema.json",
       "pointer": "",
       "docLine": 9299
     },
     {
-      "instance": "products--rail-data-integration-platform.json",
-      "schema": "products.schema.json",
+      "instance": "product--rail-data-integration-platform.json",
+      "schema": "product.schema.json",
       "pointer": "",
       "docLine": 9333
     },
     {
-      "instance": "products--smarttrack-geometry-sensor.json",
-      "schema": "products.schema.json",
+      "instance": "product--smarttrack-geometry-sensor.json",
+      "schema": "product.schema.json",
       "pointer": "",
       "docLine": 9369
     },
     {
-      "instance": "services--rail-freight-transport-service.json",
-      "schema": "services.schema.json",
+      "instance": "service--rail-freight-transport-service.json",
+      "schema": "service.schema.json",
       "pointer": "",
       "docLine": 11599
     },
     {
-      "instance": "services--customer-support-portal.json",
-      "schema": "services.schema.json",
+      "instance": "service--customer-support-portal.json",
+      "schema": "service.schema.json",
       "pointer": "",
       "docLine": 11685
     },
     {
-      "instance": "services--infrastructure-consulting-service.json",
-      "schema": "services.schema.json",
+      "instance": "service--infrastructure-consulting-service.json",
+      "schema": "service.schema.json",
       "pointer": "",
       "docLine": 11767
     },
     {
-      "instance": "services--rail-network-data-api.json",
-      "schema": "services.schema.json",
+      "instance": "service--rail-network-data-api.json",
+      "schema": "service.schema.json",
       "pointer": "",
       "docLine": 11850
     },
     {
-      "instance": "services--network-monitoring-service.json",
-      "schema": "services.schema.json",
+      "instance": "service--network-monitoring-service.json",
+      "schema": "service.schema.json",
       "pointer": "",
       "docLine": 11934
     },
@@ -440,14 +440,14 @@
       "docLine": 38617
     },
     {
-      "instance": "inter-unit-domain-relationships--example-1.json",
-      "schema": "inter-unit-domain-relationships.schema.json",
+      "instance": "inter-unit-domain-relationship--example-1.json",
+      "schema": "inter-unit-domain-relationship.schema.json",
       "pointer": "",
       "docLine": 39507
     },
     {
-      "instance": "inter-unit-domain-relationships--example-2.json",
-      "schema": "inter-unit-domain-relationships.schema.json",
+      "instance": "inter-unit-domain-relationship--example-2.json",
+      "schema": "inter-unit-domain-relationship.schema.json",
       "pointer": "",
       "docLine": 39507
     },

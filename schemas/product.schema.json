@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/products.schema.json",
+  "$id": "https://triodian.com/schemas/product.schema.json",
   "title": "Products Domain Schema",
   "description": "Tangible and intangible offerings an organization creates to address customer needs and deliver value.",
   "type": "object",

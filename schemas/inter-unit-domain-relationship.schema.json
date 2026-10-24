@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://triodian.com/schemas/inter-unit-domain-relationships.schema.json",
+  "$id": "https://triodian.com/schemas/inter-unit-domain-relationship.schema.json",
   "title": "Inter-Unit Domain Relationship Schema",
   "description": "How an organization unit relates to a domain entity: owning, providing, consuming, governing and other roles. Inter-unit relationships connect organization units within one domain; for links between domains, see cross-domain-relationship.schema.json.",
   "type": "object",

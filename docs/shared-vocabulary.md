@@ -25,8 +25,8 @@ These fields accept the shared list plus a few values specific to their domain.
 | `people.schema.json` /definitions/competencyFramework/properties/alignmentToStrategy/properties/alignmentLevel | `alignmentLevel` | `perfect` |
 | `performance-indicator.schema.json` /properties/strategicAlignments/items/properties/alignmentType | `domainType` | `strategicObjective` |
 | `performance.schema.json` /properties/riskCategories | `riskCategory` | `interpretation` |
-| `products.schema.json` /properties/lifecycleStage | `lifecycleStage` | `concept`, `growth`, `maturity`, `decline`, `maintenance` |
-| `products.schema.json` /properties/riskCategories | `riskCategory` | `quality` |
+| `product.schema.json` /properties/lifecycleStage | `lifecycleStage` | `concept`, `growth`, `maturity`, `decline`, `maintenance` |
+| `product.schema.json` /properties/riskCategories | `riskCategory` | `quality` |
 | `rationale.schema.json` /properties/riskImpactAssessment/properties/impactType | `riskCategory` | `cyber`, `healthSafety` |
 | `rationale.schema.json` /properties/riskImpactAssessment/properties/impactSeverity | `impactMagnitude` | `critical` |
 | `rationale.schema.json` /properties/supplyChainImpactAssessment/properties/impactSeverity | `impactMagnitude` | `critical` |
@@ -84,7 +84,7 @@ Values: `low`, `medium`, `high`, `critical`
 
 Uses the `ratingLevel` scale.
 
-Used by 11 field(s) in: `cross-domain-relationship.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `products.schema.json`, `risk-management.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
+Used by 11 field(s) in: `cross-domain-relationship.schema.json`, `extensions/business-analysis.schema.json`, `finance.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `product.schema.json`, `risk-management.schema.json`, `service.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
 
 ### `criticality`
 
@@ -94,7 +94,7 @@ Values: `low`, `medium`, `high`, `critical`
 
 Uses the `ratingLevel` scale.
 
-Used by 5 field(s) in: `capabilities.schema.json`, `people.schema.json`, `supply-chain.schema.json`
+Used by 5 field(s) in: `capability.schema.json`, `people.schema.json`, `supply-chain.schema.json`
 
 ### `importance`
 
@@ -198,13 +198,13 @@ Implementation or operational complexity.
 
 Values: `simple`, `moderate`, `complex`, `highlyComplex`
 
-Used by 4 field(s) in: `capabilities.schema.json`, `performance.schema.json`, `products.schema.json`, `services.schema.json`
+Used by 4 field(s) in: `capability.schema.json`, `performance.schema.json`, `product.schema.json`, `service.schema.json`
 
 ### `scale1to5`
 
 Numeric strength or score from 1 (lowest) to 5 (highest).
 
-Used by 15 field(s) in: `cross-domain-relationship.schema.json`, `customer.schema.json`, `finance.schema.json`, `innovation.schema.json`, `inter-unit-domain-relationships.schema.json`, `market.schema.json`
+Used by 15 field(s) in: `cross-domain-relationship.schema.json`, `customer.schema.json`, `finance.schema.json`, `innovation.schema.json`, `inter-unit-domain-relationship.schema.json`, `market.schema.json`
 
 ### `frequency`
 
@@ -212,7 +212,7 @@ How often something happens: measurement, reporting, review, monitoring, engagem
 
 Values: `continuous`, `realTime`, `hourly`, `daily`, `weekly`, `monthly`, `quarterly`, `semiAnnually`, `annually`, `eventDriven`, `onDemand`, `adHoc`
 
-Used by 17 field(s) in: `capabilities.schema.json`, `cross-domain-relationship.schema.json`, `finance.schema.json`, `information.schema.json`, `intelligence.schema.json`, `market.schema.json`, `model-risk-management.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `risk-management.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
+Used by 17 field(s) in: `capability.schema.json`, `cross-domain-relationship.schema.json`, `finance.schema.json`, `information.schema.json`, `intelligence.schema.json`, `market.schema.json`, `model-risk-management.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `risk-management.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
 
 ### `timeHorizon`
 
@@ -244,7 +244,7 @@ Progress of a piece of work such as an initiative, program, project, action, res
 
 Values: `proposed`, `planned`, `approved`, `inProgress`, `onHold`, `deferred`, `completed`, `cancelled`
 
-Used by 14 field(s) in: `finance.schema.json`, `initiatives.schema.json`, `manufacturing.schema.json`, `model-risk-management.schema.json`, `shared-initiative.schema.json`, `social-change.schema.json`, `strategic-intent.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
+Used by 14 field(s) in: `finance.schema.json`, `initiative.schema.json`, `manufacturing.schema.json`, `model-risk-management.schema.json`, `shared-initiative.schema.json`, `social-change.schema.json`, `strategic-intent.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`
 
 ### `documentStatus`
 
@@ -276,7 +276,7 @@ Delivery lifecycle stage of something the organization builds or runs, such as a
 
 Values: `ideation`, `planning`, `design`, `development`, `implementation`, `launch`, `operational`, `enhancement`, `optimization`, `retirement`
 
-Used by 4 field(s) in: `capabilities.schema.json`, `coverage/coverage-expectation.schema.json`, `products.schema.json`, `services.schema.json`
+Used by 4 field(s) in: `capability.schema.json`, `coverage/coverage-expectation.schema.json`, `product.schema.json`, `service.schema.json`
 
 ### `adoptionStage`
 
@@ -292,7 +292,7 @@ Five-level capability maturity model: initial = ad hoc; repeatable = disciplined
 
 Values: `initial`, `repeatable`, `defined`, `managed`, `optimizing`
 
-Used by 13 field(s) in: `capabilities.schema.json`, `channel.schema.json`, `information.schema.json`, `people.schema.json`, `performance.schema.json`, `supply-chain.schema.json`, `technology.schema.json`
+Used by 13 field(s) in: `capability.schema.json`, `channel.schema.json`, `information.schema.json`, `people.schema.json`, `performance.schema.json`, `supply-chain.schema.json`, `technology.schema.json`
 
 ### `automationLevel`
 
@@ -300,7 +300,7 @@ Degree of automation in a process, service, measure or activity.
 
 Values: `manual`, `semiAutomated`, `highlyAutomated`, `fullyAutomated`, `aiEnabled`
 
-Used by 7 field(s) in: `capabilities.schema.json`, `performance.schema.json`, `risk-management.schema.json`, `services.schema.json`, `supply-chain.schema.json`
+Used by 7 field(s) in: `capability.schema.json`, `performance.schema.json`, `risk-management.schema.json`, `service.schema.json`, `supply-chain.schema.json`
 
 ### `riskCategory`
 
@@ -308,7 +308,7 @@ Category of risk. compliance covers regulatory risk; technology covers technical
 
 Values: `strategic`, `operational`, `financial`, `market`, `economic`, `political`, `compliance`, `legal`, `technology`, `security`, `privacy`, `dataQuality`, `supplyChain`, `people`, `reputational`, `relationship`, `changeManagement`, `environmental`, `external`, `other`
 
-Used by 11 field(s) in: `capabilities.schema.json`, `information.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `products.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `social-change.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
+Used by 11 field(s) in: `capability.schema.json`, `information.schema.json`, `manufacturing.schema.json`, `performance.schema.json`, `product.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `social-change.schema.json`, `stakeholder.schema.json`, `strategy.schema.json`
 
 ### `domainType`
 
@@ -316,7 +316,7 @@ A Triodian metamodel domain, used when one record refers to an entity in another
 
 Values: `organization`, `stakeholder`, `capability`, `strategy`, `product`, `service`, `information`, `performance`, `initiative`, `policy`, `valueStream`, `customer`, `market`, `finance`, `risk`, `modelRisk`, `supplyChain`, `innovation`, `sustainability`, `people`, `technology`, `channel`, `socialChange`, `intelligence`, `manufacturing`, `businessAnalysis`, `externalOrganization`, `trigger`, `rationale`, `strategicIntent`, `strategicResponse`, `other`
 
-Used by 16 field(s) in: `channel.schema.json`, `cross-domain-relationship.schema.json`, `customer.schema.json`, `federated-governance-model.schema.json`, `inter-organizational-relationship.schema.json`, `inter-unit-domain-relationships.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`
+Used by 16 field(s) in: `channel.schema.json`, `cross-domain-relationship.schema.json`, `customer.schema.json`, `federated-governance-model.schema.json`, `inter-organizational-relationship.schema.json`, `inter-unit-domain-relationship.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `strategic-response.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`
 
 ### `dependencyStrength`
 
@@ -338,7 +338,7 @@ Used by 2 field(s) in: `organization.schema.json`, `stakeholder.schema.json`
 
 Unique identifier of a record within its domain, for example "CAP-001" or "MKT-ENTSW-001".
 
-Used by 141 field(s) in: `capabilities.schema.json`, `channel.schema.json`, `cross-domain-relationship.schema.json`, `customer.schema.json`, `finance.schema.json`, `information.schema.json`, `initiatives.schema.json`, `innovation.schema.json`, `intelligence.schema.json`, `inter-unit-domain-relationships.schema.json`, `manufacturing.schema.json`, `market.schema.json`, `model-risk-management.schema.json`, `organization.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `policy.schema.json`, `products.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `services.schema.json`, `stakeholder.schema.json`, `strategic-response.schema.json`, `strategy.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`, `value-stream.schema.json`
+Used by 141 field(s) in: `capability.schema.json`, `channel.schema.json`, `cross-domain-relationship.schema.json`, `customer.schema.json`, `finance.schema.json`, `information.schema.json`, `initiative.schema.json`, `innovation.schema.json`, `intelligence.schema.json`, `inter-unit-domain-relationship.schema.json`, `manufacturing.schema.json`, `market.schema.json`, `model-risk-management.schema.json`, `organization.schema.json`, `people.schema.json`, `performance-indicator.schema.json`, `performance.schema.json`, `policy.schema.json`, `product.schema.json`, `rationale.schema.json`, `risk-management.schema.json`, `service.schema.json`, `stakeholder.schema.json`, `strategic-response.schema.json`, `strategy.schema.json`, `supply-chain.schema.json`, `sustainability.schema.json`, `technology.schema.json`, `value-stream.schema.json`
 
 ### `currencyCode`
 
