@@ -349,6 +349,10 @@
         "manufacturing",
         "businessAnalysis",
         "externalOrganization",
+        "trigger",
+        "rationale",
+        "strategicIntent",
+        "strategicResponse",
         "other"
       ],
       "description": "A Triodian metamodel domain, used when one record refers to an entity in another domain."

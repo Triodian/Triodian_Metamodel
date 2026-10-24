@@ -1,0 +1,12 @@
+{
+  "relationshipID": "CDR-006",
+  "sourceDomain": "initiative",
+  "targetDomain": "valueStream",
+  "relationshipType": "transforms",
+  "description": "Digital transformation initiative fundamentally changes customer experience value streams",
+  "metadata": {
+    "priority": "critical",
+    "impactArea": "customer",
+    "strength": 5
+  }
+}

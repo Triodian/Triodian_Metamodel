@@ -9,7 +9,8 @@ Checks, in order:
      defines properties rejects fields it does not define (additionalProperties: false).
   4. Every schema has the same structure: JSON Schema draft-07; the root of each domain schema
      is the domain's main record (no wrapper properties, no oneOf); element types are named
-     under "definitions"; definition and property names are camelCase.
+     under "definitions"; definition and property names are camelCase; passive domains
+     (as listed in cross-domain-relationship.schema.json) do not initiate relationships.
   5. Every $ref resolves, whether local (#/...) or to another schema file.
   6. Every record type requires an identifier (a property named "<entity>ID" or "id").
   7. Every example embedded in a schema's top-level "examples" validates against that schema.
@@ -49,6 +50,9 @@ VALIDATORS = {
 }
 NON_STANDARD = {"attributes", "elements", "nullable"}
 CAMEL = re.compile(r"[a-z][a-zA-Z0-9]*")
+# Schema file for each domain value that can appear in a relationship.
+DOMAIN_FILES = {"information": "information.schema.json", "performance": "performance.schema.json",
+                "product": "products.schema.json", "service": "services.schema.json"}
 # Schemas that are not a domain record of their own.
 NOT_RECORDS = {
     # shared vocabulary
@@ -176,6 +180,15 @@ def check_structure(docs: dict[Path, dict]) -> None:
                 fail(f"{rel(f)}: root uses {kw}; put each record type in its own schema or under definitions")
         if all(isinstance(v, dict) and v.get("type") == "object" and "properties" in v for v in props.values()):
             fail(f"{rel(f)}: root wraps its record in {list(props)}; make the record the root")
+    xdr = SCHEMA_DIR / "cross-domain-relationship.schema.json"
+    if xdr in docs:
+        source = docs[xdr]["properties"]["sourceDomain"]
+        passive = next((b["not"]["enum"] for b in source.get("allOf", []) if "not" in b), [])
+        for domain in passive:
+            f = SCHEMA_DIR / DOMAIN_FILES.get(domain, "")
+            if f in docs and "crossDomainRelationships" in docs[f].get("properties", {}):
+                fail(f"{rel(f)}: {domain} is a passive domain and must not initiate relationships "
+                     "(remove crossDomainRelationships; model them from the initiating domain)")
 
 
 def check_identifiers(docs: dict[Path, dict]) -> None:

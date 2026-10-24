@@ -362,6 +362,60 @@
       "docLine": 37919
     },
     {
+      "instance": "cross-domain-relationship--cdr-001.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38445
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-002.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38445
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-003.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38445
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-004.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38535
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-005.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38535
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-006.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38535
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-007.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38617
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-008.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38617
+    },
+    {
+      "instance": "cross-domain-relationship--cdr-009.json",
+      "schema": "cross-domain-relationship.schema.json",
+      "pointer": "",
+      "docLine": 38617
+    },
+    {
       "instance": "inter-unit-domain-relationships--example-1.json",
       "schema": "inter-unit-domain-relationships.schema.json",
       "pointer": "",

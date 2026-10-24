@@ -17,6 +17,8 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Policy** – Rules, compliance, and governance  
 - **Products** – Tangible or intangible deliverables  
 - **Services** – Activities that create value through interaction  
+- **Customer** – Customer segments, with personas, journeys and relationships
+- **Cross-Domain Relationships** – Typed, directional links between entities in different domains
 - **Inter-unit Domain Relationships** – Links between units and domain artefacts  
 - **Strategic Response Model (SRM)** – How the organisation responds to change: Triggers, Rationales, Strategic Intents and Strategic Responses, each in its own schema and grouped by `strategic-response-model.schema.json`
 
@@ -62,6 +64,8 @@ The structural checks confirm that every schema is well-formed JSON, valid again
 Shared concepts such as priority, risk level, frequency, status, maturity and domain type are defined once in [`schemas/common.schema.json`](schemas/common.schema.json), with camelCase values, and domains reference them with `$ref`. [`docs/shared-vocabulary.md`](docs/shared-vocabulary.md) lists the shared values and shows which domains still keep their own lists and how those map across. Regenerate it with `python scripts/vocabulary_map.py`.
 
 Every domain schema has the same structure. The root is the domain's main record (an Initiative, a Value Stream, a Policy), and its element types (a Program, a Value Stream Stage, a Capability Function) are named, camelCase entries under `definitions`, referenced with `$ref`. All schemas use JSON Schema draft-07, and all definition and property names are camelCase. Composite schemas such as `strategic-response-model.schema.json` group records defined in other schemas.
+
+Relationships between domains use [`schemas/cross-domain-relationship.schema.json`](schemas/cross-domain-relationship.schema.json): one of 37 relationship types (such as `funds`, `enables`, `governs`, `informs`), with priority, impact area, frequency and strength. Relationships are directional, from an initiating domain to a receiving one. Passive domains (Information, Performance, Product, Service) receive relationships but never initiate them; the schema and validator enforce this. A relationship can be a record of its own, or listed in a domain record's `crossDomainRelationships`, where the containing record is the source. Records that refer to entities in other domains without a typed relationship, such as a Trigger's `affectedEntities`, use the shared `entityReference`.
 
 Every object a schema defines rejects fields it does not define (`"additionalProperties": false`), so a misspelt or undocumented field fails validation instead of being silently accepted. The validator enforces this for every schema.
 

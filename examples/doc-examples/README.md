@@ -30,9 +30,10 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **Products follow the documented attributes.** The Products schema now defines every documented attribute and product-feature element, so the Products examples are checked in full for the first time. Their values are camelCase (`"Information Product"` → `"informationProduct"`, `"B2B"` → `"b2b"`), and risk categories use the shared list (`"Technical"` → `"technology"`, `"Regulatory"` → `"compliance"`). The Innovation example's dependencies use the shared camelCase values, and the Sustainability example's `"third-party verified"` is now `"third-party-verified"`.
 
+**Cross-domain relationships are records with identifiers.** The documentation's three relationship examples (nine relationships) are checked one relationship per file, each given a `relationshipID` (`CDR-001` to `CDR-009`). Domains are camelCase (`"Value Stream"` → `"valueStream"`), and `metadata.impact` is named `impactArea`, because it classifies the area affected rather than a magnitude. `CDR-008` uses `"Compliance"` as its source domain, which is not a domain in the metamodel, so it still fails.
+
 ## Not included
 
 There is no schema in the repository yet for:
 
 - Model Risk Management sub-domain examples (model profile, governance, validation, monitoring, regulatory framework mapping)
-- Cross-domain relationship examples
