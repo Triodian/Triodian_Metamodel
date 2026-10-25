@@ -21,6 +21,7 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Model Risk Management** – A Risk sub-domain: model inventory, governance, validation, monitoring and regulatory framework mapping
 - **Cross-Domain Relationships** – Typed, directional links between entities in different domains
 - **Inter-unit Domain Relationships** – Links between units and domain artefacts  
+- **Semantic Library** – Obligations captured at clause level, and the semantic constraints that govern what AI systems may say or emit, traced to those obligations and to the business context they apply to (see [the advice-boundary example](examples/semantic-library-advice-boundary.md))
 - **Strategic Response Model (SRM)** – How the organisation responds to change: Triggers, Rationales, Strategic Intents and Strategic Responses, each in its own schema and grouped by `strategic-response-model.schema.json`
 
 All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
