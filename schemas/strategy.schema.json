@@ -310,10 +310,10 @@
       "type": "string",
       "description": "Describes how deeply empathetic considerations are embedded within the organization's strategic planning and execution processes.",
       "enum": [
-        "adhoc",
-        "definedprocess",
+        "adHoc",
+        "definedProcess",
         "systemic",
-        "corecapability"
+        "coreCapability"
       ]
     },
     "stakeholderEmotionalInsight": {

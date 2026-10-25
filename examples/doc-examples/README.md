@@ -55,3 +55,4 @@ The examples were extracted verbatim and then amended as follows to match agreed
 
 **Supply chain implementation complexity uses the shared complexity scale** (`"medium"` → `moderate`, `"high"` → `complex`).
 
+**Coverage domains use the shared domain list.** The coverage template, expectation, status and organization goal examples name domains in camelCase from `domainType` (`"Capability"` → `capability`, `"Value Stream"` → `valueStream`). The template example's `createdBy` address is `system@triodian.com`.

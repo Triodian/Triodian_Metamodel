@@ -281,9 +281,17 @@
           "type": "string",
           "description": "The individual or team responsible for the Project"
         },
-        "organizationUnit": {
+        "orgUnitTitle": {
           "type": "string",
           "description": "The Organization unit(s) to which the Project is linked"
+        },
+        "orgUnitID": {
+          "description": "ID of the organization unit (see orgUnitTitle)",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "goals": {
           "type": "string",
