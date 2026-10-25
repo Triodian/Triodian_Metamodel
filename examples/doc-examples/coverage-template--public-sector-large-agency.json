@@ -6,18 +6,18 @@
   "sizeCategory": "large",
   "expectations": [
     {
-      "domain": "Policy",
+      "domain": "policy",
       "targetCoverageLevel": "governed"
     },
     {
-      "domain": "Capability",
+      "domain": "capability",
       "targetCoverageLevel": "analysed"
     },
     {
-      "domain": "Performance",
+      "domain": "performance",
       "targetCoverageLevel": "documented"
     }
   ],
-  "createdBy": "system@orthogramic.com",
+  "createdBy": "system@triodian.com",
   "createdAt": "2025-06-01T12:00:00Z"
 }

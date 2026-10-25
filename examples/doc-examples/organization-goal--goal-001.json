@@ -2,7 +2,7 @@
   "goalID": "goal-001",
   "organization": "Org-Alpha",
   "orgUnit": "OU-Finance",
-  "domain": "Performance",
+  "domain": "performance",
   "weighting": 0.3,
   "coverageGapTolerance": 0.1,
   "maturityTargetDate": "2025-12-31",

@@ -38,8 +38,12 @@
         "type": "object",
         "properties": {
           "domain": {
-            "type": "string",
-            "description": "The business architecture domain."
+            "description": "The business architecture domain.",
+            "allOf": [
+              {
+                "$ref": "../common.schema.json#/definitions/domainType"
+              }
+            ]
           },
           "targetCoverageLevel": {
             "type": "string",

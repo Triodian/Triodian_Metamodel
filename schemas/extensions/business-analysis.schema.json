@@ -46,9 +46,12 @@
       "type": "object",
       "properties": {
         "requirementID": {
-          "type": "string",
-          "format": "uuid",
-          "description": "Unique identifier for the requirement."
+          "description": "Unique identifier for the requirement.",
+          "allOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "type": {
           "type": "string",
@@ -156,9 +159,12 @@
       "type": "object",
       "properties": {
         "artefactID": {
-          "type": "string",
-          "format": "uuid",
-          "description": "Unique identifier for the artefact."
+          "description": "Unique identifier for the artefact.",
+          "allOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "type": {
           "type": "string",
@@ -226,9 +232,12 @@
       "type": "object",
       "properties": {
         "activityID": {
-          "type": "string",
-          "format": "uuid",
-          "description": "Unique identifier for the activity."
+          "description": "Unique identifier for the activity.",
+          "allOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "type": {
           "type": "string",
@@ -292,9 +301,12 @@
       "type": "object",
       "properties": {
         "designDefinitionID": {
-          "type": "string",
-          "format": "uuid",
-          "description": "Unique identifier for the analysis/design definition."
+          "description": "Unique identifier for the analysis/design definition.",
+          "allOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "description": {
           "type": "string",
@@ -405,9 +417,12 @@
       "type": "object",
       "properties": {
         "evaluationID": {
-          "type": "string",
-          "format": "uuid",
-          "description": "Unique identifier for the evaluation."
+          "description": "Unique identifier for the evaluation.",
+          "allOf": [
+            {
+              "$ref": "../common.schema.json#/definitions/identifier"
+            }
+          ]
         },
         "description": {
           "type": "string",

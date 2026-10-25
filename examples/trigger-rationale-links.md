@@ -28,10 +28,10 @@ To ensure compliance with legal requirements and avoid potential penalties.
 {
   "triggers": [
     {
-      "triggerID": "e8f9a012-3b4c-5d6e-7f8a-9b0c1d2e3f4a",
+      "triggerID": "TRG-001",
       "label": "New Data Protection Regulation",
       "description": "Enactment of new data protection regulation requiring updated data handling practices",
-      "primaryCategory": "Regulatory_Compliance",
+      "primaryCategory": "regulatoryCompliance",
       "origin": "External",
       "timeHorizon": "shortTerm",
       "impactLevel": "high",
@@ -43,10 +43,10 @@ To ensure compliance with legal requirements and avoid potential penalties.
   ],
   "rationales": [
     {
-      "rationaleID": "a1b2c3d4-e5f6-g7h8-i9j0-k1l2m3n4o5p6",
+      "rationaleID": "RAT-001",
       "rationaleTitle": "Data Protection Compliance Initiative",
       "description": "Align policies with new legal requirements to ensure compliance and protect customer data",
-      "triggerReference": "e8f9a012-3b4c-5d6e-7f8a-9b0c1d2e3f4a",
+      "triggerReference": "TRG-001",
       "linkedDomains": [
         "policy",
         "information"
@@ -82,10 +82,10 @@ To stay competitive, meet the evolving needs of the workforce, and attract top t
 {
   "triggers": [
     {
-      "triggerID": "c7d8e9f0-1a2b-3c4d-5e6f-7g8h9i0j1k2l",
+      "triggerID": "TRG-002",
       "label": "Remote Work Adoption Trend",
       "description": "Significant increase in remote work adoption across the industry, accelerated by technological advancements and workforce preferences",
-      "primaryCategory": "Workforce_Skills",
+      "primaryCategory": "workforceSkills",
       "subCategory": "Strategic Repositioning",
       "origin": "External",
       "timeHorizon": "mediumTerm",
@@ -97,10 +97,10 @@ To stay competitive, meet the evolving needs of the workforce, and attract top t
   ],
   "rationales": [
     {
-      "rationaleID": "m3n4o5p6-q7r8-s9t0-u1v2-w3x4y5z6a7b8",
+      "rationaleID": "RAT-002",
       "rationaleTitle": "Remote Work Strategy Implementation",
       "description": "Adapt organizational strategy to accommodate remote work capabilities to attract and retain talent while maintaining operational effectiveness",
-      "triggerReference": "c7d8e9f0-1a2b-3c4d-5e6f-7g8h9i0j1k2l",
+      "triggerReference": "TRG-002",
       "linkedDomains": [
         "strategy",
         "capability",
@@ -150,10 +150,10 @@ To improve customer satisfaction, reduce churn rates, and strengthen brand reput
 {
   "triggers": [
     {
-      "triggerID": "d5e6f7g8-h9i0-j1k2-l3m4-n5o6p7q8r9s0",
+      "triggerID": "TRG-003",
       "label": "Customer Service Response Degradation",
       "description": "Customer service response times have increased by 35% over the past quarter, exceeding acceptable thresholds and impacting customer satisfaction metrics",
-      "primaryCategory": "Performance_Response",
+      "primaryCategory": "performanceResponse",
       "subCategory": "Capability Enhancement",
       "origin": "Internal",
       "timeHorizon": "immediate",
@@ -165,10 +165,10 @@ To improve customer satisfaction, reduce churn rates, and strengthen brand reput
   ],
   "rationales": [
     {
-      "rationaleID": "t1u2v3w4-x5y6-z7a8-b9c0-d1e2f3g4h5i6",
+      "rationaleID": "RAT-003",
       "rationaleTitle": "Customer Service Improvement Initiative",
       "description": "Address service quality degradation through process improvements, staff training, and technology enhancements to restore customer satisfaction levels",
-      "triggerReference": "d5e6f7g8-h9i0-j1k2-l3m4-n5o6p7q8r9s0",
+      "triggerReference": "TRG-003",
       "linkedDomains": [
         "capability",
         "performance",
@@ -186,12 +186,12 @@ To improve customer satisfaction, reduce churn rates, and strengthen brand reput
       "orgUnitTitle": "Customer Support Department",
       "alternativesConsidered": [
         {
-          "alternativeID": "j7k8l9m0-n1o2-p3q4-r5s6-t7u8v9w0x1y2",
+          "alternativeID": "ALT-001",
           "alternativeDescription": "Outsource customer service operations to third-party provider",
           "reasonForRejection": "Would reduce control over customer experience and risk further brand damage"
         },
         {
-          "alternativeID": "z3a4b5c6-d7e8-f9g0-h1i2-j3k4l5m6n7o8",
+          "alternativeID": "ALT-002",
           "alternativeDescription": "Implement chatbot-only first-level support",
           "reasonForRejection": "Technology not mature enough to handle complex customer issues"
         }
@@ -220,10 +220,10 @@ To leverage emerging technology for competitive advantage and create new revenue
 {
   "triggers": [
     {
-      "triggerID": "p9q0r1s2-t3u4-v5w6-x7y8-z9a0b1c2d3e4",
+      "triggerID": "TRG-004",
       "label": "AI Predictive Analytics Advancements",
       "description": "Significant advancements in AI-powered predictive analytics creating new opportunities for product enhancement and market differentiation",
-      "primaryCategory": "Technological_Change",
+      "primaryCategory": "technologicalChange",
       "subCategory": "Innovation Initiative",
       "origin": "External",
       "timeHorizon": "mediumTerm",
@@ -235,10 +235,10 @@ To leverage emerging technology for competitive advantage and create new revenue
   ],
   "rationales": [
     {
-      "rationaleID": "f5g6h7i8-j9k0-l1m2-n3o4-p5q6r7s8t9u0",
+      "rationaleID": "RAT-004",
       "rationaleTitle": "AI-Driven Product Innovation Strategy",
       "description": "Integrate advanced AI capabilities into our product suite to create differentiated offerings and new revenue streams while establishing market leadership in predictive analytics",
-      "triggerReference": "p9q0r1s2-t3u4-v5w6-x7y8-z9a0b1c2d3e4",
+      "triggerReference": "TRG-004",
       "linkedDomains": [
         "strategy",
         "product",
@@ -254,7 +254,7 @@ To leverage emerging technology for competitive advantage and create new revenue
       ],
       "reasoningPattern": "predictive",
       "evidenceBase": "competitiveAnalysis",
-      "strategicObjectiveReference": "v1w2x3y4-z5a6-b7c8-d9e0-f1g2h3i4j5k6",
+      "strategicObjectiveReference": "OBJ-001",
       "businessValueType": "marketCreation",
       "competitivePositioning": {
         "positioningType": "innovationLeadership",
@@ -290,10 +290,10 @@ To achieve long-term sustainability goals, comply with emerging regulations, and
 {
   "triggers": [
     {
-      "triggerID": "l7m8n9o0-p1q2-r3s4-t5u6-v7w8x9y0z1a2",
+      "triggerID": "TRG-005",
       "label": "Sustainability Pressure Intensification",
       "description": "Increasing regulatory requirements and stakeholder expectations regarding carbon emissions reduction and sustainable business practices",
-      "primaryCategory": "Environmental_Safety",
+      "primaryCategory": "environmentalSafety",
       "origin": "Hybrid",
       "timeHorizon": "longTerm",
       "impactLevel": "high",
@@ -304,10 +304,10 @@ To achieve long-term sustainability goals, comply with emerging regulations, and
   ],
   "rationales": [
     {
-      "rationaleID": "b3c4d5e6-f7g8-h9i0-j1k2-l3m4n5o6p7q8",
+      "rationaleID": "RAT-005",
       "rationaleTitle": "Sustainability Transformation Program",
       "description": "Implement comprehensive sustainability initiatives across operations to reduce environmental impact, ensure regulatory compliance, and strengthen stakeholder relationships",
-      "triggerReference": "l7m8n9o0-p1q2-r3s4-t5u6-v7w8x9y0z1a2",
+      "triggerReference": "TRG-005",
       "linkedDomains": [
         "policy",
         "initiative",
@@ -330,14 +330,14 @@ To achieve long-term sustainability goals, comply with emerging regulations, and
       "author": "Sustainability Task Force",
       "orgUnitTitle": "Corporate Affairs",
       "relatedRationales": [
-        "h5i6j7k8-l9m0-n1o2-p3q4-r5s6t7u8v9w0"
+        "RAT-006"
       ],
       "relationshipTypes": [
         "supports"
       ],
       "alternativesConsidered": [
         {
-          "alternativeID": "r9s0t1u2-v3w4-x5y6-z7a8-b9c0d1e2f3g4",
+          "alternativeID": "ALT-003",
           "alternativeDescription": "Minimal compliance-only approach",
           "reasonForRejection": "Insufficient to meet stakeholder expectations and future-proof the business"
         }

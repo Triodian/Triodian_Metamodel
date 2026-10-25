@@ -10,12 +10,11 @@
       "description": "Unique identifier for the coverage expectation."
     },
     "domain": {
-      "type": "string",
       "description": "The business architecture domain this expectation applies to.",
-      "examples": [
-        "Capability",
-        "Strategy",
-        "Information"
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/domainType"
+        }
       ]
     },
     "orgUnit": {
