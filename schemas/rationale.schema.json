@@ -14,9 +14,12 @@
   ],
   "properties": {
     "rationaleID": {
-      "type": "string",
-      "format": "uuid",
-      "description": "Unique identifier for the rationale"
+      "description": "Unique identifier for the rationale",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "rationaleTitle": {
       "type": "string",
@@ -27,15 +30,17 @@
       "description": "Detailed explanation supporting a strategic response"
     },
     "triggerReference": {
-      "type": "string",
-      "format": "uuid",
-      "description": "Primary trigger this rationale responds to"
+      "description": "Primary trigger this rationale responds to",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "triggerReferences": {
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uuid"
+        "$ref": "common.schema.json#/definitions/identifier"
       },
       "description": "Optional multiple triggers this rationale addresses"
     },
@@ -151,9 +156,12 @@
         "type": "object",
         "properties": {
           "alternativeID": {
-            "type": "string",
-            "format": "uuid",
-            "description": "Identifier for this alternative"
+            "description": "Identifier for this alternative",
+            "allOf": [
+              {
+                "$ref": "common.schema.json#/definitions/identifier"
+              }
+            ]
           },
           "alternativeDescription": {
             "type": "string",
@@ -238,9 +246,12 @@
       "description": "The foundation for the rationale"
     },
     "strategicObjectiveReference": {
-      "type": "string",
-      "format": "uuid",
-      "description": "Reference to the strategic objective this rationale supports"
+      "description": "Reference to the strategic objective this rationale supports",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "businessValueType": {
       "type": "string",
@@ -351,8 +362,7 @@
     "relatedRationales": {
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uuid"
+        "$ref": "common.schema.json#/definitions/identifier"
       },
       "description": "References to other related rationales"
     },

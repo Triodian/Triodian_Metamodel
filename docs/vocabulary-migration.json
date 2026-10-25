@@ -1,5 +1,5 @@
 {
-  "description": "Record of how value lists were migrated (October 2026): migrations 1 and 2 moved lists onto schemas/common.schema.json; migration 3 renamed the remaining domain-specific values to camelCase (sharedDefinition is null). For each field: the shared definition it now uses, how each previous value was mapped, and any values kept as domain-specific additions. Use it to convert existing data. Paths are as they were at the time of each migration.",
+  "description": "Record of how value lists were migrated (October 2026): migrations 1 and 2 moved lists onto schemas/common.schema.json; migration 3 renamed the remaining domain-specific values to camelCase (sharedDefinition is null); migration 4 (after the website review) camelCased Strategy empathyIntegrationLevel, put the coverage domain fields on the shared domainType list, and turned Trigger primaryCategory from free text into a list. For each field: the shared definition it now uses, how each previous value was mapped, and any values kept as domain-specific additions. Use it to convert existing data. Paths are as they were at the time of each migration.",
   "fields": [
     {
       "file": "capabilities.schema.json",
@@ -6149,6 +6149,98 @@
       },
       "domainSpecificValues": [],
       "migration": 3
+    },
+    {
+      "file": "strategy.schema.json",
+      "path": "/properties/empathyIntegrationLevel",
+      "sharedDefinition": null,
+      "valueMap": {
+        "adhoc": "adHoc",
+        "definedprocess": "definedProcess",
+        "systemic": "systemic",
+        "corecapability": "coreCapability"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
+    },
+    {
+      "file": "coverage/coverage-template.schema.json",
+      "path": "/properties/expectations/items/properties/domain",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Capability": "capability",
+        "Performance": "performance",
+        "Policy": "policy",
+        "Strategy": "strategy",
+        "Information": "information",
+        "Value Stream": "valueStream"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
+    },
+    {
+      "file": "coverage/coverage-expectation.schema.json",
+      "path": "/properties/domain",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Capability": "capability",
+        "Performance": "performance",
+        "Policy": "policy",
+        "Strategy": "strategy",
+        "Information": "information",
+        "Value Stream": "valueStream"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
+    },
+    {
+      "file": "coverage/coverage-status.schema.json",
+      "path": "/properties/domain",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Capability": "capability",
+        "Performance": "performance",
+        "Policy": "policy",
+        "Strategy": "strategy",
+        "Information": "information",
+        "Value Stream": "valueStream"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
+    },
+    {
+      "file": "coverage/organization-goal.schema.json",
+      "path": "/properties/domain",
+      "sharedDefinition": "domainType",
+      "valueMap": {
+        "Capability": "capability",
+        "Performance": "performance",
+        "Policy": "policy",
+        "Strategy": "strategy",
+        "Information": "information",
+        "Value Stream": "valueStream"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
+    },
+    {
+      "file": "trigger.schema.json",
+      "path": "/properties/primaryCategory",
+      "sharedDefinition": null,
+      "valueMap": {
+        "Regulatory_Compliance": "regulatoryCompliance",
+        "Technological_Change": "technologicalChange",
+        "Environmental_Safety": "environmentalSafety",
+        "Operational_Transformation": "operationalTransformation",
+        "Strategic_Realignment": "strategicRealignment",
+        "Customer_Stakeholder": "customerStakeholder",
+        "Workforce_Skills": "workforceSkills",
+        "Performance_Response": "performanceResponse",
+        "Political_Social": "politicalSocial",
+        "Innovation_Opportunity": "innovationOpportunity"
+      },
+      "domainSpecificValues": [],
+      "migration": 4
     }
   ]
 }

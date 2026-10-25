@@ -1,6 +1,6 @@
 {
   "coverageExpectationID": "cexp-001",
-  "domain": "Capability",
+  "domain": "capability",
   "orgUnit": "OU-Finance",
   "targetCoverageLevel": "analysed",
   "justification": "Required for budgeting accuracy and integration with forecasting process",

@@ -11,9 +11,12 @@
   ],
   "properties": {
     "triggerID": {
-      "type": "string",
-      "format": "uuid",
-      "description": "Unique identifier for the trigger"
+      "description": "Unique identifier for the trigger",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
     },
     "label": {
       "type": "string",
@@ -25,7 +28,20 @@
     },
     "primaryCategory": {
       "type": "string",
-      "description": "Primary classification of trigger context"
+      "description": "Primary classification of trigger context",
+      "enum": [
+        "regulatoryCompliance",
+        "technologicalChange",
+        "environmentalSafety",
+        "operationalTransformation",
+        "strategicRealignment",
+        "customerStakeholder",
+        "workforceSkills",
+        "performanceResponse",
+        "politicalSocial",
+        "innovationOpportunity",
+        "other"
+      ]
     },
     "subCategory": {
       "type": "string",
@@ -82,16 +98,14 @@
     "relatedTriggers": {
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uuid"
+        "$ref": "common.schema.json#/definitions/identifier"
       },
       "description": "References to other related triggers"
     },
     "strategicResponseReferences": {
       "type": "array",
       "items": {
-        "type": "string",
-        "format": "uuid"
+        "$ref": "common.schema.json#/definitions/identifier"
       },
       "description": "References to related strategicResponseModel artefacts"
     },
