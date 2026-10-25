@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://triodian.com/schemas/semantic-library/obligation.schema.json",
+  "title": "Obligation Schema",
+  "description": "A requirement the organization must meet, captured at clause level from its governing source (statute, prudential standard, regulatory guidance, industry code, contract, clinical standard or internal policy). Obligations are the source end of the semantic library's traceability: each semantic constraint maps to the obligations it enforces, and the inverse index tells a regulatory watch which constraints to review when an obligation changes.",
+  "type": "object",
+  "required": [
+    "obligationID",
+    "title",
+    "statement",
+    "obligationType",
+    "source",
+    "status"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "obligationID": {
+      "description": "Unique identifier for the obligation, e.g. OBL-001",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
+    "title": {
+      "type": "string",
+      "description": "Short name of the obligation"
+    },
+    "statement": {
+      "type": "string",
+      "description": "The obligation in plain language: what must or must not be done"
+    },
+    "obligationType": {
+      "type": "string",
+      "description": "Kind of source the obligation comes from",
+      "enum": [
+        "statutory",
+        "prudentialStandard",
+        "regulatoryGuidance",
+        "industryCode",
+        "contractual",
+        "clinicalStandard",
+        "internalPolicy",
+        "other"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "description": "The governing source, cited precisely enough to find the clause",
+      "required": [
+        "authority",
+        "instrument",
+        "citation"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "authority": {
+          "type": "string",
+          "description": "Body that issues or enforces the source, e.g. Parliament, APRA, ASIC, a standards body, the organization itself"
+        },
+        "instrument": {
+          "type": "string",
+          "description": "The instrument, e.g. Corporations Act 2001 (Cth), CPS 230, RG 271, an internal policy"
+        },
+        "citation": {
+          "type": "string",
+          "description": "Section, paragraph or clause, e.g. s766B(3)"
+        },
+        "instrumentVersion": {
+          "type": "string",
+          "description": "Version, compilation or amendment of the instrument the obligation was captured from"
+        },
+        "url": {
+          "type": "string",
+          "description": "Link to the authoritative text",
+          "format": "uri"
+        }
+      }
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Jurisdiction in which the obligation applies, e.g. AU"
+    },
+    "effectiveDate": {
+      "type": "string",
+      "description": "Date from which the obligation applies",
+      "format": "date"
+    },
+    "status": {
+      "description": "Whether the obligation currently applies",
+      "allOf": [
+        {
+          "$ref": "#/definitions/obligationStatus"
+        }
+      ]
+    },
+    "supersededByObligationID": {
+      "description": "The obligation that replaces this one, when status is superseded or amended",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
+    "appliesTo": {
+      "type": "array",
+      "description": "Context the obligation applies to: products, services, channels, customer segments, value streams, capabilities or organization units",
+      "items": {
+        "$ref": "../common.schema.json#/definitions/entityReference"
+      }
+    },
+    "implementingPolicyIDs": {
+      "type": "array",
+      "description": "Internal policies (Policy domain) that implement the obligation",
+      "items": {
+        "$ref": "../common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
+    "orgUnitTitle": {
+      "type": "string",
+      "description": "Organization unit accountable for meeting the obligation"
+    },
+    "orgUnitID": {
+      "description": "ID of the organization unit named in orgUnitTitle",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
+    "accountablePerson": {
+      "type": "string",
+      "description": "Named role personally accountable for the obligation, e.g. an accountable person under an accountability regime"
+    },
+    "riskLevel": {
+      "description": "Consequence of failing the obligation",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/riskLevel"
+        }
+      ]
+    },
+    "complianceStatus": {
+      "description": "Current assessed compliance with the obligation",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/complianceStatus"
+        }
+      ]
+    },
+    "relatedObligationIDs": {
+      "type": "array",
+      "description": "Obligations that overlap with or depend on this one",
+      "items": {
+        "$ref": "../common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
+    "monitoringFrequency": {
+      "description": "How often the source is watched for change",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/frequency"
+        }
+      ]
+    },
+    "lastReviewDate": {
+      "type": "string",
+      "description": "Date the obligation was last checked against its source",
+      "format": "date"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "anyOf": [
+              {
+                "const": "superseded"
+              },
+              {
+                "const": "amended"
+              }
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "supersededByObligationID"
+        ]
+      }
+    }
+  ],
+  "definitions": {
+    "obligationStatus": {
+      "type": "string",
+      "description": "Whether an obligation currently applies",
+      "enum": [
+        "pending",
+        "inForce",
+        "amended",
+        "superseded",
+        "repealed"
+      ]
+    }
+  }
+}
