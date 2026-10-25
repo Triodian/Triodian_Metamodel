@@ -1,7 +1,7 @@
 {
   "coverageStatusID": "cstat-100",
   "orgUnit": "OU-Finance",
-  "domain": "Capability",
+  "domain": "capability",
   "coverageScore": 0.67,
   "coverageLevelAchieved": "documented",
   "expectedCoverageLevel": "analysed",

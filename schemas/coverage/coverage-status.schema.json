@@ -14,8 +14,12 @@
       "description": "Organisation unit assessed."
     },
     "domain": {
-      "type": "string",
-      "description": "The business architecture domain assessed."
+      "description": "The business architecture domain assessed.",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/domainType"
+        }
+      ]
     },
     "coverageScore": {
       "type": "number",

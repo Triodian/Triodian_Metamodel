@@ -21,8 +21,12 @@
       "description": "Optional organisational unit this goal is targeted at. Leave null for organisation-wide goals."
     },
     "domain": {
-      "type": "string",
-      "description": "The business architecture domain targeted by this goal."
+      "description": "The business architecture domain targeted by this goal.",
+      "allOf": [
+        {
+          "$ref": "../common.schema.json#/definitions/domainType"
+        }
+      ]
     },
     "weighting": {
       "type": "number",
