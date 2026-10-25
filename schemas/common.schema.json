@@ -365,6 +365,8 @@
         "rationale",
         "strategicIntent",
         "strategicResponse",
+        "obligation",
+        "semanticConstraint",
         "other"
       ],
       "description": "A Triodian metamodel domain, used when one record refers to an entity in another domain."
