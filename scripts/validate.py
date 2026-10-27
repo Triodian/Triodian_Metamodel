@@ -15,8 +15,10 @@ Checks, in order:
      https://triodian.com/schemas/, it has a title, and every property has a description.
   5. Every $ref resolves, whether local (#/...) or to another schema file.
   6. Every record type requires an identifier, a property named "<entity>ID".
-  7. Every example embedded in a schema's top-level "examples" validates against that schema, and
-     every JSON block in examples/*.md tagged with a schema (```json <file>.schema.json) validates.
+  7. Every example embedded in a schema's top-level "examples" validates against that schema,
+     every JSON block in examples/*.md tagged with a schema (```json <file>.schema.json) validates,
+     every connector dataset policy (connector/policies/*.json) validates, and every
+     item in a reference data set (reference-data/*.json) validates against the schema it names.
   8. Every interoperability mapping (interoperability/*.jsonld) is valid JSON-LD, and every
      Triodian term it maps is a property, element type or domain defined in the schemas.
   9. (--doc-examples) Every worked example from the documentation, listed in
@@ -333,6 +335,43 @@ def check_embedded_examples(docs, registry, uris) -> None:
             for msg in validate_instance(d, uris[f], "", ex, registry):
                 fail(f"{rel(f)} example[{i}]{msg}")
     check_markdown_examples(docs, registry, uris)
+    check_connector_policies(docs, registry, uris)
+
+
+def check_connector_policies(docs, registry, uris) -> None:
+    """Every published dataset policy (connector/policies/*.json) validates, and its language rules compile."""
+    schema = SCHEMA_DIR / "connector" / "dataset-policy.schema.json"
+    if schema not in uris:
+        return
+    for f in sorted((ROOT / "connector" / "policies").glob("*.json")):
+        try:
+            policy = json.loads(f.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            fail(f"{rel(f)}: invalid JSON: {e}")
+            continue
+        for msg in validate_instance(docs[schema], uris[schema], "", policy, registry):
+            fail(f"{rel(f)}{msg}")
+        for rule in policy.get("languageRules", []):
+            try:
+                re.compile(rule["pattern"], re.I)
+            except (re.error, KeyError) as e:
+                fail(f"{rel(f)}: language rule {rule.get('ruleID')!r} does not compile: {e}")
+    # Reference data sets (reference-data/*.json): each item validates against the schema named in the file.
+    by_name = {f.relative_to(SCHEMA_DIR).as_posix(): f for f in docs}
+    for f in sorted((ROOT / "reference-data").glob("*.json")):
+        data = json.loads(f.read_text(encoding="utf-8"))
+        target = by_name.get(data.get("schema", ""))
+        if target is None or target not in uris:
+            fail(f"{rel(f)}: unknown schema {data.get('schema')!r}")
+            continue
+        seen = set()
+        for i, item in enumerate(data.get("items", [])):
+            for msg in validate_instance(docs[target], uris[target], "", item, registry):
+                fail(f"{rel(f)} item[{i}]{msg}")
+            key = next((v for k, v in item.items() if k.endswith("ID")), None)
+            if key in seen:
+                fail(f"{rel(f)} item[{i}]: duplicate identifier {key!r}")
+            seen.add(key)
 
 
 def check_markdown_examples(docs, registry, uris) -> None:
