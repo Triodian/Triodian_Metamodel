@@ -23,6 +23,10 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Inter-unit Domain Relationships** – Links between units and domain artefacts  
 - **Semantic Library** – Obligations captured at clause level, and the semantic constraints that govern what AI systems may say or emit, traced to those obligations and to the business context they apply to (see [the advice-boundary example](examples/semantic-library-advice-boundary.md))
 - **Strategic Response Model (SRM)** – How the organisation responds to change: Triggers, Rationales, Strategic Intents and Strategic Responses, each in its own schema and grouped by `strategic-response-model.schema.json`
+- **Compliance** – Compliance requirements issued by regulators, professional and standards bodies, each made up of clause-level obligations, and the statements of compliance that evidence them (`schemas/compliance/`)
+- **Public Reporting** – Public reports and the mandatory disclosures they contain, including AI disclosures a law calls for (`schemas/public-reporting/`)
+- **Use Case** – Standardised AI use cases defined on the authority (A), boundary (B) and confidentiality channel (K) scales, so obligations and assessments compare across jurisdictions; UC1 to UC10 are published in [`reference-data/use-cases.json`](reference-data/use-cases.json)
+- **Dynamic and Time-Series** – Data flows, timebound metrics and predictive models for live and monitored sources (`schemas/extensions/dynamic-time-series/`)
 
 All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
 
@@ -50,6 +54,24 @@ Visit the documentation to begin:
 - [Getting started by problem](https://triodian.atlassian.net/wiki/spaces/OM/pages/291274855)
 
 Each schema includes examples and structured fields to help your team model capabilities, initiatives, and performance in a consistent and transparent way.
+
+## Obligations as a reference dataset
+
+Obligations can be published as a reference dataset, such as a register of AI governance obligations by jurisdiction. Each record carries:
+- `sourceTier`: `binding`, `expected` or `anticipated`;
+- `jurisdiction`, `entityTypes`, `roles` and `useCaseIDs`;
+- `effectiveDates` and `lastVerified`.
+
+Regulators and standards bodies are External Organization records. Each new or amended instrument is a Trigger, linked to the obligations it affects. A source tier describes the source, never an organisation's position.
+
+## Reasoning Fabric connector
+
+The [`connector/`](connector) folder is the published contract between the Metamodel and the Reasoning Fabric, the closed service that governs records written against it. It defines how records are submitted, validated, reviewed and returned with provenance:
+- message schemas in `schemas/connector/`;
+- an HTTP binding (`connector/openapi.yaml`);
+- published dataset policies (`connector/policies/`).
+
+The Metamodel version is in [`VERSION`](VERSION).
 
 ## Validating the schemas
 

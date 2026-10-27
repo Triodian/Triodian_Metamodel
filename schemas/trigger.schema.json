@@ -95,6 +95,93 @@
       "type": "string",
       "description": "Reference to source document, report, or authority identifying the trigger"
     },
+    "instrumentChange": {
+      "type": "object",
+      "description": "For a regulatory trigger: the new or amended instrument that was found, and what changed. The obligations it affects are listed in affectedEntities",
+      "required": [
+        "instrument",
+        "changeType"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "instrument": {
+          "type": "string",
+          "description": "The instrument, e.g. CPS 230 or MAS Guidelines on AI Risk Management"
+        },
+        "changeType": {
+          "type": "string",
+          "description": "What happened to the instrument",
+          "enum": [
+            "newInstrument",
+            "amendment",
+            "commencement",
+            "consultation",
+            "guidance",
+            "supersession",
+            "repeal",
+            "withdrawal",
+            "correction"
+          ]
+        },
+        "jurisdiction": {
+          "description": "Jurisdiction of the instrument",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/jurisdictionCode"
+            }
+          ]
+        },
+        "externalOrgID": {
+          "description": "External Organization that issued it",
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/definitions/identifier"
+            }
+          ]
+        },
+        "sourceURL": {
+          "type": "string",
+          "description": "Official source where the change was found",
+          "format": "uri"
+        },
+        "sourceRank": {
+          "type": "integer",
+          "description": "Precedence of the source the change was found in: 1 official text, 2 regulator publication, 3 standards body publication, 4 law firm or industry commentary, 5 news. Ranks 4 and 5 are leads to an official source, never the basis of a change",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "publishedDate": {
+          "type": "string",
+          "description": "Date the change was published",
+          "format": "date"
+        },
+        "effectiveDate": {
+          "type": "string",
+          "description": "Date the change takes effect",
+          "format": "date"
+        },
+        "summary": {
+          "type": "string",
+          "description": "What changed, in source-describing language"
+        }
+      }
+    },
+    "detectedByDataFlowID": {
+      "description": "Data flow (monitored source) that detected the trigger",
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/definitions/identifier"
+        }
+      ]
+    },
+    "changeProposalIDs": {
+      "type": "array",
+      "description": "Change proposals submitted through the Reasoning Fabric connector in response to this trigger",
+      "items": {
+        "$ref": "common.schema.json#/definitions/identifier"
+      },
+      "uniqueItems": true
+    },
     "relatedTriggers": {
       "type": "array",
       "items": {
