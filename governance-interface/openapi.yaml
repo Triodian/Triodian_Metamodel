@@ -1,0 +1,215 @@
+openapi: 3.0.3
+info:
+  title: Triodian Metamodel governance interface
+  version: 1.0.0
+  description: |
+    HTTP binding of the governance interface (see README.md).
+    Message bodies are defined by the JSON Schemas in schemas/governance/ of the
+    Triodian Metamodel; this file only binds them to paths, scopes and errors.
+  license:
+    name: CC BY-SA 4.0
+    url: https://creativecommons.org/licenses/by-sa/4.0/
+servers:
+  - url: https://{host}/governance/v1
+    variables:
+      host:
+        default: governance.example.com
+security:
+  - bearer: []
+paths:
+  /policy/{dataset}:
+    get:
+      summary: Dataset policy in force
+      security: [{ bearer: [read] }]
+      parameters: [{ $ref: '#/components/parameters/dataset' }]
+      responses:
+        '200':
+          description: The policy
+          content: { application/json: { schema: { $ref: '../schemas/governance/dataset-policy.schema.json' } } }
+        '404': { $ref: '#/components/responses/problem' }
+  /submissions:
+    post:
+      summary: Submit change proposals
+      description: |
+        mode "validate" checks and returns the result without recording anything.
+        mode "propose" also records, routes and writes provenance. Resubmitting a
+        submissionID returns the original result.
+      security: [{ bearer: [submit] }]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '../schemas/governance/submission.schema.json' } } }
+      responses:
+        '200':
+          description: Result (also returned for an idempotent resubmission)
+          content: { application/json: { schema: { $ref: '../schemas/governance/submission-result.schema.json' } } }
+        '400': { $ref: '#/components/responses/problem' }
+        '409': { $ref: '#/components/responses/problem' }
+        '413': { $ref: '#/components/responses/problem' }
+        '429': { $ref: '#/components/responses/problem' }
+  /submissions/{submissionID}:
+    get:
+      summary: Result of an earlier submission
+      security: [{ bearer: [submit] }]
+      parameters:
+        - { name: submissionID, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: The result
+          content: { application/json: { schema: { $ref: '../schemas/governance/submission-result.schema.json' } } }
+        '404': { $ref: '#/components/responses/problem' }
+  /records/{dataset}:
+    get:
+      summary: Governed records
+      security: [{ bearer: [read] }]
+      parameters:
+        - { $ref: '#/components/parameters/dataset' }
+        - { name: domainType, in: query, schema: { type: string } }
+        - { name: publicationStatus, in: query, schema: { type: string, enum: [published, unverified, superseded, removed] } }
+        - { name: updatedSince, in: query, schema: { type: string, format: date-time } }
+        - { $ref: '#/components/parameters/cursor' }
+        - { $ref: '#/components/parameters/limit' }
+      responses:
+        '200':
+          description: A page of current governed records
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items: { type: array, items: { $ref: '../schemas/governance/governed-record.schema.json' } }
+                  nextCursor: { type: string }
+  /records/{dataset}/{entityID}:
+    get:
+      summary: Current (or a given) version of a record
+      security: [{ bearer: [read] }]
+      parameters:
+        - { $ref: '#/components/parameters/dataset' }
+        - { name: entityID, in: path, required: true, schema: { type: string } }
+        - { name: version, in: query, schema: { type: integer, minimum: 1 } }
+      responses:
+        '200':
+          description: The governed record
+          content: { application/json: { schema: { $ref: '../schemas/governance/governed-record.schema.json' } } }
+        '404': { $ref: '#/components/responses/problem' }
+  /changes/{dataset}:
+    get:
+      summary: Versions published, superseded or removed since a time
+      security: [{ bearer: [read] }]
+      parameters:
+        - { $ref: '#/components/parameters/dataset' }
+        - { name: since, in: query, required: true, schema: { type: string, format: date-time } }
+        - { $ref: '#/components/parameters/cursor' }
+        - { $ref: '#/components/parameters/limit' }
+      responses:
+        '200':
+          description: Changes, oldest first
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items: { type: array, items: { $ref: '../schemas/governance/governed-record.schema.json' } }
+                  nextCursor: { type: string }
+  /proposals/{dataset}:
+    get:
+      summary: Proposals by treatment (review queue)
+      security: [{ bearer: [review] }]
+      parameters:
+        - { $ref: '#/components/parameters/dataset' }
+        - { name: treatment, in: query, schema: { type: string, enum: [reviewQueue, escalated, publishedUnverified, convertedToLead, rejected] } }
+      responses:
+        '200':
+          description: Proposals with their outcomes
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items:
+                      type: object
+                      required: [proposal, outcome]
+                      properties:
+                        proposal: { $ref: '../schemas/governance/change-proposal.schema.json' }
+                        outcome: { $ref: '../schemas/governance/submission-result.schema.json#/definitions/proposalOutcome' }
+                        current: { $ref: '../schemas/governance/governed-record.schema.json' }
+  /reviews:
+    post:
+      summary: Record a review decision
+      description: The reviewer named in the decision must match the person the review token identifies.
+      security: [{ bearer: [review] }]
+      requestBody:
+        required: true
+        content: { application/json: { schema: { $ref: '../schemas/governance/review-decision.schema.json' } } }
+      responses:
+        '200':
+          description: The governed record published, or the proposal as rejected
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [reviewDecisionID, changeProposalID]
+                properties:
+                  reviewDecisionID: { type: string }
+                  changeProposalID: { type: string }
+                  governedRecord: { $ref: '../schemas/governance/governed-record.schema.json' }
+                  provenanceRecordIDs: { type: array, items: { type: string } }
+        '403': { $ref: '#/components/responses/problem' }
+        '409': { $ref: '#/components/responses/problem' }
+  /provenance/{provenanceRecordID}:
+    get:
+      summary: One ledger entry
+      security: [{ bearer: [read] }]
+      parameters:
+        - { name: provenanceRecordID, in: path, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: The entry
+          content: { application/json: { schema: { $ref: '../schemas/governance/provenance-record.schema.json' } } }
+        '404': { $ref: '#/components/responses/problem' }
+  /provenance:
+    get:
+      summary: Ledger entries for a record, oldest first
+      security: [{ bearer: [read] }]
+      parameters:
+        - { name: subject, in: query, required: true, schema: { type: string } }
+      responses:
+        '200':
+          description: Entries
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items: { type: array, items: { $ref: '../schemas/governance/provenance-record.schema.json' } }
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      description: One token per client, with scopes submit, read and review. A review token identifies one named person.
+  parameters:
+    dataset: { name: dataset, in: path, required: true, schema: { type: string, example: example-regulatory-register } }
+    cursor: { name: cursor, in: query, schema: { type: string } }
+    limit: { name: limit, in: query, schema: { type: integer, minimum: 1, maximum: 500, default: 100 } }
+  responses:
+    problem:
+      description: Error
+      content:
+        application/problem+json:
+          schema:
+            type: object
+            required: [type, title, status, code]
+            properties:
+              type: { type: string }
+              title: { type: string }
+              status: { type: integer }
+              code:
+                type: string
+                description: Stable error code, e.g. auth.scope, schema.invalid, version.stale, submission.tooLarge, rate.limited, review.notReviewer, review.alreadyDecided
+              detail: { type: string }
