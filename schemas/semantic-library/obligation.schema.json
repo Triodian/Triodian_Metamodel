@@ -292,6 +292,12 @@
               },
               {
                 "const": "amended"
+              },
+              {
+                "const": "superseded"
+              },
+              {
+                "const": "repealed"
               }
             ]
           }
@@ -318,6 +324,12 @@
               },
               {
                 "const": "pending"
+              },
+              {
+                "const": "superseded"
+              },
+              {
+                "const": "withdrawn"
               }
             ]
           }

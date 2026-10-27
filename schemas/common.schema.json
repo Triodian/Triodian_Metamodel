@@ -420,15 +420,16 @@
     },
     "jurisdictionCode": {
       "type": "string",
-      "pattern": "^[A-Z]{2}(-[A-Z0-9]{1,3})?$",
-      "description": "Jurisdiction as an ISO 3166-1 alpha-2 country code, optionally followed by an ISO 3166-2 subdivision code (\"US-NY\"). \"EU\" is used for European Union law.",
+      "pattern": "^([A-Z]{2}(-[A-Z0-9]{1,3})?|INT)$",
+      "description": "Jurisdiction as an ISO 3166-1 alpha-2 country code, optionally followed by an ISO 3166-2 subdivision code (\"US-NY\"). \"EU\" is used for European Union law, and \"INT\" for international standards and frameworks that are not tied to one jurisdiction.",
       "examples": [
         "AU",
         "SG",
         "EU",
         "GB",
         "NZ",
-        "US-NY"
+        "US-NY",
+        "INT"
       ]
     },
     "moneyAmount": {
