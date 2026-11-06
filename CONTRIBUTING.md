@@ -20,7 +20,7 @@ Thank you for your interest in contributing! The Triodian Metamodel is open to c
 
 ## Licence
 
-All contributions will be made under the repository’s [Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) licence.
+All contributions will be made under the repository’s [Apache License 2.0](LICENSE) licence.
 
 ## Resources
 

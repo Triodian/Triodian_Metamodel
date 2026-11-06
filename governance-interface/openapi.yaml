@@ -7,8 +7,8 @@ info:
     Message bodies are defined by the JSON Schemas in schemas/governance/ of the
     Triodian Metamodel; this file only binds them to paths, scopes and errors.
   license:
-    name: CC BY-SA 4.0
-    url: https://creativecommons.org/licenses/by-sa/4.0/
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
 servers:
   - url: https://{host}/governance/v1
     variables:

@@ -25,7 +25,7 @@ All mappings use one Triodian namespace, `https://triodian.com/ontology#` (prefi
 - **Purpose:** Enable semantic APIs, business architecture alignment, and integration with banking and enterprise models  
 - **Compatibility:** BIAN, schema.org, FOAF, ArchiMate  
 - **Version:** 1.0.0  
-- **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+- **License:** Apache License 2.0  
 - **Context URI:** https://triodian.com/context/triodian-bian.jsonld  
 
 ### Domains
@@ -58,7 +58,7 @@ BIAN’s published RESTful APIs can be semantically annotated using this context
 - **Purpose:** Enable semantic APIs, business architecture alignment, and integration with enterprise architecture platforms  
 - **Compatibility:** SAP EA Framework, schema.org, FOAF, ArchiMate  
 - **Version:** 1.0.0  
-- **License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+- **License:** Apache License 2.0  
 - **Context URI:** https://triodian.com/context/triodian-sap.jsonld  
 
 ### Domains
@@ -114,7 +114,7 @@ The Triodian Metamodel now includes schema-level mappings to the Financial Indus
 **Purpose:** Support semantic APIs, enterprise graph alignment, and regulatory interoperability in financial services  
 **Compatibility:** FIBO, Schema.org, FOAF, ArchiMate  
 **Version:** 1.0.0  
-**License:** Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)  
+**License:** Apache License 2.0  
 **Context URI:** [triodian-FIBO.context.jsonld](https://github.com/Triodian/Triodian_Metamodel/blob/main/interoperability/triodian-FIBO.context.jsonld)
 
 #### Use cases  
