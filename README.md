@@ -34,7 +34,7 @@ All domains are defined using [JSON Schema](https://json-schema.org/), ensuring 
 
 Triodian differs from traditional frameworks like BIZBOK in key ways:
 
-- **Open-source and transparent** – Freely licensed under Creative Commons  
+- **Open-source and transparent** – Freely licensed under the Apache License 2.0  
 - **Schema-first and digital** – Designed for automation, integration, and validation  
 - **Inclusive and scalable** – Usable by strategists, analysts, and business teams, not just architects  
 - **Real-time and actionable** – Supports dynamic alignment and structured decision-making  
@@ -110,7 +110,7 @@ Contribution guidelines and project manifesto are also available at:
 ## Licence
 
 This repository and its contents are licensed under the  
-**Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)**  
-[View licence](https://creativecommons.org/licenses/by-sa/4.0/)
+**Apache License, Version 2.0**  
+See [LICENSE](LICENSE) or [view licence](https://www.apache.org/licenses/LICENSE-2.0).
 
-You are free to use, adapt, and redistribute this work with attribution and under the same licence.
+You are free to use, modify, and redistribute this work, including commercially, provided you retain the licence and copyright notices and state any significant changes you make.
