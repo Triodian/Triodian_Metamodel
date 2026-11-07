@@ -26,6 +26,7 @@ The metamodel is composed of structured JSON Schemas for all core business archi
 - **Compliance** – Compliance requirements issued by regulators, professional and standards bodies, each made up of clause-level obligations, and the statements of compliance that evidence them (`schemas/compliance/`)
 - **Public Reporting** – Public reports and the mandatory disclosures they contain, including AI disclosures a law calls for (`schemas/public-reporting/`)
 - **Use Case** – Standardised AI use cases defined on the authority (A), boundary (B) and confidentiality channel (K) scales, so obligations and assessments compare across jurisdictions; UC1 to UC10 are published in [`reference-data/use-cases.json`](reference-data/use-cases.json)
+- **Regulated Sector** – The fields an organization works in within a jurisdiction (banking, insurance, superannuation, health, critical infrastructure and others), each grouping the entity types obligations are addressed to, so a user can choose a jurisdiction, then a sector, then the entity type; Australia and Singapore are published in [`reference-data/regulated-sectors.json`](reference-data/regulated-sectors.json)
 - **Dynamic and Time-Series** – Data flows, timebound metrics and predictive models for live and monitored sources (`schemas/extensions/dynamic-time-series/`)
 
 All domains are defined using [JSON Schema](https://json-schema.org/), ensuring they are machine-readable and interoperable across platforms.
