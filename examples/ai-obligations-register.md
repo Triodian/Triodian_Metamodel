@@ -223,6 +223,20 @@ An anticipated provision: made, but not yet in force. The record gives its comme
 }
 ```
 
+### Entity types outside financial regulation
+
+From version 2.4.0, `entityTypes` also covers organisations that no financial regulator licenses, so a register can show a private company or a not-for-profit the sources addressed to it:
+
+| Value | Use for a source addressed to |
+| --- | --- |
+| `privateCompany` | Companies outside prudential and financial services regulation |
+| `notForProfit` | Charities and other not-for-profit organisations |
+| `criticalInfrastructureAssetOwner` | Owners and operators of assets a critical infrastructure law covers |
+| `defenceIndustrySupplier` | Suppliers to a defence force or defence department |
+| `healthServiceProvider` | Hospitals, clinics and other providers of health services |
+
+A source of general application, such as a privacy law that applies to most organisations, keeps `anyOrganization`. Whether a particular organisation falls within a category is for counsel; the value describes who the source addresses, not who it binds.
+
 ## 3. A standardised use case
 
 The obligations above point to use cases such as UC7 through `useCaseIDs`. The ten standard use cases are in [`reference-data/use-cases.json`](../reference-data/use-cases.json).
