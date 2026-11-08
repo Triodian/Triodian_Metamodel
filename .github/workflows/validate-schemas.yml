@@ -31,3 +31,6 @@ jobs:
 
       - name: Documentation examples (blocking)
         run: python scripts/validate.py --only-doc-examples
+
+      - name: Exchange formats and their examples (blocking)
+        run: python scripts/validate_exchange.py

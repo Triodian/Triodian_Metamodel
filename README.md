@@ -74,6 +74,10 @@ The [`governance-interface/`](governance-interface) folder defines a contract fo
 
 The Metamodel version is in [`VERSION`](VERSION).
 
+## Exchange formats
+
+The Triodian AI governance apps pass a few files to each other: the matter brief, the board directions, the calibration set, the register extract (the in-use feed, which carries the findings), the board view and the confidentiality position. [`exchange/`](exchange) publishes each as a versioned JSON Schema with examples, so anyone can check a file, build a tool that reads one, or import one into another platform. They keep the field names the apps already use, so they sit outside `schemas/` and its domain naming rules. `scripts/validate_exchange.py` checks them in CI.
+
 ## Validating the schemas
 
 Every change is checked by `scripts/validate.py`, which runs in CI on each push and pull request:
