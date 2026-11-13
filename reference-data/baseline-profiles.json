@@ -14,7 +14,7 @@
           "title": "Principles for the sound management of third-party risk",
           "issuer": "BCBS",
           "date": "2025-12-10",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "internationalGuidance",
           "url": "https://www.bis.org/bcbs/publ/d605.htm",
           "usedFor": "Third-party arrangements, including AI providers"
@@ -23,7 +23,7 @@
           "title": "Enhancing third-party risk management and oversight: a toolkit",
           "issuer": "FSB",
           "date": "2023-12",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.fsb.org/2023/12/enhancing-third-party-risk-management-and-oversight-a-toolkit-for-financial-institutions-and-financial-authorities/",
           "usedFor": "Third-party and concentration risk"
@@ -32,7 +32,7 @@
           "title": "Monitoring adoption of AI and related vulnerabilities in the financial sector",
           "issuer": "FSB",
           "date": "2025-10-10",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/",
           "usedFor": "Concentration in the generative AI supply chain"
@@ -41,7 +41,7 @@
           "title": "Financial Services AI Risk Management Framework and AI Lexicon",
           "issuer": "US Department of the Treasury with the FSSCC",
           "date": "2026-02-19",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "referenceProfile",
           "url": "https://home.treasury.gov/",
           "usedFor": "Cross-walk target only, not a baseline source"
@@ -50,7 +50,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -59,7 +59,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -136,7 +136,7 @@
           "title": "Application Paper on the supervision of artificial intelligence",
           "issuer": "IAIS",
           "date": "2025-07-02",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.iais.org/2025/07/the-iais-publishes-application-paper-on-the-supervision-of-artificial-intelligence/",
           "usedFor": "Governance, robustness, transparency and fairness under the ICPs"
@@ -145,7 +145,7 @@
           "title": "Enhancing third-party risk management and oversight: a toolkit",
           "issuer": "FSB",
           "date": "2023-12",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.fsb.org/2023/12/enhancing-third-party-risk-management-and-oversight-a-toolkit-for-financial-institutions-and-financial-authorities/",
           "usedFor": "Third-party and concentration risk"
@@ -154,7 +154,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -163,7 +163,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -235,7 +235,7 @@
           "title": "Supervisory Toolkit for AI use in Capital Markets",
           "issuer": "IOSCO",
           "date": "2026-05-25",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.iosco.org/",
           "usedFor": "Supervisory expectations for AI in capital markets"
@@ -244,7 +244,7 @@
           "title": "Artificial Intelligence in Capital Markets: Use Cases, Risks, and Challenges",
           "issuer": "IOSCO",
           "date": "2025-03-12",
-          "status": "consultation",
+          "publicationStage": "consultation",
           "kind": "internationalGuidance",
           "url": "https://www.iosco.org/",
           "usedFor": "Use cases and risks"
@@ -253,7 +253,7 @@
           "title": "The use of artificial intelligence and machine learning by market intermediaries and asset managers",
           "issuer": "IOSCO",
           "date": "2021-09",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.iosco.org/",
           "usedFor": "Six measures"
@@ -262,7 +262,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -271,7 +271,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -342,7 +342,7 @@
           "title": "Ethics and governance of artificial intelligence for health: Guidance on large multi-modal models",
           "issuer": "WHO",
           "date": "2024-01",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.who.int/publications-detail-redirect/9789240084759",
           "usedFor": "Over 40 recommendations; six principles"
@@ -351,7 +351,7 @@
           "title": "Ethics and governance of artificial intelligence for health",
           "issuer": "WHO",
           "date": "2021-06",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.who.int/publications/i/item/9789240029200",
           "usedFor": "Founding guidance"
@@ -360,7 +360,7 @@
           "title": "ISO 14971, Medical devices: application of risk management",
           "issuer": "ISO",
           "date": "2019",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/72704.html",
           "usedFor": "Where AI is a medical device; which device rules apply is each jurisdiction's"
@@ -369,7 +369,7 @@
           "title": "IEC 62304, Medical device software: software life cycle processes",
           "issuer": "IEC",
           "date": "2006, amended 2015",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "usedFor": "Where AI is a medical device"
         },
@@ -377,7 +377,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -386,7 +386,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -458,7 +458,7 @@
           "title": "FATF Recommendations, including Recommendation 15 (new technologies) and Recommendation 16 (payment transparency)",
           "issuer": "FATF",
           "date": "2012, R.16 revised 2025",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "internationalGuidance",
           "usedFor": "Screening, identity and new technologies"
         },
@@ -466,7 +466,7 @@
           "title": "Principles for financial market infrastructures",
           "issuer": "CPMI-IOSCO",
           "date": "2012-04",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "internationalGuidance",
           "url": "https://www.bis.org/cpmi/publ/d101a.pdf",
           "usedFor": "Systemically important payment systems only"
@@ -475,7 +475,7 @@
           "title": "Enhancing third-party risk management and oversight: a toolkit",
           "issuer": "FSB",
           "date": "2023-12",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.fsb.org/2023/12/enhancing-third-party-risk-management-and-oversight-a-toolkit-for-financial-institutions-and-financial-authorities/",
           "usedFor": "Third-party and concentration risk"
@@ -484,7 +484,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -493,7 +493,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -561,7 +561,7 @@
           "title": "Principles for the Secure Integration of Artificial Intelligence in Operational Technology",
           "issuer": "CISA with the ACSC and six other national cyber agencies",
           "date": "2025-12",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-cisa-ot-zero-trust-ai-governance-20260501/",
           "usedFor": "AI in operational technology"
@@ -570,7 +570,7 @@
           "title": "IEC 62443, Industrial automation and control systems security",
           "issuer": "IEC",
           "date": "series",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "usedFor": "Control-system security"
         },
@@ -578,7 +578,7 @@
           "title": "AI RMF Profile on Trustworthy AI in Critical Infrastructure (concept note)",
           "issuer": "NIST",
           "date": "2026-04-07",
-          "status": "inDevelopment",
+          "publicationStage": "inDevelopment",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure",
           "usedFor": "AI across IT, OT and control systems; re-check each quarter"
@@ -587,7 +587,7 @@
           "title": "Adapting Zero Trust Principles to Operational Technology",
           "issuer": "CISA, DOE, FBI, State and DoD",
           "date": "2026-04-29",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "referenceProfile",
           "url": "https://www.cisa.gov/",
           "usedFor": "Cross-walk target"
@@ -596,7 +596,7 @@
           "title": "Governing with Artificial Intelligence: The State of Play and Way Forward in Core Government Functions",
           "issuer": "OECD",
           "date": "2025-09-18",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287.html",
           "usedFor": "Public-sector governance; high-benefit, low-risk first"
@@ -605,7 +605,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -614,7 +614,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -681,7 +681,7 @@
           "title": "Principles for the Secure Integration of Artificial Intelligence in Operational Technology",
           "issuer": "CISA with the ACSC and six other national cyber agencies",
           "date": "2025-12",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://labs.cloudsecurityalliance.org/research/csa-research-note-cisa-ot-zero-trust-ai-governance-20260501/",
           "usedFor": "AI in operational technology"
@@ -690,7 +690,7 @@
           "title": "IEC 62443, Industrial automation and control systems security",
           "issuer": "IEC",
           "date": "series",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "usedFor": "Control-system security"
         },
@@ -698,7 +698,7 @@
           "title": "AI RMF Profile on Trustworthy AI in Critical Infrastructure (concept note)",
           "issuer": "NIST",
           "date": "2026-04-07",
-          "status": "inDevelopment",
+          "publicationStage": "inDevelopment",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/programs-projects/concept-note-ai-rmf-profile-trustworthy-ai-critical-infrastructure",
           "usedFor": "AI across IT, OT and control systems; re-check each quarter"
@@ -707,7 +707,7 @@
           "title": "Adapting Zero Trust Principles to Operational Technology",
           "issuer": "CISA, DOE, FBI, State and DoD",
           "date": "2026-04-29",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "referenceProfile",
           "url": "https://www.cisa.gov/",
           "usedFor": "Cross-walk target"
@@ -716,7 +716,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -725,7 +725,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"
@@ -795,7 +795,7 @@
           "title": "Governing with Artificial Intelligence: The State of Play and Way Forward in Core Government Functions",
           "issuer": "OECD",
           "date": "2025-09-18",
-          "status": "final",
+          "publicationStage": "final",
           "kind": "internationalGuidance",
           "url": "https://www.oecd.org/en/publications/2025/06/governing-with-artificial-intelligence_398fa287.html",
           "usedFor": "Public-sector governance; high-benefit, low-risk first"
@@ -804,7 +804,7 @@
           "title": "OECD AI Principles",
           "issuer": "OECD",
           "date": "2019, updated 2024",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "internationalGuidance",
           "url": "https://oecd.ai/en/ai-principles",
           "usedFor": "Accountability and transparency"
@@ -813,7 +813,7 @@
           "title": "ISO/IEC 42005:2025, AI system impact assessment",
           "issuer": "ISO/IEC",
           "date": "2025",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "usedFor": "Impact on individuals and groups"
         },
@@ -821,7 +821,7 @@
           "title": "ISO/IEC 42001:2023, Artificial intelligence management system",
           "issuer": "ISO/IEC",
           "date": "2023-12",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.iso.org/standard/81230.html",
           "usedFor": "Management-system frame and Annex A controls"
@@ -830,7 +830,7 @@
           "title": "AI Risk Management Framework (NIST AI 100-1)",
           "issuer": "NIST",
           "date": "2023-01",
-          "status": "current",
+          "publicationStage": "current",
           "kind": "adoptedStandard",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework",
           "usedFor": "Govern, map, measure, manage"

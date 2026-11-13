@@ -52,7 +52,7 @@
           "title",
           "issuer",
           "date",
-          "status"
+          "publicationStage"
         ],
         "properties": {
           "title": {
@@ -67,7 +67,7 @@
             "type": "string",
             "description": "Publication date or year as the issuer gives it"
           },
-          "status": {
+          "publicationStage": {
             "type": "string",
             "enum": [
               "current",
@@ -76,7 +76,7 @@
               "inDevelopment",
               "consultation"
             ],
-            "description": "Status when last checked"
+            "description": "Where the source stands when last checked: current or final, a draft, in development, or out for consultation"
           },
           "kind": {
             "type": "string",
