@@ -17,6 +17,10 @@
       "entityTypes": [
         "authorisedDepositTakingInstitution"
       ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-BANKING"
+      ],
       "version": "1.0"
     },
     {
@@ -34,6 +38,10 @@
         "lifeInsurer",
         "privateHealthInsurer"
       ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-INSURANCE"
+      ],
       "version": "1.0"
     },
     {
@@ -49,6 +57,7 @@
       "entityTypes": [
         "superannuationTrustee"
       ],
+      "mainSector": true,
       "version": "1.0"
     },
     {
@@ -62,6 +71,9 @@
       ],
       "entityTypes": [
         "financialServicesLicensee"
+      ],
+      "baselineProfiles": [
+        "BP-SECURITIES"
       ],
       "version": "1.0"
     },
@@ -77,6 +89,9 @@
       "entityTypes": [
         "creditLicensee"
       ],
+      "baselineProfiles": [
+        "BP-BANKING"
+      ],
       "version": "1.0"
     },
     {
@@ -87,6 +102,9 @@
       "financiallyRegulated": true,
       "entityTypes": [
         "paymentServiceProvider"
+      ],
+      "baselineProfiles": [
+        "BP-PAYMENTS"
       ],
       "version": "1.0"
     },
@@ -114,6 +132,10 @@
       "entityTypes": [
         "healthServiceProvider"
       ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-HEALTH"
+      ],
       "version": "1.0"
     },
     {
@@ -124,6 +146,11 @@
       "financiallyRegulated": false,
       "entityTypes": [
         "criticalInfrastructureAssetOwner"
+      ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-CI-CORPORATE",
+        "BP-CI-GOVERNMENT"
       ],
       "version": "1.0"
     },
@@ -165,6 +192,10 @@
       "alsoReaches": [
         "financialInstitution"
       ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-BANKING"
+      ],
       "version": "1.0"
     },
     {
@@ -181,6 +212,10 @@
       ],
       "alsoReaches": [
         "financialInstitution"
+      ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-INSURANCE"
       ],
       "version": "1.0"
     },
@@ -199,6 +234,10 @@
       "alsoReaches": [
         "financialInstitution"
       ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-SECURITIES"
+      ],
       "version": "1.0"
     },
     {
@@ -216,6 +255,9 @@
       "alsoReaches": [
         "financialInstitution"
       ],
+      "baselineProfiles": [
+        "BP-PAYMENTS"
+      ],
       "version": "1.0"
     },
     {
@@ -230,6 +272,7 @@
       "entityTypes": [
         "listedEntity"
       ],
+      "mainSector": true,
       "version": "1.0"
     },
     {
@@ -241,6 +284,9 @@
       "entityTypes": [
         "healthServiceProvider"
       ],
+      "baselineProfiles": [
+        "BP-HEALTH"
+      ],
       "version": "1.0"
     },
     {
@@ -251,6 +297,11 @@
       "financiallyRegulated": false,
       "entityTypes": [
         "criticalInfrastructureAssetOwner"
+      ],
+      "mainSector": true,
+      "baselineProfiles": [
+        "BP-CI-CORPORATE",
+        "BP-CI-GOVERNMENT"
       ],
       "version": "1.0"
     },
