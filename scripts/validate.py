@@ -372,6 +372,29 @@ def check_governance_policies(docs, registry, uris) -> None:
             if key in seen:
                 fail(f"{rel(f)} item[{i}]: duplicate identifier {key!r}")
             seen.add(key)
+    # Cross-references between reference data sets: sectors name baseline profiles that exist; profiles name controls that exist.
+    def ids(name, field):
+        f = ROOT / "reference-data" / name
+        return {i[field] for i in json.loads(f.read_text(encoding="utf-8")).get("items", [])} if f.exists() else set()
+    profiles, controls = ids("baseline-profiles.json", "baselineProfileID"), ids("baseline-controls.json", "baselineControlID")
+    sectors_file = ROOT / "reference-data" / "regulated-sectors.json"
+    if sectors_file.exists():
+        main_by_jurisdiction = {}
+        for s in json.loads(sectors_file.read_text(encoding="utf-8")).get("items", []):
+            for b in s.get("baselineProfiles", []):
+                if b not in profiles:
+                    fail(f"reference-data/regulated-sectors.json {s['regulatedSectorID']}: unknown baseline profile {b!r}")
+            if s.get("mainSector"):
+                main_by_jurisdiction.setdefault(s["jurisdiction"], []).append(s["regulatedSectorID"])
+        for j, main in main_by_jurisdiction.items():
+            if len(main) > 5:
+                fail(f"reference-data/regulated-sectors.json: {j} has {len(main)} main sectors; the most is five")
+    pf = ROOT / "reference-data" / "baseline-profiles.json"
+    if pf.exists():
+        for p in json.loads(pf.read_text(encoding="utf-8")).get("items", []):
+            for c in p.get("controls", []):
+                if c not in controls:
+                    fail(f"reference-data/baseline-profiles.json {p['baselineProfileID']}: unknown control {c!r}")
 
 
 def check_markdown_examples(docs, registry, uris) -> None:
