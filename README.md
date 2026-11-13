@@ -59,7 +59,7 @@ Each schema includes examples and structured fields to help your team model capa
 ## Obligations as a reference dataset
 
 Obligations can be published as a reference dataset, such as a register of AI governance obligations by jurisdiction. Each record carries:
-- `sourceTier`: `binding`, `expected` or `anticipated`;
+- `sourceTier`: `binding`, `expected`, `anticipated` or `adopted`. `adopted` is a voluntary standard an organisation has adopted for itself, such as the controls of ISO/IEC 42001:2023 Annex A; which of its records apply to a client is set by the client's own Statement of Applicability, not by the record;
 - `jurisdiction`, `entityTypes`, `roles` and `useCaseIDs`;
 - `effectiveDates` and `lastVerified`.
 
