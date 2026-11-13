@@ -7,7 +7,7 @@
   "sourcePrecedence": [
     { "rank": 1, "basis": "officialText", "canSetStatusOrDate": true },
     { "rank": 2, "basis": "regulatorPublication", "canSetStatusOrDate": true, "onlyForTiers": ["expected", "anticipated"] },
-    { "rank": 3, "basis": "standardsBodyPublication", "canSetStatusOrDate": true, "onlyForTiers": ["expected"] },
+    { "rank": 3, "basis": "standardsBodyPublication", "canSetStatusOrDate": true, "onlyForTiers": ["expected", "adopted"] },
     { "rank": 4, "basis": "commentary", "canSetStatusOrDate": false },
     { "rank": 5, "basis": "news", "canSetStatusOrDate": false }
   ],
@@ -75,7 +75,8 @@
   "freshness": [
     { "sourceTier": "binding", "threshold": "P180D" },
     { "sourceTier": "expected", "threshold": "P90D" },
-    { "sourceTier": "anticipated", "threshold": "P30D" }
+    { "sourceTier": "anticipated", "threshold": "P30D" },
+    { "sourceTier": "adopted", "threshold": "P365D" }
   ],
   "confidenceBands": { "medium": 0.5, "high": 0.8 },
   "languageRules": [
