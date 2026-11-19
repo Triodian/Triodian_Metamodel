@@ -366,7 +366,6 @@
         "strategicIntent",
         "strategicResponse",
         "obligation",
-        "semanticConstraint",
         "complianceRequirement",
         "statementOfCompliance",
         "publicReport",
